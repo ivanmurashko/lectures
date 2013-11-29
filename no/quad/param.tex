@@ -1,0 +1,206 @@
+\section{Общая задача о параметрическом трехволновом взаимодействии в
+нелинейных средах с квадратичной нелинейностью}
+
+Рассмотрим общую формулировку задачи о трех-волновом параметрическом
+взаимодействии на квадратичной нелинейности
+\(\hat{\chi}_{ijk}^{(2)}\).
+
+У нас имеется волновое уравнение
+\[
+\frac{\partial^2 \vec{E}}{\partial z^2} - \frac{1}{c^2}
+\frac{\partial^2 \vec{E}}{\partial t^2} - \frac{4 \pi}{c^2}
+\frac{\partial^2 \vec{P}}{\partial t^2} = 0,
+\]
+в котором поляризация состоит из двух частей линейной и нелинейной
+\[
+\vec{P} = \vec{P}^{(L)} + \vec{P}^{(NL)}.
+\]
+
+Полное ЭМ поле имеет вид:
+\[
+\vec{E} = \vec{E}_1 + \vec{E}_2 + \vec{E}_3.
+\]
+Нелинейную поляризацию будем рассматривать в виде
+\[
+P^{(NL)} = \hat{\chi}^{(2)}E^2.
+\]
+
+В дальнейшем мы ограничимся случаем плоских монохроматических волн и
+будем полагать их частоты равными \(\omega_1\), \(\omega_2\) и
+\(\omega_3\) при этом \(\omega_3 = \omega_1 + \omega_2\). Волновые
+вектора трех монохроматических волн - \(\vec{k}_1\), \(\vec{k}_2\) и
+\(\vec{k}_3\). Поляризацию всех трех волн будем как и ранее сичитать
+одинаковой - это позволяет нам в дальнейшем избывится от веторов. 
+
+По аналогии с тем как мы это делали ранее для генерации ВГ методом
+ММА, решение будем искать в виде
+\begin{eqnarray}
+E  = A_1\left(\mu z\right) exp \left\{ i
+  \left(\omega_1 t - k_1 z\right)\right\} +
+\nonumber \\
++  A_2\left(\mu z\right) exp \left\{ i
+  \left(\omega_2 t - k_2 z\right)\right\} +
+\nonumber \\
++ A_3\left(\mu z\right) exp \left\{ i
+  \left(\omega_3 t - k_3 z\right)\right\}.
+\label{eqParamSolveAssume}
+\end{eqnarray}
+
+Подставляя вид решения (\ref{eqParamSolveAssume})  вместе с выражением
+для нелинейной поляризации в волновое уравнения и производя все
+упрощения метода медленно меняющихся амплитуд в итоге можно получить
+систему для медленно меняющихся действительных амплитуд трехволнового
+параметрического взаимодействия:
+\begin{eqnarray}
+\frac{d A_{10}}{d z} + \delta_1 A_{10} + \sigma_1 A_{20} A_{30} sin
+\Phi = 0,
+\nonumber \\
+\frac{d A_{20}}{d z} + \delta_2 A_{20} + \sigma_2 A_{10} A_{30} sin 
+\Phi = 0,
+\nonumber \\
+\frac{d A_{30}}{d z} + \delta_3 A_{30} - \sigma_3 A_{10} A_{20} sin 
+\Phi = 0,
+\nonumber \\
+\frac{d \Phi}{d z} - \left|\vec{\Delta}\right| + \left(\sigma_1 \frac{A_{20}
+    A_{30}}{A_{10}} + \sigma_2 \frac{A_{10} A_{30}}{A_{20}} -
+  \sigma_3 \frac{A_{10} A_{20}}{A_{30}}\right) cos \Phi = 0,
+\label{eqTGHohlovAbsorption3}
+\end{eqnarray}
+где 
+\begin{eqnarray}
+\vec{\Delta} = \vec{k}_1 + \vec{k}_2 - \vec{k}_3,
+\nonumber \\
+\sigma_i = \frac{i 2 \pi \omega_i^2
+  \hat{\chi}^{(2)}\left(\omega_i\right)}{c^2 k_i} = \frac{2 \pi
+  \hat{\chi}^{(2)}}{c}\frac{\omega_i}{n\left(\omega_i\right)}, 
+\nonumber \\
+\omega_3 = \omega_1 + \omega_2
+\nonumber \\
+\Phi = \phi_1 + \phi_2 -\phi_3 + \Delta z.
+\nonumber 
+\end{eqnarray}
+
+\subsection{Интегралы движения для системы медленно меняющихся
+  амплитуд}
+Система уравнений (\ref{eqTGHohlovAbsorption3}) в отсутствии
+поглощения имеет два интеграла движения. Первый описывает закон
+сохранения энергии, а второй - соотношения Мэнли-Роу.
+
+Действительно при \(\delta_i = 0\) система для действительных амплитуд 
+(\ref{eqTGHohlovAbsorption3}) приобретает вид
+\begin{eqnarray}
+\frac{d A_{10}}{d z} + \sigma_1 A_{20} A_{30} sin
+\Phi = 0,
+\nonumber \\
+\frac{d A_{20}}{d z} + \sigma_2 A_{10} A_{30} sin 
+\Phi = 0,
+\nonumber \\
+\frac{d A_{30}}{d z} - \sigma_3 A_{10} A_{20} sin 
+\Phi = 0.
+\label{eqTGHohlovAbsorption3ConstLaw}
+\end{eqnarray}
+
+\subsubsection{Закон сохранения энергии}
+Домножив каждое из уравнений (\ref{eqTGHohlovAbsorption3ConstLaw}) на
+необходимую комбинацию \(n\left(\omega_i\right) A_{i0}\) после
+сложения получим
+\[
+\frac{d}{dz}\left(\sum_{i = 1}^3 n\left(\omega_i\right)
+  A_{i0}^2\right) = 2 A_{10} A_{20} A_{30} sin \Phi \left(
+n\left(\omega_1\right) \sigma_1 + n\left(\omega_2\right) 
+\sigma_2 - n\left(\omega_3\right) \sigma_3 \right) = 0.
+\] 
+Последнее справедливо в силу
+\[
+\omega_1 + \omega_2 - \omega_3 = 0.
+\]
+
+Теперь если в выражении 
+\[
+\frac{d}{dz}\left(\sum_{i = 1}^3 n\left(\omega_i\right)
+  A_{i0}^2\right) = 0
+\]
+обе часть домножить на \(\frac{c}{8 \pi}\) то получим для
+интенсивностей соотношение \(W_1 + W_2 +W_3 = const\) справедливое в
+любом сечении \(z\)  что и представляет собой закон сохранения
+энергии. 
+
+\subsubsection{Соотношения Мэнли-Роу}
+Первое уравнение системы (\ref{eqTGHohlovAbsorption3ConstLaw})
+домножим на \(\sigma_2 A_{10}\),  второе на \(\sigma_1 A_{20}\)  и
+вычтем второе из первого. В результатет имеем
+\[
+\frac{d}{dz} \left(\sigma_2 A_{10}^2 - \sigma_1 A_{20}^2\right) = 0,
+\]
+что означает 
+\(
+\sigma_2 A_{10}^2 - \sigma_1 A_{20}^2 = const_z
+\)
+или что в любом сечении справедливо 
+\[
+\frac{ n_1 A_{10}^2}{\omega_1} - \frac{n_2 A_{20}^2}{\omega_2} = const_z.
+\]
+Иными словами
+\[
+\frac{W_1\left(z\right)}{\omega_1} -
+\frac{W_2\left(z\right)}{\omega_2} = const_z  = 
+\frac{W_1\left(0\right)}{\omega_1} -
+\frac{W_2\left(0\right)}{\omega_2},
+\]
+что приводит к соотношению
+\[
+\frac{W_1\left(z\right) - W_1\left(0\right)}{\omega_1} =
+\frac{W_2\left(z\right) - W_2\left(0\right)}{\omega_2}.
+\]
+Или иначе
+\[
+\frac{\Delta W_1}{\omega_1} =
+\frac{\Delta W_2}{\omega_2}.
+\]
+Для другой пары уравнений получим
+\[
+\frac{\Delta W_2}{\omega_2} = -
+\frac{\Delta W_3}{\omega_3}.
+\]
+Отметим в последнем что накачка идет с другим знаком. Сопоставляя
+последнии два соотношения получим соотношения Мэнли-Роу для этого
+частного случая параметрического процесса:
+\[
+\frac{\Delta W_1}{\omega_1} =
+\frac{\Delta W_2}{\omega_2} = -
+\frac{\Delta W_3}{\omega_3}.
+\]
+
+\subsection{Основные параметрические трехволновые процессы}
+Напомним какие основные параметрические трехчастотные процессы в
+квадратичных средах мы рассмотрели с той или иной степенью
+подробности.
+
+Итак нелинейная поляризация
+\(
+\vec{P}^{(NL)} = \hat{\chi}^{(2)}\left(\omega_3 = \omega_1 \pm \omega_2\right)
+ :\vec{E}\left(\omega_1\right) \vec{E}\left(\omega_2\right)
+\)
+для монохроматических плоских волн \(\vec{E}\left(\omega_1\right)
+  exp\left\{i\left(\omega_1 t - \vec{k}_1 \vec{r}\right)\right\}\), 
+\(\vec{E}\left(\omega_2\right)  exp\left\{i\left(\omega_2 t - 
+\vec{k}_2 \vec{r}\right)\right\}\) и \(\vec{E}\left(\omega_3\right)
+  exp\left\{i\left(\omega_3 t - \vec{k}_3 \vec{r}\right)\right\}\) 
+ответственна за следующие процессы.
+\begin{enumerate}
+\item Генерация суммарных и разностных частот \(\omega_1 \pm \omega_2
+  \rightarrow \omega_3\)
+\item При условии \(\omega_1 = \omega_2 = \omega\) этот процесс
+  трансформируется либо в генерацию ВГ  \(\omega + \omega
+  \rightarrow 2 \omega\), либо в оптическое выпрямление  \(\omega - \omega
+  \rightarrow 0\)
+\item Параметриеский распад фотонов, параметрическое рассеяние,
+  параметрическое усиление  \(\omega_3 
+  \rightarrow \omega_1 \pm \omega_2\);  которое при выполнении условия
+  \(\omega_1 = \omega_2 = \omega\) может быть названо процессом
+  генерации субгармоники  \(2 \omega
+  \rightarrow \omega + \omega\)
+\item Электрооптический эффект, когда одно из ЭМ полей имеет нулевую
+  частоту:
+\(\omega + 0 \rightarrow \omega\).
+\end{enumerate}

@@ -1,0 +1,133 @@
+%% -*- coding:utf-8 -*- 
+\section{Процедура квантования}
+Как мы уже выяснили физическим величинам в квантовой механике
+соответствуют самосопряженные операторы. Если нам известна волновая
+функция (например с помощью уравнения Шредингера), то зная выражение
+для оператора интересующей нас физической величины можно производить
+практические расчеты, например средних значений.
+
+Процедура вывода соотношений которым подчиняются операторы называется
+квантованием. 
+
+Ниже приведена процедура квантования на примере оператора углового
+момента.
+
+\input ./add/quant/figquant.tex
+ 
+\subsection{Классика}
+Рассматриваемая система состоит из материальной частицы движущейся по
+кругу. Обобщенными координатами, описывающими частицу являются угол
+$\theta$ и радиус окружности $r$, который считается постоянным: $r =
+\left. const \right|_t$ ( см. рис. \ref{figAddQuantAngleMoment}).
+
+Гамильтониан системы имеет следующий вид 
+\begin{eqnarray}
+\mathcal{H} = T + U = \frac{m v^2}{2} + U\left( r \right) = 
+\nonumber \\
+= \frac{m r^2 \dot{\theta}^2 }{2} + U\left( r \right),
+\nonumber
+\end{eqnarray}
+где $T = \frac{m v^2}{2}$ - кинетическая энергия частицы, 
+а $U$ - потенциальная энергия, которая в силу симметрии задачи, не
+зависит от угла $\theta$ и зависит только от растояния $r$.
+
+Лангранжин системы
+\[
+\mathcal{L} = T - U = \frac{m r^2 \dot{\theta}^2 }{2} - U\left( r \right)
+\]
+Угловой момент (обобщенный импульс соотвествующий обобщенной
+координате $\theta$) определяется как 
+\begin{equation}
+l = \frac{d \mathcal{L}}{d \dot{\theta}} = 
+m r^2 \dot{\theta} = I \dot{\theta},
+\label{eqAngualrMomentumClass}
+\end{equation}
+где через $I$ обозначено $I = m r^2$ - момент инерции (moment of
+inertia).
+
+Уравнения движения для координаты r:
+\[
+\frac{ \partial \mathcal{L} }{\partial r} = 
+\frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}}
+\]
+ откуда
+\begin{eqnarray}
+\frac{ \partial \mathcal{L} }{\partial r} = 0,
+\nonumber \\
+\frac{ \partial T }{\partial r} - \frac{ \partial U }{\partial r} = 0,
+\nonumber \\
+\frac{\partial U}{\partial r} = m r \dot{\theta}^2,
+\nonumber
+\end{eqnarray}
+ или же
+\[
+ U = \frac{m r^2 \dot{\theta}^2}{2} = \frac{l^2}{2 I}
+\]
+ 
+Таким образом гамильтониан рассматриваемой системы
+\begin{eqnarray}
+\mathcal{H} = \frac{m r^2 \dot{\theta}^2 }{2} + \frac{l^2}{2 I} = 
+\nonumber \\
+= \frac{l^2}{2 I} + \frac{l^2}{2 I} = \frac{l^2}{I}
+\label{eqHClassical}
+\end{eqnarray}
+
+\subsection{Квантование}
+
+Пусть $\left|\psi\right>$ - собственная функция оператора углового
+момента $\hat{L}$ отвечающая собственному числу $l$:
+\begin{equation}
+\hat{L} \left|\psi\right> = l \left|\psi\right>.
+\label{eqLPsi}
+\end{equation}
+Эта же волновая функция должна удовлетворять уравнению Шредингера
+\[
+i \hbar \frac{\partial \left|\psi\right>}{ \partial t} = 
+\hat { \mathcal{H} } \left|\psi\right>
+\]
+Из (\ref{eqHClassical}) имеем
+\[
+\hat { \mathcal{H} } = \frac{\hat{L}^2}{I}
+\]
+откуда с учетом (\ref{eqLPsi})
+\[
+i \hbar \frac{\partial \left|\psi\right>}{ \partial t} = 
+\frac{1}{I} \hat{L} \hat{L} \left|\psi\right> = 
+\frac{l^2}{I} \left|\psi\right>,
+\]
+или же
+\[
+\frac{\partial \left|\psi\right>}{ \partial t} = 
+\frac{-i l^2}{\hbar I} \left|\psi\right>
+\]
+Таким образом
+\[
+\left|\psi\left(t \right)\right> = C \cdot exp\left\{\frac{-i l^2}{\hbar
+    I} t
+\right\}
+\]
+Волновая функция должна удовлетворять условию периодичности
+\[
+\left|\psi\left(t \right) \right>= \left|\psi\left(t + T \right)\right>
+\]
+где $T$ - период колебаний. Его можно найти из
+(\ref{eqAngualrMomentumClass}):
+\begin{eqnarray}
+\dot{\theta} = \frac{l}{I},
+\nonumber \\
+\theta = \theta_0 + \frac{l \cdot t}{I},
+\nonumber \\
+2 \pi = \frac{l \cdot T}{I},
+\nonumber \\
+T = \frac{2 \pi I}{l}
+\nonumber 
+\end{eqnarray}
+таким образом
+\[
+2 i \pi n = \frac{-i l^2}{\hbar I} T = 
+\frac{2 \pi I}{l} \frac{-i l^2}{\hbar I}
+\]
+откуда
+\[
+l = -\hbar n
+\]

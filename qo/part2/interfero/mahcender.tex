@@ -1,0 +1,309 @@
+%% -*- coding:utf-8 -*- 
+\section{Интерферометр Маха-Цендера. Погрешность фазовых измерений.}
+\subsection{Уравнение интерферометра}
+Рассмотрим теперь более подробно работу интерферометра Маха-Цендера,
+схема которого изображена на рис. \ref{figPart2Interfero_4}.
+
+\input ./part2/interfero/fig4.tex
+
+Считаем, что входное $M_1$ и выходное $M_2$ зеркала полупрозрачные
+(50:50), т. е. 
+\[
+t = r = \frac{1}{\sqrt{2}},
+\]
+а два других зеркала - глухие
+\[
+t = 0, \, r = 1.
+\]
+``Матрица рассеяния'' полузеркал имеет вид 
+\begin{equation}
+\hat{S} = \frac{1}{\sqrt{2}} 
+\left(
+\begin{array}{cc}
+1 & i \\
+i & 1 \\
+\end{array}
+\right).
+\nonumber
+\end{equation}
+Мы здесь воспользовались записью (\ref{eqPart2Interfero4a}). Уравнение
+интерферометра имеет вид:
+\begin{eqnarray}
+\hat{a}_2 = \frac{1}{\sqrt{2}} \left(\hat{a}_0 + i \hat{a}_1\right),
+\,
+\hat{a}_3 = \frac{1}{\sqrt{2}} \left(i \hat{a}_0 + \hat{a}_1\right),
+\nonumber \\
+\hat{a}_4 = \frac{1}{\sqrt{2}} \left(i \hat{a}_2 + e^{i \varphi}
+\hat{a}_3\right) = 
+\frac{1}{2}\left[
+i \left(1 + e^{i \varphi}\right)\hat{a}_0 -
+\left(1 - e^{i \varphi}\right)\hat{a}_1
+\right],
+\nonumber \\
+\hat{a}_5 = \frac{1}{\sqrt{2}} \left(\hat{a}_2 + i e^{i \varphi}
+\hat{a}_3\right) = 
+\frac{1}{2}\left[
+\left(1 - e^{i \varphi}\right)\hat{a}_0 +
+i \left(1 + e^{i \varphi}\right)\hat{a}_1
+\right],
+\label{eqPart2Interfero11}
+\end{eqnarray}
+где $\varphi$ - разность оптических длин плеч интерферометра (разность
+набега фаз в плечах).
+
+Формулы (\ref{eqPart2Interfero11}) связывают входящие поля с
+выходящими. Положим, что входное поле нулевого входа находится в
+вакуумном состоянии $\left|0\right>$, а входное поле первого входа - в
+когерентном состоянии $\left|\alpha\right>$. Таким образом входное
+поле находится в двухмодовом состоянии $\left|\psi\right> =
+\left|0\right>_0\left|\alpha\right>_1$. Далее можно было бы найти
+среднее число фотонов на выходах 5 и 6 в зависимости от
+$\varphi$. Результат получится неотличимый от классического.
+
+\input ./part2/interfero/fig5.tex
+
+Мы рассмотрим более сложную схему балансного детектирования,
+изображенную на рис. \ref{figPart2Interfero_5}. Каждый канал
+детектируется своим фотоприемником. Сигналы, идущие с фотоприемников, 
+вычитаются и фиксируются. Такой способ регистрации по сути является
+синхронным детектором (гомодинным детектором), где гомодином служит
+поле когерентного состояния, а сигналом - вакуумные колебания.
+
+Сигнал на входе балансного детектора определяется средним значением
+оператора 
+\begin{equation}
+\hat{R} = 
+\hat{a}_5^{+} \hat{a}_5 - 
+\hat{a}_4^{+} \hat{a}_4 =
+\left(
+\hat{a}_1^{+} \hat{a}_1 - 
+\hat{a}_0^{+} \hat{a}_0
+\right) \cos\,\varphi -
+\left(
+\hat{a}_0^{+} \hat{a}_1 + 
+\hat{a}_1^{+} \hat{a}_0
+\right) \sin\,\varphi.
+\label{eqPart2Interfero12}
+\end{equation}
+При выводе (\ref{eqPart2Interfero12}) были использованы соотношения
+(\ref{eqPart2Interfero11}).
+
+Если мода гетеродина (вход 1, мода $\hat{a}_1$) находится в
+когерентном состоянии с большой амплитудой $\alpha$, а сигнальная мода
+(вход 0, мода $\hat{a}_0$) в вакуумном состоянии, то выходной сигнал
+равен
+\begin{eqnarray}
+\left<\hat{R}\right> = 
+\left<\psi\right|\hat{R} \left|\psi\right> = 
+\left<0\right|_0\left<\alpha\right|_1
+\left(
+\hat{a}_1^{+} \hat{a}_1 - 
+\hat{a}_0^{+} \hat{a}_0
+\right)
+\left|0\right>_0\left|\alpha\right>_1
+\cos\,\varphi
+-
+\nonumber \\
+-
+\left<0\right|_0\left<\alpha\right|_1
+\left(
+\hat{a}_0^{+} \hat{a}_1 + 
+\hat{a}_1^{+} \hat{a}_0
+\right) 
+\left|0\right>_0\left|\alpha\right>_1
+\sin\,\varphi = 
+\nonumber \\
+= \left|\alpha\right|^2 \cos\,\varphi.
+\label{eqPart2Interfero13}
+\end{eqnarray}
+При выводе (\ref{eqPart2Interfero13}) учитывалось, что операторы
+первой и нулевой моды действуют только на состояние своей
+моды. Поэтому имеем
+\[
+\hat{a}_0\left|0\right> = 0, \, 
+\left<0\right|\hat{a}_0^{+} = 0,
+\]
+следовательно 
+\[
+\left<0\right|_0\left<\alpha\right|_1
+\left(
+\hat{a}_0^{+} \hat{a}_1 + 
+\hat{a}_1^{+} \hat{a}_0
+\right) 
+\left|0\right>_0\left|\alpha\right>_1 = 0,
+\]
+а
+\begin{eqnarray}
+\left<\psi\right|\hat{R} \left|\psi\right>= 
+\left<0\right|_0\left<\alpha\right|_1
+\left(
+\hat{a}_1^{+} \hat{a}_1 - 
+\hat{a}_0^{+} \hat{a}_0
+\right)
+\left|0\right>_0\left|\alpha\right>_1
+=
+\nonumber \\
+=
+\left<0\right|_0\left<\alpha\right|_1
+\left(
+\hat{a}_1^{+} \hat{a}_1
+\right)
+\left|0\right>_0\left|\alpha\right>_1
+= \left|\alpha\right|^2 = 
+\left<\hat{n}\right>
+\nonumber
+\end{eqnarray}
+среднему числу фотонов в моде гетеродина.
+
+Если $\varphi = \frac{\pi}{2}$, то $\left<\hat{R}\right> = 0$ и
+выходной сигнал отсутствует. При этом оператор $\hat{R} \ne 0$:
+\[
+\hat{R} = 
+-
+\left(
+\hat{a}_0^{+} \hat{a}_1 + 
+\hat{a}_1^{+} \hat{a}_0
+\right).
+\]
+Хотя среднее этого оператора равно нулю, среднее его квадрата будет
+отлично от нуля и будет описывать шумы, которые ограничивают точность
+измерения $\varphi$, которая в свою очередь описывает различие
+оптических длин плеч интерферометра.
+
+\subsection{Точность измерения интерферометром}
+
+Для начала найдем среднее квадрата шумового члена:
+\begin{eqnarray}
+\left<\psi\right|\hat{R}\hat{R}^{+}\left|\psi\right> = 
+\left<\psi\right|
+\left(
+\hat{a}_0^{+} \hat{a}_1 + 
+\hat{a}_1^{+} \hat{a}_0
+\right)
+\left(
+\hat{a}_0 \hat{a}_1^{+} +
+\hat{a}_1 \hat{a}_0^{+}
+\right)
+\left|\psi\right> = 
+\nonumber \\
+\left<\psi\right|
+\left(
+\hat{a}_0^{+} \hat{a}_1 
+\hat{a}_0 \hat{a}_1^{+} 
++ 
+\hat{a}_0^{+} \hat{a}_1 
+\hat{a}_1 \hat{a}_0^{+}
++
+\hat{a}_1^{+} \hat{a}_0
+\hat{a}_0 \hat{a}_1^{+} 
++
+\hat{a}_1^{+} \hat{a}_0
+\hat{a}_1 \hat{a}_0^{+}
+\right)
+\left|\psi\right>.
+\label{eqPart2Interfero15}
+\end{eqnarray}
+Из четырех членов, входящих в (\ref{eqPart2Interfero15}) три первых
+обращаются при усреднении в 0, а последний будет отличен от нуля.
+Например, для первого члена имеем
+\begin{eqnarray}
+\left<\psi\right|
+\hat{a}_0^{+} \hat{a}_1 
+\hat{a}_0 \hat{a}_1^{+} 
+\left|\psi\right> = 
+\left<0\right|_0\left<\alpha\right|_1
+\hat{a}_0^{+} \hat{a}_1 
+\hat{a}_0 \hat{a}_1^{+} 
+\left|0\right>_0\left|\alpha\right>_1 =
+\nonumber \\
+=
+\left<0\right|_0\left<\alpha\right|_1
+\hat{a}_0^{+} \hat{a}_0 
+\hat{a}_1 \hat{a}_1^{+} 
+\left|0\right>_0\left|\alpha\right>_1 =
+\left<0\right|_0
+\hat{a}_0^{+} \hat{a}_0 
+\left|0\right>_0
+\left<\alpha\right|_1
+\hat{a}_1 \hat{a}_1^{+} 
+\left|\alpha\right>_1 =
+0.
+\nonumber
+\end{eqnarray}
+Последний член равен
+\begin{eqnarray}
+\left<\psi\right|
+\hat{a}_1^{+} \hat{a}_0
+\hat{a}_1 \hat{a}_0^{+}
+\left|\psi\right> = 
+\left<0\right|_0\left<\alpha\right|_1
+\hat{a}_1^{+} \hat{a}_0
+\hat{a}_1 \hat{a}_0^{+}
+\left|0\right>_0\left|\alpha\right>_1 =
+\nonumber \\
+=
+\left<0\right|_0\left<\alpha\right|_1
+\hat{a}_1^{+} \hat{a}_1 
+\hat{a}_0 \hat{a}_0^{+}
+\left|0\right>_0\left|\alpha\right>_1 =
+\left<\alpha\right|_1
+\hat{a}_1^{+} \hat{a}_1 
+\left|\alpha\right>_1 
+\left<0\right|_0
+\hat{a}_0 \hat{a}_0^{+}
+\left|0\right>_0 =
+\nonumber \\
+=
+\left<\alpha\right|_1
+\hat{a}_1^{+} \hat{a}_1 
+\left|\alpha\right>_1 
+\left<1\right.
+\left|1\right>_0 =
+\left<\alpha\right|_1
+\hat{a}_1^{+} \hat{a}_1 
+\left|\alpha\right>_1 
+= \left|\alpha\right|^2.
+\end{eqnarray}
+Таким образом мы получили, что среднеквадратичная величина шумов равна
+среднему числу фотонов в моде, находящейся в когерентном состоянии:
+\begin{equation}
+\bar{\left|R\right|^2} = 
+\left<\hat{R}\hat{R}^{+}\right> = 
+\left|\alpha\right|^2 =
+\bar{n}.
+\nonumber
+\end{equation}
+Дисперсия равна
+\begin{equation}
+\sqrt{\bar{\left|R\right|^2}} = 
+\sqrt{\bar{n}}.
+\nonumber
+\end{equation}
+
+Сигнал возникает из-за изменения 
+\[
+\varphi = \frac{\pi}{2} + \Delta \varphi.
+\]
+Величина его равна
+\[
+\bar{R} = \bar{n} \cos\left(\frac{\pi}{2} + \Delta \varphi\right) \approx
+- \bar{n} \Delta \varphi.
+\]
+Максимально различимым сигналом, т. е. пороговым сигналом, будем
+считать сигнал, равный дисперсии шумов:
+\[
+\left|\bar{n} \Delta \varphi\right| \ge
+\sqrt{\bar{\left|R\right|^2}} = 
+\sqrt{\bar{n}},
+\]
+откуда имеем
+\[
+\Delta \varphi  \ge \frac{1}{\sqrt{\bar{n}}}.
+\]
+Равенству соответствует пороговое значение $\Delta \varphi$.
+
+Как мы увидим в дальнейшем (см. \ref{ChSqueezed}), точность измерения
+можно заметно увеличить, если в сигнальное плечо интерферометра подать
+``сжатый вакуум''.  
+
+

@@ -1,0 +1,105 @@
+\input preamble.tex
+
+\title{Квантование углового момента}
+
+\begin{document}
+\Russian
+\maketitle
+
+\section{Классика}
+Здесь кое что про квантование углового момента. Гамильтониан системы
+имеет следующий вид 
+\begin{eqnarray}
+\mathcal{H} = \frac{m v^2}{2} + U\left( r \right) = 
+\nonumber \\
+= \frac{m r^2 \dot{\theta}^2 }{2} + U\left( r \right)
+\nonumber
+\end{eqnarray}
+мы предпологаем что потенциальная энергия не зависит от угла и зависит
+только от растояния (симметрия задачи)
+
+Лангранжин системы
+\[
+\mathcal{L} = \frac{m r^2 \dot{\theta}^2 }{2} - U\left( r \right)
+\]
+Угловой момент определяется как 
+\begin{equation}
+l = \frac{d \mathcal{L}}{d \dot{\theta}^2} = 
+m r^2 \dot{\theta} = I \dot{\theta},
+\label{eqAngualrMomentumClass}
+\end{equation}
+где через $I$ обозначено $I = m r^2$ - момент инерции (moment of
+inertia).
+
+Уравнения движения для координаты r:
+\[
+\frac{ \partial \mathcal{L} }{\partial r} = 
+\frac{d}{d t} \frac{\partial \mathcal{L}}{\partial \dot{r}}
+\]
+ откуда
+\[
+\frac{\partial U}{\partial r} = m r \dot{\theta}^2
+\]
+ или же
+\[
+ U = \frac{m r^2 \dot{\theta}^2}{2} = \frac{l^2}{2 I}
+\]
+ 
+Таким образом гамильтониан рассматриваемой системы
+\begin{eqnarray}
+\mathcal{H} = \frac{m r^2 \dot{\theta}^2 }{2} + \frac{l^2}{2 I} = 
+\nonumber \\
+= \frac{l^2}{2 I} + \frac{l^2}{2 I} = \frac{l^2}{I}
+\label{eqHClassical}
+\end{eqnarray}
+
+\section{Квантование}
+
+Пусть $\left|\psi\right>$ - собственная функция оператора углового
+момента $\hat{L}$ отвечающая собственному числу $l$:
+\begin{equation}
+\hat{L} \left|\psi\right> = l \left|\psi\right>.
+\label{eqLPsi}
+\end{equation}
+Эта же волновая функция должна удовлетворять уравнению Шредингера
+\[
+i \hbar \frac{\partial \left|\psi\right>}{ \partial t} = 
+\hat { \mathcal{H} } \left|\psi\right>
+\]
+Из (\ref{eqHClassical}) имеем
+\[
+\hat { \mathcal{H} } = \frac{\hat{L}^2}{I}
+\]
+откуда с учетом (\ref{eqLPsi})
+\[
+i \hbar \frac{\partial \left|\psi\right>}{ \partial t} = 
+\frac{1}{I} \hat{L} \hat{L} \left|\psi\right> = 
+\frac{l^2}{I} \left|\psi\right> = 
+\frac{-i l^2}{\hbar I} \left|\psi\right>.
+\]
+Таким образом
+\[
+\left|\psi\right>\left(t \right) = C \dot exp\left\{\frac{-i l^2}{\hbar
+    I} t
+\right\}
+\]
+Волновая функция должна удовлетворять условию периодичности
+\[
+\left|\psi\right>\left(t \right) = \left|\psi\right>\left(t + T \right)
+\]
+где $T$ - период колебаний. Его можно найти из
+(\ref{eqAngualrMomentumClass}):
+\[
+T = \frac{2 \pi I}{l}
+\]
+таким образом
+\[
+2 i \pi n = \frac{-i l^2}{\hbar I} T = 
+\frac{2 \pi I}{l} \frac{-i l^2}{\hbar I}
+\]
+откуда
+\[
+l = -\hbar n
+\]
+
+\end{document}

@@ -1,0 +1,144 @@
+%% -*- coding:utf-8 -*- 
+\section{Релаксация динамической системы. Метод матрицы плотности}
+В квантовой электронике и квантовой оптике мы имеем дело с открытыми
+системами. Такие системы необходимо рассматривать при помощи
+матрицы плотности. Рассматривается малая динамическая система
+(атом, молекулы, мода резонатора и т.п.), слабо связанная с
+большой системой, называемой резервуаром (диссипативной
+системой, термостатом), состоящим из большого числа атомов,
+молекул или осцилляторов, находящихся в равновесии при
+определенной температуре. Таким образом, в общем случае
+рассматриваем динамическую систему ($A$), взаимодействующую с
+резервуаром ($B$) (см. рис. \ref{figPart1Ch2_add2}). Оператор
+плотности комбинированной системы ($AB$) обозначим $\hat{\rho}_{AB}$.
+Свернутый по переменным резервуара (термостата) оператор плотности
+описывает поведение динамической системы с учетом усредненного
+взаимодействия с термостатом. Имеем: 
+\begin{equation}
+\hat{\rho}_{A} = Sp_{B} \hat{\rho}_{AB} = 
+\sum_{\left(B\right)}
+\left<B\right|\hat{\rho}_{AB}\left|B\right>.
+\end{equation}
+В начальный момент времени $t_0$ динамическая система и резервуар
+рассматриваются как независимые (некоррелированные). Тогда 
+\begin{equation}
+\hat{\rho}_{AB}\left(t_0\right) = 
+\hat{\rho}_{A}\left(t_0\right)
+\otimes
+\hat{\rho}_{B}\left(t_0\right)
+\end{equation}
+где  $Sp_B \hat{\rho}_{B} = 1$, $\otimes$ - знак внешнего
+произведения. 
+
+\input ./part1/interaction/fig_add2.tex
+
+Уравнение движения оператора плотности в представлении взаимодействия
+имеет вид 
+\[
+\frac{d}{d t}\hat{\rho}_{AB} = 
+- \frac{i}{\hbar}\left[\hat{V}_{AB}, \hat{\rho}_{AB}\right],
+\]
+где $\hat{V}_{AB}$ - гамильтониан взаимодействия между системами $A$ 
+и $B$.  Решить это уравнение можно с помощью следующего итерационного процесса.
+\begin{equation}
+\hat{\rho}_{AB}\left(t\right) = 
+\hat{\rho}^{(0)}_{AB}\left(t\right) +
+\hat{\rho}^{(1)}_{AB}\left(t\right) +
+\hat{\rho}^{(2)}_{AB}\left(t\right) + \dots,
+\label{eqCh2_rho_iter}
+\end{equation}
+где член \(\hat{\rho}^{(0)}_{AB}\left(t\right)\) находится в предположении
+отсутствия взаимодействия, т. е.
+\[
+\hat{\rho}^{(0)}_{AB}\left(t\right) = \hat{\rho}_{AB}\left(t_0\right) = 
+\hat{\rho}_{A}\left(t_0\right)
+\otimes
+\hat{\rho}_{B}\left(t_0\right).
+\]
+Последующие члены итерационного сотношения (\ref{eqCh2_rho_iter}) задаются следующим соотношением
+\begin{eqnarray}
+\hat{\rho}^{(s)}_{AB}\left(t\right) = - \frac{i}{\hbar}\int_{t_0}^{t} dt_s
+\left[\hat{V}_{AB}\left(t_s\right), \hat{\rho}^{(s - 1)}_{AB}\left(t_s\right)
+\right] = 
+\nonumber \\
+= \left(- \frac{i}{\hbar}\right)^{s}\int_{t_0}^{t} dt_{s}
+\int_{t_0}^{t_s} dt_{s -1} \dots
+\nonumber \\
+\dots \int_{t_0}^{t_2} dt_1 
+\left[\hat{V}_{AB}\left(t_s\right), 
+\left[\hat{V}_{AB}\left(t_{s -1}\right),
+\dots
+\left[\hat{V}_{AB}\left(t_1\right),
+\hat{\rho}^{(0)}_{AB}\left(t_0\right)
+\right]
+\dots
+\right]
+\right] =
+\nonumber \\
+= \left(- \frac{i}{\hbar}\right)^{s}\int_{t_0}^{t} dt_{s}
+\int_{t_0}^{t_{s}} dt_{s - 1} \dots
+\nonumber \\
+\dots \int_{t_0}^{t_2} dt_1 
+\left[\hat{V}_{AB}\left(t_s\right), 
+\left[\hat{V}_{AB}\left(t_{s-1}\right),
+\dots
+\left[\hat{V}_{AB}\left(t_1\right),
+\hat{\rho}_{A}\left(t_0\right)
+\otimes
+\hat{\rho}_{B}\left(t_0\right)
+\right]
+\dots
+\right]
+\right].
+\label{eqCh2_rho_iter_member}
+\end{eqnarray}
+
+Подставляя (\ref{eqCh2_rho_iter_member}) в (\ref{eqCh2_rho_iter}) и производя усреднение 
+по переменным термостата получим
+\begin{eqnarray}
+\hat{\rho}_{A}\left(t\right) = 
+\hat{\rho}_{A}\left(t_0\right) + 
+\nonumber \\
++ Sp_{B} \sum_{\left(s\right)} \left(- \frac{i}{\hbar}\right)^{s}\int_{t_0}^{t} dt_{s} \int_{t_0}^{t_s} dt_{s-1} \dots
+\nonumber \\
+\dots \int_{t_0}^{t_{2}} dt_1 
+\left[\hat{V}_{AB}\left(t_s\right), 
+\left[\hat{V}_{AB}\left(t_{s - 1}\right),
+\dots
+\left[\hat{V}_{AB}\left(t_1\right),
+\hat{\rho}_{A}\left(t_0\right)
+\otimes
+\hat{\rho}_{B}\left(t_0\right)
+\right]
+\dots
+\right]
+\right].
+\label{eqCh2_rho_sequance}
+\end{eqnarray}
+Обычно ограничиваются несколькими первыми членами
+разложения. Например, первые два члена разложения равны 
+\begin{eqnarray}
+\hat{\rho}_{A}\left(t\right) = 
+\hat{\rho}_{A}\left(t_0\right) - \frac{i}{\hbar} Sp_B \left\{
+\int_{t_0}^{t} 
+\left[\hat{V}_{AB}\left(t_1\right), \hat{\rho}_{A}\left(t_0\right)
+\otimes
+\hat{\rho}_{B}\left(t_0\right)
+\right]d t_1
+\right\} -
+\nonumber \\
+-
+\frac{1}{\hbar^2}
+Sp_B \left\{
+\int_{t_0}^{t}d t_2 
+\int_{t_0}^{t_2} d t_1
+\left[\hat{V}_{AB}\left(t_2\right), 
+\left[\hat{V}_{AB}\left(t_1\right), 
+\hat{\rho}_{A}\left(t_0\right)
+\otimes
+\hat{\rho}_{B}\left(t_0\right)
+\right]
+\right]
+\right\}.
+\nonumber
+\end{eqnarray}

@@ -1,0 +1,85 @@
+%% -*- coding:utf-8 -*-
+\section{Определение}
+\begin{definition}
+Допустим имеется $M$ отсчетов $x_0, x_1, \dots, x_{M-1}$ тогда
+дискретное преобразование Фурье задается следующим соотношением
+\begin{equation}
+\tilde{X}_k = \sum^{M - 1}_{m = 0} x_m e^{-\frac{2 \pi}{M} k\cdot m},
+\label{eqAddFourierDiscretFourier}
+\end{equation}
+которое так же записывается в виде
+\begin{equation}
+\left\{x_m\right\} \longleftrightarrow \left\{\tilde{X}_k\right\}.
+\nonumber
+\end{equation}
+\end{definition}
+
+На рис. \ref{picAddFourierFourier} приведен график некоторой
+периодической функции и ее преобразования Фурье. 
+
+%draw2d(yrange=[0, 9], points_joined = true, point_type = 6, points(
+%map(lambda([x, y], cons(x, [y])),  makelist(x, x, 1, 64),
+%abs(fft(makelist(power_mod(2, x, 21), x, 1, 64)))) ),
+%user_preamble="set output 'picshorclassfourier.tex'; set terminal
+%latex; set xlabel '$y$'; set ylabel '$F(y)$'"); 
+\input ./add/fourier/figfourier.tex
+
+Выражение (\ref{eqAddFourierDiscretFourier}) может быть также
+переписано в матричной форме
+\begin{equation}
+\vec{\tilde{X}} = \hat{F} \vec{x},
+\nonumber
+\end{equation}
+где
+\begin{equation}
+\vec{x} = 
+\left(
+\begin{array}{c}
+x_0 \\
+x_1 \\
+\vdots \\
+x_{M-1}
+\end{array}
+\right)
+,
+\vec{\tilde{X}} = 
+\left(
+\begin{array}{c}
+\tilde{X}_0 \\
+\tilde{X}_1 \\
+\vdots \\
+\tilde{X}_{M-1}
+\end{array}
+\right)
+,
+\nonumber
+\end{equation}
+а матрица $\hat{F}$ имеет вид
+\begin{equation}
+\hat{F} = 
+\begin{pmatrix}
+1 & 1 & 1 & \cdots & 1 \\
+1 & e^{-i \omega} & e^{-2 i \omega} & \cdots & 
+e^{-\left( M - 1 \right) i \omega} \\
+1 & e^{-2 i \omega} & e^{-4 i \omega} & \cdots & 
+e^{-2 \left( M - 1 \right) i \omega} \\
+1 & e^{-3 i \omega} & e^{-6 i \omega} & \cdots & 
+e^{-3 \left( M - 1 \right) i \omega} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & e^{-\left( M - 1 \right) i \omega} & e^{-2\left( M - 1 \right) i \omega} & \cdots & 
+e^{- \left( M - 1 \right)\left( M - 1 \right) i \omega} \\
+\end{pmatrix}
+,
+\label{eqAddFourierDiscretFourierMatrixElem}
+\end{equation}
+где
+\[
+\omega = \frac{2 \pi}{M}.
+\]
+Для матричного элемента матрицы
+(\ref{eqAddFourierDiscretFourierMatrixElem}) можно записать
+\begin{equation}
+F_{n m} = e^{-i \omega n m},
+\label{eqAddFourierDiscretFourierMatrixElem2}
+\end{equation}
+где $n, m \in \{ 0, 1, \dots, M - 1\}$.

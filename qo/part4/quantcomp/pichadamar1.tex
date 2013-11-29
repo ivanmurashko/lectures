@@ -1,0 +1,48 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Mon Oct 15 23:49:03 MSK 2012
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="5" x-max="35" y-min="0" y-max="10" auto-bounding="true">
+%<parallelogram p3="(25,0)"
+%	 p2="(25,10)"
+%	 p1="(15,10)"
+%	 />
+%<multicurve points="(10,5);(10,5);(15,5);(15,5)"
+%	 />
+%<multicurve points="(25,5);(25,5);(30,5);(30,5)"
+%	 />
+%<text anchor-point="(20,5)"
+%	 >
+%$\hat{H}$
+%</text>
+%<text anchor-point="(5,5)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(35,5)"
+%	 >
+%$\left|y\right&gt;$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(35,10)(0,0)
+\linethickness{0.3mm}
+\put(15,10){\line(1,0){10}}
+\put(15,0){\line(0,1){10}}
+\put(25,0){\line(0,1){10}}
+\put(15,0){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(10,5){\line(1,0){5}}
+\linethickness{0.3mm}
+\put(25,5){\line(1,0){5}}
+\put(20,5){\makebox(0,0)[cc]{$\hat{H}$}}
+
+\put(5,5){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(35,5){\makebox(0,0)[cc]{$\left|y\right>$}}
+
+\end{picture}

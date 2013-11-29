@@ -1,0 +1,40 @@
+%% -*- coding:utf-8 -*- 
+\section{Введение в теорию групп}
+\begin{definition}
+Группой $\mathcal{G}$ называется множество элементов $g \in
+\mathcal{G}$ для которой определена 
+операция умножения:
+\begin{eqnarray}
+\forall g_1,g_2 \in \mathcal{G},
+\nonumber \\
+g_1 \cdot g_2 \in \mathcal{G}.
+\label{addGroupMulDef}
+\end{eqnarray}
+Операция умножения (\ref{addGroupMulDef}) обладает свойством
+ассоциативности:
+\begin{equation}
+g_1 \cdot \left( g_2 \cdot g_3 \right ) = 
+\left( g_1 \cdot  g_2 \right ) \cdot g_3.
+\nonumber
+\end{equation}
+Рассматриваемое множество должно содержать элемент $e$ обладающий
+следующим свойством, справедливым для любого элемента множества $g$:
+\begin{equation}
+g \cdot e = e \cdot g = g.
+\nonumber
+\end{equation}
+Для каждого элемента группы $g$ должен существовать обратный
+элемент $g^{-1} \in \mathcal{G}$, обладающий следующим свойством
+\begin{equation}
+g \cdot g^{-1} = g^{-1} \cdot g = e
+\nonumber
+\end{equation}
+\label{defAddGroup}
+\end{definition}
+
+\begin{example}
+\emph{Группа $\left(\mathcal{Z}, +\right)$}
+Множество целых чисел $\mathcal{Z} = \left\{0, \pm1, \pm2,
+\dots\right\}$ представляет собой группу относительно операции сложения.
+\nonumber
+\end{example}

@@ -1,0 +1,96 @@
+%% -*- coding:utf-8 -*- 
+\section{Операторные соотношения}
+Будем рассматривать падающее и прошедшее поля как двухмерные
+см. рис. \ref{figPart2Interfero_2}. Операторы $\hat{a}_0$ и 
+$\hat{a}_1$ - операторы падающего поля, относящиеся к двум разным модам
+(нулевой и первой). Операторы прошедшего поля $\hat{a}_2$ и 
+$\hat{a}_3$ (вторая и третья моды). Естественно, что операторы должны
+удовлетворять коммутационным соотношениям:
+\begin{eqnarray}
+\left[\hat{a}_0, \hat{a}_0^{+}\right] = 
+\left[\hat{a}_1, \hat{a}_1^{+}\right] = 
+\left[\hat{a}_2, \hat{a}_2^{+}\right] = 
+\left[\hat{a}_3, \hat{a}_3^{+}\right] = 1,
+\nonumber \\
+\left[\hat{a}_0, \hat{a}_1^{+}\right] = 
+\left[\hat{a}_2, \hat{a}_3^{+}\right] = 0.
+\label{eqPart2Interfero5}
+\end{eqnarray}
+
+\input ./part2/interfero/fig2.tex
+
+Связь между модами возникает при отражении от зеркала и прохождении
+через него. Она описывается следующими уравнениями:
+\begin{eqnarray}
+\hat{a}_2 = t' \hat{a}_0 + r \hat{a}_1,
+\nonumber \\
+\hat{a}_3 = r' \hat{a}_0 + t \hat{a}_1.
+\label{eqPart2Interfero6}
+\end{eqnarray}
+
+Падающее и прошедшее поля должны удовлетворять коммутационным
+соотношениям (\ref{eqPart2Interfero5}), откуда имеем  с учетом 
+(\ref{eqPart2Interfero3})
+\begin{eqnarray}
+\left[\hat{a}_2, \hat{a}_2^{+}\right] = 
+\left[t' \hat{a}_0 + r \hat{a}_1, t'^{*} \hat{a}_0^{+} + r^{*}
+  \hat{a}_1^{+}\right] =
+\nonumber \\ = 
+\left|r\right|^2 + \left|t\right|^2 = 1.
+\label{eqPart2InterferoTask2a}
+\end{eqnarray}
+Аналогично получаем 
+\begin{equation}
+\left[\hat{a}_3, \hat{a}_3^{+}\right] = 1 
+\label{eqPart2InterferoTask2b}
+\end{equation}
+и далее
+\begin{equation}
+\left[\hat{a}_2, \hat{a}_3^{+}\right] = 
+\left[t' \hat{a}_0 + r \hat{a}_1, 
+r'^{+} \hat{a}_0^{+} + t^{*} \hat{a}_1^{+}\right] = 
+t' r'^{*} + r t^{*} = 0.
+\label{eqPart2InterferoTask2c}
+\end{equation}
+Таким образом мы получили что выполнение всех требуемых коммутационных
+соотношений. Заметим что если возбуждена только мода 1 (вход 1), то
+поле нулевой моды (вход 0) нельзя отменить как это делается в
+классическом случае. В квантовом случае мода находится в вакуумном
+состоянии, и ее поле не равно нулю. Если это не учитывать, то
+коммутационные соотношения (\ref{eqPart2Interfero5}) будут нарушены.
+
+\input ./part2/interfero/fig3.tex
+
+Положим, что на зеркало (делитель световых пучков), изображенное на
+рис. \ref{figPart2Interfero_3}, подается на вход 1 (первая мода) -
+когерентное состояние $\left|\alpha\right>$, а на нулевой вход
+(нулевая мода) вакуумное состояние $\left|0\right>$, т. е.
+\begin{eqnarray}
+\hat{a}_0 \left|0\right> = 0,
+\nonumber \\
+\hat{a}_1 \left|\alpha\right> = \alpha \left|\alpha\right>.
+\nonumber
+\end{eqnarray}
+Таким образом на входе мы имеем двухмодовое состояние 
+\[
+\left|\psi\right> = \left|0\right>_0 \left|\alpha\right>_1.
+\]
+Из (\ref{eqPart2Interfero6}) следует 
+\begin{equation}
+\hat{a}_3\left|\psi\right> = 
+\left(r' \hat{a}_0 + t \hat{a}_1\right)\left|0\right>_0
+\left|\alpha\right>_1 = 
+t \alpha \left|\psi\right>,
+\nonumber
+\end{equation}
+откуда видно, что состояние на выходе 3 является когерентным состоянием
+с ослабленной амплитудой $\alpha_3 = t \alpha$. 
+Аналогичным образом получим
+\begin{equation}
+\hat{a}_2\left|\psi\right> = 
+r' \alpha \left|\psi\right>, \, \alpha_2 = r'\alpha.
+\label{eqPart2InterferoTask3}
+\end{equation}
+Таким образом изменение амплитуды $\alpha$ получается таким же как в
+классическом случае, а состояние остается когерентным.
+

@@ -1,0 +1,97 @@
+%% -*- coding:utf-8 -*- 
+\section{Неклассичность сжатого состояния}
+В заключение покажем, что сжатое состояние неклассично. Условием
+сжатого состояния является 
+\begin{equation}
+\left(\Delta X_1\right)^2 < \frac{1}{4},
+\nonumber
+\end{equation}
+где 
+\[
+\left(\Delta X_1\right)^2 =
+\left<\hat{X}_1^2\right> - 
+\left<\hat{X}_1\right>^2.
+\]
+Оператор
+\[
+\hat{X}_1 = \frac{\hat{a} + \hat{a}^{+}}{2},
+\]
+тогда 
+\begin{eqnarray}
+\hat{X}_1^2 = \frac{\hat{a}^2 + \left(\hat{a}^{+}\right)^2 +
+  \hat{a}^{+}\hat{a} + \hat{a} \hat{a}^{+}}{4} = 
+\nonumber \\
+=
+\frac{\hat{a}^2 + \left(\hat{a}^{+}\right)^2 +
+  2 \hat{a}^{+}\hat{a} + 1}{4}.
+\nonumber
+\end{eqnarray}
+
+В то же время 
+\[
+\left(\hat{N}\hat{X}_1^2\right) = 
+\hat{a}^2 + \left(\hat{a}^{+}\right)^2 +
+2 \hat{a}^{+}\hat{a},
+\]
+где $\hat{N}\hat{X}_1^2$ - оператор, подвергнутый действию оператора
+$\hat{N}$, действие которого состоит в том, что устанавливается
+нормальная последовательность операторов $\hat{a}^{+}$ и $\hat{a}$,
+независимо от коммутационого соотношения.
+
+Отсюда получим
+\begin{equation}
+\left(\Delta N X_1\right)^2 = 
+\left(\Delta X_1\right)^2 - \frac{1}{4},
+\nonumber
+\end{equation}
+или
+\begin{equation}
+\left(\Delta N X_1\right)^2 < 0,
+\nonumber
+\end{equation}
+т. к. 
+\[
+\left(\Delta X_1\right)^2 < \frac{1}{4}.
+\]
+
+Положим, что сжатое состояние описывается оператором плотности,
+который записан в представлении когерентных состояний
+\[
+\hat{\rho} = \int P\left(\alpha\right)
+\left|\alpha\right>
+\left<\alpha\right| d^2 \alpha,
+\]
+тогда для среднего значения 
+\begin{equation}
+\left(\Delta N X_1\right)^2 = 
+\left<\left(N X_1\right)^2\right> - \left<N X_1\right>^2 
+\label{eqPart3SqueezedNonclass3}
+\end{equation}
+можем написать
+\[
+\left(\Delta N X_1\right)^2 = 
+ \int 
+P\left(\alpha\right)
+\left(\Delta X_1\right)^2
+d^2 \alpha
+\]
+где $\left(\Delta X_1\right)^2$ получается из
+(\ref{eqPart3SqueezedNonclass3}), если заменить все $\hat{a}^{+}$ на
+$\alpha^{*}$, а $\hat{a}$ на $\alpha$. Можно показать, что
+\[
+\left(\Delta X_1\right)^2 = \left(\Delta \alpha^{*} + \Delta \alpha\right)^2
+\]
+величина очевидно неотрицательная. По условию сжатия интеграл должен
+быть меньше нуля:
+\begin{equation}
+\left(\Delta N X_1\right)^2 = 
+ \int 
+P\left(\alpha\right)
+\left(\Delta X_1\left(\alpha^{*}\alpha\right)\right)^2
+d^2 \alpha < 0.
+\nonumber
+\end{equation}
+Это очевидно возможно, если хотя бы на части плоскости
+$\left(\alpha\right)$ $P\left(\alpha\right) < 0$. Это, как мы знаем,
+является условием неклассичности. 
+

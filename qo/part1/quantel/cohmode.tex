@@ -1,0 +1,303 @@
+%% -*- coding:utf-8 -*- 
+\section{Когерентные состояния}
+Состояния $\left|n\right>$  не стремятся при увеличении $n$  к
+классическому решению для осциллятора. Этим свойством обладают так
+называемые когерентные состояния. Они были введены Э.Шредингером, а
+затем развиты в наше время Р.Глаубером
+\cite{bQuantumOpticsAndRadioPhisicsLecture1966} и Э.Судершаном 
+\cite{bKaluderSudershan1970} применительно к задачам квантовой
+оптики. Когерентное   состояние может быть определено различными
+путями. Воспользуемся определением в виде суперпозиции состояний
+$\left|n\right>$:
+\begin{equation}
+\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\left|n\right>,
+\quad
+\left<\alpha\right| = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^{*n}}{\sqrt{n!}}\left<n\right|,
+\label{eqCh1_coh_def}
+\end{equation}
+где $\alpha$ -  некоторый комплексный параметр, смысл которого
+выяснится в дальнейшем. 
+
+Из определения (\ref{eqCh1_coh_def}) следует ряд свойств когерентных
+состояний. Прежде  всего,
+\begin{equation}
+\left<\alpha\right|\left.\alpha\right> = 
+e^{-\left|\alpha\right|^2}\sum_{(n)}
+\frac{\left(\alpha\alpha^{*}\right)^n}{n!} = 
+e^{\left|\alpha\right|^2} e^{-\left|\alpha\right|^2} = 1,
+\end{equation}
+т.е. когерентные состояния нормированы. Однако эти состояния не
+ортогональны: 
+\begin{equation}
+\left<\alpha\right|\left.\beta\right> = 
+e^{-\frac{1}{2}\left(\left|\alpha\right|^2 +
+  \left|\beta\right|^2\right)}\sum_{(n)} 
+\frac{\left(\alpha^{*}\beta\right)^n}{n!} = 
+e^{
+-\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
++
+\alpha^{*} \beta 
+}
+\label{eqCh1_ortog}
+\end{equation}
+Отсюда
+\begin{equation}
+\left|\left<\alpha\right|\left.\beta\right>\right|^2 = 
+e^{
+-\left|\alpha\right|^2  - \left|\beta\right|^2
++
+\alpha^{*} \beta  + \alpha \beta^{*}} = 
+e^{-\left|\alpha - \beta\right|^2}, 
+\end{equation}
+т.е. эти состояния могут считаться приближенно ортогональными, если
+$\left|\alpha - \beta\right|$  достаточно велико. 
+
+Неортогональность когерентных состояний является следствием
+переполненности системы ($\alpha$ -  любое комплексное число, а  $n$ -
+только целые числа). 
+
+Когерентные состояния являются собственными состояниями оператора
+уничтожения с собственным числом $\alpha$: 
+\begin{equation}
+\hat{a}\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\sqrt{n}\left|n - 1\right> = 
+e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(m = n - 1)} \frac{\alpha \alpha^m}{\sqrt{m!}}\left|m\right> = 
+\alpha\left|\alpha\right>
+\end{equation}
+
+Сопряженное соотношение имеет вид
+\begin{equation}
+\left<\alpha\right|\hat{a}^{+} =  
+\alpha^{*}\left<\alpha\right|
+\end{equation}
+
+Вероятность обнаружить (измерить) в когерентном состоянии $n$ фотонов
+\begin{equation}
+\left|\left<n\right|\left.\alpha\right>\right|^2 =
+e^{-\left|\alpha\right|^2}
+\frac{\left(\left|\alpha\right|^2\right)^n}{n!}
+\label{eqCh1_PuassonCoh}
+\end{equation}
+соответствует распределению Пуассона со средним числом фотонов  
+$\left<n\right> = \left|\alpha\right|^2$.  Используя известное нам
+соотношение 
+\begin{equation}
+\left|n\right> = \frac{1}{\sqrt{n!}}
+\left(\hat{a}^{+}\right)^n\left|0\right>
+\label{eqCh1_nstate}
+\end{equation}
+когерентное состояние можно представить в виде
+\begin{equation}
+\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}\sum_{(n)}
+\frac{\left(\alpha \hat{a}^{+}\right)^n}{n!}\left|0\right> = 
+e^{\alpha \hat{a}^{+} -
+  \frac{1}{2}\left|\alpha\right|^2}\left|0\right>
+\label{eqCh1_astate}
+\end{equation}
+
+Перепишем (\ref{eqCh1_astate}) в ином виде, для этого воспользуемся
+следующим соотношением
+\[
+e^{- \alpha^{*} \hat{a}} \left|0\right> = \left(1 - \alpha^{*} \hat{a} +
+\dots\right) \left|0\right> = \left|0\right>,
+\]
+в результате получим
+\begin{equation}
+\left|\alpha\right> = 
+e^{\alpha \hat{a}^{+}} 
+e^{-\frac{1}{2}\left|\alpha\right|^2}
+e^{- \alpha^{*} \hat{a}} 
+\left|0\right>.
+\label{eqCh1_astate_add}
+\end{equation}
+Далее воспользуемся операторным тождеством (формулой Бейкера-Хаусдорфа)
+\begin{equation}
+e^{\hat{c} + \hat{d}} = e^{- \frac{1}{2}\left[\hat{c},
+    \hat{d}\right]}e^{\hat{c}} e^{\hat{d}} 
+\label{eqPart1Ch1_BeikerHausdorf}
+\end{equation}
+справедливым при условии  
+$\left[\hat{c},\left[\hat{c}, \hat{d}\right]\right] =
+\left[\hat{d},\left[\hat{c}, \hat{d}\right]\right] = 0$.
+Если положить $\hat{c} = \alpha\hat{a}^{+}$, $\hat{d} = -\alpha^*\hat{a}$
+то из (\ref{eqCh1_astate_add})  получим 
+\begin{eqnarray}
+\left|\alpha\right> =  
+e^{\alpha \hat{a}^{+}} 
+e^{-\frac{1}{2}\left|\alpha\right|^2}
+e^{- \alpha^{*} \hat{a}} 
+\left|0\right> =
+e^{-\frac{1}{2}\left|\alpha\right|^2}
+e^{\alpha \hat{a}^{+}} 
+e^{- \alpha^{*} \hat{a}} 
+\left|0\right> = 
+\nonumber \\
+=
+e^{\alpha \hat{a}^{+} - \alpha^{*} \hat{a}}\left|0\right>.
+\label{eqCh1_astate4squeezed}
+\end{eqnarray}
+
+Для того чтобы наглядно представить когерентные состояния, в приложении
+\ref{AddQCoh} дано координатное представление когерентного состояния. 
+
+Приведем еще несколько полезных соотношений, полученных из
+(\ref{eqCh1_astate}). Дифференцируя (\ref{eqCh1_astate}) по  $\alpha$,
+имеем:  
+\[
+\frac{\partial}{\partial \alpha}\left|\alpha\right> = 
+\left( \hat{a}^{+} - \frac{1}{2}\alpha^{*}\right)\left|\alpha\right>,
+\]
+или иначе 
+\[
+\hat{a}^{+}\left|\alpha\right> = \left(\frac{\partial}{\partial
+  \alpha} +  \frac{1}{2}\alpha^{*}\right)\left|\alpha\right>.
+\]
+сопряженное равенство имеет вид
+\[
+\left<\alpha\right|\hat{a} = \left(\frac{\partial}{\partial
+  \alpha^{*}} +  \frac{1}{2}\alpha\right)\left<\alpha\right|
+\]
+
+В общем случае оператор положительно частотной части электрического поля имеет вид
+\[
+\hat{\vec{E}}^{(+)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k\left(t\right) \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)}, 
+\]
+
+Положим, что поле (многомодовое) находится в состоянии
+\[
+\left| \left\{\alpha_s\right\}\right> = 
+\left| \alpha_1, \alpha_2, \dots, \alpha_s, \dots\right> = 
+\left| \alpha_1\right> \left| \alpha_2\right> \dots \left| \alpha_s\right> \dots,
+\]
+где $\left\{\alpha_s\right\}= \left\{\alpha_{k_s}\right\}$
+обозначает некоторую совокупность параметров $\alpha$ . Если действовать
+оператором $\hat{\vec{E}}^{(+)}$ на состояние  $\left|\left\{\alpha_{k_s}\right\}\right>$,  получим 
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}\left|\left\{\alpha_{k_s}\right\}\right> = 
+\left\{ \sum_{(k_s)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_{k_s} \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)}\right\}\left|\left\{\alpha_{k_s}\right\}\right> = 
+\nonumber \\
+= 
+\sum_{(k_s)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \alpha_{k_s} \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)}\left|\left\{\alpha_{k_s}\right\}\right>,
+\end{eqnarray}
+т.е. $\left|\left\{\alpha_{k_s}\right\}\right>$  является собственным
+вектором оператора положительно-частотной части электрического поля, а
+собственным значением является классическое поле (аналитический
+сигнал), у которого комплексные амплитуды мод равны  
+\(
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \alpha_k.
+\)
+Отсюда следует, что каждому классическому полю соответствует некоторое
+когерентное состояние. 
+
+Среднее значение оператора электрического поля $\hat{\vec{E}} =
+\hat{\vec{E}}^{(+)} + \hat{\vec{E}}^{(-)}$   в когерентном
+состоянии получим, рассмотрев сначала одну моду: 
+\[
+\left<\alpha_{k}\right|\hat{\vec{E}}_k\left|\alpha_{k}\right> = 2
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}}\left|\alpha_{k}\right|\cos 
+\left(\omega_k t - \left(\vec{k} \vec{r} + \theta_k\right) \right),
+\]
+где $\alpha_k = \left|\alpha_{k}\right| e^{i \theta_k}$, что следует из соотношений
+\[
+\left<\alpha_k\right|\hat{a}_k\left|\alpha_k\right> = \alpha_k, \quad
+\left<\alpha_k\right|\hat{a}^{+}_k\left|\alpha_k\right> = \alpha^{*}_k
+\]
+Обобщая это на многомодовый случай, получим
+\begin{equation}
+\left<\left\{\alpha_{k}\right\}\right|\hat{\vec{E}}\left|\left\{\alpha_{k}\right\}\right>
+= 2 \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \left|\alpha_k\right|\cos \left(\omega_k t -
+\left(\vec{k}\vec{r}\right) + \theta_k \right),
+\end{equation}
+что соответствует классическому многомодовому полю, т.е. среднее
+значение $\hat{\vec{E}}$   в когерентном состоянии является
+классическим полем с соответствующими амплитудами и фазами мод. 
+
+Когерентные состояния, как мы видели, не ортогональны из-за
+переполненности системы собственных векторов, но они удовлетворяют
+условию полноты: 
+\begin{equation}
+\frac{1}{\pi}\int \left|\alpha\right>\left<\alpha\right| d^2 \alpha =
+\hat{I},
+\label{eqCh1_full4coh}
+\end{equation}
+Здесь $d^2 \alpha = d\, Re \alpha\, d\, Im \alpha$ , $\hat{I}$ - единичный
+оператор, а интегрирование ведется по всей комплексной
+плоскости. Докажем это, воспользовавшись полярными координатами,
+изображенными на рис. \ref{figCh1_Coh}.  
+
+\input ./part1/quantel/fig5.tex
+
+Используя разложение $\left|\alpha\right>$ по $\left|n\right>$ в
+полярных координатах, получим 
+\begin{eqnarray}
+\int d^2 \alpha \left|\alpha\right>\left<\alpha\right| =
+\nonumber \\
+=
+\int_0^{\infty} d \left|\alpha\right|\int_0^{2
+  \pi}\left|\alpha\right|\sum_{(n)}\sum_{(m)}e^{-i \left(n -
+  m\right)\varphi}
+e^{-\left|\alpha\right|^2}\left|m\right>\left<n\right|
+\frac{\left|\alpha\right|^m \left|\alpha\right|^n}{\sqrt{n! m!}} d\varphi
+= 
+\nonumber \\
+= \pi \sum_{(n)}\frac{1}{n!}\int_0^{\infty} 2
+\left|\alpha\right|\left|\alpha\right|^{2n} e^{-\left|\alpha\right|^2} 
+\left|n\right>\left<n\right|
+d\left|\alpha\right| = 
+\nonumber \\
+=
+\pi
+\sum_{(n)}\frac{\left|n\right>\left<n\right|}{n!} \int_0^{\infty}x^n
+e^{-x}dx = 
+\pi \sum_{(n)}\left|n\right>\left<n\right| = \pi \hat{I},
+\end{eqnarray}
+где учтено, что
+\[
+\int_0^{2\pi} e^{-i \left(n - m\right)\varphi} = 2 \pi \delta_{nm},
+\]
+сделана замена переменных:  
+\[
+\left|\alpha\right|^2 = x, \quad 2 \left|\alpha\right| d
+\left|\alpha\right| = d x,
+\]
+использовано интегральное представление факториала:
+\[
+n! = \int_0^{\infty}x^ne^{-x}dx
+\]
+
+Таким образом, доказана формула (\ref{eqCh1_full4coh}). При помощи
+этого соотношения можно выразить одно когерентное состояние через все
+остальные: 
+\[
+\left|\alpha\right> = \frac{1}{\pi}\int\left|\beta\right>\left<\beta\right|\left.\alpha\right> d^2 \beta,
+\]
+но в (\ref{eqCh1_ortog}) мы имели
+\(
+\left<\alpha\right|\left.\beta\right> = 
+e^{
+-\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
++
+\alpha^{*} \beta
+},
+\)
+следовательно,
+\begin{equation}
+\left|\alpha\right> = \frac{1}{\pi}\int\left|\beta\right>
+e^{
+-\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
++
+\alpha^{*} \beta
+} d^2 \beta.
+\end{equation}

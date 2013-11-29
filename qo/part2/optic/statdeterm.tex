@@ -1,0 +1,115 @@
+%% -*- coding:utf-8 -*- 
+\section{Определение статистики фотонов через распределение
+  фотоотсчетов}
+Обычно основной интерес представляет статистика фотонов, которая
+характеризует световой пучок. Чтобы ее определить по измеренным
+$P_m\left(T\right)$, следует обратить (\ref{eqCh4_49}), выразив
+$P\left(\bar{I}\right)$ через $P_m\left(T\right)$. 
+   
+Существует несколько способов нахождения $P\left(\bar{I}\right)$.  (О
+способах обращения см. \cite{bDvait1973}.) Остановимся на одном
+из них.  Рассмотрим выражение (\ref{eqCh4_49})
+\[
+P_m\left(T\right) = 
+\int_0^{\infty}
+P\left(\bar{I}\right)
+\frac{\left(\xi \bar{I}T\right)^m}{m!} e^{-
+  \xi \bar{I} T} 
+d \bar{I}.
+\]
+Из этого равенства по измеренным $P_m\left(T\right)$ нужно определить
+плотность вероятности  $P\left(\bar{I}\right)$,  характеризующую
+статистику падающего света.   
+
+Перейдем к новой переменной $u = \xi \bar{I} T$ и определим новую
+плотность вероятности 
+\[
+P\left(u\right) = \frac{1}{\xi T} P\left(\bar{I}\right).
+\]
+Имеем: 
+\[
+P_T\left(u\right) du = \frac{1}{\xi T} P\left(\bar{I}\right) \xi T d
+\bar{I} = P\left(\bar{I}\right) d \bar{I}.
+\]
+Отсюда: 
+\[
+\int_0^{\infty}P_T\left(u\right) du = 
+\int_0^{\infty}P\left(\bar{I}\right) d\bar{I} = 1, 
+\]
+как и должно быть. Запишем уравнение (\ref{eqCh4_49}) в этих  
+переменных 
+\begin{equation}
+P_m\left(T\right) = 
+\int_0^{\infty}
+P_T\left(u\right)
+\frac{u^m}{m!} e^{-u} 
+d u.
+\label{eqCh4_53}
+\end{equation}
+Далее используем ортогональные полиномы Лагерра
+\begin{eqnarray}
+L_n\left(y\right) = \sum_{k = 0}^{n}{n\choose k}
+\frac{\left(-y\right)^k}{k!},
+\nonumber \\
+{n\choose k} = C_k^n = \frac{n!}{k!\left(n - k\right)!}
+\label{eqCh4_54}
+\end{eqnarray}
+удовлетворяющие условиям ортогональности 
+\begin{equation}
+\int_0^{\infty}L_p\left(y\right)L_q\left(y\right)e^{-y} dy =
+\delta_{pq},
+\label{eqCh4_TaskLager1}
+\end{equation}
+которым заменой переменных $y \rightarrow 2y$ можно придать вид
+\begin{equation}
+2 \int_0^{\infty}L_p\left(2 y\right)L_q\left(2 y\right)e^{-2 y} dy =
+\delta_{pq}. 
+\label{eqCh4_TaskLager2}
+\end{equation}
+Разложим теперь $P_T\left(u\right)$ в ряд по полиномам Лагерра:
+\begin{equation}
+P_T\left(u\right) = 
+\sum_{n = 0}^{\infty}
+A_n L_n\left(2u \right)
+e^{-u} 
+\label{eqCh4_55}
+\end{equation}
+Используя условия ортогональности (\ref{eqCh4_TaskLager2}), получим для
+коэффициентов разложения $A_n$ выражение  
+\begin{equation}
+A_n = 2 \int_0^{\infty}
+L_n\left(2 u\right)P_T\left(u\right)e^{-u}du.
+\label{eqCh4_56}
+\end{equation}
+Подставим в (\ref{eqCh4_56}) $L_n\left(2 u\right)$ в виде ряда
+(\ref{eqCh4_54}). Получим: 
+\begin{eqnarray}
+A_n = 2 \sum_{k = 0}^{k = n}
+{n\choose k}\left(- 2\right)^k\int_0^{\infty}
+P_T\left(y\right)\frac{y^k}{k!}e^{-y} dy = 
+\nonumber \\
+= 2 \sum_{k = 0}^{k = n}
+{n\choose k}
+\left(- 2\right)^k
+P_k\left(T\right),
+\label{eqCh4_57}
+\end{eqnarray}
+где использовано выражение  
+\[
+\int_0^{\infty}P\left(y\right)\frac{y^k}{k!}e^{-y}dy =
+P_k\left(T\right). 
+\]
+Будем считать, что из измерений нам
+известно достаточное число значений $P_k\left(T\right)$. Это позволит
+вычислить достаточное количество коэффициентов разложения $A_n$ по
+формуле (\ref{eqCh4_57}). Подставляя их в ряд (\ref{eqCh4_55}) для
+$P_T\left(u\right)$ и переходя к исходным переменным, получим
+\begin{equation}
+P\left(\bar{I}\right) = \xi T\sum_{k = 0}^{\infty}
+A_n L_n\left(2 \xi T \bar{I}\right)e^{- \xi T \bar{I}}.
+\label{eqCh4_58}
+\end{equation}
+При помощи этого выражения в принципе можно обратить формулу
+Манделя. Трудность здесь связана с тем, что нам известно только
+конечное число $P_n\left(T\right)$ с ограниченной точностью. 
+

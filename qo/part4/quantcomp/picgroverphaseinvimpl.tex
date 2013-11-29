@@ -1,0 +1,76 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Mon Jan 14 00:25:57 MSK 2013
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="5" x-max="55" y-min="0" y-max="40" auto-bounding="true">
+%<multicurve points="(5,35);(5,35);(20,35);(20,35)"
+%	 />
+%<multicurve points="(5,15);(5,15);(20,15);(20,15)"
+%	 />
+%<multicurve points="(5,5);(5,5);(20,5);(20,5)"
+%	 />
+%<parallelogram p3="(40,0)"
+%	 p2="(40,40)"
+%	 p1="(20,40)"
+%	 />
+%<multicurve points="(40,5);(40,5);(55,5);(55,5)"
+%	 />
+%<multicurve points="(40,35);(40,35);(55,35);(55,35)"
+%	 />
+%<multicurve points="(40,15);(40,15);(55,15);(55,15)"
+%	 />
+%<text anchor-point="(5,0)"
+%	 >
+%$\left|b\right&gt;$
+%</text>
+%<text anchor-point="(25,35)"
+%	 >
+%$\hat{U}_f$
+%</text>
+%<text anchor-point="(5,25)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(50,25)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(55,0)"
+%	 >
+%$\left|f\left(x\right)\otimes b\right&gt;$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(55,40)(0,0)
+\linethickness{0.3mm}
+\put(5,35){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(5,15){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(5,5){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(20,40){\line(1,0){20}}
+\put(20,0){\line(0,1){40}}
+\put(40,0){\line(0,1){40}}
+\put(20,0){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(40,5){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(40,35){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(40,15){\line(1,0){15}}
+\put(5,0){\makebox(0,0)[cc]{$\left|b\right>$}}
+
+\put(25,35){\makebox(0,0)[cc]{$\hat{U}_f$}}
+
+\put(5,25){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(50,25){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(55,0){\makebox(0,0)[cc]{$\left|f\left(x\right)\otimes b\right>$}}
+
+\end{picture}

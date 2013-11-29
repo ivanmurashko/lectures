@@ -1,0 +1,84 @@
+%% -*- coding:utf-8 -*- 
+\section{Квантование электромагнитного поля при разложении его по
+  плоским волнам}
+Для квантования электромагнитного поля в этом случае обратим внимание
+на аналогию (\ref{eqCh1_separation4hamilton}) и
+(\ref{eqCh1_quant_stoyachie_volny}):
+\[
+\hat{\mathcal{H}_n} = 
+\frac{\omega_n \hbar}{2}
+\left(\hat{a}_n \hat{a}_n^{+} + \hat{a}_n^{+} \hat{a}_n\right)
+=
+\omega_n \hbar 
+\left(\hat{a}_n^{+} \hat{a}_n + \frac{1}{2}\right)
+\]
+и
+\[
+\mathcal{H} = \varepsilon_0 \sum_{(k)} 
+\left(A_k A_k^{*} + A_k^{*} A_k \right).
+\]
+
+Из этой аналогии следует, что можно использовать следующую процедуру
+квантования:
+\[
+\sqrt{\varepsilon_0}A_k \rightarrow \sqrt{\frac{\omega_k \hbar}{2}}
+\hat{a}_k, \quad
+\sqrt{\varepsilon_0}A_k^{*} \rightarrow \sqrt{\frac{\omega_k \hbar}{2}}
+\hat{a}_k^{+}.
+\]
+Такая замена приводит к следующему выражению для гамильтониана:
+\[
+\hat{\mathcal{H}_k} = \frac{\omega_k \hbar}{2} 
+\left(\hat{a}_k \hat{a}_k^{+} + \hat{a}_k^{+} \hat{a}_k\right).
+\]
+
+Воспользовавшись коммутационными соотношениями
+\[
+\left[\hat{a}, \hat{a}^{+} \right] = 1, \quad
+\hat{a} \hat{a}^{+} - \hat{a}^{+}\hat{a} = 1, \quad
+\hat{a} \hat{a}^{+} = \hat{a}^{+}\hat{a} + 1,
+\]
+имеем
+\(
+\hat{\mathcal{H}_k} = \omega_k \hbar 
+\left(\hat{a}_k^{+} \hat{a}_k + \frac{1}{2}\right)
+\) - 
+выражение, полностью совпадающее с (\ref{eqCh1_quant_stoyachie_volny}).
+Полный гамильтониан получим суммированием по всем модам:
+\begin{equation}
+\hat{\mathcal{H}} = \sum_{(k)} \hat{\mathcal{H}}_k = \sum_{(k)} 
+\omega_k \hbar \left(\hat{a}_k^{+} \hat{a}_k + \frac{1}{2}\right).
+\end{equation}
+
+В гамильтоновом виде можно представить и импульс электромагнитного 
+поля. Классический импульс электромагнитного поля, находящегося в
+объеме  $V$,  определяется формулой 
+\begin{equation}
+\vec{G} = \frac{1}{c^2} \int_{(\nu)}
+\left[\vec{E} \vec{H} \right] d \nu.
+\label{eqCh1_task3_1}
+\end{equation}
+Используя разложение поля по плоским волнам, учитывая соотношения
+ортогональности и переходя к операторам, получим 
+\[
+\hat{\vec{G}} = \sum_{(k)} \vec{k} \hbar\left( \hat{a}_k^{+} \hat{a}_k +
+\frac{1}{2} \right)
+\]
+Из симметрии  следует, что $\sum_{(k)} \vec{k} \hbar = 0$ и, следовательно, 
+\begin{equation}
+\hat{\vec{G}} = \sum_{(k)} \vec{k} \hbar\hat{a}_k^{+} \hat{a}_k.
+\label{eqCh1_task3_2}
+\end{equation}
+
+Оператор электрического поля выражается теперь следующим образом:
+\begin{equation}
+\hat{\vec{E}} = \sum_{(k)} \hat{a}_k\sqrt{\frac{\hbar \omega_k}{2 \nu
+    \varepsilon_0}} \vec{e}_k e^{i\left(\vec{k}\vec{r}\right)} +
+\sum_{(k)} \hat{a}_k^{+}\sqrt{\frac{\hbar \omega_k}{2 \nu
+    \varepsilon_0}} \vec{e}_k^{*} e^{-i\left(\vec{k}\vec{r}\right)}.
+\end{equation}
+
+В дальнейшем будем пользоваться дираковской формулировкой уравнений
+квантовой механики, поэтому в приложении \ref{AddDirac} дано краткое
+изложение дираковского формализма: введено понятие вектора состояния и
+изложены способы оперирования с ним.  

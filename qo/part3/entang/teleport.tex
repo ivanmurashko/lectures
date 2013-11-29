@@ -1,0 +1,178 @@
+%% -*- coding:utf-8 -*- 
+\section{Теорема о запрете клонирования и квантовая телепортация.}
+\label{pPart3EntangleNoClone}
+В квантовой механике существует так называемая теорема о запрете
+клонирования \cite{bNoClone}. Смысл этой теоремы может быть пояснен на
+нашем примере фотона с двумя 
+взаимно ортогональными поляризациями, волновая функция которого
+задается соотношением (\ref{eqEntangSimpleState}). Теорема о запрете
+клонирования  утверждает что невозможно создать прибор, на вход
+которого подается частица в состоянии (\ref{eqEntangSimpleState}), 
+а на выходе получаются две частицы в этом же состоянии. 
+
+Действительно допустим, что у нас имеется прибор, который производит
+клонирование состояний. Действие этого прибора на фотон, поляризованный
+по $x$ будет описываться оператором клонирования $\hat{D}$
+следующим образом 
+\begin{equation}
+  \hat{D} \left|D_I\right>\left|x\right> = \left|D_{F_x}\right>\left|x\right>\left|x\right>,
+  \nonumber
+\end{equation}
+где $\left|D_I\right>$ волновая функция, описывающая начальное
+состояние прибора для клонирования, а  $\left|D_{F_x}\right>$ волновая
+функция, описывающая состояние прибора после клонирования фотона  
+в вертикальной $x$-поляризации. Для фотона, поляризованного по $y$, имеем
+\begin{equation}
+  \hat{D} \left|D_I\right>\left|y\right> = \left|D_{F_y}\right>\left|y\right>\left|y\right>,
+  \nonumber
+\end{equation}
+где $\left|D_{F_y}\right>$ волновая функция, описывающая состояние
+прибора после клонирования этого фотона. 
+
+Если подействовать оператором клонирования $\hat{D}$ на фотон в
+произвольном состоянии (\ref{eqEntangSimpleState}), получим 
+\begin{equation}
+  \hat{D} \left|D_I\right>\left|\psi\right> = 
+  \hat{D} \left|D_I\right> \left(\alpha \left|x\right> +
+  \beta \left|y\right>\right) = 
+  \alpha \left|D_{F_x}\right>\left|x\right>\left|x\right> +
+  \beta \left|D_{F_y}\right>\left|y\right>\left|y\right>,
+  \nonumber
+\end{equation}
+откуда никоим образом не получить ожидаемый результат
+\begin{equation}
+  \hat{D} \left|D_I\right>\left|\psi\right> = 
+  \left|D_{F_{xy}}\right>  \left(\alpha \left|x\right> +
+  \beta \left|y\right>\right)
+  \left(\alpha \left|x\right> +
+  \beta \left|y\right>\right).
+  \nonumber
+\end{equation}
+
+Но если состояние фотона нельзя клонировать, то оказывается, что его
+можно передать из одной точки пространства в другую  
+(естественно, с разрушением исходного состояния), что
+демонстрируют эксперименты по квантовой телепортации. 
+
+\input ./part3/entang/figteleport.tex
+
+Схема протокола квантовой телепортации представлена на рис.
+\ref{figTeleport}. На этом рисунке Алиса хочет передать Бобу  
+состояние фотона 1, которое описывается волновой функцией
+(\ref{eqEntangSimpleState}). 
+\[
+\left|\psi\right>_1 = \alpha \left|x\right>_1 +
+\beta \left|y\right>_1, 
+\]
+Имеется также источник перепутанных фотонов $S$, который излучает пары
+фотонов 2 и 3 в состоянии, описываемом следующей волновой функцией 
+\begin{equation}
+  \left|\psi\right>_{23} = \left|\psi^{-}\right>_{23} = \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_2\left|y\right>_3 - 
+  \left|y\right>_2\left|x\right>_3
+  \right).
+  \nonumber
+\end{equation}
+
+Алиса смешивает фотоны 1 и 2 на светоделителе $LS$ и в дальнейшем
+регистрирует некоторое Белловское состояние с помощью детекторов
+$D^{(1,2)}$. Проще всего произвести регистрацию состояния
+$\left|\psi^{-}\right>_{12}$, в котором оба фотодетектора должны
+сработать одновременно.
+
+Общее состояние трех частиц записывается в виде
+\begin{equation}
+  \left|\psi\right>_{123} = \left|\psi\right>_1 \left|\psi\right>_{23},
+  \nonumber
+\end{equation}
+который может быть разложен по Белловским состояниям фотонов 1 и 2:
+\begin{eqnarray}
+\left|\psi\right>_{123} = 
+c_{\left|\psi^{+}\right>_{12}}\left|\psi^{+}\right>_{12} +
+c_{\left|\psi^{-}\right>_{12}}\left|\psi^{-}\right>_{12} +
+\nonumber \\
++
+c_{\left|\phi^{+}\right>_{12}}\left|\phi^{+}\right>_{12} +
+c_{\left|\phi^{-}\right>_{12}}\left|\phi^{-}\right>_{12}.
+\label{eqPart3EntangTeleportsepar}
+\end{eqnarray}
+В разложении (\ref{eqPart3EntangTeleportsepar}) нас будет интересовать
+коэффициент 
+$c_{\left|\psi^{-}\right>_{12}}$, так как именно он будет описывать
+состояние третьего фотона при регистрации Алисой Белловского состояния 
+$\left|\psi^{-}\right>_{12}$. Для искомого коэффициента получим:
+\begin{eqnarray}
+  c_{\left|\psi^{-}\right>_{12}} = 
+  \left<\psi^{-}\right|_{12} \left.\psi\right>_{123} = 
+  \nonumber \\
+  =
+  \frac{1}{\sqrt{2}}
+  \left(
+  \left<x\right|_1\left<y\right|_2 - 
+  \left<y\right|_1\left<x\right|_2
+  \right)
+  \left(
+  \alpha \left|x\right>_1 +
+  \beta \left|y\right>_1
+  \right)
+  \frac{1}{\sqrt{2}}
+  \left(
+  \left|x\right>_2\left|y\right>_3 - 
+  \left|y\right>_2\left|x\right>_3
+  \right) = 
+  \nonumber \\
+  = \frac{1}{2}
+  \left(
+  \alpha\left<y\right|_2 - 
+  \beta\left<x\right|_2
+  \right)
+  \left(
+  \left|x\right>_2\left|y\right>_3 - 
+  \left|y\right>_2\left|x\right>_3
+  \right) = 
+  - \frac{1}{2}  
+  \left(
+  \alpha \left|x\right>_3 +
+  \beta \left|y\right>_3
+  \right).
+\nonumber
+\end{eqnarray}
+Это значит, что всякий раз, когда Алиса регистрирует пару фотонов 1 и 2
+в состоянии $\left|\psi^{-}\right>_{12}$, т. е. когда оба детектора
+$D^{(1)}$ и $D^{(2)}$ срабатывают одновременно, фотон 3 на стороне
+Боба оказывается в состоянии, идентичном состоянию исходного фотона 1,
+т. е. произойдет телепортация фотона 1  к Бобу.
+
+%% Волновая функция $\left|\psi\right>_{123}$ может быть разложена по
+%% базису Белла (\ref{eqEntangBellBase}).
+%% Результат разложения записывается в следующем виде (FIX ME!!! check it)
+%% \begin{eqnarray}
+%%   \left|\psi\right>_{123} = \left|\psi\right>_1 \left|\psi\right>_{23} = 
+%%   \nonumber \\
+%%   = \left|\psi^{-}\right>_{12} \frac{\alpha\left|x\right>_3 + \beta\left|y\right>_3}{2} + 
+%%   \nonumber \\
+%%   + 
+%%   \left|\psi^{+}\right>_{12} \frac{- \alpha\left|x\right>_3 + \beta\left|y\right>_3}{2} +
+%%   \nonumber \\
+%%   + 
+%%   \left|\phi^{+}\right>_{12} \frac{- \beta\left|x\right>_3 + \alpha\left|y\right>_3}{2} +
+%%   \nonumber \\
+%%   +
+%%   \left|\phi^{-}\right>_{12} \frac{\beta\left|x\right>_3 + \alpha\left|y\right>_3}{2}.
+%%   \nonumber
+%% \end{eqnarray}
+
+%% Таким образом всякий раз когда Алиса регистрирует пару фотонов 1 и 2 в белловском состоянии
+%% $\left|\psi^{-}\right>_{12}$ то фотон 3 на стороне Боба будет находится в состоянии
+%% $\alpha\left|x\right>_3 + \beta\left|y\right>_3$, то есть произойдет как бы телепортация фотона 1 к Бобу.
+
+%% Белловское состояние $\left|\psi^{-}\right>_{12}$, как это уже
+%% отмечалось выше, может быть зарегистрировано Алисой по одновременному срабатыванию 
+%% фотодетекторов $D^{(1)}$ и $D^{(2)}$
+
+% Стоит отметить два факта
+% \begin{itemize}
+% \item При данной схеме телепортации передается не материя, а некоторая информация о квантовом объекте.
+% \item Передача этой информации мгновенна, но вместе с тем для того чтобы Боб смог узнать о факте телепортации необходим классический канал связи 
+%   между Алисой и Бобом \footnote{По этому каналу Алиса говорит Бобу когда у нее сработали оба фотодетектора сообщая тем самым о факте телепортации}.
+% \end{itemize}

@@ -1,0 +1,163 @@
+%%Created by jPicEdt 1.4.1: mixed JPIC-XML/LaTeX format
+%%Sat Jun 16 19:42:34 MSD 2007
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="60" y-min="0" y-max="65" auto-bounding="true">
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(50,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%
+%</text>
+%<ellipse closure= "open"
+%	 p3= "(15,5)"
+%	 p1= "(5,15)"
+%	 angle-end= "360"
+%	 p2= "(15,15)"
+%	 angle-start= "0"
+%	 fill-style= "none"
+%	 />
+%<ellipse closure= "open"
+%	 p3= "(40,30)"
+%	 p1= "(30,40)"
+%	 angle-end= "360"
+%	 p2= "(40,40)"
+%	 angle-start= "0"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(0,10);(0,10);(60,10);(60,10)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(10,0);(10,0);(10,60);(10,60)"
+%	 fill-style= "none"
+%	 />
+%<multicurve points= "(10,10);(10,10);(35,35);(35,35)"
+%	 fill-style= "none"
+%	 />
+%<multicurve points= "(10,10);(10,10);(20,0);(20,0)"
+%	 fill-style= "none"
+%	 />
+%<multicurve points= "(35,35);(35,35);(45,25);(45,25)"
+%	 fill-style= "none"
+%	 />
+%<multicurve left-arrow= "head"
+%	 right-arrow= "head"
+%	 points= "(20,0);(20,0);(45,25);(45,25)"
+%	 fill-style= "none"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(40,15)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$r$
+%</text>
+%<circle closure= "open"
+%	 p3= "(20,10)"
+%	 p1= "(15,15)"
+%	 p2= "(20,15)"
+%	 fill-style= "none"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(25,15)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\varphi$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(60,5)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$X_1$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(5,65)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$X_2$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(45,45)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\alpha = r e^{i \varphi}$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(60,65)(0,0)
+\put(50,10){\makebox(0,0)[cc]{}}
+
+\linethickness{0.3mm}
+\put(10,10){\circle{10}}
+
+\linethickness{0.3mm}
+\put(35,35){\circle{10}}
+
+\linethickness{0.3mm}
+\put(0,10){\line(1,0){60}}
+\put(60,10){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(10,0){\line(0,1){60}}
+\put(10,60){\vector(0,1){0.12}}
+\linethickness{0.3mm}
+\multiput(10,10)(0.12,0.12){208}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(10,10)(0.12,-0.12){83}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(35,35)(0.12,-0.12){83}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(20,0)(0.12,0.12){208}{\line(1,0){0.12}}
+\put(45,25){\vector(1,1){0.12}}
+\put(20,0){\vector(-1,-1){0.12}}
+\put(40,15){\makebox(0,0)[cc]{$r$}}
+
+\linethickness{0.3mm}
+\multiput(20,10)(0.11,0.13){3}{\line(0,1){0.13}}
+\multiput(20.33,10.38)(0.14,0.21){2}{\line(0,1){0.21}}
+\multiput(20.6,10.81)(0.1,0.23){2}{\line(0,1){0.23}}
+\multiput(20.81,11.26)(0.14,0.48){1}{\line(0,1){0.48}}
+\multiput(20.95,11.75)(0.07,0.5){1}{\line(0,1){0.5}}
+\put(21.03,12.25){\line(0,1){0.5}}
+\multiput(20.95,13.25)(0.07,-0.5){1}{\line(0,-1){0.5}}
+\multiput(20.81,13.74)(0.14,-0.48){1}{\line(0,-1){0.48}}
+\multiput(20.6,14.19)(0.1,-0.23){2}{\line(0,-1){0.23}}
+\multiput(20.33,14.62)(0.14,-0.21){2}{\line(0,-1){0.21}}
+\multiput(20,15)(0.11,-0.13){3}{\line(0,-1){0.13}}
+\multiput(19.62,15.33)(0.13,-0.11){3}{\line(1,0){0.13}}
+\multiput(19.19,15.6)(0.21,-0.14){2}{\line(1,0){0.21}}
+\multiput(18.74,15.81)(0.23,-0.1){2}{\line(1,0){0.23}}
+\multiput(18.25,15.95)(0.48,-0.14){1}{\line(1,0){0.48}}
+\multiput(17.75,16.03)(0.5,-0.07){1}{\line(1,0){0.5}}
+\put(17.25,16.03){\line(1,0){0.5}}
+\multiput(16.75,15.95)(0.5,0.07){1}{\line(1,0){0.5}}
+\multiput(16.26,15.81)(0.48,0.14){1}{\line(1,0){0.48}}
+\multiput(15.81,15.6)(0.23,0.1){2}{\line(1,0){0.23}}
+\multiput(15.38,15.33)(0.21,0.14){2}{\line(1,0){0.21}}
+\multiput(15,15)(0.13,0.11){3}{\line(1,0){0.13}}
+
+\put(25,15){\makebox(0,0)[cc]{$\varphi$}}
+
+\put(60,5){\makebox(0,0)[cc]{$X_1$}}
+
+\put(5,65){\makebox(0,0)[cc]{$X_2$}}
+
+\put(45,45){\makebox(0,0)[cc]{$\alpha = r e^{i \varphi}$}}
+
+\end{picture}

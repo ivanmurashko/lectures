@@ -1,0 +1,159 @@
+%% -*- coding:utf-8 -*- 
+\section{Квантование свободного электромагнитного поля}
+\label{Ch1_quantumemf}
+Используя отмеченную ранее аналогию, можно проквантовать
+электромагнитное поле подобно тому, как квантуется простой
+механический гармонический осциллятор. 
+
+При квантовании $q_n$ и $p_n$ становятся операторами $\hat{q}_n$,
+$\hat{p}_n$, удовлетворяющими тем же коммутационным соотношениям, 
+что координата и импульс: 
+\begin{equation}
+\left[\hat{q}_n, \hat{p}_n\right] = \hat{q}_n\hat{p}_n -
+\hat{p}_n \hat{q}_n = i\hbar
+\label{eqCh1_comut}
+\end{equation}
+где $\hat{q}_n$ и $\hat{p}_n$ - эрмитовы (самосопряженные)
+операторы. В представлении Шредингера они не зависят от
+времени, в представлении Гайзенберга - зависят. Удобно через
+эти операторы ввести новые, не являющиеся самосопряженными, но
+сопряженные друг другу операторы: 
+\begin{equation}
+\hat{a}_n = \frac{1}{\sqrt{2 \hbar \omega_n}}
+\left( \omega_n \hat{q}_n + i \hat{p}_n\right),
+\quad
+\hat{a}_n^{+} = \frac{1}{\sqrt{2 \hbar \omega_n}}
+\left( \omega_n \hat{q}_n - i \hat{p}_n\right),
+\label{eqCh1_aadef}
+\end{equation}
+Обратная зависимость дает
+\begin{equation}
+\hat{q}_n = \sqrt{\frac{\hbar}{2 \omega_n}}
+\left(\hat{a}_n + \hat{a}_n^{+}\right),
+\quad
+\hat{p}_n = i \sqrt{\frac{\hbar \omega_n}{2}}
+\left(\hat{a}_n^{+} - \hat{a}_n\right),
+\label{eqCh1_qpdef}
+\end{equation}
+
+При помощи выражений (\ref{eqCh1_comut}), 
+(\ref{eqCh1_aadef}), (\ref{eqCh1_qpdef}) можно получить коммутационные
+соотношения для операторов $\hat{a}_n$ и $\hat{a}_n^{+}$: 
+\begin{eqnarray}
+\left[\hat{a}_n, \hat{a}_n^{+}\right] = 
+\frac{1}{2 \hbar \omega_n}
+\left( \omega_n \hat{q}_n + i \hat{p}_n\right) 
+\left( \omega_n \hat{q}_n - i \hat{p}_n\right) - 
+\nonumber \\
+- \frac{1}{2 \hbar \omega_n}
+\left( \omega_n \hat{q}_n - i \hat{p}_n\right) 
+\left( \omega_n \hat{q}_n + i \hat{p}_n\right) =
+\nonumber \\
+= \frac{1}{2 \hbar \omega_n}
+\left( - 2 i \omega_n 
+\left(\hat{q}_n \hat{p}_n - \hat{p}_n \hat{q}_n\right)\right) = 1.
+\end{eqnarray}
+Таким образом,
+\begin{equation}
+\left[\hat{a}_n, \hat{a}_n^{+}\right] = 1.
+\label{eqCh1_aacomutation}
+\end{equation}
+Кроме того очевидно, что
+\begin{equation}
+\left[\hat{a}_n, \hat{a}_n\right] = 0,
+\quad
+\left[\hat{a}_n^{+}, \hat{a}_n^{+}\right] = 0.
+\end{equation}
+Гамильтониан, выраженный через новые операторы, принимает вид
+\begin{eqnarray}
+\hat{\mathcal{H}_n} = 
+\frac{1}{2}\left(\omega_n^2 \hat{q}_n^2 + \hat{p}_n^2\right) = 
+\nonumber \\
+= \frac{1}{2}\frac{\omega_n \hbar}{2}
+\left(
+\left(\hat{a}_n + \hat{a}_n^{+} \right)
+\left(\hat{a}_n + \hat{a}_n^{+} \right)
+-
+\left(\hat{a}_n^{+} - \hat{a}_n \right)
+\left(\hat{a}_n^{+} - \hat{a}_n \right)
+\right) =
+\nonumber \\
+= \frac{\omega_n \hbar}{2} 
+\left( \hat{a}_n \hat{a}_n^{+} + \hat{a}_n^{+} \hat{a}_n\right) =
+\frac{\omega_n \hbar}{2} 
+\left(1 + \hat{a}_n^{+} \hat{a}_n + \hat{a}_n^{+} \hat{a}_n\right) =
+\nonumber \\
+= \omega_n \hbar 
+\left(\hat{a}_n^{+} \hat{a}_n + \frac{1}{2}\right)
+\label{eqCh1_quant_stoyachie_volny}
+\end{eqnarray}
+
+
+Здесь использованы связь  $\hat{q}_n$, $\hat{p}_n$ 
+с $\hat{a}_n^{+}$, $\hat{a}_n$ (\ref{eqCh1_aadef}), а также
+коммутационное соотношение (\ref{eqCh1_aacomutation}). 
+
+Энергия $\frac{1}{2}\omega_n \hbar$ соответствует нулевым
+колебаниям. Полная энергия нулевых колебаний
+\[
+\frac{1}{2}\sum_{(n)}\omega_n \hbar \to \infty,
+\] 
+так как число мод бесконечно. Это не приводит к 
+заметным трудностям, так как нас интересуют только разности
+энергий и постоянную часть можно отбросить. Тогда гамильтониан
+приобретает вид 
+\begin{equation}
+\hat{\mathcal{H}} = \frac{1}{2}\sum_{(n)}\hat{\mathcal{H}_n} =
+\sum_{(n)}\hbar \omega_n \hat{a}_n^{+}\hat{a}_n
+\end{equation}
+
+Операторы электрического и магнитного поля можно представить в виде
+\begin{eqnarray}
+\hat{\vec{E}} = \sum_{(n)}\frac{\hat{q}_n
+  \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right) = 
+\sum_{(n)}\sqrt{\frac{\hbar \omega_n}{2 \varepsilon_0}}
+\left(\hat{a}_n^{+} + \hat{a}_n \right)
+\vec{E}_n\left(r\right),
+\nonumber \\
+\hat{\vec{H}} = \sum_{(n)}\frac{\hat{p}_n}
+{\sqrt{\mu_0}} \vec{H}_n\left(r\right) = 
+i \sum_{(n)}\sqrt{\frac{\hbar \omega_n}{2 \mu_0}}
+\left(\hat{a}_n^{+} - \hat{a}_n \right)
+\vec{H}_n\left(r\right).
+\end{eqnarray}
+
+Приведем простой пример. В теории лазера рассматривают резонатор,
+образованный двумя параллельными зеркалами. При этом часто
+используют приближенное представление поля, считая, что поле
+зависит только от продольной координаты (рис. \ref{figCh1_Res}). В
+этом приближении нормированную собственную функцию (моду) можно
+представить следующим образом: 
+\begin{equation}
+E_{nx} = \sqrt{\frac{2}{V}} \sin k_n z,
+\quad
+H_{ny} = \sqrt{\frac{2}{V}} \cos k_n z,
+\quad
+k_n = \frac{\pi n}{L},
+\quad
+\omega_n = \frac{c \pi n}{L},
+\end{equation}
+где  $V = SL$,  $L$ - длина резонатора,  $S$ - сечение светового пучка.
+
+\input ./part1/quantel/fig1.tex
+
+Оператор электрического поля моды при этом будет иметь вид:
+\begin{eqnarray}
+\hat{E}_{nx} = 
+\sqrt{\frac{\hbar \omega_n}{2 \varepsilon_0}}
+\left(\hat{a}_n^{+} + \hat{a}_n \right)
+\sqrt{\frac{2}{V}} \sin k_n z = 
+E_1 \left(\hat{a}_n^{+} + \hat{a}_n \right) \sin k_n z, 
+\nonumber \\
+\hat{H}_{ny} = i E_1 \sqrt{\frac{\varepsilon_0}{\mu_0}}
+\left(\hat{a}_n^{+} - \hat{a}_n \right) \cos k_n z,
+\label{eqCh1_EH_simple}
+\end{eqnarray}
+где 
+$E_1 = \sqrt{\frac{\hbar \omega}{\varepsilon_0 V}}$ - 
+электрическое поле, соответствующее одному фотону (кванту) в
+моде. 

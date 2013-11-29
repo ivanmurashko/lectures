@@ -1,0 +1,267 @@
+%% -*- coding:utf-8 -*- 
+\section{Гамильтониан системы атом-поле}
+Гамильтониан системы атом-поле можно представить в виде
+\begin{equation}
+\hat{\mathcal{H}} = \hat{\mathcal{H}}^{(A)} +
+\hat{\mathcal{H}}^{(F)} + \hat{V}
+\nonumber
+\end{equation}
+где
+$\hat{\mathcal{H}}^{(A)}$ - гамильтониан двухуровнего атома,
+$\hat{\mathcal{H}}^{(F)}$ - гамильтониан электромагнитного поля и
+$\hat{V}$ - гамильтониан взаимодействия.
+
+Для гамильтониана электромагнитного поля мы имеем выражение
+(\ref{eqCh1_quant_stoyachie_volny}):
+\begin{equation}
+\hat{\mathcal{H}}^{(F)} = \hbar \omega 
+\left(\hat{a}^{+}\hat{a} + \frac{1}{2}\right).
+\nonumber
+\end{equation}
+
+В случае гамильтониана двухуровненго атома воспользуемся следующими
+соотношениями:
+\begin{eqnarray}
+\hat{\mathcal{H}}^{(A)}\left|a\right> = \hbar \omega_a \left|a\right>,
+\nonumber \\
+\hat{\mathcal{H}}^{(A)}\left|b\right> = \hbar \omega_b \left|b\right>,
+\nonumber \\
+\left|a\right>\left<a\right| + \left|b\right>\left<b\right| = \hat{I},
+\nonumber
+\end{eqnarray}
+откуда получим
+\begin{eqnarray}
+\hat{\mathcal{H}}^{(A)} = \hat{\mathcal{H}}^{(A)}\hat{I} = 
+\hat{\mathcal{H}}^{(A)}
+\left|a\right>\left<a\right| + \hat{\mathcal{H}}^{(A)}
+\left|b\right>\left<b\right| =
+\nonumber \\
+ = 
+\hbar\omega_a
+\left|a\right>\left<a\right| + \hbar\omega_b
+\left|b\right>\left<b\right| =
+\nonumber \\
+= \hbar \omega_a \hat{\sigma}_a +
+\hbar \omega_b \hat{\sigma}_b,
+\label{eqCh2HamiltonianAOperator}
+\end{eqnarray}
+где введены следующие обозначения
+\begin{equation}
+\hat{\sigma}_a = \left|a\right>\left<a\right|,
+\quad
+\hat{\sigma}_b = \left|b\right>\left<b\right|.
+\nonumber
+\end{equation}
+Выражение (\ref{eqCh2HamiltonianAOperator}) может быть переписано в
+матричной форме:
+\begin{equation}
+\hat{\mathcal{H}}^{(A)} = \hbar 
+\left(
+\begin{array} {cc}
+\omega_a & 0  
+\\
+0 & \omega_b 
+\end{array}
+\right).
+\label{eqCh2HamiltonianA}
+\end{equation}
+
+Для гамильтониана взаимодействия $\hat{V}$ при полуклассическом
+подходе в дипольном приближении имеем:
+\begin{equation}
+\hat{V} = - e \left(\hat{\vec{r}} \vec{E}\left(t\right)\right).
+\label{eqCh2HamiltonianVsemiclass}
+\end{equation}
+Применив к (\ref{eqCh2HamiltonianVsemiclass}) дважды условие
+полноты получим
+\begin{eqnarray}
+\hat{V} = \hat{I}\hat{V}\hat{I} = - e \left(\vec{E}\left(t\right)
+\hat{I}\hat{\vec{r}}\hat{I}\right) = 
+\nonumber \\
+= - e \left(\vec{E}\left(t\right) 
+\left(\left|a\right>\left<a\right| +
+  \left|b\right>\left<b\right|\right)\hat{\vec{r}}
+\left(\left|a\right>\left<a\right| +
+  \left|b\right>\left<b\right|\right)\right) = 
+\nonumber \\
+= - \left(\vec{E}\left(t\right)
+  \left(\vec{P}_{ab}\left|a\right>\left<b\right| +
+    \vec{P}_{ba}\left|b\right>\left<a\right|\right)\right),
+\label{eqCh2HamiltonianVsemiclass2}
+\end{eqnarray}
+где 
+\[
+\vec{P}_{ab} = \vec{P}_{ba}^{*} = e \left<a\right|\hat{\vec{r}}\left|b\right>
+\]
+матричный элемент электрического дипольного момента. 
+Для простоты будем считать, что $\vec{P}_{ab} = \vec{P}_{ba} =
+\vec{p}$ - вещественная величина. В результате выражение
+(\ref{eqCh2HamiltonianVsemiclass2}) может быть записано в виде
+\begin{eqnarray}
+\hat{V} 
+= - \left(\vec{E}\left(t\right)\vec{p}\right)
+\left(
+  \left|a\right>\left<b\right| +
+  \left|b\right>\left<a\right|\right) = 
+\nonumber \\
+= - \left(\vec{E}\left(t\right)\vec{p}\right) \left(\hat{\sigma}^{+} + \hat{\sigma}\right),
+\label{eqCh2HamiltonianVsemiclass3}
+\end{eqnarray}
+где  $\hat{\sigma}^{+} = \left|a\right>\left<b\right|$ и 
+$\hat{\sigma} = \left|b\right>\left<a\right|$ 
+-  операторы перехода. 
+$\hat{\sigma}^{+}$ -  оператор перехода из нижнего состояния в верхнее (повышающий
+оператор):
+\[
+\hat{\sigma}^{+} \left|b\right> = 
+\left|a\right>\left<b\right|\left.b\right> = 
+\left|a\right>,
+\]
+$\hat{\sigma}$
+- оператор перехода из верхнего состояния в нижнее
+(понижающий оператор):
+\[
+\hat{\sigma}
+\left|a\right> = 
+\left|b\right>\left<a\right|\left.a\right> = 
+\left|b\right>.
+\]
+Кроме этого выполняются равенства
+\[
+\hat{\sigma}^{+} \left|a\right> = 
+\left|a\right>\left<b\right|\left.a\right> = 
+0
+\]
+и
+\[
+\hat{\sigma}
+\left|b\right> = 
+\left|b\right>\left<a\right|\left.b\right> = 
+0.
+\]
+Для операторов $\hat{\sigma}$ и $\hat{\sigma}^{+}$ может быть записано
+следующее соотношение: 
+\begin{eqnarray}
+\hat{\sigma}\hat{\sigma}^{+} + \hat{\sigma}^{+}\hat{\sigma} =
+\nonumber \\
+= \left|b\right>\left<a\right|\left.a\right>\left<b\right| + 
+ \left|a\right>\left<b\right|\left.b\right>\left<a\right| = 
+\nonumber \\
+= \left|b\right>\left<b\right| + \left|a\right>\left<a\right| = \hat{I}, 
+\label{eqCh2_task1}
+\end{eqnarray}
+где $\hat{I}$ - единичный оператор.
+
+Выражение (\ref{eqCh2HamiltonianVsemiclass3}) может быть также
+записано в матричной форме 
+\begin{equation}
+\hat{V} = - \left(\vec{p} \vec{E}\right)
+\left(
+\begin{array} {cc}
+0 & 1  
+\\
+1 & 0 
+\end{array}
+\right).
+\label{eqCh2_8}
+\end{equation}
+
+Переход от полуклассического гамильтониана взаимодействия к полностью
+квантовому выражению осуществляется заменой классического
+электрического поля на оператор электрического поля. Таким
+образом, получаем 
+\begin{equation}
+\hat{V} = - p E_1 \sin k z \left(\hat{a} + \hat{a}^{+}\right)
+\left(\hat{\sigma} + \hat{\sigma}^{+}\right)
+\label{eqCh2_8_add1}
+\end{equation}
+Здесь использовано простейшее выражение для оператора электрического
+поля моды (\ref{eqCh1_EH_simple}). 
+
+Полный гамильтониан системы атом-поле имеет вид
+\begin{equation}
+\hat{\mathcal{H}}_{AF} = 
+\hbar \omega_a \sigma_a + \hbar \omega_b \sigma_b +
+\hbar \omega 
+\left(\hat{a}^{+}\hat{a} + \frac{1}{2}\right)
++ \hbar g \left(\hat{a} + \hat{a}^{+}\right)
+\left(\hat{\sigma} + \hat{\sigma}^{+}\right)
+\nonumber
+\end{equation}
+где $g = -\frac{p}{\hbar}E_1 \sin k z$ - константа взаимодействия,
+зависящая от распределения поля моды в пространстве.  
+
+\input ./part1/interaction/fig2_1.tex
+
+\input ./part1/interaction/fig2_2.tex
+
+\input ./part1/interaction/fig2_3.tex
+
+\input ./part1/interaction/fig2_4.tex
+
+
+Не все члены, входящие в гамильтониан взаимодействия
+(\ref{eqCh2_8_add1}), равноправны. При перемножении скобок получаем
+члены: 
+\begin{enumerate}
+\item $\hat{a}\hat{\sigma}$ - этот член соответствует поглощению
+  фотона и переходу атома из верхнего состояния в нижнее. Условно этот
+  процесс изображен на рис. \ref{figPart1Ch2_2_1};  
+\item $\hat{a}\hat{\sigma}^{+}$ - этот член соответствует поглощению
+  фотона и переходу атома из нижнего состояния в верхнее (см. рис. \ref{figPart1Ch2_2_2});  
+\item $\hat{a}^{+}\hat{\sigma}$ - этот член соответствует излучению
+  фотона и переходу атома из верхнего состояния в нижнее (см. рис. \ref{figPart1Ch2_2_3}); 
+\item $\hat{a}^{+}\hat{\sigma}^{+}$ - этот член соответствует
+  излучению фотона и переходу атома из нижнего состояния в верхнее (см. рис. \ref{figPart1Ch2_2_4}). 
+\end{enumerate}
+
+
+Случаи 1 и 4 относятся к процессам (см. рис. \ref{figPart1Ch2_2_1} и
+\ref{figPart1Ch2_2_4}) при которых нарушается закон сохранения энергии.
+Эти процессы можно отнести к так называемым виртуальным процессам. Их
+вероятность с ростом времени стремится к 0 и
+их вкладом в гамильтониан взаимодействия можно
+пренебречь. Остаются члены 2 и 3 (см. рис. \ref{figPart1Ch2_2_2} и
+\ref{figPart1Ch2_2_3}), соответствующие процессам,
+идущим без нарушения закона сохранения энергии. С учетом всего
+сказанного гамильтониан взаимодействия принимает вид: 
+\begin{equation}
+\hat{V} = g \hbar \left(
+\hat{a}\hat{\sigma}^{+} + 
+\hat{a}^{+}\hat{\sigma}
+\right)
+\end{equation}
+
+Удобно перейти к представлению взаимодействия(см. \ref{AddWaveFuncInter}),
+используя известную 
+формулу (\ref{eqAddWaveFunc_VInter})
+\begin{equation}
+\hat{V}_I = 
+e^{i \frac{\hat{\mathcal{H}}_0 t}{\hbar}}
+\hat{V}
+e^{- i \frac{\hat{\mathcal{H}}_0 t}{\hbar}}
+\label{eqCh2_task21}
+\end{equation}
+где 
+\(
+\hat{\mathcal{H}}_0 = 
+\hat{\mathcal{H}}^{\left(A\right)} +
+\hat{\mathcal{H}}^{\left(F\right)}
+\)
+- невозмущенный гамильтониан системы атом-поле. Можно показать, что в
+представлении взаимодействия гамильтониан взаимодействия имеет вид 
+\begin{equation}
+\hat{V}_I = 
+g \hbar \left(
+\hat{a}^{+}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t} +
+\hat{\sigma}^{+} \hat{a} e^{-i \left(\omega - \omega_{ab}\right)t}
+\right).
+\label{eqCh2_task22}
+\end{equation}
+Это проще всего сделать, вычислив матричные элементы 
+$\left<n +
+1\right|\left<b\right|\hat{V}_I\left|a\right>\left|n\right>$ и
+$\left<n\right|\left<a\right|\hat{V}_I\left|b\right>\left|n +
+1\right>$ для оператора взаимодействия $\hat{V}_I$, представимого в
+виде (\ref{eqCh2_task21}) и (\ref{eqCh2_task22}), и убедиться, что они
+одинаковы в обоих случаях.

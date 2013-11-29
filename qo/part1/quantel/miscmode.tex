@@ -1,0 +1,134 @@
+%% -*- coding:utf-8 -*- 
+\section{Смешанные состояния электромагнитного поля}
+До сих пор мы рассматривали только чистые состояния электромагнитного
+поля, описываемые векторами состояний. 
+Одним из наиболее отличительных свойств чистых состояний является
+принцип суперпозиции. 
+
+Чистыми системами могут быть только изолированные системы, тогда как
+смешанные системы не изолированны от своего окружения. Для описания
+смешанных состояний используют аппарат матрицы плотности. Оператор
+плотности можно ввести следующим образом.  
+
+Рассмотрим смешанное состояние, для которого известны вероятности
+$P_M$
+нахождения поля в каждом из состояний 
+$\left|M\right>$.  Вычислим среднее значение
+оператора $\hat{O}$,  соответствующего наблюдаемой $O$ в этом статистически
+смешанном состоянии. Среднее для статистической смеси состояний  
+\begin{equation}
+\left<\hat{O}\right> = \sum_{(M)} P_M\left<M\right|\hat{O}\left|M\right>,
+\end{equation}
+где, очевидно, 
+\[
+\sum_{(M)} P_M = 1.
+\]
+
+Это выражение можно представить в другом виде. Используя некоторый
+полный набор состояний $\left|S\right>$   и условие его полноты 
+\[
+\sum_{(S)}\left|S\right>\left<S\right| = \hat{I},
+\]
+получим
+\begin{equation}
+\left<\hat{O}\right> = \sum_{(M)}
+P_M\sum_{(S)}\left<M\right|\hat{O}\left|S\right>\left<S\right|\left.M\right>
+= \sum_{(M)}\sum_{(S)}P_M\left<S\right|\left.M\right>\left<M\right|\hat{O}\left|S\right>.
+\label{eqCh1_middle}
+\end{equation}
+
+Исходя из (\ref{eqCh1_middle}), можно ввести статистический оператор $\hat{\rho}$  при помощи выражения
+\begin{equation}
+\hat{\rho} = \sum_{(M)}
+P_M\left|M\right>\left<M\right|.
+\end{equation}
+
+Тогда равенство (\ref{eqCh1_middle}) можно представить в виде
+\begin{equation}
+\left<\hat{O}\right> = \sum_{(S)}
+\left<S\right|\hat{\rho}\hat{O}\left|S\right> = Sp \left(\hat{\rho}\hat{O}\right),
+\end{equation}
+Это соотношение не зависит от выбора  $\left|S\right>$,  так как след
+оператора не зависит от представления. Заметим, что 
+\begin{equation}
+Sp \left(\hat{\rho}\right) = \sum_{(M)}
+\left<M\right|\hat{\rho}\left|M\right> = \sum_{(M)} P_M = 1
+\label{eqCh1_spequal1}
+\end{equation}
+
+В качестве примера рассмотрим тепловое возбуждение фотонов в одну
+моду:
+\begin{equation}
+\hat{\rho} = \sum_{(n)}
+P_n\left|n\right>\left<n\right|,
+\label{eqCh1_teplovvozb}
+\end{equation}
+где $P_n$ определяется распределением Больцмана
+\[
+P_n = e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right),
+\]
+здесь  $\beta = \frac{1}{k_b T}$, а $\left(1  -  e^{-\beta \hbar
+  \omega}\right)$ - нормирующий множитель. 
+
+Среднее число фотонов в моде при тепловом возбуждении:
+\begin{eqnarray}
+\bar{n} = \left<\hat{n}\right> =  Sp \left(\hat{\rho}\hat{n}\right) = 
+Sp \left(\hat{\rho}\hat{a}^{+}\hat{a}\right) = 
+\nonumber \\
+=\sum_{(m)}\sum_{(n)}
+P_n\left<m\right|\left.n\right>\left<n\right|\hat{a}^{+}\hat{a}\left|m\right>
+= 
+\nonumber \\
+= \sum_{(n)}
+P_n\left<n\right|\hat{n}\left|n\right> = \sum_{(n)} n
+e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right) = 
+\frac{1}{e^{\beta \hbar \omega} - 1}
+\label{eqCh1_plank}
+\end{eqnarray}
+Это известное выражение, полученное Планком. При этом мы
+воспользовались следующим выражением
+\[
+\sum_{n=0}^{\infty} n r^{n -1} = \frac{d}{d r} \sum_{n=0}^{\infty}
+r^{n} = \frac{1}{\left(1 - r\right)^2},
+\]
+справедливым при $\left|r\right| < 1$.
+
+Равенства (\ref{eqCh1_spequal1}), (\ref{eqCh1_plank}) можно записать в
+другом виде. Из (\ref{eqCh1_plank}) получим 
+\[
+e^{-\beta \hbar \omega} = \frac{\bar{n}}{1 + \bar{n}},
+\]
+следовательно, 
+\begin{equation}
+P_n = e^{-\beta \hbar \omega n} \left(1  -  e^{-\beta \hbar
+  \omega}\right) = \frac{\bar{n}^n}{\left(1 + \bar{n}\right)^{n+1}}.
+\label{eqCh1_plank2}
+\end{equation}
+При этом матрица плотности приобретает вид:
+\[
+\hat{\rho} = \sum_{(n)}\frac{\bar{n}^n}{\left(1 + \bar{n}\right)^{n+1}}\left|n\right>\left<n\right|.
+\]
+Эта формула описывает матрицу плотности хаотического света через
+$\bar{n}$ -  среднее значение числа фотонов в моде. При этом
+$\bar{n}$ не обязательно зависит от частоты в соответствии с формулой
+Планка (\ref{eqCh1_plank2}). Зависимость $\bar{n}$ от частоты
+определяет форму линии хаотического света (различным частотам
+соответствуют различные моды). Обобщая полученный результат, можем
+написать выражение для статистического оператора хаотического света:  
+\begin{equation}
+\hat{\rho} = \sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}} \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right| = 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{k\right\}} 
+\frac{\bar{n}_k^{n_k}}{\left(1 + \bar{n}_k\right)^{n_k+1}},
+\label{eqCh1_102}
+\end{equation}
+где $\bar{n}_k$  зависят от частоты. Например, для хаотического света,
+имеющего лоренцовскую линию, 
+\[
+\bar{n}_k = \frac{I S}{\hbar \omega_{k_0}}
+\frac{\gamma}{\left(\omega_{k_0} - \omega_{k}\right)^2 + \gamma^2},
+\]
+где $\frac{I S}{\hbar \omega_{k_0}}$   -  среднее число фотонов в
+пучке;  $I$ -  интенсивность пучка (поток энергии);  $S$ -  сечение
+пучка.  

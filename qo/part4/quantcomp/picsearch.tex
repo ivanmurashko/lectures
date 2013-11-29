@@ -1,0 +1,80 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Sat Sep 29 22:55:19 MSK 2012
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="5" x-max="25" y-min="5" y-max="50" auto-bounding="true">
+%<text anchor-point="(25,50)"
+%	 >
+%$x_0$
+%</text>
+%<text anchor-point="(25,45)"
+%	 >
+%$x_1$
+%</text>
+%<text anchor-point="(25,30)"
+%	 >
+%$x^{*}$
+%</text>
+%<text anchor-point="(25,10)"
+%	 >
+%$x_{N-1}$
+%</text>
+%<parallelogram fill-style="solid"
+%	 p3="(15,20)"
+%	 p2="(15,25)"
+%	 p1="(5,25)"
+%	 />
+%<parallelogram p3="(15,10)"
+%	 p2="(15,40)"
+%	 p1="(5,40)"
+%	 />
+%<parallelogram p3="(15,5)"
+%	 p2="(15,10)"
+%	 p1="(5,10)"
+%	 />
+%<parallelogram p3="(15,40)"
+%	 p2="(15,45)"
+%	 p1="(5,45)"
+%	 />
+%<parallelogram p3="(15,45)"
+%	 p2="(15,50)"
+%	 p1="(5,50)"
+%	 />
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(25,50)(0,0)
+\put(20,50){\makebox(0,0)[cc]{$x_0$}}
+
+\put(20,45){\makebox(0,0)[cc]{$x_1$}}
+
+\put(20,30){\makebox(0,0)[cc]{$x^{*}$}}
+
+\put(22,10){\makebox(0,0)[cc]{$x_{N-1}$}}
+
+\linethickness{0.3mm}
+\put(5,25){\rule{10\unitlength}{5\unitlength}}
+\linethickness{0.3mm}
+\put(5,40){\line(1,0){10}}
+\put(5,10){\line(0,1){30}}
+\put(15,10){\line(0,1){30}}
+\put(5,10){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(5,10){\line(1,0){10}}
+\put(5,5){\line(0,1){5}}
+\put(15,5){\line(0,1){5}}
+\put(5,5){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(5,45){\line(1,0){10}}
+\put(5,40){\line(0,1){5}}
+\put(15,40){\line(0,1){5}}
+\put(5,40){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(5,50){\line(1,0){10}}
+\put(5,45){\line(0,1){5}}
+\put(15,45){\line(0,1){5}}
+\put(5,45){\line(1,0){10}}
+\end{picture}

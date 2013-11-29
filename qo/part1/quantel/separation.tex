@@ -1,0 +1,183 @@
+%% -*- coding:utf-8 -*- 
+\section{Разложение электромагнитного поля по модам (типам колебаний)}
+Электромагнитное поле удовлетворяет системе уравнений Максвелла:
+\begin{equation}
+rot \vec{H} = \frac{\partial \vec{D}}{\partial t} + \vec{j}, 
+\quad
+rot \vec{E} = - \frac{\partial \vec{B}}{\partial t}, 
+\quad
+div \vec{D} = \rho, \quad
+div \vec{B} = 0.
+\end{equation}
+В свободном пространстве  ($\vec{j} = 0$, $\rho = 0$)  имеем более
+простую систему: 
+\begin{eqnarray}
+rot \vec{H} = \varepsilon_0 \frac{\partial \vec{E}}{\partial t}, 
+\quad
+rot \vec{E} = - \mu_0 \frac{\partial \vec{H}}{\partial t}, 
+\nonumber \\
+div \vec{H} = 0,
+\quad
+div \vec{E} = 0, 
+\nonumber \\
+\vec{B} = \mu_0 \vec{H}, 
+\quad 
+\vec{D} = \varepsilon_0 \vec{E}, 
+\quad
+\mu_0 \varepsilon_0 = \frac{1}{c^2}.
+\label{eqCh1_EMF_at_FreeSpace}
+\end{eqnarray}
+
+Исключив из (\ref{eqCh1_EMF_at_FreeSpace}) величину $\vec{H}$,  получим
+уравнение:
+\begin{equation}
+rot rot \vec{E} = - \mu_0 \frac{\partial}{\partial t} rot \vec{H} = -
+\varepsilon_0 \mu_0 \frac{\partial^2 \vec{E}}{\partial t^2} = 
+- \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2}.
+\nonumber
+\end{equation}
+
+С учетом $rot rot \vec{E} = grad \, div \vec{E} - \Delta \vec{E} = - \Delta
+\vec{E}$ \footnote{при условии $div \vec E = 0$} получим следующую систему
+
+\begin{eqnarray}
+\Delta \vec{E} - \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2}
+= 0;
+\nonumber \\
+div \vec{E} = 0, 
+\quad
+\frac{\partial H}{\partial t} = - \frac{1}{\mu_0} rot \vec{E}
+\nonumber \\
+\vec{B} = \mu_0 \vec{H}, \quad \vec{D} = \varepsilon_0 \vec{E}, \quad \mu_0
+\varepsilon_0 = \frac{1}{c^2}.
+\label{eqCh1_EMF_at_FreeSpace2}
+\end{eqnarray}
+которая полностью эквивалентна исходной системе уравнений. 
+
+Для квантования электромагнитного поля его уравнения удобно
+представить в так называемом гамильтоновом виде. Суть метода, хорошо
+известная радиофизикам, заключается в том, что поле разлагается по
+модам, и решение уравнений сводится к решению системы обыкновенных
+дифференциальных уравнений для коэффициентов разложения, зависящих от
+времени. Для этой цели вводится система ортогональных векторных
+функций, являющихся распределением полей, соответствующих собственным
+колебаниям электромагнитного поля в некотором объеме  $V$,  ограниченном
+идеально проводящей поверхностью  $S$.  Поля должны удовлетворять
+системе уравнений (\ref{eqCh1_EMF_at_FreeSpace2}). На поверхности  $S$
+должны выполняться некоторые граничные условия, например: 
+\begin{equation}
+\left. \left[ \vec{n} \vec{E} \right] \right|_S = 0 \,
+\mbox{или}
+\left. \left( \vec{n} \vec{H} \right) \right|_S = 0,
+\label{eqCh1_bound}
+\end{equation}
+соответствующие идеально проводящей поверхности.
+
+Произвольное в объеме $V$ электромагнитное поле представляется 
+разложениями:
+\begin{equation}
+\vec{E}\left(r, t\right) = \sum_{(n)} Q_n\left(t\right)\vec{E}_n\left(r\right),
+\quad
+\vec{H}\left(r, t\right) = \sum_{(n)} P_n\left(t\right)\vec{H}_n\left(r\right),
+\label{eqCh1_sep0}
+\end{equation}
+где $Q_n\left(t\right)\vec{E}_n\left(r\right)$ и 
+$P_n\left(t\right)\vec{H}_n\left(r\right)$  - 
+частные решения уравнений, удовлетворяющие граничным условиям
+(\ref{eqCh1_bound}); $\vec{E}_n\left(r\right)$ и  
+$\vec{H}_n\left(r\right)$  соответствуют $n$-ому типу 
+колебаний в объеме  $V$  (моде).
+Из уравнений (\ref{eqCh1_EMF_at_FreeSpace2}) имеем:
+\begin{equation}
+Q_n\left(t\right) \, \Delta \vec{E}_n\left(r\right) = 
+\frac{1}{c^2} \frac{d^2 Q_n}{d t^2}\vec{E}_n\left(r\right). 
+\end{equation}
+
+Разделяя переменные, получаем:
+\begin{equation}
+\frac{d^2 Q_n}{d t^2} + \omega_n^2 Q_n = 0,
+\quad
+\Delta \vec{E}_n \left(r\right) = - \frac{\omega_n^2}{c^2} 
+\vec{E}_n \left(r\right)
+\label{eqCh1_after_sep}
+\end{equation}
+где $\omega_n$ постоянная разделения, являющаяся частотой собственных
+колебаний.
+
+Второе из уравнений (\ref{eqCh1_after_sep}) имеет следующий вид:
+\begin{equation}
+\Delta \vec{E}_n\left(r\right) + k_n^2 \vec{E}_n\left(r\right) = 0,
+\quad
+k_n^2 = \frac{\omega_n^2}{c^2},
+\end{equation}
+с граничными условиями  
+$\left. \left[ \vec{n} \vec{E}_n \right] \right|_S = 0$.  Эта
+задача имеет решение только при определенных значениях  
+$k_n\left(\omega_n\right)$.  
+
+Для определения $\vec{H}_n\left(r\right)$ воспользуемся уравнениями 
+(\ref{eqCh1_EMF_at_FreeSpace2}):
+\begin{equation}
+Q_n\left(t\right)  rot
+\vec{E}_n\left(r\right) = -\mu_0 \frac{d P_n}{d t}
+\vec{H}_n\left(r\right).
+\label{eqCh1_separationH_before_podstanovka}
+\end{equation}
+
+Прежде всего сделаем следующую подстановку:
+\begin{equation}
+Q_n\left(t\right) = \frac{\omega_n}{\sqrt{\varepsilon_0}}q_n\left(t\right),
+\quad
+P_n\left(t\right) = \frac{1}{\sqrt{\mu_0}}p_n\left(t\right).
+\label{eqCh1_separation_podstanovka}
+\end{equation}
+Для новой переменной $q_n$ очевидно имеем из (\ref{eqCh1_after_sep})
+\[
+\frac{d^2 q_n}{d t^2} + \omega_n^2 q_n = 0.
+\]
+Разложение (\ref{eqCh1_sep0}) в новых переменных имеет вид:
+\begin{equation}
+\vec{E}\left(r, t\right) = \sum_{(n)}
+\frac{q_n\left(t\right) \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right),
+\quad
+\vec{H}\left(r, t\right) = \sum_{(n)}
+\frac{p_n\left(t\right)}{\sqrt{\mu_0}} \vec{H}_n\left(r\right),
+\label{eqCh1_sep1}
+\end{equation}
+
+С учетом подстановки (\ref{eqCh1_separation_podstanovka}) и выражения
+для скорости света $c =   \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$
+(\ref{eqCh1_EMF_at_FreeSpace}) мы можем переписать 
+(\ref{eqCh1_separationH_before_podstanovka}) в следующем виде 
+\begin{equation}
+q_n\left(t\right) rot \vec{E}_n\left(r\right) = - \frac{1}{c \omega_n}
+\frac{d p_n\left(t\right)}{d t} \vec{H}_n\left(r\right)
+\label{eqCh1_after_sep2}
+\end{equation}
+Уравнения (\ref{eqCh1_after_sep2}) будут удовлетворены, если  
+\[
+p_n = \frac{d q_n}{d t}, \quad \frac{d p_n}{d t} = 
+\frac{d^2 q_n}{d t^2} = - \omega_n^2 q_n,
+\]
+тогда
+\begin{eqnarray}
+rot \vec{E}_n\left(r\right) = k_n \vec{H}_n\left(r\right),
+\nonumber \\
+\vec{H}_n\left(r\right) =  \frac{1}{k_n} rot \vec{E}_n\left(r\right)
+\end{eqnarray}
+
+Из курса ``Электромагнитные колебания'' известно, что система функций  
+$\vec{E}_n\left(r\right)$, $\vec{H}_n\left(r\right)$ ортогональна и
+может быть нормирована: 
+\begin{equation}
+\int_{\nu} \left( \vec{E}_n \vec{E}_m \right) d \nu = \delta_{nm},
+\quad
+\int_{\nu} \left( \vec{H}_n \vec{H}_m \right) d \nu = \delta_{nm},
+\quad
+\int_{\nu} \left( \vec{H}_n \vec{E}_m \right) d \nu = 0.
+\label{eqCh1_task1}
+\end{equation}
+
+Решение исходной электродинамической задачи сводится к нахождению
+коэффициентов  $q_n\left(t\right)$, $p_n\left(t\right)$    
+в разложениях (\ref{eqCh1_sep1}).

@@ -1,0 +1,240 @@
+%% -*- coding:utf-8 -*- 
+\section{Взаимодействие электромагнитного поля резонатора
+  с резервуаром атомов, находящихся при
+  температуре $T$}
+\label{ch2_6}
+Применим общий подход, изложенный выше, к системе, состоящей из
+гармонического осциллятора (электромагнитного поля моды),
+взаимодействующего с резервуаром в виде атомного пучка двухуровневых
+атомов, находящихся в равновесии при температуре $T$.  Как мы увидим
+в дальнейшем, конкретная модель резервуара для окончательного
+результата значения не имеет.\footnote{Если взаимодействие слабое,
+  т. е. энергия связи мала по сравнению с энергией динамической системы.} 
+Рассматриваемая модель изображена на
+рис. \ref{figPart1Ch2_7}.  
+
+\input ./part1/interaction/fig7.tex
+
+Начальная атомная матрица плотности соответствует распределению
+Больцмана при температуре $T$:  
+\begin{equation}
+\hat{\rho}_{at} = 
+\left(
+\begin{array} {cc}
+\rho_{aa} & 0  
+\\
+0 & \rho_{bb} 
+\end{array}
+\right)
+=
+z^{-1}
+\left(
+\begin{array} {cc}
+e^{-\frac{\hbar \omega_a}{k_B T}} & 0  
+\\
+0 & e^{-\frac{\hbar \omega_b}{k_B T}} 
+\end{array}
+\right).
+\end{equation}
+Здесь $\hbar \omega_a = E_a$ - энергия верхнего уровня;  
+$\hbar \omega_b = E_b$ - энергия нижнего уровня; 
+$z = e^{-\frac{\hbar \omega_a}{k_B T}} + e^{-\frac{\hbar \omega_b}{k_B
+    T}}$ статистическая сумма; $T$ - температура резервуара. 
+Гамильтониан взаимодействия возьмем в виде
+(\ref{eqCh2_task22}). Положим для простоты, 
+что $\omega_{ab} = \omega$,  т. е. частота перехода равна частоте 
+моды. Тогда  
+\begin{equation}
+\hat{V} = \hbar g \left(\hat{\sigma}\hat{a}^{+} + 
+\hat{\sigma}^{+}\hat{a} \right)= 
+\hbar g 
+\left(
+\begin{array} {cc}
+0 & \hat{a}  
+\\
+\hat{a}^{+} & 0 
+\end{array}
+\right)
+\end{equation}
+так как  
+\(
+\hat{\sigma} = 
+\left(
+\begin{array} {cc}
+0 & 0  
+\\
+1 & 0 
+\end{array}
+\right)
+\);
+\(
+\hat{\sigma}^{+} = 
+\left(
+\begin{array} {cc}
+0 & 1  
+\\
+0 & 0 
+\end{array}
+\right)
+\); $g$ - константа взаимодействия. 
+
+Сохраним в итерационном ряде (\ref{eqCh2_rho_sequance}) члены до
+второго порядка включительно. В нашем случае после интегрирования
+получается простое выражение  
+\begin{eqnarray}
+\hat{\rho}_{f}\left(t\right) =
+\hat{\rho}_{f}\left(t_0 + \tau\right) = 
+\nonumber \\
+= \hat{\rho}_{f}\left(t_0\right) +
+Sp_{at}
+\left\{
+- \frac{i}{\hbar}\tau\left[\hat{V}, \hat{\rho}_{at, f}\right]
+- \frac{1}{2} \left(\frac{\tau}{\hbar}\right)^2
+\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}
+\right]\right]
+\right\}, 
+\label{eqCh2_task4}
+\end{eqnarray}
+где $\hat{\rho}_{at, f}$ -  статистический оператор системы атом-поле;
+$\hat{\rho}_{f}$ статистический оператор поля, свернутый по
+атомным переменным.
+  
+При получении (\ref{eqCh2_task4}) предполагалось, что атом пучка
+взаимодействует с полем за время $\tau$ (время пролета через
+резонатор). Из начальных условий (во время $t_0$) имеем:  
+\begin{equation}
+\hat{\rho}_{at, f} = \hat{\rho}_{f}
+\left(
+\begin{array} {cc}
+\rho_{aa} & 0  
+\\
+0 & \rho_{bb} 
+\end{array}
+\right) = 
+\left(
+\begin{array} {cc}
+\rho_{aa}\hat{\rho}_{f} & 0  
+\\
+0 & \rho_{bb}\hat{\rho}_{f}
+\end{array}
+\right)
+\end{equation}
+Член первого порядка в (\ref{eqCh2_task4}) дает матрицу с нулевыми
+диагональными элементами по переменным резервуара. След матрицы по
+этим переменным очевидно равен нулю  
+\begin{eqnarray}
+Sp_{at}\left[\hat{V}, \hat{\rho}_{at, f}\right] = 
+\hbar g Sp_{at}
+\left\{
+\left(
+\begin{array} {cc}
+0 & \hat{a} \rho_{bb}\hat{\rho}_{f}  
+\\
+\hat{a}^{+} \rho_{aa}\hat{\rho}_{f}   & 0
+\end{array}
+\right)
+\right.
+-
+\nonumber \\
+-
+\left.
+\left(
+\begin{array} {cc}
+0 & \rho_{aa} \hat{\rho}_{f} \hat{a}   
+\\
+\rho_{bb} \hat{\rho}_{f} \hat{a}^{+}   & 0
+\end{array}
+\right)
+\right\}
+= 0.
+\label{eqCh2_sp_1}
+\end{eqnarray}
+Матрица, входящая в член второго порядка, имеет отличные от нуля
+диагональные элементы, след от нее по переменным резервуара отличен от 
+0  и может быть вычислен: 
+\begin{eqnarray}
+Sp_{at}\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}\right] \right]
+= \hbar^2 g^2 \cdot
+\nonumber \\
+\cdot Sp_{at}
+\left(
+\begin{array} {cc}
+\hat{a} \hat{a}^{+}\rho_{aa} \hat{\rho}_{f} -
+\hat{a}\rho_{bb} \hat{\rho}_{f}\hat{a}^{+}  & 0
+\\
+0 & 
+\hat{a}^{+} \hat{a}\rho_{bb} \hat{\rho}_{f} -
+\hat{a}^{+}\rho_{aa} \hat{\rho}_{f}\hat{a} 
+\end{array}
+\right) + \mbox{э. с.} 
+\label{eqCh2_sp_2}
+\end{eqnarray}
+Отсюда, используя уравнения (\ref{eqCh2_task4}),
+(\ref{eqCh2_sp_1}), (\ref{eqCh2_sp_2}), получаем окончательное
+уравнение для статистического оператора поля  $\hat{\rho}$:  
+\begin{eqnarray}
+\hat{\rho}_{f}\left(t_0 + \tau\right) =
+\hat{\rho}_{f}\left(t_0\right) - \frac{1}{2}g^2 \tau^2
+\left\{
+\left(\hat{a}\hat{a}^{+}\hat{\rho}_{f} - 
+\hat{a}^{+}\hat{\rho}_{f}\hat{a}
+\right)\rho_{aa} +
+\right.
+\nonumber \\
+\left.
++
+\left(\hat{a}^{+}\hat{a}\hat{\rho}_{f} - 
+\hat{a}\hat{\rho}_{f}\hat{a}^{+}
+\right)\rho_{bb}
+\right\} + \mbox{э. с.}
+\label{eqCh2_rho_final}
+\end{eqnarray}
+Таким образом, статистический оператор моды из-за взаимодействия с
+одним атомом изменится на величину 
+\(
+\delta\hat{\rho}_{f}=
+\hat{\rho}_{f}\left(t_0 + \tau\right) -
+\hat{\rho}_{f}\left(t_0\right)
+\), определяемую (\ref{eqCh2_rho_final}). Если скорость инжекции
+атомов в резонатор $r$  атомов в секунду, за время  $\Delta t$
+провзаимодействуют  $r \Delta t$  атомов. Изменение оператора
+плотности за это  время будет равно 
+$\Delta \hat{\rho}_{f} = \delta\hat{\rho}_{f}r \Delta t$. Определим сглаженную
+производную как 
+\[
+\dot{\hat{\rho}}_{f} = \frac{\Delta \hat{\rho}_{f}}{\Delta t} = 
+\delta\hat{\rho}_{f} r = r 
+\left(
+\hat{\rho}_{f}\left(t_0 + \tau\right) -
+\hat{\rho}_{f}\left(t_0\right)
+\right).
+\]
+Обозначим: $r_a = r \rho_{aa}$ - скорость инжекции атомов, находящихся
+в верхнем состоянии; $r_b = r \rho_{bb}$ - скорость инжекции атомов,
+находящихся в нижнем состоянии. Это приводит нас к окончательному виду
+уравнения для статистического оператора поля моды резонатора 
+\begin{eqnarray}
+\dot{\hat{\rho}}_{f} =
+- \frac{1}{2}R_a
+\left(\hat{a}\hat{a}^{+}\hat{\rho}_{f} - 
+\hat{a}^{+}\hat{\rho}_{f}\hat{a}
+\right)
+- 
+\nonumber \\
+- \frac{1}{2}R_b
+\left(\hat{a}^{+}\hat{a}\hat{\rho}_{f} - 
+\hat{a}\hat{\rho}_{f}\hat{a}^{+}
+\right)
+ + \mbox{э. с.}
+\label{eqCh2_rho_final2}
+\end{eqnarray}
+Здесь обозначено 
+\begin{eqnarray}
+R_a=r_a g^2\tau^2,
+\nonumber \\
+R_b=r_b g^2\tau^2.
+\label{eqCh2_RaRbDefenition}
+\end{eqnarray}
+Уравнение
+(\ref{eqCh2_rho_final2}) написано в операторном виде. Его можно
+написать в различных представлениях.   

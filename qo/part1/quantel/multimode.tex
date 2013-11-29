@@ -1,0 +1,125 @@
+%% -*- coding:utf-8 -*- 
+\section{Многомодовые состояния}
+До сих пор мы рассматривали одномодовые поля. Результаты легко
+обобщаются на многомодовое состояние. Для электромагнитного поля в
+некотором объеме имеем разложение (\ref{eqCh1_sep1}):
+\begin{equation}
+\vec{E}\left(r, t\right) = \sum_{(s)}
+\frac{q_s\left(t\right) \omega_s}{\sqrt{\varepsilon_0}} \vec{E}_s\left(r\right),
+\quad
+\vec{H}\left(r, t\right) = \sum_{(s)}
+\frac{p_s\left(t\right)}{\sqrt{\mu_0}} \vec{H}_s\left(r\right),
+\end{equation}
+Функция Гамильтона равна сумме функций Гамильтона всех мод, так как
+моды соответствуют независимым осцилляторам: 
+\begin{equation}
+\mathcal{H} = \frac{1}{2} 
+\sum_{(s)} \left(\omega_s^2 q_s^2 + p_s^2 \right)
+\end{equation}
+Квантование сводится к замене $q_s$ и $p_s$   на операторы $\hat{q}_s$
+и $\hat{p}_s$ с коммутационными соотношениями: 
+\begin{equation}
+\left[\hat{q}_s, \hat{p}_{s'}\right] = i\hbar \delta_{ss'},
+\quad 
+\left[\hat{q}_s, \hat{q}_{s'}\right] = \left[\hat{p}_s,
+  \hat{p}_{s'}\right] = 0.
+\end{equation}
+Функция Гамильтона при этом превратится в оператор Гамильтона:
+\begin{equation}
+\hat{\mathcal{H}} = \frac{1}{2} \sum_{(s)} \left(\omega_s^2 \hat{q}_s^2 + \hat{p}_s^2 \right)
+\end{equation}
+Как в разделе \ref{Ch1_quantumemf}, вводим операторы рождения и
+уничтожения для каждой моды (\ref{eqCh1_aadef}): 
+\begin{equation}
+\hat{a}_s = \frac{1}{\sqrt{2 \hbar \omega_s}}
+\left( \omega_s \hat{q}_s + i \hat{p}_s\right),
+\quad
+\hat{a}_s^{+} = \frac{1}{\sqrt{2 \hbar \omega_s}}
+\left( \omega_s \hat{q}_s - i \hat{p}_s\right),
+\end{equation}
+С их помощью гамильтониан можно представить в виде
+\begin{equation}
+\hat{\mathcal{H}_s} = \omega_n \hbar 
+\left(\hat{a}_s^{+} \hat{a}_s + \frac{1}{2}\right) 
+\end{equation}
+Общее состояние, когда в первой моде $n_1$ фотонов, во второй $n_2$
+фотонов, в  $s$-й - $n_s$ фотонов и т.д., можно представить в виде
+произведения векторов состояний каждой моды: 
+\begin{equation}
+\left| \left\{n_s\right\}\right> = 
+\left| n_1, n_2, \dots, n_s, \dots\right> = 
+\left| n_1\right> \left| n_2\right> \dots \left| n_s\right> \dots,
+\end{equation}
+где $\left\{n_s\right\}$ означает совокупность чисел заполнения мод.
+
+Действие операторов $\hat{a}_s^{+}$ и $\hat{a}_s$,  относящихся к $s$-й
+моде, на вектор состояния описывается равенствами 
+\begin{eqnarray}
+\hat{a}_s \left| n_1, n_2, \dots, n_s, \dots\right> = \sqrt{n_s} \left|
+n_1, n_2, \dots, n_s - 1, \dots\right>,
+\nonumber \\
+\hat{a}_s^{+} \left| n_1, n_2, \dots, n_s, \dots\right> = \sqrt{n_s + 1} \left|
+n_1, n_2, \dots, n_s + 1, \dots\right>.
+\end{eqnarray} 
+
+Вектор состояния в общем случае можно представить линейной
+суперпозицией состояний  $\left| \left\{n_s\right\}\right>$: 
+\begin{equation}
+\left|\Psi\right> = \sum_{n_1}\sum_{n_2}\dots\sum_{n_s}\dots
+C_{n_1, n_2, \dots, n_s, \dots} \left| n_1, n_2, \dots, n_s,
+\dots\right>= 
+\sum_{\left\{n_s\right\}} C_{\left\{n_s\right\}} \left| \left\{n_s\right\}\right>
+\end{equation}
+
+При разложении поля по плоским волнам оператор электрического поля 
+имеет вид
+\begin{equation}
+\hat{\vec{E}} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \left( 
+\hat{a}_k\left(t\right) \vec{e}_k e^{i \left(\vec{k}\vec{r} \right)} +
+\hat{a}_k^{+}\left(t\right) \vec{e}_k^{*} e^{-i \left(\vec{k}\vec{r} \right)}
+\right)
+\label{eqCh1_multiE}
+\end{equation}
+Это выражение записано в представлении Гайзенберга (оператор зависит
+от времени). В этом представлении 
+\[
+\hat{a}_k\left(t\right) = \hat{a}_k\left(0\right) e^{-i \omega_k t},
+\quad
+\hat{a}_k^{+}\left(t\right) = \hat{a}_k^{+}\left(0\right) e^{i \omega_k t},
+\]
+где $\hat{a}_k\left(0\right)$, $\hat{a}_k^{+}\left(0\right)$ -
+операторы в представлении Шредингера. В представлении Шредингера в
+выражении (\ref{eqCh1_multiE}) операторы от времени не зависят.
+Для каждой моды имеем 
+равенства (\ref{eqCh1_E_middle}), (\ref{eqCh1_E2_middle}): 
+\[
+\left<n_k\right|\hat{a}_k\left|n_k\right> = 
+\left<n_k\right|\hat{a}^{+}_k\left|n_k\right> = 0
+\]
+Отсюда для полного поля получим
+\begin{equation}
+\left<\left\{n_k\right\}\right|\hat{\vec{E}}\left|\left\{n_k\right\}\right>
+= 0, \quad
+\left<\left\{n_k\right\}\right|\hat{\vec{E}}^2\left|\left\{n_k\right\}\right>
+= \sum_{(k)}\frac{\hbar \omega_k}{\varepsilon_0 V}
+\left(n + \frac{1}{2} \right)
+\end{equation}
+
+Выражение (\ref{eqCh1_multiE}) можно разбить на два слагаемых:
+частотно положительную часть, в которую входят операторы уничтожения,
+и частотно отрицательную часть, в которую входят операторы рождения: 
+\begin{eqnarray}
+\hat{\vec{E}} = \hat{\vec{E}}^{(+)} + \hat{\vec{E}}^{(-)},
+\nonumber \\
+\hat{\vec{E}}^{(+)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k\left(t\right) \vec{e}_k e^{i \left(\vec{k}\vec{r}
+  \right)}, 
+\nonumber \\
+\hat{\vec{E}}^{(-)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}}
+\hat{a}_k^{+}\left(t\right) \vec{e}_k^{*} e^{-i \left(\vec{k}\vec{r} \right)}
+\label{eqCh1_79}
+\end{eqnarray} 
+$\hat{\vec{E}}^{(+)}$ соответствует аналитическому сигналу в
+классическом случае. 

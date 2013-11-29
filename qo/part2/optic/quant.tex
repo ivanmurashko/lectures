@@ -1,0 +1,329 @@
+%% -*- coding:utf-8 -*- 
+\section{Квантовое выражение для распределения фотоотсчетов}
+Полученное выше выражение для распределения фотоотсчетов основано на
+полуклассическом подходе. Полностью квантовое выражение имеет
+вид \cite{bLoudon1976}: 
+\begin{equation}
+P_m\left(T\right) = Sp \left\{
+\hat{\rho}\hat{N}
+\left[
+\frac{\left(\beta \hat{\bar{I}}\left(t\right) T\right)^m}{m!}
+e^{- \beta \hat{\bar{I}}\left(t\right) T}
+\right]
+\right\} 
+\label{eqCh4_59}
+\end{equation}
+где
+\begin{eqnarray}
+\hat{\bar{I}}\left(t\right) = \frac{1}{T}\int_t^{t + T}2
+\varepsilon_0 c \hat{\bar{E}}^{(-)}\left(t'\right)
+\hat{\bar{E}}^{(+)}\left(t'\right)dt' =
+\nonumber \\
+= \frac{2}{T}\int_t^{t + T}2
+\sqrt{\frac{\varepsilon_0}{\mu_0}} \hat{\bar{E}}^{(-)}\left(t'\right)
+\hat{\bar{E}}^{(+)}\left(t'\right)dt'
+\nonumber
+\end{eqnarray}
+соответствует усредненному за период счета оператору потока энергии,
+$\beta$ - квантовая эффективность фотоприемника. Формула
+(\ref{eqCh4_59}) по виду очень 
+похожа на формулу Манделя. Отличие в том, что на месте классических
+полей стоят их операторы, усреднение проводится квантово-механически
+при помощи статистического оператора, и присутствует оператор
+нормального упорядочения $\hat{N}$.  Действие этого оператора сводится
+к тому, что в операторе, на который он действует, следует расположить 
+операторы поглощения справа от операторов рождения. При разложении
+оператора, входящего в (\ref{eqCh4_59}), в степенной ряд появятся
+члены вида  $\left(\hat{\bar{E}}^{(-)}\hat{\bar{E}}^{(+)}\right)^n$.  
+Действие на них оператора $\hat{N}$  определяется выражением 
+\[
+\hat{N}\left(\hat{\bar{E}}^{(-)}\hat{\bar{E}}^{(+)}\right)^n = 
+\left(\hat{\bar{E}}^{(-)}\right)^n\left(\hat{\bar{E}}^{(+)}\right)^n
+\]
+Подобные члены соответствуют когерентности высших порядков, то есть
+распределение фотоотсчетов зависит от когерентностей всех
+степеней. Формула (\ref{eqCh4_59}) может быть обоснована следующим образом:
+положим, что поле находится в когерентном состоянии
+$\left|\left\{\alpha_k\right\}\right>$.  Тогда 
+вероятность эмиссии электрона в интервале времени $dt$ равна 
+\[
+Pdt = \sigma
+\left<\left\{\alpha_k\right\}\right|
+\hat{E}^{(-)} \hat{E}^{(+)}
+\left|\left\{\alpha_k\right\}\right> dt = 
+\sigma \left(E^{*} E\right)dt,
+\]
+где $\sigma$ характеризует эффективность фотокатода, а $E$ -
+классическое поле, соответствующее состоянию $\left|\left\{\alpha_k\right\}\right>$
+\begin{eqnarray}
+\hat{E}^{(+)} \left|\left\{\alpha_k\right\}\right> = E \left|\left\{\alpha_k\right\}\right>,
+\nonumber \\
+\left<\left\{\alpha_k\right\}\right|\hat{E}^{(-)} = E^{*} \left<\left\{\alpha_k\right\}\right|.
+\nonumber
+\end{eqnarray}
+
+Далее рассмотрение ведется таким же образом, как и при
+полуклассическом подходе. Получается аналогичная формула: 
+\begin{equation}
+P_m\left(\left.T\right|\left\{\alpha_k\right\}\right) = 
+\frac{\left(\sigma \overline{E^\ast E} T\right)^m}{m!}
+e^{- \sigma T \overline{E^\ast E}}
+\label{eqCh4_60}
+\end{equation}
+где
+\[
+\overline{E^\ast E} = \frac{1}{T} \int_t^{t + T}E^\ast\left(t'\right)
+E\left(t'\right)dt'.
+\]
+Это выражение можно представить в операторном виде:
+\begin{equation}
+P_m\left(\left.T\right|\left\{\alpha_k\right\}\right) = 
+\left<\left\{\alpha_k\right\}\right|
+\hat{N}
+\left\{
+\frac{\left(\sigma \overline{\hat{E}^{(-)} \hat{E}^{(+)}} T\right)^m}{m!}
+e^{- \sigma T \overline{\hat{E}^{(-)} \hat{E}^{(+)}}}
+\right\}
+\left|\left\{\alpha_k\right\}\right>,
+\label{eqCh4_61}
+\end{equation}
+где $P_m\left(\left.T\right|\left\{\alpha_k\right\}\right)$ -
+вероятность счета $m$ фотоэлектронов за время $T$,  если поле
+находится в состоянии $\left|\left\{\alpha_k\right\}\right>$.
+Оператор, стоящий в фигурных скобках, можно 
+рассматривать как оператор счета $m$ фотоэлектронов за время $T$.  Если
+поле находится в статистически смешанном состоянии со статистическим
+оператором, определяемым в диагональном представлении функцией 
+$P_m\left(\left.T\right|\left\{\alpha_k\right\}\right)$
+\[
+\hat{\rho} = \int_{\left\{\alpha_k\right\}}
+P\left(\left\{\alpha_k\right\}\right)
+\left|\left\{\alpha_k\right\}\right>
+\left<\left\{\alpha_k\right\}\right|
+\prod_k d^2\alpha_k,
+\]
+среднее значение оператора, входящего в выражение (\ref{eqCh4_61}),
+согласно (\ref{eqCh1_middleO}), будет равно 
+\begin{eqnarray}
+P_m\left(T\right) =
+\int_{\left\{\alpha_k\right\}}
+P\left(\left\{\alpha_k\right\}\right)
+\left<\left\{\alpha_k\right\}\right|
+\cdot
+\nonumber \\
+\cdot 
+\hat{N}
+\left\{
+\frac{\left(\sigma \overline{\hat{E}^{(-)} \hat{E}^{(+)}} T\right)^m}{m!}
+e^{- \sigma T \overline{\hat{E}^{(-)} \hat{E}^{(+)}}}
+\left|\left\{\alpha_k\right\}\right>
+\right\}
+\prod_k d^2\alpha_k
+\label{eqCh4_62}
+\end{eqnarray}
+Полученную формулу можно записать в произвольном представлении, так
+как операция $Sp$ не зависит от представления. Имеем 
+\begin{equation}
+P_m = Sp\left(
+\hat{\rho}
+\hat{N}
+\left\{
+\frac{\left(\sigma \overline{\hat{E}^{(-)} \hat{E}^{(+)}} T\right)^m}{m!}
+e^{- \sigma T \overline{\hat{E}^{(-)} \hat{E}^{(+)}}}
+\right\}
+\right),
+\label{eqCh4_63}
+\end{equation}
+где
+\[
+\overline{\hat{E}^{(-)} \hat{E}^{(+)}} = \frac{1}{T} \int_t^{t + T}\hat{E}^{(-)}\left(t'\right)
+\hat{E}^{(+)}\left(t'\right)dt'.
+\]
+
+Формула (\ref{eqCh4_63}) полностью соответствует формуле
+(\ref{eqCh4_59}), взятой из \cite{bLoudon1976}. Расчеты по
+формуле (\ref{eqCh4_63}) несколько 
+сложнее, чем по формуле Манделя. Для примера рассмотрим несколько
+простейших случаев. Сперва рассмотрим одномодовые состояния. Тогда
+(\ref{eqCh4_63}) можно представить в следующем виде 
+\[
+P_m = Sp\left(
+\hat{\rho}
+\hat{N}
+\left\{
+\frac{\left(\gamma \overline{\hat{a}^{+} \hat{a}} T\right)^m}{m!}
+e^{- \gamma T \overline{\hat{a}^{+} \hat{a}}}
+\right\}
+\right)
+\]
+где $\gamma$ - коэффициент, характеризующий в этой записи
+эффективность фотокатода. Оператор 
+\[
+\hat{N}
+\left\{
+\frac{\left(\gamma \overline{\hat{a}^{+} \hat{a}} T\right)^m}{m!}
+e^{- \gamma T \overline{\hat{a}^{+} \hat{a}}}
+\right\}
+\]
+имеет в представлении чисел заполнения (чисел фотонов) только
+диагональные члены. Тогда $Sp\left(\dots\right)$ будет определяться
+только диагональными элементами матрицы плотности, 
+которые обозначим $P_n = \left<n\right|\hat{\rho}\left|n\right>$.
+
+Тогда (\ref{eqCh4_63}) можно представить в виде:
+\begin{eqnarray}
+P_m = \sum_n P_n 
+\left<n\right|
+\hat{N}
+\frac{\left(\gamma \hat{a}^{+} \hat{a} T\right)^m}{m!}
+e^{- \gamma T \hat{a}^{+} \hat{a}}
+\left|n\right> = 
+\nonumber \\
+=
+\sum_n P_n 
+\frac{\left(\gamma T\right)^m}{m!}
+\left<n\right|
+\sum_l\left(-1\right)^l
+\frac{\left(\gamma T\right)^l}{l!}
+\left(\hat{a}^{+}\right)^{l + m}
+\left(\hat{a}\right)^{l + m}
+\left|n\right> = 
+\nonumber \\
+=
+\sum_{n = m}
+P_n 
+\frac{\left(\gamma T\right)^m}{m!}
+\sum_{l = 0}^{n - m}\left(-1\right)^l
+\frac{\left(\gamma T\right)^l}{l!}
+\frac{n!}{\left(n - m - l\right)!},
+\label{eqCh4_64}
+\end{eqnarray}
+что следует из соотношения:
+\begin{eqnarray}
+\left<n\right|
+\left(\hat{a}^{+}\right)^{l + m}
+\left(\hat{a}\right)^{l + m}
+\left|n\right> = 
+\nonumber \\
+= \left\{
+n \left(n - 1\right)\left(n - 2\right) \dots
+\left(n - m - l + 1\right)
+\right\} = 
+\frac{n!}{\left(n - m - l\right)!}.
+\nonumber
+\end{eqnarray}
+Выражение (\ref{eqCh4_64}) можно подвергнуть дальнейшим
+преобразованиям. Известно разложение (бином Ньютона): 
+\[
+\left(1 - \gamma T\right)^{n - m} = 
+\sum_{l = 0}^{n -m}
+\left(-1\right)^l
+\left(\gamma T\right)^l
+\frac{\left(n - m\right)!}{l!\left(n - m - l\right)!}.
+\]
+Отсюда имеем:
+\begin{equation}
+P_m\left(T\right) = 
+\sum_{n - m}^{\infty}
+P_n 
+\frac{n!}{m!\left(n - m\right)!}
+\left(\gamma T\right)^m
+\left(1 - \gamma T\right)^{n - m}.
+\label{eqCh4_64a}
+\end{equation}
+Заметим, что, как известно из теории вероятности (см. распределение
+Бернулли), общий член суммы определяет вероятность того, что из $n$
+фотонов $m$ будет зарегистрировано, а  $n - m$  останутся
+незарегистрированными. Применим общую формулу (\ref{eqCh4_64}) к случаю
+хаотического света. Тогда  
+\[
+P_n = \frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n + 1}},
+\]
+и из (\ref{eqCh4_64}) получим 
+\begin{eqnarray}
+P_m\left(T\right) = 
+\sum_{n - m}^{\infty}
+\frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n + 1}}
+\left(\gamma T\right)^m
+\left(1 - \gamma T\right)^{n - m} 
+\frac{n!}{m!\left(n - m\right)!}
+=
+\nonumber \\
+=
+\left(\gamma T\right)^m
+\sum_{l = 0}^{\infty}
+\frac{\bar{n}^{l + m}}{\left(\bar{n} + 1\right)^{l + m + 1}}
+\left(1 - \gamma T\right)^{l}
+\frac{\left(l + m\right)!}{m! l!}. 
+\label{eqCh4_65}
+\end{eqnarray}
+
+При преобразовании сделана замена индексов суммирования: $l = n - m$,
+$n = l + m$.
+
+Известно разложение \cite{bDvait1973}:
+\[
+\left(1 - x\right)^{-\left(m + l\right)} = 
+\sum_{l = 0}^\infty
+\frac{x^l \left(m + l\right)!}{m! l!}.
+\]
+Используя его, получим:
+\begin{eqnarray}
+P_m\left(T\right) = 
+\frac{\left(\gamma T \bar{n}\right)^m}{\left(1 + \bar{n}\right)^{m +
+    1}}
+\left(
+1 - \frac{\bar{n}}{1 + \bar{n}}\left(1 - \gamma T\right)
+\right)^{-\left(m + 1\right)} = 
+\nonumber \\
+=
+\frac{\left(\gamma T \bar{n}\right)^m}{\left(1 + \bar{n}\right)^{m +
+    1}} 
+\left\{
+\frac{1 - \gamma T \bar{n}}{1 + \bar{n}} 
+\right\}^{-\left(m + 1\right)} = 
+\frac{\left(\gamma T \bar{n}\right)^m}{\left(1 + \gamma T \bar{n}\right)^{m +
+    1}} =
+\frac{\bar{m}^m}{\left(\bar{m} + 1\right)^{m + 1}},
+\label{eqCh4_66}
+\end{eqnarray}
+где $\bar{m} = \gamma T \bar{n}$.  Мы получили такой же результат, как
+и при полуклассическом 
+рассмотрении. Распределение $P_m\left(T\right)$ повторяет $P_n$,  но в
+другом 
+масштабе. Вместо $\bar{n}$ стоит $\bar{m} = \gamma T
+\bar{n}$. Рассмотрим теперь другой предельный случай: поле находится в
+когерентном состоянии. Его удобно рассматривать в представлении
+когерентных состояний. Имеем  
+\begin{eqnarray}
+P_m\left(T\right) = 
+\left<\alpha\right|
+\hat{N}
+\frac{\left(\gamma \hat{a}^{+} \hat{a} T\right)^m}{m!}
+e^{- \gamma T \hat{a}^{+} \hat{a}}
+\left|\alpha\right> = 
+\nonumber \\
+=
+\frac{\left(\gamma \left|\alpha\right|^2 T\right)^m e^{-\gamma
+    \left|\alpha\right|^2 T}}{m!} = 
+\frac{\bar{m}^m}{m!}e^{-\bar{m}},
+\label{eqCh4_67}
+\end{eqnarray}
+где $\bar{m} = \gamma \left|\alpha\right|^2 T = \gamma \bar{n} T$.
+
+Распределение фотонов для когерентного состояния, как известно
+(\ref{eqCh1_PuassonCoh}), 
+равно  
+\[
+P_n = \frac{\bar{n}^n e^{-\bar{n}}}{n!}.
+\]
+Таким образом, и в этом случае распределение фотоотсчетов
+повторяет распределение фотонов, но в другом масштабе. Вместо
+$\bar{n}$ стоит $\bar{m}$.  В общем случае  такой простой связи не
+будет. Из проведенного нами вывода квантовой формулы фотоотсчетов
+следует, что пока $P\left(\left\{\alpha_k\right\}\right)$ в выражении 
+для статистического оператора можно интерпретировать как распределение
+вероятности, расхождения результатов полуклассического рассмотрения
+(формулы Манделя), и полностью квантового рассмотрения не будет. Если
+же $P\left(\left\{\alpha_k\right\}\right)$ в некоторых областях может
+быть отрицательно, результаты будут различаться.  

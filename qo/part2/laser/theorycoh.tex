@@ -1,0 +1,430 @@
+%% -*- coding:utf-8 -*- 
+\section{Теория лазера. Представление когерентных состояний}
+Нужно воспользоваться уравнением для функции квазивероятности
+$P\left(\alpha, t\right)$ (\ref{eqCh3_7}):
+\begin{equation}
+\frac{\partial}{\partial t} P\left(\alpha, t\right) = 
+- \frac{1}{2}\left\{ 
+\frac{\partial}{\partial \alpha}
+\left[
+A - \frac{\omega}{Q} - B \left|\alpha\right|^2
+\right] \alpha P + \mbox{к. с.}
+\right\} + 
+A \frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}.
+\nonumber
+\end{equation} 
+
+Для наших целей удобно это уравнение представить в полярных
+координатах $\alpha = r e^{i\theta}$. Имеем 
+\begin{eqnarray}
+\frac{\partial}{\partial t} P\left(r, \theta, t\right) =
+- \frac{1}{2 r} \cdot \frac{\partial}{\partial r}\left[
+r^2\left(A - \frac{\omega}{Q} - B r^2\right)P\left(r, \theta,
+t\right) 
+\right] +
+\nonumber \\
++ \frac{A}{4 r^2}
+\left(
+r \frac{\partial}{\partial r} r \frac{\partial}{\partial r} + 
+\frac{\partial^2}{\partial \theta^2}
+\right)
+P\left(r, \theta, t\right)
+\label{eqCh3_12}
+\end{eqnarray}
+
+Допустим, что нас интересует стационарное состояние. Тогда $\frac{\partial
+  P}{\partial t} = 0$, а фаза $\theta$ распределена равномерно от $0$ до $2
+\pi$. Из сказанного следует, что $\frac{\partial^2 P}{\partial
+  \theta^2} = 0$ и квазивероятность $P\left(r, \theta, t\right)$ от $t$ и
+$\theta$ не зависит. Уравнение (\ref{eqCh3_12}) примет вид   
+\begin{equation}
+0 = - \frac{\partial}{\partial r}
+\left[
+r^2\left(A - \frac{\omega}{Q} - B r^2\right)P\left(r\right) 
+\right] + 
+\frac{1}{2} A \frac{\partial}{\partial r} r \frac{\partial}{\partial
+  r} P\left(r\right).
+\label{eqCh3_13}
+\end{equation}
+
+Это уравнение легко интегрируется. Первое интегрирование дает
+\begin{equation}
+r\left(A - \frac{\omega}{Q} - B r^2\right)P\left(r\right) 
+=
+\frac{1}{2} A \frac{\partial}{\partial
+  r} P\left(r\right) + C.
+\label{eqCh3_14}
+\end{equation}
+Постоянная  $C = 0$, так как $P$ и $\frac{\partial P}{\partial r}$
+должны достаточно быстро стремиться к нулю при  $r \rightarrow
+\infty$. 
+ 
+Отсюда следует уравнение
+\begin{equation}
+\frac{d P}{P} = 
+\frac{2}{A} r \left(A - \frac{\omega}{Q} - B r^2\right)d r. 
+\label{eqCh3_15}
+\end{equation}
+
+Его решением будет
+\begin{eqnarray}
+P = N exp \left(\frac{1}{A}
+\left[
+r^2 \left(A - \frac{\omega}{Q}\right)
+ - 
+\frac{B r^4}{2}
+\right]
+\right) = 
+\nonumber \\
+= 
+N exp \left(\frac{1}{A}
+\left[
+r^2 G
+ - 
+\frac{B r^4}{2}
+\right]
+\right),
+\label{eqCh3_16}
+\end{eqnarray}
+где $N$ - нормирующий множитель, равный
+\[
+\frac{1}{N} = 2 \pi \int_0^{\infty}
+exp\left(
+\frac{1}{A}\left[
+r^2 G - \frac{B}{2}r^4
+\right]
+\right)
+r dr.
+\]
+Распределение (\ref{eqCh3_16})
+является функцией от $r^2 = \left|\alpha\right|^2 = \bar{n}$. При
+превышении порога $A > \frac{\omega}{Q}$,  то есть при $G > 0$,
+$P\left(r\right)$ с ростом $r^2$ сперва растет, достигая максимума при
+$r^2 = \frac{A - \omega/Q}{B} = \frac{G}{B}$, а затем убывает.  
+
+Этот же результат мы имели ранее. Полученное значение $r =
+\sqrt{\frac{G}{B}}$ соответствует при $G > 0$ наиболее вероятному
+значению $\left|\alpha\right|$.
+  
+При $A < \frac{\omega}{Q}$ , $G < 0$ лазер находится ниже порога. С
+ростом $r^2$ кривая монотонно падает. На пороге $A =
+\frac{\omega}{Q}$,  $G = 0$  кривая также падает, но при $r^2 = 0$
+имеем экстремум.   
+
+\input ./part2/laser/fig6.tex
+
+На рис.\ref{figPart2Ch1_6} представлены зависимости квазивероятности от $r^2 =
+\left|\alpha\right|^2$, при различных значениях параметра $G$,
+соответствующих допороговому, пороговому и надпорогогвому режимам. 
+
+На комплексной плоскости $\alpha = r e^{i \theta}$ при значительном
+превышении порога область, занятую генерируемым полем, можно наглядно
+представить, как это сделано на
+рис. \ref{figPart2Ch1_7}. Ломаная кривая характеризует
+распределение амплитуды колебаний, т. е. соотвествует амплитудным 
+шумам. Фаза $\theta$ равновероятна в интервале  $0 \div 2\pi$,
+поэтому ломаная кривая располагается вблизи окружности $r =
+\sqrt{\bar{n}_{st}}$ с радиусом, соответствующим наиболее вероятному
+значению $\left|\alpha\right|$. 
+
+\input ./part2/laser/fig7.tex
+
+Из рис. \ref{figPart2Ch1_7} видно, что амплитуда флуктуирует в узкой области в
+окрестности окружности радиуса $r = \sqrt{\bar{n}_{st}}$,  а фаза
+свободно диффундирует (блуждает) вдоль этой окружности. 
+
+В лазере диффузия фазы происходит медленно, поэтому, если
+рассматривать не слишком большие промежутки времени, можно считать,
+что лазер генерирует излучение с хорошо определенной фазой. При
+усреднении за большой промежуток времени, когда фаза с равной
+вероятностью может принимать любое значение в интервале  $0 \div 2
+\pi$,  среднее значение лазерного поля за этот промежуток времени 
+будет равно нулю.  
+
+Рассмотрим более подробно процесс диффузии фазы. Предположим, что
+распределение амплитуды у нас установлено и $P\left(r\right)$
+соответствует стационарному распределению амплитуды. Тогда
+\[
+P\left(r, \theta, t\right) = P\left(r\right) P\left(\theta, t\right).
+\]
+В этом случае уравнение (\ref{eqCh3_12}) примет вид 
+\begin{equation}
+\frac{\partial P \left(\theta, t\right)}{\partial t} = 
+\frac{A}{4 r^2}
+\frac{\partial^2}{\partial \theta^2}
+P \left(\theta, t\right)
+\label{eqCh3_17}
+\end{equation}
+Функция $P\left(r\right)$ сокращается, так как она удовлетворяет
+стационарному уравнению (\ref{eqCh3_15}). 
+
+Уравнение (\ref{eqCh3_17}) можно использовать для получения уравнения,
+которому удовлетворяет среднее поле. Среднее электрическое поле моды
+лазера, выраженное через $P$, имеет вид  
+\[
+\left<\hat{E}\right> = E_1 \int P\left(\alpha, t\right) \alpha d^2
+\alpha.
+\]
+В полярных координатах это выглядит так:
+\[
+\left<\hat{E}\right> = E_1 \int_{0}^{\infty}r dr \int_0^{2 \pi}r e^{i
+  \theta} P\left(r, \theta, t\right) d \theta.
+\]
+Используем теперь уравнение (\ref{eqCh3_17}):
+\begin{eqnarray}
+\frac{\partial \left<\hat{E}\right>}{\partial t}
+= E_1 \frac{\partial}{\partial t} \int_{0}^{\infty}r^2 dr \int_0^{2
+  \pi} e^{i
+  \theta} P\left(r, \theta, t\right) d \theta = 
+\nonumber \\
+= E_1 \int_0^{\infty}r^2 dr \int_0^{2\pi}e^{i\theta}\frac{\partial
+  P}{\partial t} d \theta
+=
+\nonumber \\
+= \frac{E_1}{\bar{n}_{st}} \frac{A}{4}
+\int_{0}^{\infty}r^2 dr \int_0^{2 \pi}e^{i
+  \theta} \frac{\partial^2}{\partial \theta^2} P\left(r, \theta,
+t\right) d \theta. 
+\label{eqCh3_18}
+\end{eqnarray}
+Здесь мы приближенно заменили $\frac{1}{r^2} \approx
+\frac{1}{\bar{n}_{st}}$, считая распределение для амплитуд достаточно
+узким. 
+
+Проинтегрируем внутренний интеграл дважды по частям. Имеем
+\begin{eqnarray}
+\int_0^{2 \pi} e^{i \theta}
+\frac{\partial^2 P}{\partial \theta^2} d \theta = 
+e^{i \theta} \left.\frac{\partial P}{\partial \theta}\right|_0^{2 \pi}
+- i \int_0^{2 \pi} e^{i \theta}
+\frac{\partial P}{\partial \theta} d \theta = 
+\nonumber \\
+= -i e^{i \theta} \left. P \right|_0^{2 \pi} - 
+\int_0^{2 \pi} e^{i \theta} P d \theta.
+\label{eqCh3_19}
+\end{eqnarray}
+
+Первые слагаемые в (\ref{eqCh3_19}) равны нулю из-за периодичности $P$,
+$\frac{\partial P}{\partial \theta}$.  Учитывая (\ref{eqCh3_19}),
+уравнению (\ref{eqCh3_18}) можно придать вид 
+\begin{equation}
+\frac{\partial \left<E\right>}{\partial t} = 
+\frac{A E_1}{4 \bar{n}_{st}}
+\int_0^{\infty}r dr\int_0^{2 \pi}r e^{i \theta} P d \theta = 
+- \frac{A}{4 \bar{n}_{st}} \left<E\right>.
+\label{eqCh3_20}
+\end{equation}
+Решение этого уравнения 
+\begin{equation}
+\left<E\left(t\right)\right> = 
+\left<E\left(0\right)\right> e^{- \frac{D}{2}t},
+\label{eqCh3_21}
+\end{equation}
+где 
+\begin{equation}
+D \approx \frac{A}{2 \bar{n}_{st}}.
+\label{eqCh3_21a}
+\end{equation}
+
+Таким образом мы получили, что среднее поле действительно стремится к
+нулю с характерным временем $\tau = \frac{1}{D}$.  В лазерах этот
+интервал может быть достаточно большим по сравнению с периодом
+колебаний.
+
+Для определения естественной ширины спектра излучения лазера
+необходимо найти корреляционную функцию излучения лазера, ее спектр по
+теореме Хинчина-Винера (см. приложение \ref{AddHinchin}) будет
+энергетическим спектром лазерного излучения. Имеем
+\begin{equation}
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+= E_1^2\int d^2\alpha P\left(\alpha\right) \alpha^{*}\left(0\right)\alpha\left(t\right) e^{-i
+  \omega_0 t},
+\nonumber
+\end{equation}
+где $P\left(\alpha\right)$ - квазивероятность состояния лазера,
+определяемая формулой (\ref{eqCh3_12}). 
+При переходе к полярным координатам
+(модуль-фаза) $\alpha = r e^{i \theta}$
+мы считаем что амплитуда уже
+установилась и не меняется, а фаза менеяется медленно, так что 
+\begin{eqnarray}
+\alpha^{*}\left(0\right) = r e^{i\theta\left(0\right)} = r e^{i 0} = r,
+\nonumber \\
+\alpha\left(t\right) = r e^{i\theta\left(t\right)} = r e^{i \theta},
+\label{eqCh3_addon1}
+\end{eqnarray}
+В (\ref{eqCh3_addon1}) мы предполагали, что в начальный момент времени 
+$\theta\left(0\right) = 0$, а в момент времени $t$ - $\theta\left(t\right) = \theta$.
+Таким образом имеем:
+\begin{equation}
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+= E_1^2 e^{-i
+  \omega_0 t}\int_0^{\infty}r^3 d r \int_0^{2 \pi}d \theta P\left(r
+e^{i \theta}, t\right) e^{i \theta}.
+\nonumber
+\end{equation}
+Выведем уравнение, которому удовлетворяет 
+$\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>$. 
+Имеем уравнение (\ref{eqCh3_17}) 
+\(
+\frac{\partial P \left(\theta, t\right)}{\partial t} = 
+\frac{A}{4 \bar{n}_{st}}
+\frac{\partial^2}{\partial \theta^2}
+P \left(\theta, t\right)
+\),
+следовательно
+\begin{eqnarray}
+\frac{d}{dt}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+= -i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>+
+\nonumber \\
++ E_1^2 e^{-i
+  \omega_0 t}\int_0^{\infty}r^3 d r \int_0^{2 \pi}d \theta
+\frac{\partial}{\partial t}P\left(r
+e^{i \theta}, t\right) e^{i \theta}
+=
+\nonumber \\
+=
+-i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>+
+\nonumber \\ 
++
+\frac{E_1^2 A}{4 \bar{n}_{st}} 
+\int_0^{\infty}r^3 d r 
+\int_0^{2 \pi}
+d \theta
+\frac{\partial^2}{\partial^2 \theta}P\left(r
+e^{i \theta}, t\right) e^{i \theta}.
+\label{eqPart2Ch1_add84_1}
+\end{eqnarray}
+Проведем в (\ref{eqPart2Ch1_add84_1}) дважды интегрирование по частям
+по $\theta$. Получим:
+\begin{eqnarray}
+\int_0^{2 \pi}
+d \theta
+\frac{\partial^2}{\partial^2 \theta}P e^{i \theta} = 
+\left.\frac{\partial}{\partial \theta}P e^{i \theta}\right|_0^{2 \pi}
+- 
+i \int_0^{2 \pi}
+d \theta
+\frac{\partial}{\partial \theta}P e^{i \theta} = 
+\nonumber \\
+= - i \int_0^{2 \pi}
+d \theta
+\frac{\partial}{\partial \theta}P e^{i \theta}  
+= 
+- i \left.P e^{i \theta}\right|_0^{2 \pi}
+-
+\int_0^{2 \pi}
+d \theta
+P e^{i \theta} = 
+- \int_0^{2 \pi}
+d \theta
+P e^{i \theta}.
+\nonumber
+\end{eqnarray}
+Подставляя получившийся результат в исходное выражение
+(\ref{eqPart2Ch1_add84_1}), получим:
+\begin{eqnarray}
+\frac{d}{dt}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+=
+-i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>-
+\nonumber \\
+-
+\frac{E_1^2 A}{4 \bar{n}_{st}} 
+\int_0^{\infty}r^3 d r 
+\int_0^{2 \pi}
+d \theta
+P\left(r
+e^{i \theta}, t\right) e^{i \theta} = 
+\nonumber \\
+=-i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right> -
+\frac{A}{4 \bar{n}_{st}}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>.
+\nonumber
+\end{eqnarray}
+Решение этого уравнения имеет вид
+\begin{equation}
+r_{+}\left(t\right) = \left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right> =
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>
+e^{-i \omega_0 t - \frac{D}{2}t},
+\label{eqPart2LaserCorr1}
+\end{equation}
+где
+\[
+\frac{D}{2} = \frac{A}{4 \bar{n}_{st}}.
+\]
+Выражение (\ref{eqPart2LaserCorr1}) определяет корреляционную функцию
+$r\left(t\right)$ в области $t \ge 0$. В случае $t \le 0$, с учетом
+(\ref{eqAddHinchinStatWide3}), корреляционная функция может быть
+записана в виде  
+\begin{equation}
+r_{-}\left(t\right) = r_{-}\left(-\left|t\right|\right) =
+r_{+}^{*}\left(\left|t\right|\right). 
+\label{eqPart2LaserCorr2}
+\end{equation}
+С учетом выражений (\ref{eqPart2LaserCorr1}) и
+(\ref{eqPart2LaserCorr2}) можно написать следующее выражение для фурье
+образа корреляционной функции, которая согласно теореме Хинчина-Винера
+(см. приложение \ref{AddHinchin})
+определяет энергетический спектр $S\left(\omega\right)$:
+\begin{eqnarray}
+S\left(\omega\right) = \tilde{r}\left(\omega\right) = 
+\frac{1}{2\pi}
+\int_{-\infty}^{+\infty}e^{i \omega t} r\left(t\right) dt =
+\nonumber \\
+=
+\frac{1}{2\pi}
+\int_{-\infty}^0e^{i \omega t} r_{-}\left(t\right) dt +
+\frac{1}{2\pi}
+\int_0^{+\infty}e^{i \omega t} r_{+}\left(t\right) dt = 
+\nonumber \\
+=
+\frac{1}{2\pi}
+\int_0^{+\infty}e^{- i \omega t} r_{+}^{*}\left(t\right) dt +
+\frac{1}{2\pi}
+\int_0^{+\infty}e^{i \omega t} r_{+}\left(t\right) dt = 
+\nonumber \\
+=
+\frac{1}{\pi} Re
+\int_0^{+\infty}e^{i \omega t} r_{+}\left(t\right) dt = 
+\nonumber \\
+= \frac{1}{\pi}Re
+\int_0^{+\infty}e^{i \omega t}
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right> dt
+=
+\nonumber \\
+=
+\frac{\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>}{\pi}
+\frac{D/2}{\left(\omega - \omega_0\right)^2 + \left(D/2\right)^2}. 
+\label{eqCh3_22}
+\end{eqnarray}
+
+%% Из (\ref{eqCh3_21}) имеем
+%% \begin{eqnarray}
+%% \left|E\left(\omega\right)\right|^2 = 
+%% \left|\int_{-\infty}^{+\infty}e^{i \omega t}\left<E\left(0\right)\right>
+%% e^{i \omega_0 t} e^{-\frac{1}{2}D t}
+%% dt\right|^2  = 
+%% \nonumber \\
+%% = 
+%% \left|\left<E\left(0\right)\right>\right|^2 
+%% \frac{D}{\left(\omega - \omega_0\right)^2 + \left(D/2\right)^2}. 
+%% \label{eqCh3_22}
+%% \end{eqnarray}
+
+\input ./part2/laser/fig8.tex
+
+Получилось, что линия генерации лоренцовская, а ширина линии равна $D$ 
+(рис.\ref{figPart2Ch1_8}). Поскольку мы рассматривали только ''естественную'',
+принципиально не устранимую причину уширения линии генерации,
+связанную с квантовыми флуктуациями, и пренебрегали принципиально
+устранимыми техническими причинами, полученная ширина получилась
+предельно узкой.  
+
+Здесь мы рассмотрели простейшую модель лазера. Более
+реалистическая модель трехуровневой системы рассмотрена в
+\cite{bHaken1988}. Результаты, полученные для различных моделей
+лазера, хорошо согласуются между собой и соответствуют результатам, 
+полученным с использованной нами простейшей модели. 

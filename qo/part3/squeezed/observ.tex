@@ -1,0 +1,381 @@
+%% -*- coding:utf-8 -*- 
+\section{Наблюдение сжатого состояния. Измерение степени сжатия}
+
+При квадратурном сжатии света флуктуации одной из квадратурных
+компонент могут быть существенно меньше другой. Если выделить эту
+компоненту и использовать ее в измерительных целях, можно ожидать
+сильного уменьшения шумов, ограничивающих точность измерений. 
+
+\input ./part3/squeezed/fig12.tex
+
+Выделение можно осуществить, используя гомодинный (синхронный)
+детектор. Простейшая схема гомодинного детектора изображена на
+рис. \ref{figPart3Squeezed_12}. Делительное зеркало имеет следующие
+параметры: коэффициент пропускания близок к 1 ($t \approx 1$) и,
+следовательно, $r \ll 1$, т. к. $\left|t\right|^2 +\left|r\right|^2 =
+1$. Это необходимо для того чтобы сигнал $\hat{a}_0$ не сильно
+ослаблялся. При этом амплитуда гомодина, поле которого находится в
+когерентном состоянии $\left|\alpha_{H}\right>$ так велика, чтобы поле
+гомодина по интенсивности существенно превышало бы поле сигнала. Для
+работы гомодинного детектора необходимо, чтобы поле гомодина и сигнала
+имели бы одинаковую частоту. Это достигается тем, что поле сигнала и
+поле гомодина формируются от одного заданного лазера. Например если
+$\hat{a}_0$ соответствует сжатому вакууму, накачка параметрического
+генератора осуществляется второй гармоникой задающего лазера $2
+\omega_p$. При вырожденном параметрическом взаимодействии генерируется
+сигнал с частотой $\omega_p$, что совпадает с частотой гомодина
+$\omega_p$. Таким образом условие равенства частот соблюдается.
+
+Оператор поля, поступающего на фотодетектор $\hat{a}_2$, можно выразить
+через операторы $\hat{a}_0$ и $\hat{a}_1$ - операторы поля сигнала и
+поля гомодина
+\begin{equation}
+\hat{a}_2 = t \hat{a}_0 + r\hat{a}_1.
+\nonumber
+\end{equation}
+Тогда оператор числа фотонов равен
+\begin{eqnarray}
+\hat{a}_2^{+}\hat{a}_2 = 
+\left(t \hat{a}_0^{+} + r\hat{a}_1^{+}\right)
+\left(t \hat{a}_0 + r\hat{a}_1\right) = 
+\nonumber \\
+=
+t^2\hat{a}_0^{+}\hat{a}_0 + r t \left(
+\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_0 
+\right) +
+r^2\hat{a}_1^{+}\hat{a}_1.
+\nonumber
+\end{eqnarray}
+Положим, что гомодин находится в когерентном состоянии, а сигнал в
+состоянии сжатого вакуума. Тогда входное состояние будет двухмодовым 
+\[
+\left|\psi\right> = 
+\left|\alpha_p\right> \left|r, 0\right>.
+\]
+Среднее значение оператора числа фотонов $\hat{n}_2 =
+\hat{a}_2^{+}\hat{a}_2$ в таком случае будет равно:
+\begin{eqnarray}
+\left<\hat{n}_2\right> = 
+\left<\psi\right|\hat{a}_2^{+}\hat{a}_2\left|\psi\right> = 
+\nonumber \\
+=
+t^2\left<r, 0\right|\hat{a}_0^{+}\hat{a}_0\left|r, 0\right> + 
+r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
+\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>,
+\label{eqPart3SqueezedAdd3}
+\end{eqnarray}
+где
+\[
+\hat{X}\left(\varphi\right) = \frac{1}{2}\left(
+\hat{a}_0 e^{-i \varphi} +
+\hat{a}_0^{+} e^{i \varphi}
+\right),
+\]
+\[
+\alpha_p = 
+\left|\alpha_p\right|
+ e^{i \varphi}.
+\]
+Здесь $\varphi$ - фаза гомодина. Тогда при $\varphi = 0$ и при 
+$\varphi = \frac{\pi}{2}$ имеем
+\begin{eqnarray}
+\hat{X}\left(0\right) = 
+\frac{1}{2}\left(\hat{a}_0 + \hat{a}_0^{+}\right) = \hat{X}_1,
+\nonumber \\
+\hat{X}\left(\frac{\pi}{2}\right) = 
+\frac{1}{2i}\left(\hat{a}_0 - \hat{a}_0^{+}\right) = \hat{X}_2,
+\nonumber
+\end{eqnarray}
+т. е меняя фазовращателем фазу гомодина, можно выделить ту или иную
+квадратурную составляющие.
+
+Равенство (\ref{eqPart3SqueezedAdd3}) содержит три члена, содержащие 
+$\left<\hat{a}_0^{+}\hat{a}_0\right>$ - среднее число фотонов в моде
+сигнала, $r^2\left|\alpha_p\right|^2$ - среднее число фотонов в моде
+гомодина и интерференционный член 
+$\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>$,
+который выделяет ту или иную квадратурные составляющие. Положим, что
+интенсивность гомодина настолько велика, что 
+\[
+r^2 \left|\alpha_p\right|^2 \gg 
+\left<\hat{a}_0^{+}\hat{a}_0\right>
+\]
+тогда первым членом в (\ref{eqPart3SqueezedAdd3}) можно пренебречь. В
+этом случае среднее число фотонов, поступающих на фотодетектор, равно
+\begin{equation}
+\left<\hat{n}_2\right> = 
+r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
+\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>,
+\nonumber
+\end{equation}
+где первый член является известным числом и его можно
+вычесть. Остается только член, содержащий квадратуру сигнала. Далее
+можно определить флуктуации числа фотонов (неопределенность числа
+фотонов), воспользовавшись формулой
+\begin{equation}
+\left(\Delta n_2\right)^2 = 
+\left<\hat{n}_2^2\right>
+-
+\left<\hat{n}_2\right>^2.
+\nonumber
+\end{equation}
+Вычисления приводят к формуле
+%FIXME!!! calculate it
+\begin{equation}
+\left(\Delta n_2\right)^2 =
+r^2 \left|\alpha_p\right|^2
+\left\{
+r^2 + 4 t^2 
+\left(
+\Delta X \left(\varphi\right)
+\right)^2
+\right\}.
+\label{eqPart3SqueezedAdd7}
+\end{equation}
+Из (\ref{eqPart3SqueezedAdd7}) следует, что шумы содержат две
+составляющих, одна из которых $r^2 \left|\alpha_p\right|^2 r^2$ -
+выражает шумы гетеродина, вторая 
+$r^2 \left|\alpha_p\right|^2 4 t^2 
+\left(
+\Delta X \left(\varphi\right)
+\right)^2$ -  связана с шумами сигнала. Если сигналом является вакуумное
+колебание 
+\[
+\left(\Delta X \left(\varphi\right)\right)^2  = \frac{1}{4},
+\] 
+то условием сжатия является 
+\[
+\left(\Delta X_1 \right)^2 < \frac{1}{4}
+\]
+для сжатой компоненты. 
+
+Обнаружить эффект сжатия можно при помощи
+гомодинного детектора в следующем эксперименте. Сперва на входе
+присутствует только вакуумное состояние, при этом измеряется уровень
+шумов. Затем на вход подается исследуемое колебание и измеряется
+уровень шумов в зависимости от $\varphi$. Если на вход подано сжатое
+состояние, при нектором значении $\varphi = \varphi^{(1)}$ шумы будут
+минимальными (меньшими, чем в случае вакуумных колебаний на входе). При
+другом значении $\varphi = \varphi^{(2)}$, отличающимся на $\pi$ шумы
+будут максимальными (больше, чем в случае вакуумных
+колебаний). Подобные эксперименты проводились неоднократно. При этом
+обнаруживался эффект сжатия и измерялась его степень (см. например
+\cite{bNonclassSqueezedStateDetection}). 
+
+\input ./part3/squeezed/fig13.tex
+
+\subsection{Балансная схема гомодинного детектора}
+Более сложной схемой гомодинного приемника является балансная схема,
+изображенная на рис. \ref{figPart3Squeezed_13}. Она позволяет
+существенно уменьшить шумы гомодина. От уже рассмотренной схемы она
+отличается наличием двух фотоприемников, по одному для каждого
+выходного пучка. Сигналы, идущие с каждого фотоприемника, вычитаются, и
+разность фиксируется. Делительное зеркало полупрозрачное $t = r =
+\frac{1}{\sqrt{2}}$ (на этот раз мы приняли, что $t$ и $r$
+вещественны, но коэффициент отражения по разные стороны зеркала
+отличается знаком).
+
+На схеме $\hat{a}_0$ - оператор сигнала, а $\hat{a}_1$ - оператор моды
+гомодина. Предполагается, что гомодин находится в когерентном
+состоянии с большой амплитудой. Поля мод 2 и 3 (операторы $\hat{a}_2$
+и $\hat{a}_3$) детектируются отдельными фотодетекторами $D^{(2)}$ и
+$D^{(3)}$, и сигналы, идущие с каждого фотоэлемента, вычитаются. Такими
+образом, на выходе сигнал определяется средним значением оператора
+\begin{equation}
+\hat{n}_{23} = \hat{a}_2^{+}\hat{a}_2 - 
+\hat{a}_3^{+}\hat{a}_3.
+\nonumber
+\end{equation}
+Операторы $\hat{a}_2$ и $\hat{a}_3$ связаны  делительным зеркалом с
+операторами входных полей $\hat{a}_0$ и $\hat{a}_1$ следующими
+соотношениями: 
+\begin{eqnarray}
+\hat{a}_2 = \frac{1}{\sqrt{2}} \left(\hat{a}_0 + \hat{a}_1\right),
+\nonumber \\
+\hat{a}_3 = \frac{1}{\sqrt{2}} \left(- \hat{a}_0 + \hat{a}_1\right),
+\nonumber
+\end{eqnarray}
+таким образом
+\begin{eqnarray}
+\hat{n}_{23} = \frac{1}{2}
+\left(
+\left(\hat{a}_0^{+} + \hat{a}_1^{+}\right)
+\left(\hat{a}_0 + \hat{a}_1\right)
+-
+\left(-\hat{a}_0^{+} + \hat{a}_1^{+}\right)
+\left(-\hat{a}_0 + \hat{a}_1\right)
+\right) = 
+\nonumber \\
+=
+\frac{1}{2}
+\left(
+\hat{a}_0^{+}\hat{a}_0 + \hat{a}_1^{+}\hat{a}_0
++
+\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_1
+-
+\left(
+\hat{a}_0^{+}\hat{a}_0 - \hat{a}_1^{+}\hat{a}_0
+-\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_1
+\right)
+\right) = 
+\nonumber \\
+=\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_0 = 
+\left(
+\hat{a}_0^{+}e^{i\varphi} + \hat{a}_0 e^{- i\varphi}
+\right)\left|\alpha_H\right|,
+\nonumber
+\end{eqnarray}
+где использовано то обстоятельство, что гомодин находится в
+когерентном состоянии с большой амплитудой 
+\[
+\alpha_H = \left|\alpha_H\right|e^{i\varphi},
+\]
+и $\hat{a}_1$ заменено на классическое поле
+$\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).  
+
+Найдем среднее значение оператора $\hat{n}_{23}$ в случае сигнала в
+сжатом вакуумном состоянии $\left|z, 0\right>$, где для простоты
+положим $z = r$ - вещественным ($r = \left|z\right|$). Также для
+простоты положим $\varphi = 0$. В этом случае 
+\[
+\hat{n}_{23} = 2 \hat{X}_1 = 
+\frac{2\left(\hat{a}_0 + \hat{a}_0^{+}\right)}{2}\left|\alpha_H\right|.
+\]
+Это означает, что мы рассматриваем случай сжатия квадратурной
+компоненты $\hat{X}_1$. Среднее значение оператора $\hat{n}_{23}$
+записывается в следующем виде
+\begin{eqnarray}
+\left<\hat{n}_{23}\right> = 
+\left|\alpha_H\right|\left<\hat{X}_1\right> = 
+\left|\alpha_H\right|\left<r, 0\right|\hat{a}_0 +
+\hat{a}_0^{+}\left|r, 0\right> =
+\nonumber \\
+=
+\left|\alpha_H\right|\left<0\right|
+\hat{S}^{+}\left(r\right)
+\left(\hat{a}_0 +
+\hat{a}_0^{+}\right)
+\hat{S}\left(r\right)
+\left|0\right> =
+\nonumber \\
+=
+\left|\alpha_H\right|
+\left(
+\left<0\right|
+\hat{a}_0 ch\,r -
+\hat{a}_0^{+} sh\,r
+\left|0\right> 
++
+\left<0\right|
+\hat{a}_0^{+} ch\,r -
+\hat{a}_0 sh\,r
+\left|0\right> 
+\right)
+= 0,
+\nonumber
+\end{eqnarray}
+т. к. $\hat{a}_0\left|0\right> = 0$, 
+$\left<0\right|\hat{a}_0^{+} = 0$.
+Таким образом, среднее значение $\left<\hat{n}_{23}\right> =
+0$. Однако средний квадрат не равен 0. Он выражает шумы, ограничивающие
+точность измерений.
+
+Вычислим неопределенность $\left(\Delta X_{1,2}\right)^2$, которая
+определяет уровень шумов рассматриваемой балансной схемы:
+\begin{eqnarray}
+\left(\Delta X_{1,2}\right)^2 = 
+\left<r,
+0\right|\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{+}\right)^2\left|r,
+0\right> -
+\nonumber \\
+-
+\left<r,
+0\right|\frac{1}{2}\left(\hat{a}_0\pm\hat{a}_0^{+}\right)\left|r,
+0\right>^2.
+\label{eqPart3SqueezedAddAdd5}
+\end{eqnarray}
+Поскольку мы показали, что последний член в
+(\ref{eqPart3SqueezedAddAdd5}) равен нулю, получаем:
+\begin{eqnarray}
+\left(\Delta X_{1,2}\right)^2 = 
+\left<0\right|\hat{S}^{+}\left(r, 0\right)
+\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{+}\right)^2
+\hat{S}\left(r, 0\right)
+\left|0\right> = 
+\nonumber \\
+=
+\left<0\right|\hat{S}^{+}\left(r, 0\right)
+\frac{1}{4}
+\left(\hat{a}_0\pm\hat{a}_0^{+}\right)
+\hat{S}^{+}\left(r, 0\right)
+\hat{S}\left(r, 0\right)
+\left(\hat{a}_0\pm\hat{a}_0^{+}\right)
+\hat{S}\left(r, 0\right)
+\left|0\right>.
+\label{eqPart3SqueezedAddAdd6}
+\end{eqnarray}
+Чтобы найти 
+$\left(\Delta X_{1,2}\right)^2$, нужно вычислить средние:
+\begin{eqnarray}
+\left<\hat{a}_0\right> = 
+\left<0\right|
+\hat{S}^{+}\left(r, 0\right)
+\hat{a}_0
+\hat{S}\left(r, 0\right)
+\left|0\right> = 
+\left<0\right|
+\hat{a}_0 ch\,r - \hat{a}_0^{+} sh\,r
+\left|0\right> = 0,
+\nonumber \\
+\left<\hat{a}_0^{+}\right> = 
+\left<0\right|
+\hat{a}_0^{+} ch\,r - \hat{a}_0 sh\,r
+\left|0\right> = 0,
+\label{eqPart3SqueezedAddAdd7}
+\end{eqnarray}
+т. к. $\hat{a}_0\left|0\right> = 0$, 
+$\left<0\right|\hat{a}_0^{+} = 0$.
+
+Таким же образом можно показать
+\begin{eqnarray}
+\left<\hat{a}_0^{+}\hat{a}_0\right> = sh^2 r,
+\nonumber \\
+\left<\hat{a}_0\hat{a}_0^{+}\right> = 
+1 + \left<\hat{a}_0^{+}\hat{a}_0\right> =
+1 + sh^2 r = ch^2 r,
+\nonumber \\
+\left<\hat{a}_0\hat{a}_0\right> = 
+\left<\hat{a}_0^{+}\hat{a}_0^{+}\right>^{*} = - ch\,r sh\,r.
+\label{eqPart3SqueezedAddAdd8}
+\end{eqnarray}
+Преобразуя (\ref{eqPart3SqueezedAddAdd6}) при помощи
+(\ref{eqPart3SqueezedAddAdd7}) 
+и
+(\ref{eqPart3SqueezedAddAdd8}),
+получим следующее выражение
+\begin{equation}
+\left(\Delta X_{1,2}\right)^2 = 
+ch\,2 r \mp sh\, 2 r = 
+e^{\mp 2 r},
+\nonumber
+\end{equation}
+откуда
+\begin{equation}
+\left(\Delta n_{2,3}\right)^2 = 
+n_H
+e^{- 2 r}
+\nonumber
+\end{equation}
+для компоненты $X_1$. Дисперсия равна 
+\[
+\Delta n_{2,3} = 
+\sqrt{n_H}
+e^{- r},
+\]
+где $n_H=\left|\alpha_H\right|^2$ - число фотонов в поле гомодина.
+При помощи балансной схемы можно измерять степень сжатия таким же
+образом, как и при помощи простейшей схемы гомодина. Преимущество
+здесь в том, что шумы самого гомодина в этом случае компенсируются и
+точность измерения возрастет.
+
+

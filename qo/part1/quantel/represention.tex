@@ -1,0 +1,342 @@
+%% -*- coding:utf-8 -*- 
+\section{Представление оператора плотности через когерентные
+  состояния}
+Важным для квантовой оптики является описание оптических явлений при
+помощи когерентных состояний. Используя дважды условие полноты для  
+состояний с различным числом фотонов, для произвольного
+статистического оператора получим: 
+\[
+\hat{\rho} = \hat{I}\hat{\rho}\hat{I} = 
+\sum_{(n)}\sum_{(m)}
+\left|n\right>\left<n\right|\hat{\rho}\left|m\right>\left<m\right| = 
+\sum_{(n)}\sum_{(m)} \rho_{mn}\left|n\right>\left<m\right|
+\]
+Аналогично для когерентных состояний
+\begin{eqnarray}
+\hat{\rho} = \hat{I}\hat{\rho}\hat{I} = 
+\frac{1}{\pi^2}\int d^2\alpha\int
+\left|\alpha\right>\left<\alpha\right|\hat{\rho}\left|\beta\right>\left<\beta\right|
+d^2 \beta = 
+\nonumber \\
+= \frac{1}{\pi^2} \int d^2\alpha \int
+R\left(\alpha^{*}, \beta\right) e^{-\frac{1}{2}\left|\alpha\right|^2 -\frac{1}{2}\left|\beta\right|^2}
+\left|\alpha\right>\left<\beta\right|d^2 \beta ,
+\end{eqnarray}
+где
+\[
+R\left(\alpha^{*}, \beta\right) =
+\left<\alpha\right|\hat{\rho}\left|\beta\right>
+e^{\frac{1}{2}\left|\alpha\right|^2 +\frac{1}{2}\left|\beta\right|^2}
+\]
+Если выразить $\left|\alpha\right>$ и $\left|\beta\right>$ через
+состояния $\left|n\right>$,  получим формулу 
+\begin{equation}
+R\left(\alpha^{*}, \beta\right) = \sum_{(n)}\sum_{(m)}
+\frac{\left(\alpha^{*}\right)^n \left(\beta\right)^m}{\sqrt{n!m!}}\rho_{nm}
+\end{equation}
+т. е. $R\left(\alpha^{*}, \beta\right)$ легко найти, если известна
+матрица плотности в представлении чисел заполнения (чисел
+фотонов). Как пример рассмотрим тепловое возбуждение моды: 
+\begin{eqnarray}
+R\left(\alpha^{*}, \beta\right) = \sum_{(n)}\sum_{(m)}
+\frac{\left(\alpha^{*}\right)^n \left(\beta\right)^m}{\sqrt{n!m!}}
+e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right)
+\delta_{nm} = 
+\nonumber \\
+= \sum_{(n)}\frac{\left(\alpha^{*} \beta\right)^n }{n!}
+e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right) =
+\left(1  -  e^{-\beta \hbar \omega}\right) e^{\alpha^{*}\beta
+  e^{-\beta \hbar \omega}}.
+\end{eqnarray}
+
+Это представление зависит от двух параметров $\alpha^{*}$ и $\beta$.
+Может оказаться более удобным другое представление матрицы плотности,
+введенное Р.Глаубером \cite{bQuantumOpticsAndRadioPhisicsLecture1966},
+называемое 
+диагональным представлением и зависящее от одного параметра. Оно имеет
+вид  
+\begin{equation}
+\hat{\rho} = \int
+P\left(\alpha\right)\left|\alpha\right>\left<\alpha\right| d^2 \alpha,
+\label{eqCh1_rhorepresent}
+\end{equation}
+где  $P\left(\alpha\right)$ -  действительная функция,
+удовлетворяющая условию 
+\[
+\int
+P\left(\alpha\right) d^2 \alpha = 1.
+\]
+Кроме того, $P\left(\alpha\right)$ - вещественная функция комплексного
+аргумента. Это все следует из условий  $Sp\left(\hat{\rho}\right) = 1$
+и  $\hat{\rho} = \hat{\rho}^{+}$.
+  
+Такое разложение возможно из-за переполненности системы когерентных
+состояний. Если   $P\left(\alpha\right)$  положительная функция, ее
+можно интерпретировать 
+как распределение вероятностей. Это относится к некоторым наиболее
+интересным с практической точки зрения состояниям поля, например, к
+полностью хаотическому состоянию, но это не верно в общем
+случае. Иногда   $P\left(\alpha\right)$  может быть отрицательной в
+некоторой ограниченной области значений $\alpha$,  тогда ее нельзя интерпретировать как
+распределение вероятности.   $P\left(\alpha\right)$  может быть и обобщенной функцией
+(примером является $\delta$-функция). 
+
+Строгое обоснование возможности представления (\ref{eqCh1_rhorepresent})
+содержится в литературе \cite{bQuantumOpticsAndRadioPhisicsLecture1966},
+\cite{bKaluderSudershan1970}. 
+Обосновать возможность введения диагонального представления
+(\ref{eqCh1_rhorepresent}) можно следующим образом. Положим что
+статистический оператор $\hat{\rho}$, как и любой другой оператор,
+действующий на электромагнитное поле, может быть представлен в виде
+функции операторов рождения и уничтожения:
+\[
+\hat{\rho} = \bar{f}\left(\hat{a}^{+}, \hat{a}\right).
+\]
+Тогда оператор может быть представлен в упорядоченном виде: нормальном
+и антинормальном. В первом случае операторы рождения располагаются
+справа от операторов уничтожения, а во втором случае наоборот - слева.
+Например, 
+\[
+\left(\hat{a}^{+}\right)^m\left(\hat{a}\right)^n
+\]
+нормально упорядоченный оператор. В антинормально упорядоченном
+операторе порядок обратный: операторы рождения стоят справа от
+оператора уничтожения. Например, оператор 
+\[
+\left(\hat{a}\right)^n\left(\hat{a}^{+}\right)^m
+\]
+антинормально упорядочен. Упорядочение можно осуществить многократным
+применением коммутационного соотношения. Например, оператор  
+\[
+\left(\hat{a}^{+}\hat{a}\right)^2 =
+\hat{a}^{+}\hat{a}\hat{a}^{+}\hat{a} 
+\]
+не является ни нормальным, ни антинормальным. Используя условие 
+$\left[\hat{a},\hat{a}^{+}\right] = 1$,
+приведем его к нормальному виду: 
+\[
+\left(\hat{a}^{+}\hat{a}\right)^2 = \hat{a}^{+}\left(1 +
+\hat{a}^{+}\hat{a}\right)\hat{a} = 
+\hat{a}^{+}\hat{a} + \left(\hat{a}^{+}\right)^2\left(\hat{a}\right)^2
+\]
+можно этот оператор представить в антинормальном виде:
+\begin{eqnarray}
+\left(\hat{a}^{+}\hat{a}\right)^2 = 
+\left(\hat{a}\hat{a}^{+} - 1\right) \left(\hat{a}\hat{a}^{+} -
+1\right) = \hat{a}\hat{a}^{+} \hat{a}\hat{a}^{+} - 2
+\hat{a}\hat{a}^{+} + 1 =
+\nonumber \\
+= \hat{a}\left(\hat{a}\hat{a}^{+} - 1\right)\hat{a}^{+} -
+2\hat{a}\hat{a}^{+} + 1 = 
+\left(\hat{a}\right)^2\left(\hat{a}^{+}\right)^2 - 3
+\hat{a}\hat{a}^{+} + 1.
+\nonumber
+\end{eqnarray}
+
+Существуют и другие, более эффективные методы упорядочения операторов
+\cite{bLuisell1972}.
+
+
+Представим оператор плотности в
+антинормальном виде (рассматриваем одномодовый случай): 
+\begin{equation}
+\hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{+}\right) = 
+\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\left(\hat{a}^{+}\right)^m
+\end{equation}
+Воспользуемся теперь разложением (\ref{eqCh1_full4coh}) для единичного
+оператора $\hat{I}$
+\[
+\hat{I} = \frac{1}{\pi}\int \left|\alpha\right>\left<\alpha\right| d^2 \alpha
+\]
+в результате получим
+\begin{eqnarray}
+\hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{+}\right) = 
+\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\hat{I}\left(\hat{a}^{+}\right)^m
+= 
+\nonumber \\
+= \frac{1}{\pi}\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\int d^2 \alpha
+\left(\hat{a}\right)^n
+\left|\alpha\right>\left<\alpha\right|
+\left(\hat{a}^{+}\right)^m = 
+\nonumber \\
+= \frac{1}{\pi}\sum_{(n)}\sum_{(m)}\int d^2 \alpha
+C^{\left(a\right)}_{nm}
+\alpha^n
+\alpha^{*m}
+\left|\alpha\right>\left<\alpha\right|.
+\end{eqnarray}
+Обозначив теперь 
+\[
+P\left(\alpha, \alpha^{*}\right) = \frac{1}{\pi}\sum_{(n)}\sum_{(m)}
+C^{\left(a\right)}_{nm}
+\alpha^n
+\alpha^{*m}
+\]
+получим что $\hat{\rho}$ можно представить в виде
+\begin{equation}
+\hat{\rho} = \int d^2 \alpha P\left(\alpha, \alpha^{*}\right) 
+\left|\alpha\right>\left<\alpha\right|.
+\label{eqCh1_Rho_in_alpha}
+\end{equation}
+
+Среднее значение оператора при использовании
+диагонального представления 
+\begin{eqnarray}
+\left<\hat{O}\right> = Sp \left(\hat{\rho}\hat{O}\right) =
+\nonumber \\
+= \sum_{(n)}\left<n\right|
+\int d^2 \alpha P\left(\alpha, \alpha^{*}\right) 
+\left|\alpha\right>\left<\alpha\right|
+\hat{O}\left|n\right> =
+\nonumber \\
+= \sum_{(n)} \int d^2 \alpha P\left(\alpha, \alpha^{*}\right)
+\left<\alpha\right|\hat{O}\left|n\right>
+\left<n\right|\left.\alpha\right> = 
+\nonumber \\
+=  
+\int d^2 \alpha P\left(\alpha, \alpha^{*}\right)
+\left<\alpha\right|\hat{O}\left|\alpha\right>,
+\label{eqCh1_middleO}
+\end{eqnarray}
+т. к. $\sum_{(n)}\left|n\right>\left<n\right| = \hat{I}$. 
+
+Выражение $\left<\alpha\right|\hat{O}\left|\alpha\right>$ легко
+вычисляется, если оператор $\hat{O}$ представлен в нормальном виде:
+\begin{equation}
+\hat{O} = \hat{O}^{(n)} = \sum_{(n)}\sum_{(m)} d_{nm}
+\left(\hat{a}^{+}\right)^n
+\left(\hat{a}\right)^m,
+\label{eqCh1_normalO}
+\end{equation}
+тогда
+\begin{equation}
+\left<\alpha\right|\hat{O}\left|\alpha\right> = 
+\sum_{(n)}\sum_{(m)} d_{nm}
+\left<\alpha\right|
+\left(\hat{a}^{+}\right)^n
+\left(\hat{a}\right)^m
+\left|\alpha\right> = 
+\sum_{(n)}\sum_{(m)} d_{nm}
+\alpha^{*n}\alpha^{m}.
+\end{equation}
+Отсюда следует простое правило: чтобы получить необходимый матричный
+элемент, нужно в операторе, представленном в нормально упорядоченном
+виде, произвести замену $\hat{a}\rightarrow\alpha$, 
+$\hat{a}^{+}\rightarrow\alpha^{*}$.
+
+В качестве примера покажем, что для теплового возбуждения моды 
+\begin{equation}
+P\left(\alpha, \alpha^{*}\right) = \frac{1}{\pi \bar{n}}
+e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
+\label{eqCh1_123a}
+\end{equation}
+и, следовательно
+\[
+\hat{\rho} = \frac{1}{\pi \bar{n}}
+\int d^2 \alpha 
+e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
+\left|\alpha\right>
+\left<\alpha\right|.
+\]
+Найдем теперь матричные элементы оператора $\hat{\rho}$ в
+представлении чисел заполнения (числа фотонов)
+\begin{eqnarray}
+\left<n\right|
+\hat{\rho}
+\left|n\right> = 
+\frac{1}{\pi \bar{n}}
+\int d^2 \alpha 
+e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
+\left<n\right|\left.\alpha\right>
+\left<\alpha\right|
+\left.n\right> = 
+\nonumber \\
+= 
+\frac{1}{\pi \bar{n}}
+\int d^2 \alpha 
+e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
+\frac{\left|\alpha\right|^{2n}}{n!} 
+e^{- \left|\alpha\right|^2} 
+\nonumber 
+\end{eqnarray}
+Получившийся интеграл можно вычислить записав в полярной системе координат:
+\[
+\alpha = r e^{i \varphi}, \quad 
+d^2 \alpha = r d r d \varphi , \quad 
+\mbox{т. е.} 
+\left|\alpha\right| = r, \quad arg\,\alpha = \varphi,
+\]
+откуда
+\begin{eqnarray}
+\frac{1}{\pi \bar{n}}
+\int d^2 \alpha 
+e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
+\frac{\left|\alpha\right|^{2n}}{n!} 
+e^{- \left|\alpha\right|^2} =
+\nonumber \\
+=
+\frac{1}{\pi \bar{n}}
+\int_0^{2 \pi} d \varphi 
+\int_0^{\infty}
+r dr \frac{exp \left(- r^2\frac{\bar{n} + 1}{\bar{n}}\right)}{n!} r^{2n}= 
+\nonumber \\
+= 
+\frac{1}{\bar{n}}
+\int_0^{\infty}
+2 r dr \frac{exp \left(- r^2\frac{\bar{n} + 1}{\bar{n}}\right)}{n!}  r^{2n} = 
+\nonumber \\
+= 
+\frac{1}{\bar{n}}
+\int_0^{\infty}
+\frac{e^{-x}}{n!}\frac{\bar{n}^{n + 1}}
+{\left(\bar{n} + 1\right)^{n + 1}}x^n dx = 
+\nonumber \\
+=
+\frac{\bar{n}^{n}}
+{\left(\bar{n} + 1\right)^{n + 1}}
+\frac{1}{n!}
+\int_0^{\infty}
+e^{-x}x^n dx = 
+\frac{\bar{n}^{n}}
+{\left(\bar{n} + 1\right)^{n + 1}},
+\label{eqCh1_matrelemRho}
+\end{eqnarray}
+где сделана замена $x = r^2\frac{\bar{n} + 1}{\bar{n}}$.
+
+Таким образом, мы получили известный нам матричный элемент
+статистического оператора хаотического поля в представлении чисел
+заполнения. Отсюда следует, что выражение (\ref{eqCh1_123a})
+действительно является статистическим оператором хаотического поля в
+преставлении когерентных состояний. Следовательно для теплового
+возбуждения фотонов в моду имеем
+\begin{equation}
+P\left(\alpha\right) = \frac{1}{\pi \bar{n}}
+e^{-\frac{\left|\alpha\right|^2}{\bar{n}}},
+\mbox{где }
+\bar{n} = \frac{1}{e^{\hbar \omega \beta} - 1}
+\label{eqCh1_task4}
+\end{equation}
+  
+Обобщение полученных выражений на многомодовый случай очевидно: 
+\begin{equation}
+\left<\hat{O}\right> = \idotsint\limits_{\left\{\alpha_k\right\}}
+P^{(a)}
+\left(
+\left\{\alpha_k\right\}
+\right)
+O^{(n)}
+\left(
+\left\{\alpha_k\right\}
+\right)
+\prod_k d^2 \alpha_k,
+\label{eqCh1_113}
+\end{equation}
+\[
+P^{(a)}
+\left(
+\left\{\alpha_k\right\}
+\right)
+=
+\prod_k \frac{1}{\pi \bar{n}_k}
+e^{-\frac{\left|\alpha_k\right|^2}{\bar{n}_k}}. 
+\]

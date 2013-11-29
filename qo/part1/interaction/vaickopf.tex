@@ -1,0 +1,198 @@
+%% -*- coding:utf-8 -*- 
+\section{Спонтанное излучение. Приближение Вайскопфа-Вигнера.}
+Выше нами получена формула для скорости спонтанного излучения,
+справедливая для достаточно малых времен. В то же время решая,
+например, задачу о времени жизни возбужденного атома, нельзя
+ограничиваться малыми временами. В этом случае применяется уже другой
+метод, называемый приближением Вайскопфа-Вигнера.
+
+Рассмотрим этот метод.Мы выяснили, что атом переходит из возбужденного
+состояния в основное из-за взаимодействия со всеми модами
+пространства, даже если они не возбуждены и находятся в вакуумном
+состоянии. Гамильтониан взаимодействия в этом случае имеет вид
+\begin{equation}
+\hat{V}_I = \hbar \sum_{k} g_k \hat{\sigma}^{+}\hat{a}_k e^{i\left(
+\omega_{ab} - \omega_k
+\right)t} + \mbox{э. с.},
+\label{eqCh2VaiskopfV}
+\end{equation}
+где $g_k$ константа взаимодействия с $k$-ой модой. От ранее
+использованного нами гамильтониана (\ref{eqCh2_task22})
+(\ref{eqCh2VaiskopfV}) отличается суммированием по всем модам
+пространства квантования. 
+
+Допустим, что в начальный момент времени $t=0$ атом возбужден, а в
+поле отсутствуют фотоны. Тогда начальное состояние имеет вид
+\begin{equation}
+\left|\psi\left(0\right)\right> =
+ \left|a, \left\{0\right\}\right>,
+\nonumber
+\end{equation}
+то есть атом возбужден, а все моды находятся в вакуумном состоянии. В
+последующие времена из-за взаимодействия атом-поле, состояние системы
+будет иметь вид
+\begin{equation}
+\left|\psi\left(t\right)\right> =
+\sum_{k} C_{bk}\left(t\right) \left|b, 1_k\right>
++
+C_{a}\left(t\right) \left|a, \left\{0\right\}\right>,
+\label{eqCh2Vaiskopf3}
+\end{equation}
+где $\left|b, 1_k\right>$ состояние, когда атом находится в основном
+состоянии, а в $k$-ой моде возбужден один фотон.
+
+Уравнение Шредингера в представлении взаимодействия имеет вид
+\begin{equation}
+\frac{d}{dt} \left|\psi\left(t\right)\right> =
+- \frac{i}{\hbar} \hat{V}_I \left|\psi\left(t\right)\right>.
+\label{eqCh2Vaiskopf4}
+\end{equation}
+Подставляя сюда (\ref{eqCh2Vaiskopf3}) и умножая уравнение
+(\ref{eqCh2Vaiskopf4}) последовательно на
+$\left<a, \left\{0\right\}\right|$ и $\left<b, 1_k\right|$ получаем
+систему уравнений для амплитуд вероятностей 
+$C_{a}\left(t\right)$ и $C_{bk}\left(t\right)$.
+\begin{eqnarray}
+\dot{C}_{a}\left(t\right) = - i \sum_{k} g_k e^{i \left(\omega_{ab} - 
+  \omega_k\right)t} C_{bk}\left(t\right),
+\nonumber \\
+\dot{C}_{bk}\left(t\right) = - i g_k e^{- i \left(\omega_{ab} -
+  \omega_k\right)t} C_{a}\left(t\right).
+\label{eqCh2Vaiskopf5}
+\end{eqnarray}
+Проинтегрируем второе уравнение (\ref{eqCh2Vaiskopf5})по времени от $0$ до
+$t$. 
+\begin{equation}
+C_{bk}\left(t\right) = - i g_k \int_0^{t} e^{- i \left(\omega_{ab} -
+  \omega_k\right)t'} C_{a}\left(t'\right) dt'.
+\label{eqCh2Vaiskopf6}
+\end{equation}
+Подставив (\ref{eqCh2Vaiskopf6}) в первое уравнение системы
+(\ref{eqCh2Vaiskopf5}), получим следующее интегро-дифференциальное
+уравнение
+\begin{equation}
+\dot{C}_{a}\left(t\right) = - \sum_{k} g_k^2 
+\int_0^t
+e^{i \left(\omega_{ab} - \omega_k\right)\left(t - t'\right)}  
+C_{a}\left(t'\right) dt'.
+\label{eqCh2Vaiskopf7}
+\end{equation}
+
+Сделаем теперь ряд упрощений (приближение Вайскопфа-Вигнера). Будем
+считать распределение мод квазинепрерывным и заменим суммирование по
+$k$ интегрированием, используя соотношение
+(\ref{eqCh1_modenumber_1pre}):
+\begin{equation}
+d N = 2 \left(\frac{L}{2 \pi} \right)^3 k^2 d k d \Omega = 
+2 \frac{V}{\left(2 \pi\right)^3}  k^2 d k d \Omega
+\nonumber
+\end{equation}
+Тогда получим (\ref{eqCh1_modenumber_kvazy_contig})
+\begin{eqnarray}
+\sum_{k} g_k^2 
+\int_0^t
+e^{i \left(\omega_{ab} - \omega_k\right)\left(t - t'\right)}  
+C_{a}\left(t'\right) dt' = 
+\nonumber \\
+= 2 \frac{V}{\left(2 \pi\right)^3} \int_{4\pi}d \Omega \int_0^{\infty}
+g_k^2 k^2 dk  \int_0^t dt'
+e^{i \left(\omega_{ab} - \omega_k\right)\left(t - t'\right)}  
+C_{a}\left(t'\right).
+\label{eqCh2Vaiskopf8pre}
+\end{eqnarray}
+В (\ref{eqCh2Vaiskopf8pre}) 
+\begin{equation}
+g_k^2 = \frac{\omega_k\left|p\right|^2 sin^2 \theta}{4 \hbar
+  \varepsilon_0 V},
+\label{eqCh2VaiskopfGk}
+\end{equation}
+$\theta$ - угол между направлениями $\vec{k}$ и $\vec{p}$.
+Выражение (\ref{eqCh2VaiskopfGk}) получено с учетом усреднения по
+поляризациям (\ref{eqCh2_PolyarMedian}).
+
+Переходя в (\ref{eqCh2Vaiskopf8pre}) от $k$ к $\omega$ с помощью соотношений 
+\begin{equation}
+k = \frac{\omega_k}{c}, \quad k^2 dk = \frac{\omega_k^2 d \omega_k}{c^3}
+\nonumber
+\end{equation}
+и обозначая для удобства \(\omega_k = \omega\),
+получим
+\begin{equation}
+\dot{C}_{a}\left(t\right) = - 
+2 \frac{V}{\left(2 \pi c\right)^3} \int_{4\pi}d \Omega \int_0^{\infty}
+g^2\left(\omega\right) \omega^2 d\omega  \int_0^t dt'
+e^{i \left(\omega_{ab} - \omega\right)\left(t - t'\right)}  
+C_{a}\left(t'\right).
+\label{eqCh2Vaiskopf8}
+\end{equation}
+
+Для приближенного вычисления интеграла в (\ref{eqCh2Vaiskopf8})
+дополнительно используем ряд упрощающих допущений.
+Проинтегрируем (\ref{eqCh2Vaiskopf8}) сперва по частоте (т. е. меняем
+порядок интегрирования, считая что это возможно). Из структуры 
+(\ref{eqCh2Vaiskopf8}) видно, что главный вклад в интеграл по времени
+дает область частот $\omega \approx \omega_{ab}$. По этой причине
+можно принять 
+\[
+\omega^2 g^2\left(\omega\right) \approx 
+\omega_{ab}^2 g^2\left(\omega_{ab}\right).
+\]
+В этом приближении интеграл по частоте будет иметь вид:
+\begin{eqnarray}
+\int_0^{\infty}d \omega e^{i\left(\omega_{ab} - \omega\right)\left(t -
+  t'\right)}  = \left|\nu = \omega - \omega_{ab}\right| =
+\int_{- \omega_{ab}}^{\infty}d \nu e^{-i \nu\left(t - t'\right)} \approx
+\nonumber \\
+\approx \int_{- \infty}^{\infty} d \nu e^{-i \nu\left(t - t'\right)} = 
+2 \pi \delta\left(t - t'\right).
+\label{eqCh2Vaiskopf9}
+\end{eqnarray}
+
+Подставляя (\ref{eqCh2Vaiskopf9}) в уравнение (\ref{eqCh2Vaiskopf8}) и
+интегрируя по времени, получаем
+\begin{equation}
+\dot{C}_{a}\left(t\right) = - 
+2 \frac{V}{\left(2 \pi c\right)^3} \int_{4\pi}d \Omega 
+g^2\left(\omega_{ab}\right) \omega_{ab}^2   
+2 \pi C_{a}\left(t\right) = - \frac{\Gamma}{2} C_{a}\left(t\right).
+\label{eqCh2Vaiskopf10}
+\end{equation}
+Подставив сюда выражение для $g_k^2$ (\ref{eqCh2VaiskopfGk}) и
+производя интегрирование по углам (по $d \Omega$), найдем выражение для
+коэффициента затухания $\Gamma$:
+\begin{equation}
+\Gamma = \frac{\omega_{ab}^3 \left|p\right|^2}{3 \pi c^2 \hbar}
+\sqrt{\frac{\mu_0}{\varepsilon_0}}. 
+\label{eqCh2Vaiskopf11}
+\end{equation}
+Заметим, что выражение (\ref{eqCh2Vaiskopf11}) совпадает с полученным
+ранее другим способом (\ref{eqCh2_Wspon_final}).
+
+Из (\ref{eqCh2Vaiskopf10}) следует, что $\Gamma$ характеризует
+скорость изменения вероятности $\left|C_{a}\right|^2$. Действительно
+из (\ref{eqCh2Vaiskopf10}) имеем:
+\begin{eqnarray}
+\dot{C}_{a}C_{a}^{*} = - \frac{\Gamma}{2}C_{a}C_{a}^{*},
+\nonumber \\
+\dot{C}_{a}^{*}C_{a} = - \frac{\Gamma}{2}C_{a}^{*}C_{a},
+\nonumber
+\end{eqnarray}
+откуда имеем
+\begin{equation}
+\frac{d C_{a}C_{a}^{*}}{dt} = -\Gamma \left(C_{a}C_{a}^{*}\right),
+\nonumber
+\end{equation}
+или иначе
+\begin{equation}
+\frac{d \left|C_{a}\right|^2}{dt} = -\Gamma \left|C_{a}\right|^2.
+\nonumber
+\end{equation}
+Решение имеет вид 
+\[
+\left|C_{a}\right|^2 = e^{- \Gamma t},
+\]
+если начальное значение $\left.\left|C_{a}\right|^2\right|_{t = 0} =
+1$, т. е. атом в начале был возбужден.
+
+
+

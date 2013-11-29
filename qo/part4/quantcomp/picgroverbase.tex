@@ -1,0 +1,76 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Fri Jan 04 22:39:29 MSK 2013
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="-1.67" x-max="65" y-min="0" y-max="45" auto-bounding="true">
+%<parallelogram p3="(25,7.14)"
+%	 p2="(25,35.71)"
+%	 p1="(11.67,35.71)"
+%	 />
+%<parallelogram p3="(51.67,7.14)"
+%	 p2="(51.67,35.71)"
+%	 p1="(38.33,35.71)"
+%	 />
+%<multicurve right-arrow="head"
+%	 points="(-1.67,21.43);(-1.67,21.43);(11.67,21.43);(11.67,21.43)"
+%	 />
+%<multicurve right-arrow="head"
+%	 points="(25,21.43);(25,21.43);(38.33,21.43);(38.33,21.43)"
+%	 />
+%<multicurve right-arrow="head"
+%	 points="(51.67,21.43);(51.67,21.43);(65,21.43);(65,21.43)"
+%	 />
+%<text anchor-point="(10,40)"
+%	 >
+%$\hat{U}_G$
+%</text>
+%<text anchor-point="(15,30)"
+%	 >
+%$\hat{U}_{x^{\ast}}$
+%</text>
+%<text anchor-point="(45,30)"
+%	 >
+%$\hat{U_s}$
+%</text>
+%<parallelogram p3="(55,45)"
+%	 p2="(55,0)"
+%	 p1="(5,0)"
+%	 />
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(65,45)(0,0)
+\linethickness{0.3mm}
+\put(11.67,35.71){\line(1,0){13.33}}
+\put(11.67,7.14){\line(0,1){28.57}}
+\put(25,7.14){\line(0,1){28.57}}
+\put(11.67,7.14){\line(1,0){13.33}}
+\linethickness{0.3mm}
+\put(38.33,35.71){\line(1,0){13.34}}
+\put(38.33,7.14){\line(0,1){28.57}}
+\put(51.67,7.14){\line(0,1){28.57}}
+\put(38.33,7.14){\line(1,0){13.34}}
+\linethickness{0.3mm}
+\put(-1.67,21.43){\line(1,0){13.34}}
+\put(11.67,21.43){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(25,21.43){\line(1,0){13.33}}
+\put(38.33,21.43){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(51.67,21.43){\line(1,0){13.33}}
+\put(65,21.43){\vector(1,0){0.12}}
+\put(10,40){\makebox(0,0)[cc]{$\hat{U}_G$}}
+
+\put(15,30){\makebox(0,0)[cc]{$\hat{U}_{x^{\ast}}$}}
+
+\put(45,30){\makebox(0,0)[cc]{$\hat{U}_s$}}
+
+\linethickness{0.3mm}
+\put(5,0){\line(1,0){50}}
+\put(5,0){\line(0,1){45}}
+\put(55,0){\line(0,1){45}}
+\put(5,45){\line(1,0){50}}
+\end{picture}

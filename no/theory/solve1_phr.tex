@@ -1,0 +1,420 @@
+\subsection{Решение системы уравнений, описывающей  процесс формирования поля
+пространственного заряда}
+
+%
+% Постановка задачи - рисунок
+%
+\input ./theory/fig_taskdef1_phr.tex
+В дальнейшем без ограничения общности будем предполагать что кристалл
+освещается двумя плоскими волнами(см. рис \ref{figTaskDef1_phr}):
+\[
+E\left(\overrightarrow r \right) = 
+E_1 e^{  i \overrightarrow k_1 \overrightarrow r }
++ E_2 e^{ i \overrightarrow k_2 \overrightarrow r }
+\]
+Как видно мы предполагаем что поляризация обоих плоских волн
+одинакова.
+
+Суммарная интенсивность падающего света: 
+\[
+I = \left| E \left( \overrightarrow r \right) \right|^{2} = 
+\left|
+E_1 e^{  i \overrightarrow k_1 \overrightarrow r }
++ E_2 e^{ i \overrightarrow k_2 \overrightarrow r }
+\right|^{2},
+\]
+т. е.
+\[
+I\left( \overrightarrow r \right) =
+I_0 
+\left(
+1+ 
+m \left(K \right) e^ { i \overrightarrow K \overrightarrow r} +
+m^{*} \left(K \right) e^ { - i \overrightarrow K \overrightarrow r}
+\right),  
+\]
+где через \( I_0 \) обозначено
+\[
+I_0 = \left| E_1 + E_2 \right|^{2} 
+\]
+и через \( m\left(K \right) \) обозначена глубина модуляции светового поля
+\[
+m\left(K \right) = \frac {E_{k_1} \, E_{k_2}^{*}} {I_0}, \qquad 
+\overrightarrow K = \overrightarrow k_1 - \overrightarrow k_2
+\]
+
+Далее представляется удобным использовать следующую комплексную форму
+записи электрического поля 
+\[
+E \left( \overrightarrow r \right) = 
+E_0 + E_{sc} \left( \overrightarrow r \right) = E_0 + 
+E_{sc}\left(K\right) e^{ i \overrightarrow K \overrightarrow r} +
+c.c.
+,     
+\] 
+а также других величин входящих в рассматриваемую систему уравнений
+\[
+n \left( \overrightarrow r \right) =  n_0 + 
+\check n\left(K\right) e^{ i \overrightarrow K \overrightarrow r} + c.c.
+,
+\]
+\[
+j \left( \overrightarrow r \right) =  j_0 + 
+\check j\left(K\right) e^{ i \overrightarrow K \overrightarrow r} + c.c.
+,
+\]
+\[
+N_D^{+}\left( \overrightarrow r \right) =  {N_D^{+}}_0 + 
+\check N_D^{+}\left(K\right) 
+e^{ i \overrightarrow K \overrightarrow r} +
+c.c.
+, 
+\]
+\[
+N_D\left( \overrightarrow r \right) =  {N_D}_0 + 
+\check N_D\left(K\right) 
+e^{ i \overrightarrow K \overrightarrow r} +
+c.c.
+, 
+\]
+\[
+N_A\left( \overrightarrow r \right) =  {N_A}_0 + 
+\check N_A\left(K\right) 
+e^{ i \overrightarrow K \overrightarrow r} +
+c.c. 
+\]
+В дальнейшем будем полагать \( \left|m\left(K\right)\right| \ll 1\), при этом
+%как показано в \cite{bPetrov} 
+\(
+\left|\check n \left(K\right) \right|  \ll 
+\left| n_0\right|
+\)
+и
+\(
+\left| \check N_D^{+} \left(K\right) \right| \ll  
+\left| {N_D^{+}}_0\right|
+\).
+Данное предположение справедливо, в частности, когда перекачка энергии
+между исходными плоскими волнами не слишком велика.
+
+\subsubsection{Решение для нулевого порядка малости}
+
+Прежде всего получим выражение для \( n_0 \). Для этого запишем 
+(\ref {eqND_phm_1_phr})
+в случае нулевого порядка : 
+\[
+\frac{\partial {N_D^{+}}_0}{\partial t}  =
+s I_0 \left( {N_D}_0 - {N_D^{+}}_0 \right) - \gamma_R n_0 {N_D^{+}}_0.
+\]
+Уравнение (\ref {eqN_phm_1_phr}) запишем как
+\[
+\frac{\partial n_0}{\partial t}  = \frac{\partial {N_D^{+}}_0 }{\partial t}.
+\]
+Из последнего соотношения исключен член \( \frac {\partial j_0}{\partial x}\)
+в силу того что \( j_0 = const_x\).
+
+Таким образом
+\[
+\frac{\partial n_0}{\partial t} =
+s I_0 \left( {N_D}_0 - {N_D^{+}}_0 \right) - \gamma_R n_0 {N_D^{+}}_0.
+\]
+Для упрощения дальнейшего рассмотрения оказывается удобным сделать
+дополнительное предположение о квазистационарном распределении электронов в
+зоне проводимости, отвечающем распределению по образцу
+электрического поля
+\( 
+E \left( \overrightarrow r \right)
+\)
+в рассматриваемый момент времени, при котором написанное
+выше соотношение переходит в   
+\[
+s I_0 \left( {N_D}_0 - {N_D^{+}}_0 \right) = \gamma_R n_0 {N_D^{+}}_0.
+\]
+Возможность такого предположения связана с тем, что среднее время жизни
+электрона в зоне проводимости фоторефрактивного кристалла 
+\(
+\tau \approx 10^{-6} - 10^{-9} 
+\)
+с., поэтому среднее время установления стационарного распределения 
+\( 
+n \left( \overrightarrow r \right)
+\),
+для заданных 
+\( 
+I \left( \overrightarrow r \right)
+\)
+и
+\( 
+E \left( \overrightarrow r \right)
+\)
+оказывается, как правило, намного меньшим времени записи голограммы, т. е.
+характерного времени заметного изменения 
+\( 
+E_{sc} \left( \overrightarrow r \right)
+\)
+
+Таким образом
+\begin{equation}
+n_0= \frac{s I_0 \left( {N_D}_0 - {N_D^{+}}_0 \right)}{\gamma_R  {N_D^{+}}_0}.
+\label{eqN0_1_phr}
+\end{equation}
+Учитывая очевидное соотношение \(n_0= const_x\), имеем 
+\begin{equation}
+\label{eqSave_phr} 
+n_0 + {N_A}_0 -
+{N_D^{+}}_0 = 0,
+\end{equation}
+откуда 
+\[
+n_0= \frac{s I_0 \left( {N_D}_0 - n_0 - {N_A}_0 \right)}{\gamma_R  \left( n_0
++ {N_A}_0 \right)}. 
+\]
+Учитывая \cite{bGunter_phr}, где сделана оценка для 
+\( n_0 = 10^{9} - 10^{12}\) \( \mbox{см}^{-3} \). Вспомнив, что для кристаллов
+\( BSO \): \( N_D = 10^{19} \mbox{см}^{-3} \)  ,  \( N_A = 10^{16} \mbox{см}^{-3} \) имеем
+
+\begin{equation}
+\label{eqConditionll_phr}
+n_0 \ll {N_D}_0 - {N_A}_0,\qquad n_0 \ll {N_A}_0 
+\end{equation}
+несложно окончательно записать
+\begin{equation}
+\label{eqN0zero_phr} 
+n_0= \frac{s I_0 \left( {N_D}_0  - {N_A}_0  \right)}{\gamma_R  {N_A}_0}. 
+\end{equation}
+
+\subsubsection{Решение для первого порядка малости}
+
+%
+% Запись решеток в ФРК
+%
+\input ./theory/fig_first_phr.tex
+
+В дальнейшем предполагается получить выражение для \( E_{sc} \left( K
+\right)\), при этом будет предполагаться малость соответствующих величин
+\(
+\left|\check m \left(K\right) \right|  \ll 
+1
+\)
+,
+\(
+\left|\check n \left(K\right) \right|  \ll 
+\left| n_0\right|
+\)
+,
+\(
+\left| \check N_D \left(K\right) \right| \ll  
+\left| {N_D}_0\right|
+\)
+и
+\(
+\left| \check N_D^{+} \left(K\right) \right| \ll  
+\left| {N_D^{+}}_0\right|
+\)
+, так что в уравнениях будем пренебрегать членами квадратичными по малому
+параметру \( m \) ( \(\check n\), 
+\(\check N_D \), \( \check {N_D}^{+}\) ).  
+Кроме того   в целях удобства будем считать, что вектор 
+\(\overrightarrow K \), соответствующий рассматриваемым плоским волнам,
+направлен вдоль оси \( OX \) (см. рис \ref{figFirst_phr}).
+
+Запишем уравнения для первого порядка малости. Уравнение (\ref
+{eqND_phm_1_phr}) запишется в этом случае в виде:   
+\[
+\frac{\partial \check N_D^{+}}{\partial t}  =
+s I_0 m \left( N_D - {N_D^{+}}_0 \right) -
+\gamma_R \check n {N_D^{+}}_0 -
+s I_0  \check N_D^{+}  + 
+s I_0  \check N_D  - 
+\gamma_R n_0 \check N_D^{+}  
+,
+\]
+Откуда с учетом (\ref{eqSave_phr})
+\[
+\frac{\partial \check N_D^{+}}{\partial t}  =
+s I_0 m \left( N_D - n_0 - {N_A}_0 \right) + s I_0  \check N_D  -  \gamma_R
+\check n \left( n_0 + {N_A}_0 \right) - s I_0  \check N_D^{+}  - \gamma_R n_0
+\check N_D^{+}  , 
+\]
+далее вспомнив про (\ref{eqConditionll_phr}) окончательно получаем
+\begin{equation}
+\label{eqND_1_phr}
+\frac{\partial \check N_D^{+}}{\partial t}  =
+s I_0 m \left( N_D  - {N_A}_0 \right) + s I_0  \check N_D  - \gamma_R \check n
+{N_A}_0 - \left( s I_0  + \gamma_R n_0 \right) \check N_D^{+} .
+\end{equation}
+
+Уравнение (\ref {eqN_phm_1_phr}) перепишем в виде
+\begin{equation}
+\label{eqN_1_phr}
+\frac{\partial\check n}{\partial t}  = \frac{\partial \check N_D^{+}}
+{\partial t} +  i K \frac{1}{e} \check j. 
+\end{equation}
+Уравнение (\ref {eqJ_phm_1_phr}) в виде
+\begin{equation}
+\label{eqJ_1_phr}
+\check j = e \mu n_0 E_{sc} + e \mu \check n E_0 + i K e D \check n. 
+\end{equation}
+В дальнейшем имеет смысл рассмотреть ситуацию при которой до момента времени \(t=0\) кристалл
+не освещался, так что
+\[
+\left. I \right|_{t<0}  = 0,
+\]
+откуда с учетом (\ref{zero_cond_phr}) и , очевидного в данной ситуации соотношения,
+\[
+\left.\check n \right|_{t<0}  = 0
+\]
+имеем
+\[
+\left. \check n + \check N_A -\check N_D^{+} \right|_{t<0} = 0.
+\]
+
+Перепишем уравнение (\ref {eqPuasson_phm_1_phr}) в виде
+\begin{equation}
+\label{eqEsc_1_phr}
+i K E_{sc} =  - \frac{4 \pi e} {\varepsilon} \left( \check n - \check N_D^{+}
+\right),  
+\end{equation}
+или с учетом (\ref{eqN_1_phr} ) в виде
+\begin{equation}
+\label{eqEsc_1_diff_phr}
+\frac {\partial E_{sc}} {\partial t} = - \frac{4 \pi} {e \varepsilon} \check
+j.   
+\end{equation}
+Концентрацию акцепторных примесей \( \check N_A \) в (\ref{eqEsc_1_diff_phr})
+можно учесть с помощью начального условия
+\[
+\left. E_{sc} \right|_{t=0} = 0.
+\]
+
+Вводя следующие обозначения
+\[
+\tau_R = \frac {1}{\gamma_R {N_A}_0}
+\]
+и
+\[
+\tau_I = \frac {1}{s I_0 + \gamma_R n_0 },
+\]
+запишем с учетом (\ref{eqN0zero_phr} ) выражение (\ref{eqND_1_phr} ) в виде
+\begin{equation}
+\label{eqND_1_1_phr}
+\frac{\partial \check N_D^{+}}{\partial t}  =
+\frac{\left(m + m_0\right) n_0}{\tau_R} -  \frac{\check n}{\tau_R}  -
+\frac{ \check N_D^{+}}{\tau_I} ,
+\end{equation}
+где
+\[
+m_0=\frac{ \check N_D }{{N_D}_0 - {N_A}_0}.
+\]
+
+Далее из (\ref{eqEsc_1_phr} ) несложно получить
+\[
+\check N_D^{+} = i K \frac {\varepsilon}{4 \pi e} E_{sc} + \check n
+\]
+и, обозначая 
+\begin{equation}
+E_q= \frac{4 \pi e {N_A}_0}{\varepsilon K \left(1 + \frac{{N_A}_0}{{N_D}_0 -
+{N_A}_0}\right)},
+\label{eqE_q_1_1_phr} 
+\end{equation}
+окончательно получим из (\ref{eqND_1_1_phr} )
+\begin{equation}
+\label{eqND_1_2_phr}
+\frac{\partial \check N_D^{+}}{\partial t}  =
+\frac{\left(m + m_0 \right) n_0}{\tau_R} -  \frac{\check n}{\tau_R}  -
+\frac{ \check n}{\tau_I} - i \frac {n_0}{\tau_R} \frac {E_{sc}}{E_q},
+\end{equation}
+
+Подставив (\ref{eqND_1_2_phr} ) и (\ref{eqJ_1_phr} ) в (\ref{eqN_1_phr} ),
+можно получить уравнение для
+\( \check n\)
+\[
+\frac{\partial\check n}{\partial t}  =
+\frac{\left(m + m_0 \right)n_0}{\tau_R} 
+-  \frac{\check n}{\tau_R}  -  \frac{ \check n}{\tau_I} - 
+i \frac {n_0}{\tau_R} \frac {E_{sc}}{E_q} +
+i \frac {n_0}{\tau_E} \frac {E_{sc}}{E_0} + i \frac {\check n}{\tau_E}
+- \frac {\check n}{\tau_D},   
+\]
+где введены следующие обозначения
+\begin{eqnarray}
+\label{eqTauED_phr}
+\tau_E = \frac {1}{K \mu E_0}, \nonumber \\
+\tau_D = \frac {1}{K^{2} D}.
+\end{eqnarray}
+Снова учитывая предположение о квазистационарности распределения свободных
+носителей заряда в зоне проводимости, т. е. предполагая что 
+\( \frac{\partial\check n}{\partial t} = 0 \)
+имеем для \( \check n\)
+\begin{equation}
+\label{eqNtemp_phr}
+\check n = \frac{\tau}{\tau_R} n_0  \left( m + m_0 + i E_{sc}
+\left( \frac{1}{E_m} - \frac{1}{E_q} \right)\right), 
+\end{equation}
+где введены следующие обозначения
+\[
+\frac{1}{\tau} = \frac{1}{\tau_R} + \frac{1}{\tau_I} + \frac{1}{\tau_D} - i
+\frac{1}{\tau_E},  
+\]
+и
+\begin{equation}
+\label{eqEm_1_phr}
+E_m = \frac{\gamma_R {N_A}_0}{K \mu}.
+\end{equation}
+
+Подставим теперь (\ref{eqJ_1_phr}) в (\ref{eqEsc_1_diff_phr})
+\[
+\frac {\partial E_{sc}} {\partial t} = - \frac{4 \pi \mu n_0} { \varepsilon}
+\left( E_{sc} + \frac{\check n}{n_0} E_0 + i \frac{\check n}{n_0} E_D \right),
+\]
+где обозначено
+\begin{equation}
+\label{eqED_phr}
+E_D = \frac {K D}{\mu}.
+\end{equation}
+Записав
+\begin{equation}
+\label{eqTau_m_1_phr}
+\frac{1}{\tau_m} = \frac{4 \pi \mu n_0} { \varepsilon}
+\end{equation}
+и обозначив
+\begin{equation}
+\label{eqTau_ef_1_phr}
+\tau_{eff} = \tau_m \frac{\tau_R}{\tau},
+\end{equation}
+с учетом (\ref{eqNtemp_phr}) окончательно имеем
+\begin{eqnarray}
+\label{eqEnd_1_phr}
+\tau_{eff} \frac {\partial E_{sc}} {\partial t} =
+- \left(m + m_0\right) \left( E_0 + i E_D\right) 
+- \nonumber \\ 
+- E_{sc} 
+\left( 1+ \left( E_0 + i E_D\right) 
+\left( \frac{1}{E_m} - \frac{1}{E_q} \right)
+\right).
+\end{eqnarray}
+
+Очень часто рассматривают задачу, в которой внешние поля 
+\(E_0\) и \(E_D\) малы, так что
+\[
+E_0 \ll E_m, E_q
+\] 
+и
+\[
+E_D \ll E_m, E_q
+\] 
+
+Для этого случая, 
+\begin{eqnarray}
+\label{eqEnd_1_add_phr}
+\tau_{eff} \frac {\partial E_{sc}} {\partial t} =
+- \left(m + m_0\right) \left( E_0 + i E_D\right) - E_{sc}.
+\end{eqnarray}
+
+На основании данных таблицы \ref{tblProper_phr} можно подсчитать параметры, 
+которые входят в соотношение \ref{eqEnd_1_phr}. Результаты представлены в
+таблице \ref{tblParam_1_phr}.
+
+\input ./theory/tblParam_1_phr.tex
+
+\input ./theory/station_phr.tex

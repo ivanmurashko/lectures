@@ -1,0 +1,339 @@
+%% -*- coding:utf-8 -*- 
+\section{Уравнение движения статистического оператора поля моды в
+  представлении когерентных состояний}
+В квантовой оптике и квантовой электронике часто удобно пользоваться
+когерентными состояниями $\left|\alpha\right>$.  В этом случае
+статистический оператор может быть записан в диагональном
+представлении (\ref{eqCh1_rhorepresent})  
+\begin{equation}
+\hat{\rho}\left(t\right) = \int
+P\left(\alpha, t\right)\left|\alpha\right>\left<\alpha\right| d^2 \alpha,
+\label{eqCh2_65}
+\end{equation}
+Подставляя это выражение в уравнение движения статистического
+оператора (\ref{eqCh2_rho_final2}, \ref{eqCh2_64}), получим: 
+\begin{eqnarray}
+\int \dot{P}\left(\alpha, t\right)\left|\alpha\right>\left<\alpha\right|
+d^2 \alpha  = 
+\nonumber \\
+= -\frac{1}{2}\int P\left(\alpha, t\right)\left[R_a
+\left(\hat{a}\hat{a}^{+}\left|\alpha\right>\left<\alpha\right|-\hat{a}^{+}\left|\alpha\right>\left<\alpha\right|\hat{a}\right)
+\right. +
+\nonumber \\
++
+\left.
+R_b
+\left(\hat{a}^{+}\hat{a}\left|\alpha\right>\left<\alpha\right|-\hat{a}\left|\alpha\right>\left<\alpha\right|\hat{a}^{+}\right)
+\right]d^2 \alpha +\mbox{э.с.}
+\label{eqCh2_66}
+\end{eqnarray}
+
+Справедливы следующие равенства
+\begin{eqnarray}
+\hat{a}^{+}\left|\alpha\right>\left<\alpha\right| = 
+\left(\frac{\partial}{\partial \alpha} +
+\alpha^{*}\right)\left|\alpha\right>\left<\alpha\right|, 
+\nonumber \\
+\left|\alpha\right>\left<\alpha\right|\hat{a} = 
+\left(\frac{\partial}{\partial \alpha^{*}} +
+\alpha\right)\left|\alpha\right>\left<\alpha\right|, 
+\label{eqCh2_67}
+\end{eqnarray}
+
+Эти равенства легко доказываются, если воспользоваться одной из форм
+определения когерентного состояния
+\[
+\left|\alpha\right> = e^{\alpha \hat{a}^{+} -
+  \frac{1}{2}\alpha\alpha^{*}} \left|0\right>.
+\]
+Отсюда имеем 
+\[
+\left|\alpha\right>\left<\alpha\right| = e^{\alpha \hat{a}^{+} -
+  \frac{1}{2}\alpha\alpha^{*}} \left|0\right>
+\left<0\right|e^{\alpha^{*} \hat{a} -
+  \frac{1}{2}\alpha^{*}\alpha}.
+\]
+Дифференцируя это выражение по $\alpha$,  получим:
+\begin{eqnarray}
+\frac{\partial}{\partial \alpha}\left|\alpha\right>\left<\alpha\right|
+= \left(\hat{a}^{+} -
+\alpha^{*}\right) e^{\alpha \hat{a}^{+} -
+  \frac{1}{2}\alpha\alpha^{*}} \left|0\right>
+\left<0\right|e^{\alpha^{*} \hat{a} -
+  \frac{1}{2}\alpha^{*}\alpha} = 
+\nonumber \\
+= \left(\hat{a}^{+} -
+\alpha^{*}\right)\left|\alpha\right>\left<\alpha\right| 
+\nonumber
+\end{eqnarray}
+следовательно,
+\begin{equation}
+\hat{a}^{+}\left|\alpha\right>\left<\alpha\right| = 
+\left(\frac{\partial}{\partial \alpha} +
+\alpha^{*}\right)\left|\alpha\right>\left<\alpha\right|.
+\label{eqCh2_68}
+\end{equation}
+Таким же образом показывается справедливость второго равенства
+\begin{eqnarray}
+\frac{\partial}{\partial \alpha^{*}}\left|\alpha\right>\left<\alpha\right|
+=  e^{\alpha \hat{a}^{+} -
+  \frac{1}{2}\alpha\alpha^{*}} \left|0\right>
+\left<0\right|e^{\alpha^{*} \hat{a} -
+  \frac{1}{2}\alpha^{*}\alpha} 
+\left(\hat{a} -
+\alpha\right). 
+\nonumber
+\end{eqnarray}
+Следовательно,
+\begin{equation}
+\left|\alpha\right>\left<\alpha\right|\hat{a} = 
+\left(\frac{\partial}{\partial \alpha^{*}} +
+\alpha\right)\left|\alpha\right>\left<\alpha\right|, 
+\label{eqCh2_68a}
+\end{equation}
+
+Используя (\ref{eqCh2_67}) и известные соотношения для операторов рождения и
+уничтожения  $\hat{a}\left|\alpha\right> = \alpha\left|\alpha\right>$,
+$\left<\alpha\right|\hat{a}^{+} = \alpha^{*}\left<\alpha\right|$,
+приведем уравнение (\ref{eqCh2_66}) к виду:   
+\begin{eqnarray}
+\int \dot{P}\left(\alpha,
+t\right)\left|\alpha\right>\left<\alpha\right| d^2 \alpha  = 
+\nonumber \\
+= -\frac{1}{2}R_a\int
+P\left(\alpha,t\right)
+\left\{
+-\left(
+\frac{\partial^2}{\partial \alpha \partial \alpha^{*}} +
+\alpha^{*}\frac{\partial}{\partial \alpha^{*}}
+\right)
+\left|\alpha\right>\left<\alpha\right| 
+\right\}
+d^2 \alpha - 
+\nonumber \\
+-\frac{1}{2}R_b\int P\left(\alpha,t\right)
+\alpha \frac{\partial}{\partial \alpha}
+\left|\alpha\right>\left<\alpha\right| 
+d^2 \alpha + \mbox{э.с.}
+\label{eqCh2_69}
+\end{eqnarray}
+
+Нам необходимо рассмотреть входящие в (\ref{eqCh2_69}) интегралы,
+преобразовав их при помощи интегрирования по частям.
+В интегралах, входящих в (\ref{eqCh2_69}) $d^2\alpha = dx dy$, если
+$\alpha = x + i y$, $x = Re\,\alpha$, $x = Im\,\alpha$.
+Следовательно для интегрирования по частям нужно подинтегральную
+функцию выразить через $x$, $y$, произвести интегрирование по частям,
+а, затем вернуться к прежним переменным. Но можно поступить
+иначе. Формально считаем $\alpha$ и $\alpha^{*}$ независимыми
+переменными и выражаем $dx dy$ через $d\alpha d\alpha^{*}$.
+\[
+d^2\alpha = dx dy = d\alpha d\alpha^{*} \left|J\right|,
+\]
+где $\left|J\right|$ якобиан перехода, который в нашем случае является
+постоянным $\left|J\right| = \frac{1}{2}$. Теперь можно
+проинтегрировать по частям, а в окончательном выражении перейти к
+прежним обозначениям 
+\[
+d\alpha d\alpha^{*} \left|J\right| \rightarrow d^2\alpha.
+\]
+ Имеем  
+\begin{eqnarray}
+\int P \alpha \frac{\partial}{\partial \alpha}
+\left|\alpha\right>\left<\alpha\right| 
+d^2 \alpha = 
+\nonumber \\
+= \left.\alpha P \left|\alpha\right>\left<\alpha\right|
+\right|_{-\infty}^{+\infty} - 
+\int \frac{\partial}{\partial \alpha}\left(\alpha P\right)
+\left|\alpha\right>\left<\alpha\right|d^2 \alpha = 
+\nonumber \\
+= 
+- \int \frac{\partial}{\partial \alpha}\left(\alpha P\right)
+\left|\alpha\right>\left<\alpha\right|d^2 \alpha.
+\label{eqCh2_70}
+\end{eqnarray}
+
+При этом мы полагали, что $\alpha P\left(\alpha, t\right) \rightarrow
+0$, при $\left|\alpha\right| \rightarrow \infty$.  Интеграл со второй
+производной после двойного интегрирования по частям преобразуется к
+виду: 
+\begin{eqnarray}
+\int P \frac{\partial^2}{\partial \alpha \partial \alpha^{*}}
+\left|\alpha\right>\left<\alpha\right| 
+d^2 \alpha = 
+\nonumber \\
+= \int \left(\frac{\partial^2}{\partial \alpha \partial \alpha^{*}}
+P\right) \left|\alpha\right>\left<\alpha\right|  
+d^2 \alpha
+\label{eqCh2_71}
+\end{eqnarray}
+Подставляя все это в равенство (\ref{eqCh2_69}), получим:
+\begin{eqnarray}
+\int \dot{P} \left(\alpha, t\right) 
+\left|\alpha\right>\left<\alpha\right| 
+d^2 \alpha = 
+\nonumber \\
+= - \int \left\{
+\frac{1}{2}\left(R_a - R_b\right)
+\left[
+\frac{\partial}{\partial \alpha}
+\left(P \alpha\right) + c.c.
+\right]
+\right.
+-
+\nonumber \\
+- \left.
+R_a \frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}
+\right\}
+\left|\alpha\right>\left<\alpha\right| 
+d^2 \alpha
+\label{eqCh2_72}
+\end{eqnarray}
+
+Это равенство удовлетворится, если множитель при  
+$\left|\alpha\right>\left<\alpha\right|$  положить равным 
+нулю. Таким образом, получим 
+\begin{equation}
+\dot{P}\left(\alpha, t\right) = 
+-\frac{1}{2}\left(R_a - R_b\right)
+\left(
+\frac{\partial}{\partial \alpha}\left(\alpha P\right) + c.c.
+\right)
++ R_a
+\frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}
+\label{eqCh2_73}
+\end{equation}
+Это уравнение типа уравнения Фоккера-Планка, которое используется при
+решении классических задач статистической физики, например, задач о
+броуновском движении и других аналогичных задач. Решив
+(\ref{eqCh2_73}) при соответствующих начальных и граничных условиях,
+легко при помощи (\ref{eqCh2_65}) написать выражение для
+статистического оператора 
+\[
+\hat{\rho}\left(t\right) = 
+\int P\left(\alpha, t\right)
+\left|\alpha\right>\left<\alpha\right| 
+d^2 \alpha
+\]
+и с помощью (\ref{eqCh1_middleO}) и (\ref{eqCh1_113}) вычислять
+средние значения наблюдаемых величин, связанных с рассматриваемой
+системой   
+\[
+\left<O\right>= \int P\left(\alpha, t\right) \left<\alpha\right|\hat{O}\left|\alpha\right>d^2
+\alpha =
+\int  P\left(\alpha, t\right)O^{\left(n\right)}\left(\alpha, \alpha^{*}\right)d^2\alpha,
+\]
+где $O^{\left(n\right)}$ нормальное представление оператора $\hat{O}$ (\ref{eqCh1_normalO}).
+Коэффициенты  $R_a$ и  $R_b$,  входящие в (\ref{eqCh2_73}), можно, как
+и прежде (\ref{eqCh2_RabQw}), выразить через  $Q$  и $\bar{n}_T$,
+тогда уравнение примет вид 
+\begin{equation}
+\frac{\partial}{\partial t}P\left(\alpha, t\right) = 
+\frac{1}{2}\frac{\omega}{Q}\left[
+\frac{\partial}{\partial \alpha}\left(
+\alpha P\left(\alpha, t\right)
+\right) + \mbox{к. с.}
+\right]
++
+\frac{\omega \bar{n}_T}{Q} \frac{\partial^2  P\left(\alpha,
+  t\right)}{\partial \alpha \partial \alpha^{*}}.
+\label{eqCh2_74}
+\end{equation}
+
+В качестве примера вычислим среднее значение оператора положительно
+частотной части электрического поля $E_1\hat{a}$.   
+\begin{eqnarray}
+\frac{d \left<E_1\hat{a}\right>}{d t} = 
+E_1\int \alpha \dot{P}d^2 \alpha =
+\nonumber \\
+=E_1 \frac{1}{2}\frac{\omega}{Q}
+\int \left[
+\frac{\partial}{\partial \alpha}\left(\alpha P\right) + \mbox{к. с.}
+\right]\alpha d^2 \alpha +
+\nonumber \\
++E_1\frac{\omega \bar{n}_T}{Q}\int \alpha
+\frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}
+d^2 \alpha
+\label{eqCh2_75}
+\end{eqnarray}
+Интегрируя второй член по $\alpha^{*}$ получим
+\begin{eqnarray}
+\int\alpha\frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}
+d^2 \alpha = 
+\left.\frac{\partial P}{\partial
+  \alpha}\alpha\right|_{-\infty}^{\infty} - 
+\nonumber \\
+- \int \frac{\partial P}{\partial \alpha} \alpha
+\frac{\partial \alpha}{\partial \alpha^{*}} = 0,
+\nonumber
+\end{eqnarray}
+т. к. $\frac{\partial P}{\partial \alpha}$ предполагается достаточно
+быстро стремящимся к 0 на бесконечности, а 
+$\frac{\partial \alpha}{\partial \alpha^{*}} = 0$, т. к. 
+$\alpha$ и $\alpha^{*}$ - независимые переменные.
+Первое слагаемое можно расписать следующим образом
+\begin{eqnarray}
+\int \alpha \left(
+\frac{\partial}{\partial \alpha}\left(\alpha P\right) + 
+\frac{\partial}{\partial \alpha^{*}}\left(\alpha^{*} P\right)
+\right) d^2 \alpha = 
+\nonumber \\
+= - \int \alpha P \frac{\partial \alpha}{\partial \alpha} d^2 \alpha -
+\int \alpha^{*} P \frac{\partial \alpha}{\partial \alpha^{*}} d^2 \alpha  
+= - \int \alpha P  d^2 \alpha
+= - \left<\hat{a}\right>.
+\nonumber
+\end{eqnarray}
+Таким образом окончательно имеем: 
+\begin{equation}
+\frac{d \left<E_1\hat{a}\right>}{d t} = 
+-\frac{\omega}{2 Q}\left<E_1\hat{a}\right>
+\label{eqCh2_76}
+\end{equation}
+- результат, который мы получили ранее другим путем. Уравнение
+(\ref{eqCh2_74}) можно записать в различных системах координат,
+например, в полярной $\alpha = r e^{i \theta}$, $\alpha^{*} = r e^{- i
+  \theta}$.  Проделав соответствующие преобразования, получим 
+\begin{eqnarray}
+\frac{\partial}{\partial t}P\left(r, \theta, t\right) = 
+\frac{1}{2}\frac{\omega}{Q}
+\frac{\partial}{\partial r}
+\left(r^2 P\left(r, \theta, t\right)\right) +
+\nonumber \\
++ \frac{1}{2}\frac{\omega}{Q}
+\frac{\bar{n}_T}{2 r^2}
+\left(
+r \frac{\partial}{\partial r} r \frac{\partial}{\partial r} +
+\frac{\partial^2}{\partial \theta^2}
+\right)
+P\left(r, \theta, t\right).
+\label{eqCh2_77}
+\end{eqnarray}
+Если воспользоваться координатами  $x$ и $y$, 
+$\alpha = x + i y$, $\alpha^{*} = x - i y$, то есть 
+$x = \frac{1}{2}\left(\alpha + \alpha^{*}\right)$,  
+$y = - \frac{i}{2}\left(\alpha - \alpha^{*}\right)$,  можно уравнение
+представить в виде 
+\begin{eqnarray}
+\frac{\partial}{\partial t}P\left(x, y, t\right) = 
+\frac{1}{2}\frac{\omega}{Q}
+\left(
+\frac{\partial}{\partial x} x +
+\frac{\partial}{\partial y} y
+\right)
+P\left(x, y, t\right) +
+\nonumber \\
++
+\frac{1}{4}
+\frac{\omega}{Q}\bar{n}_T
+\left(
+\frac{\partial^2}{\partial x^2} +
+\frac{\partial^2}{\partial y^2}
+\right)
+P\left(x, y, t\right).
+\label{eqCh2_77a}
+\end{eqnarray}
+
+При решении конкретной задачи удобно воспользоваться уравнением,
+записанным либо в прямоугольной, либо в полярной системе координат.   

@@ -1,0 +1,170 @@
+%% -*- coding:utf-8 -*- 
+\section{Операторы квадратурных составляющих электромагнитного
+  поля}
+Рассмотрим оператор одномодового электромагнитного поля 
+\begin{equation}
+\hat{\bar{E}} = 
+E_1 \vec{e}\left[
+\hat{a} e^{-i\omega t} +
+\hat{a}^{+} e^{i\omega t}
+\right]
+\nonumber
+\end{equation}
+и введем два новых оператора, связанных с ним
+\begin{eqnarray}
+\hat{X}_1 = \frac{1}{2}\left(\hat{a} + \hat{a}^{+}\right),
+\nonumber \\
+\hat{X}_2 = \frac{1}{2i}\left(\hat{a} - \hat{a}^{+}\right),
+\nonumber
+\end{eqnarray}
+которые пропорциональны операторам $\hat{q}$ и $\hat{p}$ (координата,
+импульс) с которыми мы познакомились раньше.
+
+Операторы $\hat{X}_1$ и $\hat{X}_2$ являются эрмитовыми
+операторами. Коммутационные соотношения для них имеют вид.
+\begin{eqnarray}
+\left[\hat{X}_1, \hat{X}_2\right] = 
+\left(\hat{X}_1 \hat{X}_2 - \hat{X}_2 \hat{X}_1 \right) = 
+\nonumber \\
+=
+\frac{1}{4i}
+\left\{
+\left(\hat{a} + \hat{a}^{+}\right)
+\left(\hat{a} - \hat{a}^{+}\right)
+-
+\left(\hat{a} - \hat{a}^{+}\right)
+\left(\hat{a} + \hat{a}^{+}\right)
+\right\} = 
+\nonumber \\
+\frac{1}{4i}
+\left\{
+\hat{a}^{+}\hat{a}
+- \hat{a}\hat{a}^{+}
+- \hat{a}\hat{a}^{+}
++
+\hat{a}^{+}\hat{a}
+\right\} = 
+\frac{1}{2i}
+\left\{
+\hat{a}^{+}\hat{a}
+- \hat{a}\hat{a}^{+}
+\right\} =
+\nonumber \\
+= 
+\frac{1}{2i}
+\left[\hat{a}^{+}, \hat{a}\right] = 
+\frac{i}{2}
+\nonumber
+\end{eqnarray}
+
+При помощи операторов $\hat{X}_1$ и $\hat{X}_2$ оператор
+электрического поля можно представить в виде
+\begin{equation}
+E = 2 E_1 \vec{e}\left(
+\hat{X}_1 \cos \, \omega t +
+\hat{X}_2 \sin \, \omega t,
+\right)
+\nonumber
+\end{equation}
+т. е. эти операторы можно рассматривать, как операторы квадратурных
+компонент электромагнитного поля. Из соотношения неопределенности
+(\ref{eqPart3Squeezed2}) имеем
+\begin{equation}
+\left(
+\Delta X_1 \Delta X_2
+\right) \ge \frac{1}{4}.
+\nonumber
+\end{equation}
+Условием сжатого состояния будет
+\begin{equation}
+\left(
+\Delta X_i 
+\right) < \frac{1}{4}, \, i = 1,2.
+\nonumber
+\end{equation}
+Если при этом выполняется соотношение минимальной неопределенности
+\begin{equation}
+\left(
+\Delta X_1 \Delta X_2
+\right) = \frac{1}{4},
+\nonumber
+\end{equation}
+то сжатие будет идеальным.
+
+Для примера рассмотрим неопределенность $\hat{X}_1$, 
+$\hat{X}_2$ в случае, когда поле находится в когерентном состоянии:
+\begin{eqnarray}
+\left(\Delta X_1\right)^2 = 
+\left<\alpha\right|\hat{X}_1^2\left|\alpha\right> - 
+\left<\alpha\right|\hat{X}_1\left|\alpha\right>^2 = 
+\nonumber \\
+=\frac{1}{4}
+\left\{
+\left<\alpha\right|\left(\hat{a} +
+\hat{a}^{+}\right)^2\left|\alpha\right> -  
+\left<\alpha\right|\left(\hat{a} +
+\hat{a}^{+}\right)\left|\alpha\right>^2 
+\right\} = 
+\nonumber \\
+=\frac{1}{4}
+\left\{
+\alpha^{*2} + \alpha^2 + 2 \left|\alpha\right|^2 + 1 - 
+\left(\alpha^{*2} + \alpha^2 + 2 \left|\alpha\right|^2\right)
+\right\} 
+=\frac{1}{4}.
+\nonumber
+\end{eqnarray}
+Аналогично можно получить
+\begin{equation}
+\left(\Delta X_2\right)^2 = \frac{1}{4}
+\label{eqPart3SqueezedTaskX2Alpha_1}
+\end{equation}
+и
+\begin{equation}
+\left(\Delta X_1 \Delta X_2\right) = \frac{1}{4}.
+\label{eqPart3SqueezedTaskX2Alpha_2}
+\end{equation}
+Таким образом мы получили, что рассматриваемый случай является
+состоянием с минимальной неопределенностью, но сжатия нет.
+
+Рассмотрим теперь, что дает энергетическое состояние
+$\left|n\right>$. Имеем
+\begin{eqnarray}
+\left(\Delta X_1\right)^2 
+=\frac{1}{4}
+\left\{
+\left<n\right|\left(\hat{a} +
+\hat{a}^{+}\right)^2\left|n\right> -  
+\left<n\right|\left(\hat{a} +
+\hat{a}^{+}\right)\left|n\right>^2 
+\right\} = 
+\nonumber \\
+=
+\frac{1}{4}
+\left<n\right|\left(\hat{a} +
+\hat{a}^{+}\right)^2\left|n\right>
+=
+\frac{1}{4}
+\left<n\right|\left(\hat{a}\hat{a}^{+} +
+\hat{a}^{+}\hat{a}\right)\left|n\right> =
+\nonumber \\
+=
+\frac{1}{4}
+\left<n\right|\left(1 + 2
+\hat{a}^{+}\hat{a}\right)\left|n\right>
+=\frac{1}{4}\left(2 n + 1\right).
+\nonumber
+\end{eqnarray}
+Аналогично
+\begin{equation}
+\left(\Delta X_2\right)^2 = \frac{1}{4}\left(2 n + 1\right)
+\label{eqPart3SqueezedTaskX2N_1}
+\end{equation}
+и
+\begin{equation}
+\left(\Delta X_1 \Delta X_2\right) = \frac{1}{4}\left(2 n + 1\right).
+\label{eqPart3SqueezedTaskX2N_2}
+\end{equation}
+Следовательно, энергетическое состояние не является состоянием с
+минимальной неопределенностью и сжатым состоянием для наблюдаемых
+$X_1$ или $X_2$.

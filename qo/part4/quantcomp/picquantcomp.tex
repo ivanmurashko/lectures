@@ -1,0 +1,86 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Mon Oct 15 22:56:06 MSK 2012
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="10" x-max="55" y-min="0" y-max="60" auto-bounding="true">
+%<parallelogram p3="(40,0)"
+%	 p2="(40,60)"
+%	 p1="(20,60)"
+%	 />
+%<multicurve points="(10,55);(10,55);(20,55);(20,55)"
+%	 />
+%<multicurve points="(10,35);(10,35);(20,35);(20,35)"
+%	 />
+%<multicurve points="(10,25);(10,25);(20,25);(20,25)"
+%	 />
+%<multicurve points="(10,5);(10,5);(20,5);(20,5)"
+%	 />
+%<multicurve points="(40,55);(40,55);(50,55);(50,55)"
+%	 />
+%<multicurve points="(40,35);(40,35);(50,35);(50,35)"
+%	 />
+%<multicurve points="(40,25);(40,25);(50,25);(50,25)"
+%	 />
+%<multicurve points="(40,5);(40,5);(50,5);(50,5)"
+%	 />
+%<text stroke-style="dashed"
+%	 stroke-dasharray="1;1"
+%	 anchor-point="(10,15)"
+%	 >
+%$\left|0 \dots 0\right&gt;$
+%</text>
+%<text anchor-point="(25,55)"
+%	 >
+%$\hat{U}_f$
+%</text>
+%<text anchor-point="(10,45)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(45,45)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(55,15)"
+%	 >
+%$\left|y\right&gt; = \left|f\left(x\right)\right&gt;$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(55,60)(0,0)
+\linethickness{0.3mm}
+\put(20,60){\line(1,0){20}}
+\put(20,0){\line(0,1){60}}
+\put(40,0){\line(0,1){60}}
+\put(20,0){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(10,55){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(10,35){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(10,25){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(10,5){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(40,55){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(40,35){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(40,25){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(40,5){\line(1,0){10}}
+\put(10,15){\makebox(0,0)[cc]{$\left|0 \dots 0\right>$}}
+
+\put(25,55){\makebox(0,0)[cc]{$\hat{U}_f$}}
+
+\put(10,45){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(45,45){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(55,15){\makebox(0,0)[cc]{$\left|y\right> = \left|f\left(x\right)\right>$}}
+
+\end{picture}

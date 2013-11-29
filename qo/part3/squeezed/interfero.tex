@@ -1,0 +1,218 @@
+%% -*- coding:utf-8 -*- 
+\section{Интерференционные измерения с применение сжатого света}
+Рассмотрим схему интерферометра Маха-Цендера, изображенную на
+рис. \ref{figPart3Squeezed_14}.
+Такая схема уже рассматривалась нами ранее, при исследовании
+погрешности интерференционных измерений.Различие в том, что на нулевой
+вход подается не вакуумное излучение, а излучение сжатого вакуума.
+Попрежнему считаем, что входное и выходное зеркала полупрозрачные ($t
+=r =\frac{1}{\sqrt{2}}$), а угловые зеркала - глухие ($r = 1$, $t =
+0$). Матрица рассеяния зеркал - 
+\begin{equation}
+\hat{S} = \frac{1}{\sqrt{2}}\left(
+\begin{array}{cc}
+1 & i \\
+i & 1 \\
+\end{array}
+\right).
+\nonumber
+\end{equation}
+Интерферометр рассматриваем как датчик какой-либо физической величины,
+воздействующей на оптическую длину одного из плечей. На схеме
+включенный в верхнее плечо фазовращатель может реагировать на
+действие этой величины.
+
+\input ./part3/squeezed/fig14.tex
+
+Уравнения интерферометра имеют вид (\ref{eqPart2Interfero11}):
+\begin{eqnarray}
+\hat{a}_2 = \frac{1}{\sqrt{2}} \left(\hat{a}_0 + i \hat{a}_1\right),
+\,
+\hat{a}_3 = \frac{1}{\sqrt{2}} \left(i \hat{a}_0 + \hat{a}_1\right),
+\nonumber \\
+\hat{a}_4 = \frac{1}{\sqrt{2}} \left(i \hat{a}_2 + e^{i \varphi}
+\hat{a}_3\right) = 
+\frac{1}{2}\left[
+i \left(1 + e^{i \varphi}\right)\hat{a}_0 -
+\left(1 - e^{i \varphi}\right)\hat{a}_1
+\right],
+\nonumber \\
+\hat{a}_5 = \frac{1}{\sqrt{2}} \left(\hat{a}_2 + i e^{i \varphi}
+\hat{a}_3\right) = 
+\frac{1}{2}\left[
+\left(1 - e^{i \varphi}\right)\hat{a}_0 +
+i \left(1 + e^{i \varphi}\right)\hat{a}_1
+\right].
+\label{eqPart3SqueezedAddAddAdd2}
+\end{eqnarray}
+Положим, что входное поле сигнала (вход 0, оператор $\hat{a}_0$)
+находится в состоянии сжатого вакуума. Второе входное поле 
+(вход 1, оператор $\hat{a}_1$) находится в когерентном состоянии с
+большой амплитудой. Настолько большой, что входное поле является
+двухмодовым 
+\[
+\left|\psi\right>_{\mbox{вх}} =
+\left|\alpha\right>
+\left|re^{i \theta}, 0\right>,
+\]
+где $\left|\alpha\right>$ - когерентное состояние,
+$\left|re^{i \theta}, 0\right>$ - состояние сжатого вакуума. Каналы 4
+и 5 детектируются каждый своим фотодетектором. Сигналы, идущие с
+фотодетекторов, вычитаются и фиксируются.
+
+Таким образом, выходной сигнал определяется средним значением оператора
+\begin{eqnarray}
+\hat{n}_{54} = \hat{a}_5^{+}\hat{a}_5 - 
+\hat{a}_4^{+}\hat{a}_4 = 
+\nonumber \\
+=
+\left(
+\hat{a}_1^{+}\hat{a}_1 - 
+\hat{a}_0^{+}\hat{a}_0
+\right) \cos\,\varphi
+- 
+\left(
+\hat{a}_0^{+}\hat{a}_1 - 
+\hat{a}_1^{+}\hat{a}_0
+\right) \sin\,\varphi
+\end{eqnarray}
+Здесь использовалось равенство (\ref{eqPart3SqueezedAddAddAdd2}).
+
+Найдем среднее значение оператора
+$\left<\psi\right|\hat{n}_{54}\left|\psi\right>$. При этом учтем, что
+каждый оператор действует только на свою моду. Имеем:
+\begin{eqnarray}
+\left<\psi\right|\hat{n}_{54}\left|\psi\right> = 
+\left(
+\left<\alpha\right|\hat{a}_1^{+}\hat{a}_1\left|\alpha\right>
+- 
+\left<r e^{i\theta}, 0\right|\hat{a}_0^{+}\hat{a}_0\left|r
+e^{i\theta}, 0\right> 
+\right) \cos\,\varphi -
+\nonumber \\
+-
+\left(
+\left<r e^{i\theta}, 0\right|\hat{a}_0^{+}\left|r
+e^{i\theta}, 0\right>\alpha +
+\alpha 
+\left<r e^{i\theta}, 0\right|\hat{a}_0\left|r
+e^{i\theta}, 0\right>
+\right) \sin\,\varphi.
+\label{eqPart3SqueezedAddAddAdd4}
+\end{eqnarray}
+Первый член в первой скобке равен среднему числу фотонов накачки
+$\left|\alpha\right|^2$, а второй член, как мы знаем, равен числу
+фотонов в сжатом состоянииб, равном $sh^2 r$. Вторая скобка справа, как
+мы получили при рассмотрении балансного детектора, равна нулю. Таким
+образом получим
+\begin{equation}
+\left<\psi\right|\hat{n}_{54}\left|\psi\right> = 
+\left(
+\left|\alpha\right|^2 - sh^2 r
+\right)
+\cos\,\varphi.
+\nonumber
+\end{equation}
+Если установить $\varphi=\frac{\pi}{2}$, то среднее значение выходного
+сигнала равно нулю:
+\[
+\left<\psi\right|\hat{n}_{54}\left|\psi\right> = 0.
+\]
+
+Среднее значение второго члена в (\ref{eqPart3SqueezedAddAddAdd4})
+равно нулю, но его средний квадрат нулю не равен. Это означает, что он
+является источником шумов, которые ограничивают точность измерений.
+
+Найдем средний квадрат $\hat{n}_{54}$:
+\begin{equation}
+\left(\Delta n_{54}\right)^2 = 
+\left<\psi\right|\hat{n}_{54}^2\left|\psi\right> -
+\left<\psi\right|\hat{n}_{54}\left|\psi\right>^2.
+\nonumber
+\end{equation}
+Среднее в нашем случае равно нулю, следовательно имеем
+\begin{eqnarray}
+\left(\Delta n_{54}\right)^2 = 
+\left<\psi\right|\hat{n}_{54}^2\left|\psi\right> =
+\nonumber \\
+=
+\left|\alpha\right|^2
+\left<r e^{i\theta}, 0\right|
+\left(\hat{a}_0^{+} + \hat{a}_0\right)^2
+\left|r e^{i\theta}, 0\right> =
+\nonumber \\
+=
+\left|\alpha\right|^2
+\left<r e^{i\theta}, 0\right|
+\left(\hat{a}_0^{+}\right)^2 + 
+\left(\hat{a}_0\right)^2 + 
+\hat{a}_0^{+}\hat{a}_0 +
+\hat{a}_0\hat{a}_0^{+}
+\left|r e^{i\theta}, 0\right>.
+\nonumber
+\end{eqnarray}
+
+Ранее мы имели (\ref{eqPart3SqueezedAddAdd7}):
+\begin{eqnarray}
+\left<\hat{a}_0\right> = 
+\left<0\right|
+\hat{S}^{+}\left(r, 0\right)
+\hat{a}_0
+\hat{S}\left(r, 0\right)
+\left|0\right> = 
+\left<0\right|
+\hat{a}_0 ch\,r - \hat{a}_0^{+} sh\,r
+\left|0\right> = 0,
+\nonumber \\
+\left<\hat{a}_0^{+}\right> = 
+\left<0\right|
+\hat{a}_0^{+} ch\,r - \hat{a}_0 sh\,r
+\left|0\right> = 0,
+\nonumber
+\end{eqnarray}
+откуда получим
+\begin{equation}
+\left(\Delta n_{54}\right)^2 = 
+\left<\psi\right|\hat{n}_{54}^2\left|\psi\right> =
+\left|\alpha\right|^2\left(
+ch\,2r - sh\,2r
+\right) = 
+\left|\alpha\right|^2 e^{-2 r}.
+\nonumber
+\end{equation}
+Среднеквадратичная величина шумов будет 
+\[
+\left|\Delta n_{54}\right| = 
+\left|\alpha\right| e^{- r}.
+\]
+Примем эту величину за пороговое значение, ниже которого мы не сможем
+ни обнаружить, ни измерить сигнал. Следовательно, сигнал должен быть
+выше порога.
+
+Если начальное значение $\varphi=\frac{\pi}{2}$ изменится на величину $\Delta
+\varphi$, то появится сигнал равный
+\[
+\Delta n_{54} = 
+\left|\alpha\right|^2
+\Delta \varphi.
+\]
+Необходимо чтобы 
+\[
+\left|\alpha\right|^2
+\Delta \varphi > 
+\left|\alpha\right|
+e^{-r},
+\]
+откуда получаем
+\begin{equation}
+\Delta \varphi >
+\frac{1}{\left|\alpha\right|} e^{-r},
+\label{eqPart3SqueezedAddAddAdd7}
+\end{equation}
+$\left|\alpha\right| = \sqrt{\bar{n}}$, где $\bar{n}$ - среднее число
+фотонов поля гетеродина.
+
+Выражение (\ref{eqPart3SqueezedAddAddAdd7}) дает меньшее значение, чем
+то, которое мы получим ранее, рассматривая точность интерференционных
+измерений. Применение сжатого состояния способно увеличить точность
+измерений. 

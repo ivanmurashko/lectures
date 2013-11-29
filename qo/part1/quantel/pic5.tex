@@ -1,0 +1,135 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Sat May 03 10:04:08 MSD 2008
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="50" y-min="0" y-max="60" auto-bounding="true">
+%<multicurve fill-style= "none"
+%	 stroke-width= "0.15"
+%	 right-arrow= "head"
+%	 points= "(10,5);(10,5);(10,40);(10,40)"
+%	 />
+%<multicurve fill-style= "none"
+%	 stroke-width= "0.15"
+%	 right-arrow= "head"
+%	 points= "(10,5);(10,5);(45,5);(45,5)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(0,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%
+%</text>
+%<multicurve stroke-style= "dashed"
+%	 stroke-dasharray= "1;1"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 points= "(35,30);(35,30);(35,5);(35,5)"
+%	 />
+%<multicurve stroke-style= "dashed"
+%	 stroke-dasharray= "1;1"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 points= "(10,30);(10,30);(35,30);(35,30)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(5,45)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%$Im \, \alpha$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(25,60)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(20,60)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(50,0)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%$Re \, \alpha$
+%</text>
+%<multicurve fill-style= "none"
+%	 stroke-width= "0.15"
+%	 points= "(10,5);(10,5);(35,30);(35,30)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(20,22)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%$\left|\alpha\right|$
+%</text>
+%<multicurve fill-style= "none"
+%	 stroke-width= "0.15"
+%	 points= "(15,10);(18.33,10);(20,8.33);(20,5)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(25,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 stroke-width= "0.15"
+%	 >
+%$arg \, \alpha$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(50,60)(0,0)
+\linethickness{0.15mm}
+\put(10,5){\line(0,1){35}}
+\put(10,40){\vector(0,1){0.12}}
+\linethickness{0.15mm}
+\put(10,5){\line(1,0){35}}
+\put(45,5){\vector(1,0){0.12}}
+\put(0,10){\makebox(0,0)[cc]{}}
+
+\linethickness{0.15mm}
+\multiput(35,5)(0,2){13}{\line(0,1){1}}
+\linethickness{0.15mm}
+\multiput(10,30)(2,0){13}{\line(1,0){1}}
+\put(5,45){\makebox(0,0)[cc]{$Im \, \alpha$}}
+
+\put(25,60){\makebox(0,0)[cc]{}}
+
+\put(20,60){\makebox(0,0)[cc]{}}
+
+\put(50,0){\makebox(0,0)[cc]{$Re \, \alpha$}}
+
+\linethickness{0.15mm}
+\multiput(10,5)(0.12,0.12){208}{\line(1,0){0.12}}
+\put(20,22){\makebox(0,0)[cc]{$\left|\alpha\right|$}}
+
+\linethickness{0.15mm}
+\qbezier(15,10)(17.5,10)(18.75,8.75)
+\qbezier(18.75,8.75)(20,7.5)(20,5)
+\put(25,10){\makebox(0,0)[cc]{$arg \, \alpha$}}
+
+\end{picture}

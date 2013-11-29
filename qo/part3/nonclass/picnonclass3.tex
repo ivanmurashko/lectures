@@ -1,0 +1,126 @@
+%% -*- coding:utf-8 -*- 
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Thu May 01 00:17:54 MSD 2008
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="65" y-min="0" y-max="60" auto-bounding="true">
+%<multicurve fill-style= "none"
+%	 stroke-dasharray= "1;1"
+%	 stroke-style= "dashed"
+%	 points= "(5,30);(5,30);(55,30);(55,30)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(30,0);(30,0);(30,60);(30,60)"
+%	 />
+%<pscurve fill-style= "none"
+%	 right-arrow= "head"
+%	 stroke-style= "dotted"
+%	 curvature= "1;0.1;0"
+%	 closed= "false"
+%	 points= "(10,30);(10,30);(20,35);(30,45);(40,35);(50,30);
+%	(50,30);(50,30)"
+%	 />
+%<pscurve fill-style= "none"
+%	 right-arrow= "head"
+%	 stroke-style= "dotted"
+%	 curvature= "1;0.1;0"
+%	 closed= "false"
+%	 points= "(10,30);(10,30);(20,25);(30,15);(40,25);(50,30);
+%	(50,30);(50,30)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(0,0);(0,0);(60,0);(60,0)"
+%	 />
+%<text fill-style= "none"
+%	 right-arrow= "head"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(65,0)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 >
+%$\tau$
+%</text>
+%<text fill-style= "none"
+%	 right-arrow= "head"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(20,60)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 >
+%$G^{(2)}$
+%</text>
+%<text fill-style= "none"
+%	 right-arrow= "head"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(40,40)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 >
+%a
+%</text>
+%<text fill-style= "none"
+%	 right-arrow= "head"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(60,30)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 >
+%b
+%</text>
+%<text fill-style= "none"
+%	 right-arrow= "head"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(40,20)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 >
+%c
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(65,60)(0,0)
+\linethickness{0.3mm}
+\multiput(5,30)(1.96,0){26}{\line(1,0){0.98}}
+\linethickness{0.3mm}
+\put(30,0){\line(0,1){60}}
+\put(30,60){\vector(0,1){0.12}}
+\linethickness{0.3mm}
+\qbezier(10,30)(10.33,30.1)(13.83,31.66)
+\qbezier(13.83,31.66)(17.32,33.21)(20,35)
+\qbezier(20,35)(22.78,37.5)(24.71,41.07)
+\qbezier(24.71,41.07)(26.65,44.64)(30,45)
+\qbezier(30,45)(33.35,44.64)(35.29,41.07)
+\qbezier(35.29,41.07)(37.22,37.5)(40,35)
+\qbezier(40,35)(42.68,33.21)(46.17,31.66)
+\qbezier(46.17,31.66)(49.67,30.1)(50,30)
+\put(50,30){\vector(0,0){0.12}}
+\linethickness{0.3mm}
+\qbezier(10,30)(10.33,29.9)(13.83,28.34)
+\qbezier(13.83,28.34)(17.32,26.79)(20,25)
+\qbezier(20,25)(22.78,22.5)(24.71,18.93)
+\qbezier(24.71,18.93)(26.65,15.36)(30,15)
+\qbezier(30,15)(33.35,15.36)(35.29,18.93)
+\qbezier(35.29,18.93)(37.22,22.5)(40,25)
+\qbezier(40,25)(42.68,26.79)(46.17,28.34)
+\qbezier(46.17,28.34)(49.67,29.9)(50,30)
+\put(50,30){\vector(0,0){0.12}}
+\linethickness{0.3mm}
+\put(0,0){\line(1,0){60}}
+\put(60,0){\vector(1,0){0.12}}
+\put(65,0){\makebox(0,0)[cc]{$\tau$}}
+
+\put(20,60){\makebox(0,0)[cc]{$G^{(2)}$}}
+
+\put(40,40){\makebox(0,0)[cc]{а}}
+
+\put(60,30){\makebox(0,0)[cc]{б}}
+
+\put(40,20){\makebox(0,0)[cc]{в}}
+
+\end{picture}

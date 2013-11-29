@@ -1,0 +1,1223 @@
+%% -*- coding:utf-8 -*- 
+\section{Уравнение Гейзенберга для лазерной системы}
+
+Рассматриваемая система состоит из 4-х подсистем, которые связаны
+между собой посредством 3-х гамильтонианов взаимодействия. Первая из
+подсистем представляет собой моду электромагнитного поля с частотой
+$\omega$ (на рис. \ref{figPart2Laser2_2} обозначена через $F$),
+которая описывается операторами рождения и уничтожения моды: 
+$\hat{a}^{+}$ и $\hat{a}$. 
+
+Мода электромагнитного поля связана с
+резервуаром $R_F$ (см. рис. \ref{figPart2Laser2_2}), который
+представляет собой совокупность гармонических осцилляторов с частотой
+$\omega_k^{(F)}$, описываемых операторами рождения и уничтожения
+$\hat{b}_k^{+}$, $\hat{b}_k$. При этом справедливы следующие
+коммутационные соотношения 
+\begin{eqnarray}
+\left[\hat{b}_k, \hat{b}^{+}_{k'}\right] = \delta_{kk'},
+\nonumber \\
+\left[\hat{b}_k, \hat{b}_{k'}\right] = 0,
+\nonumber \\
+\left[\hat{b}^{+}_k, \hat{b}^{+}_{k'}\right] = 0.
+\nonumber
+\end{eqnarray}
+
+Атомная подсистема состоит из большого числа атомов. Атом $j$ может
+находится в следующих основных состояниях:
+$\left|a\right>^j$, $\left|b\right>^j$ и $\left|c\right>^j$. Поведение
+этого атома может быть описано с помощью операторов проектирования в
+состояния $\left|a\right>^j$ и $\left|b\right>^j$:
+\begin{equation}
+\hat{\sigma}_a^j = \left|a\right>^j\left<a\right|^j,\,
+\hat{\sigma}_b^j = \left|b\right>^j\left<b\right|^j,
+\nonumber
+\end{equation}
+а также операторов перехода
+\begin{eqnarray}
+\hat{\sigma}_{a \rightarrow b}^j = \hat{\sigma}_{ab}^j =
+\left|b\right>^j\left<a\right|^j,\,
+\hat{\sigma}_{b \rightarrow a}^j = \hat{\sigma}_{ba}^j =
+\left(\hat{\sigma}_{ab}^j\right)^{+},
+\nonumber \\
+\hat{\sigma}_{a \rightarrow c}^j = \hat{\sigma}_{ac}^j =
+\left|c\right>^j\left<a\right|^j,\,
+\hat{\sigma}_{c \rightarrow a}^j = \hat{\sigma}_{ca}^j =
+\left(\hat{\sigma}_{ac}^j\right)^{+},
+\nonumber \\
+\hat{\sigma}_{b \rightarrow c}^j = \hat{\sigma}_{bc}^j =
+\left|c\right>^j\left<b\right|^j,\,
+\hat{\sigma}_{c \rightarrow b}^j = \hat{\sigma}_{cb}^j =
+\left(\hat{\sigma}_{bc}^j\right)^{+}.
+\nonumber 
+\end{eqnarray}
+
+Атомная подсистема связана с резервуаром $R_A$, который состоит из
+большого числа гармонических осцилляторов каждый из которых имеет
+частоту $\omega_k^{(A)}$ и описывается операторами рождения и
+уничтожения $\hat{c}_k^{+}$, $\hat{c}_k$ удовлетворяющими следующим
+коммутационным соотношениям:
+\begin{eqnarray}
+\left[\hat{c}_k, \hat{c}^{+}_{k'}\right] = \delta_{kk'},
+\nonumber \\
+\left[\hat{c}_k, \hat{c}_{k'}\right] = 0,
+\nonumber \\
+\left[\hat{c}^{+}_k, \hat{c}^{+}_{k'}\right] = 0.
+\nonumber
+\end{eqnarray}
+
+В общем случае уравнение Гейзенберга имеет вид:
+\begin{equation}
+\frac{d \hat{O}}{d t} = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
+  \hat{O}\right], 
+\label{eqLaserHaizenberg1}
+\end{equation}
+где $\hat{\mathcal{H}}$ - гамильтониан системы, $\hat{O}$ - оператор
+некоторой наблюдаемой, относящейся к этой системе. В целях упрощения
+мы будем использовать представление взаимодействия в котором уравнение
+(\ref{eqLaserHaizenberg1}) перепишется в виде:
+\begin{equation}
+\frac{d \hat{O}_I}{d t} = \frac{i}{\hbar}\left[\hat{V}_I,
+  \hat{O}_I\right], 
+\label{eqLaserHaizenbergInteraction1}
+\end{equation}
+где операторы взаимодействия $\hat{V}_I$ и наблюдаемой $\hat{O}_I$ в
+представлении взаимодействия записываются следующим образом: 
+\begin{eqnarray}
+\hat{O}_I = 
+e^{i\frac{\hat{\mathcal{H}}_0t}{\hbar}}
+\hat{O}
+e^{-i\frac{\hat{\mathcal{H}}_0t}{\hbar}},
+\nonumber \\
+\hat{V}_I = 
+e^{i\frac{\hat{\mathcal{H}}_0t}{\hbar}}
+\hat{V}
+e^{-i\frac{\hat{\mathcal{H}}_0t}{\hbar}}.
+\label{eqLaserHaizenbergInteraction2}
+\end{eqnarray}
+Через $\hat{\mathcal{H}}_0$ в (\ref{eqLaserHaizenbergInteraction2})
+обозначен полный гамильтониан рассматриваемой системы без учета
+взаимодействия между ее частями. 
+
+В дальнейшем все операторы у нас будут предполагаться записанными в
+представлении взаимодействия (\ref{eqLaserHaizenbergInteraction2}) при
+этом индекс $I$ будет опускаться.
+
+Гамильтониан взаимодействия между $j$-м атомом и модой
+электромагнитного поля в представлении
+взаимодействия имеет вид (см. \ref{eqCh2_task22}):
+\begin{equation}
+\hat{V}_{AF}^j =
+\Delta\left(t - t_j\right) 
+g \hbar \left(
+\hat{a}^{+}\hat{\sigma}^{j}_{ab} e^{i \left(\omega -
+  \omega_{ab}\right)t} +
+\left(\hat{\sigma}^{j}_{ab}\right)^{+} 
+\hat{a} e^{-i \left(\omega - \omega_{ab}\right)t}
+\right),
+\label{eqLaserHaizenbergVAF_pre1}
+\end{equation}
+где $\Delta\left(t - t_j\right)$ ступенчатая функция описывающая
+процесс инжекции атомов, т. е. учитывающая тот факт, что
+взаимодействие между $j$-м атомом и полем начинается в момент времени $t_j$:
+\begin{equation}
+\Delta\left(t - t_j\right) =
+\left\{
+\begin{array}{c}
+1;\, t \ge t_j \\
+0;\, t < t_j 
+\end{array}
+\right.
+\nonumber
+\end{equation}
+Полный гамильтониан взаимодействия будет суммой гамильтонианов
+отдельных атомов
+(\ref{eqLaserHaizenbergVAF_pre1}):
+\begin{equation}
+\hat{V}_{AF} =
+g \hbar
+\sum_j
+\Delta\left(t - t_j\right) 
+ \left(
+\hat{a}^{+}\hat{\sigma}^{j}_{ab}  +
+\left(\hat{\sigma}^{j}_{ab}\right)^{+} 
+\hat{a}
+\right).
+\label{eqLaserHaizenbergVAF}
+\end{equation}
+В (\ref{eqLaserHaizenbergVAF}) мы предполагаем что частота моды
+электромагнитного поля совпадает с частотой перехода: $\omega =
+\omega_{ab}$.
+
+Гамильтониан взаимодействия поля с резервуаром $R_F$ записывается
+следующим образом: 
+\begin{equation}
+\hat{V}_{FR_F} =
+\hbar
+\sum_k
+g_k^{(F)}
+ \left(
+\hat{b}_k^{+}\hat{a} e^{i\left(\omega_k^{(F)} - \omega\right)t} +
+\hat{a}^{+}\hat{b}_k e^{-i\left(\omega_k^{(F)} - \omega\right)t}
+\right).
+\label{eqLaserHaizenbergVFRF}
+\end{equation}
+
+
+Сложнее дело обстоит с гамильтонианом взаимодействия атомной
+подсистемы с резервуаром $R_A$. Исходя из рассматриваемой модели
+(см. рис. \ref{figPart2Laser2_2}) мы имеем дело с двумя переходами:
+$a \rightarrow c$ и $b \rightarrow c$. Соответственно полный
+гамильтониан запишется в виде
+\begin{equation}
+\hat{V}_{AR_A} = \hat{V}_{AR_A}^{a \rightarrow c} + \hat{V}_{AR_A}^{b \rightarrow c}.
+\nonumber
+\end{equation}
+Предполагая в дальнейшем, что константы взаимодействия для
+рассматриваемых переходов одинаковыми и вещественными, получим
+\begin{eqnarray}
+\hat{V}_{AR_A}^{a \rightarrow c} = \hbar \sum_{k,j} 
+g_k^{(A)}
+ \left(
+\hat{c}_k^{+}\hat{\sigma}_{ac}^{j} e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t} +
+\left(\hat{\sigma}_{ac}^{j}\right)^{+}\hat{c}_k e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
+\right),
+\nonumber \\
+\hat{V}_{AR_A}^{b \rightarrow c} = \hbar \sum_{k,j} 
+g_k^{(A)}
+ \left(
+\hat{c}_k^{+}\hat{\sigma}_{bc}^{j} e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t} +
+\left(\hat{\sigma}_{bc}^{j}\right)^{+}\hat{c}_k e^{-i\left(\omega_k^{(A)} - \omega_{bc}\right)t}
+\right).
+\label{eqLaserHaizenbergVARA}
+\end{eqnarray}
+В (\ref{eqLaserHaizenbergVARA}) суммирование предполагается по всем
+атомам (индекс $j$) и по всем модам резервуара ($k$), через
+$\omega_{ac}$ и $\omega_{bc}$ обозначены частоты переходов.
+
+\subsection{Уравнение движения атомной подсистемы}
+
+Прежде всего рассмотрим уравнения которым удовлетворяют операторы
+$\hat{c}_k$ и $\hat{c}_k^{+}$. Поскольку эти операторы входят только в
+гамильтониан $\hat{V}_{AR_A}$, то уравнение движения имеет вид
+\begin{eqnarray}
+\frac{d \hat{c}_k}{d t} = \frac{i}{\hbar}\left[\hat{V}_{AR_A}, \hat{c}_k
+\right] = 
+\nonumber \\
+= \frac{i}{\hbar} \hbar 
+\sum_{k',j} 
+g_{k'}^{(A)}\left[\hat{c}_{k'}^{+}, \hat{c}_k\right]
+\left(
+\hat{\sigma}_{ac}^{j} e^{i\left(\omega_{k'}^{(A)} - \omega_{ac}\right)t}
++
+\hat{\sigma}_{bc}^{j} e^{i\left(\omega_{k'}^{(A)} - \omega_{bc}\right)t}
+\right) +
+\nonumber \\
++
+\frac{i}{\hbar} \hbar 
+\sum_{k',j} 
+g_{k'}^{(A)}
+\left(
+\left(\hat{\sigma}_{ac}^{j}\right)^{+} e^{- i\left(\omega_{k'}^{(A)} - \omega_{ac}\right)t}
++
+\left(\hat{\sigma}_{bc}^{j}\right)^{+} e^{- i\left(\omega_{k'}^{(A)} - \omega_{bc}\right)t}
+\right)
+\left[\hat{c}_{k'}, \hat{c}_k\right] =
+\nonumber \\
+= 
+ - i 
+\sum_{k',j} 
+g_{k'}^{(A)}\delta_{kk'}
+\left(
+\hat{\sigma}_{ac}^{j} e^{i\left(\omega_{k'}^{(A)} - \omega_{ac}\right)t}
++
+\hat{\sigma}_{bc}^{j} e^{i\left(\omega_{k'}^{(A)} - \omega_{bc}\right)t}
+\right) = 
+\nonumber \\
+=
+ - i g_{k}^{(A)}
+\sum_{j} 
+\left(
+\hat{\sigma}_{ac}^{j} e^{i\left(\omega_{k}^{(A)} - \omega_{ac}\right)t}
++
+\hat{\sigma}_{bc}^{j} e^{i\left(\omega_{k}^{(A)} - \omega_{bc}\right)t}
+\right).
+\label{eqLaserHaizenbergCk_pre1}
+\end{eqnarray} 
+Формальное интегрирование (\ref{eqLaserHaizenbergCk_pre1}) дает
+\begin{eqnarray}
+\hat{c}_k\left(t\right) = \hat{c}_k\left(0\right) -
+\nonumber \\
+ - i g_{k}^{(A)}
+\sum_{j} 
+\int_0^t d t'
+\left(
+\hat{\sigma}_{ac}^{j}\left(t'\right) e^{i\left(\omega_{k}^{(A)} - \omega_{ac}\right)t'}
++
+\hat{\sigma}_{bc}^{j}\left(t'\right) e^{i\left(\omega_{k}^{(A)} - \omega_{bc}\right)t'}
+\right),
+\label{eqLaserHaizenbergCk}
+\end{eqnarray}
+откуда для эрмитово сопряженного оператора $\hat{c}_k^{+}$ имеем
+\begin{eqnarray}
+\hat{c}_k^{+}\left(t\right) = \hat{c}_k^{+}\left(0\right) +
+\nonumber \\
+ + i g_{k}^{(A)}
+\sum_{j} 
+\int_0^t d t'
+\left(
+\hat{\sigma}_{ca}^{j}\left(t'\right) e^{-i\left(\omega_{k}^{(A)} - \omega_{ac}\right)t'}
++
+\hat{\sigma}_{cb}^{j}\left(t'\right) e^{-i\left(\omega_{k}^{(A)} - \omega_{bc}\right)t'}
+\right),
+\label{eqLaserHaizenbergCkPlus}
+\end{eqnarray}
+где введены следующие обозначения $\hat{\sigma}_{ca}^{j} =
+\left(\hat{\sigma}_{ac}^{j}\right)^{+}$ и
+$\hat{\sigma}_{cb}^{j} = \left(\hat{\sigma}_{bc}^{j}\right)^{+}$.
+
+Следующим шагом будет получение уравнений которым удовлетворяют
+операторы $\hat{\sigma}_a^j$ и $\hat{\sigma}_b^j$. Для
+$\hat{\sigma}_a^j$ имеем
+\begin{equation}
+\frac{d \hat{\sigma}_a^j}{d t} = 
+\frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{\sigma}_a^j\right] + 
+\frac{i}{\hbar}
+\left[\hat{V}_{AR_A}, \hat{\sigma}_a^j\right].
+\label{eqLaserHaizenbergSigmaA_pre1}
+\end{equation}
+Для первого члена суммы (\ref{eqLaserHaizenbergSigmaA_pre1}) справедливо
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{\sigma}_a^j\right] = 
+ \frac{i}{\hbar} g \hbar
+\sum_i
+\Delta\left(t - t_i\right) 
+ \left(
+\hat{a}^{+}\left[\hat{\sigma}^{i}_{ab},\hat{\sigma}_a^j\right]  +
+\left[\left(\hat{\sigma}^{i}_{ab}\right)^{+},\hat{\sigma}_a^j\right]
+\hat{a}
+\right),
+\nonumber
+\end{eqnarray}
+откуда с учетом коммутационных соотношений 
+\begin{eqnarray}
+\left[\hat{\sigma}^{i}_{ab},\hat{\sigma}_a^j\right] = 
+\left|b^i\right>\left<a^i\right|\left.a^j\right>\left<a^j\right| -
+\left|a^j\right>\left<a^j\right|\left.b^i\right>\left<a^i\right| = 
+\delta_{ij}\hat{\sigma}^{j}_{ab},
+\nonumber \\
+\left[\left(\hat{\sigma}^{i}_{ab}\right)^{+},\hat{\sigma}_a^j\right] = 
+\left|a^i\right>\left<b^i\right|\left.a^j\right>\left<a^j\right| -
+\left|a^j\right>\left<a^j\right|\left.a^i\right>\left<b^i\right| = 
+- \delta_{ij}\left(\hat{\sigma}^{j}_{ab}\right)^{+}
+\nonumber
+\end{eqnarray}
+получим
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{\sigma}_a^j\right] = 
+i g 
+\Delta\left(t - t_j\right) 
+ \left(
+\hat{a}^{+}\hat{\sigma}^{j}_{ab} -
+\left(\hat{\sigma}^{j}_{ab}\right)^{+}\hat{a}
+\right).
+\label{eqLaserHaizenbergSigmaA_pre1_1}
+\end{eqnarray}
+
+Для второго члена суммы (\ref{eqLaserHaizenbergSigmaA_pre1}) имеем
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AR_A}, \hat{\sigma}_a^j\right] = 
+\nonumber \\
+=
+i
+\sum_{k,i}
+g_k^{(A)}
+\hat{c}_k^{+}
+ \left(
+\left[\hat{\sigma}^{i}_{ac},\hat{\sigma}_a^j\right]  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
++ 
+\left[\hat{\sigma}^{i}_{bc},\hat{\sigma}_a^j\right]  
+e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t}
+\right)
++
+\nonumber \\
++
+ i
+\sum_{k,i}
+g_k^{(A)}
+ \left(
+\left[\left(\hat{\sigma}^{i}_{ac}\right)^{+},\hat{\sigma}_a^j\right]  
+e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
++ 
+\left[\left(\hat{\sigma}^{i}_{bc}\right)^{+},\hat{\sigma}_a^j\right]  
+e^{-i\left(\omega_k^{(A)} - \omega_{bc}\right)t}
+\right)\hat{c}_k,
+\nonumber
+\end{eqnarray}
+которое с помощью коммутационных соотношений
+\begin{eqnarray}
+\left[\hat{\sigma}^{i}_{ac},\hat{\sigma}_a^j\right] = 
+\delta_{ij}\hat{\sigma}^{j}_{ac},
+\nonumber \\
+\left[\left(\hat{\sigma}^{i}_{ac}\right)^{+},\hat{\sigma}_a^j\right] = 
+- \delta_{ij}\left(\hat{\sigma}^{j}_{ac}\right)^{+},
+\nonumber \\
+\left[\hat{\sigma}^{i}_{bc},\hat{\sigma}_a^j\right] = 0,
+\nonumber \\
+\left[\left(\hat{\sigma}^{i}_{bc}\right)^{+},\hat{\sigma}_a^j\right] = 0
+\label{eqLaserHaizenbergTaskKommutator}
+\end{eqnarray}
+переписывается в виде
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AR_A}, \hat{\sigma}_a^j\right] = 
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\hat{\sigma}^{j}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
+-
+\nonumber \\
+- i
+\sum_{k}
+g_k^{(A)}
+\left(\hat{\sigma}^{i}_{ac}\right)^{+} 
+\hat{c}_k
+e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t}.
+\label{eqLaserHaizenbergSigmaA_pre1_2}
+\end{eqnarray}
+Объединяя вместе(\ref{eqLaserHaizenbergSigmaA_pre1_1}) и 
+(\ref{eqLaserHaizenbergSigmaA_pre1_2}) получим 
+\begin{equation}
+\frac{d \hat{\sigma}_a^j}{d t} = 
+i g 
+\Delta\left(t - t_j\right) 
+\hat{a}^{+}\hat{\sigma}^{j}_{ab}  +
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\hat{\sigma}^{i}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t} + \mbox{э. с.}
+\label{eqLaserHaizenbergSigmaA_pre2}
+\end{equation}
+
+При помощи (\ref{eqLaserHaizenbergCkPlus}) можно вычислить второе
+слагаемое (\ref{eqLaserHaizenbergSigmaA_pre2}):
+\begin{eqnarray}
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\hat{\sigma}^{i}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t} = 
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\left(0\right)\hat{\sigma}^{i}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t} -
+\nonumber \\
+-
+\sum_{k,i} 
+\left(g_{k}^{(A)}\right)^2
+\int_0^t d t'
+\hat{\sigma}_{ca}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+e^{i\left(\omega_{k}^{(A)} - \omega_{ac}\right)\left(t-t'\right)}
+-
+\nonumber \\
+-
+\sum_{k,i} 
+\left(g_{k}^{(A)}\right)^2
+\int_0^t d t'
+\hat{\sigma}_{cb}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+e^{i\left(\omega_{k}^{(A)} - \omega_{bc}\right)\left(t-t'\right)}
+e^{i\left(\omega_{bc} - \omega_{ac}\right)t}.
+\nonumber
+\end{eqnarray}
+Обозначив
+\begin{equation}
+\hat{f}_{a}^{j}\left(t\right) = i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\left(0\right)\hat{\sigma}^{i}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
+\label{eqLaserHaizenbergFAJ}
+\end{equation}
+получим
+\begin{eqnarray}
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\hat{\sigma}^{i}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t} = \hat{f}_{a}^{j} -
+\nonumber \\
+-
+\sum_i
+\int_0^t d t'
+\sum_k 
+\left(g_{k}^{(A)}\right)^2
+\hat{\sigma}_{ca}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+e^{i\left(\omega_{k}^{(A)} - \omega_{ac}\right)\left(t-t'\right)}
+-
+\nonumber \\
+-
+e^{i\left(\omega_{bc} - \omega_{ac}\right)t}
+\sum_i 
+\int_0^t d t'
+\sum_k
+\left(g_{k}^{(A)}\right)^2
+\hat{\sigma}_{cb}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+e^{i\left(\omega_{k}^{(A)} - \omega_{bc}\right)\left(t-t'\right)}
+ = 
+\nonumber \\
+=
+\hat{f}_{a}^{j}
+-
+D\left(\omega_{ac}\right)
+\left(g^{(A)}\left(\omega_{ac}\right)\right)^2
+\sum_i
+\int_0^t d t'
+\int_0^{\infty}d \omega' 
+\hat{\sigma}_{ca}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+e^{i\left(\omega' - \omega_{ac}\right)\left(t-t'\right)}
+-
+\nonumber \\
+-
+D\left(\omega_{bc}\right)
+\left(g^{(A)}\left(\omega_{bc}\right)\right)^2
+e^{i\left(\omega_{bc} - \omega_{ac}\right)t} \cdot
+\nonumber \\ 
+\cdot
+\sum_i 
+\int_0^t d t'
+\int_0^{\infty}d \omega' 
+\hat{\sigma}_{cb}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+e^{i\left(\omega' - \omega_{bc}\right)\left(t-t'\right)}
+\approx
+\nonumber \\
+\approx
+\hat{f}_{a}^{j}
+- 
+\frac{\gamma_{a}}{2}
+\sum_i
+\int_0^t d t'
+\hat{\sigma}_{ca}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+\delta\left(t-t'\right)
+-
+\nonumber \\
+-
+\frac{\gamma_{b}}{2}
+e^{i\left(\omega_{bc} - \omega_{ac}\right)t}
+\sum_i 
+\int_0^t d t'
+\hat{\sigma}_{cb}^{i}\left(t'\right)\hat{\sigma}^{j}_{ac}\left(t\right) 
+\delta\left(t-t'\right) =
+\nonumber \\
+= \hat{f}_{a}^{j}
+- 
+\frac{\gamma_{a}}{2}
+\hat{\sigma}_{a}^{j}\left(t\right) 
+-
+\frac{\gamma_{b}}{2}
+e^{i\left(\omega_{bc} - \omega_{ac}\right)t}
+\hat{\sigma}_{ba}^{j}\left(t\right) \approx
+\nonumber \\
+\approx
+\hat{f}_{a}^{j}
+- 
+\frac{\gamma_{a}}{2}
+\hat{\sigma}_{a}^{j}\left(t\right),
+\label{eqLaserHaizenbergSigmaA_pre3}
+\end{eqnarray}
+где 
+\[
+\gamma_{a} = 4 \pi D\left(\omega_{ac}\right)
+\left(g^{(A)}\left(\omega_{ac}\right)\right)^2
+\]
+и
+\[
+\gamma_{b} = 4 \pi D\left(\omega_{bc}\right)
+\left(g^{(A)}\left(\omega_{bc}\right)\right)^2.
+\]
+При выводе (\ref{eqLaserHaizenbergSigmaA_pre3}) мы также пренебрегли
+быстро осциллирующим членом 
+$\frac{\gamma_{b}}{2}
+e^{i\left(\omega_{bc} - \omega_{ac}\right)t}
+\hat{\sigma}_{ba}^{j}\left(t\right)$ 
+по сравнению с 
+$\frac{\gamma_{a}}{2}
+\hat{\sigma}_{a}^{j}\left(t\right)$.
+Таким образом в результате получаем
+\begin{equation}
+\frac{d \hat{\sigma}_a^j}{d t} = 
+- \gamma_{a} \hat{\sigma}_{a}^{j} +
+i g 
+\Delta\left(t - t_j\right) 
+ \left(
+\hat{a}^{+}\hat{\sigma}^{j}_{ab} -
+\left(\hat{\sigma}^{j}_{ab}\right)^{+}\hat{a}
+\right) + \hat{f}_{a}^{j}.
+\label{eqLaserHaizenbergSigmaAJ}
+\end{equation}
+
+По аналогии, можно получить выражение для $\hat{\sigma}_b^j$:
+\begin{equation}
+\frac{d \hat{\sigma}_b^j}{d t} = 
+- \gamma_{b} \hat{\sigma}_{b}^{j} -
+i g 
+\Delta\left(t - t_j\right) 
+ \left(
+\hat{a}^{+}\hat{\sigma}^{j}_{ab} -
+\left(\hat{\sigma}^{j}_{ab}\right)^{+}\hat{a}
+\right) + \hat{f}_{b}^{j},
+\label{eqLaserHaizenbergSigmaBJ}
+\end{equation}
+где
+\begin{equation}
+\hat{f}_{b}^{j}\left(t\right) = i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\left(0\right)\hat{\sigma}^{i}_{bc}  
+e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t} + \mbox{э. с.}
+\label{eqLaserHaizenbergFBJ}
+\end{equation}
+
+Для $\hat{\sigma}^{j}_{ab}$ имеем
+\begin{equation}
+\frac{d \hat{\sigma}_{ab}^j}{d t} = 
+\frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{\sigma}_{ab}^j\right] + 
+\frac{i}{\hbar}
+\left[\hat{V}_{AR_A}, \hat{\sigma}_{ab}^j\right].
+\label{eqLaserHaizenbergSigmaAB_pre1}
+\end{equation}
+Для первого члена суммы (\ref{eqLaserHaizenbergSigmaAB_pre1}) справедливо
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{\sigma}_{ab}^j\right] = 
+ \frac{i}{\hbar} g \hbar
+\sum_i
+\Delta\left(t - t_i\right) 
+ \left(
+\hat{a}^{+}\left[\hat{\sigma}^{i}_{ab},\hat{\sigma}_{ab}^j\right]  +
+\left[\left(\hat{\sigma}^{i}_{ab}\right)^{+},\hat{\sigma}_{ab}^j\right]
+\hat{a}
+\right),
+\nonumber
+\end{eqnarray}
+Откуда с учетом 
+\begin{eqnarray}
+\left[\left(\hat{\sigma}^{i}_{ab}\right)^{+},\hat{\sigma}_{ab}^j\right] = 
+\left|a^i\right>\left<b^i\right|\left.b^j\right>\left<a^j\right| -
+\left|b^j\right>\left<a^j\right|\left.a^i\right>\left<b^i\right| = 
+- \delta_{ij}\left(\hat{\sigma}^{j}_{a} - \hat{\sigma}^{j}_{b}\right)
+\nonumber
+\end{eqnarray}
+получим
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{\sigma}_{ab}^j\right] = 
+i g 
+\Delta\left(t - t_j\right) 
+\left(\hat{\sigma}^{j}_{a} -
+\hat{\sigma}^{j}_{b}\right)\hat{a}.
+\label{eqLaserHaizenbergSigmaAB_pre1_1}
+\end{eqnarray}
+
+Для второго члена суммы (\ref{eqLaserHaizenbergSigmaAB_pre1}) имеем
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AR_A}, \hat{\sigma}_{ab}^j\right] = 
+\nonumber \\
+=
+i
+\sum_{k,i}
+g_k^{(A)}
+\hat{c}_k^{+}
+ \left(
+\left[\hat{\sigma}^{i}_{ac},\hat{\sigma}_{ab}^j\right]  
+e^{i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
++ 
+\left[\hat{\sigma}^{i}_{bc},\hat{\sigma}_{ab}^j\right]  
+e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t}
+\right)
++
+\nonumber \\
++
+ i
+\sum_{k,i}
+g_k^{(A)}
+ \left(
+\left[\left(\hat{\sigma}^{i}_{ac}\right)^{+},\hat{\sigma}_{ab}^j\right]  
+e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
++ 
+\left[\left(\hat{\sigma}^{i}_{bc}\right)^{+},\hat{\sigma}_{ab}^j\right]  
+e^{-i\left(\omega_k^{(A)} - \omega_{bc}\right)t}
+\right)\hat{c}_k,
+\nonumber
+\end{eqnarray}
+которое с помощью коммутационных соотношений
+\begin{eqnarray}
+\left[\hat{\sigma}^{i}_{ac},\hat{\sigma}_{ab}^j\right] = 0, 
+\nonumber \\
+\left[\left(\hat{\sigma}^{i}_{ac}\right)^{+},\hat{\sigma}_{ab}^j\right] = 
+- \delta_{ij}\left(\hat{\sigma}^{j}_{bc}\right)^{+},
+\nonumber \\
+\left[\hat{\sigma}^{i}_{bc},\hat{\sigma}_{ab}^j\right] = \delta_{ij}\hat{\sigma}^{j}_{ac},
+\nonumber \\
+\left[\left(\hat{\sigma}^{i}_{bc}\right)^{+},\hat{\sigma}_{ab}^j\right] = 0
+\label{eqLaserHaizenbergTaskKommutator2}
+\end{eqnarray}
+переписывается в виде
+\begin{eqnarray}
+\frac{i}{\hbar}
+\left[\hat{V}_{AR_A}, \hat{\sigma}_{ab}^j\right] = 
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}
+\hat{\sigma}^{j}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t} -
+\nonumber \\
+-
+ i
+\sum_{k}
+g_k^{(A)}
+\left(\hat{\sigma}^{j}_{bc}\right)^{+}\hat{c}_k
+e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t},
+\label{eqLaserHaizenbergSigmaAB_pre1_2}
+\end{eqnarray}
+Объединяя вместе(\ref{eqLaserHaizenbergSigmaAB_pre1_1}) и 
+(\ref{eqLaserHaizenbergSigmaAB_pre1_2}) получим 
+\begin{eqnarray}
+\frac{d \hat{\sigma}_{ab}^j}{d t} = 
+i g 
+\Delta\left(t - t_j\right) 
+\left(\hat{\sigma}^{j}_{a} -
+\hat{\sigma}^{j}_{b}\right)\hat{a} +
+\nonumber \\
++ i \sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}
+\hat{\sigma}^{j}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t}
+-
+ i
+\sum_{k}
+g_k^{(A)}
+\left(\hat{\sigma}^{j}_{bc}\right)^{+}\hat{c}_k
+e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t}
+\label{eqLaserHaizenbergSigmaAB_pre2}
+\end{eqnarray}
+Подставив в (\ref{eqLaserHaizenbergSigmaAB_pre2}) выражения для
+$\hat{c_k}$ (\ref{eqLaserHaizenbergCk}) и $\hat{c_k}^{+}$
+(\ref{eqLaserHaizenbergCkPlus}) и пренебрегая быстро осциллирующими
+членами имеем:
+\begin{eqnarray}
+\frac{d \hat{\sigma}_{ab}^j}{d t} = 
+i g 
+\Delta\left(t - t_j\right) 
+\left(\hat{\sigma}^{j}_{a} -
+\hat{\sigma}^{j}_{b}\right)\hat{a} -
+\nonumber \\
+- \frac{\gamma_{b}}{2}
+\int_0^{\infty}dt'
+\hat{\sigma}^{j}_{cb}\left(t'\right)  
+\hat{\sigma}^{j}_{ac}\left(t\right) 
+\delta\left(t - t'\right) -
+\nonumber \\ 
+- \frac{\gamma_{a}}{2}
+\int_0^{\infty}dt'
+\hat{\sigma}^{j}_{cb}\left(t\right)  
+\hat{\sigma}^{j}_{ac}\left(t'\right) 
+\delta\left(t - t'\right) + \hat{f}_{ab}^{j},
+\label{eqLaserHaizenbergSigmaAB_pre3}
+\end{eqnarray}
+где
+\begin{eqnarray}
+\hat{f}_{ab}^{j}\left(t\right) = 
+i
+\sum_{k}
+g_k^{(A)}
+\hat{c}_k^{+}\left(0\right)
+\hat{\sigma}^{j}_{ac}  
+e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t} -
+\nonumber \\
+-
+ i
+\sum_{k}
+g_k^{(A)}
+\left(\hat{\sigma}^{j}_{bc}\right)^{+}\hat{c}_k\left(0\right)
+e^{-i\left(\omega_k^{(A)} - \omega_{ac}\right)t}.
+\label{eqLaserHaizenbergFABJ}
+\end{eqnarray}
+
+В дальнейшем мы будем пользоваться предположением о том, что
+\begin{equation}
+\gamma_{a} =
+\gamma_{b} = \gamma.
+\label{eqLaserHaizenbergGamma}
+\end{equation}
+Приняв во внимание
+\[
+\hat{\sigma}^{j}_{cb}\hat{\sigma}^{j}_{ac} = 
+\hat{\sigma}^{j}_{ab},
+\]
+в результате из (\ref{eqLaserHaizenbergSigmaAB_pre3}) получим 
+\begin{eqnarray}
+\frac{d \hat{\sigma}_{ab}^j}{d t} = 
+i g 
+\Delta\left(t - t_j\right) 
+\left(\hat{\sigma}^{j}_{a} -
+\hat{\sigma}^{j}_{b}\right)\hat{a} 
+- \gamma \hat{\sigma}^{j}_{cb}\hat{\sigma}^{j}_{ac} 
+ + \hat{f}_{ab}^{j} = 
+\nonumber \\
+= 
+i g 
+\Delta\left(t - t_j\right) 
+\left(\hat{\sigma}^{j}_{a} -
+\hat{\sigma}^{j}_{b}\right)\hat{a} 
+- \gamma \hat{\sigma}^{j}_{ab} 
+ + \hat{f}_{ab}^{j}
+\label{eqLaserHaizenbergSigmaABJ}
+\end{eqnarray}
+
+Для шумового оператора $\hat{f}_{ab}^{j}$ можно записать следующие
+корреляционные функции:
+\begin{eqnarray}
+\left<\left(\hat{f}_{ab}^{i}\left(t_1\right)\right)^{+}\hat{f}_{ab}^{j}\left(t_2\right)\right>
+= \delta_{ij}
+\frac{\gamma}{2}\left<\hat{\sigma}^{j}_{a}\right>\delta\left(t_1 -
+t_2\right),
+\nonumber \\
+\left<\hat{f}_{ab}^{j}\left(t_1\right)\left(\hat{f}_{ab}^{i}\left(t_2\right)\right)^{+}\right>
+= \delta_{ij}
+\frac{\gamma}{2}\left<\hat{\sigma}^{j}_{b}\right>\delta\left(t_1 -
+t_2\right).
+\label{eqLaserHaizenbergFABJCorrel}
+\end{eqnarray}
+Действительно для первого соотношения
+(\ref{eqLaserHaizenbergFABJCorrel}) предполагая среднее число фононов
+в моде резервуара равным $0$ в начальный момент времени:
+\begin{equation}
+\left<\hat{c}_{k_1}^{+}\left(0\right)\hat{c}_{k_2}\left(0\right)\right>
+= 0,
+\nonumber
+\end{equation}
+так что
+\begin{equation}
+\left<\hat{c}_{k_1}\left(0\right)\hat{c}_{k_2}^{+}\left(0\right)\right>
+= \delta_{k_1,k_2},
+\nonumber
+\end{equation}
+получим
+\begin{eqnarray}
+\left<\left(\hat{f}_{ab}^{i}\left(t_1\right)\right)^{+}\hat{f}_{ab}^{j}\left(t_2\right)\right>
+= 
+\nonumber \\
+=
+\sum_{k_1,k_2}
+g_{k_1}^{(A)}g_{k_2}^{(A)}
+\left<\hat{c}_{k_1}\left(0\right)\hat{c}_{k_2}^{+}\left(0\right)\right>
+\left<\left(\hat{\sigma}^{i}_{ac}\right)^{+}\hat{\sigma}^{j}_{ac}\right>  
+e^{- i\left(\omega_{k_1}^{(A)} - \omega_{bc}\right)t_1}
+e^{i\left(\omega_{k_2}^{(A)} - \omega_{bc}\right)t_2} +
+\nonumber \\
++
+\sum_{k_1,k_2}
+g_{k_1}^{(A)}g_{k_2}^{(A)}
+\left<\hat{c}_{k_1}^{+}\left(0\right)\hat{c}_{k_2}\left(0\right)\right>
+\left<\hat{\sigma}^{i}_{bc}\left(\hat{\sigma}^{j}_{bc}\right)^{+}\right>
+e^{i\left(\omega_{k_1}^{(A)} -
+  \omega_{ac}\right)t_1}e^{-i\left(\omega_{k_2}^{(A)} -
+  \omega_{ac}\right)t_2} = 
+\nonumber \\
+= 
+\sum_{k}
+\left(g_{k}^{(A)}\right)^2
+\left<\left(\hat{\sigma}^{i}_{ac}\right)^{+}\hat{\sigma}^{j}_{ac}\right>  
+e^{- i\left(\omega_{k}^{(A)} - \omega_{bc}\right)\left(t_1 -
+  t_2\right)} = 
+\nonumber \\
+=
+\delta_{ij}
+\sum_{k}
+\left(g_{k}^{(A)}\right)^2 
+\left<\hat{\sigma}^{j}_{a}\right>  
+e^{- i\left(\omega_{k}^{(A)} - \omega_{bc}\right)\left(t_1 -
+  t_2\right)} = 
+\delta_{ij}
+\frac{\gamma}{2}\left<\hat{\sigma}^{j}_{a}\right>\delta\left(t_1 - t_2\right).
+\nonumber
+\end{eqnarray}
+
+
+\subsection{Уравнения движения для макро-величин}
+От уравнений движения, описывающих поведение отдельного атома
+(\ref{eqLaserHaizenbergSigmaAJ}, \ref{eqLaserHaizenbergSigmaBJ},
+\ref{eqLaserHaizenbergSigmaABJ}), следует перейти к уравнениям,
+описывающим поведение всей атомной подсистемы в целом. Для этого от
+операторов $\hat{\sigma}^{j}_{a}$, $\hat{\sigma}^{j}_{b}$ и
+$\hat{\sigma}^{j}_{ab}$ мы перейдем к новым операторам которые
+определяют совокупное воздействие всех атомов:
+\begin{eqnarray}
+\hat{N}_{a} = \sum_j \Delta\left(t - t_j\right)\hat{\sigma}^{j}_{a}, 
+\nonumber \\
+\hat{N}_{b} = \sum_j \Delta\left(t - t_j\right)\hat{\sigma}^{j}_{b}, 
+\nonumber \\
+\hat{N}_{ab} = \sum_j \Delta\left(t - t_j\right)\hat{\sigma}^{j}_{ab}.
+\label{eqLaserHaizenbergSigmaMacroDef}
+\end{eqnarray}
+
+Рассмотрим далее $\frac{d \hat{N}_{a}}{d t}$:
+\begin{eqnarray}
+\frac{d \hat{N}_{a}}{d t} = 
+\sum_j \frac{d \Delta\left(t - t_j\right)}{d t}\hat{\sigma}^{j}_{a} +
+\sum_j \Delta\left(t - t_j\right)\frac{d \hat{\sigma}^{j}_{a}}{d t} = 
+\nonumber \\
+= \sum_j \delta\left(t - t_j\right)\hat{\sigma}^{j}_{a} + \sum_j
+\Delta\left(t - t_j\right)\frac{d \hat{\sigma}^{j}_{a}}{d t}. 
+\label{eqLaserHaizenbergNA_pre1}
+\end{eqnarray}
+Подставляя далее (\ref{eqLaserHaizenbergSigmaAJ}) в
+(\ref{eqLaserHaizenbergNA_pre1}) и принимая во внимание
+(\ref{eqLaserHaizenbergGamma}) получим:
+\begin{eqnarray}
+\frac{d \hat{N}_{a}}{d t} 
+= \sum_j \delta\left(t - t_j\right)\hat{\sigma}^{j}_{a} - \gamma
+\sum_j \Delta\left(t - t_j\right) \hat{\sigma}_{a}^{j} +
+\nonumber \\
++
+i g \sum_j
+\Delta\left(t - t_j\right) 
+ \left(
+\hat{a}^{+}\hat{\sigma}^{j}_{ab} -
+\left(\hat{\sigma}^{j}_{ab}\right)^{+}\hat{a}
+\right) + \sum_j \Delta\left(t - t_j\right) \hat{f}_{a}^{j} = 
+\nonumber \\
+= 
+\sum_j \delta\left(t - t_j\right)\hat{\sigma}^{j}_{a} - \gamma
+\hat{N}_{a} + 
+\nonumber \\ 
++ i g  \left(
+\hat{a}^{+}\hat{N}_{ab} -
+\hat{N}_{ab}^{+}\hat{a}
+\right) + \sum_j \Delta\left(t - t_j\right) \hat{f}_{a}^{j}
+\label{eqLaserHaizenbergNA_pre2}
+\end{eqnarray}
+
+Рассмотрим далее среднее значение от первого члена (\ref{eqLaserHaizenbergNA_pre2}):
+\begin{eqnarray}
+\left<\sum_j \delta\left(t -
+t_j\right)\hat{\sigma}^{j}_{a}\left(t\right)\right> = 
+\left<\sum_j \delta\left(t -
+t_j\right)\hat{\sigma}^{j}_{a}\left(t_j\right)\right> =
+\nonumber \\
+\left<\sum_j \delta\left(t -
+t_j\right)\left<\hat{\sigma}^{j}_{a}\left(t_j\right)\right>\right>_T,
+\label{eqLaserHaizenbergMiddNAFirst_pre1}
+\end{eqnarray}
+где $\left<\dots\right>_T$ означает усреднение по моментам инжекции
+атомов:
+\begin{equation}
+\left<\dots\right>_T =
+r_a\int_{-\infty}^{\infty}\left(\dots\right)d t_j,
+\label{eqLaserHaizenbergMiddNAFirst_pre2}
+\end{equation}
+где $r_a$ скорость инжекции атомов. 
+Для среднего значения оператора $\hat{\sigma}^{j}_{a}$
+предполагая, что в момент времени $t_j$ $j$-й атом инжектируется в
+возбужденном состоянии, имеем
+\begin{equation}
+\left<\hat{\sigma}^{j}_{a}\left(t_j\right)\right> = 
+\left<a\right|\hat{\sigma}^{j}_{a}\left|a\right> = 1.
+\label{eqLaserHaizenbergMiddNAFirst_pre3}
+\end{equation}  
+Подставив (\ref{eqLaserHaizenbergMiddNAFirst_pre2}) и
+(\ref{eqLaserHaizenbergMiddNAFirst_pre3}) в
+(\ref{eqLaserHaizenbergMiddNAFirst_pre1}) получим
+\begin{equation}
+\left<\sum_j \delta\left(t -
+t_j\right)\hat{\sigma}^{j}_{a}\left(t\right)\right> = r_a.
+\label{eqLaserHaizenbergMiddNAFirst}
+\end{equation}
+
+Далее добавим и вычтем среднее (\ref{eqLaserHaizenbergMiddNAFirst})
+из (\ref{eqLaserHaizenbergNA_pre2}), в результате получим:
+\begin{eqnarray}
+\frac{d \hat{N}_{a}}{d t} 
+= r_a  - \gamma
+\hat{N}_{a} 
++ i g  \left(
+\hat{a}^{+}\hat{N}_{ab} -
+\hat{N}_{ab}^{+}\hat{a}
+\right) + \hat{F}_{a},
+\label{eqLaserHaizenbergNA}
+\end{eqnarray}
+где введен новый шумовой оператор $\hat{F}_{a}$, который учитывает не только
+квантовые флуктуации, но флуктуации моментов инжекции активных атомов:
+\begin{equation}
+\hat{F}_{a} = \sum_j \delta\left(t - t_j\right)\hat{\sigma}^{j}_{a} -
+r_a + \sum_j \Delta\left(t - t_j\right) \hat{f}_{a}^{j}, 
+\label{eqLaserHaizenbergFNA}
+\end{equation}
+при этом очевидно что среднее значение данного оператора равно 0:
+\begin{eqnarray}
+\left<\hat{F}_{a}\right> = \left<\sum_j \delta\left(t - t_j\right)\hat{\sigma}^{j}_{a}\right> -
+r_a + \left<\sum_j \Delta\left(t - t_j\right)
+\hat{f}_{a}^{j}\right> = 0. 
+\nonumber
+\end{eqnarray}
+
+Из (\ref{eqLaserHaizenbergSigmaBJ},
+\ref{eqLaserHaizenbergSigmaABJ} ) можно получить следующие соотношения для
+$\hat{N}_b$ и $\hat{N}_{ab}$:
+\begin{eqnarray}
+\frac{d \hat{N}_b}{d t} = 
+- \gamma \hat{N}_{b} -
+i g 
+ \left(
+\hat{a}^{+}\hat{N}_{ab} -
+\hat{N}_{ab}^{+}\hat{a}
+\right) + \hat{F}_{b},
+\nonumber \\
+\frac{d \hat{N}_{ab}}{d t} = 
+- \gamma \hat{N}_{ab} 
++ i g 
+\left(\hat{N}_{a} -
+\hat{N}_{b}\right)\hat{a} 
+ + \hat{F}_{ab},
+\label{eqLaserHaizenberNB_AB}
+\end{eqnarray}
+где введены следующие шумовые операторы
+\begin{eqnarray}
+\hat{F}_{b} = \sum_j\Delta\left(t - t_j\right)\hat{f}^{j}_{b} + \sum_j
+\delta\left(t - t_j\right)\hat{\sigma}^{j}_{b}, 
+\nonumber \\
+\hat{F}_{ab} = \sum_j\Delta\left(t - t_j\right)\hat{f}^{j}_{ab} +
+\sum_j \delta\left(t - t_j\right)\hat{\sigma}^{j}_{ab}. 
+\label{eqLaserHaizenbergFB_AB}
+\end{eqnarray}
+С учетом того, что
+\[
+\left<\hat{\sigma}^{j}_{b}\left(t_j\right)\right> = 
+\left<\hat{\sigma}^{j}_{ab}\left(t_j\right)\right> = 0,
+\]
+эти операторы обладают нулевым средним. 
+
+Для коррелятора 
+$\left<\hat{F}_{ab}^{+}\left(t_1\right)\hat{F}_{ab}\left(t_2\right)\right>$
+из (\ref{eqLaserHaizenbergFABJCorrel}) можно получить следующее
+соотношение
+\begin{eqnarray}
+\left<\hat{F}_{ab}^{+}\left(t_1\right)\hat{F}_{ab}\left(t_2\right)\right>
+= \sum_{ij}\Delta\left(t_1 - t_i\right)\Delta\left(t_2 -
+t_j\right)\left<\left(\hat{f}^{i}_{ab}\right)^{+}\hat{f}^{j}_{ab}\right>
++
+\nonumber \\
++ 
+\sum_{ij} \delta\left(t_1 - t_i\right)\delta\left(t_2 - t_j\right)
+\left<\left(\hat{\sigma}^{i}_{ab}\right)^{+}\hat{\sigma}^{j}_{ab}\right>
+= 
+\nonumber \\
+=
+\frac{\gamma}{2}\delta\left(t_1 - t_2\right)\sum_{j}\Delta\left(t_1 -
+t_j\right)\left<\hat{\sigma}^{j}_{a}\right> +
+\delta\left(t_1 - t_2\right) \sum_{j} \delta\left(t_1 - t_j\right)
+\left<\hat{\sigma}^{j}_{a}\right> 
+=
+\nonumber \\
+= 
+\left(
+\frac{\gamma}{2}\bar{N}_a + r_a
+\right)\delta\left(t_1 - t_2\right),
+\label{eqLaserHaizenbergFABCorrel_1}
+\end{eqnarray}
+где через $\bar{N}_a$ обозначено среднее число атомов в возбужденном
+состоянии в рассматриваемый момент времени $t_1$
+\begin{equation}
+\bar{N}_a\left(t_1\right) = \sum_{j} \delta\left(t_1 - t_j\right)
+\left<\hat{\sigma}^{j}_{a}\right>
+\nonumber 
+\end{equation}
+Аналогично для коррелятора 
+$\left<\hat{F}_{ab}\left(t_1\right)\hat{F}_{ab}^{+}\left(t_2\right)\right>$
+из (\ref{eqLaserHaizenbergFABJCorrel}) можно получить следующее
+соотношение
+\begin{eqnarray}
+\left<\hat{F}_{ab}\left(t_1\right)\hat{F}_{ab}^{+}\left(t_2\right)\right>
+= \sum_{ij}\Delta\left(t_1 - t_i\right)\Delta\left(t_2 -
+t_j\right)\left<\hat{f}^{i}_{ab}\left(\hat{f}^{j}_{ab}\right)^{+}\right>
++
+\nonumber \\
++ 
+\sum_{ij} \delta\left(t_1 - t_i\right)\delta\left(t_2 - t_j\right)
+\left<\hat{\sigma}^{j}_{ab}\left(\hat{\sigma}^{i}_{ab}\right)^{+}\right>
+= 
+\nonumber \\
+=
+\frac{\gamma}{2}\delta\left(t_1 - t_2\right)\sum_{j}\Delta\left(t_1 -
+t_j\right)\left<\hat{\sigma}^{j}_{b}\right> +
+\delta\left(t_1 - t_2\right) \sum_{j} \delta\left(t_1 - t_j\right)
+\left<\hat{\sigma}^{j}_{b}\right> 
+=
+\nonumber \\
+= 
+\frac{\gamma}{2}\bar{N}_b\delta\left(t_1 - t_2\right),
+\label{eqLaserHaizenbergFABCorrel_2}
+\end{eqnarray}
+где опять же введено среднее число атомов в невозбужденном состоянии:
+\begin{equation}
+\bar{N}_b\left(t_1\right) = \sum_{j} \delta\left(t_1 - t_j\right)
+\left<\hat{\sigma}^{j}_{b}\right>
+\nonumber 
+\end{equation}
+
+В дальнейшем будет удобно использовать оператор разности населенностей
+$\hat{N}_z = \hat{N}_a - \hat{N}_b$, для которого из
+(\ref{eqLaserHaizenbergNA}) и 
+(\ref{eqLaserHaizenberNB_AB}) получим:
+\begin{equation}
+\frac{d \hat{N}_z}{d t} = r_a
+- \gamma \hat{N}_{z} +
+2 i g 
+ \left(
+\hat{a}^{+}\hat{N}_{ab} -
+\hat{N}_{ab}^{+}\hat{a}
+\right) + \hat{F}_{z},
+\label{eqLaserHaizenberNZ}
+\end{equation}
+где
+\begin{equation}
+\hat{F}_{z} = \hat{F}_{a} - \hat{F}_{b}.
+\label{eqLaserHaizenberFZ}
+\end{equation}
+
+\subsection{Уравнения движения электромагнитного поля}
+
+Так же как и в случае атомной подсистемы рассмотрение начнем с
+уравнений которым удовлетворяют операторы резервуара $R_A$:
+$\hat{b}_k$. Так как исследуемые операторы входят только в
+гамильтониан $\hat{V}_{FR_F}$ то уравнение движения имеет вид
+\begin{equation}
+\frac{d \hat{b}_k}{d t} = \frac{i}{\hbar}\left[\hat{V}_{FR_F}, \hat{b}_k
+\right].
+\label{eqLaserHaizenbergBk_pre1}
+\end{equation}
+Подставляя в (\ref{eqLaserHaizenbergBk_pre1}) выражение для
+гамильтониана (\ref{eqLaserHaizenbergVFRF}) получим
+\begin{eqnarray}
+\frac{d \hat{b}_k}{d t} = \frac{i}{\hbar}\left[\hat{V}_{FR_F}, \hat{b}_k
+\right] = 
+\nonumber \\
+= \frac{i}{\hbar} \hbar 
+\sum_{k',j} 
+g_{k'}^{(F)}\left[\hat{b}_{k'}^{+},
+  \hat{b}_{k'}\right]\hat{a}e^{i\left(\omega_{k'}^{(F)} - \omega\right)t} = 
+-i g_{k}^{(F)}\hat{a}e^{i\left(\omega_{k}^{(F)} - \omega\right)t}.
+\label{eqLaserHaizenbergBk_pre2}
+\end{eqnarray}
+Формальное интегрирование (\ref{eqLaserHaizenbergBk_pre2}) дает нам
+\begin{equation}
+\hat{b}_k\left(t\right) = 
+\hat{b}_k\left(0\right) 
+-i g_{k}^{(F)}\int_0^t d
+t'\hat{a}\left(t'\right)e^{i\left(\omega_{k}^{(F)} - \omega\right)t'}.
+\label{eqLaserHaizenbergBk}
+\end{equation}
+
+Оператор моды электромагнитного поля $\hat{a}$ присутствует в
+гамильтонианах $\hat{V}_{AF}$ и $\hat{V}_{FR_F}$, т. о.  с учетом
+выражений для этих гамильтонианов (\ref{eqLaserHaizenbergVAF}) и 
+(\ref{eqLaserHaizenbergVFRF})и принимая во внимание определение
+(\ref{eqLaserHaizenbergSigmaMacroDef}) имеем 
+\begin{eqnarray}
+\frac{d \hat{a}}{d t} = \frac{i}{\hbar}
+\left[\hat{V}_{AF}, \hat{a}\right] + 
+\frac{i}{\hbar}
+\left[\hat{V}_{FR_F}, \hat{a}\right] = 
+\nonumber \\
+= \frac{i}{\hbar}\hbar g
+\sum_j
+\Delta\left(t - t_j\right) 
+\left[\hat{a}^{+},\hat{a}\right]\hat{\sigma}^{j}_{ab} +
+\nonumber \\
++ 
+\frac{i}{\hbar}\hbar
+\sum_k
+g_k^{(F)}
+\left[\hat{a}^{+},\hat{a}\right]\hat{b}_k e^{-i\left(\omega_k^{(F)} -
+  \omega\right)t} = 
+\nonumber \\
+= -i g 
+\sum_j
+\Delta\left(t - t_j\right) \hat{\sigma}^{j}_{ab} -
+i \sum_k
+g_k^{(F)}\hat{b}_k e^{-i\left(\omega_k^{(F)} -
+  \omega\right)t} =
+\nonumber \\ 
+= -i g \hat{N}_{ab} -
+i \sum_k
+g_k^{(F)}\hat{b}_k e^{-i\left(\omega_k^{(F)} -
+  \omega\right)t}.
+\label{eqLaserHaizenbergA_pre1}
+\end{eqnarray}
+
+Подставив (\ref{eqLaserHaizenbergBk}) в
+(\ref{eqLaserHaizenbergA_pre1}) получим
+\begin{eqnarray}
+\frac{d \hat{a}}{d t} = 
+-i g \hat{N}_{ab}
+- 2 \pi
+D\left(\omega\right) \left(g^{(F)}\left(\omega\right)\right)^2
+\int_0^td t' \hat{a}\left(t'\right)\delta\left(t - t'\right) - 
+\nonumber \\
+-
+i
+\sum_k
+g_k^{(F)}\hat{b}_k \left(0\right)e^{-i\left(\omega_k^{(F)} -
+  \omega\right)t}.
+\nonumber
+\end{eqnarray}
+Обозначая через 
+\[
+\gamma^{(F)} = 4 \pi
+D\left(\omega\right) \left(g^{(F)}\left(\omega\right)\right)^2 = \frac{\omega}{Q}
+\]
+и вводя шумовой оператор
+\begin{equation}
+\hat{F}_F\left(t\right) = - i
+\sum_k
+g_k^{(F)}\hat{b}_k \left(0\right)e^{-i\left(\omega_k^{(F)} -
+  \omega\right)t}
+\label{eqLaserHaizenbergFF}
+\end{equation}
+окончательно получим
+\begin{equation}
+\frac{d \hat{a}}{d t} = 
+- \frac{1}{2}\frac{\omega}{Q}\hat{a}
+-i g \hat{N}_{ab} + 
+\hat{F}_F.
+\label{eqLaserHaizenbergA}
+\end{equation}
+
+В силу того, что определение шумового оператора
+(\ref{eqLaserHaizenbergFF}) совпадает с
+определением (\ref{eqPart1Ch2_LanzgevenDefenitionF}), то мы можем
+написать корреляционные соотношения в виде
+(\ref{eqPart1Ch2_LanzgevenCorrelations}) и (\ref{eqPart1Ch2_Lanzgeven_Task1}):
+\begin{eqnarray}
+\left<\hat{F}_{F}^{+}\left(t_1\right)\hat{F}_{F}\left(t_2\right)\right> = 
+\frac{\gamma \bar{n}_T}{2} \delta\left(t_1 - t_2\right) = 
+\frac{1}{2}\frac{\omega}{Q}\bar{n}_T\delta\left(t_1 - t_2\right),
+\nonumber \\
+\left<\hat{F}_{F}\left(t_1\right)\hat{F}_{F}^{+}\left(t_2\right)\right> = 
+\frac{1}{2}\frac{\omega}{Q}\left(\bar{n}_T + 1 \right)\delta\left(t_1 - t_2\right),
+\label{eqLaserHaizenbergFFCorrel}
+\end{eqnarray}
+где $\bar{n}_T$ среднее число фононов в моде резервуара при
+температуре $T$.

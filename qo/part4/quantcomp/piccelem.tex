@@ -1,0 +1,79 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Mon Oct 15 23:46:02 MSK 2012
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="30" y-min="0" y-max="21.25" auto-bounding="true">
+%<multicurve points="(5,20);(5,20);(25,20);(25,20)"
+%	 />
+%<multicurve points="(15,20);(15,20);(15,10);(15,10)"
+%	 />
+%<ellipse fill-style="solid"
+%	 p3="(16.25,18.75)"
+%	 p2="(16.25,21.25)"
+%	 p1="(13.75,21.25)"
+%	 closure="open"
+%	 angle-end="360"
+%	 angle-start="0"
+%	 />
+%<parallelogram p3="(20,0)"
+%	 p2="(20,10)"
+%	 p1="(10,10)"
+%	 />
+%<multicurve points="(5,5);(5,5);(10,5);(10,5)"
+%	 />
+%<multicurve points="(20,5);(20,5);(25,5);(25,5)"
+%	 />
+%<text anchor-point="(15,5)"
+%	 >
+%$\hat{U}$
+%</text>
+%<text anchor-point="(0,20)"
+%	 >
+%$\left|x_1\right&gt;$
+%</text>
+%<text anchor-point="(0,5)"
+%	 >
+%$\left|x_2\right&gt;$
+%</text>
+%<text anchor-point="(30,20)"
+%	 >
+%$\left|y_1\right&gt;$
+%</text>
+%<text anchor-point="(30,5)"
+%	 >
+%$\left|y_2\right&gt;$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(30,21.25)(0,0)
+\linethickness{0.3mm}
+\put(5,20){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(15,10){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(15,20){\circle*{2.5}}
+
+\linethickness{0.3mm}
+\put(10,10){\line(1,0){10}}
+\put(10,0){\line(0,1){10}}
+\put(20,0){\line(0,1){10}}
+\put(10,0){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(5,5){\line(1,0){5}}
+\linethickness{0.3mm}
+\put(20,5){\line(1,0){5}}
+\put(15,5){\makebox(0,0)[cc]{$\hat{U}$}}
+
+\put(0,20){\makebox(0,0)[cc]{$\left|x_1\right>$}}
+
+\put(0,5){\makebox(0,0)[cc]{$\left|x_2\right>$}}
+
+\put(30,20){\makebox(0,0)[cc]{$\left|y_1\right>$}}
+
+\put(30,5){\makebox(0,0)[cc]{$\left|y_2\right>$}}
+
+\end{picture}

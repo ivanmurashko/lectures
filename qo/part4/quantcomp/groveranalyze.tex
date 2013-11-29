@@ -1,0 +1,91 @@
+%% -*- coding:utf-8 -*- 
+\subsection{Анализ алгоритма Гровера}
+
+Нас будет интересовать два вопроса: какова алгоритмическая сложность
+алгоритма Гровера и существуют ли алгоритмы которые могут выполнять
+задачу поиска в неструктурированном объеме данных более эффективно чем
+алгоритм Гровера.
+
+Критерием эффективности алгоритма служит следующий факт: хороший
+алгоритм должен находить искомое значение с минимальным числом вызовов
+функции (\ref{eqQuantCompGroverF}).
+
+Рассмотрим самую первую итерацию. Начальное состояние
+$\left|\psi\right>_0$ имеет следующий вид
+\begin{equation}
+\left|\psi\right>_0 =
+\sum_x \alpha_x \left|x\right> =  
+\left|s\right> = 
+\frac{1}{\sqrt{N}}\sum_x \left|x\right> = 
+\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> +
+\frac{1}{\sqrt{N}} \left|x^{\ast}\right>.
+\nonumber
+\end{equation}
+Таким образом коэффициент перед искомым элементом имеет вид
+$\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$. 
+
+После применения оператора инверсии
+фазы $U_{x^{\ast}}$ из (\ref{eqQuantCompGroverUxast}) получим
+\begin{equation}
+\hat{U}_{x^{\ast}} \left|\psi\right>_0 =
+\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> - 
+\frac{1}{\sqrt{N}} \left|x^{\ast}\right>.
+\nonumber
+\end{equation}
+
+После применения оператора обращения относительно среднего $\hat{U}_s$ 
+из (\ref{eqQuantCompGroverUs}) получим
+\begin{eqnarray}
+\hat{U}_s \hat{U}_{x^{\ast}} \left|\psi\right>_0 = 
+\hat{U}_G \left|\psi\right>_0 \approx 
+\sum_{x\ne x^{\ast}} \left( 2 \frac{1}{\sqrt{N}} - \frac{1}{\sqrt{N}}
+\right) \left|x\right> + 
+\nonumber \\
++ \left( 2 \frac{1}{\sqrt{N}} +
+\frac{1}{\sqrt{N}} \right) \left|x^{\ast}\right> = 
+\nonumber \\
+= 
+\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> + 
+\frac{3}{\sqrt{N}} \left|x^{\ast}\right>.
+\label{eqQuantCompGroverAnalyzeRought}
+\end{eqnarray}
+При выводе (\ref{eqQuantCompGroverAnalyzeRought}) было принятно 
+\[
+\mathcal{M} = \frac{\sum_x \alpha_x}{N} \approx
+\frac{N}{N \sqrt{N}} = \frac{1}{\sqrt{N}}.
+\]
+Таким образом после первой итерации алгоритма Гровера амплитуда
+$\alpha_{x^{\ast}}$ возросла на $\frac{2}{\sqrt{N}}$. Если
+апроксимировать этот результат на произвольную итерацию, то можно
+получить, что $50\%$ вероятность обнаружить $\left|x^{\ast}\right>$
+будет достижима за следующее число итераций:
+\[
+\frac{1}{\sqrt{2}}/\frac{2}{\sqrt{N}} =
+\frac{\sqrt{N}}{2 \sqrt{2}} = O\left(\sqrt{N}\right).
+\]
+
+Более точные расчеты \cite{nielsen2000quantum} дают для числа итераций
+$\frac{\pi}{4}\sqrt{N}$. Таким образом алгоритм Гровера может быть
+записан следующим образом  
+\begin{algorithm}
+\caption{Алгоритм Гровера}
+\label{algQuantCompGrover}
+\begin{algorithmic}
+    \STATE $\left|\psi\right>_0 \Leftarrow \frac{1}{\sqrt{N}}\sum_x 
+    \left|x\right>$
+    \STATE $t \Leftarrow 1$
+    \REPEAT
+    \STATE $\left|\psi\right>_t \Leftarrow \hat{U}_s\hat{U}_{x^{\ast}}
+    \left|\psi\right>_{t-1}$
+    \STATE $t \Leftarrow t + 1$
+    \UNTIL{ ($t < \frac{\pi}{4}\sqrt{N}$)}
+    \RETURN результат измерения состояния $\left|\psi\right>_t$
+\end{algorithmic}
+\end{algorithm}
+
+Можно задать вопрос об оптимальности алгоритма Гровера: существует ли
+квантовый алгоритм, который выполняет поиск в неструктурированном
+объеме данных быстрее чем за $O\left(\sqrt{N}\right)$ обращений к
+функции (\ref{eqQuantCompGroverF}). В статье
+\cite{bBennettGroverOptimal} показано, что такого алгоритма
+не существует.

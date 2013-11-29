@@ -1,0 +1,300 @@
+%% -*- coding:utf-8 -*- 
+\section{Уравнение для матрицы плотности поля в представлении чисел
+  заполнения}
+\label{ch2_7}
+В представлении чисел заполнения (чисел фотонов) матричные элементы
+определяются равенством
+\[
+\rho_{nm} = \left<n\right|\hat{\rho}\left|m\right>.
+\]
+Для получения нужного уравнения помножим
+(\ref{eqCh2_rho_final2}) слева на $\left<n\right|$ и справа на  
+$\left|m\right>$.  Пользуясь
+свойствами операторов $\hat{a}$ и $\hat{a}^{+}$,  получим систему
+уравнений, связывающих между собой матричные элементы 
+\begin{eqnarray}
+\dot{\rho}_{nm} = - \frac{1}{2}
+\left(
+R_a\left(n + 1 + m + 1\right) + 
+R_b\left(n + m\right)
+\right)\rho_{nm} +
+\nonumber \\
++ 
+R_a\sqrt{nm}\rho_{n - 1, m - 1} +
+R_b\sqrt{\left(n + 1\right)\left(m + 1\right)}\rho_{n + 1, m + 1}.
+\label{eqCh2_task5}
+\end{eqnarray}
+Для диагональных элементов $n = m$,  следовательно
+\begin{eqnarray}
+\dot{\rho}_{nn} = - 
+\left(
+R_a\left(n + 1\right) + 
+R_b\left(n\right)
+\right)\rho_{nn} +
+\nonumber \\
++ 
+R_a n \rho_{n - 1, n - 1} +
+R_b\left(n + 1\right)\rho_{n + 1, n + 1}.
+\label{eqCh2_51}
+\end{eqnarray}
+
+\input ./part1/interaction/fig8.tex
+
+Это уравнение можно рассматривать как баланс потоков вероятностей
+чисел фотонов. Условно это изображено на рис. \ref{figPart1Ch2_8}. В
+тепловом равновесии потоки должны быть равны. Отсюда, используя
+принцип детального равновесия, получим равенства: 
+\begin{eqnarray}
+R_a n \rho_{n - 1, n - 1} = R_b n \rho_{nn},
+\nonumber \\
+R_a \left(n + 1\right) \rho_{n n} = R_b 
+\left(n + 1\right) \rho_{n + 1, n + 1}
+\label{eqCh2_52}
+\end{eqnarray}
+Из (\ref{eqCh2_52}) имеем
+\begin{equation}
+\rho_{n + 1, n + 1} = \frac{R_a}{R_b}\rho_{nn} = 
+e^{-\frac{\hbar \omega}{k_B T}}\rho_{nn},
+\label{eqCh2_53}
+\end{equation}
+так как  
+\(
+\frac{R_a}{R_b} = 
+\exp \left(-\frac{\hbar \omega}{k_B T}\right)
+\)
+(резервуар находится в равновесии при температуре
+$T$). Используя последовательно (\ref{eqCh2_53}), начиная с  $n = 0$, 
+получим:  
+\begin{equation}
+\rho_{nn} = \rho_{00} 
+e^{-\frac{n \hbar \omega}{k_B T}} =
+\left(1 - e^{-\frac{\hbar \omega}{k_B T}}\right) 
+e^{-\frac{n \hbar \omega}{k_B T}},
+\end{equation}
+где $\rho_{00}$ найдено из условия $\sum_{(n)}\rho_{nn} = 1$.
+
+Среднее число фотонов в моде, как и следовало ожидать, определяется
+формулой Планка 
+\begin{equation}
+\bar{n} = \left<n\right> = 
+\sum_{(n)} n \rho_{nn} = 
+\frac{1}{ e^{\frac{\hbar \omega}{k_B T}} - 1}.
+\end{equation}
+
+Из всего сказанного следует, что со временем температура излучения
+становится равной температуре атомного пучка (резервуара).  
+Изменение среднего числа фотонов во времени получим из уравнения 
+(\ref{eqCh2_51})
+\begin{eqnarray}
+\frac{d}{d t}\left<n\left(t\right)\right> = \sum_{(n)}n \dot{\rho} = 
+\nonumber \\
+= \sum_{(n)}\left(-R_a\left(n^2 + n\right)\rho_{nn} - R_b n^2
+\rho_{nn} + \right.
+\nonumber \\
++ \left.
+R_b \left(n^2 + n\right) \rho_{n +1, n+ 1} +
+R_a n^2 \rho_{n - 1, n - 1}
+\right).
+\end{eqnarray}
+Заменим переменные суммирования  $m= n + 1$  в третьей сумме и  $m = n
+- 1$  в четвертой сумме. Получим:
+\begin{eqnarray}
+\frac{d}{d t}\left<n\right> = 
+-R_a \sum_{(n)}\left(n^2 + n\right)\rho_{nn}
+ - R_b \sum_{(n)} n^2 \rho_{nn} +
+\nonumber \\
++ R_b\sum_{(m)}\left(m^2 - m\right)\rho_{m,m} 
++ R_a\sum_{(m)}\left(m^2 +2 m + 1\right)\rho_{m,m} = 
+\nonumber \\
+= R_a \sum_{(m)}\left( m + 1\right)\rho_{m,m} - R_b\sum_{(m)} m
+\rho_{m,m} =
+\nonumber \\
+= \left(R_a - R_b\right) \left<n\right> + R_a.
+\label{eqCh2_57}
+\end{eqnarray}
+В равновесии
+\[
+\frac{d}{d t}\left<n\right> = 0,
+\]  
+и мы получаем прежнее соотношение
+\begin{equation}
+\left<n_{(\infty)}\right> = \bar{n} = 
+\frac{R_a}{R_b - R_a} = \frac{1}{\frac{R_b}{R_a} - 1} = 
+\frac{1}{e^{\frac{\hbar \omega}{k_B T}} - 1}.
+\end{equation}
+
+Уравнение (\ref{eqCh2_57}) описывает изменение числа фотонов (энергии)
+во времени в результате релаксации (взаимодействия с диссипативной
+системой). Классическое уравнение, описывающее этот процесс имеет вид
+\begin{equation}
+\frac{d}{d t}\left<n\right> = 
+- \frac{\omega}{Q}\left<n\right> + \frac{\omega}{Q} \left<n\right>_{\mbox{рав.}},
+\nonumber
+\end{equation}
+где $\left<n\right>_{\mbox{рав.}} = \bar{n}_T$ равновесное значение
+$\left<n\right>$ при температуре $T$, а $Q$ - добротность резонатора.
+Следовательно можно положить 
+\begin{eqnarray}
+R_b - R_a = \frac{\omega}{Q},
+\nonumber \\
+R_a = \bar{n}_T \frac{\omega}{Q},
+\nonumber \\
+R_b = \frac{\omega}{Q} \left(1 + \bar{n}_T\right),
+\label{eqCh2_RabQw}
+\end{eqnarray}
+т. е. введенные нами величины $R_a$ и $R_b$ выражаются через
+классическую величину $\frac{\omega}{Q}$, характеризующую потери в
+резонаторе. 
+
+Другая величина, интересующая нас - это среднее электромагнитное поле
+\begin{eqnarray}
+\bar{E}_{(f)} = E_0 \sin k z
+Sp\left(\hat{\rho}\left(\hat{a}^{+} + \hat{a}\right)\right) = 
+\nonumber \\
+= E_0 \sin k z Sp\left(\hat{\rho}\hat{a}\right) + \mbox{к.с.} = 
+\nonumber \\
+= E_1 Sp\left(\hat{\rho}\hat{a}\right) + \mbox{к.с.} =
+\left<E\right> + \mbox{к.с.}, 
+\nonumber
+\end{eqnarray}
+где $\left<E\right>$ - аналитический сигнал классического
+поля. 
+Уравнение, которому удовлетворяет поле, может быть получено при
+помощи уравнения движения матрицы плотности. Запишем уравнение для
+статистического оператора поля моды  
+(\ref{eqCh2_rho_final2}) и
+используя для $R_a$, $R_b$ их выражения через $Q$ и $\bar{n}_T$
+  (\ref{eqCh2_RabQw}), имеем
+\begin{eqnarray}
+\dot{\hat{\rho}} =
+- \frac{\omega}{2Q}\bar{n}_T
+\left(\hat{a}\hat{a}^{+}\hat{\rho} - 
+2 \hat{a}^{+}\hat{\rho}\hat{a} + \hat{\rho}\hat{a}\hat{a}^{+}
+\right)
+- 
+\nonumber \\
+- \frac{\omega}{2Q}\left(\bar{n}_T + 1\right)
+\left(\hat{a}^{+}\hat{a}\hat{\rho} - 
+2 \hat{a}\hat{\rho}\hat{a}^{+}
++ \hat{\rho}\hat{a}^{+}\hat{a}
+\right)
+\label{eqCh2_eq1_add1}
+\end{eqnarray}
+
+Поскольку 
+\begin{equation}
+\left<E\right> = E_1 Sp\left(\hat{\rho}\hat{a}\right), \quad
+\frac{d \left<E\right>}{d t} = E_1 Sp\left(\frac{d \hat{\rho}}{dt}\hat{a}\right),
+\label{eqCh2_eq1_add2}
+\end{equation}
+Следовательно, уравнение (\ref{eqCh2_eq1_add1}) 
+надо помножить на $E_1 \hat{a}$ и взять $Sp$. В результате получим:
+\begin{eqnarray}
+\dot{\left<E\right>} =
+- \frac{\omega E_1}{2Q}\bar{n}_T
+\left\{Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
+2 \hat{a}^{+}\hat{\rho}\hat{a}\hat{a} +
+\hat{\rho}\hat{a}\hat{a}^{+}\hat{a}\right) + 
+\right.
+\nonumber \\
++\left.
+Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{\rho}\hat{a}^{+}\hat{a}
++ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
+\right)
+\right\}
+- 
+\nonumber \\
+- \frac{\omega E_1}{2Q}
+Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{\rho}\hat{a}^{+}\hat{a}
++ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
+\right)
+\label{eqCh2_eq1_add3}
+\end{eqnarray}
+Известно, что под знаком $Sp$ можно производить круговую перестановку
+операторов. Применим это к (\ref{eqCh2_eq1_add3}).
+Например
+\begin{eqnarray}
+Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
+2 \hat{a}^{+}\hat{\rho}\hat{a}\hat{a} +
+\hat{\rho}\hat{a}\hat{a}^{+}\hat{a}\right) = 
+\nonumber \\
+= Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{a}^{+}\hat{\rho}\hat{a} +
+\hat{\rho}\hat{a}\hat{a}^{+}\hat{a}\right) = 
+\nonumber \\
+= Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{a}^{+}\hat{\rho}\hat{a} +
+\hat{\rho}\hat{a}\left(\hat{a}\hat{a}^{+} - 1\right)\right) = 
+\nonumber \\
+Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{a}^{+}\hat{\rho}\hat{a} +
+\left(\hat{a}\hat{a}^{+} - 1\right)\hat{\rho}\hat{a}\right) = 
+- Sp\left(\hat{\rho}\hat{a}\right).
+\label{eqCh2_eq1_add4}
+\end{eqnarray}
+Проделав то же самое со второй скобкой (\ref{eqCh2_eq1_add3}), получим
+\begin{eqnarray}
+Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{\rho}\hat{a}^{+}\hat{a}
++ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a} \right) = 
+\nonumber \\
+= 
+Sp\left(\hat{\rho}\hat{a}\hat{a}^{+}\hat{a} - 
+2 \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
++ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a} \right) = 
+\nonumber \\
+= 
+Sp\left(\hat{\rho}\left(\hat{a}^{+}\hat{a} + 1\right)\hat{a} - 
+2 \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
++ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a} \right) = 
+Sp\left(\hat{\rho}\hat{a}\right).
+\label{eqCh2_eq1_add5}
+\end{eqnarray}
+Подставив (\ref{eqCh2_eq1_add4}) и (\ref{eqCh2_eq1_add5}) в 
+(\ref{eqCh2_eq1_add3}), имеем
+\begin{eqnarray}
+\dot{\left<E\right>} =
+- \frac{\omega E_1}{2Q}\bar{n}_T
+\left\{Sp\left(\hat{\rho}\hat{a}\right) -
+Sp\left(\hat{\rho}\hat{a}\right)\right\} -
+\nonumber \\
+- \frac{\omega E_1}{2Q}Sp\left(\hat{\rho}\hat{a}\right) = 
+- \frac{\omega}{2Q}\left<E\right>.
+\label{eqCh2_61}
+\end{eqnarray}
+
+Таким образом, мы связали параметры резервуара (параметры
+пучка) с классической величиной $Q$ и со средним числом фотонов в моде 
+при температуре резервуара. Это позволяет написать уравнения движения
+матрицы плотности поля в общем виде, при этом конкретная модель
+резервуара не имеет значения 
+\begin{eqnarray}
+\dot{\rho}_{nm} = - \frac{\omega}{2 Q}
+\left(2 \bar{n}_T\left( n + m + 1\right) + n + m \right)\rho_{nm} +
+\nonumber \\
++ \frac{\omega \bar{n}_T}{Q}\sqrt{nm}\rho_{n - 1, m - 1} +
+\frac{\omega}{Q}\left(\bar{n}_T + 1\right)
+\sqrt{\left(n + 1\right)\left(m + 1\right)}
+\rho_{n + 1, m + 1}
+\label{eqCh2_63}
+\end{eqnarray}
+В операторном виде это уравнение записывается так
+\begin{eqnarray}
+\dot{\rho} = - \frac{\omega}{2 Q}
+\left\{
+\bar{n}_T\left(\hat{a}\hat{a}^{+}\hat{\rho} - 
+\hat{a}^{+}\hat{\rho}\hat{a}\right)
+\right. +
+\nonumber \\
++
+\left .
+\left(\bar{n}_T + 1\right)\left(\hat{a}^{+}\hat{a}\hat{\rho} - 
+\hat{a}\hat{\rho}\hat{a}^{+}\right)
+\right\} + \mbox{э. с.}
+\label{eqCh2_64}
+\end{eqnarray}
+Запись уравнения (\ref{eqCh2_rho_final2}, \ref{eqCh2_64}) в
+представлении чисел заполнения является одной из многих. Часто удобно
+пользоваться другими представлениями.  

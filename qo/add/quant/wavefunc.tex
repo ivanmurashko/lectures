@@ -1,0 +1,454 @@
+%% -*- coding:utf-8 -*- 
+\section{Динамика изменения волновой функции}
+\label{AddWaveFunc}
+Волновая функция $\left| \phi \right>$ может изменяться посредством
+двух механизмов:
+\begin{itemize}
+\item Редукция волновой функции во время измерения
+\item Уравнение Шрёдингера в промежутках между двумя последовательными
+  измерениями 
+\end{itemize}
+
+\subsection{Уравнение Шрёдингера}
+Изменение состояния чистой квантовой системы между двумя
+последовательными измерениями описывается следующим уравнением (Шрёдингера)
+\begin{equation}
+i \hbar \frac{\partial \left| \phi \right>}{\partial t} = \hat{\mathcal{H}}
+\left| \phi \right>.
+\label{eqAddWaveFunc_Shredinger}
+\end{equation}
+
+Уравнение (\ref{eqAddWaveFunc_Shredinger}) является обратимым и,
+соответственно, не применимо к описанию изменения волновой функции в
+момент измерения.
+
+\subsubsection{Уравнение Шрёдингера в представлении взаимодействия}
+\label{AddWaveFuncInter}
+Допустим что в гамильтониане можно выделить две части:
+\begin{equation}
+\hat{\mathcal{H}} = \hat{\mathcal{H}}_0 + \hat{\mathcal{V}}.
+\nonumber
+\end{equation}
+
+Введем следующее преобразование волновой функции:
+\[
+\left| \phi \right>_I = 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left| \phi \right>
+\]
+и посмотрим чему будет равно следующее выражение:
+\begin{eqnarray}
+i \hbar \frac{\partial \left| \phi \right>_I}{\partial t} = 
+i \hbar \frac{i \hat{\mathcal{H}}_0}{\hbar} 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left| \phi \right> +
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+i \hbar \frac{\partial \left| \phi \right>}{\partial t} = 
+\nonumber \\
+= - \hat{\mathcal{H}}_0 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left| \phi \right> +
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left(
+\hat{\mathcal{H}}_0 + \hat{\mathcal{V}}
+\right)
+\left| \phi \right> =
+\nonumber \\ 
+- \hat{\mathcal{H}}_0 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left| \phi \right> +
+\hat{\mathcal{H}}_0 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left| \phi \right>
++
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+ \hat{\mathcal{V}}
+\left| \phi \right> =
+\nonumber \\
+= 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+ \hat{\mathcal{V}}
+\left| \phi \right> = 
+\nonumber \\
+= 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+ \hat{\mathcal{V}}
+\exp{\left( - \frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\left| \phi \right> = 
+\nonumber \\
+= 
+ \hat{\mathcal{V}}_I \left| \phi \right>_I,
+\nonumber
+\end{eqnarray}
+где 
+\begin{equation}
+\hat{\mathcal{V}}_I = 
+\exp{\left(\frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+ \hat{\mathcal{V}}
+\exp{\left( - \frac{i \hat{\mathcal{H}}_0 t}{\hbar}\right)}
+\label{eqAddWaveFunc_VInter}
+\end{equation} 
+гамильтониан взаимодействия в представлении взаимодействия.
+
+Таким образом получаем уравнение Шрёдингера в представлении
+взаимодействия:
+\begin{equation}
+i \hbar \frac{\partial \left| \phi \right>_I}{\partial t} = \hat{\mathcal{V}}_I
+\left| \phi \right>_I.
+\label{eqAddWaveFunc_ShredingerInter}
+\end{equation}
+
+
+\subsubsection{Уравнение движения матрицы плотности}
+Из соотношения (\ref{eqAddWaveFunc_Shredinger}) имеем
+\begin{eqnarray}
+i \hbar \frac{\partial \left| \phi \right>}{\partial t} = \hat{\mathcal{H}}
+\left| \phi \right>,
+\nonumber \\
+- i \hbar \frac{\partial \left< \phi \right|}{\partial t} = \hat{\mathcal{H}}
+\left< \phi \right|,
+\nonumber
+\end{eqnarray}
+таким образом для матрицы плотности 
+$\hat{\rho} = \left| \phi \right>\left< \phi \right|$ получаем
+\begin{eqnarray}
+i \hbar \frac{\partial \hat{\rho} }{\partial t} = 
+i \hbar \frac{\partial  \left| \phi \right>\left< \phi \right|
+}{\partial t} = 
+i \hbar \left( \frac{\partial \left| \phi \right>}{\partial t}\left< \phi
+\right| +
+\left| \phi \right> \frac{\partial \left< \phi \right|}{\partial t}
+\right) =
+\nonumber \\
+=  \hat{\mathcal{H}} \left| \phi \right>\left< \phi \right| -
+\left| \phi \right>\left< \phi \right|\hat{\mathcal{H}} = 
+\left[ \hat{\mathcal{H}}, \hat{\rho} \right]
+\label{eqAddWaveFunc_Pho}
+\end{eqnarray}
+Уравнение (\ref{eqAddWaveFunc_Pho}) часто называется квантовым
+уравнением Лиувилля и уравнением фон Неймана.
+
+\subsubsection{Оператор эволюции. Представление Гейзенберга и
+  представление Шредингера}
+
+Изменение волновой функции по закону (\ref{eqAddWaveFunc_Shredinger})
+может быть также описано с помощью некоторого оператора (эволюции) $\hat{U}\left(t,t_0\right)$:
+\begin{equation}
+\left| \phi\left(t\right) \right> = 
+\hat{U}\left(t,t_0\right)\left| \phi\left(t_0\right) \right>.
+\label{eqAddWaveFunc_ShredingerU}
+\end{equation}
+
+Уравнение (\ref{eqAddWaveFunc_Shredinger}) может быть переписано в
+виде
+\begin{equation}
+\left| \phi\left(t\right) \right> = 
+\exp\left( -\frac{i}{\hbar} \hat{\mathcal{H}} \left( t - t_0 \right)  \right)
+\left| \phi\left(t_0\right) \right>,
+\nonumber
+\end{equation}
+откуда для оператора эволюции имеем
+\begin{equation}
+\hat{U}\left(t,t_0\right) = 
+\exp\left( -\frac{i}{\hbar} \hat{\mathcal{H}} \left( t - t_0 \right)  \right)
+\label{eqAddDiracEvolutionOper}
+\end{equation}
+
+Оператор эволюции - унитарный. Действительно:
+\begin{eqnarray}
+\hat{U}\left(t,t_0\right)\hat{U}^+\left(t,t_0\right) = 
+\nonumber \\
+= \exp\left( -\frac{i}{\hbar} \hat{\mathcal{H}} \left( t - t_0 \right)
+\right)
+\exp\left( +\frac{i}{\hbar} \hat{\mathcal{H}} \left( t - t_0 \right)
+\right)
+= \hat{I}
+\nonumber
+\end{eqnarray}
+
+Наряду с представлением Шредингера где операторы от времени не зависят
+а меняются волновые функции существует представление Гейзенберга где
+операторы меняются во времени.
+
+Очевидно средние значения операторов не должны зависеть от
+представления:
+\begin{eqnarray}
+\left< \phi_H\left(t_0\right) \right|\hat{A}_H\left(t\right)\left| 
+\phi_H\left(t_0\right) \right> = 
+\left< \phi_S\left(t\right) \right|\hat{A}_S\left| 
+\phi_S\left(t\right) \right> = 
+\nonumber \\
+=
+\left<
+\phi_H\left(t_0\right)\right|\hat{U}^+\left(t,t_0\right)\hat{A}_S\hat{U}\left(t,t_0\right)\left|
+\phi_H\left(t_0\right) \right>,
+\nonumber
+\end{eqnarray}
+откуда с учетом $\hat{A}_H\left(t_0\right) = \hat{A}_S\left(t_0\right)$ получаем закон эволюции операторов в представлении Гейзенберга:
+\begin{equation}
+\hat{A}_H\left(t\right) = \hat{U}^+\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
+\label{eqAddWaveFunc_HeizenbergU}
+\end{equation}
+
+\subsection{Различия между чистыми и смешанными
+  состояниями. Декогеренция}
+Особый интерес представляет собой различие между чистыми и смешанными
+состояниями, в частности - каким образом происходит переход от чистых
+состояний к смешанным.
+
+Рассмотрим двухуровневое состояние
+(см. рис. \ref{figAddDecoherenceModel}). В чистом состоянии оно
+описывается 
+следующей волновой функцией:
+\begin{equation}
+\left|\phi\right> = c_a \left|a \right> + c_b \left|b\right>,
+\nonumber
+\end{equation}
+соответствующая матрица плотности имеет вид
+\begin{eqnarray}
+\hat{\rho} = \left|\phi\right>\left<\phi\right| =
+\nonumber \\
+= 
+\left|c_a\right|^2 \left|a\right>\left<a\right| + 
+\left|c_b\right|^2 \left|b\right>\left<b\right| +
+\nonumber \\
++
+c_a c_b^{\ast}\left|a\right>\left<b\right| +
+c_b c_a^{\ast}\left|b\right>\left<a\right|,
+\label{eqAddDecoherencePure}
+\end{eqnarray}
+или в матричном виде
+\begin{eqnarray}
+\hat{\rho} = 
+\begin{pmatrix}
+\left|c_a\right|^2 & c_a c_b^{\ast} \\
+c_b c_a^{\ast} & \left|c_b\right|^2 \\
+\end{pmatrix}.
+\nonumber
+\end{eqnarray}
+
+Матрица плотности для смешанного состояния имеет только диагональные
+элементы:
+\begin{eqnarray}
+\hat{\rho} = 
+\begin{pmatrix}
+\left|c_a\right|^2 & 0 \\
+0 & \left|c_b\right|^2 \\
+\end{pmatrix} = 
+\nonumber \\
+=
+\left|c_a\right|^2 \left|a\right>\left<a\right| + 
+\left|c_b\right|^2 \left|b\right>\left<b\right|.
+\label{eqAddDecoherenceMix}
+\end{eqnarray}
+
+\input add/quant/figdecoherence.tex
+
+Переход от (\ref{eqAddDecoherencePure}) к (\ref{eqAddDecoherenceMix})
+называется декогеренцией. В описании процесса декогеренции мы будем следовать
+ \cite{bMensky2001}. 
+
+Отличие смешанных состояний от чистых проявляется во влиянии окружения
+$\mathcal{E}$. В случае чистых состояний рассматриваемая система и ее
+окружение независимы, т. е.
+\begin{equation}
+\left|\phi\right>_{pure} = \left|\phi\right>_{at} \otimes
+\left|\mathcal{E}\right>.
+\label{eqAddDecoherencePhiPure}
+\end{equation}
+
+В случае смешанных состояний атом и его окружение образуют так
+называемое перепутанное состояние в котором состояниям
+$\left|a\right>$ и $\left|b\right>$ соответствуют различимые 
+состояния окружения $\left|\mathcal{E}_a\right>$ и
+$\left|\mathcal{E}_b\right>$.
+\begin{equation}
+\left|\phi\right>_{mix} = c_a\left|a\right> \left|\mathcal{E}_a\right>
++ c_b\left|b\right> \left|\mathcal{E}_b\right>.
+\label{eqAddDecoherencePhiMix}
+\end{equation}
+
+Матрица плотности соответствующая (\ref{eqAddDecoherencePhiMix}) имеет вид
+
+\begin{eqnarray}
+\hat{\rho}_{mix} = \left|\phi\right>_{mix}\left<\phi\right|_{mix} = 
+\nonumber \\
+= 
+\left|c_a\right|^2 \left|a\right>\left<a\right| \otimes
+\left|\mathcal{E}_a\right>\left<\mathcal{E}_a\right| + 
+\left|c_b\right|^2 \left|b\right>\left<b\right| \otimes
+\left|\mathcal{E}_b\right>\left<\mathcal{E}_b\right| +
+\nonumber \\
++
+c_a c_b^{\ast}\left|a\right>\left<b\right| \otimes
+\left|\mathcal{E}_a\right>\left<\mathcal{E}_b\right| +
+c_b c_a^{\ast}\left|b\right>\left<a\right| \otimes
+\left|\mathcal{E}_b\right>\left<\mathcal{E}_a\right|.
+\label{eqAddDecoherenceRhoMix}
+\end{eqnarray}
+Если теперь применить к выражению (\ref{eqAddDecoherenceRhoMix})
+усреднение по переменным окружения, то получим
+\begin{eqnarray}
+\left<\hat{\rho}_{mix}\right>_{\mathcal{E}} = 
+Sp_{\mathcal{E}}\left(\hat{\rho}\right) = 
+\nonumber \\
+=
+\left<\mathcal{E}_a\right|\hat{\rho}_{mix}\left|\mathcal{E}_a\right> +
+\left<\mathcal{E}_b\right|\hat{\rho}_{mix}\left|\mathcal{E}_b\right>
+= 
+\nonumber \\
+= \left|c_a\right|^2 \left|a\right>\left<a\right| + 
+\left|c_b\right|^2 \left|b\right>\left<b\right|.
+\label{eqAddDecoherenceRhoMixFin}
+\end{eqnarray}
+Выражение  (\ref{eqAddDecoherenceRhoMixFin}) получено в предположении
+ортонормированного базиса $\left\{\left|\mathcal{E}_a\right>,
+\left|\mathcal{E}_b\right>\right\}$: 
+\begin{eqnarray}
+\left<\mathcal{E}_a\right.\left|\mathcal{E}_a\right> = 
+\left<\mathcal{E}_b\right.\left|\mathcal{E}_b\right> = 1,
+\nonumber \\
+\left<\mathcal{E}_a\right.\left|\mathcal{E}_b\right> = 
+\left<\mathcal{E}_b\right.\left|\mathcal{E}_a\right> = 0.
+\label{eqAddDecoherenceMixECond}
+\end{eqnarray}
+
+Условия (\ref{eqAddDecoherenceMixECond}) являются ключевыми для
+понимания того почему рассматриваемый базис атомной системы является
+выделенным и почему например в случае смешанных состояний не
+рассматривают другие базисы такие как базис полученный преобразованием
+Адамара по отношению к исходному:
+\begin{eqnarray}
+\left|\mathcal{A}\right> = \frac{\left|a\right> + \left|b\right>}
+              {\sqrt{2}},
+\nonumber \\
+\left|\mathcal{B}\right> = \frac{\left|a\right> - \left|b\right>}
+              {\sqrt{2}}.
+\label{eqAddDecoherenceBaseWrong}
+\end{eqnarray}
+Состояния окружения соответствующие базису
+(\ref{eqAddDecoherenceBaseWrong}) не являются ортогональными откуда
+следует невозможность использования (\ref{eqAddDecoherenceBaseWrong})
+в качестве базисных векторов для смешанных состояний. 
+
+Процесс декогеренции, т. е. перехода от
+(\ref{eqAddDecoherencePhiPure}) к (\ref{eqAddDecoherencePhiMix}) может
+быть описан с помощью уравнения Шредингера, и следовательно
+теоретически является обратимым. Единственное требование -
+ортогональность различимых состояний окружения: 
+$\left<\mathcal{E}_a\right.\left|\mathcal{E}_b\right> = 0$. Это
+требование всегда выполняется для макроскопических систем, где
+состояние зависит от очень большого числа переменных. При этом в
+случае макроскопических систем стоит отметить, что существует большое
+число возможных вариантов конечных состояний
+$\left|\mathcal{E}_{a,b}\right>$ 
+в силу чего обратный процесс становится практически не реализуемым в
+силу того что необходимо контролировать большое число возможных
+переменных которыми описывается состояние окружения. В этом смысле
+процесс декогеренции имеет туже природу что второй закон термодинамики 
+(возрастания энтропии), который описывает
+необратимые процессы.
+\footnote{Надо быть немного аккуратным здесь
+  поскольку второй закон термодинамики применим к закрытым системам а
+  сами процессы декогеренции происходят в открытых системах}
+
+%% В качесте примера можно рассмотреть так
+%% называемого кота Шредингера, который может находится в двух состояниях
+%% $\left|L\right>$ - кот жив и $\left|D\right>$ - кот мертв. 
+%% Вместе с этими двумя состояниями согласно принципу суперпозиции 
+%% вполне допустимо состояние $\left|\psi\right> = C_L \left|L\right> + C_D
+%% \left|D\right>$ - суперпозиции живого и мертвого кота. Этот пример
+%% возмущает здравый смысл, который основан на жизненом опыте среди
+%% классических систем в которых такие состояния одновременно и живого и мертвого
+%% невозможны. Мы наблюдаем в классическом мире так называемые смешанные
+%% состояния для которых принцип суперпозиции неприменим. В случае
+%% ``классического кота'' можно говорить о том что с вероятностью
+%% $\left|C_L\right|^2$ он находится в состоянии $\left|L\right>$ и с
+%% вероятностью $\left|C_D\right|^2$ - в состоянии
+%% $\left|D\right>$. Такие системы называются смешанными. Очевидно что
+%% должно существовать принципиальное отличие между чистыми и смешанными
+%% системами. Таким отличием является влияние внешнего окружения. 
+
+\subsection{Редукция волновой функции. Измерение в квантовой механике}
+
+Процесс выбора (результата измерения) один из самых сложных в
+квантовой механике. В отличии от детерминистского изменения волновой
+функции, описываемого уравнением Шрёдингера
+(\ref{eqAddWaveFunc_Shredinger}), процесс измерения носит случайный
+характер и для его описания следует применять другие уравнения. 
+
+\input ./add/quant/figmeasur.tex
+
+Рассмотрим вначале чистые состояния и предположим, что производится
+измерение физической наблюдаемой, 
+описываемой оператором $\hat{L}$. Собственные числа и собственные
+значения этого оператора $\left\{ l_k \right\}$ и 
+$\left\{ \left|l_k\right> \right\}$ соответственно. В момент
+измерения показания прибора могут принимать значения соответствующие
+собственным числам измеряемого оператора
+(см. рис. \ref{figAddMeasur}). Допустим, что показание 
+прибора - $l_n$ в этом случае волновая функция должна быть 
+$\left|l_n\right>$, т. о. произошло следующее
+изменение волновой функции:
+\[
+\left| \phi \right> \rightarrow \left|l_n\right>,
+\] 
+которое может быть описано действием оператора проецирования 
+$\hat{P}_n = \left|l_n\right> \left<l_n\right|$ (\ref{eqDiracProektor}):
+\[
+\hat{P}_n \left| \phi \right> = \left|l_n\right>.
+\]
+
+Не существует способа предсказать результат который будет получен в
+результате единичного измерения. Вместе с тем можно сказать с какой
+вероятностью будет получен тот или иной результат.
+
+Действительно в случае смешанного состояния
+\begin{equation}
+\hat{\rho} = 
+\sum_n \left|c_n\right|^2 \left|l_n\right>\left<l_n\right|
+\nonumber
+\end{equation}
+коэффициенты $P_n = \left|c_n\right|^2$
+задают вероятности обнаружить систему в состоянии $\left|l_n\right>$. 
+
+Для чистого состояния
+\begin{equation}
+\left| \phi \right> = 
+\sum_n c_n \left|l_n\right>
+\nonumber
+\end{equation}
+мы также имеем, что вероятность обнаружить систему в состоянии
+$\left|l_n\right>$ задается числом $P_n = \left|c_n\right|^2$. 
+
+Основное отличие чистых и смешанных состояний с точки зрения измерения
+заключается в том, что в первом случае (чистое состояние) в процессе
+измерение меняется волновая функция, т. е. само состояние. При этом
+если в процессе измерения было получено некоторое конечное состояние
+$\left|l_i\right>$, то нельзя сказать, что оно было таким же и до
+измерения. Смешанные состояния ведут себя подобно классическим объектам,
+т. е. если в процессе измерения было получено состояние
+$\left|l_i\right>$, то можно утверждать, что оно было таким же и до
+измерения, а само измерение представляет собой выбор
+одного состояния из многих возможных.
+
+\begin{example}
+\emph{Выбор из урны с шарами двух цветов}
+Допустим у нас имеется урна с 4 шарами. С вероятностью $\frac{1}{2}$
+будет извлечен либо белый либо черный шар. Допустим что в результате
+эксперимента был получен черный шар. Если рассматриваемая система
+является квантовой и находится в смешанном состоянии 
+(см. рис. \ref{figAddMixStateExample}), то состояние
+извлеченного шара (цвет) не изменилось в результате эксперимента. 
+
+\input add/quant/figmixstateexample.tex
+\input add/quant/figpurestateexample.tex
+
+Если рассматриваемая система является
+чистой(см. рис. \ref{figAddPureStateExample}), то состояние каждого
+шара описывается суперпозицией двух цветов - черного и белого. Таким
+образом в результате эксперимента эта суперпозиция разрушается и шар
+приобретает определенный цвет (черный в нашем случае), т. е. можно
+сказать что цвет шара меняется.
+\end{example}

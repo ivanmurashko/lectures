@@ -1,0 +1,128 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Wed Aug 15 13:05:54 MSK 2012
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="10" x-max="60" y-min="10" y-max="50" auto-bounding="true">
+%<multicurve right-arrow="head"
+%	 points="(10,20);(10,20);(60,20);(60,20)"
+%	 />
+%<text anchor-point="(60,15)"
+%	 >
+%$\left|l_n\right&gt;$
+%</text>
+%<text anchor-point="(55,50)"
+%	 >
+%$\left|\psi\right&gt;$
+%</text>
+%<multicurve stroke-style="dashed"
+%	 stroke-dasharray="1;1"
+%	 points="(50,20);(50,20);(50,50);(50,50)"
+%	 />
+%<multicurve right-arrow="head"
+%	 points="(10,20);(10,20);(50,50);(50,50)"
+%	 />
+%<text left-arrow="head"
+%	 anchor-point="(30,15)"
+%	 >
+%$\left&lt;\psi|l_n\right&gt;$
+%</text>
+%<multicurve left-arrow="head"
+%	 points="(10,15);(10,15);(15,15);(15,15)"
+%	 />
+%<multicurve right-arrow="head"
+%	 points="(45,15);(45,15);(50,15);(50,15)"
+%	 />
+%<multicurve points="(10,20);(10,20);(10,10);(10,10)"
+%	 />
+%<multicurve points="(50,20);(50,20);(50,10);(50,10)"
+%	 />
+%<circle p3="(30,35)"
+%	 p2="(30,25)"
+%	 p1="(20,20)"
+%	 closure="open"
+%	 />
+%<text anchor-point="(35,30)"
+%	 >
+%$\theta$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(60,50)(0,0)
+\linethickness{0.3mm}
+\put(10,20){\line(1,0){50}}
+\put(60,20){\vector(1,0){0.12}}
+\put(60,15){\makebox(0,0)[cc]{$\left|l_n\right>$}}
+
+\put(55,50){\makebox(0,0)[cc]{$\left|\psi\right>$}}
+
+\linethickness{0.3mm}
+\multiput(50,20)(0,1.94){16}{\line(0,1){0.97}}
+\linethickness{0.3mm}
+\multiput(10,20)(0.16,0.12){250}{\line(1,0){0.16}}
+\put(50,50){\vector(4,3){0.12}}
+\put(30,15){\makebox(0,0)[cc]{$\left<\psi|l_n\right>$}}
+
+\linethickness{0.3mm}
+\put(10,15){\line(1,0){5}}
+\put(10,15){\vector(-1,0){0.12}}
+\linethickness{0.3mm}
+\put(45,15){\line(1,0){5}}
+\put(50,15){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(10,10){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(50,10){\line(0,1){10}}
+\linethickness{0.3mm}
+\multiput(20,20)(0.49,-0.05){1}{\line(1,0){0.49}}
+\multiput(20.49,19.95)(0.5,-0.03){1}{\line(1,0){0.5}}
+\multiput(20.99,19.93)(0.5,-0){1}{\line(1,0){0.5}}
+\multiput(21.48,19.92)(0.5,0.02){1}{\line(1,0){0.5}}
+\multiput(21.98,19.95)(0.49,0.05){1}{\line(1,0){0.49}}
+\multiput(22.47,20)(0.49,0.07){1}{\line(1,0){0.49}}
+\multiput(22.96,20.07)(0.49,0.1){1}{\line(1,0){0.49}}
+\multiput(23.45,20.17)(0.48,0.12){1}{\line(1,0){0.48}}
+\multiput(23.93,20.29)(0.47,0.14){1}{\line(1,0){0.47}}
+\multiput(24.41,20.43)(0.47,0.17){1}{\line(1,0){0.47}}
+\multiput(24.87,20.6)(0.23,0.09){2}{\line(1,0){0.23}}
+\multiput(25.33,20.79)(0.22,0.11){2}{\line(1,0){0.22}}
+\multiput(25.78,21)(0.22,0.12){2}{\line(1,0){0.22}}
+\multiput(26.22,21.23)(0.21,0.13){2}{\line(1,0){0.21}}
+\multiput(26.64,21.49)(0.21,0.14){2}{\line(1,0){0.21}}
+\multiput(27.05,21.76)(0.2,0.15){2}{\line(1,0){0.2}}
+\multiput(27.45,22.06)(0.13,0.1){3}{\line(1,0){0.13}}
+\multiput(27.84,22.37)(0.12,0.11){3}{\line(1,0){0.12}}
+\multiput(28.2,22.7)(0.12,0.12){3}{\line(0,1){0.12}}
+\multiput(28.55,23.06)(0.11,0.12){3}{\line(0,1){0.12}}
+\multiput(28.89,23.42)(0.1,0.13){3}{\line(0,1){0.13}}
+\multiput(29.2,23.81)(0.15,0.2){2}{\line(0,1){0.2}}
+\multiput(29.5,24.21)(0.14,0.21){2}{\line(0,1){0.21}}
+\multiput(29.77,24.62)(0.13,0.21){2}{\line(0,1){0.21}}
+\multiput(30.02,25.04)(0.12,0.22){2}{\line(0,1){0.22}}
+\multiput(30.26,25.48)(0.11,0.22){2}{\line(0,1){0.22}}
+\multiput(30.47,25.93)(0.09,0.23){2}{\line(0,1){0.23}}
+\multiput(30.66,26.39)(0.17,0.47){1}{\line(0,1){0.47}}
+\multiput(30.82,26.86)(0.14,0.47){1}{\line(0,1){0.47}}
+\multiput(30.97,27.33)(0.12,0.48){1}{\line(0,1){0.48}}
+\multiput(31.09,27.81)(0.1,0.49){1}{\line(0,1){0.49}}
+\multiput(31.18,28.3)(0.07,0.49){1}{\line(0,1){0.49}}
+\multiput(31.25,28.79)(0.05,0.49){1}{\line(0,1){0.49}}
+\multiput(31.3,29.28)(0.02,0.5){1}{\line(0,1){0.5}}
+\multiput(31.32,30.27)(0,-0.5){1}{\line(0,-1){0.5}}
+\multiput(31.3,30.77)(0.03,-0.5){1}{\line(0,-1){0.5}}
+\multiput(31.25,31.26)(0.05,-0.49){1}{\line(0,-1){0.49}}
+\multiput(31.17,31.75)(0.07,-0.49){1}{\line(0,-1){0.49}}
+\multiput(31.08,32.24)(0.1,-0.49){1}{\line(0,-1){0.49}}
+\multiput(30.95,32.72)(0.12,-0.48){1}{\line(0,-1){0.48}}
+\multiput(30.81,33.19)(0.15,-0.47){1}{\line(0,-1){0.47}}
+\multiput(30.64,33.66)(0.17,-0.47){1}{\line(0,-1){0.47}}
+\multiput(30.45,34.12)(0.1,-0.23){2}{\line(0,-1){0.23}}
+\multiput(30.24,34.56)(0.11,-0.22){2}{\line(0,-1){0.22}}
+\multiput(30,35)(0.12,-0.22){2}{\line(0,-1){0.22}}
+
+\put(35,30){\makebox(0,0)[cc]{$\theta$}}
+
+\end{picture}

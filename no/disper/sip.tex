@@ -1,0 +1,390 @@
+\section{Явление самоиндуцированной прозрачности. Оптический импульс в
+двухуровневой среде. Уравнение  sine-Gordon}
+
+Иттрий-алюминиевый гранат (\(Al_2 O_3\) с примесью ионов \(Y t^{+3}\)) представляет
+собой темный, непрозрачный кристалл. Но он становится прозрачным для
+пучка лазерного света определенной частоты и интенсивности. Это
+свойство пропускать мощное оптическое излучение только в некотором
+узком диапазоне частот называется самоиндуцированной прозрачностью
+(СИП). Эффект был открыт Мак-Коллом и Ханом в 1965 году (
+см. \cite{bSIP1, bSIP2}). Они экспериментально установили, что
+показатель преломления 
+(то есть линеаризованное дисперсионное соотношение этого кристалла как
+идеального диэлектрика) имеет сингулярности на частотах, совпадающих с
+любой из резонансных частот его атомов. Самоиндуцированная
+прозрачность является чисто нелинейным эффектом, возникающим при
+взаимодействии диэлектрика с электрическим полем на частоте, близкой к
+резонансу. Начнем с физического описания самоиндуцированной
+прозрачности. В простейшем случае СИП диэлектрик состоит из
+двухуровневых атомов, каждый из которых имеет основное и возбужденное
+состояния. Пусть вначале атомы находятся в основном состоянии, то есть
+среда является аттенюатором, а не усилителем. Падающее электрическое
+поле, настроенное на резонансную частоту, возбуждает атомы. Такой
+перенос энергии от электрического поля к веществу обычно необратим и в
+конце концов истощает энергетический запас электрического
+импульса. Тем не менее можно сформировать достаточно мощный и очень
+короткий падающий импульс так, что фронт импульса отдает энергию
+(когерентно) в среду, которая запасает ее, а затем возвращает ее
+(когерентно) назад в импульс. Взаимодействуя с таким импульсом, атомы
+вещества остаются в своем основном состоянии, суммарный перенос
+энергии от излучения к веществу равен нулю, а импульс распространяется
+с постоянной (меньшей, чем скорость света) скоростью сквозь среду,
+которая становится как бы прозрачной. Это и есть самоиндуцированная
+прозрачность. 
+
+Теперь мы рассмотрим основные уравнения (уравнения Максвелла-
+Блоха).
+
+Мы будем рассматривать квазиклассический случай. Электромагнитная волна будет
+распространяться в однородной немагнитной, электрически нейтральной
+среде. Нелинейность как и ранее будет возникать вследствии
+взаимодействия внешнего электромагнитного поля со средой. Мы будем пользоваться
+одномерным волновым уравнением, с которым мы встречались ранее:
+\begin{equation}
+\frac{\partial^2 E}{\partial z^2} - \frac{1}{c^2}
+\frac{\partial^2 E}{\partial t^2} - \frac{4 \pi}{c^2}
+\frac{\partial^2 P}{\partial t^2} = 0,
+\label{eqSIPEP}
+\end{equation}
+где как и ранее, нелинейность входит в поляризацию \(P\).
+
+Электромагнитное поле будет искаться в следующем виде
+\begin{equation}
+E\left(z, t\right) = E_0\left(z, t\right) exp \left\{ -i \left(k z -
+    \omega_0 t + \psi\left(z, t\right)\right)\right\} + c. c.
+\label{eqSIPE}
+\end{equation}
+
+Задачу будем решать методом медленно меняющихся амплитуд:
+\[
+\frac{\partial E}{\partial z} \ll k E_0, \quad
+\frac{\partial E}{\partial t} \ll \omega_0 E_0, 
+\]
+\[
+\frac{\partial \psi}{\partial z} \ll k \psi, \quad
+\frac{\partial \psi}{\partial t} \ll \omega_0 \psi. 
+\]
+
+Давайте теперь определим реакцию среды на такое поле:
+\begin{eqnarray}
+\hat{H_0} \psi_a\left(\vec{r}\right) = E_a \psi_a\left(\vec{r}\right),
+\nonumber \\
+\hat{H_0} \psi_b\left(\vec{r}\right) = E_b \psi_b\left(\vec{r}\right),
+\nonumber \\
+E_a - E_b = \hbar \omega \approx \hbar \omega_0.
+\nonumber
+\end{eqnarray}
+
+Таким образом предполагается некоторый резонанс между характеристиками
+поля и среды. Волновая функция системы записывается в следующем виде
+\begin{equation}
+\psi_0\left(\vec{r}, t\right) = a\left(\vec{r}, t\right)
+\psi_a\left(\vec{r}\right) + b\left(\vec{r}, t\right)
+\psi_b\left(\vec{r}\right).
+\label{eqPsi0}
+\end{equation}
+Справедливы следующие условия нормировки:
+\begin{eqnarray}
+\int \left|\psi_a\left(\vec{r}\right)\right|^2 dV = 
+\int \left|\psi_b\left(\vec{r}\right)\right|^2 dV = 1,
+\nonumber \\
+\int \left|\psi_0\left(\vec{r}, t\right)\right|^2 dV = 
+\int \left|a \psi_a + b \psi_b\right|^2 dV= 
+\left|a\right|^2 + \left|b\right|^2 = 1.
+\nonumber
+\end{eqnarray}
+Уравнение для волновой функции (\ref{eqPsi0}) выглядит
+следующим образом:
+\begin{equation}
+\hat{H} \psi_0\left(\vec{r},t\right) = i \hbar
+\frac{\partial \psi_0\left(\vec{r}, t\right)}{\partial t}.
+\label{eqShredinger}
+\end{equation}
+
+Разность концентраций на рассматриваемых двух уровнях:
+\begin{equation}
+n_0 \int \left(\left|a \psi_a\right|^2 - 
+  \left|b \psi_b\right|^2 \right)dV = 
+n_0 \left(\left|a\right|^2 - \left|b\right|^2\right).
+\label{eqN0}
+\end{equation}
+где \(n_0\) - общая концентрация электронов в рассматриваемой
+двухуровневой модели.
+
+Гамильтониан в (\ref{eqShredinger}) представим в следующем виде
+\[
+\hat{H} = \hat{H}_0 + \hat{H}_i,
+\]
+где \(\hat{H}_i = - \left(\vec{\hat{d}}\vec{E}\right)\) - гамильтониан
+взаимодействия системы атом-поле, \(\vec{\hat{d}} = e
+\vec{r}\). Поляризация среды задается соотношением
+\[
+P = \int \psi_0^{*} \hat{d} \psi_0 dV.
+\]
+Таким образом поляризация среды задается соотношением
+\begin{eqnarray}
+P = P_0 \left( a^{*} b + b^{*} a\right) ,
+\nonumber \\
+P_0 = -e \int \psi_a^{*} \vec{r} \psi_b dV,
+\nonumber
+\end{eqnarray}
+где \(P_0\) поляризуемость одного атома.
+
+Как видно из  (\ref{eqPsi0}), поведение системы полностью определяется
+двумя функциями \(a\left(\vec{r}, t\right)\) и \(b\left(\vec{r},
+  t\right)\). Уравнения для этих функций могут быть получены
+домножением (\ref{eqShredinger}) на
+\(\psi_a^{*}\left(\vec{r}\right)\), \(\psi_b^{*}\left(\vec{r}\right)\)
+и интегрированием по объему \(V\):
+\begin{eqnarray}
+\frac{\partial a}{\partial t} + i \omega_a a = - i V b,
+\nonumber \\
+\frac{\partial b}{\partial t} + i \omega_b b = - i V a,,
+\nonumber \\
+\omega_{a,b} = \frac{E_{a,b}}{\hbar},
+\nonumber \\
+V = - \frac{P_0}{\hbar} E\left(z, t\right).
+\label{eqSIP_AB}
+\end{eqnarray}
+Для \(E\left(z, t\right)\) мы будем использовать представление в виде
+волнового пакета (\ref{eqSIPE}). Предположим, что данный волновой
+пакет движется в среде с некоторой скоростью \(v < c\). В этом случае
+в представлении (\ref{eqSIPE}) мы должны писать вместо продольной
+координаты \(z\) некоторую другую величину:
+\[
+z_E = z + v t.
+\]
+При этом мы предполагаем что данный пакет не меняет своей формы, так
+что амплитуда \(E_0\) и фаза \(\psi\) - функции от \(z\), а не от
+\(z_E\). Таким образом
+\begin{eqnarray}
+E\left(z, t\right) = E_0\left(z, t\right) exp \left\{ -i \left(k z_E -
+    \omega_0 t + \psi\left(z, t\right)\right)\right\} + c. c. =
+\nonumber \\
+= E_0\left(z, t\right) exp \left\{ -i \left(k z + \Delta \omega t  -
+    \omega_0 t + \psi\left(z, t\right)\right)\right\} + c. c.,
+\nonumber 
+\end{eqnarray}
+где \(\Delta \omega = k v \) учитывает доплеровский эффект.
+
+Решение системы (\ref{eqSIP_AB}) представимо в следующем виде
+\begin{eqnarray}
+a = i v_1 exp\left\{ -i \omega_a\left(t - \frac{z}{c}\right) + i t
+  \Delta \omega\right\},
+\nonumber \\
+b = v_2 exp\left\{ -i \omega_b\left(t - \frac{z}{c}\right) - i t
+  \Delta \omega\right\},
+\nonumber \\
+\left| v_1\right|^2 + \left| v_2\right|^2  = 1.
+\nonumber 
+\end{eqnarray}
+
+В новых переменных инверсия населенности
+\[
+N = \frac{n}{n_0} = \left| v_1\right|^2 - \left| v_2\right|^2,
+\]
+поляризация атома:
+\[
+P = P_0 \left[ - i v_1^{*} v_2  exp\left\{ -i \omega\left(t - \frac{z}{c}\right) + i t
+  \Delta \omega\right\} + c.c. \right].
+\]
+
+Обозначив через 
+\[
+\Phi = k z - \omega t + \psi
+\]
+получим для поляризации
+\[
+P = P_0 n_0 \left[ G \cos\Phi + L
+  \sin\Phi\right],
+\]
+где
+\begin{eqnarray}
+G\left(\Delta \omega, z, t\right) = i \left[ v_1 v_2^{*} e^{-i \Phi} -
+v_1^{*} v_2 e^{i \Phi}\right],
+\nonumber \\
+L\left(\Delta \omega, z, t\right) = - \left[ v_1 v_2^{*} e^{-i \Phi} +
+v_1^{*} v_2 e^{i \Phi}\right].
+\nonumber 
+\end{eqnarray}
+
+Таким образом система уравнений для среды (\ref{eqSIP_AB}) в новых
+обозначениях переписывается как:
+\begin{eqnarray}
+\frac{\partial L}{\partial t} = \frac{P_0 E_0}{\hbar} N + \left(\Delta
+\omega + \frac{\partial \psi}{\partial t}\right) G,
+\nonumber \\
+\frac{\partial G}{\partial t} = - \left(\Delta
+\omega + \frac{\partial \psi}{\partial t}\right) L,
+\nonumber \\
+\frac{\partial N}{\partial t} = - \frac{P_0 E_0}{\hbar} L.
+\label{eqSIPBloh}
+\end{eqnarray}
+
+Система (\ref{eqSIPBloh}) называется уравнениями Блоха.
+Система уравнений (\ref{eqSIPEP}, \ref{eqSIPBloh}), так называемая
+система уравнений Максвела-Блоха, должна решаться
+совместно.
+
+Данная задача не имеет решения в квадратурах и надо чем-то
+пренебрегать. Мы применим столько раз нам уже помогавший метод
+медленно меняющихся амплитуд. Применять этот метод будем к уравнению
+для электромагнитного поля (\ref{eqSIPEP}).
+С учетом
+\[
+\frac{\partial^2 P}{\partial t^2} = - \omega_0^2 P = - \omega_0^2 n_0
+P_0 \left(G \cos\Phi + L
+  \sin \Phi \right).
+\]
+
+С учетом этого уравнение (\ref{eqSIPEP}) преобразуется к виду
+\begin{eqnarray}
+\frac{\partial E_0}{\partial t} + c \frac{\partial E_0}{\partial z} = 
+2 \pi \omega_0^2 n_0 P_0 L\left(z, t\right),
+\nonumber \\
+E_0 \left(\frac{\partial \psi}{\partial t} + c \frac{\partial \psi}{\partial z}\right) = 
+2 \pi \omega_0^2 n_0 P_0 G\left(z, t\right).
+\label{eqSIP_E_psi}
+\end{eqnarray}
+В системе (\ref{eqSIP_E_psi})  есть два уравнения, одно для амлитуды
+поля, другое для фазы. Так как мы расматриваем задачу в которой форма
+импульса не меняется, то \(G = 0\), \(\psi = const_{z,t}\).  Таким
+образом из системы (\ref{eqSIPBloh}) уходит второе уравнение и из 
+системы (\ref{eqSIP_E_psi}) также уходит второе
+уравнение. Результат после введения новых переменных
+\begin{eqnarray}
+\hat{E} = \frac{P_0}{\hbar}E_0, 
+\nonumber \\
+\Omega^2 = \frac{1}{\hbar} 2 \pi n_0 P_0 \omega_0^2
+\nonumber 
+\end{eqnarray}
+выглядит следующим образом:
+\begin{eqnarray}
+\frac{\partial \hat{E}}{\partial z} + c \frac{\partial \hat{E}}{\partial t} = 
+\Omega^2 L,
+\nonumber \\
+\frac{\partial L}{\partial t} = \hat{E} N,
+\nonumber \\
+\frac{\partial N}{\partial t} = - \hat{E} L.
+\label{eqSIPMaxwellBloh}
+\end{eqnarray}
+
+Из двух последних уравнений системы (\ref{eqSIPMaxwellBloh})  следует,
+что
+\[
+N^2 + L^2  = const.
+\]
+Предполагая что в начальный момент времени все электроны находятся в
+каком-то одном состоянии возбужденном или невозбужденном получаем 
+\[
+N = \pm 1, \quad L = 0.
+\]
+Можно сказать, что \(+1\) соответствует случаю идеального усилителя
+(все частицы загнаны на верхние уровни). \(-1\) соответствует случаю
+отсутствия инверсной населенности - аттенюатор.
+
+Таким образом
+\[
+N^2 + L^2  = 1.
+\]
+Из последнего соотношения следует что 
+\[
+N = \pm \cos u, \quad L = \pm \sin u,
+\]
+где \(u\left(z, t\right)\)  некоторая новая переменная. Из второго (или третьего)
+уравнения  системы (\ref{eqSIPMaxwellBloh}) следует
+\[
+\hat{E} = \frac{\partial u}{\partial t}.
+\]
+Что можно сказать про \(u\)
+\begin{equation}
+u\left(z, t\right) = \int_{-\infty}^t dt^{'} \hat{E}\left(z,
+  t^{'}\right).
+\label{eqSIPu}
+\end{equation}
+Таким образом \(u\)  можно рассматривать как площадь под огибающей
+импульса. 
+
+Первое уравнение системы (\ref{eqSIPMaxwellBloh}) перепишем произведя
+следующее преобразование системы координат
+\begin{eqnarray}
+\frac{\partial}{\partial t} = \Omega \frac{\partial }{\partial \tau},
+\nonumber \\
+\frac{\partial}{\partial z} = \frac{\Omega}{c}
+\left( \frac{\partial }{\partial \xi} -  \frac{\partial }{\partial
+    \tau} \right).
+\nonumber
+\end{eqnarray}
+
+Результат следующий
+\begin{equation}
+\frac{\partial^2 u}{\partial \xi \partial \tau} = \pm \sin u.
+\label{eqSIP_Sine_Gordon}
+\end{equation}
+Уравнение (\ref{eqSIP_Sine_Gordon}) называется уравнением
+sine-Гордона. Знак \(+\) соответствует случаю усилителя. знак \(-\) -
+аттенюатора. Уравнение sine-Гордона (\ref{eqSIP_Sine_Gordon}) имеет
+решение следующего вида:
+\begin{equation}
+u = 4 \arctg\left[exp \left(a \tau \pm \frac{\xi}{a}\right)\right],
+\label{eqSIP_Sine_GordonSolution}
+\end{equation}
+где \(a\) -  некоторая константа.
+
+Исследуем устойчивость данного решения уравнения sine-Гордона для случая
+усилителя и случая аттенюатора. Для этого перейдем в
+(\ref{eqSIP_Sine_Gordon}) к переменной \(\hat{E}\):
+\begin{equation}
+\frac{1}{\Omega} \frac{\partial \hat{E}}{\partial \xi} = \pm sin u.
+\label{eqSIP_Temp}
+\end{equation}
+Переходя в (\ref{eqSIPu}) к пределу \( t \rightarrow + \infty\) и 
+воспользовавшись (\ref{eqSIP_Sine_GordonSolution}) в котором надо 
+записать \( \tau \rightarrow + \infty\) получим  
+\[
+u\left(z, t \rightarrow + \infty \right) = \int_{-\infty}^{+\infty} dt^{'} \hat{E}\left(z,
+  t^{'}\right) = 4 \arctg(+\infty) = 2 \pi.
+\]
+Таким образом площадь под огибающей такого импульса - \(2 \pi\),
+поэтому часто данное решение называют \(2 \pi\) импульсом. 
+
+Допустим теперь что площадь под огибающей чуть больше \(2 \pi\):
+\begin{eqnarray}
+u = 2 \pi + \varepsilon,
+\nonumber \\
+0 < \varepsilon \ll 1.
+\nonumber 
+\end{eqnarray}
+Тогда из (\ref{eqSIP_Temp}) 
+\[
+\frac{1}{\Omega} \frac{\partial \hat{E}}{\partial \xi} = \pm \sin \left(2 \pi
++ \varepsilon\right) = \pm \varepsilon.
+\]
+
+Таким образом в случае усилителя 
+\[
+\frac{\partial \hat{E}}{\partial \xi} > 0
+\]
+площадь под огибающей продолжает увеличиваться, то есть мы имеем в
+этом случае не устойчивое
+решение. Для случая аттенюатора
+\[
+\frac{\partial \hat{E}}{\partial \xi} < 0
+\]
+площадь под огибающей уменьшается и таким образом восстанавливается
+решение с площадью \(2 \pi\).
+
+\(2 \pi \) импульс в аттенюаторе устойчив, а в усилителе нет, поэтому в
+аттенюаторе можно ожидать появление уединенной волны, которая проходит
+через среду не изменяя своей формы, что и составляет явление
+самоиндуцированной прозрачности (FIX ME!!! add picture). 
+
+В заключение напишем вид решения для \(E_0\):
+\[
+E_0 = \frac{2 \hbar}{P_0 \tau_p} sech \left( \frac{t -
+    \frac{z}{v}}{\tau_p}\right), 
+\]
+где 
+\[
+\tau_p = \frac{1}{a \Omega}.
+\]

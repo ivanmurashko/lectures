@@ -1,0 +1,223 @@
+\subsection{Постановка задачи и вывод основных уравнений}
+В задаче о двухволновом взаимодействии света в ФРК, фоторефрактивный 
+кристалл освещается двумя плоскими волнами, падающими на кристалл
+с одной из его сторон (см. рис. \ref{fig_first_tw}).
+
+\input ./phr/fig_first_tw.tex
+
+Примем 
+\[
+\vec{E}_1 = A_1\left(z,t\right)\vec{e}_1 e^{-i(\vec{k}_1\vec{r})}
+\]
+и
+\[
+\vec{E}_2 = A_2\left(z,t\right)\vec{e}_2 e^{-i(\vec{k}_2\vec{r})}
+\]
+так что общее поле освещающее ФРК
+\begin{equation}
+\vec{E} = A_1\left(z,t\right)\vec{e}_1 e^{-i(\vec{k}_1\vec{r})} +
+A_2\left(z,t\right)\vec{e}_2 e^{-i(\vec{k}_2\vec{r})}
+\label{eqE_dsel_tw}
+\end{equation}
+
+Будем считать что источником рассеянных полей являются эквивалентные токи. Для
+нахождения амплитуд этих полей применим лемму Лоренца (подобным образом это
+делается, например, в теории возбуждения волноводов см. \cite{bWeinstein} ):
+\begin{equation}
+\int\limits_{S}{\left\{{\left[\vec{H}_a\vec{E}_b\right]}_n - 
+{\left[\vec{H}_b\vec{E}_a\right]}_n \right\}}ds = 
+\frac{4\pi}{c}\int\limits_{V}{\left\{\left(\vec{j}_a\vec{E}_b\right) 
+- \left(\vec{j}_b\vec{E}_a\right)\right\}}dv. 
+\label{eqLemmaLor_tw}
+\end{equation}
+
+Найдем выражения, описывающие поле $E$. 
+Для чего заметим, что возмущению диэлектрической проницаемости в среде
+\tiny{$\Delta$}\normalsize$\varepsilon$
+ соответствует эквивалентный ток:
+\begin{equation} 
+\vec{j}_{eq}=i\vec{E}\mbox{\tiny$\Delta$\normalsize}\varepsilon
+\frac{\omega}{4\pi}, 
+\label{eqJ_tw} 
+\end{equation}
+где
+\begin{equation} 
+\mbox{\tiny$\Delta$\normalsize}\varepsilon = 
+\varepsilon_m(z,t)e^{- i(\vec{\kappa}\vec{r})} + 
+\varepsilon_m^\ast(z,t)e^{i(\vec{\kappa}\vec{r})},
+\label{eqEpsilon_tw}
+\end{equation} 
+$\varepsilon_m$ - комплексная амплитуда решетки. Для волнового вектора решетки
+$\vec{\kappa}$ выполняется следующее соотношение:
+\begin{equation} 
+\vec{k}_1 - \vec{k}_2 + \vec{\kappa} = 0.
+\label{eqVectors_tw} 
+\end{equation} 
+Объем $V$, в этом случае, ограничен справа сечением $S$ 
+(см. рис.\ref{fig_second_tw}).
+В дальнейшем будем предполагать
+\begin{equation} 
+\int\limits_{S}
+{
+\left( \vec{e}_1 \vec{e}_1^\ast \right)
+}ds = 
+\int\limits_{S}
+{
+\left( \vec{e}_1 \vec{e}_2^\ast \right)
+}ds =
+\int\limits_{S}
+{
+\left( \vec{e}_2 \vec{e}_2^\ast \right)
+}ds
+= 1, 
+\label{eqPolar_tw}
+\end{equation} 
+в частности это предполагает что световые пучки \(\vec{E}_1\) и 
+\(\vec{E}_2\) имеют одну и ту же поляризацию
+
+В качестве поля ($a$) в соотношении \ref{eqLemmaLor_tw}
+примем поле $\vec{E}$ в виде разложения (\ref{eqE_dsel_tw}) с
+источником $\vec{j}_{eq}$ в виде (\ref{eqJ_tw}), а в качестве произвольного
+вспомогательного поля ($b$), не имеющего источников, примем поочередно поля 
+обращенные по отношению к искомым $\vec{e}_1^\ast e^{i(\vec{k}_1\vec{r})}$ и
+$\vec{e}_2^\ast e^{i(\vec{k}_2\vec{r})}$.
+В первом случае лемма Лоренца дает: 
+\begin{eqnarray} 
+\frac{4\pi}{c} \int\limits_{V}{ \left(\vec{j}_{eq}\vec{e}_1^\ast\right) 
+e^{i(\vec{k}_1\vec{r})}}dv = \frac{4\pi}{c} \int_{0}^{z}{dz'} 
+\int\limits_{S}{ds\left(\vec{j}_{eq}\vec{e}_1^\ast\right)e^{i(\vec{k}_1\vec{r})}} 
+= 
+\nonumber \\ 
+= \int\limits_{S}{ds \left\{ {\left[ \vec{H}\vec{e}_1^\ast
+\right]}_n e^{i(\vec{k}_1\vec{r})} - {\left[ \vec{h}_1^\ast\vec{E}  \right]}_n
+e^{i(\vec{k}_1\vec{r})} \right\}}.  
+\label{eqExample_1_tw} 
+\end{eqnarray} 
+Область интегрирования изображена на рис. \ref{fig_second_tw}.
+
+\input ./phr/fig_second_tw.tex
+
+С учетом известного соотношения для плоских волн
+\begin{equation}
+\vec{H} = 
+\sqrt{\frac{\varepsilon}{\mu}}\left[\frac{\vec{k}}{k}\vec{E}\right] 
+\label{eqEH_tw}
+\end{equation}
+для правой части соотношения (\ref{eqExample_1_tw}) получим
+\begin{eqnarray}
+\int\limits_{S}{ds \left\{ {\left[ \vec{H}\vec{e}_1^\ast
+\right]}_n e^{i(\vec{k}_1\vec{r})} - {\left[ \vec{h}_1^\ast\vec{E}  \right]}_n
+e^{i(\vec{k}_1\vec{r})} \right\}} =
+\nonumber \\ 
+= \sqrt{\frac{\varepsilon}{\mu}} \int\limits_{S}
+{ 
+{A_1\left[ 
+\left[\frac{\vec{k}_1}{k_1}\vec{e}_1\right]
+ \vec{e}_1^\ast \right]}_n 
+e^{-i(\vec{k}_1 - \vec{k}_1)\vec{r}}
+} 
+{ds} +
+\nonumber \\
++ 
+\sqrt{\frac{\varepsilon}{\mu}} \int\limits_{S}
+{ 
+{A_2\left[ 
+\left[\frac{\vec{k}_2}{k_2}\vec{e}_2\right]
+ \vec{e}_1^\ast \right]}_n 
+e^{-i(\vec{k}_2 - \vec{k}_1)\vec{r}}
+} 
+{ds} -
+\nonumber \\
+-
+\sqrt{\frac{\varepsilon}{\mu}} \int\limits_{S}
+{
+{A_1\left[ 
+\left[\frac{- \vec{k}_1}{k_1}\vec{e}_1^\ast\right]
+ \vec{e}_1 \right]}_n 
+e^{-i(\vec{k}_1 - \vec{k}_1)\vec{r}}
+} 
+{ds} -
+\nonumber \\
+-
+\sqrt{\frac{\varepsilon}{\mu}} \int\limits_{S}
+{
+{A_2\left[ 
+\left[\frac{- \vec{k}_1}{k_1}\vec{e}_1^\ast\right]
+ \vec{e}_2 \right]}_n 
+e^{-i(\vec{k}_2 - \vec{k}_1)\vec{r}}
+} 
+{ds} =
+\nonumber \\
+=
+- 2 cos \theta_1 \sqrt{\frac{\varepsilon}{\mu}}
+A_1.
+\label{eqExample_1_right_tw}
+\end{eqnarray}
+
+При выводе данного соотношения пренебрегалось быстро осциллирующими членами. 
+Кроме того были использованы следующие очевидные соотношения
+\[
+\left( \vec{e}_1 \vec{k}_1 \right) = 0,
+\]
+\[
+\left.\frac{\vec{k}_1}{k_1}\right|_n = cos \theta_1
+\]
+и было учтено соотношение (\ref{eqPolar_tw}).
+
+Для левой части (\ref{eqExample_1_tw})
+\begin{eqnarray}
+\frac{4\pi}{c} \int_{0}^{z}{dz'} 
+\int\limits_{S}{ds\left(\vec{j}_{eq}\vec{e}_1^\ast\right)e^{i(\vec{k}_1\vec{r})}} =
+\nonumber \\
+= \frac{i \omega}{c}
+\int_{0}^{z}{dz'}
+\int\limits_{S}
+{
+\varepsilon_m(z',t) \vec{e}_1^\ast 
+e^{i\left(\vec{\kappa} + \vec{k}_1\right)\vec{r}} \vec{E}
+}ds +
+\nonumber \\
++
+\int_{0}^{z}{dz'}
+\int\limits_{S}
+{ 
+\varepsilon_m^\ast(z',t) \vec{e}_1^\ast 
+e^{-i\left(\vec{\kappa} - \vec{k}_1\right)\vec{r}}
+\vec{E}
+}ds = 
+\frac{i \omega}{c} \int_{0}^{z}{dz'} \varepsilon_m^\ast(z',t) A_2
+\label{eqExample_1_left_tw} 
+\end{eqnarray}
+
+Объединяя (\ref{eqExample_1_left_tw}) и (\ref{eqExample_1_right_tw})
+получим
+\[
+A_1 = \frac{- i \omega}{2 cos \theta_1 c} 
+\sqrt{\frac{\mu}{\varepsilon}}.
+\int_{0}^{z}{dz'} \varepsilon_m^\ast(z',t) A_2.
+\]
+
+Действую по аналогии с изложенным выше для вспомогательного поля
+$\vec{e}_2^\ast e^{i(\vec{k}_2\vec{r})}$ можно получить
+\[
+A_2 = \frac{- i \omega}{2 cos \theta_2 c} 
+\sqrt{\frac{\mu}{\varepsilon}}.
+\int_{0}^{z}{dz'} \varepsilon_m(z',t) A_1.
+\]
+
+С учетом линейного электро-оптического эффекта (\ref{eqElectroOpt_phr}) можно записать
+\[
+\varepsilon_m(z',t) = \alpha E_{sc},
+\]
+где через \(\alpha\) обозначен электро-оптический коэффициент.
+Откуда
+\begin{eqnarray}
+A_1 = \frac{- i \omega \alpha}{2 cos \theta_1 c} 
+\sqrt{\frac{\mu}{\varepsilon}}
+\int_{0}^{z}{dz'} E_{sc}^\ast(z',t) A_2,
+\nonumber \\
+A_2 = \frac{- i \omega \alpha}{2 cos \theta_2 c} 
+\sqrt{\frac{\mu}{\varepsilon}}
+\int_{0}^{z}{dz'} E_{sc}(z',t) A_1
+\label{eqDifraction_tw}
+\end{eqnarray}

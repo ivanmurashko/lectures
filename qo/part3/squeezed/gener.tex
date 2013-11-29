@@ -1,0 +1,280 @@
+%% -*- coding:utf-8 -*- 
+\section{Генерация квадратурно сжатых состояний}
+\label{pNonClassGenerSqueezed}
+До сих пор рассматривалась теоретическая возможность существования и
+генерации сжатых состояний. Возникает вопрос - в каких реальных
+процессах можно получить свет в сжатом состоянии? Здесь рассмотрим
+возможность получения квадратурно сжатого состояния при
+параметрическом взаимодействии, возникающем при прохождении сильного
+поля накачки через среду с квадратичной нелинейностью. При таком
+взаимодействии возникают две волны, связанные с частотой накачки
+соотношениями:
+\begin{equation}
+\omega_p = \omega_s + \omega_i,
+\nonumber
+\end{equation}
+где $\omega_p$ - частота накачки, $\omega_s$ - сигнальная частота,
+$\omega_i$ - холостая частота. Условно это изображено на рис. 
+\ref{figPart3Squeezed_10}.
+
+\input ./part3/squeezed/fig10.tex
+
+Гамильтониан взаимодействия между накачкой, сигнальной и холостой
+волнами в представлении взаимодействия имеет вид:
+\begin{equation}
+\hat{V} = \hbar \kappa \left(
+\hat{a}^{+}_s \hat{a}^{+}_i \hat{b} + 
+\hat{a}_s \hat{a}_i \hat{b}^{+}
+\right),
+\label{eqPart3Squeezed30}
+\end{equation}
+где $\hat{a}^{+}_s$, $\hat{a}^{+}_i$, 
+$\hat{a}_s$ и $\hat{a}_i$ - операторы рождения и уничтожения для
+сигнальной и холостой волны, $\kappa$ - постоянная взаимодействия.
+
+\input ./part3/squeezed/fig11.tex
+
+В вырожденном режиме сигнальная и холостая волна имеют одну и ту же
+частоту накачки (см. рис. \ref{figPart3Squeezed_11}):
+\[
+\omega_s = \omega_i = \frac{\omega_p}{2} = \omega.
+\]
+
+Для вырожденного параметрического процесса гамильтониан взаимодействия
+(\ref{eqPart3Squeezed30}) упрощается:
+\begin{equation}
+\hat{V} = \hbar \kappa \left(
+\left(\hat{a}^{+}\right)^2 \hat{b} + 
+\hat{a}^2 \hat{b}^{+}
+\right).
+\nonumber
+\end{equation}
+Если поле накачки находится в когерентном состоянии с большой
+амплитудой $\alpha_p = A_p e^{i \varphi}$, $\left|\alpha_p\right| \gg
+1$, накачку можно заменить классическим полем. При этом гамильтониан
+взаимодействия еще больше упрощается
+\begin{equation}
+\hat{V} = \hbar \kappa A_p\left(
+\left(\hat{a}^{+}\right)^2 e^{- i \varphi} + 
+\hat{a}^2 e^{i \varphi}
+\right),
+\nonumber
+\end{equation}
+где $A_p$ и $\varphi$ - действительная амплитуда и фаза
+накачки. Очевидно, что в этом приближении мы пренебрегаем истощением
+накачки. Это будет справедливо, пока амплитуда сигнальной (холостой)
+волны будет мала по сравнению с амплитудой поля накачки. Уравнение
+Гейзенберга для оператора $\hat{a}$ будет иметь вид:
+\begin{eqnarray}
+\frac{d\hat{a}}{dt} = \frac{i}{\hbar}
+\left[\hat{V}, \hat{a}\right] = i \kappa A_p
+\left[
+\left(\hat{a}^{+}\right)^2 e^{- i \varphi} + 
+\hat{a}^2 e^{i \varphi},
+\hat{a}
+\right] = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\left(
+\left(
+\hat{a}^{+}\right)^2  \hat{a} -
+\hat{a}
+\left(
+\hat{a}^{+}\right)^2
+\right) = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\left(
+\left(
+\hat{a}^{+}\right)^2  \hat{a} -
+\left(\hat{a}^{+}\hat{a} + 1\right)
+\hat{a}^{+}
+\right) = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\left(
+\hat{a}^{+}\hat{a}^{+}  \hat{a} -
+\hat{a}^{+}\hat{a}\hat{a}^{+} -
+\hat{a}^{+}
+\right) = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\hat{a}^{+}
+\left(
+\hat{a}^{+}  \hat{a} -
+\hat{a}\hat{a}^{+} -
+1
+\right) = 
+i \kappa A_p e^{- i \varphi}
+\hat{a}^{+}
+\left(
+\left(-1\right) -
+1
+\right) =
+\nonumber \\
+= 
+- 2 i \kappa A_p e^{- i \varphi}
+\hat{a}^{+}.
+\nonumber
+\end{eqnarray}
+Таким образом имеем
+\begin{equation}
+\frac{d\hat{a}}{dt} = 
+- i \Omega_p e^{- i \varphi}
+\hat{a}^{+},
+\label{eqPart3Squeezed34a}
+\end{equation}
+где 
+\[
+\Omega_p = 2 \kappa A_p
+\]
+эквивалент частоты Рабби (энергия, выраженная через частоту).
+Аналогично
+\begin{equation}
+\frac{d\hat{a}^{+}}{dt} = 
+i \Omega_p e^{i \varphi}
+\hat{a}.
+\label{eqPart3Squeezed34b}
+\end{equation}
+
+Исключая из системы уравнений (\ref{eqPart3Squeezed34a}) и
+(\ref{eqPart3Squeezed34b}) $\hat{a}^{+}$, получим
+\begin{equation}
+\frac{d^2\hat{a}\left(t\right)}{dt^2} = 
+- i \Omega_p e^{- i \varphi}
+\frac{d\hat{a}^{+}\left(t\right)}{dt} = 
+\Omega_p^2\hat{a}\left(t\right).
+\label{eqPart3Squeezed35}
+\end{equation}
+Начальные условия для этого уравнения имеют вид
+\begin{eqnarray}
+\hat{a}\left(0\right) = \hat{a}_0, 
+\nonumber \\
+\hat{a}^{+}\left(0\right) = \hat{a}^{+}_0, 
+\label{eqPart3Squeezed36}
+\end{eqnarray}
+где $\hat{a}_0$ и $\hat{a}^{+}_0$ начальные значения операторов при $t
+= 0$. Решение уравнения (\ref{eqPart3Squeezed35}) с учетом начальных
+условий (\ref{eqPart3Squeezed36}) имеет вид:
+\begin{equation}
+\hat{a}\left(t\right) = \hat{a}_0 ch \left(\Omega_p t \right) - 
+i \hat{a}^{+}_0 sh \left(\Omega_p t\right) e^{-i \varphi}.
+\label{eqPart3Squeezed37a}
+\end{equation}
+Аналогично
+\begin{equation}
+\hat{a}^{+}\left(t\right) = \hat{a}^{+}_0 ch \left(\Omega_p t \right) +
+i \hat{a}_0 sh \left(\Omega_p t\right) e^{i \varphi}.
+\label{eqPart3Squeezed37b}
+\end{equation}
+
+%% Проверка в maxima
+%% (%i10) e1: diff(x(t),t) = - %i * Omega * exp(-%i * Phi) * y(t);
+%%                     d                        - %i Phi
+%% (%o10)              -- (x(t)) = - %i Omega %e         y(t)
+%%                     dt
+%% (%i11) e2: diff(y(t),t) =  %i * Omega * exp(%i * Phi) * x(t);
+%%                       d                      %i Phi
+%% (%o11)                -- (y(t)) = %i Omega %e       x(t)
+%%                       dt
+%% (%i12) desolve ([e1, e2], [x(t), y(t)]);
+%%                        %i Phi              Omega t - %i Phi
+%%                (x(0) %e       - %i y(0)) %e
+%% (%o12) [x(t) = --------------------------------------------
+%%                                     2
+%%            %i Phi              - Omega t - %i Phi
+%%    (x(0) %e       + %i y(0)) %e
+%%  + ----------------------------------------------, 
+%%                          2
+%%                   %i Phi           Omega t
+%%        (%i x(0) %e       + y(0)) %e
+%% y(t) = -----------------------------------
+%%                         2
+%%               %i Phi           - Omega t
+%%    (%i x(0) %e       - y(0)) %e
+%%  - -------------------------------------]
+%%                      2
+%% (%i13)
+
+
+Заметим, что при $\varphi = \frac{\pi}{2}$ выражения
+(\ref{eqPart3Squeezed37a}) и (\ref{eqPart3Squeezed37b}) приводят к
+соотношениям
+(\ref{eqPart3Squeezed16a}):
+\begin{eqnarray}
+\hat{a}\left(t\right) = \hat{a}_0 ch \left(\Omega_p t \right) - 
+\hat{a}^{+}_0 sh \left(\Omega_p t\right),
+\nonumber \\
+\hat{a}^{+}\left(t\right) = \hat{a}^{+}_0 ch \left(\Omega_p t \right) -
+\hat{a}_0 sh \left(\Omega_p t\right).
+\nonumber
+\end{eqnarray}
+
+Как мы видим, оператор $\hat{a}\left(t\right)$ получается унитарным
+преобразованием (\ref{eqPart3Squeezed16a}) которое в нашем случае
+имеет вид:
+\begin{equation}
+\hat{a}\left(t\right) =
+\hat{S}^{+}\left(t\right)
+\hat{a}\left(0\right)
+\hat{S}\left(t\right) =
+\hat{a}_0 ch \left(\Omega_p t \right) - 
+\hat{a}^{+}_0 sh \left(\Omega_p t\right).
+\label{eqPart3SqueezedGenerHeizenberg}
+\end{equation}
+Таким образом, переходя от представления Гейзенберга
+(\ref{eqAddWaveFunc_HeizenbergU})
+к представлению Шредингера (\ref{eqAddWaveFunc_ShredingerU}), можно
+заключить что исходное когерентное состояние подвергается тому же
+унитарному преобразованию что и оператор уничтожения
+(\ref{eqPart3SqueezedGenerHeizenberg}):
+\begin{equation}
+\hat{S}\left(t\right)
+\left|\alpha\right> =
+\left|t, \alpha\right>,
+\nonumber
+\end{equation}
+т. е. параметрическое взаимодействие эквивалентно действию оператора
+сжатия. В этом случае для
+квадратурных компонент 
+\[
+\hat{X}_1 = \frac{\hat{a} + \hat{a}^{+}}{2}
+\]
+и
+\[
+\hat{X}_2 = \frac{\hat{a} + \hat{a}^{+}}{2i}
+\]
+будет осуществлено сжатое состояние с неопределенностями 
+\begin{eqnarray}
+\left(\Delta X_1\right)^2 = 
+\frac{1}{4}e^{-2 \Omega_p t},
+\nonumber \\
+\left(\Delta X_2\right)^2 = 
+\frac{1}{4}e^{2 \Omega_p t},
+\nonumber \\
+\left(\Delta X_1 \Delta X_2\right) = 
+\frac{1}{4}.
+\nonumber
+\end{eqnarray}
+Параметр сжатия $r = \Omega_p t$ неограниченно растет во времени и,
+следовательно, степень сжатия неограниченно увеличивается. В
+действительности этого не происходит. Неограниченное сжатие есть
+следствие излишней идеализации задачи: не учитывалось истощение
+накачки, отличие реальной накачки от монохроматического классического
+света и ряд других факторов. Все это приводит к ограничению степени
+сжатия. Чем ближе реальные условия к идеальным, тем большую степень
+сжатия можно получить. 
+
+Рассмотренный выше случай получения сжатого состояния за счет
+параметрического процесса относится к получению сжатого вакуума,
+т. к. генерация сжатого состояния возникает от всегда присутствующей
+затравки вакуумного поля. Ее иногда называют параметрическим
+рассеянием поля накачки. Как мы выяснили, ``сжатый вакуум'' не является
+в полном смысле вакуумным полем. Среднее число фотонов в этом поле не
+равно 0, а зависит от степени сжатия по формуле (\ref{eqPart3Squeezed24}) и может быть при
+высокой степени сжатия достаточно велико.
+

@@ -1,0 +1,522 @@
+%% -*- coding:utf-8 -*- 
+\section{Когерентность второго порядка}
+Когерентность второго порядка может быть введена на основе анализа
+различных экспериментов, где измеряется скорость одновременной
+регистрации фотонов двумя детекторами. Анализ приводит к
+следующему определению степени когерентности второго порядка: 
+\begin{eqnarray}
+G^{(2)}\left(\vec{r}_1, t_1, \vec{r}_2, t_2\right) = 
+G^{(2)}_{12} = 
+\nonumber \\
+=
+\frac{\left<
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)
+\right>}
+{\left<
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)
+\right>
+\left<
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)
+\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)
+\right>
+}.
+\label{eqCh4_25}
+\end{eqnarray}
+Угловые скобки означают квантово-механическое усреднение по ансамблю
+при помощи статистического оператора (матрицы плотности) 
+\[
+\left<\left(\dots\right)\right> = Sp\left\{\hat{\rho}\left(\dots\right)\right\}
+\]
+
+Выражение (\ref{eqCh4_25}) напоминает классическое выражение,
+определяющее когерентность второго порядка, однако в нем на месте
+классических полей стоят операторы, а усреднение производится при
+помощи матрицы плотности. 
+
+\input ./part2/optic/figadd1.tex
+
+Формулу (\ref{eqCh4_25}) можно обосновать следующим
+образом. Рассмотрим оператор 
+$\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)$. Он соответствует поглощению одного фотона в точке
+$\vec{r}_1$ и в момент времени $t_1 = t$ и второго фотона в точке
+$\vec{r}_2$ в момент времени $t_2 = t - \tau$. Реализовать такую
+процедуру можно при помощи схемы, изображенной на
+рис. \ref{figPart4Ch2_add1}. Точки  $\vec{r}_1$ и $\vec{r}_2$
+определяются положением фотоприемников. Времена $t_1 = t$ и $t_2 = t -
+\tau$ определяются совпадением фотоотсчетов. $\tau$ - регулируемая
+задержка. Результат с двух детекторов подается на схему совпадений. 
+
+Применим к оператору $\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)$ процедуру, которую мы применяли при рассмотрении
+фотоэффекта. Вероятность регистрации первого фотона во время $t_1 =
+t$, а второго во время $t_2 = t - \tau$ в интервале $\Delta t$ равна
+\begin{equation}
+w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) \Delta t= 
+\alpha \left| \left<f\right|
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\left|i\right>\right|^2 \Delta t,
+\nonumber
+\end{equation}
+где $\left|i\right>$ начальное состояние системы, $\left|f\right>$
+конечное состояние системы, $\alpha$ - величина, зависящая от свойств
+фотодетекторов. Тогда скорость счета (число отсчетов в единицу
+времени) после суммирования по конечным состояниям определяется
+формулой
+\begin{equation}
+w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) = 
+\alpha \left<i\right|
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)\hat{E}^{(-)}\left(\vec{r}_1,
+t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\left|i\right>.
+\nonumber
+\end{equation}
+Здесь нас интересует только полевая часть, атомная часть выражается
+коэффициентом $\alpha$.
+
+Если начальное поле находится в статистически смешанном состоянии, то
+усреднение надо проводить при помощи статистического оператора
+начального поля. Тогда будем иметь
+\begin{equation}
+w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) = 
+\alpha Sp \left\{\hat{\rho}
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)\hat{E}^{(-)}\left(\vec{r}_1,
+t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\right\}.
+\nonumber
+\end{equation}
+При помощи этого выражения для нормированной степени
+когерентности получим формулу (\ref{eqCh4_25}).
+
+Приведем некоторые примеры вычисления
+степени когерентности второго порядка. Начнем с простого. Найдем
+когерентность второго порядка для одномодового состояния с
+определенным числом фотонов. Для этого нужно рассмотреть матричный
+элемент  
+\[
+\left<n\right|\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\left|n\right> = n
+\left(n - 1\right).
+\]
+Это выражение будет стоять в числителе. В знаменателе будем иметь 
+\[
+\left(\left<n\right|\hat{a}^{+}\hat{a}\left|n\right>\right)^2 = 
+n^2.
+\]
+
+Числовые коэффициенты в числителе и знаменателе сокращаются. Получаем:
+\begin{eqnarray}
+G^{(2)}_{12} = \frac{n\left(n - 1\right)}{n^2} = \frac{n - 1}{n} 
+\mbox{ для } n > 2,
+\nonumber \\
+G^{(2)}_{12} = 0
+\mbox{ для } n = 0, 1.
+\label{eqCh4_26}
+\end{eqnarray}
+
+Рассмотрим еще один простой случай: одномодовое поле в когерентном состоянии. Имеем
+\begin{eqnarray}
+\left<\alpha\right|\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\left|\alpha\right>
+= \left(\alpha^{*}\alpha\right)^2
+\mbox{ - в числителе},
+\nonumber \\
+\left(\left<\alpha\right|\hat{a}^{+}\hat{a}\left|\alpha\right>\right)^2
+= \left(\alpha^{*}\alpha\right)^2
+\mbox{ - в знаменателе}.
+\nonumber
+\end{eqnarray}
+
+Все вместе дает
+\[
+G^{(2)}_{12} = 1.
+\]
+
+До сих пор мы рассматривали когерентность чистых состояний. Перейдем к
+рассмотрению смешанных состояний. Рассмотрим одномодовый хаотический
+свет, матрица плотности которого равна 
+\[
+\hat{\rho} = \sum_{n}\frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n +
+    1}} \left|n\right>\left<n\right| = 
+\sum_n\rho_{nn}\left|n\right>\left<n\right|.
+\]
+Отсюда получим
+\begin{eqnarray}
+Sp \left\{\hat{\rho}\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\right\} = 
+\sum_{n}\sum_{m}\left<n\right|\left.m\right>\left<m\right|
+\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}
+\left|m\right> \rho_{mm} = 
+\nonumber \\
+= \sum_{n}\rho_{nn}\left(n - 1\right)n = \bar{n^2} - \bar{n}.
+\label{eqCh4_add1_sp}
+\end{eqnarray}
+
+Для хаотического света имеет место соотношение
+\begin{equation}
+\bar{n^2} = 2
+\left(\bar{n}\right)^2 + \bar{n}.
+\label{eqCh4_add1_mid_n2}
+\end{equation}
+Действительно
+\begin{eqnarray}
+\bar{n^2} = 
+\sum_n n^2 \frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n + 1}} = 
+\frac{\bar{n}}{\left(\bar{n} + 1\right)}\sum_n n^2
+\frac{\bar{n}^{n-1}}{\left(\bar{n} + 1\right)^{n}} =
+\nonumber \\
+= 
+\frac{\bar{n}}{\left(\bar{n} + 1\right)}\sum_{m = n -1} \left(m +
+1\right)^2
+\frac{\bar{n}^m}{\left(\bar{n} + 1\right)^{m + 1}} = 
+\nonumber \\
+= \frac{\bar{n}}{\left(\bar{n} + 1\right)}\sum_m
+\left(m^2 + 2 m + 1\right)
+\frac{\bar{n}^m}{\left(\bar{n} + 1\right)^{m + 1}} = 
+\nonumber \\
+=
+\frac{\bar{n}}{\left(\bar{n} + 1\right)}\left(\bar{n^2} + 2 \bar{n} +
+1\right),
+\nonumber
+\end{eqnarray}
+таким образом получим
+\begin{equation}
+\bar{n^2}\left(\bar{n} + 1\right) = 
+\bar{n}\left(\bar{n^2} + 2 \bar{n} + 1\right)
+\nonumber
+\end{equation}
+откуда и следует искомое выражение (\ref{eqCh4_add1_mid_n2}):
+\begin{equation}
+\bar{n^2} = 2
+\left(\bar{n}\right)^2 + \bar{n}.
+\nonumber
+\end{equation}
+
+Таким образом из (\ref{eqCh4_add1_sp}) и (\ref{eqCh4_add1_mid_n2}) имеем
+\[
+Sp\left\{\dots\right\} = 2\left(\bar{n}\right)^2
+\] 
+В знаменателе имеем  $\left(\bar{n}\right)^2$. Отсюда получаем, что
+для хаотического света 
+\begin{equation}
+G_{12}^{(2)} = 2,
+\label{eqCh4_27}
+\end{equation}
+из чего следует, что пары фотонов регистрируются чаще, чем это
+наблюдается при более упорядоченном свете. Физически это
+связано с флуктуациями хаотического света. В связи с этим
+иногда говорят о склонности фотонов к группировке. Вообще же
+для произвольного одномодового поля когерентность второго
+порядка равна 
+\begin{equation}
+G^{(2)} = \frac{\bar{n^2} - \bar{n}}{\left(\bar{n}\right)^2}.
+\label{eqCh4_28}
+\end{equation}
+Более подробно мы рассмотрим этот вопрос в третьей части данной книги
+(см. \ref{chNonClass} Неклассический свет).
+
+На практике чаще имеют дело с многомодовыми полями. Определим степень
+когерентности второго порядка в двух предельных случаях:
+многомодового когерентного состояния и многомодового
+хаотического света. Первый случай рассматривается
+просто. Вектор состояния в этом случае можно представить в
+виде  
+\begin{equation}
+\left|\left\{\alpha_k\right\}\right> = 
+\left|\left\{\alpha_{k_1}\right\}\right>
+\left|\left\{\alpha_{k_2}\right\}\right>
+\dots
+\left|\left\{\alpha_{k_s}\right\}\right>
+\dots.
+\label{eqCh4_29}
+\end{equation}
+Используя равенства 
+\[
+\hat{E}^{(+)}\left(x\right)\left|\left\{\alpha_k\right\}\right> = 
+E\left(x\right)\left|\left\{\alpha_k\right\}\right>
+\]
+и
+\[
+\left<\left\{\alpha_k\right\}\right|\hat{E}^{(-)}\left(x\right) = 
+\left<\left\{\alpha_k\right\}\right|E^{*}\left(x\right),
+\]
+где $x = \left(t, r\right)$, $E\left(x\right)$ - аналитический сигнал
+(частотно-положительная часть) классического поля, получаемого из
+оператора $\hat{E}^{(+)}$ заменой $\hat{a}_k \rightarrow
+\alpha_k$. Отсюда получим:
+\begin{eqnarray}
+\left<\left\{\alpha_k\right\}\right|\hat{E}^{(-)}\left(x_2\right)
+\hat{E}^{(-)}\left(x_1\right)\hat{E}^{(+)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)\left|\left\{\alpha_k\right\}\right> = 
+\nonumber \\
+= E^{*}\left(x_2\right)E^{*}\left(x_1\right)
+E\left(x_1\right)E\left(x_2\right).
+\nonumber
+\end{eqnarray}
+Таким же образом убеждаемся, что в знаменателе будет стоять величина  
+$E^{*}\left(x_1\right)E\left(x_1\right)
+E^{*}\left(x_2\right)
+E\left(x_2\right)$. Следовательно, в этом случае
+\begin{equation}
+G_{12}^{(2)} = 1,
+\label{eqCh4_30}
+\end{equation}
+
+Сложнее рассмотреть случай хаотического многомодового светового
+поля. В этом случае статистический оператор будет иметь вид
+(\ref{eqCh1_102}) 
+\begin{eqnarray}
+\hat{\rho} = \sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}} \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right| = 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{n_k\right\}} 
+\frac{\bar{n}_k^{n_k}}{\left(1 + \bar{n}_k\right)^{n_k+1}} = 
+\nonumber \\
+= 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{n_k\right\}} P_{\left\{n_k\right\}}.
+\label{eqCh4_31}
+\end{eqnarray}
+При перемножении операторов электрического поля получим четырехкратную
+сумму, так как $\hat{E}^{(+)}$ и $\hat{E}^{(-)}$ выражаются в виде
+разложений по плоским волнам: 
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right) = \sum_{(k)}
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0 V}} \vec{e}_k \hat{a}_k
+e^{-i \omega_k t + i \left(\vec{k} \vec{r}\right)},
+\nonumber \\
+\hat{\vec{E}}^{(-)}\left(\vec{r}, t\right) = \sum_{(k)}
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{+}
+e^{i \omega_k t - i \left(\vec{k} \vec{r}\right)}.
+\label{eqCh4_32}
+\end{eqnarray}
+Общий член произведения сумм (\ref{eqCh4_32}) будет содержать
+произведения операторов вида 
+\begin{equation}
+\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
+\label{eqCh4_33}
+\end{equation}
+Усреднение этого члена при помощи статистического оператора
+(\ref{eqCh4_31}) приводит к выражению 
+\[
+Sp\left(\hat{\rho}
+\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\right) = 
+\sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}}
+\left<\left\{n_k\right\}\right|
+\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\left|\left\{n_k\right\}\right>.
+\]
+Легко увидеть, что члены, в которых все моды разные: 
+\[
+k^{I} \neq k^{II} \neq k^{III} \neq k^{IV},
+\]
+будут равны нулю. Отличными от нуля будут только те члены, для которых
+выполняются условия:
+\[
+k^{I} = k^{III} = k_1, \quad k^{II} = k^{IV} = k_2
+\]
+или
+\[
+k^{I} = k^{IV} = k_1, \quad k^{II} = k^{III} = k_2
+\]
+или
+\[
+k^{I} = k^{II} =  k^{III} = k^{IV} = k.
+\]   
+
+Имеем: в первом случае -
+\begin{equation}
+\sum_{n_{k_1}}\sum_{n_{k_2}} P_{n_{k_1}} P_{n_{k_2}} 
+n_{k_1} n_{k_2} = \bar{n}_{k_1} \bar{n}_{k_2},
+\label{eqCh4_34}
+\end{equation}
+во втором -
+\begin{equation}
+\sum_{n_{k_1}}\sum_{n_{k_2}} P_{n_{k_1}} P_{n_{k_2}} 
+n_{k_1} n_{k_2} = \bar{n}_{k_1} \bar{n}_{k_2}.
+\label{eqCh4_35}
+\end{equation}
+Последний случай был нами рассмотрен выше (\ref{eqCh4_28}), что дает
+\begin{equation}
+\sum_{n_{k}} P_{n_{k}}
+\left<n_k\right|\hat{a}_k^{+}\hat{a}_k^{+}\hat{a}_k\hat{a}_k\left|n_k\right>
+= 2 \left(\bar{n}_k\right)^2.
+\label{eqCh4_36}
+\end{equation}
+
+Все изложенное выше позволяет написать выражение для функции
+когерентности в виде 
+\begin{eqnarray}
+G_{12}^{(2)} = \frac{\sum_{k_1}\sum_{k_2 \neq k_1} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2} e^{i \omega_{k_1} \tau} 
+e^{- i \omega_{k_2} \tau} } 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} + 
+\nonumber \\
++
+\frac{2 \sum_{k} \bar{n}_{k}^2 \omega_k^2} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} + 
+\nonumber \\
++
+\frac{\sum_{k_1}\sum_{k_2 \neq k_1} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2}} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2}
+\label{eqCh4_37}
+\end{eqnarray}
+где обозначено 
+\[
+\omega \tau = \omega \left(t_2 - t_1\right) - \left(\vec{k}, \vec{r}_2
+- \vec{r}_1\right) = 
+\omega \left[
+\left(t_2 - t_1\right) - \frac{1}{c}\left(\vec{k}_0, \vec{r}_2
+- \vec{r}_1\right)
+\right],
+\]
+если мы имеем узкий световой пучок, в котором все моды
+распространяются примерно в одном направлении. 
+
+Половину средней суммы $2 \sum_{k} \bar{n}_{k}^2 \omega_k^2$ можно
+объединить с левой суммой, а вторую половину - с правой. Получим: 
+\begin{eqnarray}
+G_{12}^{(2)} = \frac{\sum_{k_1}\sum_{k_2} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2} e^{i \omega_{k_1} \tau} 
+e^{- i \omega_{k_2} \tau}} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} + 
+\nonumber \\
++ \frac{\sum_{k_1}\sum_{k_2} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2}} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} = 
+\nonumber \\
+= 
+\frac{\sum_{k_1}\bar{n}_{k_1} \omega_{k_1} e^{i \omega_{k_1} \tau}
+\sum_{k_2}\bar{n}_{k_2} \omega_{k_2} e^{- i \omega_{k_2} \tau} +
+\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2
+}
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} = 
+\nonumber \\
+= \frac{\left|\sum_{(k)}\bar{n}_{k} \omega_{k} e^{i \omega_{k}
+  \tau}\right|^2 + \left(\sum_{(k)} \bar{n}_k \omega_k\right)^2}
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} = 
+\left(G_{12}^{(1)}\right)^2 + 1,
+\label{eqCh4_38}
+\end{eqnarray}
+где $G_{12}^{(1)}$ - функция когерентности
+первого порядка.  
+
+Получен важный результат: когерентность второго порядка для
+хаотического света выражается через когерентность первого порядка. На
+этом факте основана так называемая интерферометрия
+интенсивности. Впервые такое наблюдалось в опытах Хенбери Брауна и
+Твисса, схема которых изображена на рис. \ref{figPart4Ch2_4}.
+
+\input ./part2/optic/fig4.tex
+
+Как видно из рис. \ref{figPart4Ch2_4}, при помощи 50\% зеркала
+световой пучок направляется на два фотоприемника. Задержка
+осуществляется перемещением одного из фотодетекторов. Схема совпадений
+фиксирует регистрацию двух фотонов с заданной задержкой во времени.
+
+\input ./part2/optic/fig4a.tex
+
+На рис. \ref{figPart4Ch2_4a} изображена зависимость числа совпадений
+от задержки. В классическом случае схема эксперимента остается прежней,
+только схема совпадений заменяется коррелятором. Результат
+эксперимента и в этом случае имеет вид рисунка \ref{figPart4Ch2_4a}. 
+
+В этих экспериментах измерялась корреляция интенсивностей, то есть 
+функция когерентности второго порядка. Используя связь между функциями
+корреляций разного порядка, можно вычислить функцию первого порядка, а
+затем, используя связь между корреляционной функцией и энергетическим
+спектром (теорема Хинчина-Винера), определить спектр излучения. Таким
+образом, ``считая фотоны'', можно косвенно производить спектральные
+измерения. Этим сейчас широко пользуются. Как будет видно из
+дальнейшего, такая процедура позволяет производить измерение спектров
+хаотического света с высоким разрешением, дополняя традиционные методы
+спектральных измерений (при помощи спектральных приборов типа
+дифракционных решеток, призм и т.п.). 
+
+Выражение (\ref{eqCh4_38}) можно также получить, используя
+представление когерентных состояний. В этом случае
+\begin{equation}
+\hat{\rho} = \int \dots \int P\left(\left\{\alpha_k\right\}\right)
+\left|\left\{\alpha_k\right\}\right>\left<\left\{\alpha_k\right\}\right|d^2 \left\{\alpha_k\right\},
+\nonumber
+\end{equation}
+где
+\begin{equation}
+P\left(\left\{\alpha_k\right\}\right) = \prod_k\frac{1}{\pi
+  \bar{n}_k}e^{-\frac{\left|\alpha_k\right|^2}{\bar{n}_k}}=
+\prod_k P_k\left(\alpha_k\right).
+\nonumber
+\end{equation} 
+Усреднению подлежит произведение операторов
+\begin{equation}
+\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
+\nonumber
+\end{equation}
+Это приводит к интегралу
+\begin{eqnarray}
+Sp \left\{
+\hat{\rho}
+\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\right\} = 
+\nonumber \\
+= 
+\int \dots \int 
+d^2 \left\{\alpha_k\right\},
+P\left(\left\{\alpha_k\right\}\right)
+\left(
+\alpha^{*}_{k^{I}}\alpha^{*}_{k^{II}}\alpha_{k^{III}}\alpha_{k^{IV}}
+\right).
+\nonumber
+\end{eqnarray}
+
+По-прежнему отличными от нуля будут члены с парными произведениями,
+удовлетворяющими условиям
+\[
+k^{I} = k^{III} = k_1, \quad k^{II} = k^{IV} = k_2
+\]
+или
+\[
+k^{I} = k^{IV} = k_1, \quad k^{II} = k^{III} = k_2
+\]
+а также
+\[
+k^{I} = k^{II} =  k^{III} = k^{IV} = k.
+\]   
+Как легко показать, интегрируя в полярных координатах $\alpha = r
+e^{i\theta}$, не равные нулю интегралы будут иметь вид:
+\begin{equation}
+\int d^2 \alpha_{k_1} P\left(\alpha_{k_1}\right)
+\alpha_{k_1}^{*} \alpha_{k_1}
+\int d^2 \alpha_{k_2} P\left(\alpha_{k_2}\right)
+\alpha_{k_2}^{*} \alpha_{k_2} = 
+\bar{n}_{k_1} \bar{n}_{k_2}.
+\nonumber
+\end{equation}
+В третьем случае с учетом 
+\[
+P\left(\alpha_k\right) = \frac{1}{\pi \bar{n}_k}e^{\frac{r^2}{\bar{n}_k}}
+\]
+имеем
+\begin{eqnarray}
+\int d^2\alpha_k P\left(\alpha_k\right)
+\left(\alpha_k^{*}\alpha_k\right)^2 = 
+\int_0^{\infty}r dr \int_0^{2\pi}P\left(\alpha_k\right) r^4 d \theta = 
+\nonumber \\
+= \frac{2 \pi}{\pi \bar{n}_k}\int_0^{\infty} r^4 r dr e^{-
+  \frac{r^2}{\bar{n}_k}} = 
+\bar{n}_k^2 \int_0^{\infty}x^2 d x e^{-x} = 2 \bar{n}_k^2.
+\nonumber
+\end{eqnarray}
+Здесь сделана замена $x = \frac{r^2}{\bar{n}_k}$, $dx = \frac{2 r
+  dr}{\bar{n}_k}$.
+Таким образом у нас получились те же результаты, которые были получены
+ранее. Поэтому окончательный результат (\ref{eqCh4_38}) не изменится.

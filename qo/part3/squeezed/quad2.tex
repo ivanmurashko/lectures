@@ -1,0 +1,301 @@
+%% -*- coding:utf-8 -*- 
+\section{Сжатие квадратурного состояния}
+Сначала рассмотрим теоретическую возможность создания сжатых
+квадратурных состояний. Рассмотрим построение сжатого состояния из
+когерентного состояния, в котором будет сжата одна из квадратурных
+составляющих. Преобразование состояний производится при помощи
+некоторого унитарного преобразования.
+
+Рассмотрим унитарный оператор, который называют оператором сжатия
+(причина такого названия станет ясна из дальнейшего)
+\begin{equation}
+\hat{S}\left(z\right) = e^{\frac{1}{2}z^{*}\hat{a}^2 -
+\frac{1}{2}z\hat{a}^{+2}},
+\nonumber
+\end{equation}
+где $z = r e^{i\theta}$ - произвольное комплексное число.
+Сопряженный оператор имеет вид
+\begin{equation}
+\hat{S}^{+}\left(z\right) = e^{\frac{1}{2}z\hat{a}^{+2} -
+\frac{1}{2}z^{*}\hat{a}^{2}}, 
+\nonumber
+\end{equation}
+откуда видно, что
+\begin{equation}
+\hat{S} \hat{S}^{+} = \hat{S}^{+} \hat{S} = \hat{I},
+\nonumber
+\end{equation}
+где $\hat{I}$ является единичным оператором. Таким образом, $\hat{S}^{+} =
+\hat{S}^{-1}$ действительно является унитарным оператором.
+
+Рассмотрим действие оператора $\hat{S}\left(z\right)$ на операторы
+$\hat{a}$ и $\hat{a}^{+}$ и на когерентное состояние. Для этой цели
+применим теорему об операторном разложении (подробный вывод смотри в
+приложении \ref{AddTheorem1}): 
+\begin{equation}
+e^{\hat{A}}\hat{B}e^{-\hat{A}} = 
+\hat{B} + \left[\hat{A},\hat{B}\right] + 
+\frac{1}{2!} \left[\hat{A},\left[\hat{A},\hat{B}\right]\right] + \dots
+\label{eqPart3Squeezed15}
+\end{equation}
+При помощи (\ref{eqPart3Squeezed15}) легко показать, если принять
+\[
+e^{\hat{A}} = \hat{S}\left(z\right), \, \hat{B} = \hat{a},
+\]
+что
+\begin{eqnarray}
+\hat{A} = \hat{S}\left(z\right)\hat{a}\hat{S}^{+}\left(z\right) =
+\hat{a} + z \hat{a}^{+} + \frac{\left|z\right|^2\hat{a}}{2!} +
+\frac{z\left|z\right|^2\hat{a}^{+}}{3!} + \dots = 
+\nonumber \\
+=\hat{a} ch\,r + \hat{a}^{+} e^{i\theta} sh \, r = 
+\mu \hat{a} + \nu \hat{a}^{+},
+\label{eqPart3Squeezed16}
+\end{eqnarray}
+где $\mu = ch\,r$, $\nu = e^{i\theta} sh\,r$, $\left|\mu\right|^2 -
+\left|\nu\right|^2  = 1$.
+Таким же образом можно показать, что при обратном порядке действия
+операторов $\hat{S}^{+}\dots\hat{S}$ получается формула, которая
+отличается от (\ref{eqPart3Squeezed16}) только знаком между
+слагаемыми:
+\begin{eqnarray}
+\hat{S}^{+}\left(z\right)\hat{a}\hat{S}\left(z\right) 
+=\hat{a} ch\,r - \hat{a}^{+} e^{i\theta} sh \, r,
+\nonumber \\
+\hat{S}^{+}\left(z\right)\hat{a}^{+}\hat{S}\left(z\right) 
+=\hat{a}^{+} ch\,r - \hat{a} e^{-i\theta} sh \, r.
+\label{eqPart3Squeezed16a}
+\end{eqnarray}
+
+Подействуем оператором $\hat{S}$ на вектор когерентного состояния. При
+этом мы получим новое состояние:
+\begin{equation}
+\left|\alpha, z\right> = \hat{S}\left(z\right)\left|\alpha\right>.
+\label{eqPart3Squeezed17}
+\end{equation}
+Покажем теперь, что состояние $\left|\alpha, z\right>$ является
+собственным состоянием оператора $\hat{A}$:
+\begin{eqnarray}
+\hat{A}\left|\alpha, z\right> = 
+\hat{S}\left(z\right)\hat{a}\hat{S}^{+}\left(z\right)\hat{S}\left(z\right)\left|\alpha\right>
+= 
+\hat{S}\left(z\right)\hat{a}\left|\alpha\right> = 
+\nonumber \\
+= \alpha \hat{S}\left(z\right)\left|\alpha\right> = 
+\alpha \left|\alpha, z\right>.
+\label{eqPart3Squeezed18}
+\end{eqnarray}
+Здесь использовано определение $\hat{A}$ и $\hat{S}\hat{S}^{+} = \hat{I}$.
+Из (\ref{eqPart3Squeezed18}) следует, что состояние $\left|\alpha, z\right>$ является
+собственным состоянием оператора $\hat{A}$, а собственное число совпадает с
+собственным числом когерентного состояния, из которого получено
+состояние $\left|\alpha, z\right>$.
+Сопряженное равенство имеет вид
+\begin{equation}
+\left<\alpha, z\right|\hat{A}^{+} = 
+\alpha^{*}\left<\alpha, z\right|
+\label{eqPart3Squeezed19}
+\end{equation}
+Исходя из соотношений (\ref{eqPart3Squeezed18}) и
+(\ref{eqPart3Squeezed19}), по аналогии с операторами $\hat{a}$ и
+$\hat{a}^{+}$, $\hat{A}$ и $\hat{A}^{+}$ называют операторами
+квазирождения и квазиуничтожения.
+
+Остается выяснить, является ли состояние $\left|\alpha, z\right>$
+сжатым состоянием? Для этого надо написать соотношение
+неопределенности для $\Delta X_1$  и $\Delta X_2$. Имеем
+\begin{equation}
+\left(\Delta X_{1,2}\right) = 
+\left<\alpha, z\right| \hat{X}_{1,2}^2\left|\alpha, z\right> -
+\left<\alpha, z\right| \hat{X}_{1,2}\left|\alpha, z\right>^2.
+\nonumber
+\end{equation}
+Это выражение, используя (\ref{eqPart3Squeezed17}), можно представить в
+виде 
+\begin{equation}
+\left(\Delta X_{1,2}\right) = 
+\left<\alpha\right|\hat{S}^{+} \hat{X}_{1,2}^2\hat{S}\left(z\right)\left|\alpha\right> -
+\left<\alpha\right|\hat{S}^{+} \hat{X}_{1,2}\hat{S}\left(z\right)\left|\alpha\right>^2.
+\label{eqPart3Squeezed20}
+\end{equation}
+Операторы $\hat{X}_{1,2}$ выражаются через $\hat{a}$ и $\hat{a}^{+}$:
+\begin{eqnarray}
+\hat{X}_1 = \frac{1}{2}\left(\hat{a} + \hat{a}^{+}\right), 
+\nonumber \\
+\hat{X}_2 = \frac{1}{2 i}\left(\hat{a} - \hat{a}^{+}\right).
+\nonumber
+\end{eqnarray}
+Подставляя это в (\ref{eqPart3Squeezed20}), преобразуя операторы
+$\hat{a}$ и $\hat{a}^{+}$ при помощи (\ref{eqPart3Squeezed16a}),
+получим окончательное выражение для $\Delta X_1$  и $\Delta X_2$:
+%(подробный вывод смотри в приложении FIXME!!! add it):
+\begin{eqnarray}
+\left(\Delta X_1\right)^2 = \frac{1}{4}e^{-2 r},
+\nonumber \\
+\left(\Delta X_2\right)^2 = \frac{1}{4}e^{2 r},
+\nonumber \\
+\left(\Delta X_1 \Delta X_2\right) = \frac{1}{4},
+\label{eqPart3Squeezed21}
+\end{eqnarray}
+где $r = \left|z\right|$ является параметром сжатия. Из
+(\ref{eqPart3Squeezed21}) следует, что состояние $\left|\alpha,
+z\right>$ действительно является сжатым состоянием для одной из
+квадратурных компонент. Поскольку состояние неопределенности имеет
+минимальное значение, состояние является идеально сжатым
+состоянием. Мы будем называть это состояние идеально сжатым
+квадратурным состоянием.
+
+Если воздействовать оператором $\hat{S}\left(z\right)$ на вакуумное
+состояние ($\alpha = 0$), получим сжатое вакуумное состояние (сжатый
+вакуум)
+\begin{equation}
+\hat{S}\left(z\right)\left|0\right> = \left|z, 0\right>.
+\nonumber
+\end{equation}
+
+Среднее число фотонов в квадратурно сжатом когерентном состоянии
+определяется выражением:
+\begin{eqnarray}
+\left<\alpha, z\right|\hat{a}^{+}\hat{a}\left|\alpha, z\right> =
+\left<\alpha\right|\hat{S}^{+}\hat{a}^{+}\hat{a}\hat{S}\left|\alpha\right>
+=
+\nonumber \\
+=
+\left<\alpha\right|\hat{S}^{+}\hat{a}^{+}\hat{S}\hat{S}^{+}\hat{a}\hat{S}\left|\alpha\right>
+= 
+\left<\alpha\right|\hat{A}^{+}\hat{A}\left|\alpha\right> =
+\nonumber \\
+=
+\left<\alpha\right|
+\left(\hat{a}^{+} ch\,r - \hat{a}e^{-i\theta}sh\,r\right)
+\left(\hat{a} ch\,r - \hat{a} e^{i\theta}sh\,r\right)
+\left|\alpha\right> = 
+\nonumber \\
+=
+\left(
+\left|\alpha\right|^2\left(ch^2 r + sh^2 r\right) -
+\left(\alpha^{*}\right)^2
+e^{i\theta} sh\,r ch\,r - 
+\alpha^2 sh\,r ch\,r e^{- i\theta} + sh^2 r
+\right).
+\label{eqPart3Squeezed23}
+\end{eqnarray}
+При выводе (\ref{eqPart3Squeezed23}) мы использовали соотношение
+(\ref{eqPart3Squeezed16a}).
+
+Сжатому вакуумному состоянию соответствует $\alpha = 0$. Тогда среднее
+число фотонов в этом состоянии
+\begin{equation}
+\left<0, z\right|\hat{a}^{+}\hat{a}\left|0, z\right> =
+sh^2 r \ne 0,
+\label{eqPart3Squeezed24}
+\end{equation}
+где $r$ - параметр сжатия.
+
+Очевидно, что состояние сжатого вакуума не является настоящим
+вакуумным состоянием, т. к. может быть обнаружено фотоприемником,
+использующим фотоэффект, что для истинного вакуумного состояния
+невозможно.
+
+\input ./part3/squeezed/fig1.tex
+\input ./part3/squeezed/fig2.tex
+\input ./part3/squeezed/fig3.tex
+%\input ./part3/squeezed/fig4.tex
+%\input ./part3/squeezed/fig5.tex
+
+Наглядно квадратурно сжатые  состояния представлены на рисунках
+\ref{figPart3Squeezed_1}-\ref{figPart3Squeezed_3}, где представлены
+начальные состояния и развитие колебаний во 
+времени для различных сжатых состояний. На правых графиках изображены
+области неопределенности, которые имеют форму элипса. Такую картину
+можно было бы увидеть, если бы мы имели что-то вроде оптического
+стробоскопического осциллографа, которого в действительности нет.
+
+Рассмотрим полученные состояния более подробно. Формулу
+(\ref{eqPart3Squeezed17}) можно написать несколько иначе, если
+воспользоваться представлением когерентного состояния через вакуумное
+в форме (\ref{eqCh1_astate4squeezed}):
+\begin{equation}
+\left|\alpha\right> =  
+e^{\alpha \hat{a}^{+} - \alpha^{*} \hat{a}}\left|0\right> = 
+\hat{D}\left|0\right>,
+\nonumber
+\end{equation}
+где $\hat{D} = e^{\alpha \hat{a}^{+} - \alpha^{*} \hat{a}}$ называют
+оператором смещения. $\hat{D}$ является унитарным оператором, т. к. 
+\[
+\hat{D}^{+} = e^{-\left(\alpha \hat{a}^{+} - \alpha^{*} \hat{a}\right)}
+\]
+откуда
+\[
+\hat{D}^{+} \hat{D} = \hat{D} \hat{D}^{+} =\hat{I},
+\]
+т. е. $\hat{D}^{+} = \hat{D}^{-1}$.
+
+Название оператора связано с тем, что действие
+$\hat{D}\left(\alpha\right)$ на операторы $\hat{a}$ и $\hat{a}^{+}$
+приводит к их смещению на величину $\alpha$ ($\alpha^{*}$):
+\begin{eqnarray}
+\hat{D}^{+}\left(\alpha\right)\hat{a}\hat{D}\left(\alpha\right) =
+\hat{a} + \alpha,
+\nonumber \\
+\hat{D}^{+}\left(\alpha\right)\hat{a}^{+}\hat{D}\left(\alpha\right) =
+\hat{a}^{+} + \alpha^{*},
+\label{eqPart3SqueezedTaskOffset}
+\end{eqnarray}
+Этот результат следует из теоремы об операторном разложении
+(\ref{eqPart3Squeezed15}), если принять $\hat{A} = - \alpha \hat{a}^{+}
++ \alpha^{*} \hat{a}$, $B=\hat{a}, \hat{a}^{+}$.
+
+\input ./part3/squeezed/fig6.tex
+
+Таким образом, когерентное состояние $\left|\alpha\right>$ является
+смещенным на $\alpha$ вакуумным состоянием
+(см. рис. \ref{figPart3Squeezed_6}).
+%где штриховкой показана область когерентности). 
+Исходя из сказанного, можно представить сжатое
+состояние как результат двух действий: смещение вакуумного состояния и
+последующего его сжатия, как это показано на
+рис. \ref{figPart3Squeezed_7}. 
+
+\input ./part3/squeezed/fig7.tex
+\input ./part3/squeezed/fig8.tex
+
+Рассмотренная нами процедура сжатия не является единственной. Можно
+применить другую последовательность действий - сперва сжать вакуумное
+состояние, а затем сместить его, получив новое сжатое состояние
+(см. рис. \ref{figPart3Squeezed_8}). В операторном виде эту операцию
+можно представить так:
+\begin{equation}
+\left|\alpha, z\right> =
+\hat{D}\left(\alpha\right)\hat{S}\left(z\right) \left|0\right>.
+\label{eqPart3Squeezed28}
+\end{equation}
+Для различия состояний последовательность параметров здесь описана
+обратная по сравнению с 
+\[
+\left|z,\alpha\right> =
+\hat{S}\left(z\right) \hat{D}\left(\alpha\right)\left|0\right>.
+\]
+Состояние (\ref{eqPart3Squeezed28}) также относится к квадратурно
+сжатому состоянию, но между собой они не вполне совпадают. Подробно
+рассматривать этот случай мы здесь не будем.
+
+\input ./part3/squeezed/fig9.tex
+
+Приведенные выше результаты и иллюстрации, изображенные на
+рис. \ref{figPart3Squeezed_1}-\ref{figPart3Squeezed_3} получены для
+случая, когда параметры $z = r e^{i\theta}$ и $\alpha =
+\left|\alpha\right|e^{i \varphi}$ вещественны ($\varphi = \theta =
+0$). Если параметры комплексные, то картинка несколько изменится
+(см. рис. \ref{figPart3Squeezed_9}): ось сжатия повернута на угол $\frac{\theta}{2}$
+относительно осей $X_1$, $X_2$, а положение центра области
+неопределенности повернуто на угол $\varphi$ относительно
+$X_1$. Изменяя в процессе генерации и регистрации фазы действующих там
+световых пучков, мы можем перейти к новым квадратурам $Y_1$, $Y_2$, как
+это изображено на рис. \ref{figPart3Squeezed_9}. Если еще компенсировать сдвиг фазы
+$\varphi$, мы перейдем к ситуации, которая изображена на рисунках 
+\ref{figPart3Squeezed_1}-\ref{figPart3Squeezed_3}. Из рис. 
+\ref{figPart3Squeezed_9} видно, что измерением углов $\theta$ и
+$\varphi$ можно, например, состояние, сжатое по $X_1$, превратить в
+состояние, сжатое по $X_2$, и наоборот.

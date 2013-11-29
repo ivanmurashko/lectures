@@ -1,0 +1,434 @@
+%% -*- coding:utf-8 -*- 
+\section{Дираковская  формулировка  квантовой  механики}
+\label{AddDirac}
+В курсе лекций по квантовой оптике мы будем всюду использовать формализм
+Дирака \cite{bDiracPrincipleQuantumMechanic}. В обычной формулировке квантовой
+механики мы имеем дело с волновыми функциями, например $\psi\left(q,
+t\right)$ - волновая функция в 
+координатном представлении. Одно и то же состояние системы можно
+описать волновыми функциями в различных представлениях, связанных друг
+с другом линейными преобразованиями. Например, волновая функция в
+импульсном представлении связана с волновой функцией в координатном
+представлении равенством 
+\begin{equation}
+\phi\left(p, t\right) = \frac{1}{2 \pi \hbar} \int_{-\infty}^{+\infty}
+\psi \left(q, t\right) e^{-i \frac{p q}{\hbar}} dq
+\end{equation}
+Главное здесь, что одно и то же состояние можно описывать волновыми
+функциями, выраженными через различные переменные. Отсюда следует, что
+можно ввести более общее образование, характеризующее состояние
+системы независимо от представления. Для такого образования Дирак ввел
+понятие волнового вектора, или вектора состояния, обозначаемого: 
+\begin{equation}
+\left| \dots \right>
+\end{equation}
+и называемого кет-вектором.
+
+\subsection{Кет-вектор}
+$\left| \dots \right>$ общее обозначение кет-вектора;  $\left| a
+\right>$,  $\left| x \right>$, $\left| \psi \right>$ и т.д. означают
+кет-векторы, описывающие некоторые частные состояния, символы которых
+записываются внутри скобок. 
+
+\subsection{Бра-векторы}
+Каждому кет-вектору соответствует сопряженный ему
+бра-вектор. Бра-вектор обозначается: 
+\begin{equation}
+\left< \dots \right|, \quad 
+\left< a \right|, \quad  
+\left< \psi \right|.
+\end{equation}
+
+Названия бра- и кет-векторы образованы от первой и второй половины
+английского слова  {\itshape bra-cket}  (скобка).
+
+Таким образом, бра-векторам
+$\left< a \right|$,  $\left< x \right|$, $\left< \psi \right|$
+соответствуют сопряженные им кет-векторы  
+$\left| a \right>$,  $\left| x \right>$, $\left| \psi \right>$
+и наоборот. Для векторов состояний справедливы те же основные
+соотношения, которые справедливы для волновых функций:  
+\begin{equation}
+\left| u \right> = \left| a \right>  + \left| b \right>, \quad 
+\left< u \right| = \left< a \right|  + \left< b \right|, \quad 
+\left| v \right> = l \left| a \right>, \quad  
+\left< v \right| = l \left< a \right|.
+\end{equation}
+Бра- и кет-векторы связаны между собой операцией эрмитового 
+сопряжения:
+\begin{equation}
+\left| u \right> = \left( \left< u \right| \right)^{+}, \quad 
+\left< u \right| = \left( \left| u \right> \right)^{+}.
+\end{equation}
+
+В известных случаях это сводится к следующим соотношениям:
+\[
+\left( \psi\left( q \right) \right)^{+} = \psi^{*}\left( q \right)
+\]
+для волновой функции в координатном представлении;
+\[
+\left(
+\begin{array} {c} 
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{array}
+ \right)^{+} = 
+\left( a_1^{*}, a_2^{*}, \cdots, a_n^{*}\right)
+\]
+в матричном представлении.
+
+При помощи бра- и кет-векторов можно определить скалярное 
+произведение
+\begin{equation}
+\left< v \right|\left. u \right> = \left< u \right|\left. v \right>^{*}.
+\label{eqAddDirac_swap}
+\end{equation}
+
+В конкретных случаях это означает:
+\[
+\left< \psi \right|\left. \phi \right> = 
+\int \psi^{*} \phi dq
+\]
+в координатном представлении;
+\[
+\left< a \right|\left. b \right> = 
+\left( a_1^{*}, a_2^{*}, \cdots, a_n^{*}\right) 
+\left(
+\begin{array} {c} 
+b_1 \\
+b_2 \\
+\vdots \\
+b_n
+\end{array}
+ \right) = 
+a_1^{*} b_1 +  a_2^{*} b_2 + \cdots + a_n^{*} b_n
+\]
+в матричном представлении.
+
+Из соотношения (\ref{eqAddDirac_swap}) следует, что норма вектора
+вещественна. Дополнительно полагаем, что норма вектора положительна
+или равна нулю: 
+$\left< a \right|\left. a \right> \geq 0$.
+
+\subsection{Операторы}
+В квантовой механике используют линейные операторы. Операторы
+связывают один вектор состояния с другим: 
+\begin{equation}
+\left| q \right> = \hat{L}\left| p \right>
+\label{eqAddDirac_operator_property1}
+\end{equation}
+Сопряженное равенство имеет вид
+\begin{equation}
+\left< q \right| = \left< p \right|  \hat{L}^{+}
+\label{eqAddDirac_operator_property2}
+\end{equation}
+где $\hat{L}^{+}$ -  оператор, сопряженный оператору $\hat{L}$.
+
+Приведем некоторые соотношения, справедливые для линейных 
+операторов:
+\begin{eqnarray}
+\hat{L}^{++} = \hat{L}, \quad
+\left(l \hat{L} \left| a \right> \right)^{+} = 
+l^{*} \left< a \right| \hat{L}^{+}, 
+\nonumber \\
+\left(\left(\hat{L_1} + \hat{L_2} \right) \left| a \right> \right)^{+} = 
+\left< a \right| \left(\hat{L_1}^{+} + \hat{L_2}^{+} \right), 
+\nonumber \\
+\left(\left(\hat{L_1} \hat{L_2} \right) \left| a \right> \right)^{+} = 
+\left< a \right| \left(\hat{L_2}^{+} \hat{L_1}^{+} \right),
+\nonumber \\
+\left(\left(\hat{L_1} \hat{L_2} \hat{L_3}\right) \left| a \right> \right)^{+} = 
+\left< a \right| \left(\hat{L_3}^{+} \hat{L_2}^{+} \hat{L_1}^{+} \right), 
+\mbox{ и т.д.}
+\label{eqAddDirac_propert}
+\end{eqnarray}
+
+Заметим, что алгебра операторов совпадает с алгеброй квадратных
+матриц. Матричные элементы операторов обозначаются следующим образом: 
+\begin{equation}
+\left<a\right|\hat{L}\left|b\right> = L_{ab}
+\end{equation}
+
+Для матричных элементов справедливы равенства
+\begin{equation}
+\left<a\right|\hat{L}\left|b\right>^{*} = 
+\left<b\right|\hat{L}^{+}\left|a\right>, \quad
+\left<a\right|\hat{L_1}\hat{L_2}\left|b\right>^{*} = 
+\left<b\right|\hat{L_2}^{+}\hat{L_1}^{+}\left|a\right>
+\end{equation}
+
+
+\subsection{Собственные  значения  и  собственные  векторы  операторов} 
+Собственные значения и собственные векторы операторов определяются равенством
+\begin{equation}
+\hat{L} \left|l_n\right> = l_n \left|l_n\right>,
+\end{equation}
+где $l_n$ собственное значение; $\left|l_n\right>$ собственный вектор.
+
+Для бра-векторов имеем аналогичные равенства:
+\begin{equation}
+\left<d_n\right| \hat{D}  = d_n \left<d_n\right|.
+\end{equation}
+
+Если операторы соответствуют наблюдаемым величинам, они должны быть самосопряженными:
+\begin{equation}
+\hat{L}  = \hat{L}^{+}.
+\label{eqAddDirac_ermit}
+\end{equation}
+
+Собственные значения самосопряженного (эрмитова) оператора
+вещественны. Действительно из 
+\[
+\hat{L} \left| l \right> = l \left| l \right>
+\]
+следует что 
+\[
+\left< l \right| \hat{L} \left| l \right> = l \left< l \right|
+\left. l \right>.
+\]
+С другой стороны, вспоминая про (\ref{eqAddDirac_propert}):
+$\left< l \right| \hat{L}^{+} = l^{*} \left< l \right|$, из
+(\ref{eqAddDirac_ermit}) имеем
+\[
+\left< l \right| \hat{L} \left| l \right> = l^{*} \left< l \right|
+\left. l \right>.
+\] 
+Таким образом $l\left< l \right|
+\left. l \right> = l^{*}\left< l \right|
+\left. l \right>$, т. е. $l  = l^{*}$
+
+Собственные векторы самосопряженного оператора ортогональны. 
+Действительно рассмотрим два собственных вектора 
+$\left| l_1 \right>$ и $\left| l_2 \right>$:
+\[
+\hat{L} \left| l_1 \right> = l_1 \left| l_1 \right>, \quad
+\hat{L} \left| l_2 \right> = l_2 \left| l_2 \right>
+\]
+Из второго соотношения получаем
+\[
+\left< l_1 \right| \hat{L} \left| l_2 \right> = l_2 \left< l_1 \right| \left. l_2 \right>
+\]
+С учетом вещественности собственных чисел и соотношения
+(\ref{eqAddDirac_ermit}) для вектора $\left| l_1 \right>$ получим:
+\[
+\left< l_1 \right| \hat{L} = l_1 \left< l_1 \right|.
+\]
+Откуда
+\[
+\left< l_1 \right| \hat{L} \left| l_2 \right> = l_1 \left< l_1 \right| \left. l_2 \right>.
+\] 
+Таким образом
+\[
+\left(l_1 - l_2\right) \left< l_1 \right| \left. l_2 \right> = 0, 
+\quad \mbox{т. е. } \left< l_1 \right| \left. l_2 \right> = 0,
+\mbox{ т. к. } l_1 \neq l_2.
+\] 
+
+\subsection{Наблюдаемые  величины.  Разложение  по  собственным  векторам.  
+Полнота  системы  собственных  векторов}
+Операторы, соответствующие наблюдаемым физическим величинам, являются
+самосопряженными операторами. Это обеспечивает действительность
+значений наблюдаемой физической величины. Имеем набор собственных
+состояний некоторого эрмитового  оператора  
+$\left| l_n \right>$,  $\hat{L} \left| l_n \right> = l_n \left| l_n
+\right>$.  Если набор собственных состояний полный, согласно принципам
+квантовой механики любое состояние можно представить суперпозицией
+состояний $\left| l_n \right>$:
+\begin{equation}  
+\left| \psi \right> = \sum_{(n)} c_n \left| l_n \right>.
+\end{equation}  
+
+Отсюда для коэффициентов разложения имеем:  
+$c_n = \left< l_n \right| \left. \psi \right>$, и, следовательно,
+справедливо равенство 
+\begin{equation}  
+\left| \psi \right> = \sum_{(n)} \left< l_n \right| \left. \psi
+\right> \left| l_n \right> = 
+\sum_{(n)} \left| l_n \right> \left< l_n \right| \left. \psi
+\right>.
+\label{eqAddDirac_full}
+\end{equation}  
+
+Из равенства \ref{eqAddDirac_full} следует важное соотношение:
+\begin{equation}  
+\sum_{(n)} \left| l_n \right> \left< l_n \right| = \hat{I}.
+\label{eqAddDiracI}
+\end{equation}  
+где $\hat{I}$ -  единичный оператор. Это равенство является условием
+полноты системы собственных векторов (условием разложимости). 
+
+\subsection{Оператор проектирования}
+\label{AddDiracProjector}
+
+Рассмотрим оператор \(\hat{P}_n = \left| l_n \right> \left< l_n
+\right|\). 
+Результатом действия этого оператора на состояние 
+\(\left| \psi \right>\) будет
+\begin{equation}
+\hat{P}_n \left| \psi \right> = \sum_{(k)} \left| l_n \right> \left<
+l_n \right| c_k \left| l_k \right> = c_n \left| l_n \right>.
+\label{eqDiracProektor}
+\end{equation}
+Оператор \(\hat{P}_n = \left| l_n \right> \left< l_n \right|\) называется
+оператором проектирования.
+
+Можно написать следующие свойства этого оператора
+\begin{equation}  
+\sum_{(n)} \hat{P}_n = \hat{I}.
+\end{equation}  
+
+\begin{equation}  
+\hat{P}_n^2 = \hat{P}_n.
+\end{equation}  
+
+\input ./add/quant/figproject.tex
+Действие оператора проектирования имеет простую геометрическую
+интерпретацию  (см. рис. \ref{figAddProject}):
+\[
+\hat{P}_n\left|\psi\right> = \cos{\theta} \left|l_n\right>,
+\]
+где $\cos{\theta} = \left<\psi|l_n\right> = c_n$. 
+
+\subsection{След оператора}
+\label{AddDiracTrace}
+В ортонормированном базисе \(\left\{\left|l_n\right>\right\}\) 
+величина 
+\begin{equation}  
+Sp \hat{L} = \sum_n \left<l_n\right| \hat{L} \left|l_n\right>
+\label{eqAddDiracTr}
+\end{equation}  
+называется следом оператора \(\hat{L}\). При определенных условиях
+\cite{bTraceClassOperatorAdd1} ряд \ref{eqAddDiracTr}
+абсолютно сходится и не зависит от выбора базиса.
+
+Если использовать матричное представление 
+\[
+L_{kn} = \left<l_k\right| \hat{L} \left|l_n\right>, 
+\]
+то след оператора - сумма диагональных элементов матричного 
+представления
+\[
+Sp \hat{L} = \sum_n L_{nn}
+\]
+
+Можно написать следующие свойства следа оператора:
+\begin{eqnarray}
+Sp\left(l \hat{L} + m \hat{M}\right) = 
+l Sp \hat{L} + m Sp \hat{M},
+\nonumber \\
+Sp\left(\hat{L}\hat{M}\right) = 
+Sp\left(\hat{M}\hat{L}\right).
+\label{eqAddDiracTrProperty}
+\end{eqnarray}
+
+\subsection{Средние  значения  операторов}
+Среднее значение оператора $\hat{L}$   в состоянии $\left| \psi
+\right>$  дается равенством 
+\begin{equation}  
+\left< \hat{L} \right>_{\psi} = \left<\psi\right|\hat{L}\left|\psi\right>
+\label{eqAddDiracMid}
+\end{equation}  
+при условии
+\[
+\left<\psi\right.\left|\psi\right> = 1.
+\]
+
+Действительно, если принять, что $\left|\psi\right>$ раскладывается в
+ряд по собственным функциям оператора $\hat{L}$ следующим образом:
+\[
+\left|\psi\right> = \sum_n c_n \left|l_n\right>,
+\]
+то $\hat{L}\left|\psi\right>$ можно записать как
+\[
+\hat{L}\left|\psi\right> = \sum_n l_n c_n \left|l_n\right>,
+\]
+где $l_n$ собственное число соответствующее собственному состоянию 
+$\left|l_n\right>$. 
+Если теперь подставить два последних выражения в (\ref{eqAddDiracMid})
+то получим:
+\[
+\left<\psi\right|\hat{L}\left|\psi\right> = \sum_{n,m} 
+l_n c_n c_m^{*} \left<l_m\right. \left|l_n\right>=
+\sum_n l_n c_n c_n^{*} = 
+\sum_n l_n \left|c_n\right|^2, 
+\]
+что (при условии $\left<\psi\right.\left|\psi\right> = 1$) доказывает,
+что выражение (\ref{eqAddDiracMid}) действительно 
+представляет собой выражение для среднего значения оператора 
+$\hat{L}$   в состоянии $\left|\psi\right>$.
+\footnote{Для этого достаточно вспомнить, что $\left|c_n\right|^2$
+  задает вероятность получить систему в состоянии $\left|l_n\right>$,
+  то есть получить показание измерительного прибора в $l_n$}
+
+Если взять некоторый ортонормированный базис $\{\left| n \right>\}$,
+образующий полный набор, т. е. подчиняющийся условию
+(\ref{eqAddDiracI}): $\sum_n \left| n \right>\left< n \right| =
+\hat{I}$, то выражение (\ref{eqAddDiracMid})
+может быть переписано следующим образом:
+\begin{eqnarray}
+\left< \hat{L} \right>_{\psi} = 
+\left<\psi\right|\hat{L}\left|\psi\right> = 
+\left<\psi\right|\hat{I}\hat{L}\left|\psi\right> = 
+\nonumber \\
+= 
+\sum_n \left<\psi\right|\left.n\right>\left<n\right|
+\hat{L}\left|\psi\right> = 
+\sum_n \left<n\right|
+\hat{L}\left|\psi\right>\left<\psi\right|\left.n\right> = 
+Sp \left(\hat{L} \hat{\rho} \right),
+\nonumber
+\end{eqnarray}
+где 
+\(
+\hat{\rho} = \left|\psi\right>\left<\psi\right| = \hat{P}_{\psi}
+\) - оператор проектирования на состояние 
+$\left| \psi \right>$.
+С учетом (\ref{eqAddDiracTrProperty}) можно записать
+\begin{equation}
+\left< \hat{L} \right>_{\psi} = Sp \left(\hat{\rho} \hat{L} \right).
+\label{eqAddDiracMidViaRho}
+\end{equation}
+
+\subsection{Представление  операторов  через  внешние  произведения  
+собственных  векторов}
+Дважды используя условие полноты (\ref{eqAddDirac_full}), получим
+\begin{equation}
+\hat{A} = \hat{I} \hat{A} \hat{I} = \sum_{(l)}\sum_{(l')} 
+\left|l\right>\left<l\right| \hat{A} \left|l'\right>\left<l'\right| = 
+\sum_{(l)}\sum_{(l')} 
+\left|l\right>\left<l'\right| A_{ll'},
+\end{equation}  
+где $A_{ll'} = \left<l\right| \hat{A} \left|l'\right>$ - матричный
+элемент оператора $\hat{A}$  в представлении  $\left|l\right>$.
+ 
+Оператор, выраженный через свои же собственные векторы, может быть
+представляем разложением \footnote{При условии
+ нормировки собственных векторов: $\left<l\right|\left.l\right> = 1$} 
+\begin{equation}
+\hat{L} = \sum_{(l)} 
+l \left|l\right>\left<l\right|.
+\end{equation}  
+
+Обобщение этого равенства для операторной функции имеет вид
+\begin{equation}
+F\left(\hat{L}\right) = \sum_{(l)} 
+F\left(l\right) \left|l\right>\left<l\right|.
+\label{eqAddDiracFL}
+\end{equation}  
+
+\subsection{Волновые  функции  в  координатном  и  импульсном  представлениях}
+Переход от вектора состояния к волновой функции осуществляется
+посредством скалярного умножения этого вектора состояния на вектор
+состояния соответствующей наблюдаемой величины. Например, для волновой
+функции в координатном представлении 
+\begin{equation}
+\phi\left(q\right) = \left<q\right|\left.\psi\right>.
+\end{equation}  
+где $\left<q\right|$ - собственный вектор оператора координаты. 
+В импульсном представлении получим
+\begin{equation}
+\phi\left(p\right) = \left<p\right|\left.\psi\right>.
+\end{equation}  
+где $\left<p\right|$ - собственный вектор оператора импульса.

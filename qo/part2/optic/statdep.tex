@@ -1,0 +1,108 @@
+%% -*- coding:utf-8 -*- 
+\section{Связь статистики фотонов со статистикой фотоотсчетов}
+Начнем с полуклассического рассмотрения, а затем обобщим результаты на
+полностью квантовое рассмотрение. Мы видели, что скорость фотоэмиссии
+пропорциональна интенсивности светового потока, которая определяется
+средним значением оператора $\left<\hat{E}^{(-)}\hat{E}^{(+)}\right>$. 
+Поскольку квантово-механическая
+интенсивность аналогична в классическом случае усредненной за период 
+интенсивности $I\left(t\right)$,  скорость эмиссии электронов можно в
+полуклассическом приближении считать пропорциональной
+$I\left(t\right)$. Обозначим $P\left(t\right)dt$ - вероятность
+появления фотоэлектрона в промежутке времени $t$, $t + dt$.  
+$P\left(t\right)dt = \xi I\left(t\right)dt$,  где $\xi$ характеризует
+эффективность фотокатода. Обозначим вероятность зафиксировать $m$
+фотоотсчетов в интервале времени $t$, $t' + dt'$  через $P_m\left(t,
+t' + dt'\right)$. Существуют две возможности получения $m$ отсчетов в
+заданном интервале времени, изображенные на рис.\ref{figPart4Ch2_5}: 
+
+\input ./part2/optic/fig5.tex
+
+\begin{enumerate}
+\item в интервале $t$, $t'$ произведено $m$ отсчетов, а в интервале
+  $dt$ - ни одного
+\item в интервале $t$, $t'$ произведено  $m - 1$ отсчетов, а в
+интервале $dt'$ - один.
+\end{enumerate}
+Заметим: интервал настолько мал, что вероятности двух и более отсчетов пренебрежимо малы. Для этих двух случаев можем написать
+\begin{eqnarray}
+P_m^{(1)}\left(t, t' + dt'\right) = 
+P_m\left(t, t'\right)\left(1 - P\left(t'\right)dt'\right),
+\nonumber \\
+P_m^{(2)}\left(t, t' + dt'\right) = 
+P_{m - 1}\left(t, t'\right)P\left(t'\right)dt',
+\label{eqCh4_41}
+\end{eqnarray}
+где $P\left(t\right)dt = \xi I\left(t\right)dt$.  
+Полная вероятность будет суммой вероятностей этих двух событий:
+\begin{eqnarray}
+P_m\left(t, t' + dt'\right) = 
+P_m\left(t, t'\right)\left(1 - P\left(t'\right)dt'\right) +
+\nonumber \\
++
+P_{m - 1}\left(t, t'\right)P\left(t'\right)dt'.
+\label{eqCh4_42}
+\end{eqnarray}
+Отсюда получаем рекуррентную цепочку дифференциальных уравнений
+\begin{equation}
+\frac{dP_m}{dt'} = \xi I\left(t'\right)\left\{P_{m - 1}\left(t'\right)
+- P_m\left(t'\right)\right\},
+\label{eqCh4_43}
+\end{equation}
+которую можно решить, интегрируя последовательно, начиная с $m =
+0$. Начальное уравнение имеет вид: 
+\begin{equation}
+\frac{dP_0}{dt'} = - \xi I\left(t'\right) P_0\left(t'\right),
+\label{eqCh4_44}
+\end{equation}
+при очевидных начальных условиях $P_0\left(t'\right) = 1$ при $t' =
+t$.  Решение уравнения при этих начальных условиях равно 
+\begin{equation}
+P_0\left(t, T\right) = e^{- \xi \int_t^{t + T} I\left(t'\right) d t'}, 
+\label{eqCh4_45}
+\end{equation}
+где $T$ - время счета. Если ввести среднюю за время счета
+интенсивность 
+\[
+\bar{I}\left(t, T\right) = \frac{1}{T}
+\int_t^{t + T}I\left(t'\right)dt',
+\]
+равенство (\ref{eqCh4_45}) можно переписать следующим образом:
+\begin{equation}
+P_0\left(t, T\right) = e^{- \xi \bar{I} T}
+\label{eqCh4_46}
+\end{equation}
+Остальные вероятности можно последовательно выразить через
+$P_0\left(t, T\right)$. Методом индукции легко показать, что  
+\begin{equation}
+P_m\left(t, T\right) = \frac{\left(\xi \bar{I} T\right)^m}{m!} e^{-
+  \xi \bar{I} T} 
+\label{eqCh4_47}
+\end{equation}
+В справедливости этого решения можно убедиться, подставив его в
+исходное уравнение (\ref{eqCh4_43}). Вообще же интенсивность
+$\bar{I}\left(t, T\right)$
+флуктуирует от одного периода счета к другому. Для того чтобы
+это учесть, нужно произвести усреднение по ансамблю
+измерений. Результатом будет формула Манделя: 
+\begin{equation}
+P_m\left(T\right) = 
+\left<P_m\left(t, T\right)\right> = 
+\left<
+\frac{\left(\xi \bar{I}\left(t, T\right) T\right)^m}{m!} e^{-
+  \xi \bar{I}\left(t, T\right) T} 
+\right>.
+\label{eqCh4_48}
+\end{equation}
+Иначе эту формулу можно представить в следующем виде:
+\begin{equation}
+P_m\left(T\right) = 
+\left<P_m\left(t, T\right)\right> = 
+\int_0^{\infty}
+P\left(\bar{I}\right)
+\frac{\left(\xi \bar{I}T\right)^m}{m!} e^{-
+  \xi \bar{I} T} 
+d \bar{I}.
+\label{eqCh4_49}
+\end{equation}
+где $P\left(\bar{I}\right)$ плотность вероятности для $\bar{I}$. 

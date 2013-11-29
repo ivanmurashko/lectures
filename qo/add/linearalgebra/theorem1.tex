@@ -1,0 +1,112 @@
+%% -*- coding:utf-8 -*- 
+\section{Теорема об операторном разложении}
+\label{AddTheorem1}
+
+Докажем тождество:
+\begin{equation}
+e^{\hat{A}}\hat{B}e^{-\hat{A}} = 
+\hat{B} + \left[\hat{A},\hat{B}\right] + 
+\frac{1}{2!} \left[\hat{A},\left[\hat{A},\hat{B}\right]\right] + \dots
+\label{eqAddTheorem1_Main}
+\end{equation}
+Для это введем следующую вспомогательную функцию:
+\begin{equation}
+f\left(\alpha\right) = 
+e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}},
+\label{eqAddTheorem1_F}
+\end{equation}
+которая совпадает с искомым выражением при $\alpha = 1$. Разложим
+(\ref{eqAddTheorem1_F}) в ряд Тейлора:
+\begin{equation}
+f\left(\alpha\right) = 
+f\left(0\right) + \frac{\alpha}{1!}f'\left(0\right) +
+\frac{\alpha^2}{2!}f''\left(0\right) + 
+\dots +
+\frac{\alpha^k}{k!}f^{(k)}\left(0\right) + \dots.
+\label{eqAddTheorem1_T}
+\end{equation}
+Справедливо следующее рекурентное соотношение:
+\begin{eqnarray}
+f^{(k)}\left(\alpha\right) = \left[\hat{A},
+  f^{(k-1)}\left(\alpha\right)\right] = 
+\nonumber \\
+=
+\underbrace{
+[\hat{A}[\dots[\hat{A}}_{\mbox{k
+  раз}},
+f^{(0)}\left(\alpha\right)
+\underbrace{]\dots]]}_{\mbox{k
+  раз}},
+\label{eqAddTheorem1_rec}
+\end{eqnarray}
+где 
+\[
+f^{(0)}\left(\alpha\right) = f\left(\alpha\right).
+\]
+Действительно по индукции имеем для первой производной:
+\begin{eqnarray}
+f^{(1)}\left(\alpha\right) = \hat{A}
+  e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}} -
+  e^{\alpha\hat{A}}\hat{B}\hat{A}e^{-\alpha\hat{A}} = 
+\nonumber \\
+= \hat{A}
+  e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}} -
+  e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}}\hat{A} = 
+\nonumber \\
+=
+\left[\hat{A}, e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}}\right] = 
+\left[\hat{A}, f\left(\alpha\right)\right] = 
+\left[\hat{A}, f^{(0)}\left(\alpha\right)\right],
+\label{eqAddTheorem1_rec_1}
+\end{eqnarray}
+т. е. (\ref{eqAddTheorem1_rec}) справедливо при $k = 1$. При выводе
+(\ref{eqAddTheorem1_rec_1}) мы учитывали тот факт, что 
+\begin{equation}
+\hat{A}e^{-\alpha\hat{A}} = e^{-\alpha\hat{A}} \hat{A}.
+\nonumber
+\end{equation}
+Для $k+1$ производной получим:
+\begin{eqnarray}
+f^{(k + 1)}\left(\alpha\right) = 
+\frac{\partial f^{(k)}\left(\alpha\right)}{\partial \alpha} =
+\nonumber \\
+=\frac{\partial }{\partial \alpha}
+\left(
+\underbrace{
+[\hat{A}[\dots[\hat{A}}_{k},
+f^{(0)}\left(\alpha\right)
+\underbrace{]\dots]]}_{k} \right) =  
+\underbrace{
+[\hat{A}[\dots[\hat{A}}_{k},
+\frac{\partial }{\partial \alpha}f^{(0)}\left(\alpha\right)
+\underbrace{]\dots]]}_{k} =
+\nonumber \\
+= 
+\underbrace{
+[\hat{A}[\dots[\hat{A}}_{k},
+f^{(1)}\left(\alpha\right)
+\underbrace{]\dots]]}_{k} =
+\underbrace{
+[\hat{A}[\dots[\hat{A}}_{k},
+\left[\hat{A}, f^{(0)}\left(\alpha\right)\right]
+\underbrace{]\dots]]}_{k} =
+\nonumber \\
+=
+\underbrace{
+[\hat{A}[\dots[\hat{A}}_{k + 1},
+f^{(0)}\left(\alpha\right)
+\underbrace{]\dots]]}_{k + 1},
+\nonumber
+\end{eqnarray}
+что вместе с (\ref{eqAddTheorem1_rec_1}) доказывает справедливость 
+(\ref{eqAddTheorem1_rec}).
+
+С учетом того, что 
+\begin{equation}
+f^{(0)}\left(\alpha\right) = \hat{B},
+\nonumber
+\end{equation}
+можно получить из (\ref{eqAddTheorem1_T}) искомое тождество
+(\ref{eqAddTheorem1_Main}) при $\alpha = 1$. 
+
+

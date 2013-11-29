@@ -1,0 +1,26 @@
+%% -*- coding:utf-8 -*-
+\section{Мастер метод}
+
+\begin{theorem}
+\emph{(Мастер метод)}
+\label{addAlgoMasterTheorem}
+Если имеется следующее рекурентное соотоношение для сложности
+некоторого алгоритма
+\[
+T\left( n \right ) = a T \left( \frac{n}{b} \right) + f\left( n \right ),
+\]
+то возможно определить асимптотическое поведение функции 
+$T\left( n\right ) $ в следующих случаях
+\begin{enumerate}
+\item Если $f\left(n\right) = O\left( n^{log_ba - \epsilon}\right)$,
+  при некоторых $\epsilon > 0$, то 
+$T\left(n\right) = \Theta\left(n^{log_ba}\right)$
+\item Если 
+$f\left(n\right) = \Theta\left( n^{log_ba}log^{k}n\right)$, то 
+$T\left(n\right) = \Theta\left(n^{log_ba}log^{k + 1}n\right)$
+\item Если $f\left(n\right) = \Omega\left( n^{log_ba + \epsilon}\right)$,
+  при некоторых $\epsilon > 0$ и $a f\left(\frac{n}{b}\right) \le c f
+  \left( n \right)$ для некоторой константы $c < 1$ и больших $n$, то 
+$T\left(n\right) = \Theta\left(f\left(n\right)\right)$
+\end{enumerate}
+\end{theorem}

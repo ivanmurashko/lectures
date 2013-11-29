@@ -1,0 +1,178 @@
+%% -*- coding:utf-8 -*- 
+\section{Координатное представление когерентного состояния}
+\label{AddQCoh}
+Начнем с вакуумного состояния, которое удовлетворяет уравнению 
+\begin{equation}
+\hat{a}\left|0\right> = 0.
+\label{eqAddQCoh1}
+\end{equation}
+В координатном представлении $\hat{q} = q$, $\hat{p} = -i
+\frac{\partial}{\partial q}$, тогда
+\begin{eqnarray}
+\hat{a} = \frac{1}{\sqrt{2 \hbar \omega}}
+\left(
+\omega q + \hbar \frac{\partial}{\partial q}
+\right),
+\nonumber \\
+\hat{a}^{+} = \frac{1}{\sqrt{2 \hbar \omega}}
+\left(
+\omega q - \hbar \frac{\partial}{\partial q}
+\right).
+\label{eqAddQCoh2}
+\end{eqnarray}
+
+Подставляя (\ref{eqAddQCoh2}) в (\ref{eqAddQCoh1}) получим уравнение
+для волновой функции вакуумного состояния моды в когерентном
+представлении:
+\begin{equation}
+\left(
+\omega q + \hbar \frac{\partial}{\partial q}
+\right) \Phi_0\left(q\right) = 0,
+\label{eqAddQCoh3}
+\end{equation}
+где $\Phi_0\left(q\right) = \left<q\right|\left.0\right>$.
+Нормированное решение этого уравнения равно
+\begin{equation}
+\Phi_0\left(q\right) = \left(\frac{\omega}{\pi
+  \hbar}\right)^{\frac{1}{4}} e^{-\frac{\omega q^2}{2 \hbar}}.
+\nonumber
+\end{equation}
+Неопределенность этого решения $\Delta q \Delta p =
+\frac{\hbar}{2}$ - минимальна. Плотность вероятности обнаружить
+определенную координату $q$ (в нашем случае определенную напряженность
+электрического поля) равна:
+\begin{equation}
+\Phi_0\left(q\right)\Phi_0^{*}\left(q\right) = \left(\frac{\omega}{\pi
+  \hbar}\right)^{\frac{1}{2}} e^{-\frac{\omega q^2}{\hbar}}.
+\label{eqAddQCoh4}
+\end{equation}
+Для когерентного состояния справедливо уравнение
+\[
+\hat{a}\left|\alpha\right> = \alpha \left|\alpha\right>,
+\]
+которое в координатном представлении будет иметь вид
+\begin{equation}
+\left(
+\omega q + \hbar \frac{\partial}{\partial q}
+\right) \Phi_{\alpha}\left(q\right) = 
+\alpha \Phi_{\alpha}\left(q\right),
+\label{eqAddQCoh5}
+\end{equation}
+где 
+\[
+\Phi_{\alpha}\left(q\right) = \left<q\right|\left.\alpha\right>.
+\]
+
+Сравнивая (\ref{eqAddQCoh3}) и (\ref{eqAddQCoh5}), легко увидеть, что
+решение уравнения (\ref{eqAddQCoh5}) отличается от (\ref{eqAddQCoh4})
+сдвигом на величину
+$\alpha\sqrt{\frac{2\hbar}{\omega}}$. Действительно, уравнение
+(\ref{eqAddQCoh5}) можно записать в виде
+\begin{equation}
+\left(
+\omega \left(q - \frac{\alpha}{\omega}\right) + \hbar \frac{\partial}{\partial q}
+\right) \Phi_{\alpha}\left(q\right) = 0.
+\nonumber
+\end{equation}
+Решением этого уравнения будет:
+\begin{equation}
+\Phi_{\alpha}\left(q\right) = \left(\frac{\omega}{\pi
+  \hbar}\right)^{\frac{1}{4}} e^{-\frac{\omega}{2
+    \hbar}\left(q-\sqrt{\frac{2\hbar}{\omega}}\alpha\right)^2}. 
+\label{eqAddQCoh7}
+\end{equation}
+
+Когерентное состояние не является стационарным состоянием. Оно должно
+удовлетворять нестационарному уравнению Шредингера. От времени зависит
+$\alpha = \alpha\left(t\right)$. Подставляя (\ref{eqAddQCoh7}) в
+уравнение Шредингера, эту зависимость можно определить, но и без этого
+ясно, что $\alpha\left(t\right)$ должно колебаться по гармоническому
+закону на частоте моды. Примем 
+\[
+\alpha\left(t\right) = \left|\alpha\right| e^{-i \omega t}.
+\]
+Тогда плотность вероятности будет иметь вид
+\begin{equation}
+\Phi_{\alpha}\left(q\right)\Phi_{\alpha}^{*}\left(q\right) = N e^{-\frac{\omega}{2
+    \hbar}
+\left[\left(q-\sqrt{\frac{2\hbar}{\omega}}\alpha\right)^2
++
+\left(q-\sqrt{\frac{2\hbar}{\omega}}\alpha^{*}\right)^2
+\right]
+}.
+\nonumber
+\end{equation}
+Преобразуем выражение показателя экспоненты
+\begin{eqnarray}
+\left[\left(q-\sqrt{\frac{2\hbar}{\omega}}\alpha\right)^2
++
+\left(q-\sqrt{\frac{2\hbar}{\omega}}\alpha^{*}\right)^2
+\right] = 
+\nonumber \\
+=
+q^2 + \frac{2\hbar}{\omega}\alpha^2 - 2 q \alpha
+  \sqrt{\frac{2\hbar}{\omega}} +
+q^2 + \frac{2\hbar}{\omega}\alpha^{2 *} - 2 q \alpha^{*}
+  \sqrt{\frac{2\hbar}{\omega}} =
+\nonumber \\
+= 2
+\left[
+q^2 + \frac{2\hbar}{\omega}\frac{\alpha^2 + \alpha^{*2}}{2} -
+2 q \sqrt{\frac{2\hbar}{\omega}} \frac{\alpha + \alpha^{*}}{2} +
+\frac{2 \hbar}{\omega}\left(\alpha\alpha^{*}\right) -
+\frac{2 \hbar}{\omega}\left(\alpha\alpha^{*}\right)
+\right] = 
+\nonumber \\
+= 2
+\left[
+q^2 + \frac{4\hbar}{\omega}\left(\frac{\alpha + \alpha^{*}}{2}\right)^2 -
+2 q \sqrt{\frac{2\hbar}{\omega}} \frac{\alpha + \alpha^{*}}{2}  -
+\frac{2 \hbar}{\omega}\left(\alpha\alpha^{*}\right)
+\right] = 
+\nonumber \\
+= 2
+\left[
+q - \sqrt{\frac{2\hbar}{\omega}} \frac{\alpha + \alpha^{*}}{2}
+\right]^2 + const = 
+\nonumber \\
+= 
+2
+\left[
+q - \sqrt{\frac{2\hbar}{\omega}} \left|\alpha\right|\cos\,\omega t
+\right]^2 + const.
+\nonumber
+\end{eqnarray}
+Константа перейдет в нормирующий множитель, в результате мы получим:
+\begin{equation}
+\Phi_{\alpha}\left(q,t\right)\Phi_{\alpha}^{*}\left(q,t\right) = N
+e^{-\frac{\omega}{\hbar}
+\left[
+q - \sqrt{\frac{2\hbar}{\omega}} \left|\alpha\right|\cos\,\omega t
+\right]^2
+}.
+\label{eqAddQCoh9}
+\end{equation}
+Из выражения (\ref{eqAddQCoh9}) видно, что плотность вероятности для
+$q$ (в нашем случае для напряженности электрического поля) для
+фиксированного времени такая же, как для вакуумного состояния, но
+смещена на величину
+$\sqrt{\frac{2\hbar}{\omega}}\alpha\left(t\right)$. Во времени центр
+распределения перемещается по гармоническому закону, как это
+изображено на рис. \ref{figQCoh_1} 
+
+\input ./add/figqhoc.tex
+% Maxima
+%% load(draw);
+%% f(q, t):=exp(-1*(q-cos(t))^2);
+%% draw3d(explicit(f(q,t), q,-5,5, t,-10,10));
+
+Поскольку ширина распределения не зависит от амплитуды, относительная
+неопределенность с ростом амплитуды будет уменьшаться. Следовательно
+состояние будет стремиться к классическому.
+
+
+
+
+
+
+

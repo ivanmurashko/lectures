@@ -1,0 +1,75 @@
+%% -*- coding:utf-8 -*- 
+\section{Плотность состояний}
+Если объем квантования $L^3$ велик, плотность состояний (число мод,
+приходящихся на единичный интервал частот) будет весьма
+большой. Волновой вектор моды определяется соотношением
+(\ref{eqCh1_period})
+\begin{equation}
+\vec{k}_{n_x, n_y, n_z} = \frac{2 \pi}{L}\left(n_x \vec{x}_0
++ n_y \vec{y}_0
++ n_z \vec{z}_0
+\right)
+\end{equation}
+Каждому набору целых чисел соответствуют две волны, отличающиеся
+поляризацией. Моды можно представить наглядно точками в декартовой
+системе координат, по осям которой отложены  $n_x$, $n_y$  ,$n_z$
+(рис. \ref{figCh1_pic3}). Число колебаний в объеме  
+\(
+\Delta n_x \Delta n_y \Delta n_z
+\)
+, очевидно, составит  
+\(
+\Delta N = 2 \Delta n_x \Delta n_y \Delta n_z,
+\)
+или, с учетом связи  
+между  $k$  и  $n$  (\ref{eqCh1_period}),
+\begin{equation}
+\Delta N = 2 \left(\frac{L}{2 \pi} \right)^3 \Delta k_x \Delta k_y \Delta k_z.
+\label{eqCh1_modenumber}
+\end{equation}
+
+\input ./part1/quantel/fig3.tex
+
+\input ./part1/quantel/fig4.tex
+
+Двойка в формуле (\ref{eqCh1_modenumber}) появляется из-за того, что
+одному значению  $k$  соответствуют две моды с различными
+поляризациями. При большом $L$ ($L\rightarrow \infty$)  распределение
+квазинепрерывно и суммирование по модам,
+которое почти всегда требуется при решении задач квантовой оптики,
+можно заменить интегрированием
+по $k$: 
+\begin{equation}
+2 \sum_{(n)} \left( \dots \right) = 2 \left(\frac{L}{2 \pi} \right)^3
+\iiint\limits_{-\infty}^{+\infty} \left( \dots \right) d k_x d k_y d k_z.
+\label{eqCh1_modenumber_kvazy_contig}
+\end{equation}
+Переход от прямоугольных координат  $k_x$,  $k_y$, $k_z$   к сферическим координатам  
+$k$, $\theta$, $\varphi$    (рис. \ref{figCh1_pic4}), дает
+\begin{eqnarray}
+k_x = k \sin \theta \cos \varphi,
+\quad 
+k_y = k \sin \theta \sin \varphi,
+\quad 
+k_z  = k \cos \theta,
+\nonumber \\
+d k_x d k_y d k_z = k^2 \sin \theta d k d \theta d \varphi = k^2 d k
+d \Omega,
+\end{eqnarray}
+где $d \Omega = \sin \theta d \theta d \varphi$ элемент телесного угла в
+направлении  $\vec{k}$.  Таким образом, получим
+\begin{equation}
+d N = 2 \left(\frac{L}{2 \pi} \right)^3 k^2 d k d \Omega
+\label{eqCh1_modenumber_1pre}
+\end{equation}
+или, учитывая, что $k^2 c^2 = \omega^2$ т. е. $k^2 d k =
+\frac{\omega^2 d \omega}{c^3}$: 
+\begin{equation}
+d N = 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d \omega d \Omega
+\label{eqCh1_modenumber_1}
+\end{equation}
+т.е. число состояний, приходящихся на единицу объема, единицу частоты и единицу телесного угла
+\begin{equation}
+g\left(\omega\right)  = \frac{2 \omega^2}{\left(2 \pi c\right)^3}
+\end{equation}
+(спектральная плотность собственных состояний). 

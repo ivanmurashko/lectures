@@ -1,0 +1,250 @@
+%% -*- coding:utf-8 -*- 
+\section{Общая теория взаимодействия динамической системы с
+  термостатом}
+
+До сих пор мы имели дело с частной моделью взаимодействия моды
+резонатора (динамической системы) с атомным пучком, находящимся в
+равновесии при
+температуре  $T$  (с резервуаром). Здесь мы рассмотрим более общий
+подход к задаче о взаимодействии динамической системы с резервуаром
+\cite{bLaks1974}. Имеем дело с двумя взаимодействующими
+системами:  $A$ - динамическая система и  $B$ - резервуар
+(диссипативная система). Системы $A$ и $B$ слабо связаны между собой,
+то есть энергия связи мала по сравнению с энергией динамической
+системы. Гамильтониан взаимодействия обозначим $\hat{V}$.
+Диссипативная система  $B$ - обширная система, находящаяся в
+термодинамическом равновесии при температуре $T$.  Сперва будем
+рассматривать системы  $A$ и $B$ как равноправные. Обозначим
+статистический оператор полной системы $\hat{\rho}_{AB}$. 
+Введем статистические операторы $\hat{\rho}_{A}$ и $\hat{\rho}_{B}$,
+относящиеся соответственно только к системам $A$, $B$.   
+С оператором $\hat{\rho}_{AB}$ они связаны через соотношения 
+\begin{equation}
+\hat{\rho}_{A} = Sp_B\left\{\hat{\rho}_{AB}\right\}, \quad
+\hat{\rho}_{B} = Sp_A\left\{\hat{\rho}_{AB}\right\}, \quad
+\label{eqCh2_78}
+\end{equation}
+Уравнение движения статистического оператора всей объединенной системы
+имеет в представлении взаимодействия вид 
+\begin{equation}
+i\hbar\dot{\hat{\rho}}_{AB}
+ = \left[
+\hat{V}, \hat{\rho}_{AB}
+\right].
+\label{eqCh2_79}
+\end{equation}
+Уравнения движения для свернутых операторов очевидно равны
+\begin{eqnarray}
+i\hbar\dot{\hat{\rho}}_{A} = Sp_B
+\left[
+\hat{V}, \hat{\rho}_{AB}
+\right],
+\nonumber \\
+i\hbar\dot{\hat{\rho}}_{B} = Sp_A
+\left[
+\hat{V}, \hat{\rho}_{AB}
+\right].
+\label{eqCh2_80}
+\end{eqnarray}
+Статистический оператор $\hat{\rho}_{AB}$ представим в следующем виде
+\begin{equation}
+\hat{\rho}_{AB} = \hat{\rho}_{A} \otimes \hat{\rho}_{B} + \hat{\rho}_{C},
+\label{eqCh2_81}
+\end{equation}
+где $\hat{\rho}_{C}$ является следствием взаимодействия между
+системами, $\otimes$ - знак внешнего произведения. В начальный момент $t_0$
+системы предполагаются  невзаимодействующими, тогда полный
+статистический оператор равен внешнему произведению 
+\[
+\left.\hat{\rho}_{AB}\right|_{t = t_0} = \hat{\rho}_{A} \otimes \hat{\rho}_{B},
+\] 
+а 
+\[
+\left.\hat{\rho}_{C}\right|_{t = t_0} = 0.
+\] 
+Преобразуем теперь член 
+$\left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right]$,
+входящий в уравнение (\ref{eqCh2_80}), и получим  
+\begin{eqnarray}
+\left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right] = 
+\hat{V}  \hat{\rho}_{A} \otimes \hat{\rho}_{B} - 
+\hat{\rho}_{A} \otimes \hat{\rho}_{B} \hat{V} = 
+\nonumber \\
+= \hat{V}  \hat{\rho}_{B} \otimes \hat{\rho}_{A} - 
+\hat{\rho}_{A} \otimes \hat{\rho}_{B} \hat{V}.
+\label{eqCh2_82}
+\end{eqnarray}
+так как 
+\(
+\hat{\rho}_{A} \otimes \hat{\rho}_{B} = 
+\hat{\rho}_{B} \otimes \hat{\rho}_{A}
+\)   из-за того, что  $\hat{\rho}_{A}$ и $\hat{\rho}_{B}$ действуют на
+разные  переменные. Отсюда, производя операцию $Sp_B$, имеем 
+\begin{eqnarray}
+Sp_B \left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right] = 
+Sp_B\left(\hat{V} \hat{\rho}_{B}\right) \hat{\rho}_{A} - 
+\nonumber \\
+-
+\hat{\rho}_{A} Sp_B \left(\hat{\rho}_{B} \hat{V}\right) = 
+\left[\hat{V}_A, \hat{\rho}_A\right],
+\label{eqCh2_83}
+\end{eqnarray}
+где $\hat{V}_A = Sp_B\left(\hat{V}\hat{\rho}_B\right)$. Таким же
+образом получим 
+\begin{equation}
+Sp_A \left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right] =
+\left[\hat{V}_B, \hat{\rho}_B\right],
+\label{eqCh2_84}
+\end{equation}
+где $\hat{V}_B= Sp_A\left(\hat{V}\hat{\rho}_A\right)$.  
+Учитывая равенства (\ref{eqCh2_81}), (\ref{eqCh2_82}),
+(\ref{eqCh2_83}), (\ref{eqCh2_84}), уравнения движения 
+$\hat{\rho}_{A}$ и $\hat{\rho}_{B}$ можно представить в виде  
+\begin{eqnarray}
+i\hbar\frac{d}{d t} \hat{\rho}_A\left(t\right) = 
+\left[\hat{V}_A\left(t\right), \hat{\rho}_A\right] +
+Sp_B \left[\hat{V}, \hat{\rho}_C\right],
+\nonumber \\
+i\hbar\frac{d}{d t} \hat{\rho}_B\left(t\right) = 
+\left[\hat{V}_B\left(t\right), \hat{\rho}_B\right] +
+Sp_A \left[\hat{V}, \hat{\rho}_C\right].
+\label{eqCh2_85}
+\end{eqnarray}
+Из вида (\ref{eqCh2_85}) понятно, что $\hat{V}_A$ и $\hat{V}_B$ имеют
+смысл изменения энергии одной системы связанной с ее взаимодействием с
+другой, например с взаимодействием динамической системы с
+термостатом. Эти изменения малы и в нашем случае их можно не
+учитывать. Таким образом (\ref{eqCh2_85}) преобразуется в 
+\begin{eqnarray}
+i\hbar\frac{d}{d t} \hat{\rho}_A\left(t\right) = 
+Sp_B \left[\hat{V}, \hat{\rho}_C\right],
+\nonumber \\
+i\hbar\frac{d}{d t} \hat{\rho}_B\left(t\right) = 
+Sp_A \left[\hat{V}, \hat{\rho}_C\right].
+\label{eqCh2_85a}
+\end{eqnarray}
+
+Для оператора $\hat{\rho}_C$,  используя то, что  
+\[
+\hat{\rho}_C = \hat{\rho}_{AB} - \hat{\rho}_A \otimes \hat{\rho}_B
+\]
+можем написать уравнение движения следующим образом
+\begin{eqnarray}
+i \hbar \frac{d \hat{\rho}_C}{d t} = i \hbar \frac{d
+  \hat{\rho}_{AB}}{d t} - i \hbar 
+\frac{d}{d t} \left(\hat{\rho}_A \otimes \hat{\rho}_B\right) = 
+\nonumber \\
+= i \hbar
+\left(
+\frac{d \hat{\rho}_{AB}}{d t} -
+\frac{d \hat{\rho}_{A}}{d t} \otimes \hat{\rho}_{B} - 
+\hat{\rho}_{A} \otimes \frac{d \hat{\rho}_{B}}{d t}
+\right).
+\label{eqCh2_86}
+\end{eqnarray}
+Используя уравнения движения $\hat{\rho}_{AB}$, $\hat{\rho}_{A}$,
+$\hat{\rho}_{B}$  (\ref{eqCh2_85a}),  получим для (\ref{eqCh2_86}) 
+\begin{eqnarray}
+i \hbar \frac{d \hat{\rho}_C}{d t} = 
+\left[\hat{V}, \left(\hat{\rho}_A \otimes \hat{\rho}_B +
+  \hat{\rho}_{C}\right)\right] - 
+\nonumber \\
+- 
+\left(Sp_B\left[\hat{V}, \hat{\rho}_C\right]\right)\hat{\rho}_B -
+\hat{\rho}_A \left(Sp_A\left[\hat{V}, \hat{\rho}_C\right]\right)
+\label{eqCh2_89}
+\end{eqnarray}
+Пренебрегая членами второго порядка малости, получим простое уравнение:
+\begin{equation}
+i \hbar \frac{d \hat{\rho}_C}{d t} = 
+\left[\hat{V}, \left(\hat{\rho}_A \otimes \hat{\rho}_B\right)\right]. 
+\label{eqCh2_90}
+\end{equation}
+Членами первого порядка малости мы считаем $\hat{V}$, $\hat{\rho}_C$.
+Это следует из предположения, что взаимодействие между динамической
+системой и термостатом малое. Члены, в которые входят произведения
+типа  $\hat{V}\hat{\rho}_C$, считаем малым второго порядка. Формальное
+решение уравнения (\ref{eqCh2_90}) имеет вид  
+\begin{equation}
+\hat{\rho}_C\left(t\right) = - \frac{i}{\hbar}\int_{t_0}^t
+\left[\hat{V}\left(t'\right), \left(\hat{\rho}_A \otimes
+  \hat{\rho}_B\right)\right] dt' 
+\label{eqCh2_91}
+\end{equation}
+при начальных условиях $\hat{\rho}_C\left(t_0\right) = 0$. 
+
+До сих пор мы считали, что системы  $A$  и  $B$  равноправны. Теперь
+учтем, что динамическая система  $A$ - малая, а диссипативная система
+$B$ - настолько большая, что взаимодействие ее с динамической системой
+не может в заметной степени нарушить ее равновесие. Учтем это, положив
+$\frac{d \hat{\rho}_B}{d t} = 0$: 
+\begin{equation}
+\hat{\rho}_B\left(t'\right) =
+\hat{\rho}_B\left(t_0\right).
+\label{eqCh2_92}
+\end{equation}
+Подставив в уравнение для $\hat{\rho}_A$ (\ref{eqCh2_85}) равенства
+(\ref{eqCh2_89}) и (\ref{eqCh2_91}), получим 
+\begin{eqnarray}
+\frac{d \hat{\rho}_A}{d t} = - \frac{1}{\hbar^2}
+\int_{t_0}^t Sp_B\left[
+\hat{V}\left(t\right),
+\left[
+\hat{V}\left(t'\right),
+\hat{\rho}_A\left(t'\right) \otimes
+\hat{\rho}_B\left(t_0\right)
+\right]
+\right]dt' = 
+\nonumber \\ 
+=
+- \frac{1}{\hbar^2}
+\int_{t_0}^t d t' Sp_B\left\{
+\left[
+\hat{V}\left(t\right)
+\hat{V}\left(t'\right)
+\hat{\rho}_A\left(t'\right) \otimes
+\hat{\rho}_B\left(t_0\right) -
+\right.
+\right.
+\nonumber \\
+-
+\left.
+\left.
+\hat{V}\left(t\right)
+\hat{\rho}_A\left(t'\right) \otimes
+\hat{\rho}_B\left(t_0\right)
+\hat{V}\left(t'\right)
+\right] - 
+\right.
+\nonumber \\
+-
+\left.
+\left[
+\hat{V}\left(t'\right)
+\hat{\rho}_A\left(t'\right) \otimes
+\hat{\rho}_B\left(t_0\right)
+\hat{V}\left(t\right)
+-
+\hat{\rho}_A\left(t'\right) \otimes
+\hat{\rho}_B\left(t_0\right)
+\hat{V}\left(t'\right)\hat{V}\left(t\right) 
+\right]
+\right\}.
+\label{eqCh2_93}
+\end{eqnarray}
+
+Это уравнение для оператора плотности динамической системы  $A$,
+взаимодействующей с диссипативной системой $B$.  При обширной системе 
+В  время корреляции $\hat{V}\left(t\right)$ и $\hat{V}\left(t'\right)$
+очень мало, значительно меньше 
+характерного времени изменения $\hat{\rho}_A$.  Следовательно,
+существенная область интегрирования находится в окрестности $t' =
+t$. Тогда во многих случаях при интегрировании можно положить
+\[
+\hat{\rho}_A\left(t'\right) =
+\hat{\rho}_A\left(t\right).
+\]
+Более полно с общей теорией взаимодействия динамической системы с
+термостатом можно познакомиться в \cite{bLaks1974}. Применим
+общую теорию к конкретным случаям.  
+ 

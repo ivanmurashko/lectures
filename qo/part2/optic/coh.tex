@@ -1,0 +1,554 @@
+%% -*- coding:utf-8 -*- 
+\section{Когерентные свойства света}
+Когерентные свойства света определяют интерференционные явления в
+оптике, которые хорошо описываются классической волновой теорией. В
+классической волновой оптике когерентные свойства света описываются
+соответствующими функциями когерентности
+\cite{bAhmanovNikitinPhysicalOptics2004, bMandel2000, bKilinQuantumOptics2003}.
+%\cite{bKaluderSudershan1970}. FIXME!!! check it 
+Рассмотрим явление 
+интерференции с квантовой точки зрения. Для этого рассмотрим
+интерференционный опыт Юнга (рис.\ref{figPart4Ch2_2}). На экране (фотопластинке)
+попадание фотона фиксируется темной точкой. Для того чтобы получить
+интерференционную картину, сходную с классической, нужно достаточное
+время. Тогда отдельные точки сольются в полосы и картина ничем не
+будет отличаться от классической (рис.\ref{figPart4Ch2_3}). 
+
+\input ./part2/optic/fig2.tex
+
+\input ./part2/optic/fig3.tex
+
+Операторы поля на экране можно представить в виде суперпозиции полей,
+прошедших через отверстия 1, 2:
+\begin{equation}
+\hat{E}^{(+)}\left(\vec{r}, t\right) = 
+\gamma \left[ 
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right) +
+\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)
+\right],
+\label{eqCh4_11}
+\end{equation}
+где $\vec{r}_1$, $\vec{r}_2$ - координаты отверстий;  $t_1 = t -
+\tau_1$,  $t_2 = t - \tau_2$;  $\tau_1$, $\tau_2$ - задержка при
+распространении света от отверстий к экрану; коэффициент
+характеризует ослабление поля при распространении от отверстий к
+экрану. При помощи фотодетектора $D$ исследуем интенсивность света в
+различных точках экрана.  
+
+Скорость счета фотонов будет, как мы знаем, пропорциональна
+\begin{eqnarray}
+W = 
+\alpha Sp\left(\hat{\rho}\hat{E}^{(-)}\left(\vec{r},
+t\right)\hat{E}^{(+)}\left(\vec{r}, t\right)\right) = 
+\nonumber \\
+\alpha \left|\gamma\right|^2
+Sp \left[\hat{\rho}
+\left( 
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) +
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)
+\right)
+\left( 
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right) +
+\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)
+\right)
+\right].
+\nonumber
+\end{eqnarray}
+
+При почленном перемножении получим:
+\begin{eqnarray}
+W = 
+g Sp \left[\hat{\rho}
+\left( 
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_1,
+t_1\right) +
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right) +
+\right.
+\right.
+\nonumber \\
+\left.
+\left.
++
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right) +
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_1,
+t_1\right)
+\right)
+\right],
+\label{eqCh4_12}
+\end{eqnarray}
+где введено следующее обозначение: $g = \alpha \left|\gamma\right|^2$.
+
+Первые два члена дают интенсивность полей, прошедших через первое и
+второе отверстия при закрытом другом отверстии. Два последних члена
+описывают интерференцию. Так как  
+\[
+\left(\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_1,
+t_1\right)\right)^{+} = 
+\left(\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)\right)
+\]
+то  
+\(
+Sp\left(\hat{\rho}\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_1,
+t_1\right)\right)
+\)
+и 
+\(
+Sp\left(\hat{\rho}\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)\right)
+\)
+будут комплексно сопряженными величинами. Член 
+\[
+Sp 
+\left[
+\hat{\rho}
+\left(
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right) +
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_1,
+t_1\right)
+\right)
+\right]
+\]
+дает
+интерференционный осциллирующий член (рис. \ref{figPart4Ch2_3}). Огибающая
+интерференционного члена пропорциональна выражению 
+\begin{equation}
+\left|
+Sp \left[
+\hat{\rho}
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\right]
+\right|
+\label{eqCh4_13}
+\end{equation}
+Отсюда следует определение функции когерентности первого порядка
+\begin{eqnarray}
+G\left(\vec{r}_1, t_1, \vec{r}_2, t_2\right) = 
+G_{12}^{1} = 
+\nonumber \\
+= \frac{\left|
+Sp \left[
+\hat{\rho}
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\right]
+\right|}
+{\sqrt{
+Sp \left[
+\hat{\rho}
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_1,
+t_1\right)
+\right]
+Sp \left[
+\hat{\rho}
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\right]
+}}
+\label{eqCh4_14}
+\end{eqnarray}
+
+Это выражение напоминает классическое определение функции
+когерентности, но здесь вместо аналитического сигнала стоят операторы
+поля и производится квантовое усреднение при помощи матрицы
+плотности. 
+
+Рассмотрим для примера некоторые частные случаи. Начнем с одномодового
+поля, находящегося в состояниях  $\left|n\right>$  либо  $\left|\alpha\right>$.  В этом случае имеем: 
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right) = \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+    V}} \hat{a}_k \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)},
+\nonumber \\
+\hat{\vec{E}}^{(-)}\left(\vec{r}, t\right) = \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k^{+} \vec{e}_k^{*} e^{i \omega_k t - i \left(\vec{k}\vec{r}
+  \right)} = \left(\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right)\right)^{+}.
+\label{eqCh4_15}
+\end{eqnarray}
+
+Используя эти выражения для вычисления функции когерентности
+(\ref{eqCh4_14}), получим $G_{12}^{1} = 1$,  так как
+$\left<n\right|\hat{a}^{+}\hat{a}\left|n\right> = n$   и
+$\left|e^{-i x}\right| = 1$ . То же самое получим и для случая
+когерентного состояния:  $G_{12}^{1} = 1$,  так как
+$\left<\alpha\right|\hat{a}^{+}\hat{a}\left|\alpha\right> =
+\left|\alpha\right|^2$. 
+
+Вообще одномодовое поле, возбуждаемое в произвольное чистое состояние,
+обладает полной когерентностью первого порядка. Более того,
+одномодовое поле, возбуждаемое в произвольное статистическое смешанное
+состояние, имеет полную когерентность. В этом случае нужно вычислить
+$Sp \left(\hat{\rho} \hat{a}^{+}\hat{a}\right)$,  где  $\hat{\rho} =
+\sum_{(m)}\sum_{(l)}\rho_{ml}\left|m\right>\left<n\right|$.  Имеем  
+\begin{eqnarray}
+Sp \left(\hat{\rho} \hat{a}^{+}\hat{a}\right) = 
+\sum_{(n)}\sum_{(m)}\sum_{(l)}\rho_{ml}\left<n\right.\left|m\right>\left<l\right|
+\hat{a}^{+}\hat{a}\left|n\right> = 
+\nonumber \\
+= \sum_{(n)}\sum_{(l)}\rho_{nl}\left<l\right.\left|n\right>n = 
+\sum_{(n)}\rho_{nn}n = \bar{n}.
+\label{eqCh4_16}
+\end{eqnarray}
+
+Аналогичное выражение получаем в знаменателе, следовательно,
+$G_{12}^{(1)} = 1$.
+
+Чаще имеют дело с многомодовыми состояниями поля, поэтому рассмотрим
+когерентность света в этом случае. Рассмотрим два предельных случая:
+свет, находящийся в когерентном состоянии, и полностью хаотический
+свет. 
+
+В первом случае вектор состояния равен
+\[
+\left|\left\{\alpha_{k}\right\}\right> = 
+\left|\left\{\alpha_{k_1}\right\}\right>
+\left|\left\{\alpha_{k_2}\right\}\right>
+\dots
+\left|\left\{\alpha_{k_s}\right\}\right>
+\dots 
+\]
+Используя свойства когерентных состояний
+\[
+\hat{E}^{(+)}\left(\vec{r},
+t\right)\left|\left\{\alpha_{k}\right\}\right> = 
+E\left(\vec{r},
+t\right)
+\left|\left\{\alpha_{k}\right\}\right>
+\]
+и
+\[
+\left<\left\{\alpha_{k}\right\}\right|\hat{E}^{(-)}\left(\vec{r},
+t\right) = 
+E^{*}\left(\vec{r},
+t\right)\left<\left\{\alpha_{k}\right\}\right|,
+\]
+получим:
+\[
+\left<\left\{\alpha_{k}\right\}\right|\hat{E}^{(-)}\left(\vec{r}_1,
+t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)\left|\left\{\alpha_{k}\right\}\right> = 
+E^{*}\left(\vec{r}_1, t_1\right)E\left(\vec{r}_2,t_2\right) 
+\]
+где $E$ - собственное значение оператора $\hat{E}^{(+)}$,  являющееся
+аналитическим сигналом классического поля. Отсюда имеем 
+\begin{equation}
+G_{12}^{(1)} = 
+\frac{\left|
+E^{*}\left(\vec{r}_1, t_1\right)E\left(\vec{r}_2,t_2\right)
+\right|}{\sqrt{
+E^{*}\left(\vec{r}_1, t_1\right)E\left(\vec{r}_1,t_1\right)
+E^{*}\left(\vec{r}_2, t_2\right)E\left(\vec{r}_2,t_2\right)
+}} 
+= 1
+\label{eqCh4_17}
+\end{equation}
+то есть многомодовое поле, находящееся в когерентном состоянии,
+полностью когерентно.  
+
+В случае произвольного состояния многомодового поля имеем только
+частичную когерентность. Рассмотрим наиболее часто встречающийся
+случай хаотического света (излучение нагретого тела, газового разряда
+и т.п.), когда свет излучается множеством независимых источников
+(атомов, ионов, молекул). Выражение для матрицы плотности в этом
+случае имеет вид (\ref{eqCh1_102}): 
+\begin{eqnarray}
+\hat{\rho} = 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{n_k\right\}} 
+\frac{\bar{n}_k^{n_k}}{\left(1 + \bar{n}_k\right)^{n_k+1}} =
+\nonumber \\
+= \sum_{\left\{n_k\right\}} \rho_{\left\{n_k\right\},
+  \left\{n_k\right\}}
+\left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|  
+\label{eqCh4_18}
+\end{eqnarray}
+где
+\begin{eqnarray}
+\rho_{\left\{n_k\right\},
+  \left\{n_k\right\}} =
+P_{\left\{n_k\right\}} = 
+\prod_k 
+\frac{\bar{n}_k^{n_k}}{\left(1 + \bar{n}_k\right)^{n_k+1}} = 
+\prod_k P_{n_k},
+\nonumber \\
+\sum_{\left\{n_k\right\}} \dots = 
+\sum_{n_1} \sum_{n_2} \dots \sum_{n_k} \dots. 
+\nonumber
+\end{eqnarray}
+Операторы электрического поля равны
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}= \sum_{(k)}\sqrt{\frac{\hbar \omega_k}{2
+    \varepsilon_0 V}} \vec{e}_k \hat{a}_k e^{-i \omega_k t + i
+    \left(\vec{k} \vec{r}\right)},
+\nonumber \\
+\hat{\vec{E}}^{(-)}= \sum_{(k)}\sqrt{\frac{\hbar \omega_k}{2
+    \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{+} e^{i \omega_k t - i
+    \left(\vec{k} \vec{r}\right)},
+\label{eqCh4_19}
+\end{eqnarray}
+откуда следует:
+\begin{eqnarray}
+Sp \left(
+\hat{\rho}\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\right) = 
+\nonumber \\
+=\sum_{\left\{n_{k'}\right\}}\sum_{\left\{n_{k}\right\}}
+\left<\left\{n_{k'}\right\}\right|\left.\left\{n_{k}\right\}\right>
+P_{\left\{n_k\right\}}
+\left<\left\{n_{k}\right\}\right|
+\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\left|\left\{n_{k'}\right\}\right> =
+\nonumber \\
+= \sum_{\left\{n_{k}\right\}}
+\left<\left\{n_{k}\right\}\right|
+\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\left|\left\{n_{k}\right\}\right>
+P_{\left\{n_k\right\}}.
+\label{eqCh4_20}
+\end{eqnarray}
+Произведение операторов равно
+\begin{equation}
+\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right) = \sum_{(k)}\sum_{(k')}
+\frac{\hbar \sqrt{\omega_k \omega_{k'}}}{2 \varepsilon_0 V}
+\left(\vec{e}_k\vec{e}_{k'}\right)
+\hat{a}_k^{+}\hat{a}_{k'}
+e^{-i x_2 + i x_1},
+\label{eqCh4_21}
+\end{equation}
+где  $x_1 = \omega_k t_1 - \left(\vec{k}\vec{r}_1\right)$,
+$x_2 = \omega_k t_2 - \left(\vec{k}\vec{r}_2\right)$.
+Усреднению подлежит оператор $\hat{a}_k^{+}\hat{a}_{k'}$. Поскольку
+\[\left|\left\{n_{k}\right\}\right> = 
+\left|n_{k_1}\right>
+\left|n_{k_2}\right> \dots,
+\] 
+то 
+\[
+\left<\left\{n_{k}\right\}\right|
+\hat{a}_k^{+}\hat{a}_{k'}
+\left|\left\{n_{k}\right\}\right> = 
+n_k \delta_{kk'},
+\]
+и, следовательно, 
+\begin{eqnarray}
+Sp \left(
+\hat{\rho}\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\right) = 
+\nonumber \\
+=\sum_{k}\sum_{\left\{n_{k}\right\}}
+\frac{\hbar \omega_k}{2 \varepsilon_0 V} n_k e^{-i \left(x_2 - x_1
+  \right)} 
+P_{\left\{n_k\right\}} =
+\nonumber \\
+= \sum_{k}
+\frac{\hbar \omega_k}{2 \varepsilon_0 V}
+\sum_{\left\{n_{k}\right\}} n_k
+\prod_k P_{n_k} =
+\sum_{k} 
+\frac{\hbar \omega_k}{2 \varepsilon_0 V}
+\bar{n}_k e^{-i \left(x_2 - x_1\right)},
+\nonumber
+\end{eqnarray}
+поскольку
+\begin{eqnarray}
+\sum_{\left\{n_{k}\right\}} n_k
+\prod_kP_{n_k} = 
+\sum_{n_1}P_{n_1} 
+\sum_{n_2}P_{n_2}
+\dots
+\sum_{n_k}n_kP_{n_k}
+\dots = 
+\nonumber \\
+=   \sum_{n_k}n_kP_{n_k} = \bar{n}_k,
+\nonumber
+\end{eqnarray}
+т. к.
+\[
+\sum_{n_k}P_{n_k} = 1.
+\]
+
+Отсюда получаем
+\begin{equation}
+G_{12}^{(1)} = \frac{\left|
+\sum_{k} 
+\frac{\hbar \omega_k}{2 \varepsilon_0 V}
+\bar{n}_k e^{-i \omega_k \left(t_2 - t_1\right) + 
+i \left(\vec{k}, \vec{r}_2 - \vec{r}_1\right)}
+\right|}{
+\sum_{k}
+\frac{\hbar \omega_k}{2 \varepsilon_0 V}
+\bar{n}_k
+}
+\label{eqCh4_22}
+\end{equation}
+Суммирование по $k$ можно заменить интегрированием по
+частоте. Использовав выражение для плотности состояний, получим: 
+\begin{eqnarray}
+\sum_{k}\left(\dots\right) = \frac{L^3}{\left(2 \pi\right)^3}
+\int \int \int \left(\dots\right) d k_x d k_y d k_z =
+\nonumber \\
+= \frac{V}{\left(2 \pi\right)^3}
+\int_{\Omega} d \Omega \int \omega^2 \left(\dots\right) d \omega.
+\nonumber
+\end{eqnarray}
+Это приводит нас к выражению
+\begin{equation}
+G_{12}^{(1)} = \frac{\left|
+\int d \Omega \int \omega^3 \bar{n}\left(\omega, \Omega\right) 
+e^{-i \omega\left(t_2 - t_1\right) + i \left(\vec{k}, \vec{r}_2 -
+  \vec{r}_1 \right)}
+d \omega
+\right|}{
+\int d \Omega \int \omega^3 \bar{n}\left(\omega, \Omega\right) d \omega
+}.
+\label{eqCh4_23}
+\end{equation}
+Если линия узкая по сравнению с несущей частотой, то есть 
+$\bar{n}\left(\omega, \Omega\right)$ имеет
+узкий пик около частоты  $\sim \omega_0$,  функцию $\omega^3$ можно
+вынести из-под интеграла и сократить; кроме того, если световой пучок узкий,
+то есть область интегрирования по $\Omega$ мала, выражение
+(\ref{eqCh4_23}) можно упростить 
+\begin{equation}
+G_{12}^{(1)} = \frac{\left|
+\int \bar{N}\left(\omega\right) 
+e^{-i \omega\left(t_2 - t_1\right) + i \left(\vec{k}, \vec{r}_2 -
+  \vec{r}_1 \right)}
+d \omega
+\right|}{
+\int \bar{N}\left(\omega\right) d \omega
+},
+\label{eqCh4_24}
+\end{equation}
+где $\bar{N}\left(\omega\right) = \int_{\Delta \Omega}
+\bar{n}\left(\omega, \Omega\right) d \Omega$.  Например, когда
+спектральная линия лоренцовская, имеем:
+\[
+\bar{N}\left(\omega\right) = \bar{N}_0\frac{\gamma}{\left(\omega_0 -
+  \omega\right)^2 + \gamma^2} .
+\]  
+
+Рассмотренную задачу можно решить, используя представление когерентных
+состояний. Тогда
+\begin{equation}
+\hat{\rho} = \int \dots \int P\left(\left\{\alpha_k\right\}\right)
+\left|\left\{\alpha_k\right\}\right>\left<\left\{\alpha_k\right\}\right|d^2 \left\{\alpha_k\right\},
+\nonumber
+\end{equation}
+где
+\begin{equation}
+P\left(\left\{\alpha_k\right\}\right) = \prod_k\frac{1}{\pi
+  \bar{n}_k}e^{-\frac{\left|\alpha_k\right|^2}{\bar{n}_k}}=
+\prod_k P_k\left(\alpha_k\right).
+\nonumber
+\end{equation}
+Имеем
+\begin{eqnarray}
+Sp \left(
+\hat{\rho}\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\right) = 
+\nonumber \\
+= \int \dots \int
+P\left(\left\{\alpha_k\right\}\right)
+\left<\left\{\alpha_k\right\}\right|
+\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\left|\left\{\alpha_k\right\}\right>
+d^2 \left\{\alpha_k\right\}.
+\label{eqCh4_coh1_add1}
+\end{eqnarray}
+Произведение операторов равно
+\begin{equation}
+\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right) = 
+\sum_k \sum_{k'}
+\frac{\hbar\sqrt{\omega_{k}\omega_{k'}}}{2 \varepsilon_0 V}
+\left(\vec{e}_{k}\vec{e}_{k'}\right)\hat{a}^{+}_{k}\hat{a}_{k'}
+e^{-i x_2 + i x_1}.
+\nonumber
+\end{equation}
+Произведение операторов записано у нас в нормальном виде (операторы
+поглощения стоят у нас справа от операторов рождения), поэтому
+матричный элемент, входящий в (\ref{eqCh4_coh1_add1}), легко записать,
+заменив $\hat{a}_{k'} \rightarrow \alpha_{k'}$, $\hat{a}^{+}_{k}
+\rightarrow \alpha^{*}_{k}$. Отсюда имеем
+\begin{eqnarray}
+Sp \left(
+\hat{\rho}\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\right) = 
+\nonumber \\
+= 
+\sum_{k \ne k'}
+\frac{\hbar\sqrt{\omega_{k}\omega_{k'}}}{2 \varepsilon_0 V}
+\left(\vec{e}_{k}\vec{e}_{k'}\right)
+e^{-i x_2 + i x_1}
+\cdot
+\nonumber \\
+\cdot
+\int 
+P\left(\alpha_{k}\right)
+\alpha^{*}_{k}
+d^2 \alpha_{k} 
+\int 
+P\left(\alpha_{k'}\right)
+\alpha_{k'}
+d^2 \alpha_{k'} +
+\nonumber \\
++
+\sum_k 
+\frac{\hbar\omega_{k}}{2 \varepsilon_0 V}
+e^{-i x_2 + i x_1}
+\int 
+\left|
+\alpha_{k}
+\right|^2
+d^2 \alpha_{k}.
+\label{eqCh4_coh1_add2}
+\end{eqnarray}
+При выводе (\ref{eqCh4_coh1_add2}) использовалось следующее
+соотношение
+\[
+\int 
+P\left(\alpha_{k}\right)
+d^2 \alpha_{k} = 1.
+\]
+Далее можно воспользоваться следующими соотношениями
+\begin{eqnarray}
+\int P\left(\alpha_k\right)\alpha_k d^2\alpha_k = 0,
+\nonumber \\
+\int \left|\alpha_k\right|^2 d^2\alpha_k = \bar{n}_k,
+\nonumber
+\end{eqnarray}
+которые легко доказать, перейдя к полярным координатам:
+\begin{equation}
+\alpha = \left|\alpha\right|e^{i\theta} = r e^{i\theta}.
+\nonumber
+\end{equation}
+В результате для (\ref{eqCh4_coh1_add2}) получим
+\begin{eqnarray}
+Sp \left(
+\hat{\rho}\hat{E}^{(-)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)
+\right) = 
+\sum_k 
+\frac{\hbar\omega_{k}}{2 \varepsilon_0 V}
+e^{-i x_2 + i x_1}
+\bar{n}_k.
+\nonumber
+\end{eqnarray}
+Воспользовавшись этими результатами, совпадающими с тем, что было
+получено ранее, используя представление чисел заполнения $n$, мы
+получим те же окончательные выражения (\ref{eqCh4_23}) и
+(\ref{eqCh4_24}). 

@@ -1,0 +1,180 @@
+%% -*- coding:utf-8 -*- 
+\section{Релаксация атома в случае простейшего
+  резервуара, состоящего из гармонических осцилляторов}
+Рассмотрим многомодовое электромагнитное поле, описываемое при помощи
+операторов рождения и уничтожения $\hat{a}_k^{+}$,
+$\hat{a}_k$. Частоту $k$-ой моды обозначим через $\omega_k$. 
+
+Это электромагнитное поле взаимодествует с некоторым двухуровневым
+атомом. Атом может находится в двух состояниях 
+возбужденном $\left|a\right>$ и невозбужденном
+$\left|b\right>$. Операторы перехода по прежнему 
+$\hat{\sigma}$ и $\hat{\sigma}^{+}$. Частоту перехода обозначим через
+$\Omega$. Гамильтониан взаимодействия в этом случае имеет вид  
+\begin{equation}
+\hat{V}\left(t\right) = \hbar
+\sum_{(k)} g_k \hat{a}_k^{+} \hat{\sigma}e^{-i \left(
+\Omega - \omega_k
+\right) t} +
+\mbox{э.с.}
+\label{eqCh2_94}
+\end{equation}
+где $g_k$ - константа взаимодействия.
+
+Таким образом системой $B$ (резервуаром) у нас будет многомодовое
+электромагнитное поле, а исследуемой динамической системой $A$ -
+двухуровневый атом. Оператор плотности резервуара (электромагнитного
+поля) обозначим через $\hat{\rho}_R$. Оператор плотности исследуемой
+динамической системы (атома) через $\hat{\rho}_{at}$.
+
+Справедливы следующие соотношения:
+\begin{equation}
+Sp_R\left(
+\hat{a}_k^{+}
+\hat{a}_k
+\hat{\rho}_R
+\right) = \bar{n}_k
+\label{eqCh2_96}
+\end{equation}
+где $\bar{n}_k$ -
+среднее число фотонов в моде резервуара; 
+\begin{eqnarray}
+Sp_R\left(\hat{a}_k\hat{a}_k^{+}\hat{\rho}_R\right) = \bar{n}_k + 1,
+\nonumber \\
+Sp_R\left(\hat{a}_k\hat{a}_k\hat{\rho}_R\right) = 
+Sp_R\left(\hat{a}_k^{+}\hat{a}_k^{+}\hat{\rho}_R\right) = 0.
+\label{eqCh2_96_add}
+\end{eqnarray}
+Используя эти равенства, общее уравнение
+(\ref{eqCh2_93}) можно представить в виде:  
+%FIXME!!! check it
+\begin{eqnarray}
+\dot{\hat{\rho}}_{at}\left(t\right) = 
+- \int_{t_0}^t\sum_{(k)}g_k^2
+\left\{
+\hat{\sigma}^{+} \hat{\sigma}\hat{\rho}_{at}\left(t'\right)
+\left(
+\bar{n}_k + 1
+\right)
+e^{i\left(\Omega - \omega_k\right)
+\left(t - t'\right)}
++
+\right.
+\nonumber \\
+\left.
++\hat{\sigma}\hat{\sigma}^{+}
+\hat{\rho}_{at}\left(t'\right)
+\bar{n}_k
+e^{-i\left(\Omega - \omega_k\right)
+\left(t - t'\right)} -
+\hat{\sigma}^{+}
+\hat{\rho}_{at}\left(t'\right)
+\hat{\sigma}
+\bar{n}_k
+e^{i\left(\Omega - \omega_k\right)
+\left(t - t'\right)}
+-
+\right.
+\nonumber \\
+-
+\left.
+\hat{\sigma}
+\hat{\rho}_{at}\left(t'\right)
+\hat{\sigma}^{+}
+\left(\bar{n}_k + 1\right)
+e^{-i\left(\Omega - \omega_k\right)
+\left(t - t'\right)}
+\right\}dt'
++ \mbox{э.с.}
+\label{eqCh2_97}
+\end{eqnarray}
+
+Суммирование по $k$,  учитывая квазинепрерывный спектр состояний
+диссипативной системы, можно заменить интегрированием
+(\ref{eqCh1_modenumber_kvazy_contig}) 
+\[
+\sum_{(k)} \rightarrow \int D\left(\omega\right)d \omega,
+\]  
+где $D\left(\omega\right)$ спектральная плотность состояний. Заменяем
+$D\left(\omega\right)$, $\bar{n}\left(\omega\right)$,
+$g^2\left(\omega\right)$ на $D$, $\bar{n}$, $g^2$ - их значения при
+$\omega = \Omega$,  считая, что эти функции медленно   
+зависят от частоты. Воспользуемся равенством
+\begin{eqnarray}
+\int_{0}^\infty
+e^{\pm\left(\Omega - \omega\right)
+\left(t - t'\right)}d \omega = \left|\nu = \omega - \Omega\right| =
+\nonumber \\
+=
+\int_{-\Omega}^\infty
+e^{ - \nu
+\left(t \mp t'\right)}d \nu \approx
+\int_{-\infty}^\infty
+e^{ - \nu
+\left(t \mp t'\right)}d \nu = 
+\nonumber \\
+= 2 \pi \delta \left(t \mp t'\right) 
+\label{eqCh2_98}
+\end{eqnarray}
+и проведем интегрирование по времени. Это приводит нас к уравнению 
+\begin{eqnarray}
+\dot{\hat{\rho}}_{at} = -\frac{1}{2}\gamma \left\{
+\bar{n}\left[
+\hat{\sigma}\hat{\sigma}^{+}\hat{\rho}_{at} -
+\hat{\sigma}^{+}\hat{\rho}_{at}\hat{\sigma}
+\right] +
+\right.
+\nonumber \\
++
+\left.
+\left(\bar{n} + 1\right)\left[
+\hat{\sigma}^{+}\hat{\sigma}\hat{\rho}_{at} -
+\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{+}
+\right]
+\right\}
++ \mbox{э.с.}
+\label{eqCh2_99}
+\end{eqnarray}
+где $\gamma =4 \pi D g^2$, $\bar{n}$ взяты при частоте моды $\Omega$.
+Уравнение (\ref{eqCh2_99}) имеет тот же вид, что и уравнение
+(\ref{eqCh2_64}), полученное ранее. Уравнения 
+полностью совпадают, если  принять $\gamma = \frac{\omega}{Q}$ и
+сделать замену $\hat{\sigma} \rightarrow \hat{a}$, $\hat{\sigma}^{+}
+\rightarrow \hat{a}^{+}$.  Это еще раз подтверждает, что окончательный
+результат не зависит от природы резервуара.   
+
+При температуре резервуара  $T = 0$  фотоны отсутствуют и $\bar{n} =
+0$.  Положим, что в начальный момент атом возбужден 
+\[
+\hat{\rho}_{at}\left(t_0\right) = 1.
+\]
+Используя свойства (\ref{eqCh2_8}) - (\ref{eqCh2_task1}) операторов 
+$\hat{\sigma}$ и $\hat{\sigma}^{+}$, получим   
+\begin{eqnarray}
+\dot{\rho}_{aa} = \left<a\right|\dot{\hat{\rho}}_{at}\left|a\right> =
+-\frac{1}{2}\gamma
+\left<a\right|\hat{\sigma}^{+}\hat{\sigma}\hat{\rho}_{at}\left|a\right>
++ 
+\nonumber \\
++ \frac{1}{2}\gamma
+\left<a\right|\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{+}\left|a\right>
++ \mbox{к.с.} = 
+\nonumber \\
+= 
+- \frac{1}{2}\gamma
+\left<a\right|\hat{\rho}_{at}\left|a\right> + \mbox{к.с.} = 
+- \gamma \rho_{aa}.
+\label{eqCh2_101}
+\end{eqnarray}
+Здесь мы использовали соотношения
+\(\hat{\sigma}^{+}\left|a\right> = 0\),
+\(\hat{\sigma}^{+}\left|b\right> = \left|a\right>\),
+\(\hat{\sigma}\left|a\right> = \left|b\right>\),
+\(\hat{\sigma}\left|b\right> = 0\)
+и сопряженные им. Окончательный результат 
+\begin{equation}
+\dot{\hat{\rho}}_{aa} = - \gamma \rho_{aa}.
+\label{eqCh2_102}
+\end{equation}
+Это означает, что в результате спонтанной эмиссии вероятность
+нахождения атома на верхнем уровне экспоненциально убывает. 

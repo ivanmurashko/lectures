@@ -1,0 +1,240 @@
+%% -*- coding:utf-8 -*- 
+\section{Система уравнений Гейзенберга-Ланжевена, описывающая лазер}
+%% Для получения системы уравнений, описывающих работу лазера надо
+%% воспользоваться уравнением Гейзенберга (\ref{eqLaserHaizenberg1}) подставив в него
+%% гамильтониан лазерной системы (\ref{eqLaserHaizenberg2}). Поскольку
+%% атомы и полевые операторы коммутируют, при выводе уравнений для
+%% полевых операторов можно опустить атомные операторы, входящие в
+%% гамильтониан, а при выводе уравнений для атомных операторов можно
+%% опустить полевые операторы. Это несколько облегчает преобразования.
+
+%% Вывод уравнений в идейном плане ничем не отличается от того, что мы
+%% уже делали, когда выводили квантовое уравнение, описывающее затухание
+%% моды резонатора. Однако лазерная система сложнее простого
+%% гармонического осцилатора (моды резонатора). По этой причине вывод
+%% уравнений более грузоемок, а выкладки связанные с этим, более
+%% громозки. Чтобы не загромождать изложение мы напишем соотвествующие
+%% выражения без выводов, ссылаясь на аналогию с задачей, рассмотренной
+%% ранее. Необходимые дополнительные пояснения приведены в приложении
+%% \ref{AddLanzheven}.
+
+%% Начнем с уравнения для оператора моды поля (оператора уничтожения):
+%% \begin{equation}
+%% \frac{\hat{a}\left(t\right)}{dt} =
+%% - 
+%% \left\{
+%% \frac{1}{2}\frac{\omega}{Q} + \left(\omega_r - \omega\right)
+%% \right\}\hat{a} + i g N \hat{\sigma} + \hat{F}_f\left(t\right).
+%% \label{eqLaserHaizenberg11}
+%% \end{equation}
+%% Уравнение выводится таким же образом, как уравнение описывающее
+%% затухание моды. Первый член справа имеет такой же вид, как полученный
+%% ранее. Появился новый (второй) член, описывающий усиление, связанное с
+%% вынужденными переходами. Последний член - Ланжевеновский шумовой
+%% оператор, описывающий влияние резервуара. Корреляионная функция,
+%% характеризующая статистические свойства $\hat{F}_f\left(t\right)$ как
+%% и раньше равна: 
+%% \begin{eqnarray}
+%% \left<\hat{F}^{+}_f\left(t\right)\hat{F}_f\left(t'\right)\right> = 
+%% \frac{\omega}{Q} \bar{n}_{T} \delta\left(t - t'\right),
+%% \nonumber \\
+%% \left<\hat{F}_f\left(t\right)\hat{F}^{+}_f\left(t'\right)\right> = 
+%% \frac{\omega}{Q}  \left(\bar{n}_{T} + 1\right) \delta\left(t - t'\right).
+%% \label{eqLaserHaizenberg12}
+%% \end{eqnarray}
+
+%% В (\ref{eqLaserHaizenberg12}) выражено через добротность резонатора
+%% $Q$. $N$ - полное число активных атомов. $\bar{n}_T$ - среднее число
+%% атомовв моде резервуара при температуре $T$. $\omega$ - частота
+%% генерации, $\omega_r$ - собственная частота резонатора.
+
+%% Для других операторов уравнения Гпйзенберга-Ланжевена будут иметь
+%% следующий вид: для оператора перехода $\sigma =
+%% \left|b\right>\left<a\right|$ с которым связан дипольный момент атома:
+%% \begin{eqnarray}
+%% \frac{d \hat{\sigma}}{d t} = - \left[\gamma+i\left(\omega_{ab} -
+%%   \omega\right)\right]\hat{\sigma} + 
+%% \nonumber \\
+%% + i g \left(\hat{\sigma}_a - \hat{\sigma}_b \right) + 
+%% \hat{F}_{\sigma}\left(t\right),
+%% \label{eqLaserHaizenberg13}
+%% \end{eqnarray}
+%% где $\gamma$ - скорость релаксации дипольного момента, $\omega$ -
+%% частота генерации, $\omega_{ab}$ - частота перехода между атомами $a$
+%% и $b$, $g$ - констатнта взаимодействия,
+%% $\hat{F}_{\sigma}\left(t\right)$ - Ланжевеновский шумовой оператор,
+%% имющий следующие корреляционные функции:
+%% \begin{eqnarray}
+%% \left<\hat{F}^{+}_{\sigma}\left(t\right)\hat{F}_{\sigma}\left(t'\right)\right>
+%% =  
+%% \delta\left(t - t'\right) \left[\left(2\gamma -
+%%   \gamma_z\right)\left<\hat{\sigma_a}\right> + r_a\right],
+%% \nonumber \\
+%% \left<\hat{F}_{\sigma}\left(t\right)\hat{F}^{+}_{\sigma}\left(t'\right)\right>
+%% =  
+%% \delta\left(t - t'\right) \left[\left(2\gamma -
+%%   \gamma_z\right)\left<\hat{\sigma_b}\right>\right],
+%% \label{eqLaserHaizenberg14}
+%% \end{eqnarray}
+%% где $\gamma_z$ - характеризует скорость редаксации населенности,
+%% $\left<\hat{\sigma_a}\right>$ - среднее значение оператора
+%% населенности верхнего уровня, $\left<\hat{\sigma_b}\right>$ - среднее
+%% значение оператора населенности нижнего уровня. Для простоты считаем,
+%% что $\gamma_a = \gamma_b = \gamma_z$.
+
+%% Уравнения оператора разности населенностей уровней $a$ и $b$ 
+%% \[
+%% \left|a\right>\left<a\right| - \left|b\right>\left<b\right| = 
+%% \hat{\sigma_a} - \hat{\sigma_b} = \hat{\sigma_z}
+%% \]
+%% будут иметь вид:
+%% \begin{eqnarray}
+%% \frac{d}{d t}\hat{\sigma_z} = r_a - \gamma_z \hat{\sigma_z} +
+%% \nonumber \\
+%% + 2 i g \left(\hat{a}^{+}\hat{\sigma} - \hat{a}\hat{\sigma}^{+}\right)
+%% + \hat{F}_z,
+%% \label{eqLaserHaizenberg15}
+%% \end{eqnarray}
+%% где $\hat{F}_z$ - ланжевеновский шумовой оператор для которого
+%% корреляционная функция будет иметь вид 
+%% \begin{equation}
+%% \left<\hat{F}_z\left(t\right)\hat{F}_z\left(t'\right)\right>
+%% =  
+%% \delta\left(t - t'\right) \left[r_a +
+%%   \gamma_z\left<\hat{\sigma}_a + \hat{\sigma}_b\right>\right],
+%% \label{eqLaserHaizenberg16}
+%% \end{equation}
+
+Объединив полученные нами уравнения (\ref{eqLaserHaizenbergA}), 
+(\ref{eqLaserHaizenberNB_AB}) и
+(\ref{eqLaserHaizenberNZ}) мы можем записать следующую 
+систему:
+\begin{eqnarray}
+\frac{d \hat{a}}{d t} = 
+- \frac{1}{2}\frac{\omega}{Q}\hat{a}
+-i g \hat{N}_{ab} + 
+\hat{F}_F,
+\nonumber \\
+\frac{d \hat{N}_{ab}}{d t} = 
+- \gamma \hat{N}_{ab} 
++ i g \hat{N}_{z} \hat{a} 
+ + \hat{F}_{ab},
+\nonumber \\
+\frac{d \hat{N}_z}{d t} = r_a
+- \gamma \hat{N}_{z} +
+2 i g 
+ \left(
+\hat{a}^{+}\hat{N}_{ab} -
+\hat{N}_{ab}^{+}\hat{a}
+\right) + \hat{F}_{z},
+\label{eqLaserHaizenberMain}
+\end{eqnarray}
+которую мы будем называть системой уравнений Гейзенберга-Ланжевена,
+описывающих работу лазера.
+
+По своему виду эти уравнения (\ref{eqLaserHaizenberMain}) очень похожи
+на уравнения лазера, полученные в полуклассическом
+приближении. Различие заключается в том, 
+что вместо классических величин в уравнении стоят операторы, которые
+могу не коммутировать между собой, следовательно при преобразовании
+нужно соблюдать порядок следования сомножителей. Кроме того, в
+уравнениях появляются Ланжевеновские члены, описывающие квантовые
+шумы, имеющиеся в лазерной системе.
+
+К уравнениям (\ref{eqLaserHaizenberMain})
+можно применить те же приближения, которые применяются в
+полуклассическом случае.
+
+Если, как это обычно бывает, 
+%% скорость релаксации дипольного момента
+%% $\gamma$ много больше скорости релаксации населенности $\gamma_z$ и
+%% скорости релаксации моды $\frac{\omega}{Q}$, т. е. $\gamma \gg
+%% \gamma_z,\frac{\omega}{Q}$ 
+можно применить адиабатическое приближение,
+пренебрегая во втором уравнении (\ref{eqLaserHaizenberMain}) производной
+$\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
+\hat{N}_{ab}$ получим
+\begin{equation}
+\hat{N}_{ab} = \frac{1}{\gamma} \left(i g \hat{N}_z\hat{a} +
+\hat{F}_{ab}\right).
+\nonumber
+\end{equation}
+Подставляя это выражение для $\hat{N}_{ab}$ в оставшиеся два уравнения
+системы (\ref{eqLaserHaizenberMain}) получим новую
+систему уравнений:
+\begin{eqnarray}
+\frac{d}{dt} \hat{a} = -
+\frac{1}{2}\left(\frac{\omega}{Q}\right)\hat{a} + \frac{g^2}{\gamma}
+\hat{N}_z\hat{a} + \hat{F}_F - i\frac{g}{\gamma}\hat{F}_{ab},
+\nonumber \\
+\frac{d}{dt}\hat{N}_z = r_a -
+\gamma\hat{N}_z - \frac{4g^2}{\gamma}
+\hat{N}_z\hat{a}^{+}\hat{a} +
+\nonumber \\
++ \hat{F}_z + \frac{2ig}{\gamma} \left(\hat{a}^{+}\hat{F}_{ab} -
+\hat{F}_{ab}^{+}\hat{a}\right).
+\label{eqLaserHaizenberg16add}
+\end{eqnarray}
+
+Если ввести новое обозначение 
+\begin{equation}
+\hat{F}_{\sum} = - \left(\frac{g}{\gamma}\hat{F}_{ab} + i \hat{F}_F\right),
+\label{eqLaserHaizenbergFSum}
+\end{equation}
+то систему 
+(\ref{eqLaserHaizenberg16add}) можно переписать в виде
+\begin{eqnarray}
+\frac{d}{dt} \hat{a} = -
+\frac{1}{2}\left(\frac{\omega}{Q}\right)\hat{a} + \frac{g^2}{\gamma}
+\hat{N}_z\hat{a} + i \hat{F}_{\sum},
+\nonumber \\
+\frac{d}{dt}\hat{N}_z = r_a -
+\gamma\hat{N}_z - \frac{4g^2}{\gamma}
+\hat{N}_z\hat{a}^{+}\hat{a} +
+\nonumber \\
++ \hat{F}_z + \frac{2ig}{\gamma} \left(\hat{a}^{+}\hat{F}_{ab} -
+\hat{F}_{ab}^{+}\hat{a}\right).
+\label{eqLaserHaizenberg17}
+\end{eqnarray}
+
+Для шумового оператора (\ref{eqLaserHaizenbergFSum}) при помощи
+(\ref{eqLaserHaizenbergFABCorrel_1}),
+(\ref{eqLaserHaizenbergFABCorrel_2}) и
+(\ref{eqLaserHaizenbergFFCorrel}) 
+можно написать следующие корреляционные соотношения:
+\begin{eqnarray}
+\left<\hat{F}^{+}_{\sum}\left(t_1\right)\hat{F}_{\sum}\left(t_2\right)\right>
+=
+\frac{g^2}{\gamma^2}\left<\hat{F}^{+}_{ab}\left(t_1\right)\hat{F}_{ab}\left(t_2\right)\right>
++
+\left<\hat{F}^{+}_{F}\left(t_1\right)\hat{F}_{F}\left(t_2\right)\right>
+= 
+\nonumber \\
+= 
+\frac{1}{2}
+\left(
+\frac{g^2}{\gamma}\bar{N}_a + 2 \frac{g^2}{\gamma^2}r_a + 
+\frac{\omega}{Q}\bar{n}_T
+\right)
+\delta\left(t_1 - t_2\right),
+\nonumber \\
+\left<\hat{F}_{\sum}\left(t_1\right)\hat{F}^{+}_{\sum}\left(t_2\right)\right>
+= \frac{1}{2}
+\left(
+\frac{g^2}{\gamma}\bar{N}_b + 
+\frac{\omega}{Q}\left(\bar{n}_T + 1\right)
+\right)
+\delta\left(t_1 - t_2\right)
+\label{eqLaserHaizenbergFSumCorrel}
+\end{eqnarray}
+
+
+Уравнения (\ref{eqLaserHaizenberg17}) напоминают полуклассическое
+уравнение лазера, и для их решения можно в значительной мере
+воспользоваться такими же приближениями и приемами которые
+используются при решении полуклассической задачи.
+
+
+
+
+

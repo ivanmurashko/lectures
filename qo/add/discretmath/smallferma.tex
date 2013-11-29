@@ -1,0 +1,67 @@
+%% -*- coding:utf-8 -*- 
+\section{Малая теорема Ферма}
+
+\begin{theorem}
+\emph{(Малая теорема Ферма)}
+\label{addDiscretSmallFerma}
+Если $p$ простое число, и $a$ не делится на $p$, то 
+\begin{equation}
+a^{p-1} \equiv 1 \mod{p}
+\label{addDiscretSmallFermaEq}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Рассмотрим следующее соотношение
+\[
+a \cdot k_i \mod{p},
+\]
+где $k_i \subset \left\{1, \dots, p - 1\right\}$.
+
+Очевидно, что 
+\begin{equation}
+a \cdot k_i \equiv k_j \mod{p}.
+\label{addDiscretSmallFermaInt}
+\end{equation}
+Действительно
+\[
+a \cdot k_i \mod{p} \subset \left\{1, \dots, p - 1\right\},
+\]
+т. к. любой остаток от деления на $p$ принимает значения $0, 1, \dots
+p-1$. Нулевой остаток невозможен т. к. $a$ и $p$ взаимно просты.
+
+Кроме этого каждый из остатков $a \cdot k_i \mod{p}$ встречается
+только один раз, действительно допустим что $a \cdot k_i \mod{p} = a
+\cdot k_j \mod{p}$ или же $a \cdot \left( k_i - k_j \right ) \equiv 0
+\mod{p}$, т. е. $a$ делится на $p$, что противоречит условию взаимной
+простоты. 
+
+Перемножив все выражения (\ref{addDiscretSmallFermaInt}) получим
+\[
+a \cdot 2a \cdot 3a \cdot \dots \cdot a\left(p - 1\right) 
+\equiv 1 \cdot 2 \cdot 3 \cdot \dots \cdot \left(p - 1\right) \mod{p}.
+\]
+или же
+\[
+a^{p-1} \left(p - 1\right)! \equiv \left(p - 1\right)! \mod{p},
+\]
+откуда получаем требуемое равенство в силу взаимной простоты $p$ и
+$\left(p-1\right)!$:
+\[
+a^{p-1} \equiv 1 \mod{p}
+\]
+\end{proof}
+
+\subsection{Псевдопростые числа}
+Обобщение малой теоремы Ферма не верно, т. е.  если $a$ и $p$ взаимно
+простые числа которые удовлетворяют соотношению
+(\ref{addDiscretSmallFermaEq}) то $p$ может быть не простым. Например
+\[
+2 ^ {341 - 1} \equiv 1 \mod{ 341 },
+\] 
+при том, что $341 = 11 \cdot 31$.
+
+Числа $p$ удовлетворяющие соотношению (\ref{addDiscretSmallFermaEq}),
+но при этом не являющиеся простыми называется псевдопростыми числами
+по основанию $a$. Например 341 - первое псевдопростое число по
+основанию 2.

@@ -1,0 +1,33 @@
+\begin{figure}
+\centering
+
+% draw2d(yrange=[0, 18], points_joined = true, point_type = 6,
+% points(map(lambda([x, y], cons(x, [y])),  makelist(x, x, 1,
+% 64),makelist(power_mod(2, x, 21), x, 1, 64) )), user_preamble="set
+% output 'picshorquantfourier1.tex'; set terminal latex; set xlabel
+% '$x$'; set ylabel '$f(x)$'"); 
+
+% draw2d(yrange=[0, 1.2], points_joined = false, point_type = 6,
+% points(map(lambda([x, y], cons(x, [y])),  makelist(x, x, 1,
+% 64),makelist(1 - signum(mod(x,6)), x, 1, 64) )), user_preamble="set
+% output 'picshorquantfourier3.tex'; set terminal latex; set xlabel
+% '$x$'; set ylabel '$f(x)$'"); 
+
+% draw2d(yrange=[0, 1.2], points_joined = false, point_type = 6,
+% points(map(lambda([x, y], cons(x, [y])),  makelist(x, x,
+% 1,64),abs(fft(makelist(1 - signum(mod(x,6)), x, 1, 64))) )), 
+% user_preamble="set output 'picshorquantfourier3.tex'; set terminal
+% latex; set xlabel '$y$'; set ylabel '$F(y)$'");
+
+\input ./part4/quantcomp/picshorquantfourier1.tex
+\input ./part4/quantcomp/picshorquantfourier2.tex
+\input ./part4/quantcomp/picshorquantfourier3.tex
+
+\caption{Алгоритм Шора. Нахождение периода функции 
+  $f\left(x, a\right) = a^x \mod{N}$ при $a=2$, $N = 21$ (верхний график). 
+  Значение функции 1 повторяется с периодом $r=6$ (средний график). 
+  Локальные максимумы преобразования Фурье от среднего графика 
+  идут с периодом $\frac{M}{r} \approx 10.67$ (нижний график). См
+  прим. \ref{exPart4QuantCompShorQuantPeriodFinding}}
+\label{picPart4QuantCompShorQuantPart}
+\end{figure}

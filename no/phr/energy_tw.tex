@@ -1,0 +1,51 @@
+\subsection{Процессы перекачки энергии при двух-волновом 
+взаимодействии света в ФРК}
+Для того чтобы рассмотреть процессы перекачки энергии при двух-волновом 
+взаимодействии ФРК мы будем пользоваться уравнениями для стационарного режима
+записи поля пространственного заряда \(E_{sc}^{st}\). Прежде всего рассмотрим
+систему уравнений вытекающую из соотношения (\ref{eqStat_Esc_1_1_phr}) при
+\(m \gg m_0 \)
+\begin{eqnarray}
+A_1 = \frac{- i \omega \alpha}{2 cos \theta_1 c} 
+\sqrt{\frac{\mu}{\varepsilon}}
+\int_{0}^{z}{dz'} E_{sc}^\ast(z',t) A_2,
+\nonumber \\
+A_2 = \frac{- i \omega \alpha}{2 cos \theta_2 c} 
+\sqrt{\frac{\mu}{\varepsilon}}
+\int_{0}^{z}{dz'} E_{sc}(z',t) A_1,
+\nonumber \\
+E_{sc}^{st} = - m \left( E_0 + i E_D\right),
+\nonumber \\
+m = \frac{A_1^\ast A_2}{\left| A_1 \right|^2 + \left| A_2 \right|^2},
+\nonumber 
+\end{eqnarray}
+откуда
+\begin{eqnarray}
+\frac{\partial \left| A_1 \right|^2}{\partial z} = 
+\frac{\partial A_1 }{\partial z} A_1^\ast +
+\frac{\partial A_1^\ast }{\partial z} A_1 = 
+\kappa \frac{1}{cos \theta_1} 
+\frac{\left| A_1 \right|^2 \left| A_2 \right|^2}
+{\left| A_1 \right|^2 + \left| A_2 \right|^2}
+\nonumber \\
+\frac{\partial \left| A_2 \right|^2}{\partial z} = 
+\frac{\partial A_2 }{\partial z} A_2^\ast +
+\frac{\partial A_2^\ast }{\partial z} A_2 = 
+ - \kappa \frac{1}{cos \theta_2} 
+\frac{\left| A_1 \right|^2 \left| A_2 \right|^2}
+{\left| A_1 \right|^2 + \left| A_2 \right|^2}
+\nonumber 
+\end{eqnarray}
+где
+\[
+\kappa = \frac{\omega \alpha E_D \sqrt{\frac{\mu}{\varepsilon}}}{c}
+\]
+Прежде всего стоит отметить выполнение закона сохранения энергии
+\[
+\frac{\partial \left(
+cos \theta_1 \left| A_1 \right|^2 +
+cos \theta_2 \left| A_2 \right|^2
+\right)}{\partial z} = 0.
+\]
+Кроме того перекачка энергии, как это отмечалось выше, возможна лишь для 
+диффузионного механизма записи при котором \( E_D \neq 0 \).

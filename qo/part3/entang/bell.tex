@@ -1,0 +1,185 @@
+%% -*- coding:utf-8 -*- 
+\section{Неравенство Белла для параметров Стокса}
+\label{pPart3EntangleBell}
+Ответ на вопрос о полноте квантовой механики может дать следующий эксперимент.
+Пусть детектор $D^{(1)}$ (рис. \ref{figEntangMes}) измеряет величину 
+\[
+\hat{A} = \hat{S}_1^{(1)}, \, (\xi = 0)
+\] 
+или
+\[
+\hat{A}' = \hat{S}_2^{(1)},\,(\xi =\frac{\pi}{4}).
+\]
+Как уже отмечалось ранее, собственными числами операторов $\hat{A}$ и
+$\hat{A}'$ будут $\pm 1$, т. е. показаниями детектора $D^{(1)}$ могут
+быть только два числа: $\pm 1$.
+
+Приемник $D^{(2)}$ будет измерять следующие величины 
+\[
+\hat{B} = \frac{1}{\sqrt{2}}\left(\hat{S}_1^{(2)} + \hat{S}_2^{(2)}\right),\,(\xi =
+\frac{\pi}{8}) 
+\]
+или 
+\[
+\hat{B}' = \frac{1}{\sqrt{2}}\left(\hat{S}_1^{(2)} - \hat{S}_2^{(2)}\right),\,(\xi =
+- \frac{\pi}{8}).
+\]
+Для ответа на вопрос о возможных показаниях $D^{(2)}$ необходимо найти
+собственные числа операторов $\hat{B}$ и $\hat{B}'$. Используя
+матричное представление операторов $\hat{S}_1$
+(\ref{eqEntangS1Matrix}) и $\hat{S}_2$ (\ref{eqEntangS2Matrix}),
+получим для оператора $\hat{B}$ следующее матричное представление:
+\begin{equation}
+\hat{B} = 
+\left(
+\begin{array}{cc}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} 
+\end{array}
+\right).
+\label{eqEntangBMatrix}
+\end{equation}
+Из (\ref{eqEntangBMatrix}) можно получить характеристическое
+уравнение:
+\begin{equation}
+\left(1 -\sqrt{2} b\right)\left(- 1 -\sqrt{2} b\right) -1 = 0,
+\label{eqEntangBCharakterEq}
+\end{equation}
+откуда для собственных чисел имеем: $b = \pm 1$. В случае оператора
+$\hat{B}'$  можно получить из (\ref{eqEntangS1Matrix}) и
+(\ref{eqEntangS2Matrix}) следующее матричное преставление:
+\begin{equation}
+\hat{B}' = 
+\left(
+\begin{array}{cc}
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
+-\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} 
+\end{array}
+\right).
+\label{eqEntangBaddMatrix}
+\end{equation}
+и соответствующее ему характеристическое уравнение
+\begin{equation}
+\left(1 -\sqrt{2} b\right)\left(- 1 -\sqrt{2} b\right) -1 = 0.
+\label{eqEntangBaddCharakterEq}
+\end{equation}
+Как нетрудно заметить, уравнение (\ref{eqEntangBaddCharakterEq}) имеет
+те же самые решения, что и (\ref{eqEntangBCharakterEq}), таким образом
+показаниями $D^{(2)}$, так же как и для $D^{(1)}$, будут только два
+значения $\pm 1$.
+
+Проводятся 4 серии экспериментов по $N$ испытаний в каждой, в которых
+измеряются пары операторов $\left(\hat{A},\hat{B}\right)$,
+$\left(\hat{A}',\hat{B}\right)$, $\left(\hat{A},\hat{B}'\right)$ и
+$\left(\hat{A}',\hat{B}'\right)$. В результате получаются следующие
+наборы чисел $\left(a_i, b_i\right)$, $\left(a_i', b_i\right)$, $\left(a_i, b_i'\right)$ и
+$\left(a_i', b_i'\right)$. Как только что было показано, каждое
+из полученных чисел может быть или $+1$ или $-1$.
+
+В дальнейшем из этих пар вычисляется следующее значение
+\begin{equation}
+f_i = \frac{1}{2}\left(
+a_i b_i + a_i' b_i + a_i b_i' - a_i' b_i'
+\right)
+\nonumber
+\end{equation}
+для которого вычисляется среднее
+\begin{equation}
+\left<F\right>_N = \frac{1}{N}\sum_i f_i.
+\label{eqEntangFmain}
+\end{equation}
+При $N \rightarrow \infty$ можно принять
+\begin{equation}
+\left<F\right>_N \rightarrow \left<F\right>.
+\nonumber
+\end{equation}
+
+Квантово механический подход дает следующее выражение для среднего 
+\begin{eqnarray}
+ \left<F\right> \sim \left<F\right>_{quant} 
+=\frac{1}{2}
+\left<\psi\right|
+\hat{A}\hat{B} + \hat{A}'\hat{B} + \hat{A}\hat{B}' - \hat{A}'\hat{B}'
+\left|\psi\right> = 
+\nonumber \\
+=\frac{1}{2}
+\left<\psi\right|
+\hat{A}\left(\hat{B} + \hat{B}'\right) + \hat{A}' \left(\hat{B}  -
+\hat{B}' \right)
+\left|\psi\right> = 
+\nonumber \\
+= \frac{1}{\sqrt{2}}
+\left<\psi\right|
+\hat{S}_1^{(1)}\hat{S}_1^{(2)} + \hat{S}_2^{(1)}\hat{S}_2^{(2)}
+\left|\psi\right> =
+\nonumber \\
+= \frac{1}{\sqrt{2}}
+\left(-1 - 1\right) = - \sqrt{2}.
+\label{eqEntangQuant}
+\end{eqnarray}
+
+Если же принять тезис о неполноте квантовой механики, то мы
+предполагаем, что поляризация фотонов, а следовательно и параметры
+Стокса, определены уже сразу после выхода двух фотонов из источника
+$S$.  
+Таким образом существуют априорные значения $a$, $a'$, $b$ и $b'$,
+а свойства источника могут быть описаны с помощью
+классической теории вероятностей.
+Таким образом существует 16 элементарных
+вероятностей $p\left(a,b,a',b'\right)$, так что среднее значение может
+быть записано следующим образом
+\begin{equation}
+ \left<F\right> \sim \left<F\right>_{class} 
+=\sum_{a,b,a',b'=\pm 1} 
+p\left(a,b,a',b'\right) f\left(a,b,a',b'\right),
+\label{eqEntangClassFuncPre}
+\end{equation}
+где 
+\begin{eqnarray}
+ f\left(a,b,a',b'\right) = \frac{1}{2} 
+\left(
+ab + a'b + ab' - a'b'
+\right) = 
+\nonumber \\
+=
+\frac{1}{2} 
+\left(
+a \left(b + b'\right) + a' \left(b - b'\right)
+\right).
+\label{eqEntangClassFunc}
+\end{eqnarray}
+
+Функция (\ref{eqEntangClassFunc}) может принимать только два значения
+$f = \pm 1$. Действительно возможны два варианта: $b = b'$ или $b = - b'$. В
+первом случае 
+\[
+f = \frac{1}{2}\left(2ab\right) = \pm 1.
+\]
+Во втором случае также 
+\[
+f = \frac{1}{2}\left(2a'b\right) = \pm 1.
+\]
+Таким образом функция $f$ может принимать значения в следующем
+интервале $f_{min} = -1 \le f \le f_{max} = +1$ (в отличии от измеряемой величины
+$f_i = 0, \pm 1, \pm 2$). Очевидно, что в классическом случае
+\begin{equation}
+\left|\left<F\right>_{class} \right| 
+\le 1.
+\label{eqEntangClass}
+\end{equation}
+
+Сравнивая выражения (\ref{eqEntangQuant}) и (\ref{eqEntangClass}),
+которые называют неравенствами Белла,
+можно увидеть, что квантовые корреляции имеют большее количественное
+значение. Это количественное различие может быть проверено в
+эксперименте. Результаты проведенных экспериментов свидетельствуют о
+полноте квантового описания. Эксперимент по проверке полноты квантовой
+механики может иметь не только теоретический интерес, но и чисто
+практическое применение, например в квантовой криптографии, которую мы
+рассмотрим ниже (см. \ref{subsecPart3QuantInfoQuantCrypto}). 
+
+Следует отметить, что выражение (\ref{eqEntangQuant}) может быть
+получено с помощью формулы  (\ref{eqEntangClassFuncPre}), при этом
+очевидно необходимо принять, что некоторые из вероятностей
+$p\left(a,b,a',b'\right) < 0$. Таким образом мы можем говорить о
+неклассичности перепутанного состояния.  

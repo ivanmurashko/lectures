@@ -1,0 +1,129 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Sat Jan 05 00:03:20 MSK 2013
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="-5" x-max="80" y-min="5" y-max="70" auto-bounding="true">
+%<multicurve right-arrow="head"
+%	 points="(-5,10);(-5,10);(80,10);(80,10)"
+%	 />
+%<multicurve right-arrow="head"
+%	 points="(-5,50);(-5,50);(80,50);(80,50)"
+%	 />
+%<multicurve left-arrow="head"
+%	 points="(0,70);(0,70);(0,45);(0,45)"
+%	 />
+%<multicurve points="(10,60);(10,60);(10,50);(10,50)"
+%	 />
+%<multicurve points="(20,60);(20,60);(20,50);(20,50)"
+%	 />
+%<multicurve points="(60,60);(60,60);(60,50);(60,50)"
+%	 />
+%<multicurve points="(70,60);(70,60);(70,50);(70,50)"
+%	 />
+%<multicurve points="(40,40);(40,40);(40,50);(40,50)"
+%	 />
+%<multicurve points="(40,10);(40,10);(40,25);(40,25)"
+%	 />
+%<multicurve left-arrow="head"
+%	 points="(0,30);(0,30);(0,5);(0,5)"
+%	 />
+%<multicurve points="(10,15);(10,15);(10,10);(10,10)"
+%	 />
+%<multicurve points="(20,15);(20,15);(20,10);(20,10)"
+%	 />
+%<multicurve points="(60,15);(60,15);(60,10);(60,10)"
+%	 />
+%<multicurve points="(70,15);(70,15);(70,10);(70,10)"
+%	 />
+%<text anchor-point="(80,45)"
+%	 >
+%$x$
+%</text>
+%<text anchor-point="(80,5)"
+%	 >
+%$x$
+%</text>
+%<text anchor-point="(-5,30)"
+%	 >
+%$\alpha_x$
+%</text>
+%<text anchor-point="(-5,70)"
+%	 >
+%$\alpha_x$
+%</text>
+%<text anchor-point="(45,45)"
+%	 >
+%$x^{\ast}$
+%</text>
+%<text anchor-point="(40,5)"
+%	 >
+%$x^{\ast}$
+%</text>
+%<multicurve stroke-style="dashed"
+%	 stroke-dasharray="1;1"
+%	 points="(-5,55);(-5,55);(75,55);(75,55)"
+%	 />
+%<text stroke-style="dotted"
+%	 anchor-point="(80,55)"
+%	 >
+%$\mathcal{M}$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(80,70)(0,0)
+\linethickness{0.3mm}
+\put(-5,10){\line(1,0){85}}
+\put(80,10){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(-5,50){\line(1,0){85}}
+\put(80,50){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(0,45){\line(0,1){25}}
+\put(0,70){\vector(0,1){0.12}}
+\linethickness{0.3mm}
+\put(10,50){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(20,50){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(60,50){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(70,50){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(40,40){\line(0,1){10}}
+\linethickness{0.3mm}
+\put(40,10){\line(0,1){15}}
+\linethickness{0.3mm}
+\put(0,5){\line(0,1){25}}
+\put(0,30){\vector(0,1){0.12}}
+\linethickness{0.3mm}
+\put(10,10){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(20,10){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(60,10){\line(0,1){5}}
+\linethickness{0.3mm}
+\put(70,10){\line(0,1){5}}
+\put(80,45){\makebox(0,0)[cc]{$x$}}
+
+\put(80,5){\makebox(0,0)[cc]{$x$}}
+
+\put(-5,30){\makebox(0,0)[cc]{$\alpha_x$}}
+
+\put(-5,70){\makebox(0,0)[cc]{$\alpha_x$}}
+
+\put(45,45){\makebox(0,0)[cc]{$x^{\ast}$}}
+
+\put(40,5){\makebox(0,0)[cc]{$x^{\ast}$}}
+
+\linethickness{0.3mm}
+\multiput(-5,57.5)(1.98,0){41}{\line(1,0){0.99}}
+\put(80,57){\makebox(0,0)[cc]{$\mathcal{M}$}}
+
+\multiput(-5,17.5)(1.98,0){41}{\line(1,0){0.99}}
+\put(80,17){\makebox(0,0)[cc]{$\mathcal{M}$}}
+
+\end{picture}

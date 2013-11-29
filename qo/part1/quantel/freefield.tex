@@ -1,0 +1,154 @@
+%% -*- coding:utf-8 -*- 
+\section{Разложение поля по плоским волнам в свободном пространстве}
+До сих пор мы рассматривали электромагнитное поле в физически
+выделенном объеме - в резонаторе. Если мы имеем дело со свободным
+пространством, можно искусственно выделить достаточно большой объем,
+содержащий интересующую нас область пространства, определить для него
+моды (типы колебаний) при подходящих граничных условиях, а дальше
+действовать уже рассмотренным способом. При необходимости объем в
+конечном результате можно устремить в бесконечность. Обычно используют
+достаточно большой кубический объем со стороной  $L$  
+(рис. \ref{figCh1_Vfree}). В этом случае принято использовать
+периодические граничные условия:  
+\begin{eqnarray}
+\vec{E}\left(0, y, z \right) = \vec{E}\left(L, y, z \right),
+\nonumber \\
+\vec{E}\left(x, 0, z \right) = \vec{E}\left(x, L, z \right),
+\nonumber \\
+\vec{E}\left(x, y, 0 \right) = \vec{E}\left(x, y, L \right).
+\label{eqCh1_period_def}
+\end{eqnarray}
+
+\input ./part1/quantel/fig2.tex
+
+Удобно вести разложение по плоским волнам. Как известно из курса
+электромагнитных колебаний, решение, соответствующее плоской волне,
+имеет вид 
+\begin{equation}
+\vec{E}_k\left(r, t\right) = 
+A_k\left(t\right)\vec{e}_k e^{i\left(\vec{k}\vec{r}\right)} +
+\mbox{(к. с.)},
+\label{eqCh1_Emode}
+\end{equation}
+где $\vec{e}_k$ - единичный вектор поляризации волны;  
+$k$ - волновое число; $\vec{k}$ - волновой вектор;  
+$A_k\left(t\right) = A_k\left(0\right) e^{-i \omega_k t}$.
+
+Магнитное поле связано с электрическим полем соотношением
+\begin{equation}
+\vec{H}_k\left(r, t\right) =
+\sqrt{\frac{\varepsilon_0}{\mu_0}}
+\frac{1}{k}\left[\vec{k} \vec{e}_k\right] A_k\left(t\right) 
+e^{i\left(\vec{k}\vec{r}\right)} + \mbox{(к. с.)}
+.
+\label{eqCh1_Hmode}
+\end{equation}
+
+Справедливы следующие равенства:
+\begin{equation}
+\left(\vec{k}\vec{E}_k\right) = 
+\left(\vec{k}\vec{H}_k\right) = 
+\left(\vec{E}_k\vec{H}_k\right) = 0,
+\quad
+k^2 = \left(\vec{k}\vec{k}\right) = 
+\frac{\omega_k^2}{c^2} 
+\end{equation}
+указывающие, что 
+$\vec{E}_k$
+и $\vec{H}_k$ перпендикулярны направлению распространения волны и друг
+к другу (волна поперечная). 
+
+Условие периодичности (\ref{eqCh1_period_def}) будет удовлетворено,
+если 
+\begin{equation}
+\vec{k} = \frac{2 \pi}{L}\left(n_x \vec{x}_0
++ n_y \vec{y}_0
++ n_z \vec{z}_0
+\right),
+\quad
+n_x, n_y, n_z = 0, \pm 1, \pm 2, \dots .
+\label{eqCh1_period}
+\end{equation}
+Тогда получим
+\begin{eqnarray}
+\left(\vec{k}\vec{r}\right) = \frac{2 \pi}{L}\left(n_x x
++ n_y y
++ n_z z
+\right),
+\nonumber \\
+\left.\left(\vec{k}\vec{r}\right)\right|_{x = L} = 2 \pi n_x + \frac{2 \pi}{L}\left(n_y y
++ n_z z
+\right) = 
+2 \pi n_x + \left.\left(\vec{k}\vec{r}\right)\right|_{x = 0}.
+\end{eqnarray}
+Следовательно,    
+$e^{i\left(\vec{k}\vec{r}\right)}$
+периодично по $x$.  Таким же образом показывается
+периодичность по  $y$  и  $z$.
+ 
+В дальнейшем вместо вещественных функций (\ref{eqCh1_Emode}), 
+(\ref{eqCh1_Hmode}) будем пользоваться
+комплексными собственными функциями 
+\begin{equation}
+\vec{E}_k\left(r\right) = \vec{e}_k e^{i \left( \vec{k}\vec{r}\right)},
+\quad
+\vec{H}_k\left(r\right) = \sqrt{\frac{\varepsilon_0}{\mu_0}}\frac{1}{k}
+\left[\vec{k}\vec{E}_k\left(r\right)\right].
+\label{eqCh1_EHmode}
+\end{equation}
+Справедливы соотношения
+\[
+\left(\vec{k}\vec{E}_k\right) = 
+\left(\vec{k}\vec{H}_k\right) = 
+\left(\vec{E}_k\vec{H}_k\right) = 0,
+\quad
+k^2 = \left(\vec{k}\vec{k}\right) = 
+\frac{\omega_k^2}{c^2}.
+\]
+Собственные частоты $\omega_k$ определяются уравнением
+(\ref{eqCh1_period}). Действительно из (\ref{eqCh1_period}) с учетом
+$k^2 = \frac{\omega_k^2}{c^2}$ имеем 
+\begin{equation}
+\omega_k = c \sqrt{k_x^2 + k_y^2 + k_z^2} = 
+\frac{2 \pi c}{L} \sqrt{n_x^2 + n_y^2 + n_z^2}.
+\end{equation}
+
+При линейной поляризации векторы поляризации $\vec{e}_k$ равны:
+\[
+\vec{e}_{k_1} = \vec{\xi}_0,
+\quad
+\vec{e}_{k_2} = \vec{\eta}_0,
+\]
+где $\vec{\xi}_0$, $\vec{\eta}_0$, - орты направлений, составляющих с
+вектором $\vec{k}$ прямоугольную систему направлений, следовательно, 
+\[
+\left(\vec{\xi}_0\vec{k}\right) =
+\left(\vec{\eta}_0\vec{k}\right) =
+\left(\vec{e}_{k_1}\vec{e}_{k_2}\right) = 0.
+\]
+
+Для круговой поляризации
+\[
+\vec{e}_{k_1} = \frac{\vec{\xi}_0 + i \vec{\eta}_0}{\sqrt{2}},
+\quad
+\vec{e}_{k_2} = \frac{\vec{\xi}_0 - i \vec{\eta}_0}{\sqrt{2}}.
+\]
+
+В этом случае выполняются условие ортогональности:
+$\left(\vec{e}_{k_1} \vec{e}_{k_2}^{*}\right)$
+и условия нормировки:
+$\left(\vec{e}_{k_1} \vec{e}_{k_1}^{*}\right) = \left(\vec{e}_{k_2}
+\vec{e}_{k_2}^{*}\right) = 1$.
+
+Произвольное электромагнитное поле при помощи комплексных функций 
+(\ref{eqCh1_EHmode}) можно представить разложениями 
+\begin{eqnarray}
+\vec{E}\left(r, t\right) = 
+\sum_{(k)} 
+A_k\left(t\right) \vec{E}_k\left(r\right) + \mbox{(к. с.)},
+\nonumber \\
+\vec{H}\left(r, t\right) = 
+\sum_{(k)} 
+A_k\left(t\right) \vec{H}_k\left(r\right) +
+\mbox{(к. с.)}
+\end{eqnarray}

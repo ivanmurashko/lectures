@@ -1,0 +1,204 @@
+%% -*- coding:utf-8 -*-
+\section{Свойства дискретного преобразования Фурье}
+Следует отметить следующие свойства преобразования Фурье, которые
+играют основную роль в алгоритме Шора:
+
+\begin{lemma}
+\emph{(Сдвиг)}
+\label{lemmaAddFourierDiscretFourierShiftTime}
+Если $\left\{x_n\right\} \longleftrightarrow \left\{\tilde{X}_k\right\}$ то
+$\left\{x_{\left(n - m\right) \mod M}\right\} \longleftrightarrow
+\left\{e^{-i \omega m k}\tilde{X}_k\right\}$ 
+\end{lemma}
+
+\begin{proof}
+Для последовательности $\left\{x_{\left(n - m\right) \mod M}\right\}$
+можно записать
+\begin{eqnarray}
+\left\{x_{\left(n - m\right) \mod M}\right\} = 
+\begin{pmatrix}
+x_{-m \mod M} \\
+x_{-m+1 \mod M}\\ 
+\vdots \\
+x_{-1 \mod M}\\
+x_0 \\
+x_1 \\
+\vdots \\
+x_{M - m - 1}
+\end{pmatrix} = 
+\begin{pmatrix}
+x_{M - m} \\
+x_{M - m + 1}\\ 
+\vdots \\
+x_{M - 1}\\
+x_0 \\
+x_1 \\
+\vdots \\
+x_{M - m - 1}
+\end{pmatrix},
+\nonumber
+\end{eqnarray}
+при этом
+\begin{eqnarray}
+\hat{F}\left\{x_{\left(n - m\right) \mod M}\right\} = 
+\nonumber \\
+=
+\begin{pmatrix}
+1 & 1 & 1 & \cdots & 1 \\
+1 & e^{-i \omega} & e^{-2 i \omega} & \cdots & 
+e^{-\left( M - 1 \right) i \omega} \\
+1 & e^{-2 i \omega} & e^{-4 i \omega} & \cdots & 
+e^{-2 \left( M - 1 \right) i \omega} \\
+1 & e^{-3 i \omega} & e^{-6 i \omega} & \cdots & 
+e^{-3 \left( M - 1 \right) i \omega} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & e^{-\left( M - 1 \right) i \omega} & e^{-2\left( M - 1 \right) i \omega} & \cdots & 
+e^{- \left( M - 1 \right)\left( M - 1 \right) i \omega} \\
+\end{pmatrix}
+\begin{pmatrix}
+x_{M - m} \\
+x_{M - m + 1}\\ 
+\vdots \\
+x_0 \\
+\vdots \\
+x_{M - m - 1}
+\end{pmatrix} = 
+\nonumber \\
+=
+\begin{pmatrix}
+x_{M - m} + x_{M - m + 1} + \cdots + x_0 + \cdots +
+x_{M - m - 1}\\
+x_{M - m} + 
+e^{-i \omega} x_{M - m + 1} + 
+\cdots + 
+e^{-i \omega m  } x_0 + 
+\cdots +
+e^{-i \omega \left( M - 1 \right) } x_{M - m - 1}\\ 
+x_{M - m} + 
+e^{-2 i \omega} x_{M - m + 1} + 
+\cdots + 
+e^{-2 i \omega m  } x_0 + 
+\cdots +
+e^{-2 i \omega \left( M - 1 \right) } x_{M - m - 1}\\ 
+\vdots \\
+x_{M - m} + 
+e^{-m i \omega} x_{M - m + 1} + 
+\cdots + 
+e^{-m i \omega m  } x_0 + 
+\cdots +
+e^{-m i \omega \left( M - 1 \right) } x_{M - m - 1}\\ 
+\vdots 
+\end{pmatrix}.
+\label{eqlemmaAddFourierDiscretFourierShiftTimeMatrix}
+\end{eqnarray}
+С учетом соотоношения
+\[
+e^{-i \omega k M} = 1, k \in \left\{0, 1, \dots \right\},
+\]
+выражение
+(\ref{eqlemmaAddFourierDiscretFourierShiftTimeMatrix}) может
+быть переписано в следующем виде
+\begin{eqnarray}
+\hat{F}\left\{x_{\left(n - m\right) \mod M}\right\} = 
+\nonumber \\
+=
+\begin{pmatrix}
+x_{M - m} + \cdots +
+x_{M - m - 1}\\
+e^{-i \omega m } e^{-i \omega \left( M - m \right) } x_{M - m} + 
+\cdots + 
+e^{-i \omega 2 m } e^{-i 2 \omega \left( M - m - 1\right) }\\ 
+e^{-i \omega 2 m } e^{-i 2 \omega \left( M - m \right) } x_{M - m} + 
+\cdots + 
+e^{-i \omega 2 m } e^{-i 2 \omega \left( M - m - 1\right) }\\ 
+\vdots 
+\end{pmatrix} = 
+\nonumber \\
+=
+\begin{pmatrix}
+\tilde{X}_0 \\
+e^{-i \omega m} \tilde{X}_1 \\
+e^{-i \omega 2 m} \tilde{X}_2 \\
+\vdots  
+\end{pmatrix}.
+\nonumber
+\end{eqnarray}
+\end{proof}
+
+
+\begin{lemma}
+\emph{(Периодичность)}
+\label{lemmaAddFourierDiscretFourierPeriod}
+Если последовательность $\left\{x_n\right\}$ имеет период $r$: $x_n =
+x_{n + r}$, а число отсчетов $M$ кратно $r$, то не нулевые члены
+преобразования Фурье следуют с периодом $\frac{M}{r}$.
+\end{lemma}
+
+\begin{proof}
+Действительно если $M \mod r = 0$ и $k r \mod M \ne 0$,
+то
+\[
+1 - e^{-i \omega k r} \ne 0,
+\]
+откуда
+\begin{eqnarray}
+\tilde{X}_k = \sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
+\nonumber \\
+=
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_{n+r} + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_{n+2r} + 
+\dots =
+\nonumber \\
+=
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_n + 
+\dots =
+\nonumber \\
+= \sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
+\sum_{l = 0}^{\frac{M}{r}- 1} e^{-i \omega k l r } = 
+\sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
+\frac{1 - e^{-i \omega k \frac{M}{r} r }}{1 - e^{-i \omega k r }} = 
+\nonumber \\
+=
+\frac{1 - e^{-i \omega k M }}{1 - e^{-i \omega k r}}
+\sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} = 0.
+\label{eqAddFourierDiscretFourierPeriodCase1}
+\end{eqnarray}
+Если $M \mod r = 0$ и $k r \mod M = 0$, то
+\[
+e^{-i \omega k r } = e^{-i \frac{2 \pi }{M} k r } = 1,
+\]
+откуда
+\begin{eqnarray}
+\tilde{X}_k = \sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
+\nonumber \\
+=
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n } x_{n+r} + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n } x_{n+2r} + 
+\dots =
+\nonumber \\
+=
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n + 
+\dots = 
+\nonumber \\ 
+= \frac{M}{r} \sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n \ne 0.
+\label{eqAddFourierDiscretFourierPeriodCase2}
+\end{eqnarray}
+Таким образом из выражений 
+(\ref{eqAddFourierDiscretFourierPeriodCase1}) и 
+(\ref{eqAddFourierDiscretFourierPeriodCase2}) следует что
+ненулевые члены следуют с периодом $T = \frac{M}{r}$.
+
+Стоит отметить, что выражение 
+(\ref{eqAddFourierDiscretFourierPeriodCase1}) в случае когда
+период не кратен числу отсчетов: $M \mod r \ne 0$. Будет приближенно
+равно 0 для тех значений $k$ которые сильно отличаются от значений
+кратных $\frac{M}{r}$, т. е. локальные максимумы перобразования Фурье
+будут повторяться с периодом $\frac{M}{r}$.
+\end{proof}
+

@@ -1,0 +1,410 @@
+%% -*- coding:utf-8 -*- 
+\section{Квантовое преобразование Фурье}
+Для анализа периодических последовательностей (функций) может быть
+использовано дискретное преобразование Фурье
+(см. \ref{AddFourier}), которое определяется следующим соотношением
+(\ref{eqAddFourierDiscretFourier}):
+\begin{equation}
+\tilde{X}_k = \sum^{M - 1}_{m = 0} x_m e^{-\frac{2 \pi}{M} k\cdot m},
+\label{eqPart4QuantCompShorFourierDiscretFourier}
+\end{equation}
+где исходная последовательность чисел $\left\{x_m\right\}$ имеет $M$
+членов. 
+
+\subsection{Схема квантового преобразования Фурье}
+Квантовое преобразование Фурье имеет дело с состояниями вида
+\begin{equation}
+\left|x\right> = \sum_{k = 0}^{M - 1}x_k \left|k\right>,
+\label{eqPart4QuantCompShorQuantFourierSeries}
+\end{equation}
+где имеется последовательнеость амплитуд $\left\{x_k\right\}$, которая
+задает исходную последовательность для преобразования Фурье 
+(\ref{eqPart4QuantCompShorFourierDiscretFourier}). В базисном векторе
+$\left|k\right>$ записан номер члена этой последовательности.   
+
+Очевидно, что члены последовательности
+(\ref{eqPart4QuantCompShorQuantFourierSeries})  должны удовлетворять
+условию нормировки 
+\[
+\sum_k\left|x_k\right|^2 = 1.
+\]
+
+Допустим что некоторый оператор $\hat{F}^{M}$ (оператор квантового
+преобразования Фурье) преобразует базисный вектор $\left|k\right>$ по
+правилу задаваемому соотношением (\ref{eqAddFourierDiscretFourier}):
+\begin{equation}
+\hat{F}^{M}\left|k\right> = \frac{1}{\sqrt{M}}\sum_{j = 0}^{M -1}
+e^{-i \omega k j}\left|j\right>_{inv} 
+\label{eqPart4QuantCompShorQuantFourierBasis}
+\end{equation}
+Системы базисных векторов $\left\{\left|k\right>\right\}$ и 
+$\left\{\left|k\right>_{inv}\right\}$ представляют собой один и тот же
+набор векторов которые пронумерованны различным способом.
+
+Из (\ref{eqPart4QuantCompShorQuantFourierSeries}) и
+(\ref{eqPart4QuantCompShorQuantFourierBasis}) получим
+\begin{eqnarray}
+\hat{F}^{M}\left|x\right> = \sum_{j = 0}^{M - 1}x_k \hat{F}^{M}
+\left|k\right> = 
+\nonumber \\
+= \frac{1}{\sqrt{M}}\sum_{k = 0}^{M -1}\sum_{j = 0}^{M - 1}
+e^{-i \omega k j}x_k\left|j\right>_{inv} = 
+\nonumber \\
+= \sum_{j = 0}^{M - 1} \left\{\frac{1}{\sqrt{M}}\left(
+\sum_{k = 0}^{M - 1}e^{-i \omega k j} x_k
+\right)\right\}\left|j\right>_{inv} = 
+\nonumber \\
+= \sum_{j = 0}^{M - 1}\tilde{X}_j\left|j\right>_{inv} = \left|\tilde{X}\right>_{inv},
+\nonumber
+\end{eqnarray}
+где 
+\begin{equation}
+\tilde{X}_j = \tilde{X}_j^{M} = 
+\frac{1}{\sqrt{M}}\sum_{k = 0}^{M - 1}e^{-i \omega k j} x_k.
+\label{eqPart4QuantCompShorQuantFourierEnd}
+\end{equation}
+Выражение (\ref{eqPart4QuantCompShorQuantFourierEnd}) повторяет
+классический аналог (\ref{eqAddFourierDiscretFourier}), т. е. можно записать
+\[
+ \left|x\right> \longleftrightarrow \left|\tilde{X}\right>_{inv}.
+\]
+
+\input ./part4/quantcomp/figquantfourier0.tex
+
+Допустим теперь, что на вход нашей системы подается состояние вида
+(\ref{eqPart4QuantCompShorQuantFourierSeries}) которое представляет
+собой суперпозицию $M$ базисных состояний
+$\left\{\left|k\right>\right\}$ 
+(см. рис. \ref{figQuantCompQuantFourier0}). 
+Предположим что число базисных
+состояний является степенью двойки, т. е. базисное состояние
+представимо в виде тензорного произведения $n = \log_2{M}$ кубитов:
+\begin{equation}
+\left|k\right> = \left|a^{(k)}_0\right> \otimes  \left|a^{(k)}_1\right>
+\otimes \cdots \otimes \left|a^{(k)}_{n-1}\right>, 
+\nonumber
+\end{equation}
+где
+\begin{eqnarray}
+k = a^{(k)}_0 + 2^1 a^{(k)}_1 + \dots + 2^{n-1} a^{(k)}_{n-1},
+\nonumber \\
+a^{(k)}_i \in \left\{0, 1\right\}.
+\nonumber
+\end{eqnarray}
+
+На выходе
+(см. рис. \ref{figQuantCompQuantFourier0})
+мы имеем суперпозицию $M$ базисных состояний
+$\left\{\left|j\right>_{inv}\right\}$, где для состояния
+$\left|j\right>_{inv}$ получим 
+\begin{equation}
+\left|j\right>_{inv} = \left|b^{(j)}_{n-1}\right> \otimes
+\left|b^{(j)}_{n-2}\right> 
+\otimes \cdots \otimes \left|b^{(j)}_{0}\right>, 
+\nonumber
+\end{equation}
+где
+\begin{eqnarray}
+j = b^{(j)}_0 + 2^1 b^{(j)}_1 + \dots + 2^{n-1} b^{(j)}_{n-1},
+\nonumber \\
+b^{(j)}_i \in \left\{0, 1\right\}.
+\nonumber
+\end{eqnarray}
+
+Из формулы (\ref{eqAddFourierDiscretFourierFFT}) можно
+заметить, что если у нас имеется входной сигнал $x$ состоящий из $n =
+\log_2{M}$ 
+битов, то бит $a^{(k)}_0$ может быть использован для выбора четных
+(первого члена суммы (\ref{eqAddFourierDiscretFourierFFT}))
+или нечетных 
+(второго члена суммы (\ref{eqAddFourierDiscretFourierFFT})).
+
+Действительно, исключая $a^{(k)}_0$, состояние
+(\ref{eqPart4QuantCompShorQuantFourierSeries}) можно представить в
+виде суммы четных и нечетных компонент: 
+\begin{eqnarray}
+\left|x\right> = \sum_{k = 0}^{M - 1}x_k \left|k\right> = 
+\sum_{k = 0}^{M - 1}x_k \left|a^{(k)}_0\right> \otimes  \left|a^{(k)}_1\right>
+\otimes \cdots \otimes \left|a^{(k)}_{n-1}\right> = 
+\nonumber \\
+ = \sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m} \left|0\right> \otimes  \left|a^{(k)}_1\right>
+\otimes \cdots \otimes \left|a^{(k)}_{n-1}\right> +
+\nonumber \\
++
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m + 1} \left|1\right> \otimes  \left|a^{(k)}_1\right>
+\otimes \cdots \otimes \left|a^{(k)}_{n-1}\right> = 
+\nonumber \\
+ = \sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m} \left|0\right> \otimes  \left|m\right> +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m + 1} \left|1\right> \otimes  \left|m\right> = 
+\nonumber \\
+= \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \left|2m\right> +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1} \left|2m+1\right>,
+\nonumber
+\end{eqnarray}
+где
+\begin{equation}
+m = a^{(k)}_1 + 2^1 a^{(k)}_2 + \dots + 2^{n-2} a^{(k)}_{n-1}.
+\nonumber
+\end{equation}
+
+\input ./part4/quantcomp/figquantfourier1.tex
+
+Применяя преобразование Фурье только для старших бит $\hat{F}^{\frac{M}{2}}$,
+т. е. исключая $a^{(k)}_0$, получим (см. рис. \ref{figQuantCompQuantFourier1}):
+\begin{eqnarray}
+\left|x\right> \rightarrow
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \left|2m\right> +
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\left|2m+1\right> = 
+\nonumber \\
+=
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
+\left|0\right> \otimes  \left|m\right> +
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\left|1\right> \otimes  \left|m\right>
+=
+\nonumber \\
+=
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
+\left|0\right> \otimes \hat{F}^{\frac{M}{2}} \left|m\right> +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\left|1\right> \otimes \hat{F}^{\frac{M}{2}} \left|m\right>.
+\label{eqPart4QuantCompShorQuantFourierStep1}
+\end{eqnarray}
+С учетом выражения (\ref{eqPart4QuantCompShorQuantFourierBasis}) получим
+\begin{equation}
+\hat{F}^{\frac{M}{2}} \left|m\right> = \sqrt{\frac{2}{M}}
+\sum_{j= 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j}\left|j\right>_{inv}.
+\nonumber
+\end{equation}
+Таким образом для (\ref{eqPart4QuantCompShorQuantFourierStep1}) имеем
+\begin{eqnarray}
+\left|x\right> \rightarrow
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
+\left|0\right> \otimes \hat{F}^{\frac{M}{2}} \left|m\right> +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\left|1\right> \otimes \hat{F}^{\frac{M}{2}} \left|m\right> = 
+\nonumber \\
+=
+\sqrt{\frac{2}{M}} \sum_{j = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} 
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \left|0\right> \otimes
+\left|j\right>_{inv}
++
+\nonumber \\
++
+\sqrt{\frac{2}{M}} \sum_{j = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} 
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m+1} \left|1\right> \otimes
+\left|j\right>_{inv}
+=
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}  
+\left( \sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m} 
+\right) \left|j\right>_{inv}
++
+\nonumber \\
++
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\left( \sqrt{\frac{2}{M}}  
+\sum_{m = 0}^{\frac{M}{2} - 1}e^{-i \frac{4 \pi}{M} m j} x_{2m+1} 
+\right)
+\left|\frac{M}{2} + j\right>_{inv}
+=
+\nonumber \\
+= \sum^{\frac{M}{2} - 1}_{j = 0}  \tilde{A}_{j} \left|j\right>_{inv} +
+\sum^{\frac{M}{2} - 1}_{j = 0}  \tilde{B}_{j} \left|\frac{M}{2} + j\right>_{inv},
+\nonumber
+\end{eqnarray}
+где
+\begin{eqnarray}
+\tilde{A}_{j} = 
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m} 
+\nonumber \\
+\tilde{B}_{j} =
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m+1} 
+\label{eqPart4QuantCompShorAB}
+\end{eqnarray}
+
+\input ./part4/quantcomp/figquantfourier2.tex
+
+Если добавить теперь фазовый сдвиг для нечетных элементов, т. е. для
+тех у которых $a_0^k = 1$ то получим схему изображенную на
+рис. \ref{figQuantCompQuantFourier2}: 
+\begin{eqnarray}
+\left|x\right> \rightarrow
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \left|2m\right> +
+\hat{R}\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1} x_{2m + 1}
+\left|2m+1\right> =
+\nonumber \\
+= 
+\sum^{\frac{M}{2} - 1}_{j = 0} \tilde{A}_{j} \left|j\right>_{inv} +
+\sum^{\frac{M}{2} - 1}_{j = 0}  
+\tilde{B}_{j} \hat{R}\left|\frac{M}{2} + j\right>_{inv},
+\nonumber \\
+= 
+\sum^{\frac{M}{2} - 1}_{j = 0}  \tilde{A}_{j} \left|j\right>_{inv} +
+\sum^{\frac{M}{2} - 1}_{j = 0}  
+\tilde{C}_{j} \left|\frac{M}{2} + j\right>_{inv}.
+\label{eqPart4QuantCompShorFourierStep2}
+\end{eqnarray}
+Воспользовавшись выражением
+\begin{equation}
+\hat{R}_l \left|b^{(j)}_l\right> = 
+exp{\left(- 2 \pi i \frac{b^{(j)}_l}{2^{n-l}}\right)}
+\left|b^{(j)}_l\right>
+\nonumber
+\end{equation}
+получим, что оператор $\hat{R}$ действует на состояние 
+$\left|\frac{M}{2} + j\right>_{inv}$ следующим образом:
+\begin{eqnarray}
+\hat{R}\left|\frac{M}{2} + j\right>_{inv} = 
+\hat{R}\left|1\right> \otimes  \left|j\right>_{inv} = 
+\nonumber \\
+= 
+\left|1\right> \otimes \hat{R}_0 \left|b^{(j)}_0\right>
+\otimes \cdots \otimes \hat{R}_{n-2} \left|b^{(j)}_{n-2}\right> = 
+\nonumber \\
+= 
+\prod_{l = 0}^{n-2}exp{\left(- 2 \pi i \frac{2^lb^{(j)}_l}{2^n}\right)}
+\left|1\right> \otimes \left|j\right>_{inv} = 
+\nonumber \\
+=
+exp{\left(-2 \pi i \frac{j}{M}\right)}
+\left|\frac{M}{2} + j\right>_{inv} 
+\label{eqPart4QuantCompShorFourierStep2Pre}
+\end{eqnarray}
+При выводе (\ref{eqPart4QuantCompShorFourierStep2Pre}) было учтено,
+что $j = b^{(j)}_0 + 2^1 b^{(j)}_1 + \dots + 2^{n-2} b^{(j)}_{n-2}$. 
+
+Таким образом для $\tilde{C}_{j}$ в 
+(\ref{eqPart4QuantCompShorFourierStep2}) имеем
+\begin{eqnarray}
+\tilde{C}_{j} = 
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{- 2 \pi i \frac{j}{M}}
+e^{-i \frac{4 \pi}{M} m j} x_{2m+1} =
+\nonumber \\
+=
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{-i \frac{2 \pi}{M} \left(2m+1\right) j} x_{2m+1}
+\label{eqPart4QuantCompShorC}
+\end{eqnarray}
+
+\input ./part4/quantcomp/figquantfourier.tex
+
+Если теперь применить преобразование Адамара для кубита
+$\left|a_0\right>$, то получим схему изображенную на
+рис. \ref{figQuantCompQuantFourier}. При этом исходное состояние
+преобразуется по следующему закону:
+\begin{eqnarray}
+\left|x\right> \rightarrow
+\hat{H}_0\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \left|2m\right> +
+\hat{H}_0\hat{R}\hat{F}^{\frac{M}{2}}\sum_{m = 0}^{\frac{M}{2} - 1} x_{2m + 1} =
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\tilde{A}_{j}
+\hat{H}\left|0\right> \otimes \left|j\right>_{inv}
++
+\sum_{j = 0}^{\frac{M}{2} - 1} 
+\tilde{C}_{j}
+\hat{H}\left|1\right> \otimes \left|j\right>_{inv} 
+=
+\nonumber \\
+= 
+\frac{1}{\sqrt{2}}\sum_{j = 0}^{\frac{M}{2} - 1}
+\tilde{A}_{j} 
+\left(\left|0\right> + \left|1\right> \right) \otimes  
+\left|j\right>_{inv}
++
+\frac{1}{\sqrt{2}}\sum_{j = 0}^{\frac{M}{2} - 1}
+\tilde{C}_{j} 
+\left(\left|0\right> - \left|1\right> \right) \otimes  
+\left|j\right>_{inv}
+=
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} 
+\left|0\right> \otimes \left|j\right>_{inv} +
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{ \tilde{A}_{j} - \tilde{C}_{j}}{\sqrt{2}} 
+\left|1\right> \otimes \left|j\right>_{inv}
+=
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} \left|j\right>_{inv} +
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{ \tilde{A}_{j} - \tilde{C}_{j}}{\sqrt{2}} 
+\left|\frac{M}{2} + j \right>_{inv}.
+\label{eqPart4QuantCompShorFourierStep3}
+\end{eqnarray}
+Для членов (\ref{eqPart4QuantCompShorFourierStep3}) с учетом равенств
+(\ref{eqPart4QuantCompShorAB}) и (\ref{eqPart4QuantCompShorC}) имеем:
+\begin{eqnarray}
+\frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} = 
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m}  +
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{-i \frac{2 \pi}{M} \left(2m+1\right) j} x_{2m+1} = 
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m}
+\label{eqPart4QuantCompShorFourierStep3_1}
+\end{eqnarray}
+и
+\begin{eqnarray}
+\frac{\tilde{A}_{j} - \tilde{C}_{j} }{\sqrt{2}} = 
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m}  -
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{-i \frac{2 \pi}{M} \left(2m+1\right) j} x_{2m+1}
+= 
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m} \frac{1 + e^{-i \pi m}}{2}
+-
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m} \frac{1 - e^{-i \pi m}}{2} 
+=
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} e^{-i \pi m } x_{m} 
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} e^{-i \frac{2 \pi}{M} m \frac{M}{2} } x_{m} 
+=
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m \left(\frac{M}{2} + j\right)} x_{m}
+\label{eqPart4QuantCompShorFourierStep3_2}
+\end{eqnarray}
+
+Объединяя (\ref{eqPart4QuantCompShorFourierStep3}), 
+(\ref{eqPart4QuantCompShorFourierStep3_1}) и
+(\ref{eqPart4QuantCompShorFourierStep3_2}) окончательно получим 
+\begin{eqnarray}
+\left|x\right> \rightarrow
+\sum_{j = 0}^{\frac{M}{2} - 1} \sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m} \left|j\right>_{inv} +
+\nonumber \\
++
+\sum_{j = 0}^{\frac{M}{2} - 1} \sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m \left(\frac{M}{2} + j\right)} x_{m} 
+\left|\frac{M}{2} + j\right>_{inv} =
+\nonumber \\
+= \sum_{j = 0}^{M - 1} \tilde{X}_j^{M} \left|j\right>_{inv}
+\nonumber
+\end{eqnarray}

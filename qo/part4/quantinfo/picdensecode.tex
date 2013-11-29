@@ -1,0 +1,154 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Sun Jan 27 18:23:25 MSK 2008
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="60" y-min="15" y-max="70" auto-bounding="true">
+%<parallelogram p3= "(10,65)"
+%	 stroke-width= "0.15"
+%	 p1= "(0,55)"
+%	 fill-style= "none"
+%	 p2= "(10,55)"
+%	 />
+%<multicurve stroke-width= "0.5"
+%	 fill-style= "none"
+%	 points= "(0,30);(0,30);(10,20);(10,20)"
+%	 />
+%<multicurve stroke-width= "0.15"
+%	 fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(10,60);(10,60);(50,60);(50,60)"
+%	 />
+%<multicurve stroke-width= "0.5"
+%	 fill-style= "none"
+%	 points= "(50,20);(50,20);(60,30);(60,30)"
+%	 />
+%<multicurve stroke-width= "0.15"
+%	 fill-style= "none"
+%	 points= "(5,55);(5,55);(5,25);(5,25)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(5,70)"
+%	 stroke-width= "0.15"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\left|\Psi^{+}\right&gt;$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(55,70)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%Alice
+%</text>
+%<parallelogram p3= "(60,55)"
+%	 p1= "(50,65)"
+%	 fill-style= "none"
+%	 p2= "(60,65)"
+%	 />
+%<parallelogram p3= "(35,20)"
+%	 p1= "(25,30)"
+%	 fill-style= "none"
+%	 p2= "(35,30)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(30,15)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%Bob
+%</text>
+%<multicurve fill-style= "none"
+%	 points= "(5,25);(5,25);(5,25);(5,25)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(5,25);(5,25);(25,25);(25,25)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(35,25);(35,25);(55,25);(55,25)"
+%	 />
+%<multicurve fill-style= "none"
+%	 right-arrow= "head"
+%	 points= "(55,25);(55,25);(55,55);(55,55)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(25,65)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$(1)$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(10,45)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$(2)$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(5,60)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$S$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(60,70)(0,0)
+\linethickness{0.15mm}
+\put(0,55){\line(1,0){10}}
+\put(0,55){\line(0,1){10}}
+\put(10,55){\line(0,1){10}}
+\put(0,65){\line(1,0){10}}
+\linethickness{0.5mm}
+\multiput(0,30)(0.12,-0.12){83}{\line(1,0){0.12}}
+\linethickness{0.15mm}
+\put(10,60){\line(1,0){40}}
+\put(50,60){\vector(1,0){0.12}}
+\linethickness{0.5mm}
+\multiput(50,20)(0.12,0.12){83}{\line(0,1){0.12}}
+\linethickness{0.15mm}
+\put(5,25){\line(0,1){30}}
+\put(5,70){\makebox(0,0)[cc]{$\left|\Psi^{+}\right>_{12}$}}
+
+\put(55,70){\makebox(0,0)[cc]{Alice}}
+
+\linethickness{0.3mm}
+\put(50,65){\line(1,0){10}}
+\put(50,55){\line(0,1){10}}
+\put(60,55){\line(0,1){10}}
+\put(50,55){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(25,30){\line(1,0){10}}
+\put(25,20){\line(0,1){10}}
+\put(35,20){\line(0,1){10}}
+\put(25,20){\line(1,0){10}}
+\put(30,15){\makebox(0,0)[cc]{Bob}}
+
+\linethickness{0.3mm}
+\linethickness{0.3mm}
+\put(5,25){\line(1,0){20}}
+\put(25,25){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(35,25){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(55,25){\line(0,1){30}}
+\put(55,55){\vector(0,1){0.12}}
+\put(25,65){\makebox(0,0)[cc]{$(1)$}}
+
+\put(10,45){\makebox(0,0)[cc]{$(2)$}}
+
+\put(5,60){\makebox(0,0)[cc]{$S$}}
+
+\end{picture}

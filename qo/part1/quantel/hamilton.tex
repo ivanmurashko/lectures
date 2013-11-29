@@ -1,0 +1,84 @@
+%% -*- coding:utf-8 -*- 
+\section{Гамильтонова форма уравнений свободного электромагнитного поля}
+Представим поле в объеме  $V$  в виде разложений (\ref{eqCh1_sep1}):
+\begin{equation}
+\vec{E}\left(r, t\right) = \sum_{(n)}
+\frac{q_n\left(t\right) \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right),
+\quad
+\vec{H}\left(r, t\right) = \sum_{(n)}
+\frac{p_n\left(t\right)}{\sqrt{\mu_0}} \vec{H}_n\left(r\right),
+\label{eqCh1_sep1_1}
+\end{equation}
+причем $p_n = \frac{d q_n}{d t}$, а $q_n$ удовлетворяет уравнению
+\[
+\frac{d^2 q_n}{d t^2} + \omega_n^2 q_n = 0.
+\]
+Это уравнение гармонического осциллятора. Его решение:
+\begin{equation}
+q_n\left(t\right) = q_n\left(0\right) \cos \omega_n t + 
+\frac{\dot{q_n}\left(0\right)}{\omega_n} \sin \omega_n t 
+\end{equation}
+$q_n\left(0\right)$ и 
+$\dot{q_n}\left(0\right)$ 
+определяются из разложения начального поля по  
+$\vec{E_n}$, $\vec{H_n}$.
+ 
+Запишем теперь уравнения электродинамики в гамильтоновой
+форме. Функция Гамильтона для электромагнитного поля 
+(энергия поля)
+\begin{equation}
+\mathcal{H} = \frac{1}{2}
+\int_{\nu}\left( \varepsilon_0\left(\vec{E}\right)^2 + \mu_0
+\left(\vec{H}\right)^2\right) d\nu
+\label{eqCh1_hamilton}
+\end{equation}
+Подставляя в (\ref{eqCh1_hamilton}) разложения (\ref{eqCh1_sep1_1}) и
+используя ортогональность собственных функций, получим 
+\begin{eqnarray}
+\mathcal{H} = \frac{1}{2} 
+\int_{\nu}\left( \sum_{(n)} \sum_{(m)}\varepsilon_0
+\frac{q_n q_m \omega_n \omega_m}{\varepsilon_0}
+\left( \vec{E_n} \vec{E_m}\right)
+\right) d\nu +
+\nonumber \\
++  \frac{1}{2} 
+\int_{\nu}\left( \sum_{(n)} \sum_{(m)}\mu_0
+\frac{p_n p_m}{\mu_0}
+\left( \vec{H_n} \vec{H_m}\right)
+\right) d\nu =
+\nonumber \\
+= \frac{1}{2}\sum_{(n)}\left(\omega_n^2 q_n^2 + p_n^2\right).
+\end{eqnarray}
+Это выражение соответствует функции Гамильтона для совокупности
+независимых гармонических осцилляторов. 
+
+Для одной моды функция Гамильтона  
+\begin{equation}
+\mathcal{H}_n = \frac{1}{2}\left(\omega_n^2 q_n^2 + p_n^2\right).
+\label{eqCh1_hamilton_one_mode}
+\end{equation}
+тогда
+\begin{equation}
+\mathcal{H} = \sum_{(n)} \mathcal{H}_n
+\label{eqCh1_hamilton_sum_mode}
+\end{equation}
+Уравнения движения получим из функции Гамильтона известным путем:
+\begin{equation}
+\dot{q}_n = \frac{\partial \mathcal{H}_n}{\partial p_n} = p_n,
+\quad
+\dot{p}_n = - \frac{\partial \mathcal{H}_n}{\partial q_n} =
+- \omega_n^2 q_n = \ddot{q}_n.
+\end{equation}
+Полученные уравнения совпадают с уравнениями (\ref{eqCh1_after_sep}).  
+Функция Гамильтона механического осциллятора
+\[
+\mathcal{H} = \frac{1}{2}\left(M \Omega^2 x^2 + \frac{p^2}{M}\right)
+\]
+
+Следовательно, (\ref{eqCh1_hamilton_one_mode}) формально соответствует
+осциллятору с единичной массой и собственной частотой $\omega_n$.
+Гамильтонова запись уравнений 
+электромагнитного поля удобна для процедуры квантования поля. Этот
+подход во многих случаях пригоден и для решения различных классических
+задач. Подробнее с этим можно познакомиться в книге
+\cite{bCh1Quantel_Gin}.  

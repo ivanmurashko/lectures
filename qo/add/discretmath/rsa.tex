@@ -1,0 +1,151 @@
+%% -*- coding:utf-8 -*- 
+\section{Алгоритм RSA}
+\label{AddRSA}
+
+Алгоритм RSA (аббревиатура от фамилий Rivest, Shamir и Adleman) - 
+несимметричный алгоритм шифрования
+\footnote{Несимметричным (с открытым ключом) называется такой алгоритм
+  шифрования, в 
+  котором используются два различных ключа: один для шифрования, а
+  второй для де-шифрования},  
+основанный на сложности разложения числа на простые множители.  
+
+\subsection{Генерация ключей}
+
+Состоит из нескольких шагов
+\begin{itemize}
+\item Выбираются два простых числа $p$ и $q$
+\item Вычисляется произведение выбранных простых чисел $n = p\cdot q$
+\item Вычисляется функция Эйлера 
+\(
+\phi\left(n\right)=\left(p - 1 \right)\left(q - 1 \right)
+\)
+\item Выбирается целое число $e$ такое что 
+\(
+1 < e < \phi\left(n\right)
+\) и $e$ и $\phi\left(n\right)$ взаимно просты,
+т. е. 
+\(
+\mbox{НОД}\left( e, \phi\left(n\right) \right) = 1.
+\)
+\item вычисляем $d \equiv e^{-1} \mod{\phi\left(n\right)}$, т. е.
+$d \cdot e \equiv 1 \mod{\phi\left(n\right)}$.
+\end{itemize}
+
+Открытый ключ состоит из двух чисел: модуля $n$ и открытой экспоненты
+$e$. Именно эти два числа используются для шифрования исходного
+сообщения.
+
+Закрытый ключ состоит тоже из двух чисел: модуля $n$ и закрытой экспоненты
+$d$.
+
+Исходные числа $p$ и $q$ держатся в секрете, потому что с их помощью
+можно вычислить закрытый ключ.
+
+\begin{example}
+\emph{(RSA. Генерация ключей)}
+Выбираем два простых числа  $p = 3$ и $q = 7$. Произведение этих чисел $n = 21$. Функция Эйлера 
+\(
+\phi\left(n\right)=\left(p - 1 \right)\left(q - 1 \right) = 2 \cdot 6 = 12
+\). 
+
+Выбираем число $e$  (открытая экспонента), таким образом, что $1 < e < 12$ и  
+$\mbox{НОД}\left( e, 12 \right) = 1$. Очевидно $e = 5$ удовлетворяет заявленным условиям. 
+
+Вычисляем закрытую экспоненту $d \equiv 5^{-1} \mod{12}$, т. е. $d = 5$. 
+Действительно $5 \cdot 5 = 25 = 2 \cdot 12 + 1$, т. е. $5 \cdot 5 \equiv 1 \mod{12}$.
+
+Т. о. получаем
+\begin{itemize}
+\item Открытый ключ $\left(n=12, e=5\right)$
+\item Закрытый ключ $\left(n=12, d=5\right)$
+\end{itemize}
+\label{exAddRSAKeyGen}
+\end{example}
+
+\subsection{Шифрование}
+
+Допустим надо зашифровать некоторое сообщение $M$. Вначале оно
+переводится в целое число(числа) $m$ такое, что 
+$0 < m < \phi\left(n\right)$. Далее вычисляется за зашифрованный текст
+$c$:
+\begin{equation}
+c \equiv m^e \mod{n}
+\label{eqAddRSACode}
+\end{equation}
+
+\begin{example}
+\emph{(RSA. Шифрование)}
+Допустим у нас есть открытый ключ $\left(n=12, e=5\right)$ (см. прим. \ref{exAddRSAKeyGen}) 
+и мы хотим зашифровать следующее сообщение $m = 1101_2 = 11_{10}$. 
+%(%i1) power_mod(11,5,21);         
+%(%o1)                                  2
+Шифротекст вычисляется по формуле (\ref{eqAddRSACode}) $c \equiv 11^5 \mod{21} = 2$.
+\label{exAddRSACode}
+\end{example}
+
+\subsection{Де-шифрование}
+
+$m$ может быть восстановлено из $c$ по следующей формуле:
+\begin{equation}
+m \equiv c^d \mod{n}.
+\label{eqAddRSADeCode}
+\end{equation}
+Имея $m$ можно восстановить исходное сообщение $M$.
+\begin{example}
+\emph{(RSA. Де-шифрование)}
+Допустим у нас есть закрытый ключ $\left(n=12, d=5\right)$ (см. прим. \ref{exAddRSAKeyGen}) и шифротекст $c = 2$ из примера \ref{exAddRSACode}.
+
+%(%i2) power_mod(2,5,21);
+%(%o2)                                 11
+Исходный текст вычисляется по формуле (\ref{eqAddRSADeCode}) $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
+\label{exAddRSADeCode}
+\end{example}
+
+\subsection{Доказательство}
+Хотим доказать что 
+\[
+\left(m^e\right)^d \equiv m \mod{p \cdot q}
+\]
+для любых положительных числ $m$ когда $p$ и $q$ простые числа, а $e$
+и $d$ удовлетворяют выражению
+\[
+d \cdot e \equiv 1 \mod{\phi\left(p \cdot q\right)},
+\]
+которое мы можем переписать в виде
+\[
+d \cdot e - 1 = h \left(p - 1\right)\left(q - 1\right).
+\]
+
+Таким образом
+\[
+m^{e\cdot d} =m m^{h \left(p - 1\right)\left(q - 1\right)}.
+\]
+Далее возможны два случая: когда $m$ делится на $p$ и когда $m$ и $p$
+взаимно просты.
+
+В первом случае 
+\[
+m^{e\cdot d} \equiv m \equiv 0 \mod{p}
+\]
+Во втором случае используем малую теорему Ферма
+(\ref{addDiscretSmallFerma}):
+\[
+m m^{h \left(p - 1\right)\left(q - 1\right)} 
+= m \left(m^{p - 1}\right)^{h \left(q - 1\right)} \equiv m \cdot 1^{h
+  \left(q - 1\right)} \equiv m \mod{p}.
+\]
+Аналогично имеем либо
+\[
+m^{e\cdot d} \equiv m \equiv 0 \mod{q}
+\]
+либо в силу малой теоремы Ферма
+\[
+m m^{h \left(p - 1\right)\left(q - 1\right)} 
+= m \left(m^{q - 1}\right)^{h \left(p - 1\right)} \equiv m \cdot 1^{h
+  \left(p - 1\right)} \equiv m \mod{q}
+\]
+откуда
+\[
+m^{e\cdot d} \equiv m \mod{p \cdot q}
+\]

@@ -1,0 +1,41 @@
+%% -*- coding:utf-8 -*- 
+\section{Квантовые логические элементы}
+Каким образом может быть сконструирован элемент осуществляющий
+преобразование $\hat{U}_f$ (\ref{eqQuantCompQuantComp}).
+
+Набор квантовых вентилей называют универсальным, если любое унитарное
+преобразование можно аппроксимировать с заданной точностью конечной
+последовательностью вентилей из этого набора.
+
+\subsection{Преобразование Адамара}
+
+Одним из базовых квантовых логических элементов является
+преобразование Адамара (см. рис. \ref{figQuantCompHadamar1}), которое
+определяется следующими соотношениями
+\begin{eqnarray}
+\hat{H} \left|0\right> = \left|+\right> =  
+\frac{\left|0\right> + \left|1\right> }{\sqrt{2}},
+\nonumber \\
+\hat{H} \left|1\right> = \left|-\right> = 
+\frac{\left|0\right> - \left|1\right> }{\sqrt{2}},
+\nonumber
+\end{eqnarray}
+
+\input ./part4/quantcomp/fighadamar1.tex
+
+Это преобразование используется для получения суперпозиции состояний
+содержащие все возможные значения аргумента вычисляемой функции
+(см. рис. \ref{figQuantCompHadamar2}). 
+
+\input ./part4/quantcomp/fighadamar2.tex
+
+\subsection{Управляющие элементы}
+
+\input ./part4/quantcomp/figcnot.tex
+
+\input ./part4/quantcomp/figcelem.tex
+
+\input ./part4/quantcomp/figphase.tex
+ 
+
+

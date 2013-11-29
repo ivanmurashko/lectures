@@ -1,0 +1,1101 @@
+\section{Генерация второй гармоники. Метод малого параметра}
+Уравнение (\ref{eqQuadMain}) - нелинейное дифференциальное уравнение
+второго порядка в частных производных, которое мы будем решать на
+первом этапе по методу теории возмущений.
+
+Отличие полного поля \(\vec{E}\) от падающего \(\vec{E}^{(inc)}\)
+связано с наличием \(\vec{P}^{(NL)}\). Параметром малости будет у нас
+следующая величина \(\mu \sim \frac{P^{(NL)}}{P^{(L)}} \). Можно
+показать что \(\mu \ll 1\). Действительно, справедливы следующие
+соотношения и оценки:
+\[
+P^{(NL)} \sim \hat{\chi}^{(2)} E^2, \quad \hat{\chi}^{(2)} \sim \frac{1}{E_0},
+\]
+где \(E_0\) - характерное внутриатомное поле.
+\[
+P^{(L)} \sim \hat{\chi}^{(1)} E, \quad \hat{\chi}^{(1)} \sim 1.
+\]
+Тогда имеем
+\[
+ \frac{P^{(NL)}}{P^{(L)}} \sim  \frac{E}{E_0} \ll 1.
+\]
+
+Итак ищем решение для нелинейного волнового уравнения
+(\ref{eqQuadMain})  в области \(z > 0\) в следующем виде:
+\begin{equation}
+\vec{E} = \vec{E_1} \mu^0 + \vec{E_2} \mu^1 + \vec{E_3} \mu^2 + \dots
+=  \vec{E_1} + \vec{E_2} \mu + \vec{E_3} \mu^2 + \dots
+\label{eqSolveViewAppr}
+\end{equation}
+
+Подставим решение вида (\ref{eqSolveViewAppr}) в (\ref{eqQuadMain})  и
+сгрупируем члены одинаковой степени по малому параметру \(\mu\).
+
+\subsection{Нулевой порядок теории возмущений}
+Группировка членов нулевого порядка (т. е. при \(\mu^0\)) по малому
+параметру \(\mu\) дает обычное волновое уравнение линейной оптики для
+поля накачки \(\vec{E_1}\left(\vec{r}, t \right)\):
+\[
+\Delta \vec{E_1} - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\left(
+\vec{E_1} + 4 \pi \vec{P_1}^{(L)}\right) = 0,
+\]
+где
+\[
+\vec{P_1}^{(L)}\left(\omega\right) = \hat{\chi}^{(1)}
+\left(\omega\right) \vec{E_1}\left(\omega\right),
+\]
+и окончательно
+\[
+\Delta \vec{E_1} -
+\frac{\varepsilon\left(\omega\right)}{c^2}\frac{\partial^2
+  \vec{E_1}}{\partial t^2} = 0.
+\]
+
+Сшивание решений этого волнового уравнения для двух полупространств
+\(z > 0\) и  \( z < 0\) дает нам результат известный как формулы
+Френеля. Учет формул Форенеля, т. е. решения линейной оптики является
+необходимым этапом решения задачи в целом.
+
+\subsection{Первый порядок теории возмущений}
+Группировка членов первого порядка (т. е. при \(\mu\)) по малому
+параметру \(\mu\) дает неоднородное волновое уравнение  для
+поля \(\vec{E_2}\left(\vec{r}, t \right)\): 
+\[
+\Delta \vec{E_2} - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\left(
+\vec{E_2} + 4 \pi \vec{P_2}^{(L)}\right) = 
+\frac{4\pi}{c^2}\frac{\partial^2 \vec{P_2}^{(NL)}}{\partial t^2},
+\]
+где
+\(
+\vec{P_2}^{(L)}\left(2\omega\right) = \hat{\chi}^{(1)}
+\left(2\omega\right) \vec{E_2}\left(2\omega\right) -
+\)
+линейная поляризация на частоте второй гармоники (ВГ), а нелинейная
+поляризация 
+\(
+\vec{P_2}^{(NL)}\left(2\omega\right) = \hat{\chi}^{(2)}
+\left(2\omega\right) : \vec{E_1}\left(\omega\right)
+\vec{E_1}\left(\omega\right) 
+\)
+определяется полем \(\vec{E_1}\left(\vec{r}, t \right)\), полученным в
+нулевом приближении. Окончательно в области \( z > 0\)  имеем:
+\begin{equation}
+\Delta \vec{E_2}\left(2\omega\right) -
+\frac{\varepsilon\left(2\omega\right)}{c^2}\frac{\partial^2
+  \vec{E_2}\left(2\omega\right)}{\partial t^2} = 
+\frac{4\pi}{c^2}\frac{\partial^2
+  \vec{P_2}^{(NL)}\left(2\omega\right)}{\partial t^2}. 
+\label{eqSecondPert}
+\end{equation}
+
+Правая часть уравнения (\ref{eqSecondPert}) содержит нелинейные
+источники однозначно заданные полем накачки внутри кристалла. Как
+известно из линейной оптике это преломленное поле. Таким образом
+нелинейная поляризация однозначно определяется прошедшим (transmit)
+полем 
+\[
+\vec{E_1}\left(\omega\right) \equiv
+\vec{E_1}^{(tr)}\left(\omega\right) = 
+\vec{e_1}^{(tr)} A_1^{(tr)} \left(\omega\right) \exp \left\{-i \left( \omega t -
+    \vec{k}_1^{(tr)} \vec{r} \right)\right\}
+.
+\] 
+
+Таким образом для нелинейной поляризации в первом порядке теории
+возмущений можно записать -
+\begin{eqnarray}
+\vec{P_2}^{(NL)}\left(2\omega\right) 
+= \nonumber \\
+= 
+\hat{\chi}^{(2)}\left(2\omega = \omega + \omega\right) : 
+\vec{e_1}^{(tr)} \vec{e_1}^{(tr)} \left( A_1^{(tr)}\right)^2
+\exp \left\{-i \left( 2 \omega t -  2 \vec{k}_1^{(tr)} \vec{r}
+  \right)\right\} = \nonumber \\
+ = \vec{p} P_0 
+\exp \left\{-i \left( 2 \omega t -  \vec{k}_p \vec{r}
+  \right)\right\}.
+\label{eqPNL}
+\end{eqnarray}
+
+В (\ref{eqPNL}) модуль волнового вектора нелинейной поляризации
+определяется следующим соотношением:
+\[
+\left| \vec{k}_p\right| = \left|2 \vec{k}_1^{(tr)}\right| = \frac{2
+  \varepsilon^{1/2}\left(\omega\right) \omega}{c} = \frac{2 \omega
+  n\left(\omega\right)}{c}, 
+\]
+а орт нелинейной полризации \(\vec{p}\) сверткой:
+\[
+\vec{p} = \hat{\chi}^{(2)}\left(2\omega = \omega + \omega\right) : 
+\vec{e_1}^{(tr)} \vec{e_1}^{(tr)}.
+\]
+
+Следует отметить что в методе теории возмущений решение для нулевого
+приближения \(\vec{E}_1\) задано и не менятся при взаимодействии с ЭМ
+полями более высоких порядков: \(\vec{E}_2, \dots\). Таким образом
+можно выделить основной недостаток данного метода решения задачи о
+генерации второй гармоники - в нем не выполняется закон сохранения
+энергии. 
+
+Будем искать решение уравнения  (\ref{eqPNL})  в следующем виде:
+\begin{equation}
+\vec{E}_2\left(\omega\right) = \left\{ \vec{E}_2^{(free)} +
+  \vec{E}_2^{(ind)} \right\} + \vec{E}_2^{(ref)}.
+\label{eqSolveView2}
+\end{equation}
+Слагаемые в фигурных скобках - представляют собой решение в
+полуплоскости \( z > 0\)  т. е. в нелинейном кристалле. \(
+\vec{E}_2^{(free)}\) - решение однородного уравнения, т. е. уравнения с
+нулевой нелинейной поляризацией. \(\vec{E}_2^{(ind)}\) - частное решение
+уравнения (\ref{eqPNL})  в полуплоскости \( z > 0\) (ind -
+induced). Вместе с тем наше решение должно быть непрерывным что
+приводит к появлению третьего слагаемого \(\vec{E}_2^{(ref)}\). Это
+слагаемое представляет собой отраженное (ref - reflected) ЭМ поле в
+полуплоскости \( z < 0\). Это поле возникает, с точни зрения математики, ввиду необходимости
+удовлетворить граничные условия в  \( z = 0\) (наше решение должно
+быть непрерывным, в том числе при \( z = 0\)).
+
+Прежде всего определимся с решением однородного уравнения, которое
+можно искать в виде свободной волны  - 
+\begin{equation}
+\vec{E}_2^{(free)} = \vec{e}_2^{(free)} A_2^{(free)} 
+\exp{\left\{-i \left( 2 \omega t - \vec{k}_2^{(free)} \vec{r}
+    \right)\right\}}. 
+\label{eqSolveViewFree} 
+\end{equation}
+В данном решении требуют определения орт поляризации
+\(\vec{e}_2^{(free)}\), амплитуда \(A_2^{(free)}\) и волновой вектор
+\(\vec{k}_2^{(free)}\). При этом для волнового вектора необходимо
+определить только его направление, т. к. его модуль определяется
+следующим дисперсионным соотношением: 
+\begin{equation}
+\left|\vec{k}_2^{(free)} \right| = \frac{\varepsilon^{1/2} \left(
+  2 \omega \right)}{c} \left(
+  2 \omega \right).
+\label{eqDisperFree} 
+\end{equation}
+На то она и ``свободная волна'' - закон дисперсии для нее однозначно
+определяется частотой (в нашем случае - \(2 \omega\)). Выражение
+(\ref{eqDisperFree}) можно также, и вполне естественно, получить если
+подставить (\ref{eqSolveViewFree}) в однородное уравнение для
+(\ref{eqSecondPert}): 
+\[
+\Delta \vec{E_2}\left(2\omega\right) -
+\frac{\varepsilon\left(2\omega\right)}{c^2}\frac{\partial^2
+  \vec{E_2}\left(2\omega\right)}{\partial t^2} = 0. 
+\]
+
+Намного просче обстоят дела с частным решением
+(\ref{eqSecondPert}). Действительно предположим следующий вид решения
+для \(\vec{E}_2^{(ind)}\):
+\begin{equation}
+\vec{E}_2^{(ind)} = \vec{e}_2^{(ind)} A_2^{(ind)} 
+\exp{\left\{-i \left( 2 \omega t - \vec{k}_2^{(ind)} \vec{r}
+    \right)\right\}}. 
+\label{eqSolveViewInd} 
+\end{equation}
+Подставляя (\ref{eqSolveViewInd}) в (\ref{eqSecondPert}), получим
+прежде всего для орта поляризации
+\[
+\vec{e}_2^{(ind)} = \vec{p} =  \hat{\chi}^{(2)}\left(2\omega = \omega + \omega\right) : 
+\vec{e_1}^{(tr)} \vec{e_1}^{(tr)}.
+\]
+
+Волновой вектор индуцированной волны также совпадает с волновым
+ветором нелинейной поляризации
+\begin{equation}
+\vec{k}_2^{(ind)} = 2 \vec{k}_1^{(tr)}.
+\label{eqKind}
+\end{equation}
+
+
+%Для того чтобы найти амплитуду будем пренебрегать различными
+%геометрическими факторами и рассмотрим случай нормального падения
+Для амплитуды \(A_2^{(ind)}\) после подстановки имеем:
+\[
+A_2^{(ind)} \left\{ - k_p^2 + \frac{\varepsilon\left( 2 \omega
+    \right)}{c^2} \left( 2 \omega \right)^2 \right\} = 
+- \frac{4 \pi}{c^2}\left( 2 \omega \right)^2 P_0^{(NL)},
+\]
+где 
+\[
+k_p^2 = \left| \vec{k}_p\right|^2 =
+\frac{\varepsilon\left(\omega\right) \left(2 \omega\right)^2}{c^2}. 
+\]
+Таким образом
+\begin{equation}
+A_2^{(ind)} = \frac{4 \pi P_0^{(NL)}}{\varepsilon\left(\omega
+    \right) - \varepsilon\left( 2 \omega \right)}.
+\label{eqA2ind}
+\end{equation}
+
+Таким образом для индуцированной волны (частного решения) мы знаем
+все: волновой вектор, амплитуду и поляризацию.
+
+Для нахождения остающихся неизвестными параметров нашего решения
+предположим что рассматриваемая среда изотропна, таким образом
+поляризация всех ЭМ полей в решении (\ref{eqSolveView2}) одинакова:
+\begin{equation}
+\vec{p} \uparrow \uparrow \vec{e}_2^{(ind)}
+\uparrow \uparrow \vec{e}_2^{(free)}
+\uparrow \uparrow \vec{e}_2^{(ref)}.
+\label{eqE2pol}
+\end{equation}
+
+Для нахождения направлений волновых векторов воспользуемся граничными
+условиями (ГУ): 
+\begin{eqnarray}
+\left. \vec{E}_2^{(free)} + \vec{E}_2^{(ind)} \right|_{z=+0}
+= \left. \vec{E}_2^{(ref)} \right|_{z=-0},
+\nonumber \\
+\left. \vec{H}_2^{(free)} + \vec{H}_2^{(ind)} \right|_{z=+0}
+= \left. \vec{H}_2^{(ref)} \right|_{z=-0}.
+\label{eqBoundaryCond}
+\end{eqnarray}
+
+Рассмотрим прежде всего первое уравнение системы
+(\ref{eqBoundaryCond}) которое с учетом фазовых множителей
+записывается как:
+\begin{eqnarray}
+\left(\left. A_2^{(free)} \exp{\left\{-i \left( 2 \omega t - k_{2_x}^{(free)} x
+    \right)\right\}}+ A_2^{(ind)} \exp{\left\{-i \left( 2 \omega t - k_{2_x}^{(ind)} x
+    \right)\right\}} \right)\right|_{z=+0} = 
+\nonumber \\
+= \left.A_2^{(ref)} \exp{\left\{-i \left( 2 \omega t - k_{2_x}^{(ref)} x
+    \right)\right\}}\right|_{z=-0}.
+\label{eqE2_bc}
+\end{eqnarray}
+При этом в (\ref{eqE2_bc}) мы пренебрегли поляризацией в силу
+(\ref{eqE2pol}).
+
+Наличие фазовых множителей означает что ГУ должны выполняться в любой
+точке границы раздела в любой момент времен. В результате из
+(\ref{eqE2_bc}) с учетом (\ref{eqKind}) получаем:
+\[
+k_{p_x} = k_{2_x}^{(ind)} = k_{2_x}^{(free)} = k_{2_x}^{(ref)} = 
+2 k_{1_x}^{(tr)} = 2 k_{1_x}^{(ref)} = 2 k_{1_x}^{(inc)}.
+\]
+
+\subsubsection{Направление распространения свободной волны ВГ}
+Для тангециальной компоненты волнового вектора свободной волны имеем - 
+\[
+k_{2_x}^{(free)} = 2 k_{1_x}^{(tr)},
+\]
+откуда следует что:
+\[
+k_{2}^{(free)} sin \theta_2^{(free)} = 2 k_{1}^{(tr)} sin \theta_1^{(tr)}
+\]
+или
+\[
+\frac{2 \omega}{c}\sqrt{\varepsilon\left(2 \omega\right)} sin \theta_2^{(free)}
+= 
+\frac{2 \omega}{c}\sqrt{\varepsilon\left(\omega\right)} sin \theta_1^{(tr)}.
+\]
+Таким образом
+\[
+\frac{sin \theta_2^{(free)}}{sin \theta_1^{(tr)}} =
+\sqrt{\frac{\varepsilon\left(\omega\right)}{\varepsilon\left(2
+      \omega\right)}} \equiv 
+\frac{n\left( \omega\right)}{n\left(2 \omega\right)}.
+\]
+
+В среде с нормальной дисперсией 
+\[
+\varepsilon\left(2 \omega\right) > \varepsilon\left(\omega\right).
+\]
+Таким образом в такой среде ``преломленная'' волна ВГ идет круче к
+нормали чем преломленная волна накачки:
+\[
+\theta_2^{(free)} < \theta_1^{(tr)}.
+\]
+
+\subsubsection{Направление распространения отраженной волны ВГ}
+Для тангециальной компоненты волнового вектора отраженной волны имеем - 
+\[
+k_{2_x}^{(ref)} = 2 k_{1_x}^{(ref)},
+\]
+откуда следует что:
+\[
+k_{2}^{(ref)} sin \theta_2^{(ref)} = 2 k_{1}^{(ref)} sin \theta_1^{(ref)}
+\]
+или
+\[
+\frac{2 \omega}{c}\sqrt{\varepsilon\left(2 \omega\right)} sin \theta_2^{(ref)}
+= 
+\frac{2 \omega}{c}\sqrt{\varepsilon\left(\omega\right)} sin \theta_1^{(ref)}.
+\]
+Таким образом
+\[
+\frac{sin \theta_2^{(ref)}}{sin \theta_1^{(ref)}} =
+\sqrt{\frac{\varepsilon\left(\omega\right)}{\varepsilon\left(2
+      \omega\right)}} \equiv 
+\frac{n\left( \omega\right)}{n\left(2 \omega\right)}.
+\]
+
+При отсутствии дисперсии, например в вакууме, 
+\[
+\varepsilon\left(2 \omega\right) = \varepsilon\left(\omega\right)
+\]
+и тогда отраженная волна второй гармоники будет коллинеарна отраженной
+волне первой гармоники:
+\[
+\theta_2^{(ref)} = \theta_1^{(ref)}.
+\]
+Если же линейная среда обладает нормальной дисперсией - тогда
+``отраженная'' волна ВГ идет круче к нормали чем отраженная волна накачки:
+\[
+\theta_2^{(ref)} < \theta_1^{(ref)}.
+\]
+
+\subsubsection{Амплитуды волн участвующих во взаимодействии}
+При получении выражений для амплитуд мы будем рассматривать случай
+нормального падения, что упрощает геометрические факторы. Таким
+образом будем предполагать что волновой вектор направле по оси \(z\). 
+
+В качестве заготовки получим связь между \(\vec{E}\) и \(\vec{H}\) в
+рассматриваемом нами случае нормального падения. Для плоской волны
+имеем:
+\[
+\left[ \vec{k}\vec{E}\right] = \frac{\omega}{c}\vec{H}.
+\]
+Для отраженной волны в силу того что волновой вектор \(\vec{k}\)
+направлен противоположно оси \(OZ\) это соотношение трансформируется в
+\[
+\frac{\omega}{c} H_x = -k_z E_y. 
+\]
+
+Поскольку \(k_z = \left| \vec{k}\right|\) имеем
+\begin{equation}
+H_x = - \sqrt{\varepsilon} E_y
+\label{eqHx}
+\end{equation}
+
+Рассмотрим теперь граничные условия для амплитуд игнорируя
+экспоненциальный множитель который теперь не важен:
+\[
+\left. E_{2y} \right |_{z=+0} = \left. E_{2y} \right |_{z=-0},
+\]
+\[
+\left. H_{2x} \right |_{z=+0} = \left. H_{2x} \right |_{z=-0}.
+\]
+Подставим теперь в эти соотношения решения ВГ в верхнем и нижнем
+полупространствах:
+Из первого соотношения мы получим следующее - 
+\begin{equation}
+A_2^{(ref)} = A_2^{(free)} + A_2^{(ind)}.
+\label{eq2GAmpl}
+\end{equation}
+Из второго граничного условия с учетом связи (\ref{eqHx}):
+\[
+\sqrt{\varepsilon_1\left(2 \omega\right)} A_2^{(ref)} = 
+- \sqrt{\varepsilon_2\left(2 \omega\right)} A_2^{(free)} -
+\sqrt{\varepsilon_2\left(\omega\right)}  A_2^{(ind)}.
+\]
+
+Исключая \(A_2^{(free)}\) из этих двух уравнений получим
+\[
+\left( \sqrt{\varepsilon_2\left(2 \omega\right)} +
+\sqrt{\varepsilon_1\left(2 \omega\right)}
+\right)A_2^{(ref)} = 
+\left( \sqrt{\varepsilon_2\left(2 \omega\right)} -
+\sqrt{\varepsilon_2\left( \omega\right)}
+\right)A_2^{(ind)},
+\]
+откуда с учетом (\ref{eqA2ind})  окончательно имеем: 
+\begin{equation}
+A_2^{(ref)} = \frac{-4 \pi P^{(NL)}}
+{
+\left( \sqrt{\varepsilon_2\left( \omega\right)} +
+\sqrt{\varepsilon_2\left(2 \omega\right)}
+\right)
+\left( \sqrt{\varepsilon_2\left(2 \omega\right)} +
+\sqrt{\varepsilon_1\left(2 \omega\right)}
+\right).
+}
+\label{eqA2ref}
+\end{equation}
+Знак минус в (\ref{eqA2ref})  означает, что фаза отраженной ВГ
+противоположна фазе нелинейной поляризации. 
+
+Зная амплитуды отраженной \(A_2^{(ref)}\) и индуцированных 
+\(A_2^{(ind)}\) компонет ВГ из соотношения (\ref{eq2GAmpl}) можно
+определить амплитуду свободной волны ВГ в среде \(A_2^{(free)}\):
+\begin{eqnarray}
+A_2^{(free)} = 
+\frac{4 \pi P^{(NL)}}{\varepsilon\left(2 \omega
+    \right) - \varepsilon\left( \omega \right)} -
+\nonumber \\
+- \frac{4 \pi P^{(NL)}} 
+{
+\left( \sqrt{\varepsilon_2\left( \omega\right)} +
+\sqrt{\varepsilon_2\left(2 \omega\right)}
+\right)
+\left( \sqrt{\varepsilon_2\left(2 \omega\right)} +
+\sqrt{\varepsilon_1\left(2 \omega\right)}
+\right).
+}
+\label{eqA2free}
+\end{eqnarray}
+Таким образом мы получили все параметры всех трех волн составляющих
+полное решение для нелинейного волнового уравнения  (\ref{eqQuadMain})
+при его решении методом теории возмущений.
+ 
+\subsection{Полное прошедшее поле ВГ}
+Рассмотрим полное прошедщее поле ВГ, т. е. ту часть решения
+(\ref{eqSolveView2}) которая распространяется в нелинейном кристалле
+\(\vec{E^{(trnsmitted)}}\left(2 \omega\right)\):
+\[
+\vec{E^{(tr)}}\left(2 \omega\right) = \vec{E^{(free)}}\left(2
+  \omega\right) + \vec{E^{(ind)}}\left(2 \omega\right)
+\]
+или же расписывая поля
+\[
+\vec{E^{(tr)}}\left(2 \omega\right) = \vec{p} \left(
+A_2^{(free)} exp\left\{ i \left(2 \omega t -
+      k_2^{(tr)}\left(2\omega\right) z \right)\right\} +
+A_2^{(ind)} exp\left\{ i \left(2 \omega t -
+      2 k_1^{(tr)}\left(\omega\right) z \right)\right\}
+\right).
+\]
+Таким образом суммарное поле прошедшей волны ВГ в нелиненом кристалле
+- сумма двух полей с разными амплитудами и фазовыми
+множителями и может рассматриваться как некоторая интерференционная
+картина: некоторое поле с медленно изменяющейся амплитудой:
+\[
+\vec{E^{(tr)}}\left(2 \omega\right) = \vec{p}
+A_2^{(tr)}\left(z\right)  exp\left\{ i \left(2 \omega t -
+      k_2^{(tr)}\left(2\omega\right) z \right)\right\},
+\]
+где зависящая от координаты амплитуда задается следующим соотношением: 
+\begin{eqnarray}
+A_2^{(tr)}\left(z\right) = A_2^{(ind)}exp\left\{ i \left(
+      k_2^{(tr)}\left(2\omega\right) - 2k_1^{(tr)}\left(\omega\right)
+    \right)z\right\} + A_2^{(free)} =
+\nonumber \\
+= A_2^{(ref)} + \frac{4 \pi P^{(NL)}
+\left[ exp\left\{ i \left(
+      k_2^{(tr)}\left(2\omega\right) - 2k_1^{(tr)}\left(\omega\right)
+    \right)z\right\} - 1 \right]
+}
+{\varepsilon\left( \omega
+    \right) - \varepsilon\left( 2\omega \right)}.
+\label{eqA2tr}
+\end{eqnarray}
+Введем понятие фазовой растройки
+\[
+\left|\vec{\Delta}\right| = \left|\vec{k_2} - 2 \vec{k_1}\right| =
+\Delta = \frac{2 \omega}{c}\left(n\left(2\omega\right) -n\left(\omega\right)\right) 
+\]
+\subsubsection{Случай выполнения фазового синхронизма}
+В случае 
+\[
+\Delta \rightarrow 0
+\] 
+справедливо
+\[
+exp\left(i \Delta z\right) - 1 \rightarrow i \Delta z.
+\] 
+Тогда для амплитуды суммарного поля прошедшей ВГ имеем:
+\[
+A_2^{(tr)} = A_2^{(ref)} - \frac{i 8 \pi \omega P^{(NL)} z}{c \left( 
+\sqrt{\varepsilon\left( \omega\right)} +
+\sqrt{\varepsilon\left(2 \omega\right)
+}\right)}.
+\]
+Таким образом интенсивность прошедшего поля можно записать в этом
+случае как
+\[
+I_2^{(tr)} \sim I_2^{(ref)} + B z^2
+\]
+где \(B\) некоторая константа. Т. е. эта интенсивность растет с
+растоянием. Т. е. чем больше размеры кристалла - тем эффективнее
+генерация ВГ.
+\subsubsection{Случай невыполнения фазового синхронизма}
+Во втором случае положим 
+\[
+\Delta \ne 0, A_2^{(ref)} = 0.
+\]
+В этом случае
+\begin{equation}
+I_2^{(tr)} = \frac{16 \pi^2
+  \left[P^{(NL)}\right]^2}{\left|\varepsilon\left(\omega\right) -
+  \varepsilon\left(2\omega\right)\right|} 4 sin^2\left(\frac{\Delta \cdot
+    z}{2}\right)
+\label{eqI2trDne0}
+\end{equation}
+Максимум интенсивности задается соотношением
+\[
+I_{2_{max}}^{(tr)} = \frac{64 \pi^2 \left[P^{(NL)}\right]^2}{\left|\varepsilon\left(\omega\right) -
+  \varepsilon\left(2\omega\right)\right|}
+\]
+
+Для осцилирующей зависимости(\ref{eqI2trDne0}) некоторым характерным
+пространственным маштабом является \(l_{coh}\) - когерентная длина
+\[
+l_{coh} = \frac{\pi}{\Delta} = \frac{\pi}{k_2 - 2 k_1}, 
+\] 
+тогда если ввести длину волны в вакууме \(\lambda_0\), с учетом
+\[
+k = \frac{2 \pi n}{\lambda_0}
+\]
+имеем
+\[
+l_{coh} = \frac{\lambda_0}{4\left[n\left(2\omega\right) - n\left(\omega\right)\right]}.
+\]
+Для рубинового лазера \(\lambda_0 = 700 \mbox{нм}\) в кварце для
+кторого \(n_2 - n_1 \sim 0.01\) - \(l_{coh} \sim 17 \mbox{мкм}\).
+
+
+\section{Генерация второй гармоники. Метод медленно меняющихся
+  амплитуд. Генерация субгармоник}
+
+При решении нелинейного волнового уравнения методом малого параметра
+можно заметить следующую особенность решения  - медленно меняющаяся
+амплитуда и быстро изменяющийся экспоненциальный множитель. Это
+позволяет развить новый подход к решению данного уравнения, который
+позволит нам избавиться от производных второго порядка и перейти к
+более простой системе в которую входят только уравнения первого
+порядка в частных производных.
+
+Одномерное волновое уравнение с которым мы будем иметь дело имеет
+следующий вид:
+\[
+\frac{\partial^2 \vec{E}}{\partial z^2} - \frac{1}{c^2}
+\frac{\partial^2 \vec{E}}{\partial t^2} - \frac{4 \pi}{c^2}
+\frac{\partial^2 \vec{P}}{\partial t^2} = 0.
+\]
+Таким образом мы взяли уравнение (\ref{eqQuadMain}) в котором оставили
+только одну продольную координату. 
+
+Расмотрим частный случай когда полное поле является суммой двух
+взаимодействующих плоских монохроматических волн (в общем случае таких
+волн должно быть три) волны накачки и волны ВГ:
+\begin{eqnarray}
+\vec{E} = \vec{E_1} \left(\omega\right) + \vec{E_2}\left(2
+  \omega\right) = 
+\nonumber \\
+= \vec{p_1} A_1\left( \mu z\right) exp \left\{ i \left(\omega t - k_1
+  z\right)\right\} +
+\vec{p_2} A_2\left( \mu z\right) exp \left\{ i \left(2 \omega t - k_2
+  z\right)\right\}. 
+\label{eqTGMMSolution}
+\end{eqnarray}
+
+Амплитуды поля \(A_1\left( \mu z\right)\) и \(A_1\left( \mu z\right)\)
+в (\ref{eqTGMMSolution}) имеют маштаб пространственных
+изменений порядка \(l \gg \lambda \).  Под поляризацией в волновом
+уравнении подразумевается полная поляризация
+\[
+\vec{P} = \vec{P}^{(L)} + \vec{P}^{(NL)}
+\]
+где
+\[
+\vec{P}^{(NL)} = \vec{P}^{(NL)}\left(\omega\right) + 
+\vec{P}^{(NL)}\left(2 \omega\right).
+\]
+
+Тогда система связанных уравнений для компонент полного поля имеет
+следующий вид:
+\begin{eqnarray}
+\frac{\partial^2 \vec{E_1}}{\partial z^2} +
+\frac{\varepsilon\left(\omega\right) \omega^2}{c^2}\vec{E_1}
++ \frac{4 \pi \left(\omega\right)^2}{c^2}
+\vec{P}^{(NL)}\left(\omega\right) = 0,
+\nonumber \\
+\frac{\partial^2 \vec{E_2}}{\partial z^2} +
+\frac{\varepsilon\left(2\omega\right) \left(2\omega\right)^2}{c^2}\vec{E_2}
++ \frac{4 \pi \left(2 \omega\right)^2}{c^2}
+\vec{P}^{(NL)}\left(2 \omega\right) = 0. 
+\label{eqTGMMSystem}
+\end{eqnarray}
+
+Ограничемся квадратичной восприимчивостью и для простоты перейдем к
+скалярному виду полей, тогда для нелинейной поляризации от полного
+поля имеем:
+\[
+P^{(NL)} = \hat{\chi}^{(2)}E^2 = \hat{\chi}^{(2)}\left\{ 
+E_1 + E_1^{*} + E_2 + E_2^{*}\right\}^2.
+\]
+Это выражение имеет много слагаемых, которые дадут различные
+комбинации частот для нелинейного члена, однако для нас актуальны
+следующие члены нелинейной поляризации:
+\begin{eqnarray}
+P^{(NL)}\left(2\omega\right) = \hat{\chi}^{(2)}\left(2\omega = \omega
++ \omega\right)E_1^2 + c.c.,
+\nonumber \\
+P^{(NL)}\left(\omega\right) = \hat{\chi}^{(2)}\left(\omega = 2\omega
+- \omega\right)E_2 E_1^{*} + c.c.
+\nonumber
+\end{eqnarray}
+
+% В msu  другие уравнения
+Теперь система (\ref{eqTGMMSystem}) для компонент поля имеет вид:
+\begin{eqnarray}
+\frac{\partial^2 E_1}{\partial z^2} +
+k_1^2\vec{E_1}
++ \frac{4 \pi \left(\omega\right)^2}{c^2}
+\hat{\chi}^{(2)}\left(\omega\right)E_2 E_1^{*} = 0,
+\nonumber \\
+\frac{\partial^2 E_2}{\partial z^2} +
+k_2^2\vec{E_2}
++ \frac{16 \pi \left(\omega\right)^2}{c^2}
+\hat{\chi}^{(2)}\left(2\omega\right)E_1^2 = 0. 
+\label{eqTGMMSystem2}
+\end{eqnarray}
+При этом учитывалось что
+\[
+k = \frac{\sqrt{\varepsilon\left(\omega\right)}\omega}{c}.
+\]
+
+Будем искать решения в виде:
+\begin{eqnarray}
+E_1\left(z, t\right) = A_1\left(\mu z\right) exp \left\{ i
+  \left(\omega t - k_1 z\right)\right\},
+\nonumber \\
+E_2\left(z, t\right) = A_2\left(\mu z\right) exp \left\{ i
+  \left(2 \omega t - k_2 z\right)\right\}.
+\nonumber
+\end{eqnarray}
+Подставим данный вид решения в систему (\ref{eqTGMMSystem2}) и
+воспользуемся следующими заготовками
+\begin{eqnarray}
+\frac{\partial E_{1,2}}{\partial z} = \mu \frac{\partial A_{1,2}}{\partial z} exp \left\{ i
+  \left(\omega t - k_{1,2} z\right)\right\} - i k_{1,2} E_{1,2},
+\nonumber \\
+\frac{\partial^2 E_{1,2}}{\partial z^2} = \mu^2 \frac{\partial^2 A_{1,2}}{\partial z^2} exp \left\{ i
+  \left(\omega t - k_{1,2} z\right)\right\} - 
+\nonumber \\ -
+i k_{1,2} \mu
+  \frac{\partial A_{1,2}}{\partial z} 
+  exp \left\{ i\left(\omega t - k_{1,2} z\right)\right\} - 
+\nonumber \\
+- i k_{1,2} 
+\left[ \mu \frac{\partial A_{1,2}}{\partial z} exp \left\{ i
+  \left(\omega t - k_{1,2} z\right)\right\} - i k_{1,2} E_{1,2}\right].
+\nonumber
+\end{eqnarray}
+
+После подстановки подобных выражений в  (\ref{eqTGMMSystem2}) и
+сгруппировав члены при разных степенях  \( \mu \) мы получим, что
+члены с \(\mu^0\) занулятся. Члены с  \(\mu^2\)  мы отбрасываем как
+малые - в результате получаем:
+\begin{eqnarray}
+\frac{d A_1}{d z} + \frac{i 2 \pi \omega^2
+  \hat{\chi}^{(2)}\left(\omega\right)}{c^2 k_1} A_2 A_1 e^{-i \Delta
+  z} = 0,
+\nonumber \\
+\frac{d A_2}{d z} + \frac{i 8 \pi \omega^2
+  \hat{\chi}^{(2)}\left(2 \omega\right)}{c^2 k_2} A_1^2 e^{i \Delta
+  z} = 0,
+\label{eqTGMMSystem3}
+\end{eqnarray}
+где как и раньше
+\[
+\Delta = 2 k_1 - k_2.
+\]
+
+Для нас важнейшим следствием проведенных упрошений является отсутствие
+вторых производных - это прямое следствие пренебрежения членами
+порядка \(\mu^2\).
+
+Амплитуды взаимодействующих волн - комплексные величины которые могут
+быть записаны в следующем виде
+\[
+A_{1,2} = A_{10,20} e^{i \phi_{1,2}},
+\]
+где \(A_{10}, A_{20}\) -  действительные амплитуды, а 
+\(\phi_1, \phi_2\) - фазы. 
+
+Система уравнений (\ref{eqTGMMSystem3}), будучи записана для
+действительных амплитуд приобретает следующий вид (уравнения Хохлова):
+\begin{eqnarray}
+\frac{d A_{10}}{d z} + \sigma_1 A_{20} A_{10} sin \Phi = 0,
+\nonumber \\
+\frac{d A_{20}}{d z} - \sigma_2 A_{10}^2 sin \Phi = 0,
+\nonumber \\
+\frac{d \Phi}{d z} - \Delta + \left(2 \sigma_1 A_{20} -
+  \sigma_2\frac{A_{10}^2}{A_{20}}\right) cos \Phi = 0,
+\label{eqTGHohlov}
+\end{eqnarray}
+где
+\begin{eqnarray}
+\sigma_1 = \frac{i 2 \pi \omega^2
+  \hat{\chi}^{(2)}\left(\omega\right)}{c^2 k_1},
+\nonumber \\
+\sigma_2 = \frac{i 8 \pi \omega^2
+  \hat{\chi}^{(2)}\left(2 \omega\right)}{c^2 k_2},
+\nonumber \\
+\Phi = 2\phi_1 -\phi_2 + \Delta z.
+\nonumber \\
+\end{eqnarray}
+
+Рассмотрим выражения для \(\sigma_1\) и  \(\sigma_2\), в которых мы
+можем приравнять  
+\(
+\hat{\chi}^{(2)}\left(2 \omega\right)
+\)
+ и 
+\(
+\hat{\chi}^{(2)}\left(\omega\right)
+\) 
+потому что согласно
+перестановочным правилам для квадратичной восприимчивости, всегда
+найдутся компоненты тензора для которых 
+\[
+\hat{\chi}^{(2)}_{ijk}\left(2
+  \omega\right) =
+\hat{\chi}^{(2)}_{jki}\left(\omega\right).
+\] 
+Действительно
+\[
+\hat{\chi}^{(2)}_{ijk}\left(\omega_3 = \omega_1 + \omega_2
+ \right) =
+\hat{\chi}^{(2)}_{jki}\left(\omega_1 = \omega_3 - \omega_2\right),
+\]
+откуда при
+\(
+\omega_1 = \omega_2 = \omega
+\)
+имеем
+\(
+\hat{\chi}^{(2)}\left(2 \omega\right)
+=
+\hat{\chi}^{(2)}\left(\omega\right) = \hat{\chi}.
+\) 
+Тогда
+\[
+\sigma_{1,2} = \frac{\sigma}{n_{1,2}},
+\]
+где \(\sigma\) -  некоторая константа:
+\[
+\sigma = \frac{i 4 \pi \hat{\chi} \omega}{c}
+\]
+
+Покажем теперь, что в отличии от метода малого параметра закон
+сохранения энергии сейчас выполняется. Для этого домножим первое и
+второе уравнения системы (\ref{eqTGHohlov}) соответственно на
+\(A_{10}\sigma_2\) и \(A_{20}\sigma_1\) и сложим их:
+\[
+\frac{d}{dz}\left(\sigma_2 A_{10}^2 + \sigma_1 A_{20}^2\right) = 0,
+\]
+откуда
+\[
+\sigma_2 A_{10}^2 + \sigma_1 A_{20}^2 = const,
+\]
+или же
+\[
+n_1 A_{10}^2 + n_2 A_{20}^2 = const.
+\]
+Тогда для потока энергии:
+\[
+P_{1,2} = \frac{c n_{1,2}}{8 \pi} A_{10,20}^2
+\]
+имеем
+\[
+P_1 + P_2 = const.
+\]
+
+Введем в систему уравнений Хохлова (\ref{eqTGHohlov}) поглощение
+(вводится руками из соображений здравого смысла)
+\begin{eqnarray}
+\frac{d A_{10}}{d z} + \delta_1 A_{10} + \sigma_1 A_{20} A_{10} sin
+\Phi = 0,
+\nonumber \\
+\frac{d A_{20}}{d z} + \delta_2 A_{20} - \sigma_2 A_{10}^2 sin \Phi = 0,
+\nonumber \\
+\frac{d \Phi}{d z} - \Delta + \left(2 \sigma_1 A_{20} -
+  \sigma_2\frac{A_{10}^2}{A_{20}}\right) cos \Phi = 0,
+\label{eqTGHohlovAbsorption}
+\end{eqnarray}
+где \(\delta_{1,2}\) - коэфициенты поглощения на соответствующих
+частотах. 
+
+\subsection{Работа нелинейно-оптического удвоителя частоты при синхронизме}
+Пусть выполняется условие фазового синхронизма 
+\[
+\vec{\Delta} = 2 \vec{k_1} - \vec{k_2} \approx 0.
+\]
+Кроме того положим что у нас отсутвует поглощение как на частоте ВГ
+так и на частоте накачки \(\delta_{1,2} = 0\). Зададим следующие
+граничные условия
+\begin{eqnarray}
+\left. A_{10} \right|_{z = 0} = A_1\left(0\right),
+\nonumber \\
+\left. A_{20} \right|_{z = 0} = 0.
+\label{eqBoundMMA1}
+\end{eqnarray}
+
+Расмотрим третье уравнение Хохлова вблизи границы  \(z \rightarrow
+0\): 
+\[
+\frac{d \Phi}{d z} - \Delta + \left(2 \sigma_1 A_{20} -
+  \sigma_2\frac{A_{10}^2}{A_{20}}\right) cos \Phi = 0.
+\]
+При \(A_{20} \rightarrow 0\) выражение
+\(\sigma_2\frac{A_{10}^2}{A_{20}} \rightarrow \infty\). Таким образом
+при \(\Delta = 0\) чтобы сохранить конечность решения фаза вблизи
+границы должна быстро изменятся так чтобы \(cos \Phi \rightarrow
+0\). Таким образом третье уровнение довольно быстро (уже при малых
+\(z\)) устанавливает фазу \(\Phi = 2\phi_1 - \phi_2\) равной \(\Phi_0
+= \frac{\pi}{2}\)  независимо от его начального значения. Таким
+образом в дальнейшем мы можем позабыть о фазе считая ее оптимальной -
+\(\frac{\pi}{2}\).
+
+Для амплитуд будем решать следующую систему в предположении  \(\sigma =
+\sigma_1 = \sigma_2\):
+\begin{eqnarray}
+\frac{d A_{10}\left(z\right)}{d z} + \sigma A_{20}\left(z\right) A_{10}\left(z\right) = 0,
+\nonumber \\
+\frac{d A_{20}\left(z\right)}{d z} - \sigma A_{10}^2\left(z\right) = 0
+\label{eqHohlovSynh}
+\end{eqnarray}
+с граничными условиями (\ref{eqBoundMMA1})
+
+Учитывая условие \(A_{10}^2\left(z\right) + A_{20}^2\left(z\right) =
+A_{10}^2\left(0\right)\), второе уравнение системы
+(\ref{eqHohlovSynh}) можно записать в виде:
+\[
+\frac{d A_{20}\left(z\right)}{d z} = \sigma
+\left(A_{10}^2\left(0\right) - A_{10}^2\left(z\right) \right). 
+\]
+В результате решение представляется в виде гиперболических функций:
+\begin{eqnarray}
+A_{20}\left(z\right) = A_{10}\left(0\right) th\left(\sigma
+  A_{10}\left(0\right) z\right),
+\nonumber \\
+A_{10}\left(z\right) = A_{10}\left(0\right) sech\left(\sigma
+  A_{10}\left(0\right) z\right).
+\label{eqSolvHohlovSynh}
+\end{eqnarray}
+Качественно зависимоти (\ref{eqSolvHohlovSynh}) могут быть
+представленны в следующем виде:
+FIX ME!!! (add picture).
+
+Одним из характерных параметров является толщина нелинейного кристалла
+при которой зависимости (\ref{eqSolvHohlovSynh}) пересекаются:  так
+называемая нелинейная длина:
+\begin{equation}
+L^{(NL)} = \frac{2}{\sigma A_{10}}.
+\label{eqTGL_NL}
+\end{equation}
+При \(z = L^{(NL)}\) в излучение ВГ преобразуется 70\% мощности
+излучения накачки.
+
+\subsection{Работа нелинейно-оптического удвоителя частоты в
+  отсутствие синхронизма}
+Расмотрим как и ранее случай отсутствия поглощения, но теперь положим,
+что \(\Delta \ne 0\).  При наличии фазовой расстройки оптимальная фаза
+\(\Phi_0 = \frac{\pi}{2}\) будет сохранться не по всей
+длине. В-принципе для данного случая надо решать совместно все 3
+уравнения  (\ref{eqTGHohlov}), но мы ограничимся так называемым
+приближением заданного поля. Т. е. будем предполагать, что 
+\begin{eqnarray}
+A_{10}\left(z\right) \approx A_{10}\left(0\right),
+\nonumber \\
+A_{20}\left(z\right) \ll A_{10}\left(z\right).
+\nonumber
+\end{eqnarray}
+
+В этом случае система  (\ref{eqTGHohlov}) приобретает следующий вид:
+\begin{eqnarray}
+\frac{d A_{20}}{d z} - \sigma_2 A_{10}^2 sin \Phi = 0,
+\nonumber \\
+\frac{d \Phi}{d z} - \Delta  -
+  \sigma_2\frac{A_{10}^2}{A_{20}} cos \Phi = 0.
+\nonumber
+\end{eqnarray}
+
+Для аплитуды поля ВГ можно записать:
+\[
+A_{20}\left(z\right) = \sigma_2 A_{10}^2 \int_0^z sin \Phi dz,
+\]
+с учетом чего уравнение для фазы приобретает следующий вид
+\[
+\frac{d \Phi}{d z} = \Delta  +
+  \frac{cos \Phi}{\int_0^z sin \Phi dz} = 0.
+\]
+
+На границе нелинейной среды будем предполагать как и раньше \(\Phi =
+\frac{\pi}{2}\), затем фаза из-за растройки будет меняться. Решение
+будем искать в виде:
+\[
+\Phi = \frac{\pi}{2} + \alpha z,
+\]
+где  \(\alpha\) - неизвестный параметр подлежащий
+определению. Подставляя такой вид решения в уравнение получаем:
+\[
+\alpha = \Delta - \frac{sin \alpha z}{\frac{1}{\alpha} sin \alpha z} =
+\Delta - \alpha
+\]
+или 
+\[
+\alpha = \frac{\Delta}{2}.
+\]
+
+Это означает, что закон изменения фазы имеет вид:
+\[
+\Phi = \frac{\pi}{2} + \frac{\Delta}{2} z.
+\]
+Зная этот закон мы можем найти закон изменения амплитуды:
+\begin{equation}
+A_{20}\left(z\right) = \sigma_2 A_{10}^2 \int_0^z cos\left(
+  \frac{\Delta}{2} z \right) dz = \frac{2 \sigma_2 A_{10}^2}{\Delta}
+  sin \left(\frac{\Delta}{2} z \right).
+\label{eqSolvHohlovUnSynh}
+\end{equation}
+
+Этот закон мы уже получали ранее (\ref{eqI2trDne0}) методом малого
+параметра. Наше решение справедливо при любом  \(z\) пока \(A_{20,max}
+\ll A_{10}\). Подчеркнем, что это ограничение не на сам метод ММА, а
+лишь на данный случай приближения заданного поля.
+
+Проведем оценку максимальной амплитуды волны ВГ, которую она достигает
+при прохождении по кристаллу растояния порядка \(l_{coh} =
+\frac{\pi}{2}\). В этом случае:
+\[
+A_{20,max} = \frac{2 \sigma A_{10}^2}{\Delta} = \frac{2 \sigma
+  A_{10}^2}{\pi} l_{coh}.
+\]
+Тогда условия применимости приближения задоного поля записывается в
+виде
+\[
+\frac{2 \sigma
+  A_{10}^2}{\pi} l_{coh} \ll A_{10}
+\]
+или
+\[
+l_coh \ll L_{(NL)},
+\]
+где \( L_{(NL)}\) задается соотношением (\ref{eqTGL_NL}). Таким
+образом мы также установили границы применимости метода малого
+параметра. 
+
+\subsection{Влияние поглощения на процесс генерации ВГ}
+Будем считать для простоты, что у нас реализуется синхронный режим
+генерации ВГ. Таким образом фаза устанавливается оптимальной на
+границе и дальше не меняется:
+\[
+\Phi\left(z\right) = \Phi_0 = \frac{\pi}{2}.
+\]
+В этом случае можно рассматривать только второе уравнение системы
+(\ref{eqTGHohlovAbsorption}), которое при оптимальной фазе имеет вид:
+\begin{equation}
+\frac{d A_{20}}{d z} + \delta_2 A_{20} = \sigma_2 A_{10}^2.
+\label{eqTGHohlovAbsorptionSimple}
+\end{equation}
+
+Рассмотрим следующую граничную задачу (приближение заданного поля):
+\begin{eqnarray}
+\left. A_{10} \right|_{z = 0} \ne 0,
+\nonumber \\
+\left. A_{20} \right|_{z = 0} = 0,
+\nonumber \\
+A_{10} = const_z.
+\nonumber
+\end{eqnarray}
+
+Если \(\delta_2 = 0\) то решение уравнения
+(\ref{eqTGHohlovAbsorptionSimple}) имеет вид:
+\begin{equation}
+A_{20}\left(z\right) = \sigma_2 A_{10}^2\left(0\right) z,
+\label{eqTGHohlovAbsorptionSimpleSolve1}
+\end{equation}
+таким образом амплитула ВГ растет линейностью и коэффициент этого
+линейного роста определяется нелинейностью среды - \(\sigma_2\),
+наличием на входе излучения накачки - \(A_{10}\left(0\right) \ne 0\) и
+не зависит от того есть ли на входе излучение ВГ. 
+
+Если учесть поглощение на частоте ВГ, то решение  уравнения
+(\ref{eqTGHohlovAbsorptionSimple}) будет :
+\begin{equation}
+A_{20}\left(z\right) = \sigma_2 A_{10}^2\left(0\right) \frac{1 -
+  exp\left(-\delta_2 z\right)}{\delta_2}.
+\label{eqTGHohlovAbsorptionSimpleSolve2}
+\end{equation}
+
+Следует отметить следующие принципиальные особенности процесса
+генерации ВГ (или более обще - up-конверсии) вытекающие из
+(\ref{eqTGHohlovAbsorptionSimpleSolve1} и
+\ref{eqTGHohlovAbsorptionSimpleSolve2}).
+\begin{itemize}
+\item Процесс генерации ВГ имеет место при сколь угодно малой накачке
+  \(A_{10}\left(0\right)\), иными словами это не пороговый процесс
+\item Процесс генерации ВГ не требует волны ВГ на входе: 
+\(A_{20}\left(0\right) = 0\).
+\end{itemize}
+
+\subsection{Параметрический процесс down-конверсии}
+Кроме процесса ``слияния'' двух фотонов накачки в один фотон ВГ или
+фотон суммарной(разностной) частоты (up-конверсия) на квадратичной
+нелинейности возможен обратный процесс распада одного фотона накачки в
+два фотона (down-конверсия) или генерация субгармоник.
+
+Рассмотрим задачу генерации субгармоники пока без учета поглощения на
+частоте накачки, т. е. пусть \(\Delta = 0\), \(\delta_1 = 0\) и пусть
+амплитуды волны на частоте \(\omega\) и \(2\omega\) на границе ненулевые:
+\(\left. A_{10,20} \right|_{z = 0} \ne 0\). И под конец будем
+предполагать что волна накачки (в данном случае волна ВГ) много больше
+сигнала субгармоники
+\(\left. A_{20} \right|_{z = 0} \gg \left. A_{10} \right|_{z = 0}\).
+Для такого выбора параметров актуальными будут уравнения для аплитуды
+``слабой'' волны \(A_{10}\left(z\right)\) и фазы
+\(\Phi\left(z\right)\). Рассмотрим уравнение для амплитуды в
+предполажении заданного поля \(A_{20}\left(z\right) = A_{20}\left(0\right)\):
+\begin{equation}
+\frac{d A_{10}\left(z\right)}{dz} = - \sigma_1 A_{20}\left(0\right)
+A_{10}\left(z\right) sin \Phi\left(z\right).
+\label{eqTGHohlovDownSimple}
+\end{equation}
+
+Из уравнения (\ref{eqTGHohlovDownSimple}) видно, что знак производной
+определяется фазой. Рост слабого сигнала субгармоники в поле сильной
+волны накачки имеет место при  
+\[
+\frac{d A_{10}\left(z\right)}{dz} > 0,
+\]
+т. е. когда \(sin\Phi < 0\). В оптимальном случае когда производная
+максимальна - \(\Phi = -\frac{\pi}{2}\). Вполнее естественно что фаза
+не будет держаться оптимальной, но мы рассмотрим начальный участок
+пока фаза оптимальна. В этом случае  (\ref{eqTGHohlovDownSimple})
+преобразуется в 
+\[
+\frac{d A_{10}\left(z\right)}{dz} = \sigma_1 A_{20}\left(0\right)
+A_{10}\left(z\right),
+\]
+а решение дает закон параметрического уселения в прозрачной нелинейной
+среде: 
+\begin{equation}
+A_{10}\left(z\right) = A_{10}\left(0\right) exp \left(\sigma_1
+  A_{20}\left(0\right)z \right).
+\label{eqTGHohlovDownSimpleSolve1}
+\end{equation}
+
+Из (\ref{eqTGHohlovDownSimpleSolve1}) видна важная особенность
+down-конверсии: ненулевого решения и нарастания субгармоники не будет,
+если на вход не подать начального сигнала \(A_{10}\left(0\right)\)
+субгармоники. И это принципиальное отличие от процесса  up-конверсии,
+рассмотренного ранее.
+
+Другое принципиальное отличие дает учет поглащения на частоте
+субгармоники. В этом случае уравнение для амплитуды субгармоники имеет
+вид -
+\[
+\frac{d A_{10}\left(z\right)}{dz} = - \sigma_1 A_{20}\left(0\right)
+A_{10}\left(z\right) - \delta_1 A_{10}\left(z\right),
+\]
+а его решение из (\ref{eqTGHohlovDownSimpleSolve1})  трансвормируется
+в 
+\begin{equation}
+A_{10}\left(z\right) = A_{10}\left(0\right) exp \left\{\left(\sigma_1
+  A_{20}\left(0\right) - \delta_1 \right) z\right\}.
+\label{eqTGHohlovDownSimpleSolve2}
+\end{equation}
+
+Из выражения (\ref{eqTGHohlovDownSimpleSolve2}) следует пороговый
+характер процесса down-конверсии: т. е. для нарастания входного
+сигнала необходимо чтобы накачка превзошла некоторый порог:
+\[
+A_{20}\left(0\right) > \frac{\delta_1}{\sigma_1}.
+\]
+Если при генерации ВГ затухание не препятствовало возбуждению ВГ, то
+для субгармоник оно вносит порог по мощности накачки.

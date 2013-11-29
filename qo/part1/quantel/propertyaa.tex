@@ -1,0 +1,57 @@
+%% -*- coding:utf-8 -*- 
+\section{Свойства операторов $ \hat a $ и $ \hat a ^+ $ (операторов
+  уничтожения и рождения)} 
+Прежде всего, рассмотрим свойства операторов $\hat{a}$  и
+$\hat{a}^{+}$.  Покажем, что 
+\begin{equation}
+\left[\hat{\mathcal{H}}, \hat{a}\right] = 
+- \hbar \omega \hat{a}, \quad
+\left[\hat{\mathcal{H}}, \hat{a}^{+}\right] = 
+\hbar \omega \hat{a}^{+}.
+\label{eqCh1_mainpropertyaa}
+\end{equation}
+Поскольку  
+\[
+\hat{\mathcal{H}} =  
+\hbar \omega \left(\hat{a}^{+} \hat{a} +
+\frac{1}{2}\right)
+\]
+то, используя коммутационные соотношения
+\[
+\left[\hat{a}, \hat{a}^{+}\right] = 1,
+\]  
+получим
+\begin{eqnarray}
+\left[\hat{\mathcal{H}}, \hat{a}\right] = 
+\hbar \omega \left( 
+\hat{a}^{+}\hat{a}\hat{a} + \frac{1}{2} \hat{a} -
+\hat{a}\hat{a}^{+}\hat{a} - \frac{1}{2}\hat{a} 
+\right)
+= 
+\nonumber \\ 
+= \hbar \omega\left(
+\hat{a}^{+}\hat{a}\hat{a} - \left(1 + \hat{a}^{+}\hat{a}\right)\hat{a} 
+\right) = - \hbar \omega \hat{a} 
+,
+\nonumber
+\end{eqnarray}
+Второе равенство (\ref{eqCh1_mainpropertyaa}) доказывается
+аналогично. 
+
+В представлении Шредингера операторы от времени не зависят, а в
+представлении Гейзенберга - зависят и подчиняются уравнениям движения: 
+\begin{equation}
+\dot{\hat{a}}\left(t\right) = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
+  \hat{a}\right] = -i \omega \hat{a}\left(t\right), \quad
+\dot{\hat{a}}^{+}\left(t\right) = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
+  \hat{a}^{+}\right] = i \omega \hat{a}^{+}\left(t\right).
+\label{eqCh1_54}
+\end{equation}
+Здесь использованы равенства (\ref{eqCh1_mainpropertyaa}). Решение
+этих уравнений: 
+\begin{equation}
+\hat{a}\left(t\right) = \hat{a}\left(0\right) e^{- i \omega t}, \quad
+\hat{a}^{+}\left(t\right) = \hat{a}^{+}\left(0\right) e^{i \omega t}, 
+\end{equation}
+где  $\hat{a}\left(0\right)$, $\hat{a}^{+}\left(0\right)$ - операторы
+в представлении Шредингера.

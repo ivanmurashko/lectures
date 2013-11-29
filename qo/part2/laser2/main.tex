@@ -1,0 +1,42 @@
+%% -*- coding:utf-8 -*- 
+\chapter{Квантовая теория лазера в представлении Гейзенберга}
+
+До сих пор мы рассматривали квантовую теорию лазера, используя
+представление Шредингера, в котором от времени зависит матрица
+плотности, а операторы от времени не зависят. Как мы видели на примере
+задачи о затухании моды резонатора, возможен другой подход,
+использующий представление Гейзенберга
+\cite{bScullyQuantumOptics2003}, 
+когда от времени зависят
+операторы, а матрица плотности от времени не зависит. В ряде случаев
+такой подход может оказаться более удобным для исследования тонких
+вопросов квантовой теории лазеров, таких например, как генерация
+лазером поля в сжатом состоянии. 
+
+\input ./part2/laser2/model.tex
+\input ./part2/laser2/equation.tex
+\input ./part2/laser2/system.tex
+\input ./part2/laser2/bandwidth.tex
+
+\section{Упражнения}
+\begin{enumerate}
+\item Доказать коммутационные соотношения
+  (\ref{eqLaserHaizenbergTaskKommutator}) и (\ref{eqLaserHaizenbergTaskKommutator2}).
+\item Получить уравнения движения оператора $\hat{\sigma}_b^j$: (\ref{eqLaserHaizenbergSigmaBJ}) и 
+(\ref{eqLaserHaizenbergFBJ}).
+\item Вывести соотношения (\ref{eqLaserHaizenberNB_AB}) для
+  операторов $\hat{N}_b$ и $\hat{N}_{ab}$.
+\item Доказать второе соотношение (\ref{eqLaserHaizenbergFABJCorrel}).
+\item Доказать (\ref{eqLaserHaizenbergTaskMiddle}).
+\item Доказать (\ref{eqLaserHaizenbergTaskDelta}).
+\end{enumerate}
+
+%% \begin{thebibliography}{99}
+%% \bibitem{bCh1LaserLangevinSkalliZubari} М. О. Скалли,
+%%   М. С. Зубайри. Квантовая 
+%%   оптика. М. Физматлит, 2003.
+%% \bibitem{bCh1LaserLangevinYamamoto} Y.Yamamoto, A.Imamoglu.  Mesoscopic quantum
+%%   optics. 1999, USA, J.Wiley \& Son.
+%% \bibitem{bCh1LaserLangevinHaken} Г.Хакен. Лазерная светодинамика. М.: Мир,
+%%   1988.
+%% \end{thebibliography}

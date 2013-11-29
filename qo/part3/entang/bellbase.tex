@@ -1,0 +1,147 @@
+%% -*- coding:utf-8 -*- 
+\section{Базисные состояния Белла}
+
+Любое двухфотонное перепутанное состояние вида (\ref{eqEntang2Common}):
+\begin{eqnarray}
+\left|\psi\right> =  
+c_{xx} \left|x\right>_1\left|x\right>_2 +
+c_{xy} \left|x\right>_1\left|y\right>_2 +
+\nonumber \\
++
+c_{yx} \left|y\right>_1\left|x\right>_2 +
+c_{yy} \left|y\right>_1\left|y\right>_2
+\nonumber
+\end{eqnarray}
+может быть разложено по следующим базисным состояниям Белла:
+\begin{eqnarray}
+  \left|\psi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|y\right>_2 + 
+  \left|y\right>_1\left|x\right>_2
+  \right),
+  \nonumber \\
+  \left|\psi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|y\right>_2 - 
+  \left|y\right>_1\left|x\right>_2
+  \right),
+  \nonumber \\
+  \left|\phi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|x\right>_2 + 
+  \left|y\right>_1\left|y\right>_2
+  \right),
+  \nonumber \\
+  \left|\phi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|x\right>_2 - 
+  \left|y\right>_1\left|y\right>_2
+  \right).
+  \label{eqEntangBellBase}
+\end{eqnarray}
+ 
+Для доказательства разложимости нам достаточно доказать, что волновые
+функции (\ref{eqEntangBellBase}) являются ортогональными. Для этого
+запишем каждую из этих функций в матричном виде в базисе, образованном
+$\left|x\right>_1\left|x\right>_2$, $\left|x\right>_1\left|y\right>_2$,
+$\left|y\right>_1\left|x\right>_2$ и
+$\left|y\right>_1\left|y\right>_2$, в результате получим 
+\begin{eqnarray}
+  \left|\psi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    1 \\
+    0
+  \end{array}
+  \right),
+  \nonumber \\
+  \left|\psi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    -1 \\
+    0
+  \end{array}
+  \right),
+  \nonumber \\
+  \left|\phi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    1 \\
+    0 \\
+    0 \\
+    1
+  \end{array}
+  \right),
+  \nonumber \\
+  \left|\phi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    1 \\
+    0 \\
+    0 \\
+    -1
+  \end{array}
+  \right).
+  \label{eqEntangBellBaseMatrix}
+\end{eqnarray}
+
+В случае проверки ортогональности $\left|\psi^{+}\right>_{12}$ и 
+$\left|\psi^{-}\right>_{12}$ имеем
+\begin{eqnarray}
+\left<\psi^{+}\right|_{12}\left.\psi^{-}\right>_{12} = 
+  \left|\psi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{cccc}
+    0 & 1 & 1 & 0
+  \end{array}
+  \right)   
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    -1 \\
+    0
+  \end{array}
+  \right) = 
+\nonumber \\
+=
+  \frac{1}{2}\left(1 - 1\right) = 0.
+\nonumber 
+\end{eqnarray}
+Аналогично можно доказать ортогональность остальных состояний
+(\ref{eqEntangBellBase}). 
+
+Кроме этого, воспользовавшись (\ref{eqEntangBellBaseMatrix}), можно
+показать, что состояния (\ref{eqEntangBellBase}) нормированы, например
+для $\left|\psi^{+}\right>_{12}$ получим 
+\begin{eqnarray}
+\left<\psi^{+}\right|_{12}\left.\psi^{+}\right>_{12} = 
+  \left|\psi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{cccc}
+    0 & 1 & 1 & 0
+  \end{array}
+  \right)   
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    1 \\
+    0
+  \end{array}
+  \right) = 
+\nonumber \\
+=
+  \frac{1}{2}\left(1 + 1\right) = 1.
+\nonumber 
+\end{eqnarray}

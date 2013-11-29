@@ -1,0 +1,137 @@
+%% -*- coding:utf-8 -*- 
+\section{Гамильтонова форма уравнений поля при разложении по плоским
+  волнам}
+Собственные функции (\ref{eqCh1_EHmode}) ортогональны, т.е.
+\begin{eqnarray}
+\int_{\nu} \left( \vec{E}_k \vec{E}_{k'}^{*} \right) d \nu =
+C \int_{\nu} e^{i \left(\vec{k}\vec{r}\right)} e^{- i
+  \left(\vec{k'}\vec{r}\right)} d \nu =
+\nonumber \\
+= C \int_0^L d x \int_0^L d y \int_0^L d z
+\left[ e^{i\left(
+\left(k_x - k'_x\right) x +
+\left(k_y - k'_y\right) y +
+\left(k_z - k'_z\right) z
+\right)}
+\right] = 0,
+\end{eqnarray}
+если справедливо хотя бы одно из неравенств 
+$k_x \ne k'_x$,
+$k_y \ne k'_y$,
+$k_z \ne k'_z$,
+(или 
+$\vec{k} - \vec{k'} \ne 0$
+).  Это следует из периодичности подинтегральных функций. 
+
+Аналогично получим:
+\begin{equation}
+\int_{\nu} \left( \vec{E}_k \vec{E}_{k'} \right) d \nu = 0,
+\quad
+\vec{k} \ne - \vec{k'}.
+\end{equation}
+
+Собственные функции $\vec{E}_k$ можно нормировать, положив
+\begin{equation}
+\int_{\nu} \left( \vec{E}_k \vec{E}_{k}^{*} \right) d \nu = 1.
+\end{equation}
+Тогда собственные функции будут иметь вид
+\[
+\vec{E}_k\left(r\right) = \frac{1}{\sqrt{\nu}}\vec{e}_k e^{i \left( \vec{k}\vec{r}\right)},
+\quad
+\vec{H}_k\left(r\right) = 
+\frac{1}{k}
+\left[\vec{k}\vec{e}_k\left(r\right)\right] 
+\sqrt{\frac{\varepsilon_0}{\nu \mu_0}}
+e^{i \left( \vec{k}\vec{r}\right)}.
+\]
+Заметим, что под индексом $k$  мы подразумеваем $k_j$,  где  $j = 1,
+2$  соответствуют двум различным поляризациям.  
+Функции  $\vec{E}_k$  и  $\vec{H}_k$,  записанные в таком виде,
+удовлетворяют следующим условиям ортогональности и нормировки: 
+\begin{eqnarray}
+\int_{\nu} \left( \vec{E}_k \vec{E}_{k'}^{*} \right) d \nu = 0
+\quad
+\mbox{при } \vec{k} \ne \vec{k'},
+\nonumber \\
+\int_{\nu} \left( \vec{E}_k \vec{E}_{k'} \right) d \nu = 0
+\quad
+\mbox{при } \vec{k} \ne - \vec{k'},
+\nonumber \\
+\int_{\nu} \left( \vec{E}_k \vec{E}_{k}^{*} \right) d \nu = 1,
+\quad
+\int_{\nu} \left( \vec{E}_k \vec{E}_{-k} \right) d \nu = 1,
+\nonumber \\
+\int_{\nu} \left( \vec{H}_k \vec{H}_{k'}^{*} \right) d \nu = 0
+\quad
+\mbox{при } \vec{k} \ne \vec{k'},
+\nonumber \\
+\int_{\nu} \left( \vec{H}_k \vec{H}_{k'} \right) d \nu = 0
+\quad
+\mbox{при } \vec{k} \ne - \vec{k'},
+\nonumber \\
+\int_{\nu} \left( \vec{H}_k \vec{H}_{k}^{*} \right) d \nu = \frac{\varepsilon_0}{\mu_0},
+\quad
+\int_{\nu} \left( \vec{H}_k \vec{H}_{-k} \right) d \nu = - \frac{\varepsilon_0}{\mu_0}.
+\label{eqCh1_task2}
+\end{eqnarray}
+Ортогональность мод с одинаковым значением $k$,  но разными
+поляризациями следует из равенств:  
+\[
+\left(\vec{e}_{k_1} \vec{e}_{k_2}^{*}\right) = 0, \quad
+\left(\vec{e}_{k_1} \vec{e}_{- k_2}\right) = 0.
+\]
+
+Электрическое и магнитное поля выражаются через эти функции при помощи разложения:
+\begin{eqnarray}
+\vec{E}\left(r, t\right) = 
+\sum_{(k)} 
+A_k\left(t\right) \vec{E}_k\left(r\right) +
+\mbox{к. с.},
+\nonumber \\
+\vec{H}\left(r, t\right) = 
+\sum_{(k)} 
+A_k\left(t\right) \vec{H}_k\left(r\right) +
+\mbox{к. с.}
+\label{eqCh1_separation4six}
+\end{eqnarray}
+Суммирование по $k = k_j$ подразумевает суммирование по всем значениям
+$k$ и двум поляризациям  ($j = 1,2$): 
+$\sum_{(k)} \equiv \sum_{j = 1,2} \sum_{(k_j)}$ .
+  
+Функция Гамильтона магнитного поля имеет вид:
+\begin{equation}
+\mathcal{H} = \frac{1}{2}
+\int_{\nu}\left( \varepsilon_0\left(\vec{E}\left(r,t\right)\right)^2 + \mu_0
+\left(\vec{H}\left(r,t\right)\right)^2\right) d\nu
+\label{eqCh1_hamilton4six}
+\end{equation}
+Подставляя в (\ref{eqCh1_hamilton4six}) ряды
+(\ref{eqCh1_separation4six}), перемножая их и учитывая условия
+ортогональности и нормировки, получим 
+\begin{eqnarray}
+\mathcal{H} = \frac{1}{2} \varepsilon_0
+\int_{(\nu)}\left\{
+\sum_{(k)}\sum_{(k')}
+\left(A_k\vec{E}_k + A_k^{*}\vec{E}_k^{*}\right)
+\left(A_{k'}\vec{E}_{k'} + A_{k'}^{*}\vec{E}_{k'}^{*}\right)
+\right\}d \nu +
+\nonumber \\
++ 
+\frac{1}{2} \mu_0
+\int_{(\nu)}\left\{
+\sum_{(k)}\sum_{(k')}
+\left(A_k\vec{H}_k + A_k^{*}\vec{H}_k^{*}\right)
+\left(A_{k'}\vec{H}_{k'} + A_{k'}^{*}\vec{H}_{k'}^{*}\right)
+\right\} d \nu = 
+\nonumber \\
+\frac{\varepsilon_0}{2} \sum_{(k)} 
+\left(
+A_k A_k^{*} + A_k A_{-k} + A_k^{*} A_{-k}^{*} + A_k^{*} A_k +
+\right.
+\nonumber \\
+\left.
++ A_k A_k^{*} - A_k A_{-k} - A_k^{*} A_{-k}^{*} + A_k^{*} A_k
+\right) = \varepsilon_0 \sum_{(k)} 
+\left(A_k A_k^{*} + A_k^{*} A_k \right).
+\label{eqCh1_separation4hamilton}
+\end{eqnarray}

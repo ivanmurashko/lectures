@@ -1,0 +1,148 @@
+%% -*- coding:utf-8 -*- 
+\section{Алгоритм Гровера}
+
+Рассмотрим следующую задачу. Допустим имеется большой набор данных
+состоящий из $N$ элементов в котором необходимо найти элемент
+удовлетворяющий некоторым условиям (см. рис. \ref{figQuantCompSearch}).
+Если данные отсортированны, то с  
+помощью алгоритмов типа ``разделяй и властвуй'' искомый элемент может
+быть найдет за время порядка $O\left(log N\right)$
+(см. разд. \ref{addDivideAndConquer}). В ряде случаев исходный набор данных
+не может быть подготовлен для быстрого поиска, в этом случае
+классический поиск осуществляется за время порядка $O\left(N\right)$.
+
+\input ./part4/quantcomp/figsearch.tex
+
+Одним из примеров являются алгоритмы симметричного шифрования в
+которых стоит задача определения ключа по известному шифрованному
+тексту и соотвествующему ему оригинальному тексту. В этом случае
+предварительная обработка данных представляется невозможной и решением
+задачи ``в лоб'' является простой перебор всех возможных значений.
+
+Алгоритм Гровера \cite{Grover96afast} решает задачу
+неструктурированного поиска за время порядка $O\left(\sqrt{N}\right)$.
+
+\subsection{Описание алгоритма}
+
+Допустим у нас имеется квантовый контур который вычисляет значение
+функции $f\left(x\right)$ которая может принимать только два значения:
+$0$ и $1$. При этом значение $1$ справедливо только для искомого
+элемента: 
+\begin{eqnarray}
+\left.f\left(x\right)\right|_{x = x^{\ast}} = 1,
+\nonumber \\
+\left.f\left(x\right)\right|_{x \ne x^{\ast}} = 0.
+\label{eqQuantCompGroverF}
+\end{eqnarray}
+На рис. \ref{figQuantCompGrover1} изображена схема для вычесления
+искомой функции. На выходе мы имеем сотояние вида
+\begin{equation}
+\left|out\right> = \frac{1}{\sqrt{N}}\left(
+ \sum_{x \ne x^{\ast}} \left|x\right>\otimes\left|0\right>
++ \left|x^{\ast}\right>\otimes\left|1\right>
+\right),
+\label{eqQuantCompGroverFake}
+\end{equation}
+где $N$ - общее число элементов в последовательности в которой
+производится поиск.
+
+\input ./part4/quantcomp/figgroverfake.tex
+
+Если посмотреть на выражение (\ref{eqQuantCompGroverFake}), то можно
+заметить, что предложенная схема, несмотря на то что она производит
+вычисление функции в искомой точке, не позволяет выбрать искомый
+элемент, потому что все элементы результирующей последовательности
+равновероятны, т. е. каждый элемент может быть выбран (в результате
+измерения) с одинаковой вероятностью: $\frac{1}{N}$.
+
+Гровером был предложен алгоритм, который позволил бы повысить
+вероятность обнаружения искомого элемента в результирующей
+суперпозиции (\ref{eqQuantCompGroverFake}).
+
+\input ./part4/quantcomp/figgrover.tex
+
+\input ./part4/quantcomp/figgroverbase.tex
+
+Схема, реализующая алгоритм Гровера представляет собой некоторый блок,
+описываемый оператором $\hat{U}_G$, который повторяется некоторое число
+раз (см. рис. \ref{figQuantCompGrover}). При этом на каждом шаге
+итерации вероятность обнаружения искомого элемента повышается. 
+
+Базовый элемент $\hat{U}_G$ представляет собой последовательное действие
+двух операторов (см. рис. \ref{figQuantCompGroverBase}):
+\begin{equation}
+\hat{U}_G=\hat{U}_s\hat{U}_{x^{\ast}},
+\nonumber
+\end{equation}
+где $\hat{U}_{x^{\ast}}$ - оператор инверсии фазы, $\hat{U}_s$
+- оператор обращения относительно среднего.
+
+\input ./part4/quantcomp/figgroverinv.tex
+
+Действие оператора $\hat{U}_{x^{\ast}}$ описывается следующим соотношением
+(см. рис. \ref{figQuantCompGroverInv}):
+\begin{equation}
+\hat{U}_{x^{\ast}}\left(\sum_x \alpha_x \left|x\right>\right) = 
+\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\left|x\right>.
+\label{eqQuantCompGroverUxast}
+\end{equation} 
+Оператор $\hat{U}_{x^{\ast}}$ может быть переписан в виде
+\begin{equation}
+\hat{U}_{x^{\ast}} = \hat{I} - 2 \left|x^{\ast}\right>\left<x^{\ast}\right|.
+\nonumber
+\end{equation} 
+Действительно
+\begin{eqnarray}
+\left(\hat{I} - 2 \left|x^{\ast}\right>\left<x^{\ast}\right|\right)
+\left(\sum_x \alpha_x \left|x\right>\right) =
+\nonumber \\
+= \sum_x \alpha_x \left|x\right> - 2 \alpha_{x^{\ast}}
+\left|x^{\ast}\right> = 
+\sum_{x\ne x^{\ast}} \alpha_x \left|x\right> -  \alpha_{x^{\ast}}
+\left|x^{\ast}\right> =
+\nonumber \\
+=
+\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\left|x\right>,
+\nonumber
+\end{eqnarray}
+что совпадает с (\ref{eqQuantCompGroverUxast}).
+
+\input ./part4/quantcomp/figgroverinvmiddle.tex
+
+Действие оператора $\hat{U}_s$ описывается следующим соотношением
+(см. рис. \ref{figQuantCompGroverInvMiddle}):
+\begin{equation}
+\hat{U}_s\left(\sum_x \alpha_x \left|x\right>\right) = 
+\sum_x \left(2 \mathcal{M} - \alpha_x \right)\left|x\right>,
+\label{eqQuantCompGroverUs}
+\end{equation} 
+где $\mathcal{M} = \sum_x \frac{\alpha_x}{N}$.
+
+Оператор $\hat{U}_s$ может быть переписан в следующем виде
+\begin{equation}
+\hat{U}_s = 
+2 \left|s\right>\left<s\right| - \hat{I},
+\nonumber
+\end{equation}
+где $\left|s\right>=\frac{1}{\sqrt{N}}\sum_x \left|x\right>$ -
+начальное состояние в алгоритме Гровера.
+Действительно
+\begin{eqnarray}
+\left(2 \left|s\right>\left<s\right| - \hat{I}\right)
+\left(\sum_x \alpha_x \left|x\right>\right) =
+\nonumber \\
+=  2 \sum_x \alpha_x \left<s\right.\left|x\right> \left|s\right> 
+- \sum_x \alpha_x \left|x\right> = 
+\nonumber \\
+=
+\frac{2}{N} \sum_x \alpha_x \sum_x \left|x\right> -
+\sum_x \alpha_x \left|x\right> = 
+\nonumber \\
+= \sum_x \left( 2 \mathcal{M} -\alpha_x \right) \left|x\right>,
+\nonumber
+\end{eqnarray}
+что совпадает с (\ref{eqQuantCompGroverUs}).
+
+\input part4/quantcomp/groveranalyze.tex
+
+\input part4/quantcomp/groverrealize.tex

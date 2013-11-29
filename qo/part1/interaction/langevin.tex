@@ -1,0 +1,472 @@
+%% -*- coding:utf-8 -*- 
+\section{Затухание моды резонатора. Уравнение Гейзенберга - Ланжевена.}
+
+\subsection{Постановка задачи.}
+Задачу о релаксации поля (моды) резонатора мы рассматриваем, используя
+метод матрицы плотности, т. е. представление Шредингера. Существует
+другой подход, принадлежащий Ланжевену, в котором уравнения
+динамической системы для учета влияния диссипативной системы
+дополняются случайными силами, статистические свойства которых
+известны. В квантовом случае динамическими уравнениями являются
+уравнения Гейзенберга для операторов наблюдаемых величин, а случайные
+воздействия, связанные с термостатом, учитываются добавлением некого
+шумового оператора. Получаемые уравнения носят названия уравнений
+Гейзенберга-Ланжевена.
+
+Рассмотрим таким методом задачу о релаксации моды резонатора
+(гармонического осциллятора), взаимодействующей с термостатом. В
+представлении Гейзенберга операторы зависят от времени и удовлетворяют
+уравнениям Гейзенберга:
+\begin{equation}
+\frac{d \hat{O}}{dt} = \frac{i}{\hbar}
+\left[\hat{\mathcal{H}}, \hat{O}\right],
+\nonumber
+\end{equation}
+где $\hat{\mathcal{H}}$ - гамильтониан рассматриваемой
+системы. Например, для для свободного поля ранее мы получили уравнения
+(\ref{eqCh1_54}):
+\begin{equation}
+\frac{d \hat{a}}{d t} = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
+  \hat{a}\right] = -i \omega \hat{a}, \quad
+\frac{d \hat{a}^{+}}{dt} = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
+  \hat{a}^{+}\right] = i \omega \hat{a}^{+},
+\nonumber
+\end{equation}
+где $\omega$ - частота моды, а $\hat{a}$ и $\hat{a}^{+}$ операторы
+уничтожения и рождения.
+
+\input ./part1/interaction/fig_add3.tex
+
+Рассматриваемая задача схематически изображена на
+рис. \ref{figPart1Ch2_add3}. Мода электромагнитного поля,
+рассматриваемая как динамическая система, взаимодействует с обширным
+резервуаром, состоящим из большого числа гармонических осцилляторов
+(фононов) и находящимся в равновесии при температуре $T$. Гамильтониан
+такой системы можно представить в виде
+\begin{equation}
+\hat{\mathcal{H}} = \hat{\mathcal{H}}_0 + \hat{V},
+\nonumber
+\end{equation}
+где
+\begin{equation}
+ \hat{\mathcal{H}}_0 = \hbar\omega \hat{a}^{+}\hat{a} +
+\sum_{(k)} \hbar\omega_k \hat{b}_k^{+} \hat{b}_k
+\nonumber
+\end{equation}
+гамильтониан системы без учета взаимодействия между ее частями,
+\begin{equation}
+ \hat{V} = \hbar \sum_{(k)}g_k\left(
+\hat{b}_k^{+}\hat{a} + \hat{a}^{+}\hat{b}_k
+\right)
+\label{eqPart1Ch2_LanzgevenV}
+\end{equation}
+гамильтониан взаимодействия между динамической системой и
+термостатом. Через $g_k$ в (\ref{eqPart1Ch2_LanzgevenV}) обозначена
+постоянная взаимодействия для $k$-ой моды резервуара. $\hat{a}$,
+$\hat{a}^{+}$ - операторы уничтожения и рождения для поля моды,
+$\hat{b}_k$, $\hat{b}_{k}^{+}$ - операторы уничтожения и рождения для
+$k$-ой моды резервуара (фононов). Вакуумные члены в гамильтониане не
+учтены, т. к. в ходе вывода уравнений они взаимно сокращаются.
+
+\subsection{Уравнения движения Гейзенберга для операторов.}
+Уравнения движения Гейзенберга для $\hat{a}$ и $\hat{b}_{k}$
+\begin{eqnarray}
+\frac{d \hat{a}}{d t} = \frac{i}{\hbar}\left[
+ \hat{\mathcal{H}}, \hat{a}
+\right],
+\nonumber \\
+\frac{d \hat{b}_k}{d t} = \frac{i}{\hbar}\left[
+ \hat{\mathcal{H}}, \hat{b}_k
+\right]
+\nonumber
+\end{eqnarray}
+при помощи коммутационных соотношений 
+$\left[\hat{a}, \hat{a}^{+}\right] = 1$ и 
+$\left[\hat{b}_k, \hat{b}_{k}^{+}\right] = 1$ приводятся к виду
+\begin{eqnarray}
+\frac{d \hat{a}\left(t\right)}{d t} = -i \omega \hat{a}\left(t\right) - i\sum_{(k)}g_k
+\hat{b}_k\left(t\right),
+\nonumber \\
+\frac{d \hat{b}_k\left(t\right)}{d t} = -i \omega_k
+\hat{b}_{k}\left(t\right) - i g_k \hat{a}\left(t\right).
+\label{eqPart1Ch2_LanzgevenAB}
+\end{eqnarray}
+Из системы (\ref{eqPart1Ch2_LanzgevenAB}) можно исключить $\hat{b}_k$,
+проинтегрировав второе уравнение и подставив результат в первое
+уравнение. Интегрирование проще всего выполнить, используя операционное
+исчисление. Получаем
+\begin{equation}
+\hat{b}_k\left(t\right) = 
+\hat{b}_k\left(0\right) e^{-i \omega_k t} 
+- i g_k \int_0^t d t' \hat{a}\left(t'\right)e^{-i \omega_k\left(t - t'\right)}
+\nonumber
+\end{equation}
+и далее
+\begin{eqnarray}
+\frac{d \hat{a}\left(t\right)}{dt} = 
+- i \omega \hat{a}\left(t\right) - \sum_{(k)} g_k^2 \int_0^t
+d t'  \hat{a}\left(t'\right)e^{-i \omega_k\left(t - t'\right)}
++ \hat{f}\left(t\right),
+\nonumber \\
+\hat{f}\left(t\right) = -i \sum_{(k)} g_k \hat{b}_k\left(0\right)
+e^{-i \omega_k t}.
+\label{eqPart1Ch2_LanzgevenA}
+\end{eqnarray}
+Оператор $\hat{f}\left(t\right)$ зависит от переменных термостата и
+является шумовым оператором, описывающим воздействие резервуара на
+динамическую систему.
+
+Уравнение (\ref{eqPart1Ch2_LanzgevenA}) интегродифференциальное. при
+некоторых приближениях его можно преобразовать в чисто
+дифференциальное. Сперва перейдем к медленным переменным, записав
+\begin{eqnarray}
+\hat{a}\left(t\right) = \hat{A}\left(t\right)e^{-i \omega t},
+\nonumber \\
+\hat{f}\left(t\right) = \hat{F}\left(t\right)e^{-i \omega t},
+\nonumber
+\end{eqnarray}
+где $\omega$ - частота моды. Отсюда имеем
+\begin{equation}
+\frac{d \hat{A}\left(t\right)}{dt} = 
+- \sum_{(k)} g_k^2 \int_0^t
+d t'  \hat{A}\left(t'\right)e^{i \left(\omega -
+  \omega_k\right)\left(t - t'\right)} 
++ \hat{F}\left(t\right).
+\label{eqPart1Ch2_LanzgevenAA}
+\end{equation}
+% где 
+% $\hat{F}\left(t\right) = \hat{f}\left(t\right) e^{i \omega t}$. 
+Первый член выражения (\ref{eqPart1Ch2_LanzgevenAA}) имеет вид, с которым мы
+сталкивались рассматривая спонтанное излучение методом
+Вайскопфа-Вигнера. Примененный там подход можно применить и здесь. Из
+выражения (\ref{eqPart1Ch2_LanzgevenAA}) видно, что основной вклад
+дадут члены с частотами, близкими к частоте моды: $\omega_k \approx
+\omega$. По этой причине все медленно меняющиеся члены можно взять при
+частоте $\omega$ и вынести их из под интеграла. Суммирование по $k$,
+считая спектр фононов квазинепрерывным, можно заменить интегрированием
+по частоте:
+\begin{eqnarray}
+\sum_{(k)}g_k^2\int_0^t d t' \hat{A}\left(t'\right) e^{i\left(\omega -
+  \omega_k\right)\left(t - t'\right)} = 
+\nonumber \\
+=
+\int_0^t d t'
+  \hat{A}\left(t'\right)\int_0^{\infty}g^2\left(\omega\right) 
+D\left(\omega\right) e^{i\left(\omega -
+  \omega'\right)\left(t - t'\right)} d \omega' = 
+\nonumber \\
+= g^2\left(\omega\right) 
+D\left(\omega\right)
+\int_0^t d t'
+  \hat{A}\left(t'\right)
+\int_0^{\infty}e^{i\left(\omega -
+  \omega'\right)\left(t - t'\right)} d \omega',
+\nonumber
+\end{eqnarray}
+где $D\left(\omega\right)$ частотная плотность состояний.
+$D\left(\omega\right)$ и $g^2\left(\omega\right)$ взяты при частоте
+моды поля и вынесены из под знака интеграла.
+
+Рассмотрим интеграл по частоте. Действуя так же как при рассмотрении
+спонтанного излучения методом Вайскопфа-Вигнера, получим
+\begin{equation}
+\int_0^{\infty}e^{- i\left(\omega' -
+  \omega\right)\left(t - t'\right)} d \omega' = 
+\int_{-\omega}^{\infty} e^{-i \nu \left(t - t'\right)} d \nu \approx 
+\int_{-\infty}^{\infty} e^{-i \nu \left(t - t'\right)} d \nu = 
+2 \pi \delta\left(t - t'\right).
+\nonumber
+\end{equation}
+Следовательно можно написать
+\begin{eqnarray}
+\frac{d \hat{A}\left(t\right)}{d t} = 
+- 2 \pi g^2\left(\omega\right) 
+D\left(\omega\right)
+\int_0^t d t'
+  \hat{A}\left(t'\right)
+\delta\left(t - t'\right)  + \hat{F}\left(t\right) = 
+\nonumber \\
+=
+- 2 \pi g^2\left(\omega\right) 
+D\left(\omega\right) \hat{A}\left(t\right)
+ + \hat{F}\left(t\right).
+\nonumber
+\end{eqnarray}
+ Обозначим 
+\(
+\left.2 \pi D g^2\right|_{\omega} = \frac{\gamma}{2}
+\) - коэффициент затухания поля. Получим
+\begin{equation}
+\frac{d \hat{A}\left(t\right)}{d t} = 
+- \frac{\gamma}{2} \hat{A}\left(t\right) + 
+\hat{F}\left(t\right),
+\label{eqPart1Ch2_LanzgevenAeq}
+\end{equation}
+где $\hat{F}\left(t\right)$ случайный шумовой оператор, свойства
+которого необходимо определить. Как будет видно из дальнейшего,
+шумовой оператор обеспечивает сохранение коммутационных соотношений для
+оператора моды поля.
+
+Изучим теперь статистические свойства, характеризуемые корреляционными
+функциями $\hat{F}$. Предположим, что резервуар находится в тепловом
+равновесии при температуре $T$. Тогда имеем:
+\begin{eqnarray}
+\left<\hat{b}_k\left(0\right)\right>_R = 
+\left<\hat{b}_k^{+}\left(0\right)\right>_R = 0, 
+\nonumber \\
+\left<\hat{b}_k^{+}\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R = 
+\bar{n}_k \delta_{k k'},
+\nonumber \\
+\left<\hat{b}_k\left(0\right)\hat{b}_{k'}^{+}\left(0\right)\right>_R = 
+\left(\bar{n}_k + 1\right)\delta_{k k'},
+\nonumber \\
+\left<\hat{b}_k\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R = 
+\left<\hat{b}_k^{+}\left(0\right)\hat{b}_{k'}^{+}\left(0\right)\right>_R
+= 0,
+\label{eqPart1Ch2_LanzgevenPropertyF}
+\end{eqnarray}
+где $\left<\dots\right>_R$ означает усреднение по переменным
+термостата, а $\bar{n}_k$ - среднее число фононов в моде $k$. Шумовой
+оператор был определен формулой 
+\begin{equation}
+\hat{F}\left(t\right) = -i \sum_{(k)}g_k 
+\hat{b}_k\left(0\right)
+e^{-i \left(\omega_k - \omega\right)t}.
+\label{eqPart1Ch2_LanzgevenDefenitionF}
+\end{equation}
+Используя (\ref{eqPart1Ch2_LanzgevenPropertyF}), легко видеть
+\begin{eqnarray}
+\left<\hat{F}\left(t\right)\right>_R =
+\left<\hat{F}^{+}\left(t\right)\right>_R  = 0,
+\nonumber \\
+\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\nonumber \\
+= \sum_{k}\sum_{k'}g_k g_{k'}
+\left<\hat{b}_k^{+}\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R 
+e^{i\left(\omega_k - \omega\right)t} 
+ e^{-i\left(\omega_{k'} - \omega\right)t'} =
+\nonumber \\
+= \sum_{k}g_k^2 \bar{n}_k 
+e^{i\left(\omega_k - \omega\right)\left(t - t'\right)} = 
+\nonumber \\
+=
+\int_0^\infty
+g^2\left(\omega\right)D\left(\omega\right)\bar{n}_T
+e^{i\left(\omega' - \omega\right)\left(t - t'\right)}d \omega' = 
+\nonumber \\
+= 2 \pi
+g^2\left(\omega\right)D\left(\omega\right)\bar{n}_T
+\delta\left(t - t'\right) =
+\frac{\gamma \bar{n}_{T}}{2} \delta\left(t - t'\right),
+\label{eqPart1Ch2_LanzgevenCorrelations}
+\end{eqnarray}
+где $\bar{n}_T$ среднее число фононов в моде резервуара при
+температуре $T$, определяемое формулой Планка,
+$\gamma = 4 \pi g^2\left(\omega\right)D\left(\omega\right)$.
+Если согласно Ланжевену ввести коэффициент диффузии $\mathcal{D} =
+\frac{\gamma \bar{n}_{T}}{2}$, то последнее уравнение системы
+(\ref{eqPart1Ch2_LanzgevenCorrelations}) можно записать в виде
+\begin{equation}
+\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\mathcal{D} \delta\left(t - t'\right). 
+\nonumber
+\end{equation}
+Заметим что $\left<\dots\right>_R$ означает усреднение по переменным
+термостата, следовательно результатом усреднения будет корреляционная
+функция, зависящая только от переменных динамической системы (поля).
+
+Подобным образом доказывается
+\begin{equation}
+\left<\hat{F}\left(t\right)\hat{F}^{+}\left(t'\right)\right>_R = 
+\frac{\gamma\left(\bar{n}_{T} + 1\right)}{2} \delta\left(t - t'\right)
+\label{eqPart1Ch2_Lanzgeven_Task1}
+\end{equation}
+и
+\begin{equation}
+\left<\hat{F}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\left<\hat{F}^{+}\left(t\right)\hat{F}^{+}\left(t'\right)\right>_R = 0.
+\label{eqPart1Ch2_Lanzgeven_Task2}
+\end{equation}
+Таким образом, в нашем приближении, шум является
+$\delta$-коррелированым.
+
+Нам еще понадобится корреляционная функция вида
+\(
+\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t'\right)\right>_R 
+\) 
+- необходимая для вывода уравнения, которому удовлетворяет 
+\(
+\left<\hat{A}^{+}\left(t\right)\hat{A}\left(t'\right)\right>_R 
+\). Для этого проинтегрируем уравнение для $\hat{A}\left(t\right)$
+(\ref{eqPart1Ch2_LanzgevenAeq}) и в результате при помощи
+операционного исчисления получаем
+\begin{equation} 
+\hat{A}\left(t\right) = \hat{A}\left(0\right)e^{-\frac{\gamma}{2}t} +
+\int_0^t d t' e^{-\frac{\gamma}{2}\left(t - t'\right)} \hat{F}\left(t'\right).
+\nonumber
+\end{equation} 
+Помножим это выражение на $\hat{F}^{+}\left(t\right)$ и усредним по
+термостату. Получим
+\begin{eqnarray} 
+\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R = 
+\int_0^t  
+\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R 
+e^{-\frac{\gamma}{2}\left(t - t'\right)}
+d t' +
+\nonumber \\
++ \left<\hat{F}^{+}\left(t\right)\hat{A}\left(0\right)\right>_R e^{-\frac{\gamma}{2}t}.
+\label{eqPart1Ch2_LanzgevenFACorr}
+\end{eqnarray} 
+Последний член в (\ref{eqPart1Ch2_LanzgevenFACorr}) равен $0$, т. к. 
+$\hat{F}^{+}\left(t\right)$ и $\hat{A}\left(0\right)$ независимы,
+%\footnote{$\hat{F}^{+}\left(t\right)$ в более поздний момент времени
+% не может влиять на $\hat{A}\left(0\right)$ в начальный момент
+% времени} 
+ а их средние равны $0$. Принимая во внимание второе уравнение системы 
+(\ref{eqPart1Ch2_LanzgevenCorrelations}) т. е.
+\(
+\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\frac{\gamma \bar{n}_{T}}{2} \delta\left(t - t'\right),
+\)
+получим
+\begin{equation}
+\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R = 
+\frac{\gamma \bar{n}_{T}}{2}.
+\nonumber
+\end{equation}
+Теперь можно рассмотреть корреляционную функцию 
+\(
+\left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R
+\). Дифференцируя эту функцию по времени, получим
+\begin{equation}
+\frac{d \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
+t}=
+\left<\frac{d \hat{A}^{+}\left(t\right)\hat{A}\left(t\right)}{d
+t}\right>_R =
+\left<\frac{d \hat{A}^{+}\left(t\right)}{d
+t} \hat{A}\left(t\right) \right>_R + 
+\left<\hat{A}^{+}\left(t\right)\frac{d \hat{A}\left(t\right)}{d
+t}  \right>_R.
+\label{eqPart1Ch2_Lanzgeven_dAA}
+\end{equation}
+Далее воспользуемся уравнением (\ref{eqPart1Ch2_LanzgevenAeq}) и
+сопряженным ему, в результате получим
+\begin{equation}
+\frac{d \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
+t}=
+- \gamma \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R
++ \left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R + 
+\left<\hat{A}^{+}\left(t\right)\hat{F}\left(t\right)\right>_R.
+\nonumber
+\end{equation}
+Учитывая выражения 
+\begin{equation}
+\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R =
+\left<\hat{A}^{+}\left(t\right)\hat{F}\left(t\right)\right>_R = 
+\frac{\gamma \bar{n}_T}{2},
+\nonumber
+\end{equation}
+окончательно имеем
+\begin{equation}
+\frac{d \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
+t}=
+- \gamma \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R
++ \gamma \bar{n}_T.
+\nonumber
+\end{equation}
+Подобным образом можно получить
+\begin{equation}
+\frac{d \left<\hat{A}\left(t\right)\hat{A}^{+}\left(t\right)\right>_R}{d
+t}=
+- \gamma \left<\hat{A}\left(t\right)\hat{A}^{+}\left(t\right)\right>_R
++ \gamma \left(\bar{n}_T + 1\right).
+\label{eqPart1Ch2_Lanzgeven_Task3}
+\end{equation}
+Вычитая эти выражения одно из другого, получим для коммутатора
+\begin{equation}
+\frac{d \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R}{d
+t}=
+\gamma \left( 1 - \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R
+\right).
+\label{eqPart1Ch2_Lanzgeven_CommutatorAA}
+\end{equation}
+Из уравнения (\ref{eqPart1Ch2_Lanzgeven_CommutatorAA}) следует, что
+если в начальный момент времени 
+\[
+\left<\left[\hat{A}\left(0\right),\hat{A}^{+}\left(0\right)\right]\right>_R
+= 1,
+\]
+т. е. коммутационные соотношения выполняются, то эти соотношения будут
+выполняться всегда. Другими словами, коммутационные соотношения,
+усредненные по переменным термостата, сохраняются со временем. 
+
+Картина была бы совершенно иная, если бы мы не принимали во внимание
+квантовые шумы. В этом случае уравнение
+(\ref{eqPart1Ch2_Lanzgeven_CommutatorAA}) приняло бы вид
+\begin{equation}
+\frac{d \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R}{d
+t}=
+- \gamma \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R,
+\nonumber
+\end{equation}
+решение которого имеет вид
+\begin{equation}
+\left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R
+= 
+\left<\left[\hat{A}\left(0\right),\hat{A}^{+}\left(0\right)\right]\right>_R
+e^{- \gamma t}= e^{- \gamma t}.
+\nonumber
+\end{equation}
+Это означает, что при достаточно большом времени операторы $\hat{A}$ и
+$\hat{A}^{+}$ коммутируют, чего на самом деле не наблюдается. По этой
+причине учет квантового шумового члена обязателен.
+
+
+Уравнение движения усредненного по переменным термостата поля легко
+получить из (\ref{eqPart1Ch2_LanzgevenAeq}). Для этого вначале запишем
+усредненное поле
+\begin{eqnarray}
+\left<\hat{E}\left(t\right)\right>_R 
+= \left< E_0 sin\,kz \left( \hat{a}\left(t\right) +
+\hat{a}^{+}\left(t\right)\right)\right>_R  = 
+\nonumber \\
+= E_0 sin\,kz
+\left(\left<\hat{A}\left(t\right)\right>_R e^{-i \omega t}
++
+\left<\hat{A}^{+}\left(t\right)\right>_R e^{i \omega t}
+\right),
+\nonumber
+\end{eqnarray}
+где учтено $\hat{a} = \hat{A}e^{-i \omega t}$. Из
+(\ref{eqPart1Ch2_LanzgevenAeq}) имеем 
+\begin{equation}
+\frac{d \left<\hat{A}\left(t\right)\right>_R}{d t} = 
+- \frac{\gamma}{2} \left<\hat{A}\left(t\right)\right>_R,
+\nonumber
+\end{equation}
+т. к. $\left<\hat{F}\left(t\right)\right>_R = 0$. Таким образом со
+временем $\left<\hat{A}\left(t\right)\right>_R$ и
+$\left<\hat{A}^{+}\left(t\right)\right>_R$ а вместе с ними и  
+$\left<\hat{E}\left(t\right)\right>_R$ стремятся к нулю:
+\begin{equation}
+\left<\hat{E}\left(t\right)\right>_R \rightarrow 0.
+\nonumber
+\end{equation}
+
+\subsection{Флуктационно-диссипационная формула}
+Нами было получено выражение (\ref{eqPart1Ch2_LanzgevenCorrelations}):
+\begin{equation}
+\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\frac{\gamma \bar{n}_{T}}{2} \delta\left(t - t'\right).
+\nonumber
+\end{equation}
+Интегрируя обе части по $d t'$, получим
+\begin{equation}
+\gamma =
+\frac{2}{\bar{n}_T}\int_0^{\infty}\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R
+d t',
+\label{eqPart1Ch2_LanzgevenGamma}
+\end{equation}
+т. е. скорость затухания и шумовые флуктуации связаны между собой
+соотношением (\ref{eqPart1Ch2_LanzgevenGamma}). Большему затуханию
+соответствуют большие шумы.

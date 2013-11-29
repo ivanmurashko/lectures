@@ -1,0 +1,123 @@
+%%Created by jPicEdt 1.4.1: mixed JPIC-XML/LaTeX format
+%%Sat Jun 02 13:52:16 MSD 2007
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="60" y-min="0" y-max="40" auto-bounding="true">
+%<multicurve stroke-width= "0.5"
+%	 points= "(20,30);(20,30);(40,10);(40,10)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(10,20);(10,20);(20,20);(20,20)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(20,20);(20,20);(40,20);(40,20)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(30,40);(30,40);(30,30);(30,30)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(30,30);(30,30);(30,10);(30,10)"
+%	 fill-style= "none"
+%	 />
+%<multicurve points= "(40,20);(40,20);(50,20);(50,20)"
+%	 fill-style= "none"
+%	 />
+%<multicurve points= "(30,10);(30,10);(30,0);(30,0)"
+%	 fill-style= "none"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(0,20)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\hat{a}_1$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(20,40)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\hat{a}_0$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(60,20)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\hat{a}_3$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(40,0)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\hat{a}_2$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(50,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(20,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$r,t$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(40,30)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$r',t'$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(60,40)(0,0)
+\linethickness{0.5mm}
+\multiput(20,30)(0.12,-0.12){167}{\line(1,0){0.12}}
+\linethickness{0.3mm}
+\put(10,20){\line(1,0){10}}
+\put(20,20){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(20,20){\line(1,0){20}}
+\put(40,20){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\put(30,30){\line(0,1){10}}
+\put(30,30){\vector(0,-1){0.12}}
+\linethickness{0.3mm}
+\put(30,10){\line(0,1){20}}
+\put(30,10){\vector(0,-1){0.12}}
+\linethickness{0.3mm}
+\put(40,20){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(30,0){\line(0,1){10}}
+\put(0,20){\makebox(0,0)[cc]{$\hat{a}_1$}}
+
+\put(20,40){\makebox(0,0)[cc]{$\hat{a}_0$}}
+
+\put(60,20){\makebox(0,0)[cc]{$\hat{a}_3$}}
+
+\put(40,0){\makebox(0,0)[cc]{$\hat{a}_2$}}
+
+\put(50,10){\makebox(0,0)[cc]{}}
+
+\end{picture}

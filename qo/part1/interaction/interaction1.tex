@@ -1,0 +1,221 @@
+%% -*- coding:utf-8 -*- 
+\section{Взаимодействие атома с модой электромагнитного поля}
+Уравнение Шредингера в представлении взаимодействия имеет вид
+\begin{equation}
+i \hbar \frac{\partial}{\partial t} \left|\psi\left(r, t\right)\right>_I
+= \hat{V}_I \left|\psi\left(r, t\right)\right>_I,
+\label{eqCh2_Shredinger_inter}
+\end{equation}
+ где через 
+\(
+\left|\psi\left(r, t\right)\right>_I
+\)
+записана волновая функция в представлении взаимодействия:
+\begin{equation}
+\left|\psi\left(r, t\right)\right>_I = e^{i \frac{\hat{\mathcal{H}}_0
+    t}{\hbar}}
+\left|\psi\left(r, t\right)\right>.
+\label{eqCh2_Psi_inter}
+\end{equation}
+Решим это уравнение для начального состояния 
+$\left|\psi\left(r, 0\right)\right>_I = \left|b, n + 1\right>_I$ , т. е. 
+будем считать, что в начальный момент атом находится в нижнем
+состоянии, а поле содержит  $n + 1$  фотонов. Другой случай
+соответствует начальному состоянию системы  
+$\left|a, n\right>_I$,  т.е. атом находится в верхнем
+состоянии, а поле моды содержит  $n$  фотонов. Через некоторое время в 
+результате взаимодействия атома и поля система будет находиться в
+суперпозиционном состоянии  
+\begin{equation}
+\left|\psi\left(r, t\right)\right>_I = 
+C_{a,n}\left(t\right)_I\left|a, n\right>_I +
+C_{b,n+1}\left(t\right)_I\left|b, n + 1\right>_I.
+\label{eqCh2_OurPsi_inter}
+\end{equation}
+
+Воспользовавшись (\ref{eqCh2_Psi_inter}) в левой части выражения
+(\ref{eqCh2_OurPsi_inter}) получим 
+\begin{eqnarray}
+C_{a,n}\left(t\right)_I\left|a, n\right>_I +
+C_{b,n+1}\left(t\right)_I\left|b, n + 1\right>_I =
+\nonumber \\
+= C_{a,n}\left(t\right)_I e^{i \frac{\hat{\mathcal{H}}_0
+    t}{\hbar}} \left|a, n\right> +
+C_{b,n+1}\left(t\right)_I e^{i \frac{\hat{\mathcal{H}}_0
+    t}{\hbar}} \left|b, n + 1\right> = 
+\nonumber \\
+=
+C_{a,n}\left(t\right)_I exp\left\{i \left(
+ \omega_a +  \omega 
+\left( n + \frac{1}{2}\right) 
+\right) t
+\right\} \left|a, n\right> +
+\nonumber \\
++
+C_{b,n+1}\left(t\right)_I exp\left\{i 
+\left(
+\omega_b +  \omega 
+\left( n + 1 + \frac{1}{2}\right) 
+\right)
+    t \right\} \left|b, n + 1\right>
+\nonumber \\
+=
+C_{a,n}\left(t\right) \left|a, n\right> +
+C_{b,n+1}\left(t\right) \left|b, n + 1\right>,
+\nonumber
+\end{eqnarray}
+где через $C_{a,n}\left(t\right)$ и $C_{b,n+1}\left(t\right)$
+обозначено 
+\begin{eqnarray}
+C_{a,n}\left(t\right) = 
+C_{a,n}\left(t\right)_I exp\left\{i 
+\left(
+\omega_a +  \omega 
+\left( n + \frac{1}{2}\right) 
+\right) 
+    t \right\},
+\nonumber \\
+C_{b,n+1}\left(t\right) =
+C_{b,n+1}\left(t\right)_I exp\left\{i \left(
+\omega_b + \omega 
+\left( n + 1 + \frac{1}{2}\right) 
+\right)
+    t\right\}.
+\nonumber
+\end{eqnarray}
+
+Таким образом уравнение (\ref{eqCh2_Shredinger_inter}) принимает
+следующий вид   
+\begin{eqnarray}
+i \left( 
+{\dot C}_{a,n}\left(t\right)\left|a, n\right> +
+{\dot C}_{b,n+1}\left(t\right)\left|b, n + 1\right>
+\right) =
+\nonumber \\
+= g \left(
+\hat{a}\hat{\sigma}^{+} e^{-i \left(\omega - \omega_{ab}\right)t} +
+\hat{a}^{+}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t}
+\right) 
+\left( 
+C_{a,n}\left|a, n\right> +
+C_{b,n+1}\left|b, n + 1\right>
+\right) = 
+\nonumber \\
+= g \sqrt{n + 1} \left(
+C_{b, n+1} e^{-i \left(\omega - \omega_{ab}\right)t} \left|a, n\right> + 
+C_{a, n} e^{i \left(\omega - \omega_{ab}\right)t} \left|b, n + 1\right>
+\right).
+\end{eqnarray}
+Помножим это уравнение слева соответственно на 
+$\left<a, n\right|$ и $\left<b, n + 1\right|$.  Учитывая свойства
+операторов  $\hat{a}$, $\hat{a}^{+}$,  $\hat{\sigma}$,
+$\hat{\sigma}^{+}$ и ортогональность векторов состояния, получим  
+систему уравнений для амплитуд вероятностей 
+\begin{eqnarray}
+{\dot C}_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+e^{-i \left(\omega - \omega_{ab}\right)t} 
+C_{b, n + 1}\left(t\right),
+\nonumber \\
+{\dot C}_{b, n + 1}\left(t\right) = -i g \sqrt{n + 1}
+e^{i \left(\omega - \omega_{ab}\right)t} 
+C_{a, n}\left(t\right).
+\label{eqCh2_task3}
+\end{eqnarray}
+
+\input ./part1/interaction/fig3.tex
+
+Для случая, когда атом находится в нижнем состоянии (случай поглощения
+фотона) имеем в начальный момент  
+$C_{a, n}\left(0\right) = 0$, $C_{b, n + 1}\left(0\right) = 1$
+(рис. \ref{figPart1Ch2_3}). Формальное интегрирование (\ref{eqCh2_task3}) дает  
+\begin{equation}
+C_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+\int_0^t e^{-i \left(\omega - \omega_{ab}\right)t'} 
+C_{b, n + 1}\left(t'\right) dt'
+\label{eqCh2_ampl_prob_int}
+\end{equation}
+В первом приближении для малых времен можно в
+(\ref{eqCh2_ampl_prob_int}) под интегралом 
+положить $C_{b, n + 1}\left(t'\right) = 1$.  Тогда, интегрируя,
+получим  
+\begin{equation}
+C_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+\frac{e^{-i \left(\omega - \omega_{ab}\right)t} - 1}
+{-i \left(\omega - \omega_{ab}\right)}
+\end{equation}
+откуда для вероятности возбуждения атома и поглощения фотона имеем
+\begin{equation}
+\left|C_{a,n}\left(t\right)\right|^2 = g^2 \left(n + 1\right) t^2
+\frac{sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2\left(t/2\right)^2}. 
+\label{eqCh2_prob_C_an}
+\end{equation}
+
+\input ./part1/interaction/fig4.tex
+
+В таком приближении можно решить и вторую задачу (рис. \ref{figPart1Ch2_4}) 
+$C_{a, n}\left(0\right) = 1$, $C_{b, n + 1}\left(0\right) = 0$. 
+Получим для вероятности перехода атома в нижнее состояние и излучения
+фотона аналогичное (\ref{eqCh2_prob_C_an}) выражение  
+\begin{equation}
+\left|C_{b, n + 1}\left(t\right)\right|^2 = g^2 \left(n + 1\right) t^2
+\frac{sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2\left(t/2\right)^2}.
+\label{eqCh2_prob_C_bn}
+\end{equation}
+
+В случае, когда поле не имеет ни одного фотона  ($n = 0$),
+получаем отличную от нуля вероятность 
+$\left|C_{b, 1}\left(t\right)\right|^2 \cong g^2 t^2$
+($\frac{sin^2 x}{x^2} \cong 1$,  если
+$x \ll 1$), откуда видно, что возбужденный атом даже при
+отсутствии фотонов может перейти в нижнее состояние. Такой процесс
+носит название спонтанного излучения или спонтанного перехода. Он
+связан с нулевыми колебаниями поля. Заметим, что при полуклассическом
+рассмотрении спонтанное излучение не следует из полуклассических
+уравнений и вводится из дополнительных соображений. Из квантовых
+уравнений спонтанное излучение следует естественным образом. 
+Систему уравнений (\ref{eqCh2_task3}) можно решить точно. Для простоты
+будем рассматривать резонансный случай $\omega = \omega_{ab}$.
+Исключим из уравнений $C_{b, n + 1}\left(t\right)$:   
+\[
+{\ddot C}_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+{\dot C}_{b, n + 1}\left(t\right) = -g^2 \left(n + 1\right)
+C_{a,n}\left(t\right). 
+\]
+Решение полученного уравнения:
+\begin{equation}
+C_{a,n}\left(t\right) = A \sin\left(g \sqrt{n + 1} t\right) +
+B \cos\left(g \sqrt{n + 1} t\right)
+\end{equation}
+
+При поглощении начальные условия ($C_{a,n}\left(0\right) = 0$, $C_{b,n+1}\left(0\right)
+= 1$) дают $A = i$, $B = 0$, следовательно,  
+\begin{equation}
+C_{a,n}\left(t\right) = -i \sin\left(g \sqrt{n + 1} t\right), \quad
+C_{b, n + 1}\left(t\right) = \cos\left(g \sqrt{n + 1} t\right), 
+\end{equation}
+где $g\sqrt{n + 1}$ - частота Раби в квантовом случае. Для случая
+излучения из начальных условий ($C_{a,n}\left(0\right) = 1$,
+$C_{b,n+1}\left(0\right) = 0$) имеем $A = 0$, $B = 1$, следовательно, 
+\begin{equation}
+C_{a,n}\left(t\right) = \cos\left(g \sqrt{n + 1} t\right), \quad
+C_{b, n + 1}\left(t\right) = -i \sin\left(g \sqrt{n + 1} t\right), 
+\end{equation}
+На рис. \ref{figPart1Ch2_5} изображены зависимости вероятностей 
+$\left|C_{a,n}\left(t\right)\right|^2$ и 
+$\left|C_{b, n + 1}\left(t\right)\right|^2$  от времени для случая
+излучения фотона.
+
+\input ./part1/interaction/fig5.tex
+
+В полуклассическом выражении частота Раби равна 
+$\frac{\left|p E\right|}{\hbar}$,  в квантовом - $g\sqrt{n + 1}$,
+т. е. $E$  соответствует $E_1\sqrt{n + 1}$,  где $E_1$ - поле,
+соответствующее одному фотону в моде. При больших $n$ эти два
+выражения практически совпадают. Но при малых $n$ различие может быть 
+значительным. Из квантового  выражения следует, что даже когда в моде
+нет фотонов, вероятности осциллируют с частотой  $g$.  На самом деле 
+известно, что осцилляции на частоте Раби затухают. Расхождение связано
+с тем, что атом взаимодействует со всеми модами пространства, мы же
+учитывали только взаимодействие с одной модой.  

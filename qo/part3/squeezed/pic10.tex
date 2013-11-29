@@ -1,0 +1,104 @@
+%%Created by jPicEdt 1.4.1: mixed JPIC-XML/LaTeX format
+%%Sat Jun 16 22:51:04 MSD 2007
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="65" y-min="10" y-max="30" auto-bounding="true">
+%<parallelogram p3= "(40,10)"
+%	 p1= "(20,20)"
+%	 p2= "(40,20)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(0,15);(0,15);(20,15);(20,15)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(40,15);(40,15);(60,25);(60,25)"
+%	 fill-style= "none"
+%	 />
+%<multicurve right-arrow= "head"
+%	 points= "(40,15);(40,15);(60,10);(60,10)"
+%	 fill-style= "none"
+%	 />
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(0,20)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%накачка
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(0,20)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(5,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\omega_p$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(65,25)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\omega_s$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(65,10)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\omega_i$
+%</text>
+%<text text-vert-align= "center-v"
+%	 anchor-point= "(5,30)"
+%	 text-hor-align= "center-h"
+%	 text-frame= "noframe"
+%	 fill-style= "none"
+%	 >
+%$\omega_p = \omega_s +\omega_i $
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(65,30)(0,0)
+\linethickness{0.3mm}
+\put(20,20){\line(1,0){20}}
+\put(20,10){\line(0,1){10}}
+\put(40,10){\line(0,1){10}}
+\put(20,10){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(0,15){\line(1,0){20}}
+\put(20,15){\vector(1,0){0.12}}
+\linethickness{0.3mm}
+\multiput(40,15)(0.24,0.12){83}{\line(1,0){0.24}}
+\put(60,25){\vector(2,1){0.12}}
+\linethickness{0.3mm}
+\multiput(40,15)(0.48,-0.12){42}{\line(1,0){0.48}}
+\put(60,10){\vector(4,-1){0.12}}
+\put(0,20){\makebox(0,0)[cc]{накачка}}
+
+\put(0,20){\makebox(0,0)[cc]{}}
+
+\put(5,10){\makebox(0,0)[cc]{$\omega_p$}}
+
+\put(65,25){\makebox(0,0)[cc]{$\omega_s$}}
+
+\put(65,10){\makebox(0,0)[cc]{$\omega_i$}}
+
+\put(5,30){\makebox(0,0)[cc]{$\omega_p = \omega_s +\omega_i $}}
+
+\end{picture}

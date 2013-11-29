@@ -1,0 +1,105 @@
+%%Created by jPicEdt 1.5-pre1: mixed JPIC-XML/LaTeX format
+%%Mon Jan 14 00:12:35 MSK 2013
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="85" y-min="0" y-max="40" auto-bounding="true">
+%<multicurve points="(0,15);(0,15);(10,15);(10,15)"
+%	 />
+%<multicurve points="(0,35);(0,35);(10,35);(10,35)"
+%	 />
+%<multicurve points="(25,35);(25,35);(40,35);(40,35)"
+%	 />
+%<multicurve points="(25,15);(25,15);(40,15);(40,15)"
+%	 />
+%<multicurve points="(10,5);(10,5);(40,5);(40,5)"
+%	 />
+%<parallelogram p3="(60,0)"
+%	 p2="(60,40)"
+%	 p1="(40,40)"
+%	 />
+%<multicurve points="(60,5);(60,5);(75,5);(75,5)"
+%	 />
+%<multicurve points="(60,35);(60,35);(75,35);(75,35)"
+%	 />
+%<multicurve points="(60,15);(60,15);(75,15);(75,15)"
+%	 />
+%<text anchor-point="(0,25)"
+%	 >
+%$\left|0\right&gt;$
+%</text>
+%<text anchor-point="(0,5)"
+%	 >
+%$\left|0\right&gt;$
+%</text>
+%<parallelogram p3="(25,10)"
+%	 p2="(25,40)"
+%	 p1="(10,40)"
+%	 />
+%<text anchor-point="(45,35)"
+%	 >
+%$\hat{U}_f$
+%</text>
+%<text anchor-point="(30,25)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(65,25)"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point="(85,5)"
+%	 >
+%$\left|f\left(x\right)\right&gt;$
+%</text>
+%<text anchor-point="(15,35)"
+%	 >
+%$\hat{H}^{\otimes n}$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(85,40)(0,0)
+\linethickness{0.3mm}
+\put(0,15){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(0,35){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(25,35){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(25,15){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(10,5){\line(1,0){30}}
+\linethickness{0.3mm}
+\put(40,40){\line(1,0){20}}
+\put(40,0){\line(0,1){40}}
+\put(60,0){\line(0,1){40}}
+\put(40,0){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(60,5){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(60,35){\line(1,0){15}}
+\linethickness{0.3mm}
+\put(60,15){\line(1,0){15}}
+\put(0,25){\makebox(0,0)[cc]{$\left|0\right>$}}
+
+\put(0,5){\makebox(0,0)[cc]{$\left|0\right>$}}
+
+\linethickness{0.3mm}
+\put(10,40){\line(1,0){15}}
+\put(10,10){\line(0,1){30}}
+\put(25,10){\line(0,1){30}}
+\put(10,10){\line(1,0){15}}
+\put(45,35){\makebox(0,0)[cc]{$\hat{U}_f$}}
+
+\put(30,25){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(65,25){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(85,5){\makebox(0,0)[cc]{$\left|f\left(x\right)\right>$}}
+
+\put(15,35){\makebox(0,0)[cc]{$\hat{H}^{\otimes n}$}}
+
+\end{picture}

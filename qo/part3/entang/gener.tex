@@ -1,0 +1,76 @@
+%% -*- coding:utf-8 -*- 
+\section{Получение Белловских состояний}
+\label{subsecPart3NonclassEntanglBelGener}
+
+Для получения перепутанных состояний может быть использован процесс
+параметрического рассеяния света, рассмотренный нами ранее для
+описания процесса получения сжатых состояний электромагнитного
+поля (см. \ref{pNonClassGenerSqueezed}). Тогда нами рассматривался
+фазовый синхронизм I рода при котором поляризации двух фотонов
+одинаковы. При фазовом синхронизме второго рода поляризации фотонов
+различны. При этом фотоны распространяются вдоль двух конусов, как
+показано на рис. \ref{figEntangGen}. 
+
+\input ./part3/entang/figgen1.tex
+
+Вдоль одного конуса излучение поляризовано
+как обыкновенные волны, а вдоль второго как необыкновенные. Таким
+образом в точках пересечения конусов (см. рис. \ref{figEntangGen2})
+состояние света записывается следующим образом
+\begin{equation}
+\left|\psi\right> =
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|y\right>_2 + e^{i \alpha}
+  \left|y\right>_1\left|x\right>_2
+  \right),
+\nonumber
+\end{equation}
+где разность фаз $\alpha$ возникает из за разности показателей
+преломления для обыкновенного и необыкновенного фотонов. Используя
+дополнительную двулучепреломляющую фазовую пластинку можно получить
+любое значение разности фаз
+$\alpha$, например $0$ или $\pi$. В результате мы получим следующие белловские состояния:
+\begin{eqnarray}
+  \left|\psi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|y\right>_2 + 
+  \left|y\right>_1\left|x\right>_2
+  \right),
+  \nonumber \\
+  \left|\psi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|y\right>_2 - 
+  \left|y\right>_1\left|x\right>_2
+  \right).
+  \label{eqEntangBellBaseGen1}
+\end{eqnarray}
+
+\input ./part3/entang/figgen2.tex
+
+Теперь если перед одним из пучков, например первым, поместить полуволновую фазовую
+пластинку, которая меняет поляризацию на ортогональную:
+\begin{equation}
+\left|x\right>_1 \rightarrow \left|y\right>_1, \, \left|y\right>_1 \rightarrow \left|x\right>_1,
+\nonumber
+\end{equation}
+то из (\ref{eqEntangBellBaseGen1}) мы получим
+\begin{eqnarray}
+  \left|\phi^{+}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|x\right>_2 + 
+  \left|y\right>_1\left|y\right>_2
+  \right),
+  \nonumber \\
+  \left|\phi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \left|x\right>_1\left|x\right>_2 - 
+  \left|y\right>_1\left|y\right>_2
+  \right).
+  \label{eqEntangBellBaseGen2}
+\end{eqnarray}
+
+Таким образом, объединив (\ref{eqEntangBellBaseGen1}) и
+(\ref{eqEntangBellBaseGen2}), мы получим полный базис (\ref{eqEntangBellBase}).
+
+
+

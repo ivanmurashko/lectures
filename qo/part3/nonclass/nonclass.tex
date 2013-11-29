@@ -1,0 +1,237 @@
+%% -*- coding:utf-8 -*- 
+\chapter{Неклассический свет}
+\label{chNonClass}
+Квантовые состояния света можно разбить на две группы: состояния,
+которые при росте интенсивности света асимптотически стремятся к
+классическому состоянию (классическому свету) и состояния, которые не
+обладают таким свойством. Например, из рассмотренных нами ранее
+состояний когерентное состояние имеет классический предел, а
+энергетическое (фоковское) состояние его не имеет.
+
+Ранее мы определили понятие функции когерентности второго порядка 
+$G^{(2)}$. Для одномодового света (\ref{eqCh4_28})
+\begin{eqnarray}
+G^{(2)} = \frac{\left<\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\right>}
+{\left<\hat{a}^{+}\hat{a}\right>^2} = 
+\nonumber \\
+= 
+\frac{\left<\hat{a}^{+}\hat{a}\left(\hat{a}^{+}\hat{a} - 1\right)\right>}
+{\left<\hat{a}^{+}\hat{a}\right>^2} = 
+\frac{\left<n^2\right> - \left<n\right>}{\left<n\right>^2},
+\label{eqPart3_Nonclass_Nonclass1}
+\end{eqnarray}
+где использованы коммутационные соотношения
+$\left[\hat{a}\hat{a}^{+}\right] = 1$, 
+$\hat{n} = \hat{a}^{+}\hat{a}$ - оператор числа частиц.
+
+В классическом случае $\left<\hat{a}^{+}\hat{a}\right> =
+\left|\alpha\right|^2$, где $\left|\alpha\right|^2 = I$ интенсивность
+поля (модуль квадрата амплитуды поля). Поскольку классические величины
+коммутируют, формулу (\ref{eqPart3_Nonclass_Nonclass1}) в классическом
+случае можно заменить
+\begin{equation}
+G^{(2)}_{\mbox{кл.}} = 
+\frac{\left<\left|\alpha\right|^4\right>}{\left<\left|\alpha\right|^2\right>^2}
+= 
+\frac{\left<I^2\right>}{\left<I\right>^2},
+\label{eqPart3_Nonclass_Nonclass2}
+\end{equation}
+где усреднение осуществляется при помощи положительно
+определенной классической функции распределения $P\left(\alpha\right)$
+\begin{equation}
+\left<\left|\alpha\right|^{2n}\right> = 
+\int_0^{\infty}P\left(\left|\alpha\right|^2\right)
+\left|\alpha\right|^{2n}d^2\alpha, \, n=1,2.
+\nonumber
+\end{equation}
+Рассмотрим разность 
+$G^{(2)}_{\mbox{кл.}} - G^{(1)}_{\mbox{кл.}} = G^{(2)}_{\mbox{кл.}} -
+1$, т. к. для одномодового поля, как мы знаем, $G^{(1)}_{\mbox{кл.}} =
+1$ всегда. Из (\ref{eqPart3_Nonclass_Nonclass2}) следует
+\begin{eqnarray}
+G^{(2)}_{\mbox{кл.}} - G^{(1)}_{\mbox{кл.}} = G^{(2)}_{\mbox{кл.}} -
+1 = 
+\nonumber \\
+=
+\frac{\left<\left|\alpha\right|^4\right>}{\left<\left|\alpha\right|^2\right>^2}
+- 1 = 
+\frac{\left<\left|\alpha\right|^4\right> -
+  \left<\left|\alpha\right|^2\right>^2}{\left<\left|\alpha\right|^2\right>^2}
+= 
+\nonumber \\
+= \frac{\int_0^{\infty} P \left|\alpha\right|^4 d^2\alpha - 2
+  \left<\left|\alpha\right|^2\right>^2 +
+  \left<\left|\alpha\right|^2\right>^2}{\left<\left|\alpha\right|^2\right>^2}
+= 
+\nonumber \\
+= 
+\frac{\int_0^{\infty} P \left(\left|\alpha\right|^4  - 2
+  \left|\alpha\right|^2
+  \left<\left|\alpha\right|^2\right> +
+  \left<\left|\alpha\right|^2\right>^2\right)d^2\alpha}
+     {\left<\left|\alpha\right|^2\right>^2}
+=
+\nonumber \\
+=
+\frac{\int_0^{\infty} P \left(\left|\alpha\right|^2  - 
+  \left<\left|\alpha\right|^2\right>\right)^2d^2\alpha}{\left<\left|\alpha\right|^2\right>^2}
+\ge 0.
+\label{eqPart3_Nonclass_Nonclass4}
+\end{eqnarray}
+Из неравенства (\ref{eqPart3_Nonclass_Nonclass4}) следует, что
+\begin{equation}
+G^{(2)}_{\mbox{кл.}} \ge 1.
+\nonumber
+\end{equation}
+В квантовом случае из-за некоммутативности операторов ситуация будет
+иная. Формулу (\ref{eqPart3_Nonclass_Nonclass1}) перепишем в следующем
+виде
+\begin{eqnarray}
+G^{(2)} = \frac{\left<\hat{n}^2\right> - \left<\hat{n}\right>}{\left<\hat{n}\right>^2} = 
+\nonumber \\
+=
+1 + \frac{\left(\left<\hat{n}^2\right> - \left<\hat{n}\right>^2\right) -
+  \left<\hat{n}\right>}{\left<\hat{n}\right>^2} = 1 + \frac{\sigma^2 -
+  \left<\hat{n}\right>}{\left<\hat{n}\right>^2}, 
+\label{eqPart3_Nonclass_Nonclass6}
+\end{eqnarray}
+где $\sigma^2$ - среднеквадратичное отклонение от среднего,
+т. е. $\sigma$ - дисперсия. 
+
+Из (\ref{eqPart3_Nonclass_Nonclass6}) следует, что $G^{(2)}$ может
+быть как больше, так и меньше 1, смотря что больше: $\sigma^2$ или
+$\left<\hat{n}\right>$. В классическом случае $G^{(2)} \ge 1$, поэтому
+критерием неклассичности можно принять 
+\begin{equation}
+G^{(2)} < 1
+\label{eqPart3_Nonclass_Nonclass7}
+\end{equation}
+
+Из (\ref{eqPart3_Nonclass_Nonclass6},
+\ref{eqPart3_Nonclass_Nonclass7}) следует, что условием неклассичности
+будет 
+\(
+\sigma^2 - \left<\bar{n}\right> < 0,
+\) 
+т. е. квадрат дисперсии должен быть меньше среднего числа
+фотонов. 
+Известно, что поток фотонов, для которого
+\(
+\sigma^2 - \left<\bar{n}\right> = 0,
+\)
+имеет пуассоновскую статистику (примером служит когерентное
+состояние). Случай 
+\(
+\sigma^2 - \left<\bar{n}\right> < 0
+\)
+соответствует более регулярному потоку, который называется
+субпуассоновским. Это случай антигруппировки фотонов. Примером
+состояния, для которого это справедливо, является например состояние,
+возникающее в результате параметрического рассеяния, которое мы
+рассмотрим позднее. Случай
+\(
+\sigma^2 - \left<\bar{n}\right> > 0
+\)
+соответствует менее регулярному процессу, когда фотоны группируются
+(примером является тепловое возбуждение света). Такое состояние
+называется суперпуассоновским. Все три случая изображены на
+рис. \ref{figPart3Nonclass1}, где показано расположение фотоотсчетов
+во времени.
+
+\input ./part3/nonclass/fignonclass1.tex
+
+Мы приходим к заключению, что неклассическим состояниям соответствует
+субпуассоновский порог. Число $G^{(2)}$ просто связано с другими
+параметрами, характеризующими флуктуации числа фотонов: с дисперсией и
+фактором Фоко, которые часто встречаются в литературе.
+\begin{eqnarray}
+\Phi  = \frac{\sigma^2}{\left<\bar{n}\right>},
+\nonumber \\
+G^{(2)} - 1 = \frac{\Phi - 1}{\left<\bar{n}\right>}
+\nonumber
+\end{eqnarray}
+Экспериментальный характер статистики можно установить из эксперимента,
+в котором определяется корреляционная функция второго порядка
+(эксперимент Брауна - Твисса). Схема эксперимента изображена на
+рис. \ref{figPart3Nonclass2} 
+
+\input ./part3/nonclass/fignonclass2.tex
+
+Регулируемая задержка $\tau$ осуществляется изменением длины одного из
+плеч.
+
+\input ./part3/nonclass/fignonclass3.tex
+
+На рис. \ref{figPart3Nonclass3} изображены три кривые, которые
+получаются в результате эксперимента. Кривая (б) соответствует
+когерентному состоянию. Кривая (а) соответствует группировке фотонов и
+сверхпуассоновской статистике. Кривая (в) соответствует
+антигруппировке и субпуассоновской статистике. Такая кривая характерна
+для неклассического света. Объяснение поведения кривых просто. Если
+$\tau$ велико, фотоотсчеты фотоприемников случайны и не зависят друг
+от друга. Поэтому поведение всех трех кривых определяется случайными
+совпадениями и для всех трех будет одинаково. При малых $\tau$
+поведение кривых различно. В случае группировки фотонов мы будем иметь
+максимум при $\tau = 0$, а при антигруппировке - минимум.
+
+Еще одним критерием неклассичности является отсутствие положительной
+определенности квазивероятности $P\left(\alpha\right)$, если
+используется представление когерентных состояний.
+
+В классическом случае функция $P\left(\alpha\right)$ должна быть всюду
+положительно определена, т. е. $P\left(\alpha\right) \ge 0$ при всех
+значения $\alpha$. Рассмотрим этот вопрос подробнее. Условие
+неклассичности 
+\(
+G^{(2)} < 1, 
+\)
+с помощью (\ref{eqPart3_Nonclass_Nonclass1}) это условие
+можно представить в виде
+\begin{equation}
+\left<\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\right> -
+\left<\hat{a}^{+}\hat{a}\right>^2 < 0.
+\label{eqPart3_Nonclass_Nonclass9}
+\end{equation}
+Рассмотрим выражение
+\begin{equation}
+\int P\left(\alpha\right)\left(\left|\alpha\right|^2 -
+\left<\hat{n}\right>\right)^2 d^2\alpha < 0
+\label{eqPart3_Nonclass_Nonclass10}
+\end{equation}
+\begin{eqnarray}
+\int P\left(\alpha\right)\left(\left|\alpha\right|^2 -
+\left<\hat{n}\right>\right)^2 d^2\alpha = 
+\int P\left(\alpha\right)\left(\left|\alpha\right|^4 -
+2\left|\alpha\right|^2 \left<\hat{n}\right> +
+\left<\hat{n}\right>^2\right) d^2\alpha = 
+\nonumber \\
+=
+\left<\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\right> -
+\left<\hat{a}^{+}\hat{a}\right>^2 < 0,
+\nonumber
+\end{eqnarray}
+т. е. выражения (\ref{eqPart3_Nonclass_Nonclass9}) и
+(\ref{eqPart3_Nonclass_Nonclass10}) эквивалентны. Это следует из
+следующих соотношений
+\[
+\int P\left(\alpha\right)\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a} d^2
+\alpha = 
+\int P\left(\alpha\right)\left|\alpha\right|^4 d^2\alpha = 
+\left<\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\right>,
+\]
+\[
+\int P\left(\alpha\right)\left|\alpha\right|^2 d^2\alpha = 
+\left<\hat{a}^{+}\hat{a}\right> = \left<\hat{n}\right>.
+\]
+Мы получили, что выражение (\ref{eqPart3_Nonclass_Nonclass10}) должно
+быть отрицательным. Поскольку 
+\(
+\left(\left|\alpha\right|^2 -
+\left<\hat{n}\right>\right)^2
+\)
+всегда положительно, то отрицательный результат будет получен, если 
+$P\left(\alpha\right)$ по крайней мере в части области $(\alpha)$
+будет отрицательно. Таким образом, для неклассического света
+квазивероятность $P\left(\alpha\right)$ не является положительно
+определенной функцией.
+

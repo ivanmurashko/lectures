@@ -1,0 +1,40 @@
+%% -*- coding:utf-8 -*- 
+\input preamble.tex
+\title{Квантовая оптика\thanks{Санкт Петербургский Государственный Политехнический Университет}}
+\author{Петрунькин В. Ю., Мурашко И. В.}
+\date{}
+\begin{document}
+\Russian
+
+
+% Redefine plain style for the TOC part:
+\makeatletter
+\renewcommand{\ps@plain}{%
+\renewcommand\@oddhead{\hfil\normalfont\textrm{\thepage}\hfil}%
+\renewcommand\@evenhead{\hfil\normalfont\textrm{\thepage}\hfil}%
+\renewcommand\@oddfoot{}%
+\renewcommand\@evenfoot{}%
+}
+
+\pagestyle{plain}% Centered page numbers in footer for TOC pages after the first one
+
+
+\maketitle
+
+\tableofcontents
+
+\input ./intro/main.tex
+
+\input ./part1/main.tex
+
+\input ./part2/main.tex
+
+\input ./part3/main.tex
+
+\input ./part4/main.tex
+
+\input ./add/main.tex
+
+\input ./bibliography.tex
+
+\end{document}

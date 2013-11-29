@@ -1,0 +1,69 @@
+%% -*- coding:utf-8 -*-
+\section{Быстрое преобразование Фурье}
+Вычисления по формуле (\ref{eqAddFourierDiscretFourier}) имеют
+сложность порядка $O\left(M^2\right)$, где $M$ - число элементов (отсчетов)
+\footnote{Действительно необходимо получить $M$ элементов, для
+  подсчета каждого из которых требуется $M$ операций умножения}. 
+
+Существует алгоритм быстрого расчета по формуле
+(\ref{eqAddFourierDiscretFourier}) который имеет сложность
+$O\left(M \log{M}\right)$.
+
+Воспользовавшись парадигмой ``разделяй и властвуй''
+(см. разд. \ref{addDivideAndConquer}) можно 
+обратить внимание на форму записи
+(\ref{eqAddFourierDiscretFourierMatrixElem2}) и 
+заметить, что выражение
+(\ref{eqAddFourierDiscretFourier}) может быть переписано в
+в виде 
+\begin{equation}
+\tilde{X}_k = \sum^{M - 1}_{m = 0} F_{km}^{M} x_m,
+\nonumber
+\end{equation}
+где запись $F_{km}^{M}$ обозначает, что используется матрица
+(\ref{eqAddFourierDiscretFourierMatrixElem2}) размера $M\times M$.
+Если $M$ четно, то 
+\begin{equation}
+\tilde{X}_k = \sum^{M - 1}_{m = 0} F_{k,m}^{M} x_m = 
+\sum^{\frac{M}{2} - 1}_{m = 0} F_{k,2m}^M x_{2m} +
+\sum^{\frac{M}{2} - 1}_{m = 0} F_{k,2m + 1}^M x_{2m + 1},
+\nonumber
+\end{equation}
+где
+\begin{eqnarray}
+F_{k,2m}^{M} = e^{-i \omega k 2m} = e^{-i k m \frac{2\pi}{\frac{M}{2}}
+} = F_{k,m}^{\frac{M}{2}},
+\nonumber \\
+F_{k,2m + 1}^{M} = e^{-i \omega k \left(2m+1\right)} = 
+e^{-i \omega k}e^{-i k m \frac{2\pi}{\frac{M}{2}}} = 
+e^{-2\pi i \frac{k}{M}}F_{k,m}^{\frac{M}{2}},
+\nonumber
+\end{eqnarray}
+т. е.
+\begin{equation}
+\tilde{X}_k = \sum^{\frac{M}{2} - 1}_{m = 0} F_{k,m}^{\frac{M}{2}} x_{2m} +
+\exp{\left(-2\pi i \frac{k}{M}\right)}
+\sum^{\frac{M}{2} - 1}_{m = 0}  F_{k,m}^{\frac{M}{2}} x_{2m + 1}.
+\label{eqAddFourierDiscretFourierFFT}
+\end{equation}
+Сложность вычислений по формуле
+(\ref{eqAddFourierDiscretFourierFFT}) определяется 
+следующим соотношением
+\begin{equation}
+T\left( M \right) = 2 T\left( \frac{M}{2} \right) + O\left( M \right).
+\label{eqAddFourierDiscretFourierFFTComplexity}
+\end{equation}
+В справедливости
+(\ref{eqAddFourierDiscretFourierFFTComplexity}) можно убедится
+если заметить что вычисления сложности $T\left( M \right)$ в 
+(\ref{eqAddFourierDiscretFourierFFT}) распадаются 
+на две подзадачи по вычислениям сложности $T\left( \frac{M}{2}
+\right)$.
+
+Используя мастер метод (случай 2)( см. теор. \ref{addAlgoMasterTheorem})
+получаем 
+\begin{equation}
+T\left( M \right) = O\left( M \log{M} \right).
+\nonumber
+\end{equation}
+

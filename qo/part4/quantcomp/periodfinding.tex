@@ -1,0 +1,123 @@
+%% -*- coding:utf-8 -*- 
+\subsection{Нахождение периода функций с помощью квантового
+  преобразования Фурье}
+
+Для определения периода функции (\ref{eqPart4QuantCompShorClassPart})
+используется схема представленная на
+рис. \ref{figQuantCompQuantPeriodFinding}.
+
+\input part4/quantcomp/figquantperiodfinding.tex
+
+Первым элементом стоит преобразование Адамара $n$ кубит, которое
+подготавливает исходное состояние в виде:
+\begin{equation}
+\left|in\right> = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \left|x\right>
+\otimes\left|0\right>.
+\nonumber
+\end{equation}
+
+После элемента вычисляющего функцию $\hat{U}_f$ имеем для состояния
+\begin{equation}
+\hat{U}_f\left|in\right> = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \left|x\right>
+\otimes\left|f\left(x\right)\right>.
+\nonumber
+\end{equation} 
+
+\input part4/quantcomp/figshorquant.tex
+
+После измерения значения функции в списке координат останутся только
+те элементы для которых значение функции будет равно измеренному
+значению. В результате на вход элемента, измеряющего преобразование
+Фурье подается состояние вида 
+\begin{equation}
+\left|in'\right> = \sum_{x'} \left|x'\right>,
+\nonumber
+\end{equation} 
+где все ненулевые элементы имеют одинаковую амплитуду и следуют с
+периодом равным периоду исследуемой функции. При этом начальное
+значение будет со сдвигом который зависит от эксперимента (в разных
+экспериментах будет разный сдвиг). В силу леммы
+\ref{lemmaAddFourierDiscretFourierShiftTime} фурье образ будет
+одинаковым для различных измерений функций.
+
+Далее в силу леммы \ref{lemmaAddFourierDiscretFourierPeriod}
+(о периодичности) следует что наиболее вероятные отсчеты (максимумы
+вероятности) следуют с периодом связанным с исходным периодом
+функции. Таким образом в результате нескольких экспериментов период
+искомой функции может быть найден с требуемым уровнем вероятности
+(см. рис. \ref{picPart4QuantCompShorQuantPart}).
+
+\begin{example}
+\emph{Нахождение периода функции $f\left(x\right) = 2^x \mod 21$}
+\label{exPart4QuantCompShorQuantPeriodFinding}
+В качестве примера рассмотрим задачу о нахождении периода функции 
+$f\left(x, a\right) = a^x \mod{N}$ при $a=2$, $N = 21$ см. рис. 
+\ref{picPart4QuantCompShorQuantPart}
+
+Число отсчетов  $M$ должно быть степенью двойки. В нашем примере мы
+выбираем $M = 2^6 = 64$ в качестве числа отсчетов. Таким образом
+необходимо 6 кубит для нашего примера.
+
+Исходное состояние после  преобразования Адамара имеет вид:
+\begin{equation}
+\left|in\right> = \frac{1}{8}\sum_{x = 0}^{63}\left|x\right> \otimes \left|0\right>,
+\nonumber
+\end{equation}
+где $\left|x\right>$ представляет собой тензорное произведение 6 кубит
+которые кодируют бинарное представление аргумента исследуемой
+функции. Например при $x=5_{10}=000101_2$ имеем
+\[
+\left|x\right> = \left|0\right>\otimes \left|0\right>\otimes
+\left|0\right>\otimes 
+\left|1\right>\otimes \left|0\right>\otimes \left|1\right>
+\]
+
+После вычесления функции мы имеем состояние вида (см. верхний график
+на рис. \ref{picPart4QuantCompShorQuantPart})
+\begin{eqnarray}
+\hat{U}_f\left|in\right> = \frac{1}{8}\sum_{x = 0}^{63}\left|x\right>
+\otimes \left|f\left(x\right)\right> = 
+\nonumber \\
+=
+\frac{1}{8}
+\left(
+\left|0\right>\otimes\left|2\right> + 
+\left|1\right>\otimes\left|4\right> + 
+\left|2\right>\otimes\left|8\right> + \dots +
+\right.
+\nonumber \\
+\left.
++
+\left|62\right>\otimes\left|8\right> +
+\left|63\right>\otimes\left|16\right>
+\right).
+\label{eqPart4QuantCompShorPFExample1}
+\end{eqnarray}
+
+Если результат измерения функции был равен $1$, то из всей суммы
+(\ref{eqPart4QuantCompShorPFExample1}) останутся члены для которых
+значение функции равно $1$ (см. средний график
+на рис. \ref{picPart4QuantCompShorQuantPart}):
+\begin{equation}
+\left|in'\right> = \frac{1}{\sqrt{10}}\left( 
+\left|5\right>\otimes\left|1\right> +
+\left|11\right>\otimes\left|1\right> +
+\left|17\right>\otimes\left|1\right> +
+\dots +
+\left|60\right>\otimes\left|1\right>
+\right).
+\label{eqPart4QuantCompShorPFExample2}
+\end{equation} 
+Выражение (\ref{eqPart4QuantCompShorPFExample2}) содержит 10 членов
+одинаковой амплитуды, поэтому нормирующий множитель имеет вид
+$\frac{1}{\sqrt{10}}$.
+
+Преобразование фурье для последовательности
+(\ref{eqPart4QuantCompShorPFExample2}) изображено на нижнем графике
+рис. \ref{picPart4QuantCompShorQuantPart}. Наиболее вероятными
+значениями результата измерения фурье образа будут значения
+соотвествующие локальным максимумам которые повторяются с периодом 
+$\frac{M}{r}\approx10.67$ откуда можно найти период искомой функции
+$r=6$. 
+
+\end{example}

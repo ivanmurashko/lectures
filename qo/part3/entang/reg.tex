@@ -1,0 +1,230 @@
+%% -*- coding:utf-8 -*- 
+\section{Регистрация Белловских состояний}
+\label{pPart3EntangleBellReg}
+Из четырех базисных состояний (\ref{eqEntangBellBase}) лишь 
+$\left|\psi^{-}\right>_{12}$ является антисимметричным, т. е. меняет
+свой знак при перестановке частиц (фотонов). Это позволяет выделить
+это состояние среди всех остальных. Для этого может быть использована
+схема, изображенная на рис. \ref{figBellReg}, в которой два фотона
+будут зарегистрированы в разных фотодетекторах только для
+антисимметричного состояния, для всех остальных состояний оба фотона
+регистрируются либо в $D^{(1)}$, либо в $D^{(2)}$.
+
+\input ./part3/entang/figreg.tex
+ 
+Для доказательства рассмотрим, как действует светоделитель на однофотонное
+состояние. Фотон может падать на светоделитель из полуплоскости
+$\left(1\right)$ (рис. \ref{figBellLS}), в этом случае с вероятностью
+$0.5$ фотон окажется в полуплоскости $\left(1\right)$, и c вероятностью
+$0.5$ в $\left(2\right)$. Если фотон падает из полуплоскости
+$\left(2\right)$, то он опять же с равной вероятностью может оказаться
+в любой полуплоскости. 
+Таким образом, для описания светоделителя мы будем пользоваться выражением
+для матрицы рассеяния в виде (\ref{eqPart2Interfero4b}), в котором
+$r=t=\frac{1}{\sqrt{2}}$, т. е. действие светоделителя может быть
+выражено следующим оператором (Адамара\cite{bPhisQuantInfo}):
+\begin{eqnarray}
+\hat{H} \left|1\right> = \frac{1}{\sqrt{2}}
+\left(\left|1'\right> +
+\left|2'\right>\right),
+\nonumber \\
+\hat{H} \left|2\right> = \frac{1}{\sqrt{2}}\left(\left|1'\right> -
+\left|2'\right>\right).
+\label{eqEntangBellHadamar}
+\end{eqnarray}
+
+В нашем случае два фотона падают с разных сторон светоделителя,
+следовательно возможны только две волновые функции, описывающие
+пространственную часть нашего начального состояния:
+\begin{eqnarray}
+\left|S\right>_{12} = \frac{1}{\sqrt{2}}\left(
+\left|1\right>_1\left|2\right>_2 +
+\left|2\right>_1\left|1\right>_2\right),
+\nonumber \\
+\left|A\right>_{12} = \frac{1}{\sqrt{2}}\left(
+\left|1\right>_1\left|2\right>_2 -
+\left|2\right>_1\left|1\right>_2\right).
+\label{eqEntangBellSpaceInit}
+\end{eqnarray}
+Как видно из (\ref{eqEntangBellSpaceInit}), состояние $\left|S\right>_{12}$
+является симметричным, т. е. сохраняет свой вид при перестановке
+фотонов, а состояние $\left|A\right>_{12}$ - антисимметричным (меняет свой
+знак при перестановке фотонов).
+
+\input ./part3/entang/figls.tex
+
+
+Рассмотрим, как преобразуются состояния (\ref{eqEntangBellSpaceInit})
+при прохождении через светоделитель. В силу того, что оператор
+$\hat{H}$ действует на каждый из фотонов независимо, для
+$\left|S\right>_{12}$ имеем 
+\begin{equation}
+\hat{H}\left|S\right>_{12} = \left|S'\right>_{12} = 
+\frac{1}{\sqrt{2}}
+\left(
+\hat{H}\left|1\right>_1\hat{H}\left|2\right>_2 +
+\hat{H}\left|2\right>_1\hat{H}\left|1\right>_2
+\right),
+\nonumber 
+\end{equation}
+откуда с помощью (\ref{eqEntangBellHadamar}) получаем
+\begin{eqnarray}
+\hat{H}\left|S\right>_{12} =
+\frac{1}{\sqrt{2}}
+\left(
+\frac{1}{2}
+\left(\left|1'\right>_1 +
+\left|2'\right>_1\right)
+\left(\left|1'\right>_2 -
+\left|2'\right>_2\right) +
+\right.
+\nonumber \\
++ \left.
+\frac{1}{2}
+\left(\left|1'\right>_1 -
+\left|2'\right>_1\right)
+\left(\left|1'\right>_2 +
+\left|2'\right>_2\right)
+\right) = 
+\nonumber \\
+=
+\frac{1}{2 \sqrt{2}}
+\left(
+\left|1'\right>_1 \left|1'\right>_2 +
+\left|2'\right>_1 \left|1'\right>_2 -
+\left|1'\right>_1 \left|2'\right>_2 -
+\left|2'\right>_1 \left|2'\right>_2 +
+\right. 
+\nonumber \\
++ \left.
+\left|1'\right>_1 \left|1'\right>_2 -
+\left|2'\right>_1 \left|1'\right>_2 +
+\left|1'\right>_1 \left|2'\right>_2 -
+\left|2'\right>_1 \left|2'\right>_2
+\right) =
+\nonumber \\
+=
+\frac{1}{2 \sqrt{2}}
+\left(
+\left|1'\right>_1 \left|1'\right>_2 
+- \left|2'\right>_1 \left|2'\right>_2 
++ \left|1'\right>_1 \left|1'\right>_2 
+- \left|2'\right>_1 \left|2'\right>_2
+\right) = 
+\nonumber \\
+\frac{1}{\sqrt{2}}
+\left(
+\left|1'\right>_1 \left|1'\right>_2 
+- \left|2'\right>_1 \left|2'\right>_2 
+\right).
+\nonumber
+\end{eqnarray}
+Таким образом для состояния $\left|S'\right>_{12}$ оба фотона оказываются
+либо в полуплоскости $\left(1\right)$, либо в полуплоскости
+$\left(2\right)$. 
+
+Для антисимметричного состояния имеем
+\begin{eqnarray}
+\hat{H}\left|A\right>_{12} = \left|A'\right>_{12} = 
+\frac{1}{\sqrt{2}}
+\left(
+\hat{H}\left|1\right>_1\hat{H}\left|2\right>_2 -
+\hat{H}\left|2\right>_1\hat{H}\left|1\right>_2
+\right) = 
+\nonumber \\
+=
+\frac{1}{\sqrt{2}}
+\left(
+\frac{1}{2}
+\left(\left|1'\right>_1 +
+\left|2'\right>_1\right)
+\left(\left|1'\right>_2 -
+\left|2'\right>_2\right) -
+\right.
+\nonumber \\
+- \left.
+\frac{1}{2}
+\left(\left|1'\right>_1 -
+\left|2'\right>_1\right)
+\left(\left|1'\right>_2 +
+\left|2'\right>_2\right)
+\right) = 
+\nonumber \\
+=
+\frac{1}{2 \sqrt{2}}
+\left(
+\left|1'\right>_1 \left|1'\right>_2 +
+\left|2'\right>_1 \left|1'\right>_2 -
+\left|1'\right>_1 \left|2'\right>_2 -
+\left|2'\right>_1 \left|2'\right>_2 -
+\right. 
+\nonumber \\
+- \left.
+\left|1'\right>_1 \left|1'\right>_2 +
+\left|2'\right>_1 \left|1'\right>_2 -
+\left|1'\right>_1 \left|2'\right>_2 +
+\left|2'\right>_1 \left|2'\right>_2
+\right) =
+\nonumber \\
+=
+\frac{1}{2 \sqrt{2}}
+\left(
+\left|2'\right>_1 \left|1'\right>_2 
+- \left|1'\right>_1 \left|2'\right>_2 
++ \left|2'\right>_1 \left|1'\right>_2 
+- \left|1'\right>_1 \left|2'\right>_2
+\right) = 
+\nonumber \\
+- \frac{1}{\sqrt{2}}
+\left(
+\left|1'\right>_1 \left|2'\right>_2 
+- \left|2'\right>_1 \left|1'\right>_2 
+\right).
+\nonumber
+\end{eqnarray}
+Таким образом в случае антисимметричного состояния после прохождения
+светоделителя фотоны окажутся в разных полуплоскостях.
+
+В силу того, что фотоны являются бозонами, общая волновая функция,
+описывающая и поляризационные и пространственные свойства,
+должна быть симметричной \cite{bFeinman}. Таким образом из объединения
+(\ref{eqEntangBellBase}) и (\ref{eqEntangBellSpaceInit})возможны
+только следующие комбинации:
+\begin{eqnarray}
+\left|\psi^{+}\right>_{12}\left|S\right>_{12},
+\nonumber \\ 
+\left|\psi^{-}\right>_{12}\left|A\right>_{12}, 
+\nonumber \\ 
+\left|\phi^{+}\right>_{12}\left|S\right>_{12}, 
+\nonumber \\ 
+\left|\phi^{-}\right>_{12}\left|S\right>_{12}.
+\nonumber
+\end{eqnarray}
+Следовательно в случае белловских состояний 
+$\left|\psi^{+}\right>_{12}$, $\left|\phi^{+}\right>_{12}$, и
+$\left|\phi^{-}\right>_{12}$ оба фотона после прохождения
+светоделителя попадут в один фотодетектор, а в случае
+$\left|\psi^{-}\right>_{12}$ - в разные, что и позволяет нам
+однозначно отделить состояние $\left|\psi^{-}\right>_{12}$ от всех
+остальных. 
+
+\input ./part3/entang/figreg2.tex
+
+Схема на рис. \ref{figBellReg} может быть изменена так, чтобы она
+смогла регистрировать также и состояние
+$\left|\psi^{+}\right>_{12}$. Для этого заметим, что из всех
+симметричных белловских состояний только в этом фотоны имеют разную
+поляризацию. Таким образом это состояние может быть выделено путем
+измерения поляризации фотонов.
+
+На рис. \ref{figBellReg2} приведена схема, которая позволяет
+регистрировать $\left|\psi^{-}\right>_{12}$ и
+$\left|\psi^{+}\right>_{12}$. Для состояния
+$\left|\psi^{+}\right>_{12}$ одновременно сработают фотодекторы 
+$D^{(1)}_x$ и $D^{(1)}_y$ или $D^{(2)}_x$ и $D^{(2)}_y$. Для
+$\left|\psi^{-}\right>_{12}$ - $D^{(1)}_x$ и $D^{(2)}_y$ или
+$D^{(2)}_x$ и $D^{(1)}_y$. Для $\left|\phi^{+}\right>_{12}$ и
+$\left|\phi^{-}\right>_{12}$ оба фотона будут зарегистрированы
+одновременно на одном из 4-х фотодетекторов. В последнее время
+появились работы \cite{bKulik} в которых была проведена регистрация
+всех четырех Белловских состояний.

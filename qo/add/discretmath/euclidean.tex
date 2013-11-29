@@ -1,0 +1,141 @@
+%% -*- coding:utf-8 -*- 
+\section{Наибольший общий делитель. Алгоритм Евклида}
+\label{AddEuclidean}
+\begin{definition}
+Наибольшим общим делителем числ $a$ и $b$ ($\mbox{НОД}\left(a,
+b\right)$) называется максимальный из их общих делителей.
+\label{defAddGCD}
+\end{definition}
+
+\begin{theorem}
+\emph{(Теорема об общих делителях)}
+Допустим, что выполняются следующие неравенства
+$a > b > 0$, а число $r$ является остатком от деления $a$ на
+$b$. Т. о. можно записать 
+\begin{equation}
+a = x \cdot b + r,
+\label{eqAddGCD_a}
+\end{equation}
+где $x \ge 1$, $b > r \ge 0$. Если $r=0$, то $b$ является максимальным числом на
+которое делятся без остатка и $a$ и $b$. В случае, если $r > 0$, то
+\begin{equation}
+\mbox{НОД}\left(a, b\right) = \mbox{НОД}\left(b, r\right).
+\label{eqAddGCD_ab_br}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Для доказательства (\ref{eqAddGCD_ab_br}) покажем, что любой делитель
+пары чисел $\left(a,b\right)$  является делителем пары чисел
+$\left(b,r\right)$. Пусть $d$ некоторый общий делитель чисел  $a$ и
+$b$, т. е. $a = d \cdot x_1$, $b = d \cdot x_2$. Т. о. из (\ref{eqAddGCD_a}) следует
+\begin{equation}
+r = a - x \cdot b = 
+d \cdot \left( x_1 - x \cdot x_2 \right),
+\nonumber
+\end{equation}
+т. е. $d$ является делителем числа $r$.
+
+Теперь докажем, что любой общий делитель чисел $b$ и $r$ будет является общим
+делителем чисел $a$ и $b$, действительно пусть $d$ - общий делитель
+чисел $b$ и $r$, т. е. $b = y_1 \cdot d$ и  $r = y_2 \cdot d$,
+т. о. (\ref{eqAddGCD_a}) переписывается в виде
+\begin{equation}
+a = x \cdot y_1 \cdot d + y_2 \cdot d = d \cdot \left( x \cdot y_1 +
+y_2 \right),
+\nonumber
+\end{equation}
+т. е. $d$ является делителем числа $a$.
+
+Таким образом пары чисел  $\left(a,b\right)$  и $\left(b,r\right)$
+имеют общие делители, в том числе и максимальный делитель для одной
+пары будет являться таковым и для второй.  
+\end{proof}
+
+Соотношение (\ref{eqAddGCD_ab_br}) приводит к следующему алгоритму
+вычисления наибольшего общего делителя
+\begin{algorithm}
+\caption{Алгоритм Евклида}
+\begin{algorithmic}
+    \STATE $a > b$
+    \IF{$b = 0$} 
+        \RETURN $a$
+    \ENDIF
+    \STATE $a \Leftarrow 0$
+    \STATE $r \Leftarrow b$
+    \STATE $b \Leftarrow a$
+    \REPEAT
+        \STATE $a \Leftarrow b$
+        \STATE $b \Leftarrow r$
+        \STATE $r \Leftarrow $ остаток от деления $a$ на $b$
+    \UNTIL{ ($r \ne 0$) }
+    \RETURN $b$
+\end{algorithmic}
+\label{algAddEuclid}
+\end{algorithm}
+
+Для оценки сложности алгоритма \ref{algAddEuclid} запишем его в
+следующем виде 
+\begin{eqnarray}
+f_k = x_k \cdot f_{k + 1} + f_{k + 2},
+\nonumber \\
+f_0 = a, \: f_1 = b,
+\nonumber \\
+x_k \ge 1, \: f_k > f_{k+1} > f_{k + 2},
+\nonumber
+\end{eqnarray}
+т. о. $f_k > 2 \cdot f_{k + 2}$, или же 
+$f_0 > 2 \cdot f_2 > \dots > 2^nf_{2n}$ т. е. алгоритм остановится при
+$n = log_2\left(f_0\right) = log_2\left(a\right)$
+\footnote{Дальнейшие выкладки сделаны в предположении, что
+  $log_2\left(a\right)$ - целое число}. Число шагов
+алгоритма при этом очевидно равно $2n$ или же 
+$2 \cdot log_2\left(a\right)$. Т. о. алгоритмическая сложность
+алгоритма Евклида может быть записана как 
+$O\left(\log \left(a\right)\right)$.
+
+
+\begin{example}
+\emph{($\mbox{НОД}\left(2345,1456\right)$)}
+%(%i5) gcd(2345,1456);
+%(%o5)                                  7
+%(%i6)      
+%(%i8) mod(2345,1456);
+%(%o8)                                 889
+%(%i9) mod(1456,889);
+%(%o9)                                 567
+%(%i10) mod(889,567);
+%(%o10)                                322
+%(%i11) mod(567,322);
+%(%o11)                                245
+%(%i12) mod(322,245);
+%(%o12)                                77
+%(%i13) mod(245,77);
+%(%o13)                                14
+%(%i14) mod(77,14);
+%(%o14)                                 7
+%(%i15) mod(14,7);
+%(%o15)                                 0
+%(%i16) 
+\begin{eqnarray}
+2345 = 1456 + 889,
+\nonumber \\
+1456 = 889 + 567,
+\nonumber \\
+889 = 567 + 322,
+\nonumber \\
+567 = 322 + 245,
+\nonumber \\
+322 = 245 + 77,
+\nonumber \\
+245 = 3 \cdot 77 + 14,
+\nonumber \\
+77 = 5 \cdot 14 + 7,
+\nonumber \\
+14 = 2 \cdot 7.
+\nonumber
+\end{eqnarray}
+т. о. $\mbox{НОД}\left(2345,1456\right) = 7$. 
+Число шагов алгоритма  $8 < 2 \cdot log_2{2345} \approx 2 \cdot 11.2 = 22.4$.
+\nonumber
+\end{example}
