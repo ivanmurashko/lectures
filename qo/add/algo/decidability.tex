@@ -110,6 +110,7 @@ $1$ соответствует уникальное натуральное чи�
 Существует такой язык $L_d$ который не принимает ни одна машина
 Тьюринга, т. е. соотвествующая $L_d$ задача является принципиально
 неразрешимой (не вычислимой) 
+\label{theoremAddAlgoTuringLdUndecidability}
 \end{theorem}
 
 \begin{proof}
@@ -121,6 +122,48 @@ $L_d$. В силу определения языка $L_d$ не существу
 которая бы принимала все строки этого языка.
 \end{proof}
 
+\begin{definition}[Универсальная машина Тьюринга]
+Универсальная машина Тьюринга $M_u$ это такая машина, которая получив
+на входе строку $x$ и код для некоторой машины Тьюринга $M$ вычисляет
+результат применения $x$ на $M$.
+\end{definition}
+
+\input ./add/algo/figuturing.tex
+
+Множество пар строк $\left(x, M\right)$ образуют некоторый язык $L_U$ машины
+$M_U$. 
+
+\input ./add/algo/figuturingproof.tex
+
+\begin{theorem}
+\emph{(Теорема о языке универсальной машины Тьюринга)}
+
+Язык универсальной машины Тьюринга является рекурсивно перечислимым и
+не является рекурсивным, т. е. $L_U \in RE$ и $L_U \notin R$. Таким
+образом задача распознования языка универсальной машины Тьюринга
+является не разрешимой.
+\end{theorem}
+
+\begin{proof}
+Утверждение $L_U \in RE$ прямо вытекает из определения универсальной
+машины Тьюринга: если $M$ принимает $x$ то и $M_U$ принимает пару
+строк $\left(x, M\right)$.
+
+Утвержение $L_U \notin R$ докажем от противного, т. е. допустим, что
+$L_U \in R$. Построим с помощью такой машины $M_U$ машину Тьюринга
+$M_d$ которая будет примать все строки языка $L_d$. Для каждой строчки
+$x_i \in L_d$ можно поставить в соотвествие некоторую машину Тьюринга
+$M_i$ которая не принимает эту строчку, т. е. $x_i \notin
+L\left(M_i\right)$. Пара значений $\left(x_i, M_i\right)$ может быть
+подана на вход универсальной машины Тьюринга как это показано на рис. 
+\ref{figAddAlgoUTuringProof}. Если $L_U \in R$ то машина $M_U$ может
+решить принимает $M_i$ исходные данные $x_i$ или нет. Если $M_i$ не
+принимает $x_i$, то машина $M_d$ должна принять эти данные. Таким
+образом построена машина Тьюринга $M_d$ которая принимает все строки
+$x_i \in L_d$ и отвергает все строки $x_i \notin L_d$, что невозможно
+в силу теоремы \ref{theoremAddAlgoTuringLdUndecidability}
+\end{proof}
+
 \begin{theorem}
 \emph{(Теорема Райса)}
 Задача об определении любого нетривиального свойства машины Тьюринга
@@ -128,6 +171,43 @@ $L_d$. В силу определения языка $L_d$ не существу
 \end{theorem}
 
 \begin{proof}
-TBD
+Assume that we have a turing machine $M_P$ that can select a
+nontrivial property. I.e. it can separate all languages into 2
+sets. The first one with languages satisfy the property ($M_P$
+accepts a language from the set). The second one with languages which
+don't have the property ($M_P$ rejects the languages from the
+set). The proof idea to create a turing machine $M_U$ that
+accepts/rejects $(M, \omega)$ pairs. 
+
+Input data: we have a machine $M_L$ that accepts
+language $L$. There is also a string $x \in L$. 
+Note: No relation with property $P$ on the step.
+
+First idea. Forgot about a language property $P$ and
+machine $M_P$. We want to costruct a turing machine $M'$
+with $x$ as input. 
+
+Note: The pair $(M, \omega)$ is defined and fixed at the step
+i. e. it's encoded into $M'$ code. 
+
+$M'$ accepts string $x \in L$ iff the $M$
+accepts $\omega$. Thus there are two cases 
+
+$L(M') = L(M_L)$ if $M'$ accepts $x$ as result of pair $(M,
+\omega)$ accept 
+$L(M') = \emptyset$ if $M'$ does not accept any input $x$
+i. e. when the $M$ will run forever on input $\omega$. 
+
+Second idea. Now the time to remember about language and
+property $P$. Lets the language $L$ has the property i.e. $L \in
+P$. Second assumption - $\emptyset \notin P$. Thus $M_P$ runs
+on $M'$ as input will accept $M'$ if $L(M') \in P$ and rejects
+the input if $L(M') = \emptyset$ 
+
+From other hand the pair $(M, \omega)$ is encoded into $M'$ code
+thus the machine $M_P$ which takes $M'$ as input (or equally
+pair $(M, \omega)$ ) can decide if the language described by the
+machine is empty ($M$ runs forever on input $\omega$) or not empty
+($M$ accepts $\omega$). As result we have constructed $M_U$. 
 \end{proof}
 
