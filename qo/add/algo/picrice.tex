@@ -1,0 +1,83 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Mon Dec 23 15:33:09 MSK 2013
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="0" x-max="65" y-min="0" y-max="30" auto-bounding="true">
+%<parallelogram fill-style= "none"
+%	 p3= "(55,5)"
+%	 p2= "(55,25)"
+%	 p1= "(35,25)"
+%	 />
+%<parallelogram fill-style= "none"
+%	 p3= "(60,0)"
+%	 p2= "(60,30)"
+%	 p1= "(15,30)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(25,25)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$M_U$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(40,20)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$M$
+%</text>
+%<multicurve fill-style= "none"
+%	 points= "(0,15);(0,15);(35,15);(35,15)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(55,15);(55,15);(65,15);(65,15)"
+%	 />
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(5,20)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$(x, M)$
+%</text>
+%<text fill-style= "none"
+%	 text-vert-align= "center-v"
+%	 anchor-point= "(30,20)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$x$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(65,30)(0,0)
+\linethickness{0.3mm}
+\put(35,25){\line(1,0){20}}
+\put(35,5){\line(0,1){20}}
+\put(55,5){\line(0,1){20}}
+\put(35,5){\line(1,0){20}}
+\linethickness{0.3mm}
+\put(15,30){\line(1,0){45}}
+\put(15,0){\line(0,1){30}}
+\put(60,0){\line(0,1){30}}
+\put(15,0){\line(1,0){45}}
+\put(25,25){\makebox(0,0)[cc]{$M_U$}}
+
+\put(40,20){\makebox(0,0)[cc]{$M$}}
+
+\linethickness{0.3mm}
+\put(0,15){\line(1,0){35}}
+\linethickness{0.3mm}
+\put(55,15){\line(1,0){10}}
+\put(5,20){\makebox(0,0)[cc]{$(x, M)$}}
+
+\put(30,20){\makebox(0,0)[cc]{$x$}}
+
+\end{picture}
