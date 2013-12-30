@@ -47,6 +47,27 @@ $a$ & $b$ & $a \| b$ \\ \hline
 формулу которая имеет вид конъюнкции дизъюнкций литералов.
 \end{definition}
 
+\begin{example}
+\emph{Задача SAT}
+\label{exAddAlgoSAT}
+Задачей SAT называют задачу о разрешимости КНФ. Допустим задана
+следующая булева формула в форме КНФ:
+\begin{equation}
+\left(x_1 \| x_2 \| \bar{x_3} \right) \& \left(x_1 \| \bar{x_2} \| x_3 \right)
+\nonumber
+\end{equation}
+Она является разрешимой, достаточно принять $x_1 = 1$, значения
+$x_{2,3}$ могут быть любыми.
+
+Вместе с тем следующая формула является неразрешимой:
+\begin{equation}
+\left(x_1 \| x_2 \| \bar{x_3} \right) \& 
+\left(\bar{x_1} \| \bar{x_2} \| x_3 \right).
+\nonumber
+\end{equation}
+
+\end{example}
+
 \begin{theorem}
 \emph{(Приводимость к КНФ)}
 Любая булева формула может быть приведена к КНФ. 
