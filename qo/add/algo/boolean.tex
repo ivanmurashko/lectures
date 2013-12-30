@@ -1,0 +1,49 @@
+%% -*- coding:utf-8 -*-
+\section{Булева логика. Булевы формулы КНФ}
+
+\begin{definition}[Конъюнкция (логическое ``И'' ($a \& b$))]
+Для логической операции ``И'' справедлива следующая таблица
+истинности \ref{tblAddAlgoAND}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+$a$ & $b$ & $a \& b$ \\ \hline
+0  & 0 & 0 \\
+0  & 1 & 0 \\
+1  & 0 & 0 \\
+1  & 1 & 1 \\ \hline
+\end{tabular}
+\caption{Конъюнкция $a \& b$}
+\label{tblAddAlgoAND}
+\end{table}
+\end{definition}
+
+\begin{definition}[Дизъюнкция (логическое ``ИЛИ'' ($a \| b$))]
+Для логической операции ``ИЛИ'' справедлива следующая таблица
+истинности \ref{tblAddAlgoOR}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+$a$ & $b$ & $a \| b$ \\ \hline
+0  & 0 & 0 \\
+0  & 1 & 1 \\
+1  & 0 & 1 \\
+1  & 1 & 1 \\ \hline
+\end{tabular}
+\caption{Дизъюнкция $a \| b$}
+\label{tblAddAlgoOR}
+\end{table}
+\end{definition}
+
+\begin{definition}[Булева формула]
+Булевой формулой называется совокупность булевых литералов
+объединённых логическими операциями.
+\end{definition}
+
+\begin{definition}[КНФ - Конъюнктивная нормальная форма (SAT)]
+Конъюнктивной нормальной формой в булевой логике называют такую булеву
+формулу которая имеет вид конъюнкции дизъюнкций литералов.
+\end{definition}
+
