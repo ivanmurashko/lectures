@@ -1,0 +1,113 @@
+%%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
+%%Tue Dec 24 15:56:54 MSK 2013
+%%Begin JPIC-XML
+%<?xml version="1.0" standalone="yes"?>
+%<jpic x-min="5" x-max="105" y-min="0" y-max="20" auto-bounding="true">
+%<multicurve fill-style= "none"
+%	 points= "(5,10);(5,10);(15,10);(15,10)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(35,10);(35,10);(75,10);(75,10)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 fill-style= "none"
+%	 anchor-point= "(5,15)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$x$
+%</text>
+%<parallelogram p3= "(35,0)"
+%	 p2= "(35,20)"
+%	 fill-style= "none"
+%	 p1= "(15,20)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 fill-style= "none"
+%	 anchor-point= "(55,15)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$y$
+%</text>
+%<parallelogram p3= "(95,0)"
+%	 p2= "(95,20)"
+%	 fill-style= "none"
+%	 p1= "(75,20)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 fill-style= "none"
+%	 anchor-point= "(85,15)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$M_{NPC}$
+%</text>
+%<multicurve fill-style= "none"
+%	 points= "(95,15);(95,15);(100,15);(100,15)"
+%	 />
+%<multicurve fill-style= "none"
+%	 points= "(95,5);(95,5);(100,5);(100,5)"
+%	 />
+%<text text-vert-align= "center-v"
+%	 fill-style= "none"
+%	 anchor-point= "(105,15)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$1$
+%</text>
+%<text text-vert-align= "center-v"
+%	 fill-style= "none"
+%	 anchor-point= "(105,5)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$0$
+%</text>
+%<text text-vert-align= "center-v"
+%	 fill-style= "none"
+%	 anchor-point= "(25,15)"
+%	 text-frame= "noframe"
+%	 text-hor-align= "center-h"
+%	 >
+%$T$
+%</text>
+%</jpic>
+%%End JPIC-XML
+%LaTeX-picture environment using emulated lines and arcs
+%You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
+\ifx\JPicScale\undefined\def\JPicScale{1}\fi
+\unitlength \JPicScale mm
+\begin{picture}(105,20)(0,0)
+\linethickness{0.3mm}
+\put(5,10){\line(1,0){10}}
+\linethickness{0.3mm}
+\put(35,10){\line(1,0){40}}
+\put(5,15){\makebox(0,0)[cc]{$x$}}
+
+\linethickness{0.3mm}
+\put(15,20){\line(1,0){20}}
+\put(15,0){\line(0,1){20}}
+\put(35,0){\line(0,1){20}}
+\put(15,0){\line(1,0){20}}
+\put(55,15){\makebox(0,0)[cc]{$y$}}
+
+\linethickness{0.3mm}
+\put(75,20){\line(1,0){20}}
+\put(75,0){\line(0,1){20}}
+\put(95,0){\line(0,1){20}}
+\put(75,0){\line(1,0){20}}
+\put(85,15){\makebox(0,0)[cc]{$M_{NPC}$}}
+
+\linethickness{0.3mm}
+\put(95,15){\line(1,0){5}}
+\linethickness{0.3mm}
+\put(95,5){\line(1,0){5}}
+\put(105,15){\makebox(0,0)[cc]{$1$}}
+
+\put(105,5){\makebox(0,0)[cc]{$0$}}
+
+\put(25,15){\makebox(0,0)[cc]{$T$}}
+
+\end{picture}
