@@ -1,0 +1,43 @@
+\documentclass[14pt,a4paper]{extbook} 
+\usepackage{anysize}
+\pagestyle{myheadings}
+\marginsize{2cm}{2cm}{2cm}{1cm}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{chapterbib}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\floatname{algorithm}{Алгоритм}
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+\usepackage{tikz}
+\usepackage[breaklinks]{hyperref}
+\usepackage{longtable}
+\usepackage{indentfirst}
+\renewcommand\thepart{\arabic{part}}
+
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}[theorem]{Лемма}
+\newtheorem{proposition}[theorem]{Предложение}
+\newtheorem{corollary}[theorem]{Вывод}
+\newtheorem{example}{Пример}[section]
+
+%% \newenvironment{proof}[1][Proof]{\begin{trivlist}
+%% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Определение]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%% \newenvironment{example}[1][Example]{\begin{trivlist}
+%% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%% \newenvironment{remark}[1][Remark]{\begin{trivlist}
+%% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%% \newcommand{\qed}{\nobreak \ifvmode \relax \else
+%%       \ifdim\lastskip<1.5em \hskip-\lastskip
+%%       \hskip1.5em plus0em minus0.5em \fi \nobreak
+%%       \vrule height0.75em width0.5em depth0.25em\fi}
