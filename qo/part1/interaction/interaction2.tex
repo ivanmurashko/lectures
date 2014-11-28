@@ -5,18 +5,40 @@
 верхнее состояние при взаимодействии с одной модой поля, находящейся в
 состоянии с $n$ фотонами, равна (\ref{eqCh2_prob_C_an}) 
 \begin{equation}
-\left|C_{a,n}\left(t\right)\right|^2 = 4 g^2 n
+\left|C_{a,n}\left(t\right)\right|^2 = 4 g^2 \left(n+1\right)
   \frac{sin^2\left(\left(\omega - 
   \omega_{ab}\right)t/2\right)} {\left(\omega - 
   \omega_{ab}\right)^2}
-\label{eqCh2_prob_C_an_2}
+  \nonumber
 \end{equation}
+Запишем эту вероятность в следующем виде
+\begin{equation}
+  P_a = \left|C_{a,n}\left(t\right)\right|^2 =
+  P_a^{\mbox{вн}} + P_a^{\mbox{сп}},
+  \label{eqCh2_prob_C_an_2_1}
+\end{equation}
+где
+\begin{eqnarray}
+  P_a^{\mbox{вн}} = 4 g^2 n
+  \frac{sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+    \omega_{ab}\right)^2},
+  \nonumber \\
+  P_a^{\mbox{сп}} = 4 g^2 
+  \frac{sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+  \omega_{ab}\right)^2}
+  \label{eqCh2_prob_C_an_2}
+\end{eqnarray}
+вероятности вынужденного ($P_a^{\mbox{вн}}$)
+и спонтанного ($P_a^{\mbox{сп}}$) перехода.
 
+\subsection{Вынужденные переходы}
+В дальнейшем сосредоточимся на вероятности вынужденного перехода
+$P_a^{\mbox{вн}}$.
 Для получения вероятности перехода, учитывая взаимодействие со всеми
 модами, нужно сложить вероятности (\ref{eqCh2_prob_C_an_2}),
-соответствующие каждой моде. Отличие формулы (\ref{eqCh2_prob_C_an_2})
-от формулы (\ref{eqCh2_prob_C_an}) связано с тем, что в первом 
-случае мы полагали в моде $n + 1$  фотонов, а здесь  $n$  фотонов.   
+соответствующие каждой моде. 
 
 В случае атома, взаимодействующего с полем свободного пространства
 (разложение поля по плоским волнам), константа взаимодействия равна
@@ -208,6 +230,7 @@ w_{ab} = \frac{\pi}{2 \hbar^2}\sqrt{\frac{\mu_o}{\varepsilon_0}}
 где $I_0 = \int_{\Delta \Omega} I\left(\theta, \varphi\right)
 d \Omega$ -  полный поток, облучающий атом.
 
+\subsection{Спонтанные переходы}
 Рассмотрим теперь другую задачу. Определим вероятность излучения
 фотона или перехода возбужденного атома в нижнее состояние.  
 
@@ -216,20 +239,24 @@ d \Omega$ -  полный поток, облучающий атом.
 \[
 \left|C_{b, n + 1}\left(t\right)\right|^2 = 4 g^2 \left(n + 1\right)
 \frac{sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
-{\left(\omega - \omega_{ab}\right)^2}.
+{\left(\omega - \omega_{ab}\right)^2},
 \]
-Здесь можно рассматривать два слагаемых: с
-множителем $n$ и с 
-множителем $1$: первое слагаемое
+которое также как (\ref{eqCh2_prob_C_an_2_1}) можно рассматривать в
+виде суммы двух слагаемых
 \[
-4 g^2 n
+P_b = \left|C_{b, n + 1}\left(t\right)\right|^2 =
+P_b^{\mbox{вн}} + P_b^{\mbox{сп}}
+\]
+где первое слагаемое
+\[
+P_b^{\mbox{вн}} = 4 g^2 n
 \frac{sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
 {\left(\omega - \omega_{ab}\right)^2}
 \]
-соответствует вынужденному излучению, 
-второе 
+соответствует вынужденному излучению, а
+второе
 \[
-4 g^2 
+P_b^{\mbox{сп}} = 4 g^2 
 \frac{sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
 {\left(\omega - \omega_{ab}\right)^2}
 \]
@@ -242,7 +269,7 @@ d \Omega$ -  полный поток, облучающий атом.
 собой. Вероятность спонтанного излучения в единицу времени, очевидно, 
 будет равна 
 \begin{equation}
-w_{\mbox{спон.}} = 
+w_{\mbox{сп}} = 
 \frac{2 \pi \omega^3}
 {\hbar \varepsilon_0 \left(2 \pi c\right)^3}
 \int_{\Omega}
@@ -256,7 +283,7 @@ d \Omega
 средним значением (\ref{eqCh2_PolyarMedian}).Таким образом вся
 процедура сведется к вычислению интеграла 
 \begin{equation}
-w_{\mbox{спон.}} = 
+w_{\mbox{сп}} = 
 \frac{\left|p\right|^2 \omega^3}
 {\varepsilon_0 \hbar \left(2 \pi\right)^2 c^3}
 \int_{0}^{2 \pi}d \varphi \int_0^{\pi}
@@ -267,7 +294,7 @@ w_{\mbox{спон.}} =
 \end{equation}
 Окончательно получаем
 \begin{equation}
-w_{\mbox{спон.}} = 
+w_{\mbox{сп}} = 
 \frac{\left|p\right|^2 \omega^3}
 {3 \pi c^2 \hbar}
 \sqrt{\frac{\mu_0}{\varepsilon_0}}
