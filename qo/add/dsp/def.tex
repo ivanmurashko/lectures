@@ -1,5 +1,11 @@
 %% -*- coding:utf-8 -*-
-\section{Определение}
+\section{Дискретное преобразование Фурье}
+\label{AddFourier}
+
+Преобразование Фурье играет важную
+роль в обработке цифровых сигналов, в частности для анализа
+периодических последовательностей.
+\subsection{Определение}
 \begin{definition}
 Допустим имеется $M$ отсчетов $x_0, x_1, \dots, x_{M-1}$ тогда
 дискретное преобразование Фурье задается следующим соотношением
@@ -22,7 +28,7 @@
 %abs(fft(makelist(power_mod(2, x, 21), x, 1, 64)))) ),
 %user_preamble="set output 'picshorclassfourier.tex'; set terminal
 %latex; set xlabel '$y$'; set ylabel '$F(y)$'"); 
-\input ./add/fourier/figfourier.tex
+\input ./add/dsp/figfourier.tex
 
 Выражение (\ref{eqAddFourierDiscretFourier}) может быть также
 переписано в матричной форме
