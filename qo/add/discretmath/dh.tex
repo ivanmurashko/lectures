@@ -1,0 +1,64 @@
+%% -*- coding:utf-8 -*-
+\section{Протокол Диффи-Хеллмана (Diffie-Hellman, DH)}
+Предположим существуют два абонента Алиса и Боб. Им известны два числа
+$g$ и $p$, которые не являются секретными.
+
+Алиса выбирает случайное число $a$ и пересылает Бобу следущее значение
+\begin{equation}
+A \equiv g^a \mod{p}.
+\label{eqAddDiscretIndDHA}
+\end{equation}
+
+Боб вычисляет следующее число (с помощью секретной случайной величины
+$b$)
+\begin{equation}
+B \equiv g^b \mod{p}.
+\label{eqAddDiscretIndDHB}
+\end{equation}
+
+Алиса, с помощью только ей известного числа $a$ вычисляет ключ
+\begin{equation}
+K \equiv B^a\mod{p} \equiv g^{ab} \mod{p}.
+\label{eqAddDiscretIndDHKey}
+\end{equation}
+
+Боб может получить то же самое значение ключа с помощью своего
+секретного числа $b$:
+\begin{equation}
+K \equiv A^b\mod{p} \equiv g^{ab} \mod{p}.
+\label{eqAddDiscretIndDHKeyB}
+\end{equation}
+
+Таким образом Алиса и Боб получают один и тот же ключ, который в
+дальнейшем может быть использован для переди сообщения с помощью
+симметричных алгоритмов шифрования (например AES).
+
+\begin{example}
+\emph{(Диффи-Хеллман)}
+Исходные данные (открытая информация): $g = 2$, $p = 23$. Алиса
+выбирает случайное число $a = 6$ и вычисляет по формуле
+(\ref{eqAddDiscretIndDHA}) число 
+%power_mod(2, 6, 23);
+$A = 18$ и отсылает его Бобу.
+Боб выбирает случайное число $b=9$ и, с помощью формулы 
+(\ref{eqAddDiscretIndDHB}), получает
+%power_mod(2, 9, 23);
+$B = 6$ и отсылает и отсылает это число Алисе.
+
+Алиса вычисляет ключ 
+% power_mod(6, 6, 23);
+$K = 12$ по формуле (\ref{eqAddDiscretIndDHKey}). Боб может полчить
+тоже значение ключа 
+% power_mod(18, 9, 23);
+$K = 12$ используя (\ref{eqAddDiscretIndDHKeyB})
+\nonumber
+\end{example}
+
+Злоумышленнику Еве известны числа $g$, $p$, $A$ и $B$. Для получения
+ключа $K$ Еве необходимо получить одно из секретных чисел $a$ или $b$:
+\begin{equation}
+a \equiv ind_g\left( A \right) \mod{p},
+\nonumber
+\end{equation}
+откуда с помощью (\ref{eqAddDiscretIndDHKey}) получается искомое
+значение $K$.
