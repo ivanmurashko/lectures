@@ -1,32 +1,6 @@
 %% -*- coding:utf-8 -*-
 \section{Классическая Колмогоровская теория вероятностей}
 
-Классическая теория вероятностей имеет дело с теорией множеств и
-базируется на нескольких простых аксиомах. 
-
-Прежде всего мы имеем множество $\Omega$.
-\begin{axiom}
-\label{axProbabilityKolmogorov1}
-Каждому подмножеству $A_i \subset \Omega$ мы ставим в соответствие
-некоторое число $0 \le P_i \le 1$
-\end{axiom}
-
-\begin{axiom}
-\label{axProbabilityKolmogorov2}
-$P\left(\Omega\right) = 1$
-\end{axiom}
-
-\begin{axiom}
-\label{axProbabilityKolmogorov3}
-Если $A_i \cap A_j = \emptyset$ тогда 
-$P\left(A_i \cup A_j\right) = P\left(A_i\right) + P\left(A_j\right)$
-\end{axiom}
-
-Все известные факты теории вероятности выводятся из этих трех аксиом.  
-
-
-\subsection{Условная вероятность}
-
-\subsection{Случайная величина. Функции распределения}
-
+\input ./add/probability/base.tex
+\input ./add/probability/rv.tex
 \input ./add/probability/hinchin.tex
