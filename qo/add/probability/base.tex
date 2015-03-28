@@ -2,22 +2,41 @@
 \subsection{Базовые понятия и аксиомы теории вероятности}
 
 Классическая теория вероятностей имеет дело с теорией множеств и
-базируется на нескольких простых аксиомах. 
+базируется на нескольких простых аксиомах. Данная аксиоматика была
+предложена в 30-х годах XX века Колмогоровым
+А. Н. \cite{bKolmogorov74basic}. 
 
-Прежде всего мы имеем множество $\Omega$.
-\begin{axiom}
-\label{axProbabilityKolmogorov1}
-Каждому подмножеству $A_i \subset \Omega$ мы ставим в соответствие
-некоторое число $0 \le P_i \le 1$
+Прежде всего несколько определений объектов с которыми мы будем иметь
+дело. 
+
+\begin{definition}[Пространство событий $\Omega$]
+  Множество $\Omega$ называется пространством событий если
+  $\Omega \subset \Omega$ и
+  $\emptyset \subset \Omega$. Элемент множества
+  $A \subset \Omega$ называется событием.
+\end{definition}
+
+\begin{definition}[Вероятность события $P$]
+  Каждому событию $A \subset \Omega$ ставится в соответствие некоторое
+  число $P\left(A\right) \in \mathbb{R}$ которое называется вероятностью.
+\end{definition}
+
+Теперь собственно говоря аксиомы.
+
+\begin{axiom}[Не-отрицательность]
+  \label{axProbabilityKolmogorovNonNegativity}
+  Вероятность события $A \subset \Omega$ есть неотрицательное
+  вещественное число, т. е. $P\left(\right) \ge 0$
 \end{axiom}
 
-\begin{axiom}
-\label{axProbabilityKolmogorov2}
-$P\left(\Omega\right) = 1$
+\begin{axiom}[Нормировка]
+  \label{axProbabilityNormalization}
+  Вероятность пространства событий $\Omega$ есть $1$, т. е.
+  $P\left(\Omega\right) = 1$
 \end{axiom}
 
-\begin{axiom}
-\label{axProbabilityKolmogorov3}
+\begin{axiom}[Аддитивность]
+\label{axProbabilityAdditivity}
 Если $A_i \cap A_j = \emptyset$ тогда 
 $P\left(A_i \cup A_j\right) = P\left(A_i\right) + P\left(A_j\right)$
 \end{axiom}
