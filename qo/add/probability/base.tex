@@ -24,7 +24,14 @@
   число $P\left(A\right) \in \mathbb{R}$ которое называется вероятностью.
 \end{definition}
 
+\begin{example}[Пространство событий]
 \input ./add/probability/figdefinition.tex
+На рис. \ref{figAddProbabilityDefinition} изображено множество
+$\Omega$ которое мы называем пространством событий. Элементы
+множества $\omega \in \Omega$ (черные точки на
+рис. \ref{figAddProbabilityDefinition}) - элементарные
+события. Подмножество $A \subset \Omega$ - событие.
+\end{example}
 
 Теперь собственно говоря аксиомы.
 
@@ -46,6 +53,29 @@
 $P\left(A_i \cup A_j\right) = P\left(A_i\right) + P\left(A_j\right)$
 \end{axiom}
 
+\begin{example}[Аксиомы Колмогоровской теории вероятностей]
 \input ./add/probability/figaxioms.tex
+Каждому элементарному событию $\omega_i \in \Omega$
+на рис. \ref{figAddProbabilityAxioms} поставим в соответствие
+неотрицательное число 
+$P\left(\omega_i\right) = \frac{1}{12}$. Вероятность события $A$ - 
+$P\left(A\right) = \frac{5}{13}$ для события $B$ имеем
+$P\left(B\right) = \frac{4}{13}$. Таким образом в силу того, что 
+$A \cap B = \emptyset$, используя аксиому
+\ref{axProbabilityAdditivity} получим:
+\[
+P\left(A\cup B\right) = 
+P\left(A\right) + P\left(B\right) = 
+\frac{5}{12} + \frac{4}{12} = \frac{3}{4}.
+\]
+Для события $\Omega$ в силу аксиомы \ref{axProbabilityNormalization}
+имеем $P\left(\Omega\right) = 1$. С другой стороны 
+$\Omega = \cup_i \omega_i$ т.е. 
+\[
+P\left(\Omega\right) = \sum_i P\left(\omega_i\right) =
+12\cdot\frac{1}{12} = 1.
+\]
+\end{example}
+
 
 Все известные факты теории вероятности выводятся из этих трех аксиом.  
