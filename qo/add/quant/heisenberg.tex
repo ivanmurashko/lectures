@@ -1,3 +1,100 @@
 %% -*- coding:utf-8 -*- 
-\section{Принцип неопределенности Гайзенберга}
+\section{Принцип неопределенности Гейзенберга}
 \label{AddHeisenbergUncertaintyPrinciple}
+Допустим два оператора $\hat{A}$ и $\hat{B}$ не коммутируют друг с
+другом, т.е. 
+\begin{equation}
+\left[
+\hat{A}\hat{B}
+\right] = 
+\hat{A}\hat{B} - \hat{B}\hat{A} = i \hat{C} \ne 0,
+\nonumber
+\end{equation}
+где $\hat{C}$ некоторый эрмитовый оператор.
+
+Допустим система находится в состоянии $\left|\psi\right>$. Тогда
+средние значения операторов выражаются следующими соотношениями:
+\begin{eqnarray}
+\left<\psi\right|\hat{A}\left|\psi\right> = \left<\hat{A}\right>,
+\nonumber \\
+\left<\psi\right|\hat{B}\left|\psi\right> = \left<\hat{B}\right>.
+\nonumber
+\end{eqnarray}
+
+Определим неопределённость измерения величин $A$ и $B$ как их
+дисперсии следующим образом
+\begin{eqnarray}
+\Delta A = \sqrt{\left<\psi\right|
+\hat{\mathcal{A}}^2\left|\psi\right>}, 
+\nonumber \\
+\Delta B = \sqrt{\left<\psi\right|
+\hat{\mathcal{B}}^2\left|\psi\right>}, 
+\nonumber
+\end{eqnarray}
+где
+\begin{eqnarray}
+\hat{\mathcal{A}} = \hat{A}-\left<\hat{A}\right>, 
+\nonumber \\
+\hat{\mathcal{B}} = \hat{B}-\left<\hat{B}\right>.
+\nonumber
+\end{eqnarray}
+
+Введем оператор $\hat{D}$ следующим образом
+\begin{equation}
+\hat{D} = \hat{\mathcal{A}} + i \lambda \hat{\mathcal{B}}.
+\nonumber
+\end{equation}
+Рассмотрим оператор $\hat{D}^{+}\hat{D}$, который является
+эрмитовым. Его среднее в состоянии $\left|\psi\right>$:
+\begin{eqnarray}
+\left<\psi\right|\hat{D}^{+}\hat{D}\left|\psi\right> = 
+\left<\phi\right|\left.\phi\right> \ge 0,
+\nonumber
+\end{eqnarray}
+где
+$\left|\phi\right> = \hat{D}\left|\psi\right>$. С другой стороны 
+\begin{eqnarray}
+\left<\psi\right|\hat{D}^{+}\hat{D}\left|\psi\right> = 
+\left<\psi\right|\left(\hat{\mathcal{A}} - i \lambda \hat{\mathcal{B}}\right)
+\left(\hat{\mathcal{A}} + i \lambda \hat{\mathcal{B}}\right)\left|\psi\right> =
+\nonumber \\
+=
+\left<\psi\right|\hat{\mathcal{A}}^2\left|\psi\right> +
+\lambda^2\left<\psi\right|\hat{\mathcal{B}}^2\left|\psi\right> +
+i \lambda 
+\left<\psi\right|
+\left[ \mathcal{\hat{A}}, \mathcal{\hat{B}}\right]
+\left|\psi\right>
+ = 
+\nonumber \\
+=
+\left(\Delta A\right)^2 + \lambda^2 \left(\Delta B\right)^2 +
+i \lambda 
+\left<\psi\right|
+\left[ \hat{A}, \hat{B}\right]
+\left|\psi\right> = 
+\nonumber \\
+=
+\lambda^2 \left(\Delta B\right)^2 - 
+\lambda \left<C\right> + \left(\Delta A\right)^2 \ge 0.
+\nonumber
+\end{eqnarray}
+Рассмотрим многочлен 
+\[
+f\left(\lambda\right) = \lambda^2 \left(\Delta B\right)^2 - 
+\lambda \left<C\right> + \left(\Delta A\right)^2.
+\]
+Имеем $f\left( \pm \infty \right) > 0$ т.о. 
+$f\left(\lambda\right) \ge 0$ если этот многочлен имеет не больше
+одного вещественного корня, т.е.
+\[
+\left<C\right>^2 - 4 \left(\Delta A\right)^2 \left(\Delta B\right)^2
+\le 0
+\]
+или
+\[
+\Delta A \Delta B \ge \frac{\left|\left< C \right>\right|}{2},
+\]
+что представляет собой неравенство Гейзенберга. 
+
+
