@@ -287,6 +287,69 @@ $\left|s_2\right> = \left|y\right>$:
 \left|s_2\right> = \frac{1}{\sqrt{2}}\left(\left|x\right> - \left|y\right>\right).
 \]
 
+Для оператора $\hat{S}_3$ имеем:
+\begin{eqnarray}
+  \hat{S}_3 \left|x\right> = \frac{1}{i}\left(\hat{a}_x^{+} \hat{a}_y
+\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{+}
+\hat{a}_x\left|1\right>_x\otimes\left|0\right>_y\right) =
+\nonumber \\
+= 
+-\frac{1}{i}\hat{a}_y^{+}
+\hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
+-\frac{1}{i}\left|0\right>_x\otimes\left|1\right>_y =
+-\frac{\left|y\right>}{i} = i \left|y\right>,
+\nonumber \\
+\hat{S}_2 \left|y\right> = \frac{1}{i}\left(\hat{a}_x^{+} \hat{a}_y
+\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{+}
+\hat{a}_x\left|0\right>_x\otimes\left|1\right>_y\right) =
+\nonumber \\
+=
+\frac{1}{i}\hat{a}_x^{+} \hat{a}_y
+\left|0\right>_x\otimes\left|1\right>_y
+=\frac{1}{i}\left|1\right>_x\otimes\left|0\right>_y =
+-i \left|x\right>.
+\label{eqEntangS3MatrixPre}
+\end{eqnarray}
+Таким образом из (\ref{eqEntangS3MatrixPre}) получаем следующее
+матричное преставление оператора $\hat{S}_3$:
+\begin{equation}
+\hat{S}_3 = 
+\left(
+\begin{array}{cc}
+0 & i \\
+-i & 0 
+\end{array}
+\right).
+\label{eqEntangS3Matrix}
+\end{equation}
+
+%% (%i1) A: matrix([0, i],[-i, 0]);  
+%%                                   [  0   i ]
+%% (%o1)                             [        ]
+%%                                   [ - i  0 ]
+%% (%i2) [vals, vecs] : eigenvectors (A);
+%% (%o2)        [[[- %i i, %i i], [1, 1]], [[[1, - %i]], [[1, %i]]]]
+%% (%i3) vecs;
+%% (%o3)                      [[[1, - %i]], [[1, %i]]]
+%% (%i4) 
+
+Из (\ref{eqEntangS3Matrix}) можно получить что собственными числами
+являются все те же $s_1 = 1$ и $s_2 = -1$. При этом собственными
+состояниями оператора $\hat{S}_3$ являются состояния с левой и правой
+круговыми поляризациями:
+\begin{eqnarray}
+  \left| s_1 \right> = \frac{1}{\sqrt{2}}
+  \left(
+  \left|x\right> - i \left|y\right>
+  \right),
+  \nonumber \\
+  \left| s_2 \right> = \frac{1}{\sqrt{2}}
+  \left(
+  \left|x\right> + i \left|y\right>
+  \right).
+  \label{eqEntangS3Eigenvec}
+\end{eqnarray}
+
 
 % Подействуем операторами (\ref{eqEntangStokesOper}) на состояние 
 % (\ref{eqEntangSimpleState}):
