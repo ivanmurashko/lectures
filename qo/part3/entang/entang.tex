@@ -75,15 +75,20 @@ c_{yy} \left|y\right>_1\left|y\right>_2.
 Таким образом, каждому отдельному фотону не может быть приписана
 некоторая волновая функция. Такие состояния называются перепутанными.
 
-В качестве примера мы будем исследовать волновую функцию (\ref{eqEntang2Common})
-у которой $c_{xx} = c_{yy} = 0$, а $c_{xy} = - c_{yx} = \frac{1}{\sqrt{2}}$:
+В качестве примера мы будем исследовать следующую волновую функцию:
 \begin{equation}
-\left|\psi\right> = \frac{
-\left|x\right>_1\left|y\right>_2 -
-\left|y\right>_1\left|x\right>_2
-}{\sqrt{2}}.
+  \left|\psi\right> = \frac{
+    \left| + \right>_1\left| - \right>_2 -
+    \left| - \right>_1\left| + \right>_2
+  }{\sqrt{2}},
 \label{eqEntang2Test}
 \end{equation}
+т. е. все, что нам известно о фотонах - это то что они имеют разную
+круговую поляризацию. С вероятностью 50\% первый фотон имеет левую
+круговую поляризацию, и в этом случае, второй фотон имеет правую
+круговую поляризацию. И наоборот -  с вероятностью 50\% первый фотон
+имеет правую круговую поляризацию, и в этом случае, второй фотон имеет
+левую круговую поляризацию. 
 
 \input ./part3/entang/figent.tex
 
@@ -110,16 +115,22 @@ $\left|x\right>_1$:
 при этом волновая функция
 (\ref{eqEntang2Test}) преобразуется следующим образом:
 \begin{eqnarray}
-\hat{P}_{\left|x\right>_1}\left|\psi\right> = 
-\frac{1}{\sqrt{2}}\left[
-\left|x\right>_1\left<x\right|_1
-\left(
-\left|x\right>_1\left|y\right>_2 -
-\left|y\right>_1\left|x\right>_2
-\right)
-\right] = 
-\nonumber \\
-=\frac{1}{\sqrt{2}}\left|x\right>_1\left|y\right>_2.
+  \hat{P}_{\left|x\right>_1}\left|\psi\right> =
+  \left|x\right>_1\left<x\right|_1 \left|\psi\right> =
+  \nonumber \\
+    =
+  \left|x\right>_1\left<x\right|_1
+  \frac{
+    \left( \left|x\right>_1 + i \left|y\right>_1 \right)\left| - \right>_2 -
+    \left( \left|x\right>_1 - i \left|y\right>_1 \right)\left| + \right>_2
+  }{2} =
+  \nonumber \\
+  =
+  \left|x\right>_1
+  \frac{\left| - \right>_2 - \left| + \right>_2}{2} =
+  \frac{1}{2\sqrt{2}}\left|x\right>_1 \left(2 i\right)
+  \left|y\right>_2 =
+  \frac{i}{\sqrt{2}}\left|x\right>_1\left|y\right>_2.
 \nonumber
 \end{eqnarray}
 Следовательно после измерения $\hat{S}_1^{(1)}$ волновая функция всей
@@ -131,7 +142,27 @@ $\left|x\right>_1$:
 т. е.  показание детектора $D^{(2)}$ будет равно $-1$.
 
 Аналогично, если показание первого детектора было равно $-1$, то
-волновая функция после измерения будет равна 
+волновая функция после измерения будет равна
+\begin{eqnarray}
+  P_{\left|y\right>_1}\left|\psi\right> =
+  \left|y\right>_1\left<y\right|_1 \left|\psi\right> =
+  \nonumber \\
+  =
+  \left|y\right>_1\left<y\right|_1
+  \frac{
+    \left( \left|x\right>_1 + i \left|y\right>_1 \right)\left| - \right>_2 -
+    \left( \left|x\right>_1 - i \left|y\right>_1 \right)\left| + \right>_2
+  }{2} =
+  \nonumber \\
+  =
+  \left|y\right>_1 i 
+  \frac{\left| - \right>_2 + \left| + \right>_2}{2} =
+  \frac{i}{2\sqrt{2}}\left|y\right>_1 \left(2\right)
+  \left|x\right>_2 =
+  \frac{i}{\sqrt{2}}\left|y\right>_1\left|x\right>_2,
+  \nonumber
+\end{eqnarray}
+т. е.
 \[
 \left|\psi\right>_{red} = \left|x\right>_2\left|y\right>_1,
 \]
@@ -140,74 +171,110 @@ $\left|x\right>_2$ а показание детектора $D^{(2)}$ будет
 Таким образом, при любом измерении $\hat{S}_1^{(1)}$ мы можем
 достоверно (с вероятностью, равной 1) предсказать результат измерения
 $\hat{S}_1^{(2)}$, при этом прямо не воздействуя на второй фотон, т. е.
-величина $\hat{S}_1^{(2)}$ должна рассматриваться как элемент физической реальности.
+величина $\hat{S}_1^{(2)}$ должна рассматриваться как элемент
+физической реальности.
 
-С другой стороны, мы могли бы в детекторе $D^{(1)}$ произвести
-измерение $\hat{S}_2^{(1)}$. В этом случае для показаний детектора мы
-имели бы два значения: $+1$ или $-1$, для первого из которых волновая
-функция (\ref{eqEntang2Test})
-преобразовывалась бы следующим образом:
+При этом в рассматриваемом состоянии среднее значение параметра Стокса
+$\left<\hat{S}_3^{(2)}\right>$ имеет вид
 \begin{eqnarray}
-\hat{P}_{\frac{\left|x\right>_1 +
-    \left|y\right>_1}{\sqrt{2}}}\left|\psi\right> = 
-\nonumber \\
-=
-\frac{1}{2}\left[
-\left(\left|x\right>_1 + \left|y\right>_1\right)
-\left(\left<x\right|_1 + \left<y\right|_1\right)
-\left(
-\left|x\right>_1\left|y\right>_2 -
-\left|y\right>_1\left|x\right>_2
-\right)
-\right] = 
-\nonumber \\
-= \frac{1}{2}\left[
-\left(\left|x\right>_1 + \left|y\right>_1\right)
-\left(
-\left|y\right>_2 -
-\left|x\right>_2
-\right)
-\right] =
-\nonumber \\
-= \frac{\left|x\right>_1 + \left|y\right>_1}{\sqrt{2}}
- \frac{\left|y\right>_2 - \left|x\right>_2}{\sqrt{2}}.
-\nonumber
+  \left<\hat{S}_3^{(2)}\right> =
+  \left<\psi\right|\hat{S}_3^{(2)}\left|\psi\right> =
+  \left<\psi\right|\hat{S}_3^{(2)}\frac{
+    \left| + \right>_1\left| - \right>_2 -
+    \left| - \right>_1\left| + \right>_2
+  }{\sqrt{2}} =
+  \nonumber \\
+  = \left<\psi\right|\frac{
+    \left| + \right>_1\left| - \right>_2 +
+    \left| - \right>_1\left| + \right>_2
+  }{\sqrt{2}} =
+  \nonumber \\
+  = \frac{1}{2} \left(
+  \left< + \right|_1\left< - \right|_2 -
+  \left< - \right|_1\left< + \right|_2
+  \right)
+  \left(
+  \left| + \right>_1\left| - \right>_2 -
+  \left| - \right>_1\left| + \right>_2
+  \right) = 1.
+  \label{eqEntangS3Mean}
 \end{eqnarray}
-Таким образом при измерении $\hat{S}_2^{(2)}$ мы получим $-1$ в
-качестве результата детектора $D^{(2)}$. Если же в качестве
-показаний детектора $D^{(1)}$ мы получим $-1$, то состояние системы
-преобразуется к 
-\begin{eqnarray}
-\hat{P}_{\frac{\left|x\right>_1 -
-    \left|y\right>_1}{\sqrt{2}}}\left|\psi\right> = 
-\nonumber \\
-=
-\frac{1}{2}\left[
-\left(\left|x\right>_1 - \left|y\right>_1\right)
-\left(\left<x\right|_1 - \left<y\right|_1\right)
-\left(
-\left|x\right>_1\left|y\right>_2 -
-\left|y\right>_1\left|x\right>_2
-\right)
-\right] = 
-\nonumber \\
-= \frac{1}{2}\left[
-\left(\left|x\right>_1 - \left|y\right>_1\right)
-\left(
-\left|y\right>_2 +
-\left|x\right>_2
-\right)
-\right] =
-\nonumber \\
-= \frac{\left|x\right>_1 - \left|y\right>_1}{\sqrt{2}}
- \frac{\left|x\right>_2 + \left|y\right>_2}{\sqrt{2}}
-\nonumber
-\end{eqnarray}
-и для показаний детектора $D^{(2)}$ получим $+1$. Следовательно, при
-любом измерении $\hat{S}_2^{(1)}$ мы можем 
-достоверно (с вероятностью равной 1) предсказать результат измерения
-$\hat{S}_2^{(2)}$, при этом прямо не воздействуя на второй фотон, т. е.
-$\hat{S}_2^{(2)}$ должна рассматриваться как элемент физической реальности.
+
+При выводе (\ref{eqEntangS3Mean}) использовались выражения
+(\ref{eqEntangS3Eigenvec}). Таким образом из неравенства Гейзенберга
+(\ref{eqAddHeisenbergUncertaintyPrinciple}) можно получить что
+\[
+\Delta s_1^{(2)} \Delta s_2^{(2)} \ge 1,
+\]
+т. е. из квантовой механики следует, что первый и второй параметры
+Стокса для второй частицы не могут быть измерены одновременно. 
+
+%% С другой стороны, мы могли бы в детекторе $D^{(1)}$ произвести
+%% измерение $\hat{S}_2^{(1)}$. В этом случае для показаний детектора мы
+%% имели бы два значения: $+1$ или $-1$, для первого из которых волновая
+%% функция (\ref{eqEntang2Test})
+%% преобразовывалась бы следующим образом:
+%% \begin{eqnarray}
+%% \hat{P}_{\frac{\left|x\right>_1 +
+%%     \left|y\right>_1}{\sqrt{2}}}\left|\psi\right> = 
+%% \nonumber \\
+%% =
+%% \frac{1}{2}\left[
+%% \left(\left|x\right>_1 + \left|y\right>_1\right)
+%% \left(\left<x\right|_1 + \left<y\right|_1\right)
+%% \left(
+%% \left|x\right>_1\left|y\right>_2 -
+%% \left|y\right>_1\left|x\right>_2
+%% \right)
+%% \right] = 
+%% \nonumber \\
+%% = \frac{1}{2}\left[
+%% \left(\left|x\right>_1 + \left|y\right>_1\right)
+%% \left(
+%% \left|y\right>_2 -
+%% \left|x\right>_2
+%% \right)
+%% \right] =
+%% \nonumber \\
+%% = \frac{\left|x\right>_1 + \left|y\right>_1}{\sqrt{2}}
+%%  \frac{\left|y\right>_2 - \left|x\right>_2}{\sqrt{2}}.
+%% \nonumber
+%% \end{eqnarray}
+%% Таким образом при измерении $\hat{S}_2^{(2)}$ мы получим $-1$ в
+%% качестве результата детектора $D^{(2)}$. Если же в качестве
+%% показаний детектора $D^{(1)}$ мы получим $-1$, то состояние системы
+%% преобразуется к 
+%% \begin{eqnarray}
+%% \hat{P}_{\frac{\left|x\right>_1 -
+%%     \left|y\right>_1}{\sqrt{2}}}\left|\psi\right> = 
+%% \nonumber \\
+%% =
+%% \frac{1}{2}\left[
+%% \left(\left|x\right>_1 - \left|y\right>_1\right)
+%% \left(\left<x\right|_1 - \left<y\right|_1\right)
+%% \left(
+%% \left|x\right>_1\left|y\right>_2 -
+%% \left|y\right>_1\left|x\right>_2
+%% \right)
+%% \right] = 
+%% \nonumber \\
+%% = \frac{1}{2}\left[
+%% \left(\left|x\right>_1 - \left|y\right>_1\right)
+%% \left(
+%% \left|y\right>_2 +
+%% \left|x\right>_2
+%% \right)
+%% \right] =
+%% \nonumber \\
+%% = \frac{\left|x\right>_1 - \left|y\right>_1}{\sqrt{2}}
+%%  \frac{\left|x\right>_2 + \left|y\right>_2}{\sqrt{2}}
+%% \nonumber
+%% \end{eqnarray}
+%% и для показаний детектора $D^{(2)}$ получим $+1$. Следовательно, при
+%% любом измерении $\hat{S}_2^{(1)}$ мы можем 
+%% достоверно (с вероятностью равной 1) предсказать результат измерения
+%% $\hat{S}_2^{(2)}$, при этом прямо не воздействуя на второй фотон, т. е.
+%% $\hat{S}_2^{(2)}$ должна рассматриваться как элемент физической реальности.
 
 Теперь если мы предполагаем, что результаты экспериментов
 предопределены заранее, т. е. не зависят от того измерение какой
