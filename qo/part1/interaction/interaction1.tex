@@ -231,7 +231,7 @@ C_{b, n + 1}\left(t\right),
 C_{a, n}\left(t\right),
   \nonumber
 \end{eqnarray}
-где $\delta = \omega - \omega_{ab}$ - расстройка частоты.
+где $\delta = \frac{\omega - \omega_{ab}}{2}$ - расстройка частоты.
 Задачу будем решать только для случая излучения, т. е. начальные
 условия имеют вид
 \begin{eqnarray}
@@ -244,21 +244,21 @@ C_{a, n}\left(t\right),
 $\left|C_{b, n + 1}\left(t\right)\right|^2$. Т. о.
 обозначив $x(\left(t\right) = C_{b,n+1}\left(t\right)$ получим
 \begin{eqnarray}
-  \ddot{x} =  -i \omega_R \frac{d \left(e^{i \delta t} 
+  \ddot{x} =  -i \omega_R \frac{d \left(e^{2 i \delta t} 
     C_{a, n}\left(t\right)\right) }{d t} =
   \nonumber \\
-  = i \delta \left(- i \omega_R e^{i \delta t} 
-  C_{a, n}\left(t\right) \right) -i \omega_R e^{i \delta t}
+  = i \delta \left(- i \omega_R e^{2 i\delta t} 
+  C_{a, n}\left(t\right) \right) -i \omega_R e^{2 i \delta t}
   \frac{d C_{a, n}\left(t\right)}{dt} =
   \nonumber \\
-  = i \delta \dot{x} - \omega_R^2 e^{-i \delta t} e^{i \delta t} x =
+  = 2 i \delta \dot{x} - \omega_R^2 e^{-2 i \delta t} e^{2 i \delta t} x =
   \nonumber \\
-  =  i \delta \dot{x} - \omega_R^2 x,
+  = 2 i \delta \dot{x} - \omega_R^2 x,
   \nonumber
 \end{eqnarray}
 т. е.
 \begin{equation}
-  \ddot{x} -i \delta \dot{x} + \omega_R^2 x = 0.
+  \ddot{x} -2 i \delta \dot{x} + \omega_R^2 x = 0.
   \label{eqPart1RabiCommon}
 \end{equation}
 Уравнение (\ref{eqPart1RabiCommon}) должно быть решено при следующих
@@ -269,38 +269,20 @@ $\left|C_{b, n + 1}\left(t\right)\right|^2$. Т. о.
   \left.\dot{x}\right|_{t=0} = -i \omega_R C_{a,n}\left(0\right) = -i \omega_R.
   \nonumber
 \end{eqnarray}
-%% (%i3)  eq: 'diff(x(t),t,2) - sqrt(-1)*d*'diff(x(t),t) + w^2*x(t) = 0;
-%%                              2
-%%                         2   d                  d
-%% (%o3)             x(t) w  + --- (x(t)) - %i d (-- (x(t))) = 0
-%%                               2                dt
-%%                             dt
-%% (%i4) atvalue(x(t),t=0,0);
-%% (%o4)                                  0
-%% (%i5) atvalue('diff(x(t),t),t=0,-sqrt(-1)*w);
-%% (%o5)                               - %i w
-%% (%i6) desolve(eq, x(t));
-%%       2    2
-%% Is 4 w  + d  positive or zero?
-
+%% (%i1) eq: 'diff(x(t),t,2) - 2*%i*d*'diff(x(t),t) + w^2*x(t) = 0;
+%% (%i2) atvalue(x(t),t=0,0);
+%% (%i3) atvalue('diff(x(t),t),t=0,-%i*w);
+%% (%i4) desolve(eq, x(t));
 %% positive;
-%%                                 %i d t
-%%                                 ------                 2    2
-%%                                   2          t sqrt(4 w  + d )
-%%                          2 %i %e       w sin(-----------------)
-%%                                                      2
-%% (%o6)           x(t) = - --------------------------------------
-%%                                             2    2
-%%                                     sqrt(4 w  + d )
-%% (%i7) 
+%% (%i5) 
 Результат:
 \begin{equation}
-  x\left(t\right) = i e^{\frac{i \delta t}{2}}
-  \frac{\omega_R}{\sqrt{\omega_R^2 + \left(\frac{\delta}{2}\right)^2}}
-  \sin{\sqrt{\omega_R^2 + \left(\frac{\delta}{2}\right)^2}t},
+  x\left(t\right) = i e^{ i \delta t}
+  \frac{\omega_R}{\sqrt{\omega_R^2 + \delta^2}}
+  \sin{\sqrt{\omega_R^2 + \delta^2}t},
   \nonumber
 \end{equation}
-обозначив через $\Omega_R = \sqrt{\omega_R^2 + \left(\frac{\delta}{2}\right)^2}$ -
+обозначив через $\Omega_R = \sqrt{\omega_R^2 + \delta^2}$ -
 обобщенную частоту Раби - для искомой вероятности
 $\left|C_{b,n+1}\right|^2$ получим
 \begin{eqnarray}
