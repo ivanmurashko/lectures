@@ -17,6 +17,6 @@ pdf: main.tex main.bib algorithmic.sty questions.tex
 	cp main.pdf qo.pdf
 
 clean:
-	rm -rf qo.pdf qo.dvi main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out questions.pdf
+	rm -rf qo.pdf qo.dvi main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out questions.pdf questions.aux questions.log
 	rm -rf algorithmic.sty  algorithm.sty
 	find . \( -name "*.log" -o -name "*~" \) -exec rm -rf {} \; 
