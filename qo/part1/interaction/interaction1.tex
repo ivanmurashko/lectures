@@ -192,15 +192,15 @@ B \cos\left(g \sqrt{n + 1} t\right)
 При поглощении начальные условия ($C_{a,n}\left(0\right) = 0$, $C_{b,n+1}\left(0\right)
 = 1$) дают $A = i$, $B = 0$, следовательно,  
 \begin{equation}
-C_{a,n}\left(t\right) = -i \sin\left(\omega_R t\right), \quad
-C_{b, n + 1}\left(t\right) = \cos\left(\omega_R t\right), 
+C_{a,n}\left(t\right) = -i \sin\left(\frac{\omega_R t}{2}\right), \quad
+C_{b, n + 1}\left(t\right) = \cos\left(\frac{\omega_R t}{2}\right), 
 \end{equation}
-где $\omega_R = g\sqrt{n + 1}$ - частота Раби в квантовом случае. Для случая
+где $\omega_R = 2g\sqrt{n + 1}$ - частота Раби в квантовом случае. Для случая
 излучения из начальных условий ($C_{a,n}\left(0\right) = 1$,
 $C_{b,n+1}\left(0\right) = 0$) имеем $A = 0$, $B = 1$, следовательно, 
 \begin{equation}
-C_{a,n}\left(t\right) = \cos\left(\omega_R t\right), \quad
-C_{b, n + 1}\left(t\right) = -i \sin\left(\omega_R t\right), 
+C_{a,n}\left(t\right) = \cos\left(\frac{\omega_R t}{2}\right), \quad
+C_{b, n + 1}\left(t\right) = -i \sin\left(\frac{\omega_R t}{2}\right), 
 \end{equation}
 На рис. \ref{figPart1Ch2_5} изображены зависимости вероятностей 
 $\left|C_{a,n}\left(t\right)\right|^2$ и 
@@ -210,7 +210,7 @@ $\left|C_{b, n + 1}\left(t\right)\right|^2$  от времени для случ
 \input ./part1/interaction/fig5.tex
 
 В полуклассическом выражении частота Раби $\omega_R$ равна 
-$\frac{\left|p E\right|}{\hbar}$,  в квантовом - $g\sqrt{n + 1}$,
+$\frac{\left|p E\right|}{\hbar}$,  в квантовом - $2g\sqrt{n + 1}$,
 т. е. $E$  соответствует $E_1\sqrt{n + 1}$,  где $E_1$ - поле,
 соответствующее одному фотону в моде. При больших $n$ эти два
 выражения практически совпадают. Но при малых $n$ различие может быть 
@@ -224,14 +224,14 @@ $\frac{\left|p E\right|}{\hbar}$,  в квантовом - $g\sqrt{n + 1}$,
 (\ref{eqCh2_task3}). Рассматриваемые соотношения можно записать в
 следующем виде
 \begin{eqnarray}
-  {\dot C}_{a,n}\left(t\right) = -i \omega_R e^{-i \delta t} 
+  {\dot C}_{a,n}\left(t\right) = -i \frac{\omega_R}{2} e^{-i \delta t} 
 C_{b, n + 1}\left(t\right),
 \nonumber \\
-{\dot C}_{b, n + 1}\left(t\right) = -i \omega_R e^{i \delta t} 
+{\dot C}_{b, n + 1}\left(t\right) = -i \frac{\omega_R}{2} e^{i \delta t} 
 C_{a, n}\left(t\right),
   \nonumber
 \end{eqnarray}
-где $\delta = \frac{\omega - \omega_{ab}}{2}$ - расстройка частоты.
+где $\delta = \omega - \omega_{ab}$ - расстройка частоты.
 Задачу будем решать только для случая излучения, т. е. начальные
 условия имеют вид
 \begin{eqnarray}
@@ -242,23 +242,23 @@ C_{a, n}\left(t\right),
 \end{eqnarray}
 При этом интересовать нас будет прежде всего поведение вероятностей
 $\left|C_{b, n + 1}\left(t\right)\right|^2$. Т. о.
-обозначив $x(\left(t\right) = C_{b,n+1}\left(t\right)$ получим
+обозначив $x\left(t\right) = C_{b,n+1}\left(t\right)$ получим
 \begin{eqnarray}
-  \ddot{x} =  -i \omega_R \frac{d \left(e^{2 i \delta t} 
+  \ddot{x} =  -i \frac{\omega_R}{2} \frac{d \left(e^{i \delta t} 
     C_{a, n}\left(t\right)\right) }{d t} =
   \nonumber \\
-  = i \delta \left(- i \omega_R e^{2 i\delta t} 
-  C_{a, n}\left(t\right) \right) -i \omega_R e^{2 i \delta t}
+  = i \delta \left(- i \frac{\omega_R}{2} e^{ i\delta t} 
+  C_{a, n}\left(t\right) \right) -i \frac{\omega_R}{2} e^{i \delta t}
   \frac{d C_{a, n}\left(t\right)}{dt} =
   \nonumber \\
-  = 2 i \delta \dot{x} - \omega_R^2 e^{-2 i \delta t} e^{2 i \delta t} x =
+  = i \delta \dot{x} - \frac{\omega_R^2}{4} e^{-i \delta t} e^{i \delta t} x =
   \nonumber \\
-  = 2 i \delta \dot{x} - \omega_R^2 x,
+  = i \delta \dot{x} - \frac{\omega_R^2}{4} x,
   \nonumber
 \end{eqnarray}
 т. е.
 \begin{equation}
-  \ddot{x} -2 i \delta \dot{x} + \omega_R^2 x = 0.
+  \ddot{x} - i \delta \dot{x} + \frac{\omega_R^2}{4} x = 0.
   \label{eqPart1RabiCommon}
 \end{equation}
 Уравнение (\ref{eqPart1RabiCommon}) должно быть решено при следующих
@@ -266,28 +266,29 @@ $\left|C_{b, n + 1}\left(t\right)\right|^2$. Т. о.
 \begin{eqnarray}
   \left.x\right|_{t=0} = C_{b,n+1}\left(0\right) = 0,
   \nonumber \\
-  \left.\dot{x}\right|_{t=0} = -i \omega_R C_{a,n}\left(0\right) = -i \omega_R.
+  \left.\dot{x}\right|_{t=0} = -i \frac{\omega_R}{2} C_{a,n}\left(0\right) =
+  -i \frac{\omega_R}{2}.
   \nonumber
 \end{eqnarray}
-%% (%i1) eq: 'diff(x(t),t,2) - 2*%i*d*'diff(x(t),t) + w^2*x(t) = 0;
+%% (%i1) eq: 'diff(x(t),t,2) - 2*%i*d*'diff(x(t),t) + w^2*x(t)/4 = 0;
 %% (%i2) atvalue(x(t),t=0,0);
-%% (%i3) atvalue('diff(x(t),t),t=0,-%i*w);
+%% (%i3) atvalue('diff(x(t),t),t=0,-%i*w/2);
 %% (%i4) desolve(eq, x(t));
 %% positive;
 %% (%i5) 
 Результат:
 \begin{equation}
-  x\left(t\right) = i e^{ i \delta t}
+  x\left(t\right) = -  i e^{\frac{ i \delta t}{2}}
   \frac{\omega_R}{\sqrt{\omega_R^2 + \delta^2}}
-  \sin{\left(\sqrt{\omega_R^2 + \delta^2}t\right)},
+  \sin{\left(\frac{\sqrt{\omega_R^2 + \delta^2}}{2}t\right)},
   \nonumber
 \end{equation}
 обозначив через $\Omega_R = \sqrt{\omega_R^2 + \delta^2}$ -
 обобщенную частоту Раби - для искомой вероятности
 $\left|C_{b,n+1}\right|^2$ получим
 \begin{eqnarray}
-  \left|C_{b,n+1}\right|^2 = \frac{\omega_R^2}{\Omega_R^2}
-  \sin^2{\Omega_R t}.
+  \left|C_{b,n+1}\right|^2 =  \frac{\omega_R^2}{\Omega_R^2}
+  \sin^2{\frac{\Omega_R}{2} t}.
   \nonumber
 \end{eqnarray}
 %% TODO FIXME wrong result - should be
