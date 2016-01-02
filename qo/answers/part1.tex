@@ -1,0 +1,32 @@
+\chapter{Квантовая электродинамика}
+
+\section{Квантование электромагнитного поля} 
+
+\subsection{\ref{qQuantelNumberMods}: Число мод}
+Сколько мод электромагнитного поля с длиной волны
+  $\lambda \ge 500 \mbox{нм}$ находятся в кубе квантования со стороной
+$L=1 \mbox{мм}$?
+
+Диапазону длин волн $\lambda \ge \lambda_0 = 500 \mbox{нм}$
+соответствует диапазон частот
+$\omega \le \omega_0 = \frac{2 \pi c}{\lambda_0}$.
+
+Воспользуемся формулой \ref{eqCh1_modenumber_1}
+\[
+d N = 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d \omega d \Omega
+\]
+откуда
+\begin{eqnarray}
+  N = \int_0^{\omega_0} 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d
+  \omega d \int_{4 \pi} d \Omega =
+  \nonumber \\
+  = 8 \pi \int_0^{\omega_0} \left(\frac{L}{2 \pi c} \right)^3 d \omega
+  = 8 \pi \left(\frac{L}{2 \pi c}\right)^3 \frac{\omega_0^3}{3} =
+  \nonumber \\
+  = \frac{8 \pi}{3} \left(\frac{L}{\lambda_0}\right)^3 \approx 67
+  \cdot 10^9
+  \nonumber
+\end{eqnarray}
+
+
+\section{Взаимодействие света с атомом}
