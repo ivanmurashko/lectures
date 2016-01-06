@@ -35,3 +35,84 @@ d N = 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d \omega d \Omega
 лития} 
 
 \input ./part1/interaction/figfreq.tex
+
+Обозначим через $\Omega_R^{(1,2)}$ эффективные частоты Раби для
+измерения 1 и 2 соответственно. Расстройки частот для двух
+экспериментов $\delta_{1,2}$. Таким образом имеем
+\begin{eqnarray}
+  \Omega_R^{(1)} = \sqrt{\omega_R^2 + \delta_1^2},
+  \nonumber \\
+  \Omega_R^{(2)} = \sqrt{\omega_R^2 + \delta_2^2}
+  \label{eqAnswersInteraction40}
+\end{eqnarray}
+
+С другой стороны из графиков
+рис. \ref{figPart1InteractionQuestionFreq} видно что максимальная
+вероятность обнаружить атомы лития в состоянии $\left|2\right>$ для
+частоты $\omega_2 = 2 \pi \cdot 228.4 \mbox{МГц}$ будет $P_2 = 0.49$,
+с другой стороны (\ref{eqPart1InteractionRabiProbability}) имеем
+\begin{equation}
+  P_2 = \left(\frac{\omega_R}{\Omega_R^{(2)}}\right)^2 =
+  \frac{1}{1 + \frac{\delta_2^2}{\omega_R^2}},
+  \nonumber
+\end{equation}
+откуда
+\begin{equation}
+  \omega_R = 0.98 \cdot \delta_2 .
+  \label{eqAnswersInteraction41}
+\end{equation}
+
+С другой стороны можно заключить, что
+\[
+\frac{\Omega_R^{(1)} \cdot 6 \mbox{мкс}}{2} = \pi
+\]
+и
+\[
+\frac{\Omega_R^{(2)} \cdot 12.5 \mbox{мкс}}{2} = \pi,
+\]
+т. о.
+\[
+\Omega_R^{(1)} = 2 \pi \cdot 0.167 \mbox{МГц},
+\]
+и
+\[
+\Omega_R^{(2)} = 2 \pi \cdot 0.08 \mbox{МГц},
+\]
+
+Из (\ref{eqAnswersInteraction40}) и  (\ref{eqAnswersInteraction41})
+можно получить
+\[
+\delta_2 = 2 \pi \cdot 0.057 \mbox{МГц},
+\]
+т. е. два кандидата
+\begin{equation}
+  f_0 = 228.4 \pm 0.057 \mbox{МГц} = 228.343 \mbox{МГц},\,
+  228.457 \mbox{МГц} 
+\label{eqAnswersInteraction4Res1}
+\end{equation}
+
+Для $\delta_1$ имеем
+\[
+\delta_1 = \sqrt{\left(\Omega_R^{(1)}\right)^2 - \omega_R^2} =
+2 \pi \sqrt{0.167^2 - (0.98 \cdot 0.057)^2} \mbox{МГц} =
+2 \pi \cdot 0.157 \mbox{МГц}
+\]
+т. о. получаем очередные два кандидата
+\begin{equation}
+  f_0 = 228.5 \pm 0.157 \mbox{МГц} = 228.343 \mbox{МГц},\,
+  228.657 \mbox{МГц} 
+\label{eqAnswersInteraction4Res2}
+\end{equation}
+
+Из (\ref{eqAnswersInteraction4Res1}) и
+(\ref{eqAnswersInteraction4Res2}) окончательно имеем
+\[
+f_0 = 228.343 \mbox{МГц}.
+\]
+
+Стоит отметить, что полученное значение отличается от реального $f_0 =
+228.205 \mbox{МГц}$. Отличие вызвано влиянием эффекта Зеемана от
+магнитного поля, которое обычно присутствует в таких экспериментах.
+
+
+
