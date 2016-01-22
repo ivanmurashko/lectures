@@ -105,5 +105,40 @@ t & r \\
 (\ref{eqPart2Interfero4b}), то мы в дальнейшем будем пользоваться
 одним из этих выражений.
 
+\begin{example}[Симметричный делитель. Классический случай]
+  \input ./part2/interfero/fig1ex.tex
+  
+  Допустим, что наш делитель симметричный, т. е. $r=r'$ и $t = t'$
+  (см. рис. \ref{figPart2Interfero_1ex})
+  Очевидно, что должен выполняться закон сохранения энергии:
+  \[
+  \left|E_0\right|^2 + \left|E_1\right|^2 =
+  \left|E_2\right|^2 + \left|E_3\right|^2, 
+  \]
+  или же
+  \begin{eqnarray}
+    \left|E_0\right|^2 + \left|E_1\right|^2 =
+    \left|t E_0 + r E_1\right|^2 + \left|r E_0 + t E_1\right|^2 =
+    \nonumber \\
+    =
+    \left(\left|t\right|^2 + \left|r\right|^2\right) 
+    \left(\left|E_0\right|^2 + \left|E_1\right|^2\right) +
+    \nonumber \\
+    + E_0 E_1^\ast \left(t r^\ast + r t^\ast\right)
+    + E_1 E_0^\ast \left(t r^\ast + r t^\ast\right)
+    \nonumber
+  \end{eqnarray}
+  Т. е.
+  \begin{eqnarray}
+    \left|t\right|^2 + \left|r\right|^2 = 1,
+    \nonumber \\
+    t r^\ast + r t^\ast = 0
+    \nonumber
+  \end{eqnarray}
+  Последнее равенство будет справедливо если фаза $t$ и $r$
+  различается на $\frac{\pi}{2}$, в частности если принять
+  $t = \left|t\right|$, $r = i \left|r\right|$.
+\end{example}
+
 
 
