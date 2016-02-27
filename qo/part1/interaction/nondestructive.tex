@@ -1,0 +1,234 @@
+%% -*- coding:utf-8 -*- 
+\section{Интерферометр Рамси. Квантовые неразрушающие измерения}
+
+Наблюдение фотона обычно предполагает его разрушение, например в
+при использовании фотодетектора энергия фотона преобразуется в
+электрический сигнал при этом сам фотон исчезает.
+
+Интересный эксперимент \cite{Nogues1999Nv400p239} использующий
+осцилляции Раби продемонстрировал возможность наблюдения фотона без
+его разрушения. При этом использовался интерферометр Рамси (см
+рис. \ref{figPart1RamsiInterferometer})
+
+\input ./part1/interaction/figramsi.tex
+
+\input ./part1/interaction/figramsia.tex
+
+Схема работы следующая. Используются атомы со структурой уровней
+изображенной на рис. \ref{figPart1RamsiAtom}. Частота перехода
+$\omega_{ab}$ между уровнями $a$ и $b$ совпадает с частотой излучения
+в зонах $R_1$ и $R_2$ интерферометра  (см
+рис. \ref{figPart1RamsiInterferometer}). Зона $C$ содержит исследуемое
+электромагнитное поле для которого мы хотим ответить на вопрос есть в
+нем один фотон или нет, т. е. находится оно в состоянии
+$\left|1\right>$ или в вакуумном состоянии
+$\left|0\right>$. Исследуемое поле в зоне $C$ имеет частоту
+совпадающую с частотой перехода $\omega_{ac}$ между уровнями $a$ и
+$c$.  
+
+Размер зон $R_{1,2}$ подбирается таким образом, чтобы время
+взаимодействия $t_R$ атома с электромагнитным полем в них соответствовало
+следующему соотношению
+\begin{equation}
+  \omega_R^{(R)} t_R = \frac{\pi}{2},
+  \nonumber
+\end{equation}
+где $\omega_R^{(R)}$ частота Раби, соответствующая частоте перехода
+$\omega_{ab}$.
+Время взаимодействия $t_C$ в зоне $C$ определяется выражением
+\begin{equation}
+  \omega_R^{(C)} t_C = 2 \pi,
+  \nonumber
+\end{equation}
+где $\omega_R^{(C)}$ частота Раби, соответствующая частоте перехода
+$\omega_{ac}$.
+
+Для взаимодействия в зонах $R_{1,2}$ справедливы следующие
+соотношения (\ref{eqPart1RabiAbsorbtion}, \ref{eqPart1RabiEmission}):
+\begin{eqnarray}
+  \left|a\right> \rightarrow \frac{1}{\sqrt{2}}\left(
+  \left|a\right> - i \left|b\right>  
+  \right),
+  \nonumber \\
+  \left|b\right> \rightarrow \frac{1}{\sqrt{2}}\left(
+  -i \left|a\right> + \left|b\right>  
+  \right).
+  \label{eqPart1RamsiRzone}
+\end{eqnarray}
+Выражение (\ref{eqPart1RamsiRzone}) может быть переписано в матричном
+виде $\left|\psi\right> \rightarrow R \left|\psi\right>$,
+где
+\[
+R = \frac{1}{\sqrt{2}} \left(
+\begin{array} {cc}
+1 & -i
+\\
+-i & 1 
+\end{array}
+\right).
+\]
+
+Зона $C$ никак не влияет на состояние $\left|b\right>$, для состояния
+$\left|a\right>$ в случае вакуумного состояния $\left|0\right>$
+(отсутствия фотона)
+\begin{eqnarray}
+  \left|a\right> \rightarrow \left|a\right>,
+  \nonumber
+\end{eqnarray}
+Для случая присутствия фотона из (\ref{eqPart1RabiAbsorbtion})
+\begin{eqnarray}
+  \left|a\right> \rightarrow -\left|a\right>,
+  \nonumber
+\end{eqnarray}
+
+Таким образом воздействие зоны $C$ в случае отсутствия фотона можно
+описать следующей матрицей
+\[
+C_0 = \left(
+\begin{array} {cc}
+1 & 0
+\\
+0 & 1 
+\end{array}
+\right).
+\]
+Для случая присутствия фотона имеем
+Таким образом воздействие зоны $C$ в случае отсутствия фотона можно
+описать следующей матрицей
+\[
+C_1 = \left(
+\begin{array} {cc}
+-1 & 0
+\\
+0 & 1 
+\end{array}
+\right).
+\]
+
+Таким образом если изначально атом испускаемый источником $S$
+находится в состоянии $\left|a\right> = \left(
+\begin{array} {c}
+1
+\\
+0
+\end{array}
+\right)$, то в случае отсутствия фотона в зоне $C$ на детекторе $D$ мы
+получим атом в состоянии
+\begin{eqnarray}
+  R_2 C_0 R_1 \left|a\right> =
+  \nonumber \\
+  =
+  \frac{1}{2}
+  \left(
+  \begin{array} {cc}
+    1 & -i
+    \\
+    -i & 1 
+  \end{array}
+  \right)
+  \left(
+  \begin{array} {cc}
+    1 & 0
+    \\
+    0 & 1 
+  \end{array}
+  \right)
+  \left(
+  \begin{array} {cc}
+    1 & -i
+    \\
+    -i & 1 
+  \end{array}
+  \right)
+  \left(
+  \begin{array} {c}
+    1
+    \\
+    0
+  \end{array}
+  \right) =
+  \nonumber \\
+  =
+  %% >> R=[1,-i;-i,1];
+  %% >> C0=[1,0;0,1];
+  %% >> a=[1;0];
+  %% >> 1/2*R*C0*R*a
+  %% ans =
+  %% 0 + 0i
+  %% 0 - 1i
+  %% >>
+  -i 
+  \left(
+  \begin{array} {c}
+    0
+    \\
+    1
+  \end{array}
+  \right) =
+  -i \left|b\right>,
+  \nonumber
+\end{eqnarray}
+т.е. атом будет наблюдаться в невозбужденном состоянии
+$\left|b\right>$.
+
+Для случая присутствия одного фотона в зоне $C$ имеем
+\begin{eqnarray}
+  R_2 C_1 R_1 \left|a\right> =
+  \nonumber \\
+  =
+  \frac{1}{2}
+  \left(
+  \begin{array} {cc}
+    1 & -i
+    \\
+    -i & 1 
+  \end{array}
+  \right)
+  \left(
+  \begin{array} {cc}
+    -1 & 0
+    \\
+    0 & 1 
+  \end{array}
+  \right)
+  \left(
+  \begin{array} {cc}
+    1 & -i
+    \\
+    -i & 1 
+  \end{array}
+  \right)
+  \left(
+  \begin{array} {c}
+    1
+    \\
+    0
+  \end{array}
+  \right) =
+  \nonumber \\
+  =
+  %% >> C1=[-1,0;0,1];
+  %% >> R=[1,-i;-i,1];
+  %% >> a=[1;0];
+  %% >> 1/2*R*C1*R*a
+  %% ans =
+  %% -1
+  %% 0
+  %% >> 
+  - 
+  \left(
+  \begin{array} {c}
+    1
+    \\
+    0
+  \end{array}
+  \right) =
+  - \left|a\right>,
+  \nonumber
+\end{eqnarray}
+т.е. атом будет наблюдаться в возбужденном состоянии
+$\left|a\right>$. Т. о. можно сделать вывод о присутствии фотона в
+зоне $C$ без разрушающего воздействия на него.
+
+
+
