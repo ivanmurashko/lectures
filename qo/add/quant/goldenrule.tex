@@ -1,15 +1,22 @@
 %% -*- coding:utf-8 -*-
 \section{Золотое правило Ферми}
-\label{addQuantGoldenRuleFermi}
 Золотое правило Ферми позволяет, используя временную теорию возмущений
 вычислить вероятность перехода между двумя состояниями квантовой
 системы.
 
+\begin{theorem}
+\emph{(Золотое правило Ферми)}
+\label{addQuantGoldenRuleFermi}
 Допустим, что квантовая система находится изначально в состоянии
 $\left|i\right>$ и мы хотим оценить вероятность перехода в состояние 
 $\left|f\right>$. Гамильтониан рассматриваемой системы состоит из
 двух частей: стационарного гамильтониана $\hat{H_0}$ и слабого
-возмущения $\hat{V}$. В этом случае искомая вероятность задается
+возмущения $\hat{V}$:
+\begin{equation}
+  \hat{H} = \hat{H_0} + \hat{V}
+  \nonumber
+\end{equation}
+В этом случае искомая вероятность задается
 \begin{equation}
   W_{i \rightarrow f} = \frac{2 \pi}{\hbar}
   \left|
@@ -24,4 +31,39 @@ $\left|f\right>$. Гамильтониан рассматриваемой сис
   \nonumber,
 \end{equation}
 где $\rho$ является плотностью конечных состояний.
-TBD
+\end{theorem}
+
+\begin{proof}
+Допустим, что существует конечное число собственных состояний
+гамильтониана $\hat{H_0}$ - $\left|n\right>$, т.е.
+\begin{equation}
+  \hat{H_0} \left| n \right> = E_n \left| n \right>,
+  \nonumber
+\end{equation}
+кроме того система этих состояний является полной,
+таким образом произвольное решение
+$\left|\psi\right>$
+уравнения Шредингера
+\begin{equation}
+  i \hbar \frac{\partial \left|\psi\right>}{\partial t} =
+  \hat{H} \left|\psi\right>
+  \label{eqAddQuantGoldenRuleFermiShred}
+\end{equation}
+может быть представлено в виде
+\begin{equation}
+  \left|\psi\right> = \sum_n a_n\left(t\right) \left|n\right>
+  e^{\frac{-i E_n t}{\hbar}}
+  \label{eqAddQuantGoldenRuleFermiExp}
+\end{equation}
+Подставив (\ref{eqAddQuantGoldenRuleFermiExp}) в уравнение Шредингера
+(\ref{eqAddQuantGoldenRuleFermiShred}) получим
+\begin{eqnarray}
+  i \hbar \sum_n \frac{ \partial a_n\left(t\right)}{\partial t }
+  \left|n\right> e^{\frac{-i E_n t}{\hbar}} +
+  \sum_n a_n\left(t\right) \left|n\right>
+  i \hbar \frac{\partial e^{\frac{-i E_n t}{\hbar}}}{ \partial t} =
+  i \hbar \left( \right)
+  \nonumber
+\end{eqnarray}
+
+\end{proof}
