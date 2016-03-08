@@ -5,65 +5,219 @@
 системы.
 
 \begin{theorem}
-\emph{(Золотое правило Ферми)}
-\label{addQuantGoldenRuleFermi}
-Допустим, что квантовая система находится изначально в состоянии
-$\left|i\right>$ и мы хотим оценить вероятность перехода в состояние 
-$\left|f\right>$. Гамильтониан рассматриваемой системы состоит из
-двух частей: стационарного гамильтониана $\hat{H_0}$ и слабого
-возмущения $\hat{V}$:
-\begin{equation}
-  \hat{H} = \hat{H_0} + \hat{V}
-  \nonumber
-\end{equation}
-В этом случае искомая вероятность задается
-\begin{equation}
-  W_{i \rightarrow f} = \frac{2 \pi}{\hbar}
-  \left|
-  \left<
-  f
-  \right|
-  \hat{V}
-  \left.
-  i
-  \right>
-  \right|^2 \rho
-  \nonumber,
-\end{equation}
-где $\rho$ является плотностью конечных состояний.
+  \emph{(Золотое правило Ферми)}
+  \label{addQuantGoldenRuleFermi}
+  Допустим, что квантовая система находится изначально в состоянии
+  $\left|i\right>$ и мы хотим оценить вероятность перехода в состояние 
+  $\left|f\right>$. Гамильтониан рассматриваемой системы состоит из
+  двух частей: стационарного гамильтониана $\hat{H_0}$ и слабого
+  возмущения $\hat{V}$:
+  \begin{equation}
+    \hat{H} = \hat{H_0} + \hat{V}
+    \nonumber
+  \end{equation}
+  В этом случае искомая вероятность задается
+  \begin{equation}
+    W_{i \rightarrow f} = \frac{2 \pi}{\hbar}
+    \left|
+    \left<
+    f
+    \right|
+    \hat{V}
+    \left|
+    i
+    \right>
+    \right|^2 \rho
+    \nonumber,
+  \end{equation}
+  где $\rho$ является плотностью конечных состояний.
 \end{theorem}
 
 \begin{proof}
-Допустим, что существует конечное число собственных состояний
-гамильтониана $\hat{H_0}$ - $\left|n\right>$, т.е.
-\begin{equation}
-  \hat{H_0} \left| n \right> = E_n \left| n \right>,
-  \nonumber
-\end{equation}
-кроме того система этих состояний является полной,
-таким образом произвольное решение
-$\left|\psi\right>$
-уравнения Шредингера
-\begin{equation}
-  i \hbar \frac{\partial \left|\psi\right>}{\partial t} =
-  \hat{H} \left|\psi\right>
-  \label{eqAddQuantGoldenRuleFermiShred}
-\end{equation}
-может быть представлено в виде
-\begin{equation}
-  \left|\psi\right> = \sum_n a_n\left(t\right) \left|n\right>
-  e^{\frac{-i E_n t}{\hbar}}
-  \label{eqAddQuantGoldenRuleFermiExp}
-\end{equation}
-Подставив (\ref{eqAddQuantGoldenRuleFermiExp}) в уравнение Шредингера
-(\ref{eqAddQuantGoldenRuleFermiShred}) получим
-\begin{eqnarray}
-  i \hbar \sum_n \frac{ \partial a_n\left(t\right)}{\partial t }
-  \left|n\right> e^{\frac{-i E_n t}{\hbar}} +
-  \sum_n a_n\left(t\right) \left|n\right>
-  i \hbar \frac{\partial e^{\frac{-i E_n t}{\hbar}}}{ \partial t} =
-  i \hbar \left( \right)
-  \nonumber
-\end{eqnarray}
+  Допустим, что существует состояния
+  $\left\{\left|n\right>\right\}$ образуют полный набор собственных
+  векторов гамильтониана $\hat{H_0}$, т.е.
+  \begin{equation}
+    \hat{H_0} \left| n \right> = E_n \left| n \right>,
+    \nonumber
+  \end{equation}
+  при этом, рассматриваемое начальное состояние  $\left|i\right>$ и
+  конечное состояние $\left|f\right>$ принадлежат этой системе
+  векторов, т. е.
+  \begin{equation}
+    \left|i\right>, \left|f\right> \in \left\{\left|n\right>\right\}.
+    \nonumber
+  \end{equation}
+  В некоторый момент времени система оказывается в состоянии
+  $\left|\psi\right>$, которое удовлетворяет уравнению Шредингера:
+  \begin{equation}
+    i \hbar \frac{\partial \left|\psi\right>}{\partial t} =
+    \hat{H} \left|\psi\right>.
+    \label{eqAddQuantGoldenRuleFermiShred}
+  \end{equation}
+  Наша задача заключается в вычислении вероятности того что при
+  наблюдении система окажется в состоянии $\left|f\right>$, при том
+  что начальное условие для (\ref{eqAddQuantGoldenRuleFermiShred})
+  имеет следующий вид
+  \begin{equation}
+    \left.\left|\psi\right>\right|_{t=0} = \left|i\right>.
+    \label{eqAddQuantGoldenRuleFermiInitialCond}
+  \end{equation}
 
+  В силу полноты системы $\left\{\left|n\right>\right\}$ состояние
+  $\left|\psi\right>$ может быть представлено в виде
+  \begin{equation}
+    \left|\psi\right> = \sum_n a_n\left(t\right) \left|n\right>
+    e^{\frac{-i E_n t}{\hbar}}
+    \label{eqAddQuantGoldenRuleFermiExp}
+  \end{equation}
+  Подставив (\ref{eqAddQuantGoldenRuleFermiExp}) в уравнение Шредингера
+  (\ref{eqAddQuantGoldenRuleFermiShred}) получим
+  \begin{eqnarray}
+    i \hbar \sum_n \frac{ \partial a_n\left(t\right)}{\partial t }
+    \left|n\right> e^{\frac{-i E_n t}{\hbar}} +
+    \sum_n a_n\left(t\right) \left|n\right>
+    i \hbar \frac{\partial e^{\frac{-i E_n t}{\hbar}}}{ \partial t} =
+    \\ \nonumber
+    = i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}} \left|n\right> \left(
+    \frac{ \partial a_n\left(t\right)}{\partial t } - \frac{i E_n}{\hbar} 
+    \right) =
+    \\ \nonumber
+    =  i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
+    \frac{ \partial a_n\left(t\right)}{\partial t } \left|n\right>+
+    \sum_n E_n a_n\left(t\right) \left|n\right>
+    e^{\frac{-i E_n t}{\hbar}} =
+    \nonumber \\
+    =
+     i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
+     \frac{ \partial a_n\left(t\right)}{\partial t } \left|n\right>+
+      \sum_n E_n a_n\left(t\right) \left|n\right>
+    e^{\frac{-i E_n t}{\hbar}}.
+    \label{eqAddQuantGoldenRuleFermiExp2}
+  \end{eqnarray}
+  С другой стороны выражение (\ref{eqAddQuantGoldenRuleFermiExp2})
+  должно равняться
+  \begin{equation}
+    \hat{H} \left|\psi\right> =
+    \sum_n E_n a_n\left(t\right) \left|n\right>
+    e^{\frac{-i E_n t}{\hbar}} +
+    \sum_n  a_n\left(t\right) 
+    e^{\frac{-i E_n t}{\hbar}} \hat{V} \left|n\right>,
+    \nonumber
+  \end{equation}
+  т. е.
+  \begin{eqnarray}
+    i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
+    \frac{ \partial a_n\left(t\right)}{\partial t } \left|n\right> =
+     \sum_n  a_n\left(t\right) 
+    e^{\frac{-i E_n t}{\hbar}} \hat{V} \left|n\right>.
+    \label{eqAddQuantGoldenRuleFermiExp3}
+  \end{eqnarray}
+  Выражение (\ref{eqAddQuantGoldenRuleFermiExp3}) будем решать
+  методом теории возмущений, т.е.
+  \begin{equation}
+    a_n\left(t\right) = a_n^{(0)}\left(t\right) +
+    a_n^{(1)}\left(t\right) + \dots,    
+    \nonumber
+  \end{equation}
+  при этом будем полагать, что
+  \[
+  a_n^{(0)}\left(t\right) = \left.const\right|_t = a_n^{(0)}\left(0\right),
+  \]
+  откуда с учетом начального условия
+  (\ref{eqAddQuantGoldenRuleFermiInitialCond})
+  \[
+  a_n^{(0)}\left(t\right) = \delta_{ni}.
+  \]
+  Таким образом для первого порядка теории возмущений из
+  (\ref{eqAddQuantGoldenRuleFermiExp3}) получим
+  \begin{eqnarray}
+    i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
+    \frac{ \partial a_n^{(1)}\left(t\right)}{\partial t } \left|n\right> =
+     \sum_n  \delta_{ni} 
+     e^{\frac{-i E_n t}{\hbar}} \hat{V} \left|n\right> =
+     e^{\frac{-i E_i t}{\hbar}} \hat{V} \left|i\right>.
+    \label{eqAddQuantGoldenRuleFermiExp4}
+  \end{eqnarray}
+  Следовательно из (\ref{eqAddQuantGoldenRuleFermiExp4}) имеем
+  \begin{equation}
+    \frac{ \partial a_n^{(1)}\left(t\right)}{\partial t }  =
+    - \frac{i}{\hbar} e^{\frac{-i \left(E_i - E_n\right) t}{\hbar}}
+    \left<n\right|\hat{V}\left|i\right>,
+    \nonumber
+  \end{equation}
+  обозначив $E_i - E_n = \hbar \omega_{in}$, где $\omega_{in}$ -
+  частота перехода между состояниями $\left|i\right>$ и
+  $\left|n\right>$, после интегрирования получим
+  \begin{equation}
+  a_n^{(1)}\left(t\right)  =
+    - \frac{i}{\hbar} \int_0^t e^{-i \omega_{in} t'}
+    \left<n\right|\hat{V}\left|i\right> dt',
+    \nonumber
+  \end{equation}
+  т.е.
+  \begin{eqnarray}
+  a_n^{(1)}\left(t\right)  =
+  \frac{1}{\hbar \omega_{in}} \left<n\right|\hat{V}\left|i\right>
+  \left(e^{-i \omega_{in} t} -  1\right) =
+  \\ \nonumber =
+  \frac{1}{\hbar \omega_{in}} \left<n\right|\hat{V}\left|i\right>
+  e^{\frac{-i \omega_{in} t}{2}}
+  \left(e^{\frac{-i \omega_{in} t}{2}} -  e^{\frac{i \omega_{in}
+      t}{2}}\right) =
+  \\ \nonumber
+  =
+  - \frac{2 i}{\hbar \omega_{in}} \left<n\right|\hat{V}\left|i\right>
+  e^{\frac{-i \omega_{in} t}{2}}
+  \sin\left(\frac{ \omega_{in} t}{2}\right)
+  \nonumber
+  \end{eqnarray}
+  
+  
+  Нас интересует скорость $W_{i \rightarrow f}$ перехода в
+  состояние $\left|f\right>$, которая задается выражением
+  \[
+  W_{i \rightarrow f} = \frac{\left|a_f^{(1)}\left(t\right)\right|^2}{t}.
+  \]
+  Или же
+  \begin{eqnarray}
+    W_{i \rightarrow f} =
+    \frac{t}{\hbar^2}
+    \left|\left<f\right|\hat{V}\left|i\right>\right|^2
+    \frac{\sin^2\left(\frac{ \omega_{if} t}{2}\right)}
+         {\left(\frac{ \omega_{if} t}{2}\right)^2}.
+    \label{eqAddQuantGoldenRuleFermiExp5}
+  \end{eqnarray}
+
+  Выражение (\ref{eqAddQuantGoldenRuleFermiExp5}) должно быть
+  просуммировано для всех состояний у которых $\omega_{nf} \approx 0$
+  таким образом если принять $\rho(E) = \frac{dE}{dn}$ - плотность
+  состояний с энергией $E_n$, то финальная скорость перехода
+  \begin{eqnarray}
+    W_{i \rightarrow f} = \sum_n \rho\left(E_n\right) 
+    \frac{t}{\hbar^2}
+    \left|\left<f\right|\hat{V}\left|n\right>\right|^2
+    \frac{\sin^2\left(\frac{ \omega_{nf} t}{2}\right)}
+         {\left(\frac{ \omega_{nf} t}{2}\right)^2} =
+    \\ \nonumber
+    = 
+    \int_{E_n} \rho\left(E_n\right) d E_n      \frac{t}{\hbar^2}
+    \left|\left<f\right|\hat{V}\left|n\right>\right|^2
+    \frac{\sin^2\left(\frac{ \omega_{nf} t}{2}\right)}
+         {\left(\frac{ \omega_{nf} t}{2}\right)^2} =
+    \\ \nonumber
+    =
+    \frac{2}{\hbar}
+    \left|\left<f\right|\hat{V}\left|i\right>\right|^2
+    \int_{-\infty}^{\infty}
+    \rho d \left(\frac{ \omega_{nf} t}{2}\right)
+    \frac{\sin^2\left(\frac{ \omega_{nf} t}{2}\right)}
+         {\left(\frac{ \omega_{nf} t}{2}\right)^2} =
+    \frac{2 \pi}{\hbar} \rho
+    \left|\left<f\right|\hat{V}\left|i\right>\right|^2,
+    \label{eqAddQuantGoldenRuleFermiExp6}
+  \end{eqnarray}
+  что совпадает с доказываемым выражением.
+  
+  
 \end{proof}
