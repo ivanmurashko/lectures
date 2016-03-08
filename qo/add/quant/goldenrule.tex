@@ -189,32 +189,49 @@
     \label{eqAddQuantGoldenRuleFermiExp5}
   \end{eqnarray}
 
-  Выражение (\ref{eqAddQuantGoldenRuleFermiExp5}) должно быть
-  просуммировано для всех состояний у которых $\omega_{nf} \approx 0$
-  таким образом если принять $\rho(E) = \frac{dE}{dn}$ - плотность
-  состояний с энергией $E_n$, то финальная скорость перехода
+  В случае если финальное состояние $\left|f\right>$ представляет
+  собой некоторый непрерывный спектр вблизи энергии $E_f$, то
+  выражение (\ref{eqAddQuantGoldenRuleFermiExp5}) должно быть
+  просуммировано для всех финальных состояний состояний у которых
+  $\omega_{nf} \approx 0$. Введем понятие плотности состояний
+  $\rho(E) = \frac{dE}{dn}$, так что число состояний $dn$ приходящееся
+  на бесконечно малый интервал энергий $dE$ может быть представлено в
+  виде $dn = \rho dE$. Следовательно скорость перехода может быть
+  переставлена в виде:
+  \begin{equation}
+    W_{i \rightarrow f} = \sum_{n: E_n \approx E_f}
+    \rho\left(E_n\right) W_{i \rightarrow f}\left(E_n\right), 
+    \nonumber
+  \end{equation}
+  т.е. предполагая для рассматриваемого интервала энергий
+  $\rho\left(E_n\right) \approx \rho\left(E_f\right)$,
+  \[
+  \left|\left<n\right|\hat{V}\left|i\right>\right|^2 \approx
+  \left|\left<f\right|\hat{V}\left|i\right>\right|^2
+  \]
+  и заменяя суммирование интегрированием, получим
   \begin{eqnarray}
-    W_{i \rightarrow f} = \sum_n \rho\left(E_n\right) 
-    \frac{t}{\hbar^2}
-    \left|\left<f\right|\hat{V}\left|n\right>\right|^2
-    \frac{\sin^2\left(\frac{ \omega_{nf} t}{2}\right)}
-         {\left(\frac{ \omega_{nf} t}{2}\right)^2} =
-    \\ \nonumber
-    = 
-    \int_{E_n} \rho\left(E_n\right) d E_n      \frac{t}{\hbar^2}
-    \left|\left<f\right|\hat{V}\left|n\right>\right|^2
-    \frac{\sin^2\left(\frac{ \omega_{nf} t}{2}\right)}
-         {\left(\frac{ \omega_{nf} t}{2}\right)^2} =
-    \\ \nonumber
-    =
+    W_{i \rightarrow f} \approx
+    \int_{E_n \approx E_f} \rho\left(E_n\right) d E_n      \frac{t}{\hbar^2}
+    \left|\left<n\right|\hat{V}\left|i\right>\right|^2
+    \frac{\sin^2\left(\frac{ \omega_{in} t}{2}\right)}
+         {\left(\frac{ \omega_{in} t}{2}\right)^2} =
+         \\ \nonumber
+         = \int_{\omega_{in} \approx \omega_{if}} \rho\left(E_n\right)
+         d E_n      \frac{t}{\hbar^2}
+    \left|\left<n\right|\hat{V}\left|i\right>\right|^2
+    \frac{\sin^2\left(\frac{ \omega_{in} t}{2}\right)}
+         {\left(\frac{ \omega_{in} t}{2}\right)^2} \approx
+         \\ \nonumber
+    \approx
     \frac{2}{\hbar}
-    \left|\left<f\right|\hat{V}\left|i\right>\right|^2
+    \left|\left<f\right|\hat{V}\left|i\right>\right|^2 \rho
     \int_{-\infty}^{\infty}
-    \rho d \left(\frac{ \omega_{nf} t}{2}\right)
-    \frac{\sin^2\left(\frac{ \omega_{nf} t}{2}\right)}
-         {\left(\frac{ \omega_{nf} t}{2}\right)^2} =
-    \frac{2 \pi}{\hbar} \rho
-    \left|\left<f\right|\hat{V}\left|i\right>\right|^2,
+     d \left(\frac{ \omega t}{2}\right)
+    \frac{\sin^2\left(\frac{ \omega t}{2}\right)}
+         {\left(\frac{ \omega t}{2}\right)^2} =
+    \frac{2 \pi}{\hbar} 
+    \left|\left<f\right|\hat{V}\left|i\right>\right|^2 \rho,
     \label{eqAddQuantGoldenRuleFermiExp6}
   \end{eqnarray}
   что совпадает с доказываемым выражением.
