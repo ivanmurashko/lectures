@@ -133,12 +133,47 @@ t & r \\
     \left|t\right|^2 + \left|r\right|^2 = 1,
     \nonumber \\
     t r^\ast + r t^\ast = 0
-    \nonumber
+    \label{eqPart2InterferoEx1}
   \end{eqnarray}
   Последнее равенство будет справедливо если фаза $t$ и $r$
   различается на $\frac{\pi}{2}$, в частности если принять
   $t = \left|t\right|$, $r = i \left|r\right|$, что соответствует
   выражению (\ref{eqPart2Interfero4a}).
+
+  Кроме того выражения (\ref{eqPart2InterferoEx1}) соответствуют
+  (\ref{eqPart2Interfero2}), действительно
+  \begin{eqnarray}
+    \hat{S} \hat{S}^{+} = 
+    \left(
+    \begin{array}{cc}
+      t & r \\
+      r & t \\      
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{cc}
+      t^{*} & r^{*} \\
+      r^{*} & t^{*} \\      
+    \end{array}
+    \right) =
+    \nonumber \\
+    =
+    \left(
+    \begin{array}{cc}
+      \left|t\right|^2 + \left|r\right|^2 & t r^\ast + r t^\ast \\
+      t^\ast r + r^\ast t & \left|t\right|^2 + \left|r\right|^2 \\
+    \end{array}
+    \right) =
+    \left(
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & 1 \\
+    \end{array}
+    \right) = \hat{I}.
+    \nonumber
+  \end{eqnarray}
+  Таким образом условие унитарности (\ref{eqPart2Interfero2})
+  представляет собой закон сохранения энергии.
 \end{example}
 
 
