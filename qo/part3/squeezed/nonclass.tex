@@ -64,17 +64,38 @@ $\hat{N}$, действие которого состоит в том, что у
 тогда для среднего значения 
 \begin{equation}
 \left(\Delta N X_1\right)^2 = 
-\left<\left(N X_1\right)^2\right> - \left<N X_1\right>^2 
+\left<\hat{N} \hat{X_1}^2\right> - \left<\hat{N} \hat{X_1}\right>^2 
 \label{eqPart3SqueezedNonclass3}
 \end{equation}
 можем написать
-\[
-\left(\Delta N X_1\right)^2 = 
+\begin{eqnarray}
+  \left(\Delta N X_1\right)^2 =
+  \int P\left(\alpha\right)
+  \left<\alpha\right|
+  \hat{N} \hat{X_1}^2
+  \left|\alpha\right> d^2 \alpha -
+  \int P\left(\alpha\right)
+  \left< X_1 \right>^2
+  d^2 \alpha
+  =
+  \nonumber \\
+  =
+  \int   d^2 \alpha
+  P\left(\alpha\right)
+  \left(
+  \frac{
+    \alpha^2 + {\alpha^\ast}^2 +
+    2 \alpha \alpha^\ast}{4}
+  - \left< X_1 \right>^2
+  \right)
+  =
+  \nonumber \\
+  =
  \int 
 P\left(\alpha\right)
 \left(\Delta X_1\right)^2
 d^2 \alpha
-\]
+\end{eqnarray}
 где $\left(\Delta X_1\right)^2$ получается из
 (\ref{eqPart3SqueezedNonclass3}), если заменить все $\hat{a}^{+}$ на
 $\alpha^{*}$, а $\hat{a}$ на $\alpha$. Можно показать, что
