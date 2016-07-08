@@ -10,6 +10,9 @@ pdf: main.tex
 	pdflatex main.tex
 	cp main.pdf no.pdf
 
+install: pdf
+	cp no.pdf ../pdfs
+
 clean:
 	rm -rf no.pdf no.dvi main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out
 	find . \( -name "*.log" -o -name "*~" \) -exec rm -rf {} \; 

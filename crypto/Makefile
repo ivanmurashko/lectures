@@ -15,6 +15,9 @@ pdf: main.tex main.bib algorithmic.sty
 	pdflatex main.tex
 	cp main.pdf crypto.pdf
 
+install: pdf
+	cp crypto.pdf ../pdfs
+
 clean:
 	rm -rf main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out
 	rm -rf algorithmic.sty  algorithm.sty
