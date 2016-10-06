@@ -1,3 +1,3 @@
-all ps pdf install: 
+all ps pdf install clean: 
 	$(MAKE) -C ../../ $@
-.PHONY : all ps pdf install
+.PHONY : all ps pdf install clean
