@@ -59,11 +59,59 @@
 \label{eqCh1_task3_1}
 \end{equation}
 Используя разложение поля по плоским волнам, учитывая соотношения
-ортогональности и переходя к операторам, получим 
-\[
-\hat{\vec{G}} = \sum_{(k)} \vec{k} \hbar\left( \hat{a}_k^{+} \hat{a}_k +
-\frac{1}{2} \right)
-\]
+ортогональности, получим
+\begin{eqnarray}
+  \vec{G} = \frac{1}{c^2} \int_{(\nu)}
+  \left[\vec{E} \vec{H} \right] d \nu =
+  \nonumber \\
+  =
+  \frac{1}{c^2} \int_{(\nu)}
+  \left[
+    \left(\sum_{(k)} A_k \vec{E}_k +
+    \sum_{(k)} A_k^\ast \vec{E}_k^\ast \right)
+    \left(\sum_{(k')} A_{k'} \vec{H}_{k'} +
+    \sum_{(k')} A_{k'}^\ast \vec{H}_{k'}^\ast \right)\right]
+  d \nu =
+  \nonumber \\
+  =
+  \sum_{(k)}
+  \frac{1}{c^2} \int_{(\nu)}
+  \left(
+  A_k A_k^\ast \left[\vec{E}_k \vec{H}_k^\ast \right]
+  +
+  A_k^\ast A_k \left[\vec{E}_k^\ast \vec{H}_k \right]
+  \right)
+  d \nu =
+  \nonumber \\
+  =
+  \frac{1}{c^2} \sum_{(k)} \frac{\vec{k}}{k}
+  \sqrt{\frac{\varepsilon_0}{\mu_0}}
+  \left(
+  A_k A_k^\ast + A_k^\ast A_k
+  \right).
+  \nonumber
+\end{eqnarray}
+Переходя к операторам имеем
+\begin{eqnarray}
+  \hat{\vec{G}} =
+  \frac{1}{c^2} \sum_{(k)} \frac{\vec{k}}{k}
+  \sqrt{\frac{\varepsilon_0}{\mu_0}}
+  \frac{\hbar \omega_k}{2 \varepsilon_0}
+  \left(\hat{a}_k^{+} \hat{a}_k + \hat{a}_k \hat{a}_k^{+}\right)
+  =
+  \nonumber \\
+  =
+  \sum_{(k)}
+  \hbar
+  \vec{k}
+  \frac{\omega_k}{c k}
+  \frac{1}{c \sqrt{\varepsilon_0 \mu_0}}
+  \frac{\hat{a}_k^{+} \hat{a}_k + \hat{a}_k \hat{a}_k^{+}}{2}
+  =
+  \sum_{(k)} \vec{k} \hbar\left( \hat{a}_k^{+} \hat{a}_k +
+\frac{1}{2} \right).
+\nonumber
+\end{eqnarray}
 Из симметрии  следует, что $\sum_{(k)} \vec{k} \hbar = 0$ и, следовательно, 
 \begin{equation}
 \hat{\vec{G}} = \sum_{(k)} \vec{k} \hbar\hat{a}_k^{+} \hat{a}_k.
