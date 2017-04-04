@@ -100,4 +100,47 @@ $f\left(\lambda\right) \ge 0$ если этот многочлен имеет н
 
 \subsection{Соотношение неопределенности энергия-время}
 \label{AddHeisenbergUncertaintyPrincipleEnergyTime}
-TBD
+Время в квантовой механике не имеет соответствующего оператора и
+поэтому для оценки времени следует использовать некоторую отдельную
+наблюдаемую $\hat{O}$. С помощью
+(\ref{eqAddHeisenbergUncertaintyPrinciple}) можно получить следующее
+соотношение
+\begin{eqnarray}
+  \Delta E \Delta O \ge \frac{\left|\left< C \right>\right|}{2},
+  \nonumber
+\end{eqnarray}
+где, с учетом (\ref{eqAddWaveFunc_HeizenbergT}),
+\[
+\frac{d \hat{O}}{d t} = \frac{i}{\hbar}
+\left[\hat{\mathcal{H}}, \hat{O}\right]
+\]
+и следовательно
+\[
+C = \frac{1}{i}\left[\hat{\mathcal{H}}, \hat{O}\right] =
+- \hbar \frac{d \hat{O}}{d t}.
+\]
+Таким образом
+\begin{eqnarray}
+  \Delta E \Delta O \ge \frac{\left|\left< C \right>\right|}{2} =
+  \frac{\hbar}{2}\left|\left<\frac{d \hat{O}}{d t}\right>\right|.
+  \nonumber
+\end{eqnarray}
+Обозначив $\Delta t = \frac{\Delta O}{\left|\left<\frac{d \hat{O}}{d
+    t}\right>\right|}$
+\footnote{
+  Мы можем считать, что при малых временах наблюдаемая $\hat{O}$
+  меняется линейно, т.е. $\left<\frac{d \hat{O}}{dt}\right> =
+  \frac{\Delta O}{\Delta t}$. Т. о. $\Delta t$ это время значимого
+  изменения наблюдаемой $O$. 
+}
+окончательно получим
+\begin{eqnarray}
+  \Delta E \Delta t \ge \frac{\hbar}{2}.
+  \label{eqAddHeisenbergUncertaintyPrincipleET}
+\end{eqnarray}
+
+Стоит отметить, что состояния с определенной энергией не противоречат
+соотношению (\ref{eqAddHeisenbergUncertaintyPrincipleET}) поскольку
+несмотря на то что $\delta E = 0$, мы имеем для любой наблюдаемой
+$\left<\frac{d \hat{O}}{dt}\right> = 0$ и следовательно, $\Delta t =
+\infty$. 
