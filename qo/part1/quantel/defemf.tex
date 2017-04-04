@@ -268,28 +268,32 @@ C_n = \left< n \right.\left| \psi \right>, \quad
 \begin{remark}[О состояниях с определенной энергией в квантовой
     механике]
   Стоит отметить, что состояния с определенной энергией не нарушают 
-  ввиду соотношение неопределенности Гейзенберга для пары
+  соотношение неопределенности Гейзенберга для пары
   энергия - время
-  (см. прил. \ref{AddHeisenbergUncertaintyPrincipleEnergyTime}):
   \[
   \Delta E \Delta t \ge \frac{\hbar}{2},
   \]
-  (см. прил. \ref{AddHeisenbergUncertaintyPrincipleEnergyTime}).
+  (более подробно
+  см. прил. \ref{AddHeisenbergUncertaintyPrincipleEnergyTime}). 
 
   Вместе с тем, если посмотреть на оператор энергии гармонического
-  осциллятора в виде
+  осциллятора, записанный в виде
   \[
   \hat{\mathcal{H}} =\frac{1}{2} \left(\hat{p}^2 +
   \omega^2\hat{q}^2\right)
   \]
-  и воспользоваться выражениями (\ref{eqCh1_qpdef}) можно получить,
+  и воспользоваться выражениями (\ref{eqCh1_qpdef}), то можно получить,
   что $\left<n\right|\hat{q}\left|n\right> =
-  \left<n\right|\hat{p}\left|n\right>$. Вместе с тем
+  \left<n\right|\hat{p}\left|n\right> = 0$. Вместе с тем
   \begin{eqnarray}
     \left<n\right|\hat{q}^2\left|n\right> = \frac{\hbar}{2 \omega}
     \left[
       \left<n\right|\hat{a}^2\left|n\right> +
       \left<n\right|\left(\hat{a}^{+}\right)^2\left|n\right> +
+      \right.
+      \nonumber \\
+      \left.
+      +
       \left<n\right|\hat{a}^{+}\hat{a}\left|n\right> +
       \left<n\right|\hat{a}\hat{a}^{+}\left|n\right>
       \right] =
@@ -303,12 +307,15 @@ C_n = \left< n \right.\left| \psi \right>, \quad
     \left<n\right|\hat{p}^2\left|n\right> = - \frac{\hbar \omega}{2}
     \left[
       \left<n\right|\hat{a}^2\left|n\right> +
-      \left<n\right|\left(\hat{a}^{+}\right)^2\left|n\right> -
+      \left<n\right|\left(\hat{a}^{+}\right)^2\left|n\right> - \right.
+      \nonumber \\
+      \left.
+      -
       \left<n\right|\hat{a}^{+}\hat{a}\left|n\right> -
       \left<n\right|\hat{a}\hat{a}^{+}\left|n\right>
       \right] =
     \nonumber \\
-    = - \frac{\hbar \omega}{2}
+    = \frac{\hbar \omega}{2}
     \left[n + n + 1\right].
     \nonumber
   \end{eqnarray}
@@ -331,15 +338,16 @@ C_n = \left< n \right.\left| \psi \right>, \quad
   что находится в соответствии с соотношениями неопределенности
   Гейзенберга (\ref{eqAddHeisenbergUncertaintyPrinciple}).
 
-  Таким образом состояния с определенной энергией это такие состояния
+  Таким образом состояния с определенной энергией это такие состояния,
   в которых несмотря на невозможность определить без погрешностей $p$
   и $q$ имеется возможность определения величины 
   \(
   \frac{1}{2} \left(p^2 +
   \omega^2q^2\right)
   \). Это отражает тот факт, что для квантовых систем возможны
-  ситуации при которых возможны составные события при отсутствии
-  элементарных.
+  ситуации при которых существуют составные события при отсутствии
+  элементарных. И, в частности, такая ситуация имеет место для фотона
+  - состояния с определенной энергией.
 
   Это может привести нас к рассуждению о том, что фотон это
   виртуальная частица, которая отсутствует в реальном физическом мире
