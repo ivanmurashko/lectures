@@ -30,12 +30,11 @@ $\hat{a}_1$ и два оператора выходных мод $\hat{a}_2$ и 
 Если зеркало без потерь, то ``матрица рассеяния'' унитарная, как и в
 классическом случае:
 \[
-\hat{S} = \left(
-\begin{array}{cc}
+\hat{S} = 
+\begin{bmatrix}
 t' & r \\
 r' & t \\
-\end{array}
-\right),
+\end{bmatrix},
 \]
 где $r$, $t$ и $r'$, $t'$ - коэффициенты прохождения и отражения с
 разных сторон зеркала.
@@ -43,15 +42,28 @@ r' & t \\
 Условие унитарности записывается в следующем виде
 \begin{eqnarray}
 \hat{S}^{-1} = 
-\hat{S}^{+} = 
-\left(
-\begin{array}{cc}
-t'^{*} & r'^{*} \\
-r^{*} & t^{*} \\
-\end{array}
-\right), 
+\hat{S}^{+} =
+\begin{bmatrix}
+t'^\ast & r'^\ast \\
+r^\ast & t^\ast \\
+\end{bmatrix}, 
 \nonumber \\
-\hat{S} \hat{S}^{+} = \hat{I}.
+\hat{S} \hat{S}^{+} =
+\begin{bmatrix}
+t' & r \\
+r' & t \\
+\end{bmatrix}
+\begin{bmatrix}
+t'^\ast & r'^\ast \\
+r^\ast & t^\ast \\
+\end{bmatrix} =
+\nonumber \\
+=
+\begin{bmatrix}
+\left|t'\right|^2 + \left|r\right|^2 & t' r'^\ast + r t^\ast \\
+r' t'^\ast + t r^\ast & \left|r'\right|^2 + \left|t\right|^2 \\
+\end{bmatrix} = 
+\hat{I}.
 \label{eqPart2Interfero2}
 \end{eqnarray}
 Для того чтобы выполнялось условие унитарности
@@ -63,8 +75,7 @@ r^{*} & t^{*} \\
 \nonumber \\
 \left|r\right|^2 + \left|t\right|^2 = 1, 
 \nonumber \\
-r^{*}t' + r't^{*} = 0, \,
-r^{*}t + r't'^{*} = 0.
+r' t'^\ast + t r^\ast = 0.
 \label{eqPart2Interfero3}
 \end{eqnarray}
 
