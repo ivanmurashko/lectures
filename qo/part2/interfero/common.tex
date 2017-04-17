@@ -98,23 +98,53 @@ r' t'^\ast + t r^\ast = 0,
 t' r^\ast + r' t^\ast = 0.
 \label{eqPart2Interfero3}
 \end{eqnarray}
+Стоит отметить, что последнее выражение не является независимым,
+действительно, полагая $t \ne 0$ (в противном случае можно рассмотреть
+соотношение для коэффициентов отражения)
+из соотношения $\left|t\right| = \left|t'\right|$ можно получить
+\(
+t t^\ast = t' t'^\ast
+\)
+откуда
+\[
+t^\ast = \frac{t' t'^\ast}{t}.
+\]
+Следовательно, привлекая $r' t'^\ast + t r^\ast = 0$, имеем
+\begin{eqnarray}
+  t' r^\ast + r' t^\ast =
+  t' r^\ast + r' \frac{t' t'^\ast}{t} =
+  \nonumber \\
+  = \frac{t'}{t}\left(t r^\ast + r't'^\ast\right) = 0.
+  \nonumber
+\end{eqnarray}
 
 Плоскость отсчета фазы можно в небольших пределах смещать относительно
 плоскости зеркала, тем более что реальное зеркало не является
 бесконечно тонким. Плоскость отсчета в ряде случаев можно перемещать
 на расстояние порядка длины волны. Выбором плоскости отсчета можно
 перевести матрицу рассеяния к более простому виду, при этом условия 
-(\ref{eqPart2Interfero3}) автоматически выполняются: 
+(\ref{eqPart2Interfero3}) автоматически выполняются.
+Предполагая $t = t' = T e^{i \theta}$ и $r = r' = R e^{i \phi}$ из
+(\ref{eqPart2Interfero3}) получим
+\[
+t r^\ast + r' t^\ast = TR e^{ i \theta} e^{- i \phi} + TR e^{ i \phi}
+e^{- i \theta} =
+e^{i (\phi-\theta)} TR \left(e^{-2 i (\phi-\theta)} + 1\right) = 0,
+\]
+т.е. $\phi - \theta = \frac{\pi}{2}$. Полагая $\theta = 0$ и
+переназначая $t = T, r = R$ имеем
 \begin{equation}
 \hat{S} = \left(
 \begin{array}{cc}
 t & i r \\
 i r & t \\
 \end{array}
-\right)
+\right).
 \label{eqPart2Interfero4a}
 \end{equation}
-или
+
+Если принять $t,t',r,r' \in \mathbb{R}$, то очевидно, что необходимые
+условия также будут выполнены при $t' = t$ и $r' = -r$:
 \begin{equation}
 \hat{S} = \left(
 \begin{array}{cc}
