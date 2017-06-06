@@ -207,13 +207,18 @@ e^{i \theta} \left.\frac{\partial P}{\partial \theta}\right|_0^{2 \pi}
 Первые слагаемые в (\ref{eqCh3_19}) равны нулю из-за периодичности $P$,
 $\frac{\partial P}{\partial \theta}$.  Учитывая (\ref{eqCh3_19}),
 уравнению (\ref{eqCh3_18}) можно придать вид 
-\begin{equation}
-\frac{\partial \left<E\right>}{\partial t} = 
-\frac{A E_1}{4 \bar{n}_{st}}
+\begin{eqnarray}
+  \frac{\partial \left<E\right>}{\partial t} =
+  E_1 \int_0^{\infty}r^2 dr \int_0^{2\pi}e^{i\theta}\frac{\partial
+    P}{\partial t} d \theta
+  =
+  \nonumber \\
+  = 
+- \frac{A E_1}{4 \bar{n}_{st}}
 \int_0^{\infty}r dr\int_0^{2 \pi}r e^{i \theta} P d \theta = 
 - \frac{A}{4 \bar{n}_{st}} \left<E\right>.
 \label{eqCh3_20}
-\end{equation}
+\end{eqnarray}
 Решение этого уравнения 
 \begin{equation}
 \left<E\left(t\right)\right> = 
