@@ -1,0 +1,52 @@
+%%
+%% Common directives for all texts
+%%
+\usepackage{chapterbib}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{imakeidx}
+
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+\usepackage{tikz}
+
+\ifpdf
+  \usepackage{hyperref}
+  \hypersetup{
+    pdftex,
+    allcolors=blue,
+    bookmarksnumbered=true,     
+    bookmarksopen=true,         
+    bookmarksopenlevel=1,       
+    colorlinks=true,            
+    pdfstartview=Fit,           
+    pdfpagemode=UseOutlines,  
+    pdfpagelayout=TwoPageRight
+  }
+\else
+  \usepackage[breaklinks]{hyperref}
+\fi
+
+\floatname{algorithm}{Алгоритм}
+
+\usepackage{longtable}
+\usepackage{indentfirst}
+\renewcommand\thepart{\arabic{part}}
+
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}[theorem]{Лемма}
+\newtheorem{proposition}[theorem]{Предложение}
+\newtheorem{corollary}[theorem]{Вывод}
+\newtheorem{example}{Пример}[section]
+\newtheorem{axiom}{Аксиома}[section]
+\newtheorem{remark}{Комментарий}[section]
+
+\newenvironment{definition}[1][Определение]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
