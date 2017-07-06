@@ -3,7 +3,7 @@
 \index{aлгоритм Гровера}
 Рассмотрим следующую задачу. Допустим имеется большой набор данных
 состоящий из $N$ элементов в котором необходимо найти элемент
-удовлетворяющий некоторым условиям (см. рис. \ref{figQuantCompSearch}).
+удовлетворяющий некоторым условиям (см. \autoref{figQuantCompSearch}).
 Если данные отсортированны, то с  
 помощью алгоритмов типа ``разделяй и властвуй'' искомый элемент может
 быть найдет за время порядка $O\left(log N\right)$
@@ -34,7 +34,7 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 \left.f\left(x\right)\right|_{x \ne x^{\ast}} = 0.
 \label{eqQuantCompGroverF}
 \end{eqnarray}
-На рис. \ref{figQuantCompGrover1} изображена схема для вычесления
+На \autoref{figQuantCompGrover1} изображена схема для вычесления
 искомой функции. На выходе мы имеем сотояние вида
 \begin{equation}
 \left|out\right> = \frac{1}{\sqrt{N}}\left(
@@ -65,11 +65,11 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 
 Схема, реализующая алгоритм Гровера представляет собой некоторый блок,
 описываемый оператором $\hat{U}_G$, который повторяется некоторое число
-раз (см. рис. \ref{figQuantCompGrover}). При этом на каждом шаге
+раз (см. \autoref{figQuantCompGrover}). При этом на каждом шаге
 итерации вероятность обнаружения искомого элемента повышается. 
 
 Базовый элемент $\hat{U}_G$ представляет собой последовательное действие
-двух операторов (см. рис. \ref{figQuantCompGroverBase}):
+двух операторов (см. \autoref{figQuantCompGroverBase}):
 \begin{equation}
 \hat{U}_G=\hat{U}_s\hat{U}_{x^{\ast}},
 \nonumber
@@ -80,7 +80,7 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 \input ./part4/quantcomp/figgroverinv.tex
 
 Действие оператора $\hat{U}_{x^{\ast}}$ описывается следующим соотношением
-(см. рис. \ref{figQuantCompGroverInv}):
+(см. \autoref{figQuantCompGroverInv}):
 \begin{equation}
 \hat{U}_{x^{\ast}}\left(\sum_x \alpha_x \left|x\right>\right) = 
 \sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\left|x\right>.
@@ -110,7 +110,7 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 \input ./part4/quantcomp/figgroverinvmiddle.tex
 
 Действие оператора $\hat{U}_s$ описывается следующим соотношением
-(см. рис. \ref{figQuantCompGroverInvMiddle}):
+(см. \autoref{figQuantCompGroverInvMiddle}):
 \begin{equation}
 \hat{U}_s\left(\sum_x \alpha_x \left|x\right>\right) = 
 \sum_x \left(2 \mathcal{M} - \alpha_x \right)\left|x\right>,
