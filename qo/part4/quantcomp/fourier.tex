@@ -3,7 +3,7 @@
 Для анализа периодических последовательностей (функций) может быть
 использовано дискретное преобразование Фурье
 (см. \autoref{AddFourier}), которое определяется следующим соотношением
-(\ref{eqAddFourierDiscretFourier}):
+\eqref{eqAddFourierDiscretFourier}:
 \begin{equation}
 \tilde{X}_k = \sum^{M - 1}_{m = 0} x_m e^{-\frac{2 \pi}{M} k\cdot m},
 \label{eqPart4QuantCompShorFourierDiscretFourier}
@@ -22,11 +22,11 @@
 \end{equation}
 где имеется последовательнеость амплитуд $\left\{x_k\right\}$, которая
 задает исходную последовательность для преобразования Фурье 
-(\ref{eqPart4QuantCompShorFourierDiscretFourier}). В базисном векторе
+\eqref{eqPart4QuantCompShorFourierDiscretFourier}. В базисном векторе
 $\left|k\right>$ записан номер члена этой последовательности.   
 
 Очевидно, что члены последовательности
-(\ref{eqPart4QuantCompShorQuantFourierSeries})  должны удовлетворять
+\eqref{eqPart4QuantCompShorQuantFourierSeries}  должны удовлетворять
 условию нормировки 
 \[
 \sum_k\left|x_k\right|^2 = 1.
@@ -34,7 +34,7 @@ $\left|k\right>$ записан номер члена этой последов�
 
 Допустим что некоторый оператор $\hat{F}^{M}$ (оператор квантового
 преобразования Фурье) преобразует базисный вектор $\left|k\right>$ по
-правилу задаваемому соотношением (\ref{eqAddFourierDiscretFourier}):
+правилу задаваемому соотношением \eqref{eqAddFourierDiscretFourier}:
 \begin{equation}
 \hat{F}^{M}\left|k\right> = \frac{1}{\sqrt{M}}\sum_{j = 0}^{M -1}
 e^{-i \omega k j}\left|j\right>_{inv} 
@@ -44,8 +44,8 @@ e^{-i \omega k j}\left|j\right>_{inv}
 $\left\{\left|k\right>_{inv}\right\}$ представляют собой один и тот же
 набор векторов которые пронумерованны различным способом.
 
-Из (\ref{eqPart4QuantCompShorQuantFourierSeries}) и
-(\ref{eqPart4QuantCompShorQuantFourierBasis}) получим
+Из \eqref{eqPart4QuantCompShorQuantFourierSeries} и
+\eqref{eqPart4QuantCompShorQuantFourierBasis} получим
 \begin{eqnarray}
 \hat{F}^{M}\left|x\right> = \sum_{j = 0}^{M - 1}x_k \hat{F}^{M}
 \left|k\right> = 
@@ -66,8 +66,8 @@ e^{-i \omega k j}x_k\left|j\right>_{inv} =
 \frac{1}{\sqrt{M}}\sum_{k = 0}^{M - 1}e^{-i \omega k j} x_k.
 \label{eqPart4QuantCompShorQuantFourierEnd}
 \end{equation}
-Выражение (\ref{eqPart4QuantCompShorQuantFourierEnd}) повторяет
-классический аналог (\ref{eqAddFourierDiscretFourier}), т. е. можно записать
+Выражение \eqref{eqPart4QuantCompShorQuantFourierEnd} повторяет
+классический аналог \eqref{eqAddFourierDiscretFourier}, т. е. можно записать
 \[
  \left|x\right> \longleftrightarrow \left|\tilde{X}\right>_{inv}.
 \]
@@ -75,7 +75,7 @@ e^{-i \omega k j}x_k\left|j\right>_{inv} =
 \input ./part4/quantcomp/figquantfourier0.tex
 
 Допустим теперь, что на вход нашей системы подается состояние вида
-(\ref{eqPart4QuantCompShorQuantFourierSeries}) которое представляет
+\eqref{eqPart4QuantCompShorQuantFourierSeries} которое представляет
 собой суперпозицию $M$ базисных состояний
 $\left\{\left|k\right>\right\}$ 
 (см. \autoref{figQuantCompQuantFourier0}). 
@@ -114,16 +114,16 @@ b^{(j)}_i \in \left\{0, 1\right\}.
 \nonumber
 \end{eqnarray}
 
-Из формулы (\ref{eqAddFourierDiscretFourierFFT}) можно
+Из формулы \eqref{eqAddFourierDiscretFourierFFT} можно
 заметить, что если у нас имеется входной сигнал $x$ состоящий из $n =
 \log_2{M}$ 
 битов, то бит $a^{(k)}_0$ может быть использован для выбора четных
-(первого члена суммы (\ref{eqAddFourierDiscretFourierFFT}))
+(первого члена суммы \eqref{eqAddFourierDiscretFourierFFT})
 или нечетных 
-(второго члена суммы (\ref{eqAddFourierDiscretFourierFFT})).
+(второго члена суммы \eqref{eqAddFourierDiscretFourierFFT}).
 
 Действительно, исключая $a^{(k)}_0$, состояние
-(\ref{eqPart4QuantCompShorQuantFourierSeries}) можно представить в
+\eqref{eqPart4QuantCompShorQuantFourierSeries} можно представить в
 виде суммы четных и нечетных компонент: 
 \begin{eqnarray}
 \left|x\right> = \sum_{k = 0}^{M - 1}x_k \left|k\right> = 
@@ -174,13 +174,13 @@ m = a^{(k)}_1 + 2^1 a^{(k)}_2 + \dots + 2^{n-2} a^{(k)}_{n-1}.
 \left|1\right> \otimes \hat{F}^{\frac{M}{2}} \left|m\right>.
 \label{eqPart4QuantCompShorQuantFourierStep1}
 \end{eqnarray}
-С учетом выражения (\ref{eqPart4QuantCompShorQuantFourierBasis}) получим
+С учетом выражения \eqref{eqPart4QuantCompShorQuantFourierBasis} получим
 \begin{equation}
 \hat{F}^{\frac{M}{2}} \left|m\right> = \sqrt{\frac{2}{M}}
 \sum_{j= 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j}\left|j\right>_{inv}.
 \nonumber
 \end{equation}
-Таким образом для (\ref{eqPart4QuantCompShorQuantFourierStep1}) имеем
+Таким образом для \eqref{eqPart4QuantCompShorQuantFourierStep1} имеем
 \begin{eqnarray}
 \left|x\right> \rightarrow
 \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
@@ -279,11 +279,11 @@ exp{\left(-2 \pi i \frac{j}{M}\right)}
 \left|\frac{M}{2} + j\right>_{inv} 
 \label{eqPart4QuantCompShorFourierStep2Pre}
 \end{eqnarray}
-При выводе (\ref{eqPart4QuantCompShorFourierStep2Pre}) было учтено,
+При выводе \eqref{eqPart4QuantCompShorFourierStep2Pre} было учтено,
 что $j = b^{(j)}_0 + 2^1 b^{(j)}_1 + \dots + 2^{n-2} b^{(j)}_{n-2}$. 
 
 Таким образом для $\tilde{C}_{j}$ в 
-(\ref{eqPart4QuantCompShorFourierStep2}) имеем
+\eqref{eqPart4QuantCompShorFourierStep2} имеем
 \begin{eqnarray}
 \tilde{C}_{j} = 
 \sqrt{\frac{2}{M}} 
@@ -348,8 +348,8 @@ $\left|a_0\right>$, то получим схему изображенную на
 \left|\frac{M}{2} + j \right>_{inv}.
 \label{eqPart4QuantCompShorFourierStep3}
 \end{eqnarray}
-Для членов (\ref{eqPart4QuantCompShorFourierStep3}) с учетом равенств
-(\ref{eqPart4QuantCompShorAB}) и (\ref{eqPart4QuantCompShorC}) имеем:
+Для членов \eqref{eqPart4QuantCompShorFourierStep3} с учетом равенств
+\eqref{eqPart4QuantCompShorAB} и \eqref{eqPart4QuantCompShorC} имеем:
 \begin{eqnarray}
 \frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} = 
 \sqrt{\frac{1}{M}} 
@@ -395,9 +395,9 @@ e^{-i \frac{2 \pi}{M} m \left(\frac{M}{2} + j\right)} x_{m}
 \label{eqPart4QuantCompShorFourierStep3_2}
 \end{eqnarray}
 
-Объединяя (\ref{eqPart4QuantCompShorFourierStep3}), 
-(\ref{eqPart4QuantCompShorFourierStep3_1}) и
-(\ref{eqPart4QuantCompShorFourierStep3_2}) окончательно получим 
+Объединяя \eqref{eqPart4QuantCompShorFourierStep3}, 
+\eqref{eqPart4QuantCompShorFourierStep3_1} и
+\eqref{eqPart4QuantCompShorFourierStep3_2} окончательно получим 
 \begin{eqnarray}
 \left|x\right> \rightarrow
 \sum_{j = 0}^{\frac{M}{2} - 1} \sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}

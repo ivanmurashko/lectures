@@ -28,7 +28,7 @@ div \vec{E} = 0,
 \label{eqCh1_EMF_at_FreeSpace}
 \end{eqnarray}
 
-Исключив из (\ref{eqCh1_EMF_at_FreeSpace}) величину $\vec{H}$,  получим
+Исключив из \eqref{eqCh1_EMF_at_FreeSpace} величину $\vec{H}$,  получим
 уравнение:
 \begin{equation}
 rot rot \vec{E} = - \mu_0 \frac{\partial}{\partial t} rot \vec{H} = -
@@ -63,7 +63,7 @@ div \vec{E} = 0,
 функций, являющихся распределением полей, соответствующих собственным
 колебаниям электромагнитного поля в некотором объеме  $V$,  ограниченном
 идеально проводящей поверхностью  $S$.  Поля должны удовлетворять
-системе уравнений (\ref{eqCh1_EMF_at_FreeSpace2}). На поверхности  $S$
+системе уравнений \eqref{eqCh1_EMF_at_FreeSpace2}. На поверхности  $S$
 должны выполняться некоторые граничные условия, например: 
 \begin{equation}
 \left. \left[ \vec{n} \vec{E} \right] \right|_S = 0 \,
@@ -84,10 +84,10 @@ div \vec{E} = 0,
 где $Q_n\left(t\right)\vec{E}_n\left(r\right)$ и 
 $P_n\left(t\right)\vec{H}_n\left(r\right)$  - 
 частные решения уравнений, удовлетворяющие граничным условиям
-(\ref{eqCh1_bound}); $\vec{E}_n\left(r\right)$ и  
+\eqref{eqCh1_bound}; $\vec{E}_n\left(r\right)$ и  
 $\vec{H}_n\left(r\right)$  соответствуют $n$-ому типу 
 колебаний в объеме  $V$  (моде).
-Из уравнений (\ref{eqCh1_EMF_at_FreeSpace2}) имеем:
+Из уравнений \eqref{eqCh1_EMF_at_FreeSpace2} имеем:
 \begin{equation}
 Q_n\left(t\right) \, \Delta \vec{E}_n\left(r\right) = 
 \frac{1}{c^2} \frac{d^2 Q_n}{d t^2}\vec{E}_n\left(r\right). 
@@ -104,7 +104,7 @@ Q_n\left(t\right) \, \Delta \vec{E}_n\left(r\right) =
 где $\omega_n$ постоянная разделения, являющаяся частотой собственных
 колебаний.
 
-Второе из уравнений (\ref{eqCh1_after_sep}) имеет следующий вид:
+Второе из уравнений \eqref{eqCh1_after_sep} имеет следующий вид:
 \begin{equation}
 \Delta \vec{E}_n\left(r\right) + k_n^2 \vec{E}_n\left(r\right) = 0,
 \quad
@@ -116,7 +116,7 @@ $\left. \left[ \vec{n} \vec{E}_n \right] \right|_S = 0$.  Эта
 $k_n\left(\omega_n\right)$.  
 
 Для определения $\vec{H}_n\left(r\right)$ воспользуемся уравнениями 
-(\ref{eqCh1_EMF_at_FreeSpace2}):
+\eqref{eqCh1_EMF_at_FreeSpace2}:
 \begin{equation}
 Q_n\left(t\right)  rot
 \vec{E}_n\left(r\right) = -\mu_0 \frac{d P_n}{d t}
@@ -131,11 +131,11 @@ Q_n\left(t\right) = \frac{\omega_n}{\sqrt{\varepsilon_0}}q_n\left(t\right),
 P_n\left(t\right) = \frac{1}{\sqrt{\mu_0}}p_n\left(t\right).
 \label{eqCh1_separation_podstanovka}
 \end{equation}
-Для новой переменной $q_n$ очевидно имеем из (\ref{eqCh1_after_sep})
+Для новой переменной $q_n$ очевидно имеем из \eqref{eqCh1_after_sep}
 \[
 \frac{d^2 q_n}{d t^2} + \omega_n^2 q_n = 0.
 \]
-Разложение (\ref{eqCh1_sep0}) в новых переменных имеет вид:
+Разложение \eqref{eqCh1_sep0} в новых переменных имеет вид:
 \begin{equation}
 \vec{E}\left(r, t\right) = \sum_{(n)}
 \frac{q_n\left(t\right) \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right),
@@ -145,16 +145,16 @@ P_n\left(t\right) = \frac{1}{\sqrt{\mu_0}}p_n\left(t\right).
 \label{eqCh1_sep1}
 \end{equation}
 
-С учетом подстановки (\ref{eqCh1_separation_podstanovka}) и выражения
+С учетом подстановки \eqref{eqCh1_separation_podstanovka} и выражения
 для скорости света $c =   \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$
-(\ref{eqCh1_EMF_at_FreeSpace}) мы можем переписать 
-(\ref{eqCh1_separationH_before_podstanovka}) в следующем виде 
+\eqref{eqCh1_EMF_at_FreeSpace} мы можем переписать 
+\eqref{eqCh1_separationH_before_podstanovka} в следующем виде 
 \begin{equation}
 q_n\left(t\right) rot \vec{E}_n\left(r\right) = - \frac{1}{c \omega_n}
 \frac{d p_n\left(t\right)}{d t} \vec{H}_n\left(r\right)
 \label{eqCh1_after_sep2}
 \end{equation}
-Уравнения (\ref{eqCh1_after_sep2}) будут удовлетворены, если  
+Уравнения \eqref{eqCh1_after_sep2} будут удовлетворены, если  
 \[
 p_n = \frac{d q_n}{d t}, \quad \frac{d p_n}{d t} = 
 \frac{d^2 q_n}{d t^2} = - \omega_n^2 q_n,
@@ -180,4 +180,4 @@ $\vec{E}_n\left(r\right)$, $\vec{H}_n\left(r\right)$ ортогональна и
 
 Решение исходной электродинамической задачи сводится к нахождению
 коэффициентов  $q_n\left(t\right)$, $p_n\left(t\right)$    
-в разложениях (\ref{eqCh1_sep1}).
+в разложениях \eqref{eqCh1_sep1}.

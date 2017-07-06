@@ -17,7 +17,7 @@
 f\left(x, a\right) = a^x mod N.
 \label{eqPart4QuantCompShorClassPart}
 \end{equation}
-Функция (\ref{eqPart4QuantCompShorClassPart}) зависит от
+Функция \eqref{eqPart4QuantCompShorClassPart} зависит от
 анализируемого числа $N$ и двух аргументов $x$ и $a$. Аргумент $a$
 выбирается из следующих условий
 \begin{eqnarray}
@@ -26,7 +26,7 @@ f\left(x, a\right) = a^x mod N.
 \mbox{НОД}\left(N, a\right) = 1.
 \label{eqPart4QuantCompShorAConditions}
 \end{eqnarray}
-Типичный график функции (\ref{eqPart4QuantCompShorClassPart}) представлен на
+Типичный график функции \eqref{eqPart4QuantCompShorClassPart} представлен на
 \autoref{picPart4QuantCompShorClassPart}.
 
 % maxima a = 2 N = 21
@@ -38,15 +38,15 @@ f\left(x, a\right) = a^x mod N.
 \input ./part4/quantcomp/figshorclass.tex
 
 Условия выбора коэффициента $a$
-(\ref{eqPart4QuantCompShorAConditions}) такие что $a$ и $N$ не имеют
+\eqref{eqPart4QuantCompShorAConditions} такие что $a$ и $N$ не имеют
 общих делителей. Если же такие делители существуют, то они являются
 искомым решением задачи факторизации и легко находятся с помощью
 алгоритма Евклида (см. \autoref{AddEuclidean}).
 
-Функция (\ref{eqPart4QuantCompShorClassPart}) периодическая,
+Функция \eqref{eqPart4QuantCompShorClassPart} периодическая,
 т. е. существует такое число $r$, что $f\left(x + r, a\right) = 
 f\left(x, a\right)$. Минимальное из возможных чисел $r$ называется
-периодом функции (\ref{eqPart4QuantCompShorClassPart}). 
+периодом функции \eqref{eqPart4QuantCompShorClassPart}. 
 
 Для доказательства периодичности отметим, что $f\left(x, a\right)$ не
 может быть равной нулю. Действительно если выполнено условие
@@ -56,11 +56,11 @@ $f\left(x, a\right) = 0$, то
 a^x = k \cdot N,
 \]
 где $k$ - целое число, что не возможно в силу
-взаимной простоты $a$ и $N$ (\ref{eqPart4QuantCompShorAConditions})
+взаимной простоты $a$ и $N$ \eqref{eqPart4QuantCompShorAConditions}
 \footnote{При это предполагается очевидно, что $N > 1$}.
 
 Таким образом область значений функции
-(\ref{eqPart4QuantCompShorClassPart}) ограничена множеством 
+\eqref{eqPart4QuantCompShorClassPart} ограничена множеством 
 \begin{equation}
 f\left(x,
 a\right) \in \left\{1, \dots, N - 1\right\},
@@ -72,7 +72,7 @@ a\right) \in \left\{1, \dots, N - 1\right\},
 f\left(k,a\right) = f\left(j,a\right),
 \nonumber
 \end{equation}
-что и доказывает периодичность функции (\ref{eqPart4QuantCompShorClassPart}).
+что и доказывает периодичность функции \eqref{eqPart4QuantCompShorClassPart}.
 
 Пусть $k = j + r$, тогда
 \[
@@ -85,11 +85,11 @@ a^r \equiv 1 \mod{N}.
 \end{equation}
 
 
-Период функции (\ref{eqPart4QuantCompShorClassPart}) может быть как
+Период функции \eqref{eqPart4QuantCompShorClassPart} может быть как
 четным так и нечетным. В алгоритме Шора нам интересен первый вариант:
 период - четное число. В противном случае выбирают новое число $a$ и
 повторяют нахождение периода. Таким образом с учетом $r= 2\cdot l$ мы
-можем переписать (\ref{eqPart4QuantCompShorPeriodConditions}) в виде
+можем переписать \eqref{eqPart4QuantCompShorPeriodConditions} в виде
 \begin{equation}
 a^{2 \cdot l} \equiv 1 \mod{N},
 \nonumber
@@ -109,7 +109,7 @@ a^{l} \not\equiv -1 \mod{N},
 \label{eqPart4QuantCompShorPeriodFinal}
 \end{equation}
 где $k$ - некоторое целое число. Из
-(\ref{eqPart4QuantCompShorPeriodFinal}) получаем что $a^l \pm 1$ имеют
+\eqref{eqPart4QuantCompShorPeriodFinal} получаем что $a^l \pm 1$ имеют
 общие нетривиальные (отличные от 1) делители с $N$.
 
 \begin{example}
@@ -117,8 +117,8 @@ a^{l} \not\equiv -1 \mod{N},
 \label{exPart4QuantCompShorGCD}
 В качестве примера рассмотрим задачу о нахождении делителей числа $N =
 21$. Выбрав $a=2$ мы получим период функции
-(\ref{eqPart4QuantCompShorClassPart}) $r = 6$ (см. рис.
-\ref{picPart4QuantCompShorClassPart}). 
+\eqref{eqPart4QuantCompShorClassPart} $r = 6$ (см.
+\autoref{picPart4QuantCompShorClassPart}). 
 Очевидно что 
 \[
 2^3 \equiv 8 \mod{21} \not\equiv -1 \mod{21}.

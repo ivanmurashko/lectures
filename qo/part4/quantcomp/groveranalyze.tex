@@ -8,7 +8,7 @@
 
 Критерием эффективности алгоритма служит следующий факт: хороший
 алгоритм должен находить искомое значение с минимальным числом вызовов
-функции (\ref{eqQuantCompGroverF}).
+функции \eqref{eqQuantCompGroverF}.
 
 Рассмотрим самую первую итерацию. Начальное состояние
 $\left|\psi\right>_0$ имеет следующий вид
@@ -25,7 +25,7 @@ $\left|\psi\right>_0$ имеет следующий вид
 $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$. 
 
 После применения оператора инверсии
-фазы $U_{x^{\ast}}$ из (\ref{eqQuantCompGroverUxast}) получим
+фазы $U_{x^{\ast}}$ из \eqref{eqQuantCompGroverUxast} получим
 \begin{equation}
 \hat{U}_{x^{\ast}} \left|\psi\right>_0 =
 \frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> - 
@@ -34,7 +34,7 @@ $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$.
 \end{equation}
 
 После применения оператора обращения относительно среднего $\hat{U}_s$ 
-из (\ref{eqQuantCompGroverUs}) получим
+из \eqref{eqQuantCompGroverUs} получим
 \begin{eqnarray}
 \hat{U}_s \hat{U}_{x^{\ast}} \left|\psi\right>_0 = 
 \hat{U}_G \left|\psi\right>_0 \approx 
@@ -49,7 +49,7 @@ $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$.
 \frac{3}{\sqrt{N}} \left|x^{\ast}\right>.
 \label{eqQuantCompGroverAnalyzeRought}
 \end{eqnarray}
-При выводе (\ref{eqQuantCompGroverAnalyzeRought}) было принятно 
+При выводе \eqref{eqQuantCompGroverAnalyzeRought} было принятно 
 \[
 \mathcal{M} = \frac{\sum_x \alpha_x}{N} \approx
 \frac{N}{N \sqrt{N}} = \frac{1}{\sqrt{N}}.
@@ -86,6 +86,6 @@ $\frac{\pi}{4}\sqrt{N}$. Таким образом алгоритм Гровер
 Можно задать вопрос об оптимальности алгоритма Гровера: существует ли
 квантовый алгоритм, который выполняет поиск в неструктурированном
 объеме данных быстрее чем за $O\left(\sqrt{N}\right)$ обращений к
-функции (\ref{eqQuantCompGroverF}). В статье
+функции \eqref{eqQuantCompGroverF}. В статье
 \cite{bBennettGroverOptimal} показано, что такого алгоритма
 не существует.

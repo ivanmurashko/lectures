@@ -37,20 +37,20 @@ K \equiv A^b\mod{p} \equiv g^{ab} \mod{p}.
 \emph{(Диффи-Хеллман)}
 Исходные данные (открытая информация): $g = 2$, $p = 23$. Алиса
 выбирает случайное число $a = 6$ и вычисляет по формуле
-(\ref{eqAddDiscretIndDHA}) число 
+\eqref{eqAddDiscretIndDHA} число 
 %power_mod(2, 6, 23);
 $A = 18$ и отсылает его Бобу.
 Боб выбирает случайное число $b=9$ и, с помощью формулы 
-(\ref{eqAddDiscretIndDHB}), получает
+\eqref{eqAddDiscretIndDHB}, получает
 %power_mod(2, 9, 23);
 $B = 6$ и отсылает и отсылает это число Алисе.
 
 Алиса вычисляет ключ 
 % power_mod(6, 6, 23);
-$K = 12$ по формуле (\ref{eqAddDiscretIndDHKey}). Боб может полчить
+$K = 12$ по формуле \eqref{eqAddDiscretIndDHKey}. Боб может полчить
 тоже значение ключа 
 % power_mod(18, 9, 23);
-$K = 12$ используя (\ref{eqAddDiscretIndDHKeyB})
+$K = 12$ используя \eqref{eqAddDiscretIndDHKeyB}
 \nonumber
 \end{example}
 
@@ -60,5 +60,5 @@ $K = 12$ используя (\ref{eqAddDiscretIndDHKeyB})
 a \equiv ind_g\left( A \right) \mod{p},
 \nonumber
 \end{equation}
-откуда с помощью (\ref{eqAddDiscretIndDHKey}) получается искомое
+откуда с помощью \eqref{eqAddDiscretIndDHKey} получается искомое
 значение $K$.

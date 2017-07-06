@@ -1,8 +1,8 @@
 %% -*- coding:utf-8 -*- 
 \section{Система уравнений Гейзенберга-Ланжевена, описывающая лазер}
 %% Для получения системы уравнений, описывающих работу лазера надо
-%% воспользоваться уравнением Гейзенберга (\ref{eqLaserHaizenberg1}) подставив в него
-%% гамильтониан лазерной системы (\ref{eqLaserHaizenberg2}). Поскольку
+%% воспользоваться уравнением Гейзенберга \eqref{eqLaserHaizenberg1} подставив в него
+%% гамильтониан лазерной системы \eqref{eqLaserHaizenberg2}. Поскольку
 %% атомы и полевые операторы коммутируют, при выводе уравнений для
 %% полевых операторов можно опустить атомные операторы, входящие в
 %% гамильтониан, а при выводе уравнений для атомных операторов можно
@@ -43,7 +43,7 @@
 %% \label{eqLaserHaizenberg12}
 %% \end{eqnarray}
 
-%% В (\ref{eqLaserHaizenberg12}) выражено через добротность резонатора
+%% В \eqref{eqLaserHaizenberg12} выражено через добротность резонатора
 %% $Q$. $N$ - полное число активных атомов. $\bar{n}_T$ - среднее число
 %% атомовв моде резервуара при температуре $T$. $\omega$ - частота
 %% генерации, $\omega_r$ - собственная частота резонатора.
@@ -105,9 +105,9 @@
 %% \label{eqLaserHaizenberg16}
 %% \end{equation}
 
-Объединив полученные нами уравнения (\ref{eqLaserHaizenbergA}), 
-(\ref{eqLaserHaizenberNB_AB}) и
-(\ref{eqLaserHaizenberNZ}) мы можем записать следующую 
+Объединив полученные нами уравнения \eqref{eqLaserHaizenbergA}, 
+\eqref{eqLaserHaizenberNB_AB} и
+\eqref{eqLaserHaizenberNZ} мы можем записать следующую 
 систему:
 \begin{eqnarray}
 \frac{d \hat{a}}{d t} = 
@@ -132,7 +132,7 @@
 которую мы будем называть системой уравнений Гейзенберга-Ланжевена,
 описывающих работу лазера.
 
-По своему виду эти уравнения (\ref{eqLaserHaizenberMain}) очень похожи
+По своему виду эти уравнения \eqref{eqLaserHaizenberMain} очень похожи
 на уравнения лазера, полученные в полуклассическом
 приближении. Различие заключается в том, 
 что вместо классических величин в уравнении стоят операторы, которые
@@ -141,7 +141,7 @@
 уравнениях появляются Ланжевеновские члены, описывающие квантовые
 шумы, имеющиеся в лазерной системе.
 
-К уравнениям (\ref{eqLaserHaizenberMain})
+К уравнениям \eqref{eqLaserHaizenberMain}
 можно применить те же приближения, которые применяются в
 полуклассическом случае.
 
@@ -151,7 +151,7 @@
 %% скорости релаксации моды $\frac{\omega}{Q}$, т. е. $\gamma \gg
 %% \gamma_z,\frac{\omega}{Q}$ 
 можно применить адиабатическое приближение,
-пренебрегая во втором уравнении (\ref{eqLaserHaizenberMain}) производной
+пренебрегая во втором уравнении \eqref{eqLaserHaizenberMain} производной
 $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \hat{N}_{ab}$ получим
 \begin{equation}
@@ -160,7 +160,7 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \nonumber
 \end{equation}
 Подставляя это выражение для $\hat{N}_{ab}$ в оставшиеся два уравнения
-системы (\ref{eqLaserHaizenberMain}) получим новую
+системы \eqref{eqLaserHaizenberMain} получим новую
 систему уравнений:
 \begin{eqnarray}
 \frac{d}{dt} \hat{a} = -
@@ -182,7 +182,7 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \label{eqLaserHaizenbergFSum}
 \end{equation}
 то систему 
-(\ref{eqLaserHaizenberg16add}) можно переписать в виде
+\eqref{eqLaserHaizenberg16add} можно переписать в виде
 \begin{eqnarray}
 \frac{d}{dt} \hat{a} = -
 \frac{1}{2}\left(\frac{\omega}{Q}\right)\hat{a} + \frac{g^2}{\gamma}
@@ -197,10 +197,10 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \label{eqLaserHaizenberg17}
 \end{eqnarray}
 
-Для шумового оператора (\ref{eqLaserHaizenbergFSum}) при помощи
-(\ref{eqLaserHaizenbergFABCorrel_1}),
-(\ref{eqLaserHaizenbergFABCorrel_2}) и
-(\ref{eqLaserHaizenbergFFCorrel}) 
+Для шумового оператора \eqref{eqLaserHaizenbergFSum} при помощи
+\eqref{eqLaserHaizenbergFABCorrel_1},
+\eqref{eqLaserHaizenbergFABCorrel_2} и
+\eqref{eqLaserHaizenbergFFCorrel} 
 можно написать следующие корреляционные соотношения:
 \begin{eqnarray}
 \left<\hat{F}^{+}_{\sum}\left(t_1\right)\hat{F}_{\sum}\left(t_2\right)\right>
@@ -229,7 +229,7 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \end{eqnarray}
 
 
-Уравнения (\ref{eqLaserHaizenberg17}) напоминают полуклассическое
+Уравнения \eqref{eqLaserHaizenberg17} напоминают полуклассическое
 уравнение лазера, и для их решения можно в значительной мере
 воспользоваться такими же приближениями и приемами которые
 используются при решении полуклассической задачи.

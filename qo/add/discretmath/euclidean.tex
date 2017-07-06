@@ -24,10 +24,10 @@ a = x \cdot b + r,
 \end{theorem}
 
 \begin{proof}
-Для доказательства (\ref{eqAddGCD_ab_br}) покажем, что любой делитель
+Для доказательства \eqref{eqAddGCD_ab_br} покажем, что любой делитель
 пары чисел $\left(a,b\right)$  является делителем пары чисел
 $\left(b,r\right)$. Пусть $d$ некоторый общий делитель чисел  $a$ и
-$b$, т. е. $a = d \cdot x_1$, $b = d \cdot x_2$. Т. о. из (\ref{eqAddGCD_a}) следует
+$b$, т. е. $a = d \cdot x_1$, $b = d \cdot x_2$. Т. о. из \eqref{eqAddGCD_a} следует
 \begin{equation}
 r = a - x \cdot b = 
 d \cdot \left( x_1 - x \cdot x_2 \right),
@@ -38,7 +38,7 @@ d \cdot \left( x_1 - x \cdot x_2 \right),
 Теперь докажем, что любой общий делитель чисел $b$ и $r$ будет является общим
 делителем чисел $a$ и $b$, действительно пусть $d$ - общий делитель
 чисел $b$ и $r$, т. е. $b = y_1 \cdot d$ и  $r = y_2 \cdot d$,
-т. о. (\ref{eqAddGCD_a}) переписывается в виде
+т. о. \eqref{eqAddGCD_a} переписывается в виде
 \begin{equation}
 a = x \cdot y_1 \cdot d + y_2 \cdot d = d \cdot \left( x \cdot y_1 +
 y_2 \right),
@@ -51,7 +51,7 @@ y_2 \right),
 пары будет являться таковым и для второй.  
 \end{proof}
 
-Соотношение (\ref{eqAddGCD_ab_br}) приводит к следующему алгоритму
+Соотношение \eqref{eqAddGCD_ab_br} приводит к следующему алгоритму
 вычисления наибольшего общего делителя
 \begin{algorithm}
 \caption{Алгоритм Евклида}

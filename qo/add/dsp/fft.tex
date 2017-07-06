@@ -1,27 +1,27 @@
 %% -*- coding:utf-8 -*-
 \subsection{Быстрое преобразование Фурье}
-Вычисления по формуле (\ref{eqAddFourierDiscretFourier}) имеют
+Вычисления по формуле \eqref{eqAddFourierDiscretFourier} имеют
 сложность порядка $O\left(M^2\right)$, где $M$ - число элементов (отсчетов)
 \footnote{Действительно необходимо получить $M$ элементов, для
   подсчета каждого из которых требуется $M$ операций умножения}. 
 
 Существует алгоритм быстрого расчета по формуле
-(\ref{eqAddFourierDiscretFourier}) который имеет сложность
+\eqref{eqAddFourierDiscretFourier} который имеет сложность
 $O\left(M \log{M}\right)$.
 
 Воспользовавшись парадигмой ``разделяй и властвуй''
 (см. разд. \ref{addDivideAndConquer}) можно 
 обратить внимание на форму записи
-(\ref{eqAddFourierDiscretFourierMatrixElem2}) и 
+\eqref{eqAddFourierDiscretFourierMatrixElem2} и 
 заметить, что выражение
-(\ref{eqAddFourierDiscretFourier}) может быть переписано в
+\eqref{eqAddFourierDiscretFourier} может быть переписано в
 в виде 
 \begin{equation}
 \tilde{X}_k = \sum^{M - 1}_{m = 0} F_{km}^{M} x_m,
 \nonumber
 \end{equation}
 где запись $F_{km}^{M}$ обозначает, что используется матрица
-(\ref{eqAddFourierDiscretFourierMatrixElem2}) размера $M\times M$.
+\eqref{eqAddFourierDiscretFourierMatrixElem2} размера $M\times M$.
 Если $M$ четно, то 
 \begin{equation}
 \tilde{X}_k = \sum^{M - 1}_{m = 0} F_{k,m}^{M} x_m = 
@@ -47,16 +47,16 @@ e^{-2\pi i \frac{k}{M}}F_{k,m}^{\frac{M}{2}},
 \label{eqAddFourierDiscretFourierFFT}
 \end{equation}
 Сложность вычислений по формуле
-(\ref{eqAddFourierDiscretFourierFFT}) определяется 
+\eqref{eqAddFourierDiscretFourierFFT} определяется 
 следующим соотношением
 \begin{equation}
 T\left( M \right) = 2 T\left( \frac{M}{2} \right) + O\left( M \right).
 \label{eqAddFourierDiscretFourierFFTComplexity}
 \end{equation}
 В справедливости
-(\ref{eqAddFourierDiscretFourierFFTComplexity}) можно убедится
+\eqref{eqAddFourierDiscretFourierFFTComplexity} можно убедится
 если заметить что вычисления сложности $T\left( M \right)$ в 
-(\ref{eqAddFourierDiscretFourierFFT}) распадаются 
+\eqref{eqAddFourierDiscretFourierFFT} распадаются 
 на две подзадачи по вычислениям сложности $T\left( \frac{M}{2}
 \right)$.
 

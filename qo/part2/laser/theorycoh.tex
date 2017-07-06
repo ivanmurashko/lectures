@@ -1,7 +1,7 @@
 %% -*- coding:utf-8 -*- 
 \section{Теория лазера. Представление когерентных состояний}
 Нужно воспользоваться уравнением для функции квазивероятности
-$P\left(\alpha, t\right)$ (\ref{eqCh3_7}):
+$P\left(\alpha, t\right)$ \eqref{eqCh3_7}:
 \begin{equation}
 \frac{\partial}{\partial t} P\left(\alpha, t\right) = 
 - \frac{1}{2}\left\{ 
@@ -36,7 +36,7 @@ P\left(r, \theta, t\right)
   P}{\partial t} = 0$, а фаза $\theta$ распределена равномерно от $0$ до $2
 \pi$. Из сказанного следует, что $\frac{\partial^2 P}{\partial
   \theta^2} = 0$ и квазивероятность $P\left(r, \theta, t\right)$ от $t$ и
-$\theta$ не зависит. Уравнение (\ref{eqCh3_12}) примет вид   
+$\theta$ не зависит. Уравнение \eqref{eqCh3_12} примет вид   
 \begin{equation}
 0 = - \frac{\partial}{\partial r}
 \left[
@@ -96,7 +96,7 @@ r^2 G - \frac{B}{2}r^4
 \right)
 r dr.
 \]
-Распределение (\ref{eqCh3_16})
+Распределение \eqref{eqCh3_16}
 является функцией от $r^2 = \left|\alpha\right|^2 = \bar{n}$. При
 превышении порога $A > \frac{\omega}{Q}$,  то есть при $G > 0$,
 $P\left(r\right)$ с ростом $r^2$ сперва растет, достигая максимума при
@@ -113,7 +113,7 @@ $r^2 = \frac{A - \omega/Q}{B} = \frac{G}{B}$, а затем убывает.
 
 \input ./part2/laser/fig6.tex
 
-На рис.\ref{figPart2Ch1_6} представлены зависимости квазивероятности от $r^2 =
+На \autoref{figPart2Ch1_6} представлены зависимости квазивероятности от $r^2 =
 \left|\alpha\right|^2$, при различных значениях параметра $G$,
 соответствующих допороговому, пороговому и надпорогогвому режимам. 
 
@@ -147,7 +147,7 @@ $r^2 = \frac{A - \omega/Q}{B} = \frac{G}{B}$, а затем убывает.
 \[
 P\left(r, \theta, t\right) = P\left(r\right) P\left(\theta, t\right).
 \]
-В этом случае уравнение (\ref{eqCh3_12}) примет вид 
+В этом случае уравнение \eqref{eqCh3_12} примет вид 
 \begin{equation}
 \frac{\partial P \left(\theta, t\right)}{\partial t} = 
 \frac{A}{4 r^2}
@@ -156,9 +156,9 @@ P \left(\theta, t\right)
 \label{eqCh3_17}
 \end{equation}
 Функция $P\left(r\right)$ сокращается, так как она удовлетворяет
-стационарному уравнению (\ref{eqCh3_15}). 
+стационарному уравнению \eqref{eqCh3_15}. 
 
-Уравнение (\ref{eqCh3_17}) можно использовать для получения уравнения,
+Уравнение \eqref{eqCh3_17} можно использовать для получения уравнения,
 которому удовлетворяет среднее поле. Среднее электрическое поле моды
 лазера, выраженное через $P$, имеет вид  
 \[
@@ -170,7 +170,7 @@ P \left(\theta, t\right)
 \left<\hat{E}\right> = E_1 \int_{0}^{\infty}r dr \int_0^{2 \pi}r e^{i
   \theta} P\left(r, \theta, t\right) d \theta.
 \]
-Используем теперь уравнение (\ref{eqCh3_17}):
+Используем теперь уравнение \eqref{eqCh3_17}:
 \begin{eqnarray}
 \frac{\partial \left<\hat{E}\right>}{\partial t}
 = E_1 \frac{\partial}{\partial t} \int_{0}^{\infty}r^2 dr \int_0^{2
@@ -204,9 +204,9 @@ e^{i \theta} \left.\frac{\partial P}{\partial \theta}\right|_0^{2 \pi}
 \label{eqCh3_19}
 \end{eqnarray}
 
-Первые слагаемые в (\ref{eqCh3_19}) равны нулю из-за периодичности $P$,
-$\frac{\partial P}{\partial \theta}$.  Учитывая (\ref{eqCh3_19}),
-уравнению (\ref{eqCh3_18}) можно придать вид 
+Первые слагаемые в \eqref{eqCh3_19} равны нулю из-за периодичности $P$,
+$\frac{\partial P}{\partial \theta}$.  Учитывая \eqref{eqCh3_19},
+уравнению \eqref{eqCh3_18} можно придать вид 
 \begin{eqnarray}
   \frac{\partial \left<E\right>}{\partial t} =
   E_1 \int_0^{\infty}r^2 dr \int_0^{2\pi}e^{i\theta}\frac{\partial
@@ -247,7 +247,7 @@ D = \frac{A}{2 \bar{n}_{st}}.
 \nonumber
 \end{equation}
 где $P\left(\alpha\right)$ - квазивероятность состояния лазера,
-определяемая формулой (\ref{eqCh3_12}). 
+определяемая формулой \eqref{eqCh3_12}. 
 При переходе к полярным координатам
 (модуль-фаза) $\alpha = r e^{i \theta}$
 мы считаем что амплитуда уже
@@ -258,7 +258,7 @@ D = \frac{A}{2 \bar{n}_{st}}.
 \alpha\left(t\right) = r e^{i\theta\left(t\right)} = r e^{i \theta},
 \label{eqCh3_addon1}
 \end{eqnarray}
-В (\ref{eqCh3_addon1}) мы предполагали, что в начальный момент времени 
+В \eqref{eqCh3_addon1} мы предполагали, что в начальный момент времени 
 $\theta\left(0\right) = 0$, а в момент времени $t$ - $\theta\left(t\right) = \theta$.
 Таким образом имеем:
 \begin{equation}
@@ -270,7 +270,7 @@ e^{i \theta}, t\right) e^{i \theta}.
 \end{equation}
 Выведем уравнение, которому удовлетворяет 
 $\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>$. 
-Имеем уравнение (\ref{eqCh3_17}) 
+Имеем уравнение \eqref{eqCh3_17} 
 \(
 \frac{\partial P \left(\theta, t\right)}{\partial t} = 
 \frac{A}{4 \bar{n}_{st}}
@@ -302,7 +302,7 @@ d \theta
 e^{i \theta}, t\right) e^{i \theta}.
 \label{eqPart2Ch1_add84_1}
 \end{eqnarray}
-Проведем в (\ref{eqPart2Ch1_add84_1}) дважды интегрирование по частям
+Проведем в \eqref{eqPart2Ch1_add84_1} дважды интегрирование по частям
 по $\theta$. Получим:
 \begin{eqnarray}
 \int_0^{2 \pi}
@@ -329,7 +329,7 @@ P e^{i \theta}.
 \nonumber
 \end{eqnarray}
 Подставляя получившийся результат в исходное выражение
-(\ref{eqPart2Ch1_add84_1}), получим:
+\eqref{eqPart2Ch1_add84_1}, получим:
 \begin{eqnarray}
 \frac{d}{dt}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
 =
@@ -360,17 +360,17 @@ e^{-i \omega_0 t - \frac{D}{2}t},
 \[
 \frac{D}{2} = \frac{A}{4 \bar{n}_{st}}.
 \]
-Выражение (\ref{eqPart2LaserCorr1}) определяет корреляционную функцию
+Выражение \eqref{eqPart2LaserCorr1} определяет корреляционную функцию
 $r\left(t\right)$ в области $t \ge 0$. В случае $t \le 0$, с учетом
-(\ref{eqAddHinchinStatWide3}), корреляционная функция может быть
+\eqref{eqAddHinchinStatWide3}, корреляционная функция может быть
 записана в виде  
 \begin{equation}
 r_{-}\left(t\right) = r_{-}\left(-\left|t\right|\right) =
 r_{+}^{*}\left(\left|t\right|\right). 
 \label{eqPart2LaserCorr2}
 \end{equation}
-С учетом выражений (\ref{eqPart2LaserCorr1}) и
-(\ref{eqPart2LaserCorr2}) можно написать следующее выражение для фурье
+С учетом выражений \eqref{eqPart2LaserCorr1} и
+\eqref{eqPart2LaserCorr2} можно написать следующее выражение для фурье
 образа корреляционной функции, которая согласно теореме Хинчина-Винера
 (см. \autoref{AddHinchin})
 определяет энергетический спектр $S\left(\omega\right)$:
@@ -406,7 +406,7 @@ S\left(\omega\right) = \tilde{r}\left(\omega\right) =
 \label{eqCh3_22}
 \end{eqnarray}
 
-%% Из (\ref{eqCh3_21}) имеем
+%% Из \eqref{eqCh3_21} имеем
 %% \begin{eqnarray}
 %% \left|E\left(\omega\right)\right|^2 = 
 %% \left|\int_{-\infty}^{+\infty}e^{i \omega t}\left<E\left(0\right)\right>
@@ -422,7 +422,7 @@ S\left(\omega\right) = \tilde{r}\left(\omega\right) =
 \input ./part2/laser/fig8.tex
 
 Получилось, что линия генерации лоренцовская, а ширина линии равна $D$ 
-(рис.\ref{figPart2Ch1_8}). Поскольку мы рассматривали только ''естественную'',
+(\autoref{figPart2Ch1_8}). Поскольку мы рассматривали только ''естественную'',
 принципиально не устранимую причину уширения линии генерации,
 связанную с квантовыми флуктуациями, и пренебрегали принципиально
 устранимыми техническими причинами, полученная ширина получилась

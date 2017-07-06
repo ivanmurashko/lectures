@@ -4,13 +4,13 @@
 \subsubsection{Инверсия фазы}
 Каким образом может быть реализована инверсия фазы: как выглядит
 квантовый логический элемент который осуществляет преобразование
-(\ref{eqQuantCompGroverUxast}), т. е. каким образом $f\left(x\right)$
+\eqref{eqQuantCompGroverUxast}, т. е. каким образом $f\left(x\right)$
 может быть ``послано'' в фазу?
 
 \input ./part4/quantcomp/figgroverphaseinvimpl.tex
 
 Рассмотрим схему изображенную на
-рис. (\ref{figQuantCompGroverPhaseInvImpl}). Предложенная схема
+\autoref{figQuantCompGroverPhaseInvImpl}. Предложенная схема
 осуществляет следующее преобразование:
 \begin{equation}
 \left|x\right>\otimes\left|b\right> \rightarrow 
@@ -52,9 +52,9 @@
 \input ./part4/quantcomp/figgrovermeaninvimpl.tex
 
 Рассмотрим схему изображенную на
-рис. (\ref{figQuantCompGroverMeanInvImpl}). Элемент $\hat{U}_{x \ne 0}$
+\autoref{figQuantCompGroverMeanInvImpl}. Элемент $\hat{U}_{x \ne 0}$
 осуществляет преобразование аналогичное
-(\ref{eqQuantCompGroverPhaseInvImpl}) при этом функция
+\eqref{eqQuantCompGroverPhaseInvImpl} при этом функция
 $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 0$, т. о.
 \begin{eqnarray}
@@ -167,7 +167,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 
 Если воздействовать оператором $\hat{H}^{\otimes n}\hat{U}_{x \ne
   0}\hat{H}^{\otimes n}$, то используя результат
-(\ref{eqQuantCompGroverMeanInvImpl}) получим:
+\eqref{eqQuantCompGroverMeanInvImpl} получим:
 \begin{eqnarray}
 \hat{H}^{\otimes n}\hat{U}_{x \ne
   0}\hat{H}^{\otimes n} \sum_x \alpha_x \left| x \right> = 
@@ -200,5 +200,5 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 \sum_x \left(2 \mathcal{M} - \alpha_x \right)\left| x \right>.
 \nonumber
 \end{eqnarray}
-Т. о. схема предложенная на рис. (\ref{figQuantCompGroverMeanInvImpl})
+Т. о. схема предложенная на \autoref{figQuantCompGroverMeanInvImpl}
 действительно осуществляет обращение относительно среднего.

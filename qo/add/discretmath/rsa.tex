@@ -80,7 +80,7 @@ c \equiv m^e \mod{n}
 и мы хотим зашифровать следующее сообщение $m = 1101_2 = 11_{10}$. 
 %(%i1) power_mod(11,5,21);         
 %(%o1)                                  2
-Шифротекст вычисляется по формуле (\ref{eqAddRSACode}) $c \equiv 11^5 \mod{21} = 2$.
+Шифротекст вычисляется по формуле \eqref{eqAddRSACode} $c \equiv 11^5 \mod{21} = 2$.
 \label{exAddRSACode}
 \end{example}
 
@@ -98,7 +98,7 @@ m \equiv c^d \mod{n}.
 
 %(%i2) power_mod(2,5,21);
 %(%o2)                                 11
-Исходный текст вычисляется по формуле (\ref{eqAddRSADeCode}) $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
+Исходный текст вычисляется по формуле \eqref{eqAddRSADeCode} $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
 \label{exAddRSADeCode}
 \end{example}
 
@@ -129,7 +129,7 @@ m^{e\cdot d} =m m^{h \left(p - 1\right)\left(q - 1\right)}.
 m^{e\cdot d} \equiv m \equiv 0 \mod{p}
 \]
 Во втором случае используем малую теорему Ферма
-(\ref{addDiscretSmallFerma}):
+\autoref{addDiscretSmallFerma}:
 \[
 m m^{h \left(p - 1\right)\left(q - 1\right)} 
 = m \left(m^{p - 1}\right)^{h \left(q - 1\right)} \equiv m \cdot 1^{h
