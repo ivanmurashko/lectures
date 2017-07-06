@@ -1,6 +1,13 @@
 %%
 %% Common directives for all texts
 %%
+\documentclass[14pt,a4paper]{extbook} 
+\usepackage{anysize}
+\pagestyle{myheadings}
+\marginsize{2cm}{2cm}{2cm}{1cm}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
 \usepackage{chapterbib}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -40,10 +47,28 @@
 \usepackage{indentfirst}
 \renewcommand\thepart{\arabic{part}}
 
-\newtheorem{theorem}{Теорема}[section]
-\newtheorem{lemma}[theorem]{Лемма}
-\newtheorem{proposition}[theorem]{Предложение}
-\newtheorem{corollary}[theorem]{Вывод}
+%
+% https://tex.stackexchange.com/questions/187388/amsthm-with-shared-counters-messes-up-autoref-references
+%
+\usepackage{aliascnt}
+\usepackage{cleveref}
+
+
+\theoremstyle{theorem}
+\newtheorem{xtheorem}{Теорема}[section]
+\providecommand*{\xtheoremautorefname}{Теорема}
+\NewDocumentEnvironment{theorem}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xtheorem}}
+                         {\begin{xtheorem}[#1]\index{#1!определение}}
+                       }%
+                       {\end{xtheorem}}
+
+
+\newtheorem{lemma}[xtheorem]{Лемма}
+\newtheorem{proposition}[xtheorem]{Предложение}
+\newtheorem{corollary}[xtheorem]{Вывод}
 \newtheorem{example}{Пример}[section]
 \newtheorem{axiom}{Аксиома}[section]
 \newtheorem{remark}{Комментарий}[section]
