@@ -19,6 +19,6 @@ install: pdf
 	cp crypto.pdf ../pdfs
 
 clean:
-	rm -rf main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out
+	rm -rf main.aux main.bbl main.dvi main.pdf crypto.pdf main.blg main.toc main.out
 	rm -rf algorithmic.sty  algorithm.sty
 	find . \( -name "*.log" -o -name "*~" \) -exec rm -rf {} \; 

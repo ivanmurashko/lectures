@@ -61,7 +61,7 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
                          {\begin{xtheorem}}
-                         {\begin{xtheorem}[#1]\index{#1!определение}}
+                         {\begin{xtheorem}[#1]\index{#1!определение теоремы}}
                        }%
                        {\end{xtheorem}}
 
@@ -75,3 +75,29 @@
 
 \newenvironment{definition}[1][Определение]{\begin{trivlist}
 \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%
+% https://tex.stackexchange.com/questions/357118/expand-nameref-before-creating-index
+%
+
+\makeatletter
+\newcommand{\getnamereftext}[1]{%
+  \@ifundefined{r@#1}{}{%
+    \unexpanded\expandafter\expandafter\expandafter{%
+      \expandafter\expandafter\expandafter\@thirdoffive\csname r@#1\endcsname
+    }%
+  }%
+}
+
+
+\usepackage{ifthen}
+\newcommand{\myref}[2]{%
+  {\ifthenelse{\equal{#2}{}}
+    {
+      {\nameref{#1} }%
+    }%
+    {#2}
+  }
+  {\expandafter\index{{\getnamereftext{#1}}}}
+  (\autoref{#1})
+}%
