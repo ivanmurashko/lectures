@@ -67,10 +67,33 @@
 
 
 \newtheorem{lemma}[xtheorem]{Лемма}
+
 \newtheorem{proposition}[xtheorem]{Предложение}
 \newtheorem{corollary}[xtheorem]{Вывод}
-\newtheorem{example}{Пример}[section]
-\newtheorem{axiom}{Аксиома}[section]
+\theoremstyle{example}
+\newtheorem{xexample}{Пример}[section]
+\providecommand*{\xtheoremautorefname}{Аксиома}
+\NewDocumentEnvironment{example}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xexample}}
+                         {\begin{xexample}[#1]\index{#1!пример}}
+                       }%
+                       {\end{xexample}}
+
+
+\theoremstyle{axiom}
+\newtheorem{xaxiom}{Аксиома}[section]
+\providecommand*{\xtheoremautorefname}{Аксиома}
+\NewDocumentEnvironment{axiom}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xaxiom}}
+                         {\begin{xaxiom}[#1]\index{Аксиома!#1!определение}}
+                       }%
+                       {\end{xaxiom}}
+
+
 \newtheorem{remark}{Комментарий}[section]
 
 \newenvironment{definition}[1][Определение]{\begin{trivlist}
