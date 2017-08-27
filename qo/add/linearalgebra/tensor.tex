@@ -1,12 +1,27 @@
 %% -*- coding:utf-8 -*-
 \section{Прямая сумма линейных пространств и тензорное произведение}
 
+Допустим у нас имеется два линейных пространства $\mathbb{A}$ и 
+$\mathbb{B}$ с базисами $\{a_i\} \subset \mathbb{A}$ и
+$\{b_j\} \subset \mathbb{B}$ соответственно. 
+
 \begin{definition}[Тензорное произведение линейных пространств]
-TBD
+Линейное пространство $\mathbb{L} = \mathbb{A} \otimes \mathbb{B}$ с
+базисом $l_{ij} = a_i \otimes b_j$ называется тензорным произведением
+линейных пространства $\mathbb{A}$ и $\mathbb{B}$. 
 \end{definition}
 
 \begin{definition}[Тензорное (внешнее) произведение линейных операторов]
 \label{def:tensorprod}
 \index{Тензорное произведение!определение}
-TBD
+Рассмотрим два линейных оператора $\hat{A}: \mathbb{A} \to \mathbb{A}$
+и $\hat{B} : \mathbb{B} \to \mathbb{B}$ тогда оператор 
+$\hat{L} = \hat{A} \otimes \hat{B} : \mathbb{L} \to \mathbb{L}$
+действующий на базис по правилу
+\[
+\hat{L} l_{ij} = 
+\hat{L} a_i \otimes b_j = 
+\hat{A} a_i \otimes \hat{B} b_j
+\]
+называется тензорным произведением операторов.
 \end{definition}
