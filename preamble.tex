@@ -94,11 +94,22 @@
                        }%
                        {\end{xaxiom}}
 
+\theoremstyle{definition}
+\newtheorem{xdefinition}{Определение}[section]
+\providecommand*{\xtheoremautorefname}{Определение}
+\NewDocumentEnvironment{definition}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xdefinition}}
+                         {\begin{xdefinition}[#1]\index{#1!определение}}
+                       }%
+                       {\end{xdefinition}}
+
 
 \newtheorem{remark}{Комментарий}[section]
 
-\newenvironment{definition}[1][Определение]{\begin{trivlist}
-\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%% \newenvironment{definition}[1][Определение]{\begin{trivlist}
+%% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
 
 %
 % https://tex.stackexchange.com/questions/357118/expand-nameref-before-creating-index
