@@ -43,3 +43,42 @@ Sp\left(\hat{p}\right) = 1,
 \]
 которое представляет собой переписанный вариант аксиомы
 \ref{ax:ProbabilityNormalization}. 
+
+Наблюдаемой $\hat{x}$ соответствует некоторая матрица
+\begin{equation}
+\hat{x} = \begin{bmatrix}
+x_{11} & x_{12} & \cdots & x_{1n} \\
+x_{21} & x_{22} & \cdots & x_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+x_{n1} & x_{n2} & \cdots & x_{nn} \\
+\end{bmatrix},
+\label{eq:quantprob_obser_quant}
+\end{equation}
+которая в классическом случае является диагональной 
+\begin{equation}
+\hat{x} = \begin{bmatrix}
+x_1 & 0 & \cdots & 0 \\
+0 & x_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & x_n \\
+\end{bmatrix}.
+\label{eq:quantprob_obser_class}
+\end{equation}
+При этом стоит отметить, что вычисление среднего при этом приобретает
+знакомы классический вид
+\begin{equation}
+\bar{x} = Sp\left(\hat{p} \hat{x}\right) = \sum_{i=1}^n p_i x_i.
+\nonumber
+\end{equation}
+
+Отличие квантовой теории вероятностей от классической может быть
+показано несколькими способами \cite{bHolevo2003, bHolevo2003add},
+один из которых основан на не-коммутативности квантового описания.
+Действительно можно отметить, что в общем случае квантовые наблюдаемые
+представляемые матрицами вида \eqref{eq:quantprob_obser_quant} не
+коммутируют друг с другом. При этом классические наблюдаемые,
+записываемые в виде диагональных матриц
+\eqref{eq:quantprob_obser_class} всегда коммутируют друг с другом. Из
+этого выводится много фактов TBD
+
+
