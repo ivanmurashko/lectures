@@ -1,15 +1,15 @@
 %% -*- coding:utf-8 -*- 
 \subsection{Теорема об операторном разложении}
-\label{AddTheorem1}
-
-Докажем тождество:
+\begin{theorem}[Об операторном тождестве]
+\label{thm:addoperatorequality}
 \begin{equation}
 e^{\hat{A}}\hat{B}e^{-\hat{A}} = 
 \hat{B} + \left[\hat{A},\hat{B}\right] + 
 \frac{1}{2!} \left[\hat{A},\left[\hat{A},\hat{B}\right]\right] + \dots
 \label{eqAddTheorem1_Main}
 \end{equation}
-Для это введем следующую вспомогательную функцию:
+\begin{proof}
+Для доказательства введем следующую вспомогательную функцию:
 \begin{equation}
 f\left(\alpha\right) = 
 e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}},
@@ -108,5 +108,6 @@ f^{(0)}\left(\alpha\right) = \hat{B},
 \end{equation}
 можно получить из \eqref{eqAddTheorem1_T} искомое тождество
 \eqref{eqAddTheorem1_Main} при $\alpha = 1$. 
-
+\end{proof}
+\end{theorem}
 
