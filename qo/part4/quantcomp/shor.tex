@@ -141,21 +141,7 @@ a^{l} \not\equiv -1 \mod{N},
 задаче о нахождении периода некоторой функции посредством следующего
 алгоритма:
 \index{aлгоритм Шора}
-\begin{algorithm}
-\caption{Алгоритм Шора}
-\begin{algorithmic}
-    \STATE $a \Leftarrow 0$
-    \REPEAT
-        \STATE Выбрать новое число $a$ такое, что $0 < a < N$
-        \IF{$\mbox{НОД}\left(a, N\right) \ne 1$} 
-            \RETURN $a$
-        \ENDIF
-        \STATE Найти период $r$ функции $f\left(x, a\right) = a^x \mod{N}$
-    \UNTIL{ ($r \not\equiv 0 \mod{2}$) \OR ($a^{\frac{r}{2}} \equiv -1
-      \mod{N}$)}
-    \RETURN $\mbox{НОД}\left(a^{\frac{r}{2}} \pm 1, N\right)$
-\end{algorithmic}
-\end{algorithm}
+\input part4/quantcomp/shoralgo.tex
 
 \input part4/quantcomp/fourier.tex
 
