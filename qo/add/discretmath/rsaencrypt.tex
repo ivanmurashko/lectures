@@ -1,0 +1,19 @@
+%% -*- coding:utf-8 -*-
+Допустим надо зашифровать некоторое сообщение $M$. Вначале оно
+переводится в целое число(числа) $m$ такое, что 
+$0 < m < \phi\left(n\right)$. Далее вычисляется за зашифрованный текст
+$c$:
+\begin{equation}
+c \equiv m^e \mod{n}
+\label{eqAddRSACode}
+\end{equation}
+
+\begin{example}
+\emph{(RSA. Шифрование)}
+Допустим у нас есть открытый ключ $\left(n=12, e=5\right)$ (см. прим. \ref{exAddRSAKeyGen}) 
+и мы хотим зашифровать следующее сообщение $m = 1101_2 = 11_{10}$. 
+%(%i1) power_mod(11,5,21);         
+%(%o1)                                  2
+Шифротекст вычисляется по формуле \eqref{eqAddRSACode} $c \equiv 11^5 \mod{21} = 2$.
+\label{exAddRSACode}
+\end{example}

@@ -1,0 +1,16 @@
+%% -*- coding:utf-8 -*-
+$m$ может быть восстановлено из $c$ по следующей формуле:
+\begin{equation}
+m \equiv c^d \mod{n}.
+\label{eqAddRSADeCode}
+\end{equation}
+Имея $m$ можно восстановить исходное сообщение $M$.
+\begin{example}
+\emph{(RSA. Де-шифрование)}
+Допустим у нас есть закрытый ключ $\left(n=12, d=5\right)$ (см. прим. \ref{exAddRSAKeyGen}) и шифротекст $c = 2$ из примера \ref{exAddRSACode}.
+
+%(%i2) power_mod(2,5,21);
+%(%o2)                                 11
+Исходный текст вычисляется по формуле \eqref{eqAddRSADeCode} $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
+\label{exAddRSADeCode}
+\end{example}

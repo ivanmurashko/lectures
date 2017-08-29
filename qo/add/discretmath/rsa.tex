@@ -22,42 +22,11 @@
 
 \subsection{Шифрование}
 \index{алгоритм RSA!шифрование}
-Допустим надо зашифровать некоторое сообщение $M$. Вначале оно
-переводится в целое число(числа) $m$ такое, что 
-$0 < m < \phi\left(n\right)$. Далее вычисляется за зашифрованный текст
-$c$:
-\begin{equation}
-c \equiv m^e \mod{n}
-\label{eqAddRSACode}
-\end{equation}
-
-\begin{example}
-\emph{(RSA. Шифрование)}
-Допустим у нас есть открытый ключ $\left(n=12, e=5\right)$ (см. прим. \ref{exAddRSAKeyGen}) 
-и мы хотим зашифровать следующее сообщение $m = 1101_2 = 11_{10}$. 
-%(%i1) power_mod(11,5,21);         
-%(%o1)                                  2
-Шифротекст вычисляется по формуле \eqref{eqAddRSACode} $c \equiv 11^5 \mod{21} = 2$.
-\label{exAddRSACode}
-\end{example}
+\input ./add/discretmath/rsaencrypt.tex
 
 \subsection{Де-шифрование}
 \index{алгоритм RSA!де шифрование}
-$m$ может быть восстановлено из $c$ по следующей формуле:
-\begin{equation}
-m \equiv c^d \mod{n}.
-\label{eqAddRSADeCode}
-\end{equation}
-Имея $m$ можно восстановить исходное сообщение $M$.
-\begin{example}
-\emph{(RSA. Де-шифрование)}
-Допустим у нас есть закрытый ключ $\left(n=12, d=5\right)$ (см. прим. \ref{exAddRSAKeyGen}) и шифротекст $c = 2$ из примера \ref{exAddRSACode}.
-
-%(%i2) power_mod(2,5,21);
-%(%o2)                                 11
-Исходный текст вычисляется по формуле \eqref{eqAddRSADeCode} $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
-\label{exAddRSADeCode}
-\end{example}
+\input ./add/discretmath/rsadecrypt.tex
 
 \subsection{Доказательство}
 Хотим доказать что 
