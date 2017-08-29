@@ -13,24 +13,7 @@
 \subsection{Генерация ключей}
 \index{алгоритм RSA!генерация ключей}
 Состоит из нескольких шагов
-\begin{itemize}
-\item Выбираются два простых числа $p$ и $q$
-\item Вычисляется произведение выбранных простых чисел $n = p\cdot q$
-\item Вычисляется функция Эйлера 
-\(
-\phi\left(n\right)=\left(p - 1 \right)\left(q - 1 \right)
-\)
-\item Выбирается целое число $e$ такое что 
-\(
-1 < e < \phi\left(n\right)
-\) и $e$ и $\phi\left(n\right)$ взаимно просты,
-т. е. 
-\(
-\mbox{НОД}\left( e, \phi\left(n\right) \right) = 1.
-\)
-\item вычисляем $d \equiv e^{-1} \mod{\phi\left(n\right)}$, т. е.
-$d \cdot e \equiv 1 \mod{\phi\left(n\right)}$.
-\end{itemize}
+\input ./add/discretmath/rsagenalgo.tex
 
 Открытый ключ состоит из двух чисел: модуля $n$ и открытой экспоненты
 $e$. Именно эти два числа используются для шифрования исходного
