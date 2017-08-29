@@ -1,11 +1,6 @@
 PROJECTS = qo no crypto
 
-all: 
+all clean install: 
 	for prj in $(PROJECTS) ; do \
-        make -C $$prj install ; \
-  done
-
-clean: 
-	for prj in $(PROJECTS) ; do \
-        make -C $$prj clean ; \
+        make -C $$prj $@ ; \
   done

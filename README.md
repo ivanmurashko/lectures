@@ -1,7 +1,11 @@
 My own lectures on quantum optics and quantum computations (in Russian)
 - pdfs -- Generated PDF docs
+ -- crypto.pdf  - Cryptography and quantum computations lecture
+ -- crypto_present.pdf  Presentation on cryptography and quantum computations
+ -- no.pdf - Nonlinear optics lectures (2000-2006)
+ -- qo.pdf - Quantum optics lectures (2007 up to present)
 - qo -- Keeps Quantum optics lectures (2007 up to present)
-- no -- Keeps my old lectures about Nonliear optics (2000-2006)
+- no -- Keeps my old lectures about Nonlinear optics (2000-2006)
 - crypto -- Lectures about quantum computation and cryptography
 - misc -- several short articles
 
