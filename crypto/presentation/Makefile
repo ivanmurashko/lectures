@@ -6,14 +6,13 @@ algorithmic.sty:
 	cp algorithmic.sty ./presentation && \
 	cp algorithm.sty ./presentation 
 
-pdf: main.tex algorithmic.sty
-	pdflatex main.tex
-	cp main.pdf crypto_present.pdf
+pdf: lecture1.tex algorithmic.sty
+	pdflatex lecture1.tex
 
 install: pdf
-	cp crypto_present.pdf ../../pdfs
+	cp lecture1.pdf ../../pdfs/crypto_present
 
 clean:
-	rm -rf main.aux main.bbl main.dvi main.pdf crypto*.pdf main.blg main.toc main.out main.nav main.snm
+	rm -rf crypto*.pdf main.blg *.toc *.out *.nav *.snm lecture*.pdf lecture*.aux
 	rm -rf algorithmic.sty  algorithm.sty
 	find . \( -name "*.log" -o -name "*~" \) -exec rm -rf {} \; 
