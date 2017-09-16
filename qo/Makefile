@@ -22,4 +22,5 @@ install: pdf
 clean:
 	rm -rf qo.pdf qo.dvi main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out questions.pdf questions.aux questions.log
 	rm -rf algorithmic.sty  algorithm.sty
+	rm -rf main.blg main.toc main.out main.idx main.ilg main.ind
 	find . \( -name "*.log" -o -name "*~" \) -exec rm -rf {} \; 
