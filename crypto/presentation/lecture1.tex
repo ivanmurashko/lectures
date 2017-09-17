@@ -9,6 +9,11 @@
 \date{}
 \begin{document}
 
+\begin{frame}
+\titlepage
+\end{frame}
+
+
 \section{Введение}
 
 \begin{frame}{Введение}
@@ -70,30 +75,158 @@ curve) и алгоритм Шора.
 \end{frame}
 
 \begin{frame}{Кот Шредингера}
-TBD
+ \begin{figure} 
+   \includegraphics[width=90mm,scale=0.5]{catshred.jpg}
+  \end{figure}
 \end{frame}
 
+\begin{frame}{Эксперимент Белла. Классический случай}
+\[
+f = \frac{1}{2}\left(
+a b + a' b + a b' - a' b'
+\right), a,a',b,b' \in \{-1, +1\}.
+\]
+следовательно
+\(
+f \in \{-1, +1\}
+\)
+и
+\(
+\left|\left<f\right>\right| \le 1
+\)
+\end{frame}
+
+\begin{frame}{Эксперимент Белла. Квантовый случай}
+\[
+\left|\left<f\right>\right| = \sqrt{2} > 1
+\]
+\end{frame}
+
+
 \begin{frame}{Отрицательные вероятности}
-TBD
+\[
+\left<f\right> = \sum_{a,a',b,b'} p(a,a',b,b') f(a,a',b,b').
+\]
+следовательно для $\left|\left<f\right>\right| > 1$ необходимо
+\[
+\exists a,a',b,b': p(a,a',b,b') < 0
+\]
 \end{frame}
 
 \section{Квантовые вычисления}
-\begin{frame}{Базовые блоки квантового компьютера}
-TBD
+\begin{frame}{Классические вычисления}
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picclasscomp.tex
+
+\caption{Классические вычисления. На вход подается число $x$ состоящее
+  из $n$ бит, а на выходе имеем результат $y = f\left(x\right)$ описываемый $m$ битами}
+\label{figQuantCompClassComp}
+\end{figure}
 \end{frame}
+
+\begin{frame}{Квантовые вычисления}
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picquantcomp.tex
+
+\caption{Квантовые обратимые вычисления. На вход подается число
+  $\left|x\right>$ состоящее из $n$ кубит и затравка из нулевых
+  состояний ($m$ кубит), а на выходе имеем результат $\left|y\right> =
+  \left|f\left(x\right)\right>$ описываемый $m$ кубитами и исходное
+  состояние $\left|x\right>$} 
+\label{figQuantCompQuantComp}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Квантовые вычисления}
+Классический случай
+\[
+x \to f(x)
+\]
+Квантовый случай
+\begin{eqnarray}
+\left|0\right>\left|0\right> + \left|1\right>\left|0\right> + \left|2\right>\left|0\right> +
+\dots + \left|x\right>\left|0\right> + \dots \to
+\nonumber \\
+\to 
+\left|0\right>\left|f(0)\right> + \left|1\right>\left|f(1)\right> + \left|2\right>\left|f(2)\right> +
+\dots + \left|x\right>\left|f(x)\right> + \dots
+\nonumber
+\end{eqnarray}
+\end{frame}
+
 
 \section{Алгоритм Гровера}
 \begin{frame}{Задача о поиске иголки в стоге сена}
-TBD
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picsearch.tex
+
+\caption{Поиск в неструктурированном объеме данных (поиск "иголки в
+  стоге сена"). Классическая сложность $O(N)$}
+\label{figQuantCompSearch}
+\end{figure}
 \end{frame}
 
-\begin{frame}{Алгоритм Гровера}
-TBD
+\begin{frame}{Алгоритм Гровера. Схема}
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picgrover.tex
+
+\caption{Алгоритм Гровера. Сложность $ O(\sqrt{N})$}
+\label{figQuantCompGrover}
+\end{figure}
 \end{frame}
+
+\begin{frame}{Алгоритм Гровера. Схема}
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picgroverbase.tex
+
+\caption{Алгоритм Гровера}
+\label{figQuantCompGrover}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Алгоритм Гровера. Принцип работы}
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picgroverinv.tex
+
+\caption{Алгоритм Гровера. Инверсия фазы}
+\label{figQuantCompGroverInv}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Алгоритм Гровера. Принцип работы}
+\begin{figure}
+\centering
+
+\input ../part4/quantcomp/picgroverinvmiddle.tex
+
+\caption{Алгоритм Гровера. Обращение относительно
+  среднего.}
+\label{figQuantCompGroverInvMiddle}
+\end{figure}
+
+\end{frame}
+
 
 \begin{frame}{Влияние на рекомендации к использованию}
+$O(N) \rightarrow O(\sqrt{N})$
+ведет например к следующей рекомендации
 $AES_{128} \rightarrow AES_{256}$
 \end{frame}
+
 
 \section{Алгоритм Шора}
 \begin{frame}{RSA и задача факторизации чисел}
