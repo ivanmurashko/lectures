@@ -5,7 +5,7 @@
 \title[Криптография и квантовые вычисления]{Классическая
   криптография\\Квантовые вычисления}
 \author{Мурашко И. В.}
-\institute{Санкт Петербургский Государственный Политехнический Университет}
+%\institute{Санкт Петербургский Государственный Политехнический Университет}
 \date{}
 \begin{document}
 
@@ -292,13 +292,24 @@ a^{2r} \equiv 1 \mod N,
 \caption{Алгоритм Шора. Нахождение периода функции 
   $f\left(x, a\right) = a^x \mod{N}$ при $a=2$. 
   Локальные максимумы преобразования Фурье 
-  идут с периодом $\frac{M}{r} \approx 10.67$ ($M$ - число отсчетов
+  идут с периодом $\frac{M}{r} \approx 10.67$ ($M = 64$ - число отсчетов
   для преобразования Фурье)}
 \end{figure}
 \end{frame}
 
+\begin{frame}{Рекомендованные значения для длины ключа}
+ \begin{figure} 
+   \includegraphics[width=90mm,scale=0.5]{keylengthcom.png}
+  \end{figure}
+\end{frame}
 
 \begin{frame}{Влияние на рекомендации к использованию}
+\begin{itemize}
+\item RSA: 4096
+\item DH: 2048/256
+\item Elliptic curve: 512/256 (bitcoin) 
+\end{itemize}
+
 NSA не рекомендует использование алгоритмов на элиптических кривых для
 внутреннего использования.
 \end{frame}
@@ -309,6 +320,13 @@ NSA не рекомендует использование алгоритмов 
 \item Линейная алгебра (Матрицы)
 \item Дискретная математика (Операции с остатком)
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Что дальше?}
+https://github.com/ivanmurashko/lectures/tree/master/pdfs
+ \begin{figure} 
+   \includegraphics[width=90mm,scale=0.5]{github.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Вопросы}
