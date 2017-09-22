@@ -9,10 +9,10 @@
 \[
 \hat{\mathcal{H}_n} = 
 \frac{\omega_n \hbar}{2}
-\left(\hat{a}_n \hat{a}_n^{+} + \hat{a}_n^{+} \hat{a}_n\right)
+\left(\hat{a}_n \hat{a}_n^{\dag} + \hat{a}_n^{+} \hat{a}_n\right)
 =
 \omega_n \hbar 
-\left(\hat{a}_n^{+} \hat{a}_n + \frac{1}{2}\right)
+\left(\hat{a}_n^{\dag} \hat{a}_n + \frac{1}{2}\right)
 \]
 и
 \[
@@ -26,31 +26,31 @@
 \sqrt{\varepsilon_0}A_k \rightarrow \sqrt{\frac{\omega_k \hbar}{2}}
 \hat{a}_k, \quad
 \sqrt{\varepsilon_0}A_k^{*} \rightarrow \sqrt{\frac{\omega_k \hbar}{2}}
-\hat{a}_k^{+}.
+\hat{a}_k^{\dag}.
 \]
 \index{Гамильтониан}
 Такая замена приводит к следующему выражению для гамильтониана:
 \[
 \hat{\mathcal{H}_k} = \frac{\omega_k \hbar}{2} 
-\left(\hat{a}_k \hat{a}_k^{+} + \hat{a}_k^{+} \hat{a}_k\right).
+\left(\hat{a}_k \hat{a}_k^{\dag} + \hat{a}_k^{+} \hat{a}_k\right).
 \]
 
 Воспользовавшись коммутационными соотношениями
 \[
-\left[\hat{a}, \hat{a}^{+} \right] = 1, \quad
-\hat{a} \hat{a}^{+} - \hat{a}^{+}\hat{a} = 1, \quad
-\hat{a} \hat{a}^{+} = \hat{a}^{+}\hat{a} + 1,
+\left[\hat{a}, \hat{a}^{\dag} \right] = 1, \quad
+\hat{a} \hat{a}^{\dag} - \hat{a}^{+}\hat{a} = 1, \quad
+\hat{a} \hat{a}^{\dag} = \hat{a}^{+}\hat{a} + 1,
 \]
 имеем
 \(
 \hat{\mathcal{H}_k} = \omega_k \hbar 
-\left(\hat{a}_k^{+} \hat{a}_k + \frac{1}{2}\right)
+\left(\hat{a}_k^{\dag} \hat{a}_k + \frac{1}{2}\right)
 \) - 
 выражение, полностью совпадающее с \eqref{eqCh1_quant_stoyachie_volny}.
 Полный гамильтониан получим суммированием по всем модам:
 \begin{equation}
 \hat{\mathcal{H}} = \sum_{(k)} \hat{\mathcal{H}}_k = \sum_{(k)} 
-\omega_k \hbar \left(\hat{a}_k^{+} \hat{a}_k + \frac{1}{2}\right).
+\omega_k \hbar \left(\hat{a}_k^{\dag} \hat{a}_k + \frac{1}{2}\right).
 \end{equation}
 
 В гамильтоновом виде можно представить и импульс электромагнитного 
@@ -100,7 +100,7 @@
   \frac{1}{c^2} \sum_{(k)} \frac{\vec{k}}{k}
   \sqrt{\frac{\varepsilon_0}{\mu_0}}
   \frac{\hbar \omega_k}{2 \varepsilon_0}
-  \left(\hat{a}_k^{+} \hat{a}_k + \hat{a}_k \hat{a}_k^{+}\right)
+  \left(\hat{a}_k^{\dag} \hat{a}_k + \hat{a}_k \hat{a}_k^{+}\right)
   =
   \nonumber \\
   =
@@ -109,15 +109,15 @@
   \vec{k}
   \frac{\omega_k}{c k}
   \frac{1}{c \sqrt{\varepsilon_0 \mu_0}}
-  \frac{\hat{a}_k^{+} \hat{a}_k + \hat{a}_k \hat{a}_k^{+}}{2}
+  \frac{\hat{a}_k^{\dag} \hat{a}_k + \hat{a}_k \hat{a}_k^{+}}{2}
   =
-  \sum_{(k)} \vec{k} \hbar\left( \hat{a}_k^{+} \hat{a}_k +
+  \sum_{(k)} \vec{k} \hbar\left( \hat{a}_k^{\dag} \hat{a}_k +
 \frac{1}{2} \right).
 \nonumber
 \end{eqnarray}
 Из симметрии  следует, что $\sum_{(k)} \vec{k} \hbar = 0$ и, следовательно, 
 \begin{equation}
-\hat{\vec{G}} = \sum_{(k)} \vec{k} \hbar\hat{a}_k^{+} \hat{a}_k.
+\hat{\vec{G}} = \sum_{(k)} \vec{k} \hbar\hat{a}_k^{\dag} \hat{a}_k.
 \label{eqCh1_task3_2}
 \end{equation}
 
@@ -125,7 +125,7 @@
 \begin{equation}
 \hat{\vec{E}} = \sum_{(k)} \hat{a}_k\sqrt{\frac{\hbar \omega_k}{2 \nu
     \varepsilon_0}} \vec{e}_k e^{i\left(\vec{k}\vec{r}\right)} +
-\sum_{(k)} \hat{a}_k^{+}\sqrt{\frac{\hbar \omega_k}{2 \nu
+\sum_{(k)} \hat{a}_k^{\dag}\sqrt{\frac{\hbar \omega_k}{2 \nu
     \varepsilon_0}} \vec{e}_k^{*} e^{-i\left(\vec{k}\vec{r}\right)}.
 \end{equation}
 

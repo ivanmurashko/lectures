@@ -35,10 +35,10 @@
 %% характеризующая статистические свойства $\hat{F}_f\left(t\right)$ как
 %% и раньше равна: 
 %% \begin{eqnarray}
-%% \left<\hat{F}^{+}_f\left(t\right)\hat{F}_f\left(t'\right)\right> = 
+%% \left<\hat{F}^{\dag}_f\left(t\right)\hat{F}_f\left(t'\right)\right> = 
 %% \frac{\omega}{Q} \bar{n}_{T} \delta\left(t - t'\right),
 %% \nonumber \\
-%% \left<\hat{F}_f\left(t\right)\hat{F}^{+}_f\left(t'\right)\right> = 
+%% \left<\hat{F}_f\left(t\right)\hat{F}^{\dag}_f\left(t'\right)\right> = 
 %% \frac{\omega}{Q}  \left(\bar{n}_{T} + 1\right) \delta\left(t - t'\right).
 %% \label{eqLaserHaizenberg12}
 %% \end{eqnarray}
@@ -65,12 +65,12 @@
 %% $\hat{F}_{\sigma}\left(t\right)$ - Ланжевеновский шумовой оператор,
 %% имющий следующие корреляционные функции:
 %% \begin{eqnarray}
-%% \left<\hat{F}^{+}_{\sigma}\left(t\right)\hat{F}_{\sigma}\left(t'\right)\right>
+%% \left<\hat{F}^{\dag}_{\sigma}\left(t\right)\hat{F}_{\sigma}\left(t'\right)\right>
 %% =  
 %% \delta\left(t - t'\right) \left[\left(2\gamma -
 %%   \gamma_z\right)\left<\hat{\sigma_a}\right> + r_a\right],
 %% \nonumber \\
-%% \left<\hat{F}_{\sigma}\left(t\right)\hat{F}^{+}_{\sigma}\left(t'\right)\right>
+%% \left<\hat{F}_{\sigma}\left(t\right)\hat{F}^{\dag}_{\sigma}\left(t'\right)\right>
 %% =  
 %% \delta\left(t - t'\right) \left[\left(2\gamma -
 %%   \gamma_z\right)\left<\hat{\sigma_b}\right>\right],
@@ -91,7 +91,7 @@
 %% \begin{eqnarray}
 %% \frac{d}{d t}\hat{\sigma_z} = r_a - \gamma_z \hat{\sigma_z} +
 %% \nonumber \\
-%% + 2 i g \left(\hat{a}^{+}\hat{\sigma} - \hat{a}\hat{\sigma}^{+}\right)
+%% + 2 i g \left(\hat{a}^{\dag}\hat{\sigma} - \hat{a}\hat{\sigma}^{+}\right)
 %% + \hat{F}_z,
 %% \label{eqLaserHaizenberg15}
 %% \end{eqnarray}
@@ -124,8 +124,8 @@
 - \gamma \hat{N}_{z} +
 2 i g 
  \left(
-\hat{a}^{+}\hat{N}_{ab} -
-\hat{N}_{ab}^{+}\hat{a}
+\hat{a}^{\dag}\hat{N}_{ab} -
+\hat{N}_{ab}^{\dag}\hat{a}
 \right) + \hat{F}_{z},
 \label{eqLaserHaizenberMain}
 \end{eqnarray}
@@ -169,10 +169,10 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \nonumber \\
 \frac{d}{dt}\hat{N}_z = r_a -
 \gamma\hat{N}_z - \frac{4g^2}{\gamma}
-\hat{N}_z\hat{a}^{+}\hat{a} +
+\hat{N}_z\hat{a}^{\dag}\hat{a} +
 \nonumber \\
-+ \hat{F}_z + \frac{2ig}{\gamma} \left(\hat{a}^{+}\hat{F}_{ab} -
-\hat{F}_{ab}^{+}\hat{a}\right).
++ \hat{F}_z + \frac{2ig}{\gamma} \left(\hat{a}^{\dag}\hat{F}_{ab} -
+\hat{F}_{ab}^{\dag}\hat{a}\right).
 \label{eqLaserHaizenberg16add}
 \end{eqnarray}
 
@@ -190,10 +190,10 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \nonumber \\
 \frac{d}{dt}\hat{N}_z = r_a -
 \gamma\hat{N}_z - \frac{4g^2}{\gamma}
-\hat{N}_z\hat{a}^{+}\hat{a} +
+\hat{N}_z\hat{a}^{\dag}\hat{a} +
 \nonumber \\
-+ \hat{F}_z + \frac{2ig}{\gamma} \left(\hat{a}^{+}\hat{F}_{ab} -
-\hat{F}_{ab}^{+}\hat{a}\right).
++ \hat{F}_z + \frac{2ig}{\gamma} \left(\hat{a}^{\dag}\hat{F}_{ab} -
+\hat{F}_{ab}^{\dag}\hat{a}\right).
 \label{eqLaserHaizenberg17}
 \end{eqnarray}
 
@@ -203,11 +203,11 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \eqref{eqLaserHaizenbergFFCorrel} 
 можно написать следующие корреляционные соотношения:
 \begin{eqnarray}
-\left<\hat{F}^{+}_{\sum}\left(t_1\right)\hat{F}_{\sum}\left(t_2\right)\right>
+\left<\hat{F}^{\dag}_{\sum}\left(t_1\right)\hat{F}_{\sum}\left(t_2\right)\right>
 =
-\frac{g^2}{\gamma^2}\left<\hat{F}^{+}_{ab}\left(t_1\right)\hat{F}_{ab}\left(t_2\right)\right>
+\frac{g^2}{\gamma^2}\left<\hat{F}^{\dag}_{ab}\left(t_1\right)\hat{F}_{ab}\left(t_2\right)\right>
 +
-\left<\hat{F}^{+}_{F}\left(t_1\right)\hat{F}_{F}\left(t_2\right)\right>
+\left<\hat{F}^{\dag}_{F}\left(t_1\right)\hat{F}_{F}\left(t_2\right)\right>
 = 
 \nonumber \\
 = 
@@ -218,7 +218,7 @@ $\frac{d\hat{N}_{ab}}{d t}$ по сравнению с членом $\gamma
 \right)
 \delta\left(t_1 - t_2\right),
 \nonumber \\
-\left<\hat{F}_{\sum}\left(t_1\right)\hat{F}^{+}_{\sum}\left(t_2\right)\right>
+\left<\hat{F}_{\sum}\left(t_1\right)\hat{F}^{\dag}_{\sum}\left(t_2\right)\right>
 = \frac{1}{2}
 \left(
 \frac{g^2}{\gamma}\bar{N}_b + 

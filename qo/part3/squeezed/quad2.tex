@@ -16,20 +16,20 @@
 где $z = r e^{i\theta}$ - произвольное комплексное число.
 Сопряженный оператор имеет вид
 \begin{equation}
-\hat{S}^{+}\left(z\right) = e^{\frac{1}{2}z\hat{a}^{+2} -
+\hat{S}^{\dag}\left(z\right) = e^{\frac{1}{2}z\hat{a}^{+2} -
 \frac{1}{2}z^{*}\hat{a}^{2}}, 
 \nonumber
 \end{equation}
 откуда видно, что
 \begin{equation}
-\hat{S} \hat{S}^{+} = \hat{S}^{+} \hat{S} = \hat{I},
+\hat{S} \hat{S}^{\dag} = \hat{S}^{+} \hat{S} = \hat{I},
 \nonumber
 \end{equation}
-где $\hat{I}$ является единичным оператором. Таким образом, $\hat{S}^{+} =
+где $\hat{I}$ является единичным оператором. Таким образом, $\hat{S}^{\dag} =
 \hat{S}^{-1}$ действительно является унитарным оператором.
 
 Рассмотрим действие оператора $\hat{S}\left(z\right)$ на операторы
-$\hat{a}$ и $\hat{a}^{+}$ и на когерентное состояние. Для этой цели
+$\hat{a}$ и $\hat{a}^{\dag}$ и на когерентное состояние. Для этой цели
 применим теорему об операторном разложении (подробный вывод
 см. \myref{thm:addoperatorequality}{теорему об операторном тождестве}):  
 \begin{equation}
@@ -44,26 +44,26 @@ e^{\hat{A}} = \hat{S}\left(z\right), \, \hat{B} = \hat{a},
 \]
 что
 \begin{eqnarray}
-\hat{A} = \hat{S}\left(z\right)\hat{a}\hat{S}^{+}\left(z\right) =
-\hat{a} + z \hat{a}^{+} + \frac{\left|z\right|^2\hat{a}}{2!} +
-\frac{z\left|z\right|^2\hat{a}^{+}}{3!} + \dots = 
+\hat{A} = \hat{S}\left(z\right)\hat{a}\hat{S}^{\dag}\left(z\right) =
+\hat{a} + z \hat{a}^{\dag} + \frac{\left|z\right|^2\hat{a}}{2!} +
+\frac{z\left|z\right|^2\hat{a}^{\dag}}{3!} + \dots = 
 \nonumber \\
-=\hat{a} ch\,r + \hat{a}^{+} e^{i\theta} sh \, r = 
-\mu \hat{a} + \nu \hat{a}^{+},
+=\hat{a} ch\,r + \hat{a}^{\dag} e^{i\theta} sh \, r = 
+\mu \hat{a} + \nu \hat{a}^{\dag},
 \label{eqPart3Squeezed16}
 \end{eqnarray}
 где $\mu = ch\,r$, $\nu = e^{i\theta} sh\,r$, $\left|\mu\right|^2 -
 \left|\nu\right|^2  = 1$.
 Таким же образом можно показать, что при обратном порядке действия
-операторов $\hat{S}^{+}\dots\hat{S}$ получается формула, которая
+операторов $\hat{S}^{\dag}\dots\hat{S}$ получается формула, которая
 отличается от \eqref{eqPart3Squeezed16} только знаком между
 слагаемыми:
 \begin{eqnarray}
-\hat{S}^{+}\left(z\right)\hat{a}\hat{S}\left(z\right) 
-=\hat{a} ch\,r - \hat{a}^{+} e^{i\theta} sh \, r,
+\hat{S}^{\dag}\left(z\right)\hat{a}\hat{S}\left(z\right) 
+=\hat{a} ch\,r - \hat{a}^{\dag} e^{i\theta} sh \, r,
 \nonumber \\
-\hat{S}^{+}\left(z\right)\hat{a}^{+}\hat{S}\left(z\right) 
-=\hat{a}^{+} ch\,r - \hat{a} e^{-i\theta} sh \, r.
+\hat{S}^{\dag}\left(z\right)\hat{a}^{+}\hat{S}\left(z\right) 
+=\hat{a}^{\dag} ch\,r - \hat{a} e^{-i\theta} sh \, r.
 \label{eqPart3Squeezed16a}
 \end{eqnarray}
 
@@ -77,7 +77,7 @@ e^{\hat{A}} = \hat{S}\left(z\right), \, \hat{B} = \hat{a},
 собственным состоянием оператора $\hat{A}$:
 \begin{eqnarray}
 \hat{A}\left|\alpha, z\right> = 
-\hat{S}\left(z\right)\hat{a}\hat{S}^{+}\left(z\right)\hat{S}\left(z\right)\left|\alpha\right>
+\hat{S}\left(z\right)\hat{a}\hat{S}^{\dag}\left(z\right)\hat{S}\left(z\right)\left|\alpha\right>
 = 
 \hat{S}\left(z\right)\hat{a}\left|\alpha\right> = 
 \nonumber \\
@@ -85,20 +85,20 @@ e^{\hat{A}} = \hat{S}\left(z\right), \, \hat{B} = \hat{a},
 \alpha \left|\alpha, z\right>.
 \label{eqPart3Squeezed18}
 \end{eqnarray}
-Здесь использовано определение $\hat{A}$ и $\hat{S}\hat{S}^{+} = \hat{I}$.
+Здесь использовано определение $\hat{A}$ и $\hat{S}\hat{S}^{\dag} = \hat{I}$.
 Из \eqref{eqPart3Squeezed18} следует, что состояние $\left|\alpha, z\right>$ является
 собственным состоянием оператора $\hat{A}$, а собственное число совпадает с
 собственным числом когерентного состояния, из которого получено
 состояние $\left|\alpha, z\right>$.
 Сопряженное равенство имеет вид
 \begin{equation}
-\left<\alpha, z\right|\hat{A}^{+} = 
+\left<\alpha, z\right|\hat{A}^{\dag} = 
 \alpha^{*}\left<\alpha, z\right|
 \label{eqPart3Squeezed19}
 \end{equation}
 Исходя из соотношений \eqref{eqPart3Squeezed18} и
 \eqref{eqPart3Squeezed19}, по аналогии с операторами $\hat{a}$ и
-$\hat{a}^{+}$, $\hat{A}$ и $\hat{A}^{+}$ называют операторами
+$\hat{a}^{\dag}$, $\hat{A}$ и $\hat{A}^{+}$ называют операторами
 квазирождения и квазиуничтожения.
 
 Остается выяснить, является ли состояние $\left|\alpha, z\right>$
@@ -114,19 +114,19 @@ $\hat{a}^{+}$, $\hat{A}$ и $\hat{A}^{+}$ называют операторам�
 виде 
 \begin{equation}
 \left(\Delta X_{1,2}\right)^2 = 
-\left<\alpha\right|\hat{S}^{+}\left(z\right) \hat{X}_{1,2}^2\hat{S}\left(z\right)\left|\alpha\right> -
-\left<\alpha\right|\hat{S}^{+}\left(z\right) \hat{X}_{1,2}\hat{S}\left(z\right)\left|\alpha\right>^2.
+\left<\alpha\right|\hat{S}^{\dag}\left(z\right) \hat{X}_{1,2}^2\hat{S}\left(z\right)\left|\alpha\right> -
+\left<\alpha\right|\hat{S}^{\dag}\left(z\right) \hat{X}_{1,2}\hat{S}\left(z\right)\left|\alpha\right>^2.
 \label{eqPart3Squeezed20}
 \end{equation}
-Операторы $\hat{X}_{1,2}$ выражаются через $\hat{a}$ и $\hat{a}^{+}$:
+Операторы $\hat{X}_{1,2}$ выражаются через $\hat{a}$ и $\hat{a}^{\dag}$:
 \begin{eqnarray}
-\hat{X}_1 = \frac{1}{2}\left(\hat{a} + \hat{a}^{+}\right), 
+\hat{X}_1 = \frac{1}{2}\left(\hat{a} + \hat{a}^{\dag}\right), 
 \nonumber \\
-\hat{X}_2 = \frac{1}{2 i}\left(\hat{a} - \hat{a}^{+}\right).
+\hat{X}_2 = \frac{1}{2 i}\left(\hat{a} - \hat{a}^{\dag}\right).
 \nonumber
 \end{eqnarray}
 Подставляя это в \eqref{eqPart3Squeezed20}, преобразуя операторы
-$\hat{a}$ и $\hat{a}^{+}$ при помощи \eqref{eqPart3Squeezed16a},
+$\hat{a}$ и $\hat{a}^{\dag}$ при помощи \eqref{eqPart3Squeezed16a},
 получим окончательное выражение для $\Delta X_1$  и $\Delta X_2$:
 (при условии $z = r$, т.е. $\theta = 0$)
 %(подробный вывод смотри в приложении FIXME!!! add it):
@@ -157,18 +157,18 @@ z\right>$ действительно является сжатым состоя�
 Среднее число фотонов в квадратурно сжатом когерентном состоянии
 определяется выражением:
 \begin{eqnarray}
-\left<\alpha, z\right|\hat{a}^{+}\hat{a}\left|\alpha, z\right> =
-\left<\alpha\right|\hat{S}^{+}\hat{a}^{+}\hat{a}\hat{S}\left|\alpha\right>
+\left<\alpha, z\right|\hat{a}^{\dag}\hat{a}\left|\alpha, z\right> =
+\left<\alpha\right|\hat{S}^{\dag}\hat{a}^{+}\hat{a}\hat{S}\left|\alpha\right>
 =
 \nonumber \\
 =
-\left<\alpha\right|\hat{S}^{+}\hat{a}^{+}\hat{S}\hat{S}^{+}\hat{a}\hat{S}\left|\alpha\right>
+\left<\alpha\right|\hat{S}^{\dag}\hat{a}^{+}\hat{S}\hat{S}^{+}\hat{a}\hat{S}\left|\alpha\right>
 = 
 \nonumber \\
 =
 \left<\alpha\right|
-\left(\hat{a}^{+} ch\,r - \hat{a}e^{-i\theta}sh\,r\right)
-\left(\hat{a} ch\,r - \hat{a}^{+} e^{i\theta}sh\,r\right)
+\left(\hat{a}^{\dag} ch\,r - \hat{a}e^{-i\theta}sh\,r\right)
+\left(\hat{a} ch\,r - \hat{a}^{\dag} e^{i\theta}sh\,r\right)
 \left|\alpha\right> = 
 \nonumber \\
 =
@@ -188,7 +188,7 @@ e^{i\theta} sh\,r ch\,r -
 Сжатому вакуумному состоянию соответствует $\alpha = 0$. Тогда среднее
 число фотонов в этом состоянии
 \begin{equation}
-\left<0, z\right|\hat{a}^{+}\hat{a}\left|0, z\right> =
+\left<0, z\right|\hat{a}^{\dag}\hat{a}\left|0, z\right> =
 sh^2 r \ne 0,
 \label{eqPart3Squeezed24}
 \end{equation}
@@ -219,35 +219,35 @@ sh^2 r \ne 0,
 в форме \eqref{eqCh1_astate4squeezed}:
 \begin{equation}
 \left|\alpha\right> =  
-e^{\alpha \hat{a}^{+} - \alpha^{*} \hat{a}}\left|0\right> = 
+e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}\left|0\right> = 
 \hat{D}\left|0\right>,
 \nonumber
 \end{equation}
-где $\hat{D} = e^{\alpha \hat{a}^{+} - \alpha^{*} \hat{a}}$ называют
+где $\hat{D} = e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}$ называют
 оператором смещения. $\hat{D}$ является унитарным оператором, т. к. 
 \[
-\hat{D}^{+} = e^{-\left(\alpha \hat{a}^{+} - \alpha^{*} \hat{a}\right)}
+\hat{D}^{\dag} = e^{-\left(\alpha \hat{a}^{+} - \alpha^{*} \hat{a}\right)}
 \]
 откуда
 \[
-\hat{D}^{+} \hat{D} = \hat{D} \hat{D}^{+} =\hat{I},
+\hat{D}^{\dag} \hat{D} = \hat{D} \hat{D}^{+} =\hat{I},
 \]
-т. е. $\hat{D}^{+} = \hat{D}^{-1}$.
+т. е. $\hat{D}^{\dag} = \hat{D}^{-1}$.
 
 Название оператора связано с тем, что действие
-$\hat{D}\left(\alpha\right)$ на операторы $\hat{a}$ и $\hat{a}^{+}$
+$\hat{D}\left(\alpha\right)$ на операторы $\hat{a}$ и $\hat{a}^{\dag}$
 приводит к их смещению на величину $\alpha$ ($\alpha^{*}$):
 \begin{eqnarray}
-\hat{D}^{+}\left(\alpha\right)\hat{a}\hat{D}\left(\alpha\right) =
+\hat{D}^{\dag}\left(\alpha\right)\hat{a}\hat{D}\left(\alpha\right) =
 \hat{a} + \alpha,
 \nonumber \\
-\hat{D}^{+}\left(\alpha\right)\hat{a}^{+}\hat{D}\left(\alpha\right) =
-\hat{a}^{+} + \alpha^{*},
+\hat{D}^{\dag}\left(\alpha\right)\hat{a}^{+}\hat{D}\left(\alpha\right) =
+\hat{a}^{\dag} + \alpha^{*},
 \label{eqPart3SqueezedTaskOffset}
 \end{eqnarray}
 Этот результат следует из теоремы об операторном разложении
-\eqref{eqPart3Squeezed15}, если принять $\hat{A} = - \alpha \hat{a}^{+}
-+ \alpha^{*} \hat{a}$, $B=\hat{a}, \hat{a}^{+}$.
+\eqref{eqPart3Squeezed15}, если принять $\hat{A} = - \alpha \hat{a}^{\dag}
++ \alpha^{*} \hat{a}$, $B=\hat{a}, \hat{a}^{\dag}$.
 
 \input ./part3/squeezed/fig6.tex
 

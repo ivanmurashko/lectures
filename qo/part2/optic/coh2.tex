@@ -103,12 +103,12 @@ t_2\right)
 определенным числом фотонов. Для этого нужно рассмотреть матричный
 элемент  
 \[
-\left<n\right|\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\left|n\right> = n
+\left<n\right|\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}\left|n\right> = n
 \left(n - 1\right).
 \]
 Это выражение будет стоять в числителе. В знаменателе будем иметь 
 \[
-\left(\left<n\right|\hat{a}^{+}\hat{a}\left|n\right>\right)^2 = 
+\left(\left<n\right|\hat{a}^{\dag}\hat{a}\left|n\right>\right)^2 = 
 n^2.
 \]
 
@@ -130,11 +130,11 @@ G^{(2)}_{12}
 
 Рассмотрим еще один простой случай: одномодовое поле в когерентном состоянии. Имеем
 \begin{eqnarray}
-\left<\alpha\right|\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\left|\alpha\right>
+\left<\alpha\right|\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}\left|\alpha\right>
 = \left(\alpha^{*}\alpha\right)^2
 \mbox{ - в числителе},
 \nonumber \\
-\left(\left<\alpha\right|\hat{a}^{+}\hat{a}\left|\alpha\right>\right)^2
+\left(\left<\alpha\right|\hat{a}^{\dag}\hat{a}\left|\alpha\right>\right)^2
 = \left(\alpha^{*}\alpha\right)^2
 \mbox{ - в знаменателе}.
 \nonumber
@@ -155,9 +155,9 @@ G^{(2)}_{12} = 1.
 \]
 Отсюда получим
 \begin{eqnarray}
-Sp \left\{\hat{\rho}\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}\right\} = 
+Sp \left\{\hat{\rho}\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}\right\} = 
 \sum_{n}\sum_{m}\left<n\right|\left.m\right>\left<m\right|
-\hat{a}^{+}\hat{a}^{+}\hat{a}\hat{a}
+\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}
 \left|m\right> \rho_{mm} = 
 \nonumber \\
 = \sum_{n}\rho_{nn}\left(n - 1\right)n = \bar{n^2} - \bar{n}.
@@ -299,25 +299,25 @@ G_{12}^{(2)} = 1,
 e^{-i \omega_k t + i \left(\vec{k} \vec{r}\right)},
 \nonumber \\
 \hat{\vec{E}}^{(-)}\left(\vec{r}, t\right) = \sum_{(k)}
-\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{+}
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{\dag}
 e^{i \omega_k t - i \left(\vec{k} \vec{r}\right)}.
 \label{eqCh4_32}
 \end{eqnarray}
 Общий член произведения сумм \eqref{eqCh4_32} будет содержать
 произведения операторов вида 
 \begin{equation}
-\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
 \label{eqCh4_33}
 \end{equation}
 Усреднение этого члена при помощи статистического оператора
 \eqref{eqCh4_31} приводит к выражению 
 \[
 Sp\left(\hat{\rho}
-\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
 \right) = 
 \sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}}
 \left<\left\{n_k\right\}\right|
-\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
 \left|\left\{n_k\right\}\right>.
 \]
 Легко увидеть, что члены, в которых все моды разные: 
@@ -353,7 +353,7 @@ n_{k_1} n_{k_2} = \bar{n}_{k_1} \bar{n}_{k_2}.
 Последний случай был нами рассмотрен выше \eqref{eqCh4_28}, что дает
 \begin{equation}
 \sum_{n_{k}} P_{n_{k}}
-\left<n_k\right|\hat{a}_k^{+}\hat{a}_k^{+}\hat{a}_k\hat{a}_k\left|n_k\right>
+\left<n_k\right|\hat{a}_k^{\dag}\hat{a}_k^{+}\hat{a}_k\hat{a}_k\left|n_k\right>
 = 2 \left(\bar{n}_k\right)^2.
 \label{eqCh4_36}
 \end{equation}
@@ -464,14 +464,14 @@ P\left(\left\{\alpha_k\right\}\right) = \prod_k\frac{1}{\pi
 \end{equation} 
 Усреднению подлежит произведение операторов
 \begin{equation}
-\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
 \nonumber
 \end{equation}
 Это приводит к интегралу
 \begin{eqnarray}
 Sp \left\{
 \hat{\rho}
-\hat{a}^{+}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{+}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
 \right\} = 
 \nonumber \\
 = 

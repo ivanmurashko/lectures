@@ -47,14 +47,14 @@ $z = e^{-\frac{\hbar \omega_a}{k_B T}} + e^{-\frac{\hbar \omega_b}{k_B
 что $\omega_{ab} = \omega$,  т. е. частота перехода равна частоте 
 моды. Тогда  
 \begin{equation}
-\hat{V} = \hbar g \left(\hat{\sigma}\hat{a}^{+} + 
-\hat{\sigma}^{+}\hat{a} \right)= 
+\hat{V} = \hbar g \left(\hat{\sigma}\hat{a}^{\dag} + 
+\hat{\sigma}^{\dag}\hat{a} \right)= 
 \hbar g 
 \left(
 \begin{array} {cc}
 0 & \hat{a}  
 \\
-\hat{a}^{+} & 0 
+\hat{a}^{\dag} & 0 
 \end{array}
 \right)
 \end{equation}
@@ -70,7 +70,7 @@ $z = e^{-\frac{\hbar \omega_a}{k_B T}} + e^{-\frac{\hbar \omega_b}{k_B
 \right)
 \);
 \(
-\hat{\sigma}^{+} = 
+\hat{\sigma}^{\dag} = 
 \left(
 \begin{array} {cc}
 0 & 1  
@@ -132,7 +132,7 @@ Sp_{at}\left[\hat{V}, \hat{\rho}_{at, f}\right] =
 \begin{array} {cc}
 0 & \hat{a} \rho_{bb}\hat{\rho}_{f}  
 \\
-\hat{a}^{+} \rho_{aa}\hat{\rho}_{f}   & 0
+\hat{a}^{\dag} \rho_{aa}\hat{\rho}_{f}   & 0
 \end{array}
 \right)
 \right.
@@ -144,7 +144,7 @@ Sp_{at}\left[\hat{V}, \hat{\rho}_{at, f}\right] =
 \begin{array} {cc}
 0 & \rho_{aa} \hat{\rho}_{f} \hat{a}   
 \\
-\rho_{bb} \hat{\rho}_{f} \hat{a}^{+}   & 0
+\rho_{bb} \hat{\rho}_{f} \hat{a}^{\dag}   & 0
 \end{array}
 \right)
 \right\}
@@ -161,12 +161,12 @@ Sp_{at}\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}\right] \right]
 \cdot Sp_{at}
 \left(
 \begin{array} {cc}
-\hat{a} \hat{a}^{+}\rho_{aa} \hat{\rho}_{f} -
-\hat{a}\rho_{bb} \hat{\rho}_{f}\hat{a}^{+}  & 0
+\hat{a} \hat{a}^{\dag}\rho_{aa} \hat{\rho}_{f} -
+\hat{a}\rho_{bb} \hat{\rho}_{f}\hat{a}^{\dag}  & 0
 \\
 0 & 
-\hat{a}^{+} \hat{a}\rho_{bb} \hat{\rho}_{f} -
-\hat{a}^{+}\rho_{aa} \hat{\rho}_{f}\hat{a} 
+\hat{a}^{\dag} \hat{a}\rho_{bb} \hat{\rho}_{f} -
+\hat{a}^{\dag}\rho_{aa} \hat{\rho}_{f}\hat{a} 
 \end{array}
 \right) + \mbox{э. с.} 
 \label{eqCh2_sp_2}
@@ -178,15 +178,15 @@ Sp_{at}\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}\right] \right]
 \hat{\rho}_{f}\left(t_0 + \tau\right) =
 \hat{\rho}_{f}\left(t_0\right) - \frac{1}{2}g^2 \tau^2
 \left\{
-\left(\hat{a}\hat{a}^{+}\hat{\rho}_{f} - 
-\hat{a}^{+}\hat{\rho}_{f}\hat{a}
+\left(\hat{a}\hat{a}^{\dag}\hat{\rho}_{f} - 
+\hat{a}^{\dag}\hat{\rho}_{f}\hat{a}
 \right)\rho_{aa} +
 \right.
 \nonumber \\
 \left.
 +
-\left(\hat{a}^{+}\hat{a}\hat{\rho}_{f} - 
-\hat{a}\hat{\rho}_{f}\hat{a}^{+}
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho}_{f} - 
+\hat{a}\hat{\rho}_{f}\hat{a}^{\dag}
 \right)\rho_{bb}
 \right\} + \mbox{э. с.}
 \label{eqCh2_rho_final}
@@ -218,14 +218,14 @@ $\Delta \hat{\rho}_{f} = \delta\hat{\rho}_{f}r \Delta t$. Определим с�
 \begin{eqnarray}
 \dot{\hat{\rho}}_{f} =
 - \frac{1}{2}R_a
-\left(\hat{a}\hat{a}^{+}\hat{\rho}_{f} - 
-\hat{a}^{+}\hat{\rho}_{f}\hat{a}
+\left(\hat{a}\hat{a}^{\dag}\hat{\rho}_{f} - 
+\hat{a}^{\dag}\hat{\rho}_{f}\hat{a}
 \right)
 - 
 \nonumber \\
 - \frac{1}{2}R_b
-\left(\hat{a}^{+}\hat{a}\hat{\rho}_{f} - 
-\hat{a}\hat{\rho}_{f}\hat{a}^{+}
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho}_{f} - 
+\hat{a}\hat{\rho}_{f}\hat{a}^{\dag}
 \right)
  + \mbox{э. с.}
 \label{eqCh2_rho_final2}

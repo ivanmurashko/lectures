@@ -23,25 +23,25 @@ $\hat{p}_n$, удовлетворяющими тем же коммутацион
 \hat{a}_n = \frac{1}{\sqrt{2 \hbar \omega_n}}
 \left( \omega_n \hat{q}_n + i \hat{p}_n\right),
 \quad
-\hat{a}_n^{+} = \frac{1}{\sqrt{2 \hbar \omega_n}}
+\hat{a}_n^{\dag} = \frac{1}{\sqrt{2 \hbar \omega_n}}
 \left( \omega_n \hat{q}_n - i \hat{p}_n\right),
 \label{eqCh1_aadef}
 \end{equation}
 Обратная зависимость дает
 \begin{equation}
 \hat{q}_n = \sqrt{\frac{\hbar}{2 \omega_n}}
-\left(\hat{a}_n + \hat{a}_n^{+}\right),
+\left(\hat{a}_n + \hat{a}_n^{\dag}\right),
 \quad
 \hat{p}_n = i \sqrt{\frac{\hbar \omega_n}{2}}
-\left(\hat{a}_n^{+} - \hat{a}_n\right),
+\left(\hat{a}_n^{\dag} - \hat{a}_n\right),
 \label{eqCh1_qpdef}
 \end{equation}
 
 При помощи выражений \eqref{eqCh1_comut}, 
 \eqref{eqCh1_aadef}, \eqref{eqCh1_qpdef} можно получить коммутационные
-соотношения для операторов $\hat{a}_n$ и $\hat{a}_n^{+}$: 
+соотношения для операторов $\hat{a}_n$ и $\hat{a}_n^{\dag}$: 
 \begin{eqnarray}
-\left[\hat{a}_n, \hat{a}_n^{+}\right] = 
+\left[\hat{a}_n, \hat{a}_n^{\dag}\right] = 
 \frac{1}{2 \hbar \omega_n}
 \left( \omega_n \hat{q}_n + i \hat{p}_n\right) 
 \left( \omega_n \hat{q}_n - i \hat{p}_n\right) - 
@@ -56,14 +56,14 @@ $\hat{p}_n$, удовлетворяющими тем же коммутацион
 \end{eqnarray}
 Таким образом,
 \begin{equation}
-\left[\hat{a}_n, \hat{a}_n^{+}\right] = 1.
+\left[\hat{a}_n, \hat{a}_n^{\dag}\right] = 1.
 \label{eqCh1_aacomutation}
 \end{equation}
 Кроме того очевидно, что
 \begin{equation}
 \left[\hat{a}_n, \hat{a}_n\right] = 0,
 \quad
-\left[\hat{a}_n^{+}, \hat{a}_n^{+}\right] = 0.
+\left[\hat{a}_n^{\dag}, \hat{a}_n^{+}\right] = 0.
 \end{equation}
 \index{Гамильтониан}
 Гамильтониан, выраженный через новые операторы, принимает вид
@@ -73,26 +73,26 @@ $\hat{p}_n$, удовлетворяющими тем же коммутацион
 \nonumber \\
 = \frac{1}{2}\frac{\omega_n \hbar}{2}
 \left(
-\left(\hat{a}_n + \hat{a}_n^{+} \right)
-\left(\hat{a}_n + \hat{a}_n^{+} \right)
+\left(\hat{a}_n + \hat{a}_n^{\dag} \right)
+\left(\hat{a}_n + \hat{a}_n^{\dag} \right)
 -
-\left(\hat{a}_n^{+} - \hat{a}_n \right)
-\left(\hat{a}_n^{+} - \hat{a}_n \right)
+\left(\hat{a}_n^{\dag} - \hat{a}_n \right)
+\left(\hat{a}_n^{\dag} - \hat{a}_n \right)
 \right) =
 \nonumber \\
 = \frac{\omega_n \hbar}{2} 
-\left( \hat{a}_n \hat{a}_n^{+} + \hat{a}_n^{+} \hat{a}_n\right) =
+\left( \hat{a}_n \hat{a}_n^{\dag} + \hat{a}_n^{+} \hat{a}_n\right) =
 \frac{\omega_n \hbar}{2} 
-\left(1 + \hat{a}_n^{+} \hat{a}_n + \hat{a}_n^{+} \hat{a}_n\right) =
+\left(1 + \hat{a}_n^{\dag} \hat{a}_n + \hat{a}_n^{+} \hat{a}_n\right) =
 \nonumber \\
 = \omega_n \hbar 
-\left(\hat{a}_n^{+} \hat{a}_n + \frac{1}{2}\right)
+\left(\hat{a}_n^{\dag} \hat{a}_n + \frac{1}{2}\right)
 \label{eqCh1_quant_stoyachie_volny}
 \end{eqnarray}
 
 
 Здесь использованы связь  $\hat{q}_n$, $\hat{p}_n$ 
-с $\hat{a}_n^{+}$, $\hat{a}_n$ \eqref{eqCh1_aadef}, а также
+с $\hat{a}_n^{\dag}$, $\hat{a}_n$ \eqref{eqCh1_aadef}, а также
 коммутационное соотношение \eqref{eqCh1_aacomutation}. 
 
 Энергия $\frac{1}{2}\omega_n \hbar$ соответствует нулевым
@@ -106,7 +106,7 @@ $\hat{p}_n$, удовлетворяющими тем же коммутацион
 приобретает вид 
 \begin{equation}
 \hat{\mathcal{H}} = \sum_{(n)}\hat{\mathcal{H}_n} =
-\sum_{(n)}\hbar \omega_n \hat{a}_n^{+}\hat{a}_n
+\sum_{(n)}\hbar \omega_n \hat{a}_n^{\dag}\hat{a}_n
 \end{equation}
 
 Операторы электрического и магнитного поля можно представить в виде
@@ -114,13 +114,13 @@ $\hat{p}_n$, удовлетворяющими тем же коммутацион
 \hat{\vec{E}} = \sum_{(n)}\frac{\hat{q}_n
   \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right) = 
 \sum_{(n)}\sqrt{\frac{\hbar \omega_n}{2 \varepsilon_0}}
-\left(\hat{a}_n^{+} + \hat{a}_n \right)
+\left(\hat{a}_n^{\dag} + \hat{a}_n \right)
 \vec{E}_n\left(r\right),
 \nonumber \\
 \hat{\vec{H}} = \sum_{(n)}\frac{\hat{p}_n}
 {\sqrt{\mu_0}} \vec{H}_n\left(r\right) = 
 i \sum_{(n)}\sqrt{\frac{\hbar \omega_n}{2 \mu_0}}
-\left(\hat{a}_n^{+} - \hat{a}_n \right)
+\left(\hat{a}_n^{\dag} - \hat{a}_n \right)
 \vec{H}_n\left(r\right).
 \end{eqnarray}
 
@@ -147,12 +147,12 @@ k_n = \frac{\pi n}{L},
 \begin{eqnarray}
 \hat{E}_{nx} = 
 \sqrt{\frac{\hbar \omega_n}{2 \varepsilon_0}}
-\left(\hat{a}_n^{+} + \hat{a}_n \right)
+\left(\hat{a}_n^{\dag} + \hat{a}_n \right)
 \sqrt{\frac{2}{V}} \sin k_n z = 
-E_1 \left(\hat{a}_n^{+} + \hat{a}_n \right) \sin k_n z, 
+E_1 \left(\hat{a}_n^{\dag} + \hat{a}_n \right) \sin k_n z, 
 \nonumber \\
 \hat{H}_{ny} = i E_1 \sqrt{\frac{\varepsilon_0}{\mu_0}}
-\left(\hat{a}_n^{+} - \hat{a}_n \right) \cos k_n z,
+\left(\hat{a}_n^{\dag} - \hat{a}_n \right) \cos k_n z,
 \label{eqCh1_EH_simple}
 \end{eqnarray}
 где 

@@ -70,7 +70,7 @@ P\left(\alpha\right) d^2 \alpha = 1.
 \]
 Кроме того, $P\left(\alpha\right)$ - вещественная функция комплексного
 аргумента. Это все следует из условий  $Sp\left(\hat{\rho}\right) = 1$
-и  $\hat{\rho} = \hat{\rho}^{+}$.
+и  $\hat{\rho} = \hat{\rho}^{\dag}$.
   
 Такое разложение возможно из-за переполненности системы когерентных
 состояний. Если   $P\left(\alpha\right)$  положительная функция, ее
@@ -92,46 +92,46 @@ P\left(\alpha\right) d^2 \alpha = 1.
 действующий на электромагнитное поле, может быть представлен в виде
 функции операторов рождения и уничтожения:
 \[
-\hat{\rho} = \bar{f}\left(\hat{a}^{+}, \hat{a}\right).
+\hat{\rho} = \bar{f}\left(\hat{a}^{\dag}, \hat{a}\right).
 \]
 Тогда оператор может быть представлен в упорядоченном виде: нормальном
 и антинормальном. В первом случае операторы рождения располагаются
 справа от операторов уничтожения, а во втором случае наоборот - слева.
 Например, 
 \[
-\left(\hat{a}^{+}\right)^m\left(\hat{a}\right)^n
+\left(\hat{a}^{\dag}\right)^m\left(\hat{a}\right)^n
 \]
 нормально упорядоченный оператор. В антинормально упорядоченном
 операторе порядок обратный: операторы рождения стоят справа от
 оператора уничтожения. Например, оператор 
 \[
-\left(\hat{a}\right)^n\left(\hat{a}^{+}\right)^m
+\left(\hat{a}\right)^n\left(\hat{a}^{\dag}\right)^m
 \]
 антинормально упорядочен. Упорядочение можно осуществить многократным
 применением коммутационного соотношения. Например, оператор  
 \[
-\left(\hat{a}^{+}\hat{a}\right)^2 =
-\hat{a}^{+}\hat{a}\hat{a}^{+}\hat{a} 
+\left(\hat{a}^{\dag}\hat{a}\right)^2 =
+\hat{a}^{\dag}\hat{a}\hat{a}^{+}\hat{a} 
 \]
 не является ни нормальным, ни антинормальным. Используя условие 
-$\left[\hat{a},\hat{a}^{+}\right] = 1$,
+$\left[\hat{a},\hat{a}^{\dag}\right] = 1$,
 приведем его к нормальному виду: 
 \[
-\left(\hat{a}^{+}\hat{a}\right)^2 = \hat{a}^{+}\left(1 +
-\hat{a}^{+}\hat{a}\right)\hat{a} = 
-\hat{a}^{+}\hat{a} + \left(\hat{a}^{+}\right)^2\left(\hat{a}\right)^2
+\left(\hat{a}^{\dag}\hat{a}\right)^2 = \hat{a}^{+}\left(1 +
+\hat{a}^{\dag}\hat{a}\right)\hat{a} = 
+\hat{a}^{\dag}\hat{a} + \left(\hat{a}^{+}\right)^2\left(\hat{a}\right)^2
 \]
 можно этот оператор представить в антинормальном виде:
 \begin{eqnarray}
-\left(\hat{a}^{+}\hat{a}\right)^2 = 
-\left(\hat{a}\hat{a}^{+} - 1\right) \left(\hat{a}\hat{a}^{+} -
-1\right) = \hat{a}\hat{a}^{+} \hat{a}\hat{a}^{+} - 2
-\hat{a}\hat{a}^{+} + 1 =
+\left(\hat{a}^{\dag}\hat{a}\right)^2 = 
+\left(\hat{a}\hat{a}^{\dag} - 1\right) \left(\hat{a}\hat{a}^{+} -
+1\right) = \hat{a}\hat{a}^{\dag} \hat{a}\hat{a}^{+} - 2
+\hat{a}\hat{a}^{\dag} + 1 =
 \nonumber \\
-= \hat{a}\left(\hat{a}\hat{a}^{+} - 1\right)\hat{a}^{+} -
-2\hat{a}\hat{a}^{+} + 1 = 
-\left(\hat{a}\right)^2\left(\hat{a}^{+}\right)^2 - 3
-\hat{a}\hat{a}^{+} + 1.
+= \hat{a}\left(\hat{a}\hat{a}^{\dag} - 1\right)\hat{a}^{+} -
+2\hat{a}\hat{a}^{\dag} + 1 = 
+\left(\hat{a}\right)^2\left(\hat{a}^{\dag}\right)^2 - 3
+\hat{a}\hat{a}^{\dag} + 1.
 \nonumber
 \end{eqnarray}
 
@@ -142,8 +142,8 @@ $\left[\hat{a},\hat{a}^{+}\right] = 1$,
 Представим оператор плотности в
 антинормальном виде (рассматриваем одномодовый случай): 
 \begin{equation}
-\hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{+}\right) = 
-\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\left(\hat{a}^{+}\right)^m
+\hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{\dag}\right) = 
+\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\left(\hat{a}^{\dag}\right)^m
 \end{equation}
 Воспользуемся теперь разложением \eqref{eqCh1_full4coh} для единичного
 оператора $\hat{I}$
@@ -152,14 +152,14 @@ $\left[\hat{a},\hat{a}^{+}\right] = 1$,
 \]
 в результате получим
 \begin{eqnarray}
-\hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{+}\right) = 
-\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\hat{I}\left(\hat{a}^{+}\right)^m
+\hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{\dag}\right) = 
+\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\hat{I}\left(\hat{a}^{\dag}\right)^m
 = 
 \nonumber \\
 = \frac{1}{\pi}\sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\int d^2 \alpha
 \left(\hat{a}\right)^n
 \left|\alpha\right>\left<\alpha\right|
-\left(\hat{a}^{+}\right)^m = 
+\left(\hat{a}^{\dag}\right)^m = 
 \nonumber \\
 = \frac{1}{\pi}\sum_{(n)}\sum_{(m)}\int d^2 \alpha
 C^{\left(a\right)}_{nm}
@@ -206,7 +206,7 @@ C^{\left(a\right)}_{nm}
 вычисляется, если оператор $\hat{O}$ представлен в нормальном виде:
 \begin{equation}
 \hat{O} = \hat{O}^{(n)} = \sum_{(n)}\sum_{(m)} d_{nm}
-\left(\hat{a}^{+}\right)^n
+\left(\hat{a}^{\dag}\right)^n
 \left(\hat{a}\right)^m,
 \label{eqCh1_normalO}
 \end{equation}
@@ -215,7 +215,7 @@ C^{\left(a\right)}_{nm}
 \left<\alpha\right|\hat{O}\left|\alpha\right> = 
 \sum_{(n)}\sum_{(m)} d_{nm}
 \left<\alpha\right|
-\left(\hat{a}^{+}\right)^n
+\left(\hat{a}^{\dag}\right)^n
 \left(\hat{a}\right)^m
 \left|\alpha\right> = 
 \sum_{(n)}\sum_{(m)} d_{nm}
@@ -224,7 +224,7 @@ C^{\left(a\right)}_{nm}
 Отсюда следует простое правило: чтобы получить необходимый матричный
 элемент, нужно в операторе, представленном в нормально упорядоченном
 виде, произвести замену $\hat{a}\rightarrow\alpha$, 
-$\hat{a}^{+}\rightarrow\alpha^{*}$.
+$\hat{a}^{\dag}\rightarrow\alpha^{*}$.
 
 В качестве примера покажем, что для теплового возбуждения моды 
 \begin{equation}

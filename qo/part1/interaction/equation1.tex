@@ -10,7 +10,7 @@
 Для получения нужного уравнения помножим
 \eqref{eqCh2_rho_final2} слева на $\left<n\right|$ и справа на  
 $\left|m\right>$.  Пользуясь
-свойствами операторов $\hat{a}$ и $\hat{a}^{+}$,  получим систему
+свойствами операторов $\hat{a}$ и $\hat{a}^{\dag}$,  получим систему
 уравнений, связывающих между собой матричные элементы 
 \begin{eqnarray}
 \dot{\rho}_{nm} = - \frac{1}{2}
@@ -149,7 +149,7 @@ R_b = \frac{\omega}{Q} \left(1 + \bar{n}_T\right),
 Другая величина, интересующая нас - это среднее электромагнитное поле
 \begin{eqnarray}
 \bar{E}_{(f)} = E_0 \sin k z
-Sp\left(\hat{\rho}\left(\hat{a}^{+} + \hat{a}\right)\right) = 
+Sp\left(\hat{\rho}\left(\hat{a}^{\dag} + \hat{a}\right)\right) = 
 \nonumber \\
 = E_0 \sin k z Sp\left(\hat{\rho}\hat{a}\right) + \mbox{к.с.} = 
 \nonumber \\
@@ -168,15 +168,15 @@ Sp\left(\hat{\rho}\left(\hat{a}^{+} + \hat{a}\right)\right) =
 \begin{eqnarray}
 \dot{\hat{\rho}} =
 - \frac{\omega}{2Q}\bar{n}_T
-\left(\hat{a}\hat{a}^{+}\hat{\rho} - 
-2 \hat{a}^{+}\hat{\rho}\hat{a} + \hat{\rho}\hat{a}\hat{a}^{+}
+\left(\hat{a}\hat{a}^{\dag}\hat{\rho} - 
+2 \hat{a}^{\dag}\hat{\rho}\hat{a} + \hat{\rho}\hat{a}\hat{a}^{+}
 \right)
 - 
 \nonumber \\
 - \frac{\omega}{2Q}\left(\bar{n}_T + 1\right)
-\left(\hat{a}^{+}\hat{a}\hat{\rho} - 
-2 \hat{a}\hat{\rho}\hat{a}^{+}
-+ \hat{\rho}\hat{a}^{+}\hat{a}
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
+2 \hat{a}\hat{\rho}\hat{a}^{\dag}
++ \hat{\rho}\hat{a}^{\dag}\hat{a}
 \right)
 \label{eqCh2_eq1_add1}
 \end{eqnarray}
@@ -192,23 +192,23 @@ Sp\left(\hat{\rho}\left(\hat{a}^{+} + \hat{a}\right)\right) =
 \begin{eqnarray}
 \dot{\left<E\right>} =
 - \frac{\omega E_1}{2Q}\bar{n}_T
-\left\{Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
-2 \hat{a}^{+}\hat{\rho}\hat{a}\hat{a} +
-\hat{\rho}\hat{a}\hat{a}^{+}\hat{a}\right) + 
+\left\{Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+2 \hat{a}^{\dag}\hat{\rho}\hat{a}\hat{a} +
+\hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a}\right) + 
 \right.
 \nonumber \\
 +\left.
-Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} - 
-2 \hat{a}\hat{\rho}\hat{a}^{+}\hat{a}
-+ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
+Sp\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{\rho}\hat{a}^{\dag}\hat{a}
++ \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
 \right)
 \right\}
 - 
 \nonumber \\
 - \frac{\omega E_1}{2Q}
-Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} - 
-2 \hat{a}\hat{\rho}\hat{a}^{+}\hat{a}
-+ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
+Sp\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{\rho}\hat{a}^{\dag}\hat{a}
++ \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
 \right)
 \label{eqCh2_eq1_add3}
 \end{eqnarray}
@@ -216,39 +216,39 @@ Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} -
 операторов. Применим это к \eqref{eqCh2_eq1_add3}.
 Например
 \begin{eqnarray}
-Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
-2 \hat{a}^{+}\hat{\rho}\hat{a}\hat{a} +
-\hat{\rho}\hat{a}\hat{a}^{+}\hat{a}\right) = 
+Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+2 \hat{a}^{\dag}\hat{\rho}\hat{a}\hat{a} +
+\hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a}\right) = 
 \nonumber \\
-= Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
-2 \hat{a}\hat{a}^{+}\hat{\rho}\hat{a} +
-\hat{\rho}\hat{a}\hat{a}^{+}\hat{a}\right) = 
+= Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} +
+\hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a}\right) = 
 \nonumber \\
-= Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
-2 \hat{a}\hat{a}^{+}\hat{\rho}\hat{a} +
-\hat{\rho}\hat{a}\left(\hat{a}\hat{a}^{+} - 1\right)\right) = 
+= Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} +
+\hat{\rho}\hat{a}\left(\hat{a}\hat{a}^{\dag} - 1\right)\right) = 
 \nonumber \\
-Sp\left(\hat{a}\hat{a}^{+}\hat{\rho}\hat{a} - 
-2 \hat{a}\hat{a}^{+}\hat{\rho}\hat{a} +
-\left(\hat{a}\hat{a}^{+} - 1\right)\hat{\rho}\hat{a}\right) = 
+Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} +
+\left(\hat{a}\hat{a}^{\dag} - 1\right)\hat{\rho}\hat{a}\right) = 
 - Sp\left(\hat{\rho}\hat{a}\right).
 \label{eqCh2_eq1_add4}
 \end{eqnarray}
 Проделав то же самое со второй скобкой \eqref{eqCh2_eq1_add3}, получим
 \begin{eqnarray}
-Sp\left(\hat{a}^{+}\hat{a}\hat{\rho}\hat{a} - 
-2 \hat{a}\hat{\rho}\hat{a}^{+}\hat{a}
-+ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a} \right) = 
+Sp\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
+2 \hat{a}\hat{\rho}\hat{a}^{\dag}\hat{a}
++ \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a} \right) = 
 \nonumber \\
 = 
-Sp\left(\hat{\rho}\hat{a}\hat{a}^{+}\hat{a} - 
-2 \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
-+ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a} \right) = 
+Sp\left(\hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a} - 
+2 \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
++ \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a} \right) = 
 \nonumber \\
 = 
-Sp\left(\hat{\rho}\left(\hat{a}^{+}\hat{a} + 1\right)\hat{a} - 
-2 \hat{\rho}\hat{a}^{+}\hat{a}\hat{a}
-+ \hat{\rho}\hat{a}^{+}\hat{a}\hat{a} \right) = 
+Sp\left(\hat{\rho}\left(\hat{a}^{\dag}\hat{a} + 1\right)\hat{a} - 
+2 \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
++ \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a} \right) = 
 Sp\left(\hat{\rho}\hat{a}\right).
 \label{eqCh2_eq1_add5}
 \end{eqnarray}
@@ -284,14 +284,14 @@ Sp\left(\hat{\rho}\hat{a}\right)\right\} -
 \begin{eqnarray}
 \dot{\rho} = - \frac{\omega}{2 Q}
 \left\{
-\bar{n}_T\left(\hat{a}\hat{a}^{+}\hat{\rho} - 
-\hat{a}^{+}\hat{\rho}\hat{a}\right)
+\bar{n}_T\left(\hat{a}\hat{a}^{\dag}\hat{\rho} - 
+\hat{a}^{\dag}\hat{\rho}\hat{a}\right)
 \right. +
 \nonumber \\
 +
 \left .
-\left(\bar{n}_T + 1\right)\left(\hat{a}^{+}\hat{a}\hat{\rho} - 
-\hat{a}\hat{\rho}\hat{a}^{+}\right)
+\left(\bar{n}_T + 1\right)\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
+\hat{a}\hat{\rho}\hat{a}^{\dag}\right)
 \right\} + \mbox{э. с.}
 \label{eqCh2_64}
 \end{eqnarray}

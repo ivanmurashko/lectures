@@ -21,13 +21,13 @@ $\left|y\right> = \left|0\right>_x\otimes\left|1\right>_y$ -
 заменим операторы электрического поля $E_{x,y}$ на операторы
 уничтожения $\hat{a}_{x,y}$, в результате получим
 \begin{eqnarray}
-\hat{S}_0 = \hat{a}_x^{+} \hat{a}_x + \hat{a}_y^{+} \hat{a}_y,
+\hat{S}_0 = \hat{a}_x^{\dag} \hat{a}_x + \hat{a}_y^{+} \hat{a}_y,
 \nonumber \\
-\hat{S}_1 = \hat{a}_x^{+} \hat{a}_x - \hat{a}_y^{+} \hat{a}_y,
+\hat{S}_1 = \hat{a}_x^{\dag} \hat{a}_x - \hat{a}_y^{+} \hat{a}_y,
 \nonumber \\
-\hat{S}_2 = \hat{a}_x^{+} \hat{a}_y + \hat{a}_x \hat{a}_y^{+},
+\hat{S}_2 = \hat{a}_x^{\dag} \hat{a}_y + \hat{a}_x \hat{a}_y^{+},
 \nonumber \\
-\hat{S}_3 = \frac{\hat{a}_x^{+} \hat{a}_y - \hat{a}_x \hat{a}_y^{+}}{i}.
+\hat{S}_3 = \frac{\hat{a}_x^{\dag} \hat{a}_y - \hat{a}_x \hat{a}_y^{+}}{i}.
 \label{eqEntangStokesOper}
 \end{eqnarray}
 
@@ -41,35 +41,35 @@ $\hat{S}_1$ и $\hat{S}_2$, для которых мы найдем коммут
 \hat{S}_2\hat{S}_1 = 
 \nonumber \\
 =
-\hat{a}_x^{+}\hat{a}_x\hat{a}_x^{+}\hat{a}_y -
-\hat{a}_y^{+}\hat{a}_y\hat{a}_y\hat{a}_x^{+} + 
+\hat{a}_x^{\dag}\hat{a}_x\hat{a}_x^{+}\hat{a}_y -
+\hat{a}_y^{\dag}\hat{a}_y\hat{a}_y\hat{a}_x^{+} + 
 \nonumber \\
-+ \hat{a}_x^{+}\hat{a}_x\hat{a}_x\hat{a}_y^{+} -
-\hat{a}_y^{+}\hat{a}_y\hat{a}_y^{+}\hat{a}_x -
++ \hat{a}_x^{\dag}\hat{a}_x\hat{a}_x\hat{a}_y^{+} -
+\hat{a}_y^{\dag}\hat{a}_y\hat{a}_y^{+}\hat{a}_x -
 \nonumber \\
-- \hat{a}_x^{+}\hat{a}_x^{+}\hat{a}_x\hat{a}_y +
-\hat{a}_y\hat{a}_y^{+}\hat{a}_y\hat{a}_x^{+} -
+- \hat{a}_x^{\dag}\hat{a}_x^{+}\hat{a}_x\hat{a}_y +
+\hat{a}_y\hat{a}_y^{\dag}\hat{a}_y\hat{a}_x^{+} -
 \nonumber \\
-- \hat{a}_x\hat{a}_x^{+}\hat{a}_x\hat{a}_y^{+} +
-\hat{a}_y^{+}\hat{a}_y^{+}\hat{a}_y\hat{a}_x =
+- \hat{a}_x\hat{a}_x^{\dag}\hat{a}_x\hat{a}_y^{+} +
+\hat{a}_y^{\dag}\hat{a}_y^{+}\hat{a}_y\hat{a}_x =
 \nonumber \\
-= \hat{a}_x^{+}\left[\hat{a}_x\hat{a}_x^{+}\right]\hat{a}_y -
-\left[\hat{a}_x\hat{a}_x^{+}\right]\hat{a}_x\hat{a}_y^{+} +
+= \hat{a}_x^{\dag}\left[\hat{a}_x\hat{a}_x^{+}\right]\hat{a}_y -
+\left[\hat{a}_x\hat{a}_x^{\dag}\right]\hat{a}_x\hat{a}_y^{+} +
 \nonumber \\
-+\left[\hat{a}_y\hat{a}_y^{+}\right]\hat{a}_y\hat{a}_x^{+} -
-\hat{a}_y^{+}\left[\hat{a}_y\hat{a}_y^{+}\right]\hat{a}_x =
++\left[\hat{a}_y\hat{a}_y^{\dag}\right]\hat{a}_y\hat{a}_x^{+} -
+\hat{a}_y^{\dag}\left[\hat{a}_y\hat{a}_y^{+}\right]\hat{a}_x =
 \nonumber \\
-= \hat{a}_x^{+}\hat{a}_y + \hat{a}_y\hat{a}_x^{+} -
-\hat{a}_x\hat{a}_y^{+} - \hat{a}_y^{+}\hat{a}_x = 
+= \hat{a}_x^{\dag}\hat{a}_y + \hat{a}_y\hat{a}_x^{+} -
+\hat{a}_x\hat{a}_y^{\dag} - \hat{a}_y^{+}\hat{a}_x = 
 \nonumber \\
-= 2 \left(\hat{a}_x^{+}\hat{a}_y - \hat{a}_x\hat{a}_y^{+}\right) = 2 i
+= 2 \left(\hat{a}_x^{\dag}\hat{a}_y - \hat{a}_x\hat{a}_y^{+}\right) = 2 i
 \hat{S}_3 \ne 0.
 \label{eqEntangStokesOperS12Comm}
 \end{eqnarray}
 При выводе \eqref{eqEntangStokesOperS12Comm} мы воспользовались
 коммутационными соотношениями для операторов рождения и уничтожения:
 \begin{equation}
-\left[\hat{a}_x \hat{a}^{+}_x\right] = \left[\hat{a}_y \hat{a}^{+}_y\right] = 1,
+\left[\hat{a}_x \hat{a}^{\dag}_x\right] = \left[\hat{a}_y \hat{a}^{+}_y\right] = 1,
 \nonumber
 \end{equation}
 а также тем фактом, что операторы действующие на разные компоненты
@@ -98,21 +98,21 @@ $\left|y\right>$:
 
 Для оператора $\hat{S}_1$ имеем:
 \begin{eqnarray}
-\hat{S}_1 \left|x\right> = \hat{a}_x^{+} \hat{a}_x
-\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{+}
+\hat{S}_1 \left|x\right> = \hat{a}_x^{\dag} \hat{a}_x
+\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{\dag}
 \hat{a}_y\left|1\right>_x\otimes\left|0\right>_y =
 \nonumber \\
 = 
-\hat{a}_x^{+} \hat{a}_x
+\hat{a}_x^{\dag} \hat{a}_x
 \left|1\right>_x\otimes\left|0\right>_y =
 \left|1\right>_x\otimes\left|0\right>_y = \left|x\right>,
 \nonumber \\
-\hat{S}_1 \left|y\right> = \hat{a}_x^{+} \hat{a}_x
-\left|0\right>_x\otimes\left|1\right>_y - \hat{a}_y^{+}
+\hat{S}_1 \left|y\right> = \hat{a}_x^{\dag} \hat{a}_x
+\left|0\right>_x\otimes\left|1\right>_y - \hat{a}_y^{\dag}
 \hat{a}_y\left|0\right>_x\otimes\left|1\right>_y =
 \nonumber \\
 =
--\hat{a}_y^{+}
+-\hat{a}_y^{\dag}
 \hat{a}_y\left|0\right>_x\otimes\left|1\right>_y
 =-\left|0\right>_x\otimes\left|1\right>_y = -\left|y\right>,
 \label{eqEntangS1MatrixPre}
@@ -151,21 +151,21 @@ $\left|s_2\right> = \left|y\right>$:
 
 Для оператора $\hat{S}_2$ имеем:
 \begin{eqnarray}
-\hat{S}_2 \left|x\right> = \hat{a}_x^{+} \hat{a}_y
-\left|1\right>_x\otimes\left|0\right>_y + \hat{a}_y^{+}
+\hat{S}_2 \left|x\right> = \hat{a}_x^{\dag} \hat{a}_y
+\left|1\right>_x\otimes\left|0\right>_y + \hat{a}_y^{\dag}
 \hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
 \nonumber \\
 = 
-\hat{a}_y^{+}
+\hat{a}_y^{\dag}
 \hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
 \left|0\right>_x\otimes\left|1\right>_y = \left|y\right>,
 \nonumber \\
-\hat{S}_2 \left|y\right> = \hat{a}_x^{+} \hat{a}_y
-\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{+}
+\hat{S}_2 \left|y\right> = \hat{a}_x^{\dag} \hat{a}_y
+\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{\dag}
 \hat{a}_x\left|0\right>_x\otimes\left|1\right>_y =
 \nonumber \\
 =
-\hat{a}_x^{+} \hat{a}_y
+\hat{a}_x^{\dag} \hat{a}_y
 \left|0\right>_x\otimes\left|1\right>_y
 =\left|1\right>_x\otimes\left|0\right>_y = \left|x\right>.
 \label{eqEntangS2MatrixPre}
@@ -199,22 +199,22 @@ $\left|s_2\right> = \left|y\right>$:
 
 Для оператора $\hat{S}_3$ имеем:
 \begin{eqnarray}
-  \hat{S}_3 \left|x\right> = \frac{1}{i}\left(\hat{a}_x^{+} \hat{a}_y
-\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{+}
+  \hat{S}_3 \left|x\right> = \frac{1}{i}\left(\hat{a}_x^{\dag} \hat{a}_y
+\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{\dag}
 \hat{a}_x\left|1\right>_x\otimes\left|0\right>_y\right) =
 \nonumber \\
 = 
--\frac{1}{i}\hat{a}_y^{+}
+-\frac{1}{i}\hat{a}_y^{\dag}
 \hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
 -\frac{1}{i}\left|0\right>_x\otimes\left|1\right>_y =
 -\frac{\left|y\right>}{i} = i \left|y\right>,
 \nonumber \\
-\hat{S}_2 \left|y\right> = \frac{1}{i}\left(\hat{a}_x^{+} \hat{a}_y
-\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{+}
+\hat{S}_2 \left|y\right> = \frac{1}{i}\left(\hat{a}_x^{\dag} \hat{a}_y
+\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{\dag}
 \hat{a}_x\left|0\right>_x\otimes\left|1\right>_y\right) =
 \nonumber \\
 =
-\frac{1}{i}\hat{a}_x^{+} \hat{a}_y
+\frac{1}{i}\hat{a}_x^{\dag} \hat{a}_y
 \left|0\right>_x\otimes\left|1\right>_y
 =\frac{1}{i}\left|1\right>_x\otimes\left|0\right>_y =
 -i \left|x\right>.

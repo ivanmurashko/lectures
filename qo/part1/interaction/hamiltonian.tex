@@ -16,7 +16,7 @@ $\hat{V}$ - гамильтониан взаимодействия.
 \eqref{eqCh1_quant_stoyachie_volny}:
 \begin{equation}
 \hat{\mathcal{H}}^{(F)} = \hbar \omega 
-\left(\hat{a}^{+}\hat{a} + \frac{1}{2}\right).
+\left(\hat{a}^{\dag}\hat{a} + \frac{1}{2}\right).
 \nonumber
 \end{equation}
 
@@ -105,16 +105,16 @@ $\hat{V}$ - гамильтониан взаимодействия.
   \left|a\right>\left<b\right| +
   \left|b\right>\left<a\right|\right) = 
 \nonumber \\
-= - \left(\vec{E}\left(t\right)\vec{p}\right) \left(\hat{\sigma}^{+} + \hat{\sigma}\right),
+= - \left(\vec{E}\left(t\right)\vec{p}\right) \left(\hat{\sigma}^{\dag} + \hat{\sigma}\right),
 \label{eqCh2HamiltonianVsemiclass3}
 \end{eqnarray}
-где  $\hat{\sigma}^{+} = \left|a\right>\left<b\right|$ и 
+где  $\hat{\sigma}^{\dag} = \left|a\right>\left<b\right|$ и 
 $\hat{\sigma} = \left|b\right>\left<a\right|$ 
 -  операторы перехода. 
-$\hat{\sigma}^{+}$ -  оператор перехода из нижнего состояния в верхнее (повышающий
+$\hat{\sigma}^{\dag}$ -  оператор перехода из нижнего состояния в верхнее (повышающий
 оператор):
 \[
-\hat{\sigma}^{+} \left|b\right> = 
+\hat{\sigma}^{\dag} \left|b\right> = 
 \left|a\right>\left<b\right|\left.b\right> = 
 \left|a\right>,
 \]
@@ -129,7 +129,7 @@ $\hat{\sigma}$
 \]
 Кроме этого выполняются равенства
 \[
-\hat{\sigma}^{+} \left|a\right> = 
+\hat{\sigma}^{\dag} \left|a\right> = 
 \left|a\right>\left<b\right|\left.a\right> = 
 0
 \]
@@ -140,10 +140,10 @@ $\hat{\sigma}$
 \left|b\right>\left<a\right|\left.b\right> = 
 0.
 \]
-Для операторов $\hat{\sigma}$ и $\hat{\sigma}^{+}$ может быть записано
+Для операторов $\hat{\sigma}$ и $\hat{\sigma}^{\dag}$ может быть записано
 следующее соотношение: 
 \begin{eqnarray}
-\hat{\sigma}\hat{\sigma}^{+} + \hat{\sigma}^{+}\hat{\sigma} =
+\hat{\sigma}\hat{\sigma}^{\dag} + \hat{\sigma}^{+}\hat{\sigma} =
 \nonumber \\
 = \left|b\right>\left<a\right|\left.a\right>\left<b\right| + 
  \left|a\right>\left<b\right|\left.b\right>\left<a\right| = 
@@ -172,8 +172,8 @@ $\hat{\sigma}$
 электрического поля на оператор электрического поля. Таким
 образом, получаем 
 \begin{equation}
-\hat{V} = - p E_1 \sin k z \left(\hat{a} + \hat{a}^{+}\right)
-\left(\hat{\sigma} + \hat{\sigma}^{+}\right)
+\hat{V} = - p E_1 \sin k z \left(\hat{a} + \hat{a}^{\dag}\right)
+\left(\hat{\sigma} + \hat{\sigma}^{\dag}\right)
 \label{eqCh2_8_add1}
 \end{equation}
 Здесь использовано простейшее выражение для оператора электрического
@@ -184,9 +184,9 @@ $\hat{\sigma}$
 \hat{\mathcal{H}}_{AF} = 
 \hbar \omega_a \sigma_a + \hbar \omega_b \sigma_b +
 \hbar \omega 
-\left(\hat{a}^{+}\hat{a} + \frac{1}{2}\right)
-+ \hbar g \left(\hat{a} + \hat{a}^{+}\right)
-\left(\hat{\sigma} + \hat{\sigma}^{+}\right)
+\left(\hat{a}^{\dag}\hat{a} + \frac{1}{2}\right)
++ \hbar g \left(\hat{a} + \hat{a}^{\dag}\right)
+\left(\hat{\sigma} + \hat{\sigma}^{\dag}\right)
 \nonumber
 \end{equation}
 где $g = -\frac{p}{\hbar}E_1 \sin k z$ - константа взаимодействия,
@@ -208,11 +208,11 @@ $\hat{\sigma}$
 \item $\hat{a}\hat{\sigma}$ - этот член соответствует поглощению
   фотона и переходу атома из верхнего состояния в нижнее. Условно этот
   процесс изображен на \autoref{figPart1Ch2_2_1};  
-\item $\hat{a}\hat{\sigma}^{+}$ - этот член соответствует поглощению
+\item $\hat{a}\hat{\sigma}^{\dag}$ - этот член соответствует поглощению
   фотона и переходу атома из нижнего состояния в верхнее (см. \autoref{figPart1Ch2_2_2});  
-\item $\hat{a}^{+}\hat{\sigma}$ - этот член соответствует излучению
+\item $\hat{a}^{\dag}\hat{\sigma}$ - этот член соответствует излучению
   фотона и переходу атома из верхнего состояния в нижнее (см. \autoref{figPart1Ch2_2_3}); 
-\item $\hat{a}^{+}\hat{\sigma}^{+}$ - этот член соответствует
+\item $\hat{a}^{\dag}\hat{\sigma}^{+}$ - этот член соответствует
   излучению фотона и переходу атома из нижнего состояния в верхнее (см. \autoref{figPart1Ch2_2_4}). 
 \end{enumerate}
 
@@ -228,8 +228,8 @@ $\hat{\sigma}$
 сказанного гамильтониан взаимодействия принимает вид: 
 \begin{equation}
 \hat{V} = g \hbar \left(
-\hat{a}\hat{\sigma}^{+} + 
-\hat{a}^{+}\hat{\sigma}
+\hat{a}\hat{\sigma}^{\dag} + 
+\hat{a}^{\dag}\hat{\sigma}
 \right)
 \end{equation}
 
@@ -254,8 +254,8 @@ e^{- i \frac{\hat{\mathcal{H}}_0 t}{\hbar}}
 \begin{equation}
 \hat{V}_I = 
 g \hbar \left(
-\hat{a}^{+}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t} +
-\hat{\sigma}^{+} \hat{a} e^{-i \left(\omega - \omega_{ab}\right)t}
+\hat{a}^{\dag}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t} +
+\hat{\sigma}^{\dag} \hat{a} e^{-i \left(\omega - \omega_{ab}\right)t}
 \right).
 \label{eqCh2_task22}
 \end{equation}

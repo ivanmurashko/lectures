@@ -86,7 +86,7 @@ t_1\right)
 описывают интерференцию. Так как  
 \[
 \left(\hat{E}^{(-)}\left(\vec{r}_2, t_2\right) \hat{E}^{(+)}\left(\vec{r}_1,
-t_1\right)\right)^{+} = 
+t_1\right)\right)^{\dag} = 
 \left(\hat{E}^{(-)}\left(\vec{r}_1, t_1\right) \hat{E}^{(+)}\left(\vec{r}_2,
 t_2\right)\right)
 \]
@@ -166,29 +166,29 @@ t_2\right)
   \right)},
 \nonumber \\
 \hat{\vec{E}}^{(-)}\left(\vec{r}, t\right) = \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
-V}} \hat{a}_k^{+} \vec{e}_k^{*} e^{i \omega_k t - i \left(\vec{k}\vec{r}
-  \right)} = \left(\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right)\right)^{+}.
+V}} \hat{a}_k^{\dag} \vec{e}_k^{*} e^{i \omega_k t - i \left(\vec{k}\vec{r}
+  \right)} = \left(\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right)\right)^{\dag}.
 \label{eqCh4_15}
 \end{eqnarray}
 
 Используя эти выражения для вычисления функции когерентности
 \eqref{eqCh4_14}, получим $G_{12}^{1} = 1$,  так как
-$\left<n\right|\hat{a}^{+}\hat{a}\left|n\right> = n$   и
+$\left<n\right|\hat{a}^{\dag}\hat{a}\left|n\right> = n$   и
 $\left|e^{-i x}\right| = 1$ . То же самое получим и для случая
 когерентного состояния:  $G_{12}^{1} = 1$,  так как
-$\left<\alpha\right|\hat{a}^{+}\hat{a}\left|\alpha\right> =
+$\left<\alpha\right|\hat{a}^{\dag}\hat{a}\left|\alpha\right> =
 \left|\alpha\right|^2$. 
 
 Вообще одномодовое поле, возбуждаемое в произвольное чистое состояние,
 обладает полной когерентностью первого порядка. Более того,
 одномодовое поле, возбуждаемое в произвольное статистическое смешанное
 состояние, имеет полную когерентность. В этом случае нужно вычислить
-$Sp \left(\hat{\rho} \hat{a}^{+}\hat{a}\right)$,  где  $\hat{\rho} =
+$Sp \left(\hat{\rho} \hat{a}^{\dag}\hat{a}\right)$,  где  $\hat{\rho} =
 \sum_{(m)}\sum_{(l)}\rho_{ml}\left|m\right>\left<n\right|$.  Имеем  
 \begin{eqnarray}
-Sp \left(\hat{\rho} \hat{a}^{+}\hat{a}\right) = 
+Sp \left(\hat{\rho} \hat{a}^{\dag}\hat{a}\right) = 
 \sum_{(n)}\sum_{(m)}\sum_{(l)}\rho_{ml}\left<n\right.\left|m\right>\left<l\right|
-\hat{a}^{+}\hat{a}\left|n\right> = 
+\hat{a}^{\dag}\hat{a}\left|n\right> = 
 \nonumber \\
 = \sum_{(n)}\sum_{(l)}\rho_{nl}\left<l\right.\left|n\right>n = 
 \sum_{(n)}\rho_{nn}n = \bar{n}.
@@ -288,7 +288,7 @@ P_{\left\{n_k\right\}} =
     \left(\vec{k} \vec{r}\right)},
 \nonumber \\
 \hat{\vec{E}}^{(-)}= \sum_{(k)}\sqrt{\frac{\hbar \omega_k}{2
-    \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{+} e^{i \omega_k t - i
+    \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{\dag} e^{i \omega_k t - i
     \left(\vec{k} \vec{r}\right)},
 \label{eqCh4_19}
 \end{eqnarray}
@@ -321,13 +321,13 @@ P_{\left\{n_k\right\}}.
 \hat{E}^{(+)}\left(x_2\right) = \sum_{(k)}\sum_{(k')}
 \frac{\hbar \sqrt{\omega_k \omega_{k'}}}{2 \varepsilon_0 V}
 \left(\vec{e}_k\vec{e}_{k'}\right)
-\hat{a}_k^{+}\hat{a}_{k'}
+\hat{a}_k^{\dag}\hat{a}_{k'}
 e^{-i x_2 + i x_1},
 \label{eqCh4_21}
 \end{equation}
 где  $x_1 = \omega_k t_1 - \left(\vec{k}\vec{r}_1\right)$,
 $x_2 = \omega_k t_2 - \left(\vec{k}\vec{r}_2\right)$.
-Усреднению подлежит оператор $\hat{a}_k^{+}\hat{a}_{k'}$. Поскольку
+Усреднению подлежит оператор $\hat{a}_k^{\dag}\hat{a}_{k'}$. Поскольку
 \[\left|\left\{n_{k}\right\}\right> = 
 \left|n_{k_1}\right>
 \left|n_{k_2}\right> \dots,
@@ -335,7 +335,7 @@ $x_2 = \omega_k t_2 - \left(\vec{k}\vec{r}_2\right)$.
 то 
 \[
 \left<\left\{n_{k}\right\}\right|
-\hat{a}_k^{+}\hat{a}_{k'}
+\hat{a}_k^{\dag}\hat{a}_{k'}
 \left|\left\{n_{k}\right\}\right> = 
 n_k \delta_{kk'},
 \]
@@ -475,14 +475,14 @@ d^2 \left\{\alpha_k\right\}.
 \hat{E}^{(+)}\left(x_2\right) = 
 \sum_k \sum_{k'}
 \frac{\hbar\sqrt{\omega_{k}\omega_{k'}}}{2 \varepsilon_0 V}
-\left(\vec{e}_{k}\vec{e}_{k'}\right)\hat{a}^{+}_{k}\hat{a}_{k'}
+\left(\vec{e}_{k}\vec{e}_{k'}\right)\hat{a}^{\dag}_{k}\hat{a}_{k'}
 e^{-i x_2 + i x_1}.
 \nonumber
 \end{equation}
 Произведение операторов записано у нас в нормальном виде (операторы
 поглощения стоят у нас справа от операторов рождения), поэтому
 матричный элемент, входящий в \eqref{eqCh4_coh1_add1}, легко записать,
-заменив $\hat{a}_{k'} \rightarrow \alpha_{k'}$, $\hat{a}^{+}_{k}
+заменив $\hat{a}_{k'} \rightarrow \alpha_{k'}$, $\hat{a}^{\dag}_{k}
 \rightarrow \alpha^{*}_{k}$. Отсюда имеем
 \begin{eqnarray}
 Sp \left(

@@ -34,7 +34,7 @@ r_a - \gamma \bar{N}_z - \frac{4 g^2}{\gamma}\bar{N}_z\bar{n} = 0,
 \label{eqLaserHaizenberg19}
 \end{equation}
 где $\bar{N}_z$ - усредненное значение населенности, $\bar{n} =
-\left<\hat{a}^{+}\hat{a}\right>$ - среднее число фотонов в
+\left<\hat{a}^{\dag}\hat{a}\right>$ - среднее число фотонов в
 генерируемой моде. Ноль справа означает, что рассматривается
 установившийся режим. 
 
@@ -65,7 +65,7 @@ r_a - \gamma \bar{N}_z - \frac{4 g^2}{\gamma}\bar{N}_z\bar{n} = 0,
 Корреляционная функция поля, которую нам надо определить выражается
 следующим равенством
 \begin{equation}
-I\left(t, 0\right) = \left<\hat{a}^{+}\left(t\right)\hat{a}\left(0\right)\right>,
+I\left(t, 0\right) = \left<\hat{a}^{\dag}\left(t\right)\hat{a}\left(0\right)\right>,
 \nonumber
 \end{equation}
 где $\hat{a}\left(t\right)$ удовлетворяет уравнению
@@ -77,14 +77,14 @@ I\left(t, 0\right) = \left<\hat{a}^{+}\left(t\right)\hat{a}\left(0\right)\right>
 \begin{eqnarray}
 \hat{a}\left(t\right) = A e^{i\hat{\varphi}\left(t\right)},
 \nonumber \\
-\hat{a}^{+}\left(t\right) = A e^{-i\hat{\varphi}\left(t\right)},
+\hat{a}^{\dag}\left(t\right) = A e^{-i\hat{\varphi}\left(t\right)},
 \label{eqLaserHaizenbergAConstPhi}
 \end{eqnarray}
 где $A$ среднее значение амплитуды, а $\hat{\varphi}\left(t\right)$ -
 оператор фазы. Тогда корреляционная функция может быть представлена в
 виде 
 \begin{eqnarray}
-\left<\hat{a}^{+}\left(t\right)\hat{a}\left(0\right)\right> =
+\left<\hat{a}^{\dag}\left(t\right)\hat{a}\left(0\right)\right> =
 \left|A\right|^2 \left<e^{-i\left(\hat{\varphi}\left(t\right) -
   \hat{\varphi}\left(0\right)\right)}\right> = 
 \nonumber \\
@@ -123,19 +123,19 @@ i \frac{d \varphi}{d t} = \frac{1}{\hat{a}}\frac{d
 \nonumber \\
 - 4 r_a\frac{g^4}{\gamma^4} \bar{n} + i \frac{\hat{F}_{\sum}}{\hat{a}},
 \nonumber \\
-- i \frac{d \varphi}{d t} = \frac{1}{\hat{a}^{+}}\frac{d
-  \hat{a}^{+}}{d t} = 
+- i \frac{d \varphi}{d t} = \frac{1}{\hat{a}^{\dag}}\frac{d
+  \hat{a}^{\dag}}{d t} = 
 -\frac{1}{2}\left(\frac{\omega}{Q}\right)
 + r_a \frac{g^2}{\gamma^2} - 
 \nonumber \\
-- 4 r_a\frac{g^4}{\gamma^4} \bar{n} - i \frac{\hat{F}^{+}_{\sum}}{\hat{a}^{+}},
+- 4 r_a\frac{g^4}{\gamma^4} \bar{n} - i \frac{\hat{F}^{\dag}_{\sum}}{\hat{a}^{+}},
 \label{eqLaserHaizenberg25_pre1}
 \end{eqnarray}
 т. о. вычитая второе уравнение \eqref{eqLaserHaizenberg25_pre1} из
 первого получим
 \begin{equation}
 2 \frac{d \varphi}{d t} = 
-\frac{\hat{F}_{\sum}}{\hat{a}} + \frac{\hat{F}^{+}_{\sum}}{\hat{a}^{+}}.
+\frac{\hat{F}_{\sum}}{\hat{a}} + \frac{\hat{F}^{\dag}_{\sum}}{\hat{a}^{+}}.
 \label{eqLaserHaizenberg25}
 \end{equation}
 Подставив теперь \eqref{eqLaserHaizenbergAConstPhi} в
@@ -144,7 +144,7 @@ i \frac{d \varphi}{d t} = \frac{1}{\hat{a}}\frac{d
 \begin{equation}
 \frac{d \varphi}{d t} = \frac{1}{2 A}
 \left\{
-e^{i\hat{\varphi}\left(t\right)}\hat{F}^{+}_{\sum}\left(t\right) +
+e^{i\hat{\varphi}\left(t\right)}\hat{F}^{\dag}_{\sum}\left(t\right) +
 e^{- i\hat{\varphi}\left(t\right)}\hat{F}_{\sum}\left(t\right)
 \right\}.
 \nonumber
@@ -161,13 +161,13 @@ e^{- i\hat{\varphi}\left(t\right)}\hat{F}_{\sum}\left(t\right)
 \int_0^t d t_2
 \left<
 \left(
-e^{i\hat{\varphi}\left(t_1\right)}\hat{F}^{+}_{\sum}\left(t_1\right) + 
+e^{i\hat{\varphi}\left(t_1\right)}\hat{F}^{\dag}_{\sum}\left(t_1\right) + 
 e^{- i\hat{\varphi}\left(t_1\right)}\hat{F}_{\sum}\left(t_1\right)
 \right)\right.
 \nonumber \\
 \left.
 \left(
-e^{i\hat{\varphi}\left(t_2\right)}\hat{F}^{+}_{\sum}\left(t_2\right) +
+e^{i\hat{\varphi}\left(t_2\right)}\hat{F}^{\dag}_{\sum}\left(t_2\right) +
 e^{- i\hat{\varphi}\left(t_2\right)}\hat{F}_{\sum}\left(t_2\right)
 \right)
 \right> = 
@@ -177,7 +177,7 @@ e^{- i\hat{\varphi}\left(t_2\right)}\hat{F}_{\sum}\left(t_2\right)
 \int_0^t d t_1 
 \int_0^t d t_2
 \left<
-\hat{F}^{+}_{\sum}\left(t_1\right)\hat{F}_{\sum}\left(t_2\right)e^{-i\left(
+\hat{F}^{\dag}_{\sum}\left(t_1\right)\hat{F}_{\sum}\left(t_2\right)e^{-i\left(
 \hat{\varphi}\left(t_1\right) - \hat{\varphi}\left(t_2\right)
 \right)} + \mbox{э. с.}\right>.
 \nonumber
@@ -263,7 +263,7 @@ r_a \frac{g^2}{\gamma^2} \approx \frac{\omega}{Q}.
 
 Подставив это в \eqref{eqLaserHaizenbergTaskMiddle} получим
 \begin{eqnarray}
-\left<\hat{a}^{+}\left(t\right)\hat{a}\left(0\right)\right> =
+\left<\hat{a}^{\dag}\left(t\right)\hat{a}\left(0\right)\right> =
 \left|A\right|^2 e^{-\frac{1}{4}\frac{1}{\bar{n}}\frac{\omega}{Q} t},
 \label{eqLaserHaizenbergTaskMiddleFinal}
 \end{eqnarray}

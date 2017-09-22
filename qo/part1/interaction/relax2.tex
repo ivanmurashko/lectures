@@ -2,19 +2,19 @@
 \section{Релаксация атома в случае простейшего
   резервуара, состоящего из гармонических осцилляторов}
 Рассмотрим многомодовое электромагнитное поле, описываемое при помощи
-операторов рождения и уничтожения $\hat{a}_k^{+}$,
+операторов рождения и уничтожения $\hat{a}_k^{\dag}$,
 $\hat{a}_k$. Частоту $k$-ой моды обозначим через $\omega_k$. 
 
 Это электромагнитное поле взаимодествует с некоторым двухуровневым
 атомом. Атом может находится в двух состояниях 
 возбужденном $\left|a\right>$ и невозбужденном
 $\left|b\right>$. Операторы перехода по прежнему 
-$\hat{\sigma}$ и $\hat{\sigma}^{+}$. Частоту перехода обозначим через
+$\hat{\sigma}$ и $\hat{\sigma}^{\dag}$. Частоту перехода обозначим через
 \index{Гамильтониан}
 $\Omega$. Гамильтониан взаимодействия в этом случае имеет вид  
 \begin{equation}
 \hat{V}\left(t\right) = \hbar
-\sum_{(k)} g_k \hat{a}_k^{+} \hat{\sigma}e^{-i \left(
+\sum_{(k)} g_k \hat{a}_k^{\dag} \hat{\sigma}e^{-i \left(
 \Omega - \omega_k
 \right) t} +
 \mbox{э.с.}
@@ -31,7 +31,7 @@ $\Omega$. Гамильтониан взаимодействия в этом сл
 Справедливы следующие соотношения:
 \begin{equation}
 Sp_R\left(
-\hat{a}_k^{+}
+\hat{a}_k^{\dag}
 \hat{a}_k
 \hat{\rho}_R
 \right) = \bar{n}_k
@@ -40,10 +40,10 @@ Sp_R\left(
 где $\bar{n}_k$ -
 среднее число фотонов в моде резервуара; 
 \begin{eqnarray}
-Sp_R\left(\hat{a}_k\hat{a}_k^{+}\hat{\rho}_R\right) = \bar{n}_k + 1,
+Sp_R\left(\hat{a}_k\hat{a}_k^{\dag}\hat{\rho}_R\right) = \bar{n}_k + 1,
 \nonumber \\
 Sp_R\left(\hat{a}_k\hat{a}_k\hat{\rho}_R\right) = 
-Sp_R\left(\hat{a}_k^{+}\hat{a}_k^{+}\hat{\rho}_R\right) = 0.
+Sp_R\left(\hat{a}_k^{\dag}\hat{a}_k^{+}\hat{\rho}_R\right) = 0.
 \label{eqCh2_96_add}
 \end{eqnarray}
 Используя эти равенства, общее уравнение
@@ -53,7 +53,7 @@ Sp_R\left(\hat{a}_k^{+}\hat{a}_k^{+}\hat{\rho}_R\right) = 0.
 \dot{\hat{\rho}}_{at}\left(t\right) = 
 - \int_{t_0}^t\sum_{(k)}g_k^2
 \left\{
-\hat{\sigma}^{+} \hat{\sigma}\hat{\rho}_{at}\left(t'\right)
+\hat{\sigma}^{\dag} \hat{\sigma}\hat{\rho}_{at}\left(t'\right)
 \left(
 \bar{n}_k + 1
 \right)
@@ -63,12 +63,12 @@ e^{i\left(\Omega - \omega_k\right)
 \right.
 \nonumber \\
 \left.
-+\hat{\sigma}\hat{\sigma}^{+}
++\hat{\sigma}\hat{\sigma}^{\dag}
 \hat{\rho}_{at}\left(t'\right)
 \bar{n}_k
 e^{-i\left(\Omega - \omega_k\right)
 \left(t - t'\right)} -
-\hat{\sigma}^{+}
+\hat{\sigma}^{\dag}
 \hat{\rho}_{at}\left(t'\right)
 \hat{\sigma}
 \bar{n}_k
@@ -81,7 +81,7 @@ e^{i\left(\Omega - \omega_k\right)
 \left.
 \hat{\sigma}
 \hat{\rho}_{at}\left(t'\right)
-\hat{\sigma}^{+}
+\hat{\sigma}^{\dag}
 \left(\bar{n}_k + 1\right)
 e^{-i\left(\Omega - \omega_k\right)
 \left(t - t'\right)}
@@ -121,16 +121,16 @@ e^{ - \nu
 \begin{eqnarray}
 \dot{\hat{\rho}}_{at} = -\frac{1}{2}\gamma \left\{
 \bar{n}\left[
-\hat{\sigma}\hat{\sigma}^{+}\hat{\rho}_{at} -
-\hat{\sigma}^{+}\hat{\rho}_{at}\hat{\sigma}
+\hat{\sigma}\hat{\sigma}^{\dag}\hat{\rho}_{at} -
+\hat{\sigma}^{\dag}\hat{\rho}_{at}\hat{\sigma}
 \right] +
 \right.
 \nonumber \\
 +
 \left.
 \left(\bar{n} + 1\right)\left[
-\hat{\sigma}^{+}\hat{\sigma}\hat{\rho}_{at} -
-\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{+}
+\hat{\sigma}^{\dag}\hat{\sigma}\hat{\rho}_{at} -
+\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{\dag}
 \right]
 \right\}
 + \mbox{э.с.}
@@ -140,8 +140,8 @@ e^{ - \nu
 Уравнение \eqref{eqCh2_99} имеет тот же вид, что и уравнение
 \eqref{eqCh2_64}, полученное ранее. Уравнения 
 полностью совпадают, если  принять $\gamma = \frac{\omega}{Q}$ и
-сделать замену $\hat{\sigma} \rightarrow \hat{a}$, $\hat{\sigma}^{+}
-\rightarrow \hat{a}^{+}$.  Это еще раз подтверждает, что окончательный
+сделать замену $\hat{\sigma} \rightarrow \hat{a}$, $\hat{\sigma}^{\dag}
+\rightarrow \hat{a}^{\dag}$.  Это еще раз подтверждает, что окончательный
 результат не зависит от природы резервуара.   
 
 При температуре резервуара  $T = 0$  фотоны отсутствуют и $\bar{n} =
@@ -150,15 +150,15 @@ e^{ - \nu
 \hat{\rho}_{at}\left(t_0\right) = 1.
 \]
 Используя свойства \eqref{eqCh2_8} - \eqref{eqCh2_task1} операторов 
-$\hat{\sigma}$ и $\hat{\sigma}^{+}$, получим   
+$\hat{\sigma}$ и $\hat{\sigma}^{\dag}$, получим   
 \begin{eqnarray}
 \dot{\rho}_{aa} = \left<a\right|\dot{\hat{\rho}}_{at}\left|a\right> =
 -\frac{1}{2}\gamma
-\left<a\right|\hat{\sigma}^{+}\hat{\sigma}\hat{\rho}_{at}\left|a\right>
+\left<a\right|\hat{\sigma}^{\dag}\hat{\sigma}\hat{\rho}_{at}\left|a\right>
 + 
 \nonumber \\
 + \frac{1}{2}\gamma
-\left<a\right|\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{+}\left|a\right>
+\left<a\right|\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{\dag}\left|a\right>
 + \mbox{к.с.} = 
 \nonumber \\
 = 
@@ -168,8 +168,8 @@ $\hat{\sigma}$ и $\hat{\sigma}^{+}$, получим
 \label{eqCh2_101}
 \end{eqnarray}
 Здесь мы использовали соотношения
-\(\hat{\sigma}^{+}\left|a\right> = 0\),
-\(\hat{\sigma}^{+}\left|b\right> = \left|a\right>\),
+\(\hat{\sigma}^{\dag}\left|a\right> = 0\),
+\(\hat{\sigma}^{\dag}\left|b\right> = \left|a\right>\),
 \(\hat{\sigma}\left|a\right> = \left|b\right>\),
 \(\hat{\sigma}\left|b\right> = 0\)
 и сопряженные им. Окончательный результат 

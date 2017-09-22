@@ -160,7 +160,7 @@ i \hbar \left( \frac{\partial \left| \phi \right>}{\partial t}\left< \phi
 
 Оператор эволюции - унитарный. Действительно:
 \begin{eqnarray}
-\hat{U}\left(t,t_0\right)\hat{U}^+\left(t,t_0\right) = 
+\hat{U}\left(t,t_0\right)\hat{U}^\dag\left(t,t_0\right) = 
 \nonumber \\
 = \exp\left( -\frac{i}{\hbar} \hat{\mathcal{H}} \left( t - t_0 \right)
 \right)
@@ -184,13 +184,13 @@ i \hbar \left( \frac{\partial \left| \phi \right>}{\partial t}\left< \phi
 \nonumber \\
 =
 \left<
-\phi_H\left(t_0\right)\right|\hat{U}^+\left(t,t_0\right)\hat{A}_S\hat{U}\left(t,t_0\right)\left|
+\phi_H\left(t_0\right)\right|\hat{U}^\dag\left(t,t_0\right)\hat{A}_S\hat{U}\left(t,t_0\right)\left|
 \phi_H\left(t_0\right) \right>,
 \nonumber
 \end{eqnarray}
 откуда с учетом $\hat{A}_H\left(t_0\right) = \hat{A}_S\left(t_0\right)$ получаем закон эволюции операторов в представлении Гейзенберга:
 \begin{equation}
-\hat{A}_H\left(t\right) = \hat{U}^+\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
+\hat{A}_H\left(t\right) = \hat{U}^\dag\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
 \label{eqAddWaveFunc_HeizenbergU}
 \end{equation}
 
@@ -199,11 +199,11 @@ i \hbar \left( \frac{\partial \left| \phi \right>}{\partial t}\left< \phi
 \begin{eqnarray}
   \frac{\partial \hat{A}_H}{\partial t} =
   \frac{i}{\hbar} \hat{\mathcal{H}}
-  \hat{U}^+\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
+  \hat{U}^\dag\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
   -
   \nonumber \\
   - \frac{i}{\hbar}
-  \hat{U}^+\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
+  \hat{U}^\dag\left(t,t_0\right)\hat{A}_H\left(t_0\right)\hat{U}\left(t,t_0\right)
   \hat{\mathcal{H}} =
   \frac{i}{\hbar} \left[\hat{\mathcal{H}}, \hat{A}_H \right]
   \label{eqAddWaveFunc_HeizenbergT}

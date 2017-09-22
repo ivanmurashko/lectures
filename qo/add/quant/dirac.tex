@@ -57,13 +57,13 @@ $\left| a \right>$,  $\left| x \right>$, $\left| \psi \right>$
 Бра- и кет-векторы связаны между собой операцией эрмитового 
 сопряжения:
 \begin{equation}
-\left| u \right> = \left( \left< u \right| \right)^{+}, \quad 
-\left< u \right| = \left( \left| u \right> \right)^{+}.
+\left| u \right> = \left( \left< u \right| \right)^{\dag}, \quad 
+\left< u \right| = \left( \left| u \right> \right)^{\dag}.
 \end{equation}
 
 В известных случаях это сводится к следующим соотношениям:
 \[
-\left( \psi\left( q \right) \right)^{+} = \psi^{*}\left( q \right)
+\left( \psi\left( q \right) \right)^{\dag} = \psi^{*}\left( q \right)
 \]
 для волновой функции в координатном представлении;
 \[
@@ -74,7 +74,7 @@ a_2 \\
 \vdots \\
 a_n
 \end{array}
- \right)^{+} = 
+ \right)^{\dag} = 
 \left( a_1^{*}, a_2^{*}, \cdots, a_n^{*}\right)
 \]
 в матричном представлении.
@@ -121,26 +121,26 @@ $\left< a \right|\left. a \right> \geq 0$.
 \end{equation}
 Сопряженное равенство имеет вид
 \begin{equation}
-\left< q \right| = \left< p \right|  \hat{L}^{+}
+\left< q \right| = \left< p \right|  \hat{L}^{\dag}
 \label{eqAddDirac_operator_property2}
 \end{equation}
-где $\hat{L}^{+}$ -  оператор, сопряженный оператору $\hat{L}$.
+где $\hat{L}^{\dag}$ -  оператор, сопряженный оператору $\hat{L}$.
 
 Приведем некоторые соотношения, справедливые для линейных 
 операторов:
 \begin{eqnarray}
 \hat{L}^{++} = \hat{L}, \quad
-\left(l \hat{L} \left| a \right> \right)^{+} = 
-l^{*} \left< a \right| \hat{L}^{+}, 
+\left(l \hat{L} \left| a \right> \right)^{\dag} = 
+l^{*} \left< a \right| \hat{L}^{\dag}, 
 \nonumber \\
-\left(\left(\hat{L_1} + \hat{L_2} \right) \left| a \right> \right)^{+} = 
-\left< a \right| \left(\hat{L_1}^{+} + \hat{L_2}^{+} \right), 
+\left(\left(\hat{L_1} + \hat{L_2} \right) \left| a \right> \right)^{\dag} = 
+\left< a \right| \left(\hat{L_1}^{\dag} + \hat{L_2}^{+} \right), 
 \nonumber \\
-\left(\left(\hat{L_1} \hat{L_2} \right) \left| a \right> \right)^{+} = 
-\left< a \right| \left(\hat{L_2}^{+} \hat{L_1}^{+} \right),
+\left(\left(\hat{L_1} \hat{L_2} \right) \left| a \right> \right)^{\dag} = 
+\left< a \right| \left(\hat{L_2}^{\dag} \hat{L_1}^{+} \right),
 \nonumber \\
-\left(\left(\hat{L_1} \hat{L_2} \hat{L_3}\right) \left| a \right> \right)^{+} = 
-\left< a \right| \left(\hat{L_3}^{+} \hat{L_2}^{+} \hat{L_1}^{+} \right), 
+\left(\left(\hat{L_1} \hat{L_2} \hat{L_3}\right) \left| a \right> \right)^{\dag} = 
+\left< a \right| \left(\hat{L_3}^{\dag} \hat{L_2}^{+} \hat{L_1}^{+} \right), 
 \mbox{ и т.д.}
 \label{eqAddDirac_propert}
 \end{eqnarray}
@@ -154,9 +154,9 @@ l^{*} \left< a \right| \hat{L}^{+},
 Для матричных элементов справедливы равенства
 \begin{equation}
 \left<a\right|\hat{L}\left|b\right>^{*} = 
-\left<b\right|\hat{L}^{+}\left|a\right>, \quad
+\left<b\right|\hat{L}^{\dag}\left|a\right>, \quad
 \left<a\right|\hat{L_1}\hat{L_2}\left|b\right>^{*} = 
-\left<b\right|\hat{L_2}^{+}\hat{L_1}^{+}\left|a\right>
+\left<b\right|\hat{L_2}^{\dag}\hat{L_1}^{+}\left|a\right>
 \end{equation}
 
 
@@ -174,7 +174,7 @@ l^{*} \left< a \right| \hat{L}^{+},
 
 Если операторы соответствуют наблюдаемым величинам, они должны быть самосопряженными:
 \begin{equation}
-\hat{L}  = \hat{L}^{+}.
+\hat{L}  = \hat{L}^{\dag}.
 \label{eqAddDirac_ermit}
 \end{equation}
 
@@ -189,7 +189,7 @@ l^{*} \left< a \right| \hat{L}^{+},
 \left. l \right>.
 \]
 С другой стороны, вспоминая про \eqref{eqAddDirac_propert}:
-$\left< l \right| \hat{L}^{+} = l^{*} \left< l \right|$, из
+$\left< l \right| \hat{L}^{\dag} = l^{*} \left< l \right|$, из
 \eqref{eqAddDirac_ermit} имеем
 \[
 \left< l \right| \hat{L} \left| l \right> = l^{*} \left< l \right|

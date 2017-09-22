@@ -29,11 +29,11 @@
 \begin{equation}
 \frac{d \hat{a}}{d t} = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
   \hat{a}\right] = -i \omega \hat{a}, \quad
-\frac{d \hat{a}^{+}}{dt} = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
-  \hat{a}^{+}\right] = i \omega \hat{a}^{+},
+\frac{d \hat{a}^{\dag}}{dt} = \frac{i}{\hbar}\left[\hat{\mathcal{H}},
+  \hat{a}^{\dag}\right] = i \omega \hat{a}^{+},
 \nonumber
 \end{equation}
-где $\omega$ - частота моды, а $\hat{a}$ и $\hat{a}^{+}$ операторы
+где $\omega$ - частота моды, а $\hat{a}$ и $\hat{a}^{\dag}$ операторы
 уничтожения и рождения.
 
 \input ./part1/interaction/fig_add3.tex
@@ -50,22 +50,22 @@
 \end{equation}
 где
 \begin{equation}
- \hat{\mathcal{H}}_0 = \hbar\omega \hat{a}^{+}\hat{a} +
-\sum_{(k)} \hbar\omega_k \hat{b}_k^{+} \hat{b}_k
+ \hat{\mathcal{H}}_0 = \hbar\omega \hat{a}^{\dag}\hat{a} +
+\sum_{(k)} \hbar\omega_k \hat{b}_k^{\dag} \hat{b}_k
 \nonumber
 \end{equation}
 гамильтониан системы без учета взаимодействия между ее частями,
 \begin{equation}
  \hat{V} = \hbar \sum_{(k)}g_k\left(
-\hat{b}_k^{+}\hat{a} + \hat{a}^{+}\hat{b}_k
+\hat{b}_k^{\dag}\hat{a} + \hat{a}^{+}\hat{b}_k
 \right)
 \label{eqPart1Ch2_LanzgevenV}
 \end{equation}
 гамильтониан взаимодействия между динамической системой и
 термостатом. Через $g_k$ в \eqref{eqPart1Ch2_LanzgevenV} обозначена
 постоянная взаимодействия для $k$-ой моды резервуара. $\hat{a}$,
-$\hat{a}^{+}$ - операторы уничтожения и рождения для поля моды,
-$\hat{b}_k$, $\hat{b}_{k}^{+}$ - операторы уничтожения и рождения для
+$\hat{a}^{\dag}$ - операторы уничтожения и рождения для поля моды,
+$\hat{b}_k$, $\hat{b}_{k}^{\dag}$ - операторы уничтожения и рождения для
 $k$-ой моды резервуара (фононов). Вакуумные члены в гамильтониане не
 учтены, т. к. в ходе вывода уравнений они взаимно сокращаются.
 
@@ -82,8 +82,8 @@ $k$-ой моды резервуара (фононов). Вакуумные чл
 \nonumber
 \end{eqnarray}
 при помощи коммутационных соотношений 
-$\left[\hat{a}, \hat{a}^{+}\right] = 1$ и 
-$\left[\hat{b}_k, \hat{b}_{k}^{+}\right] = 1$ приводятся к виду
+$\left[\hat{a}, \hat{a}^{\dag}\right] = 1$ и 
+$\left[\hat{b}_k, \hat{b}_{k}^{\dag}\right] = 1$ приводятся к виду
 \begin{eqnarray}
 \frac{d \hat{a}\left(t\right)}{d t} = -i \omega \hat{a}\left(t\right) - i\sum_{(k)}g_k
 \hat{b}_k\left(t\right),
@@ -213,16 +213,16 @@ D\left(\omega\right) \hat{A}\left(t\right)
 равновесии при температуре $T$. Тогда имеем:
 \begin{eqnarray}
 \left<\hat{b}_k\left(0\right)\right>_R = 
-\left<\hat{b}_k^{+}\left(0\right)\right>_R = 0, 
+\left<\hat{b}_k^{\dag}\left(0\right)\right>_R = 0, 
 \nonumber \\
-\left<\hat{b}_k^{+}\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R = 
+\left<\hat{b}_k^{\dag}\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R = 
 \bar{n}_k \delta_{k k'},
 \nonumber \\
-\left<\hat{b}_k\left(0\right)\hat{b}_{k'}^{+}\left(0\right)\right>_R = 
+\left<\hat{b}_k\left(0\right)\hat{b}_{k'}^{\dag}\left(0\right)\right>_R = 
 \left(\bar{n}_k + 1\right)\delta_{k k'},
 \nonumber \\
 \left<\hat{b}_k\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R = 
-\left<\hat{b}_k^{+}\left(0\right)\hat{b}_{k'}^{+}\left(0\right)\right>_R
+\left<\hat{b}_k^{\dag}\left(0\right)\hat{b}_{k'}^{+}\left(0\right)\right>_R
 = 0,
 \label{eqPart1Ch2_LanzgevenPropertyF}
 \end{eqnarray}
@@ -238,12 +238,12 @@ e^{-i \left(\omega_k - \omega\right)t}.
 Используя \eqref{eqPart1Ch2_LanzgevenPropertyF}, легко видеть
 \begin{eqnarray}
 \left<\hat{F}\left(t\right)\right>_R =
-\left<\hat{F}^{+}\left(t\right)\right>_R  = 0,
+\left<\hat{F}^{\dag}\left(t\right)\right>_R  = 0,
 \nonumber \\
-\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
 \nonumber \\
 = \sum_{k}\sum_{k'}g_k g_{k'}
-\left<\hat{b}_k^{+}\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R 
+\left<\hat{b}_k^{\dag}\left(0\right)\hat{b}_{k'}\left(0\right)\right>_R 
 e^{i\left(\omega_k - \omega\right)t} 
  e^{-i\left(\omega_{k'} - \omega\right)t'} =
 \nonumber \\
@@ -268,7 +268,7 @@ $\gamma = 4 \pi g^2\left(\omega\right)D\left(\omega\right)$.
 \frac{\gamma \bar{n}_{T}}{2}$, то последнее уравнение системы
 \eqref{eqPart1Ch2_LanzgevenCorrelations} можно записать в виде
 \begin{equation}
-\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
 \mathcal{D} \delta\left(t - t'\right). 
 \nonumber
 \end{equation}
@@ -278,14 +278,14 @@ $\gamma = 4 \pi g^2\left(\omega\right)D\left(\omega\right)$.
 
 Подобным образом доказывается
 \begin{equation}
-\left<\hat{F}\left(t\right)\hat{F}^{+}\left(t'\right)\right>_R = 
+\left<\hat{F}\left(t\right)\hat{F}^{\dag}\left(t'\right)\right>_R = 
 \frac{\gamma\left(\bar{n}_{T} + 1\right)}{2} \delta\left(t - t'\right)
 \label{eqPart1Ch2_Lanzgeven_Task1}
 \end{equation}
 и
 \begin{equation}
 \left<\hat{F}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
-\left<\hat{F}^{+}\left(t\right)\hat{F}^{+}\left(t'\right)\right>_R = 0.
+\left<\hat{F}^{\dag}\left(t\right)\hat{F}^{+}\left(t'\right)\right>_R = 0.
 \label{eqPart1Ch2_Lanzgeven_Task2}
 \end{equation}
 Таким образом, в нашем приближении, шум является
@@ -293,11 +293,11 @@ $\delta$-коррелированым.
 
 Нам еще понадобится корреляционная функция вида
 \(
-\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t'\right)\right>_R 
+\left<\hat{F}^{\dag}\left(t\right)\hat{A}\left(t'\right)\right>_R 
 \) 
 - необходимая для вывода уравнения, которому удовлетворяет 
 \(
-\left<\hat{A}^{+}\left(t\right)\hat{A}\left(t'\right)\right>_R 
+\left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t'\right)\right>_R 
 \). Для этого проинтегрируем уравнение для $\hat{A}\left(t\right)$
 \eqref{eqPart1Ch2_LanzgevenAeq} и в результате при помощи
 операционного исчисления получаем
@@ -306,95 +306,95 @@ $\delta$-коррелированым.
 \int_0^t d t' e^{-\frac{\gamma}{2}\left(t - t'\right)} \hat{F}\left(t'\right).
 \nonumber
 \end{equation} 
-Помножим это выражение на $\hat{F}^{+}\left(t\right)$ и усредним по
+Помножим это выражение на $\hat{F}^{\dag}\left(t\right)$ и усредним по
 термостату. Получим
 \begin{eqnarray} 
-\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R = 
 \int_0^t  
-\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R 
+\left<\hat{F}^{\dag}\left(t\right)\hat{F}\left(t'\right)\right>_R 
 e^{-\frac{\gamma}{2}\left(t - t'\right)}
 d t' +
 \nonumber \\
-+ \left<\hat{F}^{+}\left(t\right)\hat{A}\left(0\right)\right>_R e^{-\frac{\gamma}{2}t}.
++ \left<\hat{F}^{\dag}\left(t\right)\hat{A}\left(0\right)\right>_R e^{-\frac{\gamma}{2}t}.
 \label{eqPart1Ch2_LanzgevenFACorr}
 \end{eqnarray} 
 Последний член в \eqref{eqPart1Ch2_LanzgevenFACorr} равен $0$, т. к. 
-$\hat{F}^{+}\left(t\right)$ и $\hat{A}\left(0\right)$ независимы,
-%\footnote{$\hat{F}^{+}\left(t\right)$ в более поздний момент времени
+$\hat{F}^{\dag}\left(t\right)$ и $\hat{A}\left(0\right)$ независимы,
+%\footnote{$\hat{F}^{\dag}\left(t\right)$ в более поздний момент времени
 % не может влиять на $\hat{A}\left(0\right)$ в начальный момент
 % времени} 
  а их средние равны $0$. Принимая во внимание второе уравнение системы 
 \eqref{eqPart1Ch2_LanzgevenCorrelations} т. е.
 \(
-\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
 \frac{\gamma \bar{n}_{T}}{2} \delta\left(t - t'\right),
 \)
 получим
 \begin{equation}
-\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R = 
 \frac{\gamma \bar{n}_{T}}{2}.
 \nonumber
 \end{equation}
 Теперь можно рассмотреть корреляционную функцию 
 \(
-\left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R
+\left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R
 \). Дифференцируя эту функцию по времени, получим
 \begin{equation}
-\frac{d \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
+\frac{d \left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
 t}=
-\left<\frac{d \hat{A}^{+}\left(t\right)\hat{A}\left(t\right)}{d
+\left<\frac{d \hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)}{d
 t}\right>_R =
-\left<\frac{d \hat{A}^{+}\left(t\right)}{d
+\left<\frac{d \hat{A}^{\dag}\left(t\right)}{d
 t} \hat{A}\left(t\right) \right>_R + 
-\left<\hat{A}^{+}\left(t\right)\frac{d \hat{A}\left(t\right)}{d
+\left<\hat{A}^{\dag}\left(t\right)\frac{d \hat{A}\left(t\right)}{d
 t}  \right>_R.
 \label{eqPart1Ch2_Lanzgeven_dAA}
 \end{equation}
 Далее воспользуемся уравнением \eqref{eqPart1Ch2_LanzgevenAeq} и
 сопряженным ему, в результате получим
 \begin{equation}
-\frac{d \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
+\frac{d \left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
 t}=
-- \gamma \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R
-+ \left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R + 
-\left<\hat{A}^{+}\left(t\right)\hat{F}\left(t\right)\right>_R.
+- \gamma \left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R
++ \left<\hat{F}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R + 
+\left<\hat{A}^{\dag}\left(t\right)\hat{F}\left(t\right)\right>_R.
 \nonumber
 \end{equation}
 Учитывая выражения 
 \begin{equation}
-\left<\hat{F}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R =
-\left<\hat{A}^{+}\left(t\right)\hat{F}\left(t\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R =
+\left<\hat{A}^{\dag}\left(t\right)\hat{F}\left(t\right)\right>_R = 
 \frac{\gamma \bar{n}_T}{2},
 \nonumber
 \end{equation}
 окончательно имеем
 \begin{equation}
-\frac{d \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
+\frac{d \left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R}{d
 t}=
-- \gamma \left<\hat{A}^{+}\left(t\right)\hat{A}\left(t\right)\right>_R
+- \gamma \left<\hat{A}^{\dag}\left(t\right)\hat{A}\left(t\right)\right>_R
 + \gamma \bar{n}_T.
 \nonumber
 \end{equation}
 Подобным образом можно получить
 \begin{equation}
-\frac{d \left<\hat{A}\left(t\right)\hat{A}^{+}\left(t\right)\right>_R}{d
+\frac{d \left<\hat{A}\left(t\right)\hat{A}^{\dag}\left(t\right)\right>_R}{d
 t}=
-- \gamma \left<\hat{A}\left(t\right)\hat{A}^{+}\left(t\right)\right>_R
+- \gamma \left<\hat{A}\left(t\right)\hat{A}^{\dag}\left(t\right)\right>_R
 + \gamma \left(\bar{n}_T + 1\right).
 \label{eqPart1Ch2_Lanzgeven_Task3}
 \end{equation}
 Вычитая эти выражения одно из другого, получим для коммутатора
 \begin{equation}
-\frac{d \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R}{d
+\frac{d \left<\left[\hat{A}\left(t\right),\hat{A}^{\dag}\left(t\right)\right]\right>_R}{d
 t}=
-\gamma \left( 1 - \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R
+\gamma \left( 1 - \left<\left[\hat{A}\left(t\right),\hat{A}^{\dag}\left(t\right)\right]\right>_R
 \right).
 \label{eqPart1Ch2_Lanzgeven_CommutatorAA}
 \end{equation}
 Из уравнения \eqref{eqPart1Ch2_Lanzgeven_CommutatorAA} следует, что
 если в начальный момент времени 
 \[
-\left<\left[\hat{A}\left(0\right),\hat{A}^{+}\left(0\right)\right]\right>_R
+\left<\left[\hat{A}\left(0\right),\hat{A}^{\dag}\left(0\right)\right]\right>_R
 = 1,
 \]
 т. е. коммутационные соотношения выполняются, то эти соотношения будут
@@ -405,21 +405,21 @@ t}=
 квантовые шумы. В этом случае уравнение
 \eqref{eqPart1Ch2_Lanzgeven_CommutatorAA} приняло бы вид
 \begin{equation}
-\frac{d \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R}{d
+\frac{d \left<\left[\hat{A}\left(t\right),\hat{A}^{\dag}\left(t\right)\right]\right>_R}{d
 t}=
-- \gamma \left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R,
+- \gamma \left<\left[\hat{A}\left(t\right),\hat{A}^{\dag}\left(t\right)\right]\right>_R,
 \nonumber
 \end{equation}
 решение которого имеет вид
 \begin{equation}
-\left<\left[\hat{A}\left(t\right),\hat{A}^{+}\left(t\right)\right]\right>_R
+\left<\left[\hat{A}\left(t\right),\hat{A}^{\dag}\left(t\right)\right]\right>_R
 = 
-\left<\left[\hat{A}\left(0\right),\hat{A}^{+}\left(0\right)\right]\right>_R
+\left<\left[\hat{A}\left(0\right),\hat{A}^{\dag}\left(0\right)\right]\right>_R
 e^{- \gamma t}= e^{- \gamma t}.
 \nonumber
 \end{equation}
 Это означает, что при достаточно большом времени операторы $\hat{A}$ и
-$\hat{A}^{+}$ коммутируют, чего на самом деле не наблюдается. По этой
+$\hat{A}^{\dag}$ коммутируют, чего на самом деле не наблюдается. По этой
 причине учет квантового шумового члена обязателен.
 
 
@@ -429,12 +429,12 @@ $\hat{A}^{+}$ коммутируют, чего на самом деле не н�
 \begin{eqnarray}
 \left<\hat{E}\left(t\right)\right>_R 
 = \left< E_0 sin\,kz \left( \hat{a}\left(t\right) +
-\hat{a}^{+}\left(t\right)\right)\right>_R  = 
+\hat{a}^{\dag}\left(t\right)\right)\right>_R  = 
 \nonumber \\
 = E_0 sin\,kz
 \left(\left<\hat{A}\left(t\right)\right>_R e^{-i \omega t}
 +
-\left<\hat{A}^{+}\left(t\right)\right>_R e^{i \omega t}
+\left<\hat{A}^{\dag}\left(t\right)\right>_R e^{i \omega t}
 \right),
 \nonumber
 \end{eqnarray}
@@ -447,7 +447,7 @@ $\hat{A}^{+}$ коммутируют, чего на самом деле не н�
 \end{equation}
 т. к. $\left<\hat{F}\left(t\right)\right>_R = 0$. Таким образом со
 временем $\left<\hat{A}\left(t\right)\right>_R$ и
-$\left<\hat{A}^{+}\left(t\right)\right>_R$ а вместе с ними и  
+$\left<\hat{A}^{\dag}\left(t\right)\right>_R$ а вместе с ними и  
 $\left<\hat{E}\left(t\right)\right>_R$ стремятся к нулю:
 \begin{equation}
 \left<\hat{E}\left(t\right)\right>_R \rightarrow 0.
@@ -457,14 +457,14 @@ $\left<\hat{E}\left(t\right)\right>_R$ стремятся к нулю:
 \subsection{Флуктационно-диссипационная формула}
 Нами было получено выражение \eqref{eqPart1Ch2_LanzgevenCorrelations}:
 \begin{equation}
-\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
+\left<\hat{F}^{\dag}\left(t\right)\hat{F}\left(t'\right)\right>_R = 
 \frac{\gamma \bar{n}_{T}}{2} \delta\left(t - t'\right).
 \nonumber
 \end{equation}
 Интегрируя обе части по $d t'$, получим
 \begin{equation}
 \gamma =
-\frac{2}{\bar{n}_T}\int_0^{\infty}\left<\hat{F}^{+}\left(t\right)\hat{F}\left(t'\right)\right>_R
+\frac{2}{\bar{n}_T}\int_0^{\infty}\left<\hat{F}^{\dag}\left(t\right)\hat{F}\left(t'\right)\right>_R
 d t',
 \label{eqPart1Ch2_LanzgevenGamma}
 \end{equation}

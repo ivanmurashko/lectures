@@ -35,15 +35,15 @@ $\omega_p$. Таким образом условие равенства част
 \end{equation}
 Тогда оператор числа фотонов равен
 \begin{eqnarray}
-\hat{a}_2^{+}\hat{a}_2 = 
-\left(t \hat{a}_0^{+} + r\hat{a}_1^{+}\right)
+\hat{a}_2^{\dag}\hat{a}_2 = 
+\left(t \hat{a}_0^{\dag} + r\hat{a}_1^{+}\right)
 \left(t \hat{a}_0 + r\hat{a}_1\right) = 
 \nonumber \\
 =
-t^2\hat{a}_0^{+}\hat{a}_0 + r t \left(
-\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_0 
+t^2\hat{a}_0^{\dag}\hat{a}_0 + r t \left(
+\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_0 
 \right) +
-r^2\hat{a}_1^{+}\hat{a}_1.
+r^2\hat{a}_1^{\dag}\hat{a}_1.
 \nonumber
 \end{eqnarray}
 Положим, что гомодин находится в когерентном состоянии, а сигнал в
@@ -53,13 +53,13 @@ r^2\hat{a}_1^{+}\hat{a}_1.
 \left|\alpha_p\right> \left|r, 0\right>.
 \]
 Среднее значение оператора числа фотонов $\hat{n}_2 =
-\hat{a}_2^{+}\hat{a}_2$ в таком случае будет равно:
+\hat{a}_2^{\dag}\hat{a}_2$ в таком случае будет равно:
 \begin{eqnarray}
 \left<\hat{n}_2\right> = 
-\left<\psi\right|\hat{a}_2^{+}\hat{a}_2\left|\psi\right> = 
+\left<\psi\right|\hat{a}_2^{\dag}\hat{a}_2\left|\psi\right> = 
 \nonumber \\
 =
-t^2\left<r, 0\right|\hat{a}_0^{+}\hat{a}_0\left|r, 0\right> + 
+t^2\left<r, 0\right|\hat{a}_0^{\dag}\hat{a}_0\left|r, 0\right> + 
 r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
 \left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>,
 \label{eqPart3SqueezedAdd3}
@@ -68,7 +68,7 @@ r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
 \[
 \hat{X}\left(\varphi\right) = \frac{1}{2}\left(
 \hat{a}_0 e^{-i \varphi} +
-\hat{a}_0^{+} e^{i \varphi}
+\hat{a}_0^{\dag} e^{i \varphi}
 \right),
 \]
 \[
@@ -80,17 +80,17 @@ r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
 $\varphi = \frac{\pi}{2}$ имеем
 \begin{eqnarray}
 \hat{X}\left(0\right) = 
-\frac{1}{2}\left(\hat{a}_0 + \hat{a}_0^{+}\right) = \hat{X}_1,
+\frac{1}{2}\left(\hat{a}_0 + \hat{a}_0^{\dag}\right) = \hat{X}_1,
 \nonumber \\
 \hat{X}\left(\frac{\pi}{2}\right) = 
-\frac{1}{2i}\left(\hat{a}_0 - \hat{a}_0^{+}\right) = \hat{X}_2,
+\frac{1}{2i}\left(\hat{a}_0 - \hat{a}_0^{\dag}\right) = \hat{X}_2,
 \nonumber
 \end{eqnarray}
 т. е меняя фазовращателем фазу гомодина, можно выделить ту или иную
 квадратурную составляющие.
 
 Равенство \eqref{eqPart3SqueezedAdd3} содержит три члена, содержащие 
-$\left<\hat{a}_0^{+}\hat{a}_0\right>$ - среднее число фотонов в моде
+$\left<\hat{a}_0^{\dag}\hat{a}_0\right>$ - среднее число фотонов в моде
 сигнала, $r^2\left|\alpha_p\right|^2$ - среднее число фотонов в моде
 гомодина и интерференционный член 
 $\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>$,
@@ -98,7 +98,7 @@ $\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>$,
 интенсивность гомодина настолько велика, что 
 \[
 r^2 \left|\alpha_p\right|^2 \gg 
-\left<\hat{a}_0^{+}\hat{a}_0\right>
+\left<\hat{a}_0^{\dag}\hat{a}_0\right>
 \]
 тогда первым членом в \eqref{eqPart3SqueezedAdd3} можно пренебречь. В
 этом случае среднее число фотонов, поступающих на фотодетектор, равно
@@ -183,8 +183,8 @@ $r^2 \left|\alpha_p\right|^2 4 t^2
 $D^{(3)}$, и сигналы, идущие с каждого фотоэлемента, вычитаются. Такими
 образом, на выходе сигнал определяется средним значением оператора
 \begin{equation}
-\hat{n}_{23} = \hat{a}_2^{+}\hat{a}_2 - 
-\hat{a}_3^{+}\hat{a}_3.
+\hat{n}_{23} = \hat{a}_2^{\dag}\hat{a}_2 - 
+\hat{a}_3^{\dag}\hat{a}_3.
 \nonumber
 \end{equation}
 Операторы $\hat{a}_2$ и $\hat{a}_3$ связаны  делительным зеркалом с
@@ -200,29 +200,29 @@ $D^{(3)}$, и сигналы, идущие с каждого фотоэлеме�
 \begin{eqnarray}
 \hat{n}_{23} = \frac{1}{2}
 \left(
-\left(\hat{a}_0^{+} + \hat{a}_1^{+}\right)
+\left(\hat{a}_0^{\dag} + \hat{a}_1^{+}\right)
 \left(\hat{a}_0 + \hat{a}_1\right)
 -
-\left(-\hat{a}_0^{+} + \hat{a}_1^{+}\right)
+\left(-\hat{a}_0^{\dag} + \hat{a}_1^{+}\right)
 \left(-\hat{a}_0 + \hat{a}_1\right)
 \right) = 
 \nonumber \\
 =
 \frac{1}{2}
 \left(
-\hat{a}_0^{+}\hat{a}_0 + \hat{a}_1^{+}\hat{a}_0
+\hat{a}_0^{\dag}\hat{a}_0 + \hat{a}_1^{+}\hat{a}_0
 +
-\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_1
+\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_1
 -
 \left(
-\hat{a}_0^{+}\hat{a}_0 - \hat{a}_1^{+}\hat{a}_0
--\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_1
+\hat{a}_0^{\dag}\hat{a}_0 - \hat{a}_1^{+}\hat{a}_0
+-\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_1
 \right)
 \right) = 
 \nonumber \\
-=\hat{a}_0^{+}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_0 = 
+=\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{+}\hat{a}_0 = 
 \left(
-\hat{a}_0^{+}e^{i\varphi} + \hat{a}_0 e^{- i\varphi}
+\hat{a}_0^{\dag}e^{i\varphi} + \hat{a}_0 e^{- i\varphi}
 \right)\left|\alpha_H\right|,
 \nonumber
 \end{eqnarray}
@@ -240,7 +240,7 @@ $\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).
 простоты положим $\varphi = 0$. В этом случае 
 \[
 \hat{n}_{23} =
-\left(\hat{a}_0 + \hat{a}_0^{+}\right) \left|\alpha_H\right| = 
+\left(\hat{a}_0 + \hat{a}_0^{\dag}\right) \left|\alpha_H\right| = 
 2 \hat{X}_1 \left|\alpha_H\right|.
 \]
 Это означает, что мы рассматриваем случай сжатия квадратурной
@@ -250,13 +250,13 @@ $\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).
 \left<\hat{n}_{23}\right> = 
 2 \left|\alpha_H\right|\left<\hat{X}_1\right> = 
 \left|\alpha_H\right|\left<r, 0\right|\hat{a}_0 +
-\hat{a}_0^{+}\left|r, 0\right> =
+\hat{a}_0^{\dag}\left|r, 0\right> =
 \nonumber \\
 =
 \left|\alpha_H\right|\left<0\right|
-\hat{S}^{+}\left(r\right)
+\hat{S}^{\dag}\left(r\right)
 \left(\hat{a}_0 +
-\hat{a}_0^{+}\right)
+\hat{a}_0^{\dag}\right)
 \hat{S}\left(r\right)
 \left|0\right> =
 \nonumber \\
@@ -265,11 +265,11 @@ $\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).
 \left(
 \left<0\right|
 \hat{a}_0 ch\,r -
-\hat{a}_0^{+} sh\,r
+\hat{a}_0^{\dag} sh\,r
 \left|0\right> 
 +
 \left<0\right|
-\hat{a}_0^{+} ch\,r -
+\hat{a}_0^{\dag} ch\,r -
 \hat{a}_0 sh\,r
 \left|0\right> 
 \right)
@@ -277,7 +277,7 @@ $\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).
 \nonumber
 \end{eqnarray}
 т. к. $\hat{a}_0\left|0\right> = 0$, 
-$\left<0\right|\hat{a}_0^{+} = 0$.
+$\left<0\right|\hat{a}_0^{\dag} = 0$.
 Таким образом, среднее значение $\left<\hat{n}_{23}\right> =
 0$. Однако средний квадрат не равен 0. Он выражает шумы, ограничивающие
 точность измерений.
@@ -287,12 +287,12 @@ $\left<0\right|\hat{a}_0^{+} = 0$.
 \begin{eqnarray}
 \left(\Delta X_{1,2}\right)^2 = 
 \left<r,
-0\right|\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{+}\right)^2\left|r,
+0\right|\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)^2\left|r,
 0\right> -
 \nonumber \\
 -
 \left<r,
-0\right|\frac{1}{2}\left(\hat{a}_0\pm\hat{a}_0^{+}\right)\left|r,
+0\right|\frac{1}{2}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)\left|r,
 0\right>^2.
 \label{eqPart3SqueezedAddAdd5}
 \end{eqnarray}
@@ -300,18 +300,18 @@ $\left<0\right|\hat{a}_0^{+} = 0$.
 \eqref{eqPart3SqueezedAddAdd5} равен нулю, получаем:
 \begin{eqnarray}
 \left(\Delta X_{1,2}\right)^2 = 
-\left<0\right|\hat{S}^{+}\left(r, 0\right)
-\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{+}\right)^2
+\left<0\right|\hat{S}^{\dag}\left(r, 0\right)
+\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)^2
 \hat{S}\left(r, 0\right)
 \left|0\right> = 
 \nonumber \\
 =
-\left<0\right|\hat{S}^{+}\left(r, 0\right)
+\left<0\right|\hat{S}^{\dag}\left(r, 0\right)
 \frac{1}{4}
-\left(\hat{a}_0\pm\hat{a}_0^{+}\right)
-\hat{S}^{+}\left(r, 0\right)
+\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)
+\hat{S}^{\dag}\left(r, 0\right)
 \hat{S}\left(r, 0\right)
-\left(\hat{a}_0\pm\hat{a}_0^{+}\right)
+\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)
 \hat{S}\left(r, 0\right)
 \left|0\right>.
 \label{eqPart3SqueezedAddAdd6}
@@ -321,33 +321,33 @@ $\left(\Delta X_{1,2}\right)^2$, нужно вычислить средние:
 \begin{eqnarray}
 \left<\hat{a}_0\right> = 
 \left<0\right|
-\hat{S}^{+}\left(r, 0\right)
+\hat{S}^{\dag}\left(r, 0\right)
 \hat{a}_0
 \hat{S}\left(r, 0\right)
 \left|0\right> = 
 \left<0\right|
-\hat{a}_0 ch\,r - \hat{a}_0^{+} sh\,r
+\hat{a}_0 ch\,r - \hat{a}_0^{\dag} sh\,r
 \left|0\right> = 0,
 \nonumber \\
-\left<\hat{a}_0^{+}\right> = 
+\left<\hat{a}_0^{\dag}\right> = 
 \left<0\right|
-\hat{a}_0^{+} ch\,r - \hat{a}_0 sh\,r
+\hat{a}_0^{\dag} ch\,r - \hat{a}_0 sh\,r
 \left|0\right> = 0,
 \label{eqPart3SqueezedAddAdd7}
 \end{eqnarray}
 т. к. $\hat{a}_0\left|0\right> = 0$, 
-$\left<0\right|\hat{a}_0^{+} = 0$.
+$\left<0\right|\hat{a}_0^{\dag} = 0$.
 
 Таким же образом можно показать
 \begin{eqnarray}
-\left<\hat{a}_0^{+}\hat{a}_0\right> = sh^2 r,
+\left<\hat{a}_0^{\dag}\hat{a}_0\right> = sh^2 r,
 \nonumber \\
-\left<\hat{a}_0\hat{a}_0^{+}\right> = 
-1 + \left<\hat{a}_0^{+}\hat{a}_0\right> =
+\left<\hat{a}_0\hat{a}_0^{\dag}\right> = 
+1 + \left<\hat{a}_0^{\dag}\hat{a}_0\right> =
 1 + sh^2 r = ch^2 r,
 \nonumber \\
 \left<\hat{a}_0\hat{a}_0\right> = 
-\left<\hat{a}_0^{+}\hat{a}_0^{+}\right>^{*} = - ch\,r sh\,r.
+\left<\hat{a}_0^{\dag}\hat{a}_0^{+}\right>^{*} = - ch\,r sh\,r.
 \label{eqPart3SqueezedAddAdd8}
 \end{eqnarray}
 Преобразуя \eqref{eqPart3SqueezedAddAdd6} при помощи
