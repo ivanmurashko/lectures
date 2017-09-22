@@ -13,37 +13,37 @@
 \autoref{figQuantCompGroverPhaseInvImpl}. Предложенная схема
 осуществляет следующее преобразование:
 \begin{equation}
-\left|x\right>\otimes\left|b\right> \rightarrow 
-\left|x\right>\otimes\left|b\otimes f\left(x\right)\right>.
+\ket{x}\otimes\ket{b} \rightarrow 
+\ket{x}\otimes\left|b\otimes f\left(x\right)\right>.
 \nonumber
 \end{equation}
 
-Для случая $\left|b\right> = \left|-\right> = 
-\frac{\left|0\right> - \left|1\right>}{\sqrt{2}}$ имеем
+Для случая $\ket{b} = \ket{-} = 
+\frac{\ket{0} - \ket{1}}{\sqrt{2}}$ имеем
 \begin{eqnarray}
-\left|x\right>\otimes\left|-\right> \rightarrow 
-\left|x\right>\otimes\left(\frac{\left|0\otimes 0\right> -
+\ket{x}\otimes\ket{-} \rightarrow 
+\ket{x}\otimes\left(\frac{\left|0\otimes 0\right> -
   \left|1\otimes 0\right>}{\sqrt{2}}\right) = 
 \nonumber \\
-= \left|x\right>\otimes\left(\frac{\left|0\right> -
-  \left|1\right>}{\sqrt{2}}\right) =
-\left|x\right>\otimes\left|-\right>
+= \ket{x}\otimes\left(\frac{\ket{0} -
+  \ket{1}}{\sqrt{2}}\right) =
+\ket{x}\otimes\ket{-}
 , x \ne x^{\ast},
 \nonumber \\
-\left|x\right>\otimes\left|-\right> \rightarrow 
-\left|x\right>\otimes\left(\frac{\left|0\otimes 1\right> -
+\ket{x}\otimes\ket{-} \rightarrow 
+\ket{x}\otimes\left(\frac{\left|0\otimes 1\right> -
   \left|1\otimes 1\right>}{\sqrt{2}}\right) = 
 \nonumber \\
-= \left|x\right>\otimes\left(\frac{\left|1\right> -
-  \left|0\right>}{\sqrt{2}}\right) =
-- \left|x\right>\otimes\left|-\right>
+= \ket{x}\otimes\left(\frac{\ket{1} -
+  \ket{0}}{\sqrt{2}}\right) =
+- \ket{x}\otimes\ket{-}
 , x = x^{\ast},
 \nonumber
 \end{eqnarray}
 т. о. мы имеем следующее преобразование
 \begin{equation}
-\left|x\right>\otimes\left|-\right> \rightarrow 
-\left(-1\right)^{f\left(x\right)}\left|x\right>\otimes\left|-\right>.
+\ket{x}\otimes\ket{-} \rightarrow 
+\left(-1\right)^{f\left(x\right)}\ket{x}\otimes\ket{-}.
 \label{eqQuantCompGroverPhaseInvImpl}
 \end{equation}
 
@@ -58,22 +58,22 @@
 $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 0$, т. о.
 \begin{eqnarray}
-\hat{U}_{x \ne 0} \left|x\right>\otimes\left|-\right> 
-= \left|x\right>\otimes\left|-\right>, x = 0,
+\hat{U}_{x \ne 0} \ket{x}\otimes\ket{-} 
+= \ket{x}\otimes\ket{-}, x = 0,
 \nonumber \\
-\hat{U}_{x \ne 0} \left|x\right>\otimes\left|-\right> 
-= - \left|x\right>\otimes\left|-\right>, x \ne 0,
+\hat{U}_{x \ne 0} \ket{x}\otimes\ket{-} 
+= - \ket{x}\otimes\ket{-}, x \ne 0,
 \nonumber
 \end{eqnarray}
 т. е. матрица преобразования выглядит следующим образом
 \begin{eqnarray}
 \hat{U}_{x \ne 0} = 
 \begin{pmatrix}
-1 \otimes \left|-\right> & 0 & 0 & \cdots & 0 \\
-0 & -1 \otimes \left|-\right>  & 0 & \cdots & 0 \\
-0 & 0 & -1 \otimes \left|-\right>   & \cdots & 0 \\
+1 \otimes \ket{-} & 0 & 0 & \cdots & 0 \\
+0 & -1 \otimes \ket{-}  & 0 & \cdots & 0 \\
+0 & 0 & -1 \otimes \ket{-}   & \cdots & 0 \\
 \vdots & \vdots & \vdots & \ddots & \vdots \\
-0 & 0 & 0  & \cdots & -1 \otimes \left|-\right>  \\
+0 & 0 & 0  & \cdots & -1 \otimes \ket{-}  \\
 \end{pmatrix}
 =
 \nonumber \\
@@ -94,7 +94,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 0 & 0 & 0  & \cdots & 1  \\
 \end{pmatrix}
 \right\}
-\otimes \left|-\right> 
+\otimes \ket{-} 
 . 
 \nonumber
 \end{eqnarray}
@@ -118,7 +118,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 0 & 0 & 0  & \cdots & 1  \\
 \end{pmatrix}
 \right\}
-\otimes \left|-\right>
+\otimes \ket{-}
 \hat{H}^{\otimes n}
 =
 \nonumber \\
@@ -135,7 +135,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 \hat{H}^{\otimes n}
 - \hat{H}^{\otimes n} \hat{I} \hat{H}^{\otimes n}
 \right\}
-\otimes \left|-\right>
+\otimes \ket{-}
  = 
 \nonumber \\
 =
@@ -148,7 +148,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 \frac{2}{N} & \frac{2}{N} & \frac{2}{N} & \cdots & \frac{2}{N} \\
 \end{pmatrix} - \hat{I}
 \right\}
-\otimes \left|-\right>
+\otimes \ket{-}
 =
 \nonumber \\
 =
@@ -161,7 +161,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 \frac{2}{N} & \frac{2}{N} & \frac{2}{N} & \cdots & \frac{2}{N} - 1\\
 \end{pmatrix}
 \right\}
-\otimes \left|-\right>.
+\otimes \ket{-}.
 \label{eqQuantCompGroverMeanInvImpl}
 \end{eqnarray}
 
@@ -170,7 +170,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 \eqref{eqQuantCompGroverMeanInvImpl} получим:
 \begin{eqnarray}
 \hat{H}^{\otimes n}\hat{U}_{x \ne
-  0}\hat{H}^{\otimes n} \sum_x \alpha_x \left| x \right> = 
+  0}\hat{H}^{\otimes n} \sum_x \alpha_x \ket{ x } = 
 \nonumber \\
 =
 \begin{pmatrix}
@@ -197,7 +197,7 @@ $f\left(x\right) = 0$, при $x = 0$ и $f\left(x\right) = 1$, при $x \ne
 \vdots \\
 \frac{2}{N}\sum_x\alpha_x - \alpha_{N-1}\\
 \end{pmatrix} = 
-\sum_x \left(2 \mathcal{M} - \alpha_x \right)\left| x \right>.
+\sum_x \left(2 \mathcal{M} - \alpha_x \right)\ket{ x }.
 \nonumber
 \end{eqnarray}
 Т. о. схема предложенная на \autoref{figQuantCompGroverMeanInvImpl}

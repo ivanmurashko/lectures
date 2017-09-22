@@ -46,15 +46,15 @@ n H = n \left(- \frac{1}{2} log \frac{1}{2} - \frac{1}{2} log
 некоторым набором состояний 
 \begin{equation}
 \left\{
-\left|a_1\right>, \dotsc \left|a_k\right>.
+\ket{a_1}, \dotsc \ket{a_k}.
 \right\}
 \label{eqSchumacherAlphabet}
 \end{equation}
 Каждое из состояний появляется с некоторой вероятностью $p_k =
-p\left(\left|a_k\right>\right)$. Таким образом мы можем записать
+p\left(\ket{a_k}\right)$. Таким образом мы можем записать
 матрицу плотности для каждого символа нашего сообщения:
 \begin{equation}
-\hat{\rho} = \sum_k p_k \left|a_k\right>\left<a_k\right|.
+\hat{\rho} = \sum_k p_k \ket{a_k}\bra{a_k}.
 \label{eqQuantCodeMatrix}
 \end{equation}
 Сообщение, состоящее из $n$ символов, имеет следующую матрицу плотности
@@ -74,18 +74,18 @@ n H = - n Sp \left(\hat{\rho} log \hat{\rho} \right),
 состояний фотона. Допустим, что наш алфавит состоит из двух
 состояний:
 \begin{enumerate}
-\item $\left|x\right>$ - фотон поляризован по оси $x$ 
-\item $\left|y\right>$ - фотон поляризован по оси $y$
+\item $\ket{x}$ - фотон поляризован по оси $x$ 
+\item $\ket{y}$ - фотон поляризован по оси $y$
 \end{enumerate}
-При это предполагаем, что состояние $\left|x\right>$ встречается с
-вероятностью $p_{\left|x\right>} = p$, а состояние $\left|y\right>$ - с
-вероятностью $p_{\left|y\right>} = 1 - p_{\left|x\right>} = 1 - p$.
+При это предполагаем, что состояние $\ket{x}$ встречается с
+вероятностью $p_{\ket{x}} = p$, а состояние $\ket{y}$ - с
+вероятностью $p_{\ket{y}} = 1 - p_{\ket{x}} = 1 - p$.
 Таким образом матрица плотности \index{Матрица плотности}
 \eqref{eqQuantCodeMatrix} будет
 иметь вид
 \begin{equation}
-\hat{\rho} = p \left|x\right>\left<x\right| + \left(1 - p\right)
-\left|y\right>\left<y\right|.
+\hat{\rho} = p \ket{x}\bra{x} + \left(1 - p\right)
+\ket{y}\bra{y}.
 \label{eqQuantCodeMatrixQBIT}
 \end{equation}
 В этом случае удобно

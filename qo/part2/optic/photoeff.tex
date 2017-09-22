@@ -56,43 +56,43 @@ $\hat{a}$, т. е. заменить $\hat{\vec{E}}$ на $\hat{\vec{E}}^{(+)}$:
 многомодовое поле содержит $\left\{n_k\right\}$ фотонов, то есть начальным
 вектором состояния является 
 \begin{equation}
-\left|i\right> = \left|\left\{n_k\right\}\right> \left|b\right>
+\ket{i} = \left|\left\{n_k\right\}\right> \ket{b}
 \label{eqCh4_4}
 \end{equation}
 
 После взаимодействия система атом-поле будет находится в состоянии
-$\left|f\right>$ (детализировать его мы не будем). Вероятность
+$\ket{f}$ (детализировать его мы не будем). Вероятность
 перехода в единицу времени в первом порядке теории возмущений в
 соответствии с \myref{addQuantGoldenRuleFermi}{золотым правилом Ферми}
 дается квадратом модуля матричного элемента перехода: 
 \begin{eqnarray}
-\left|\left<f\right|\hat{\mathcal{H}}_{ED}\left|i\right>\right|^2 =
-\left<f\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\left|i\right>
-\left<f\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\left|i\right>^{*}
+\left|\bra{f}\hat{\mathcal{H}}_{ED}\ket{i}\right|^2 =
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}^{*}
 = 
 \nonumber \\
 =
-\left<f\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\left|i\right>
-\left<i\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\left|f\right>
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
+\bra{i}\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\ket{f}
 =
-\left<i\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\left|f\right>
-\left<f\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\left|i\right>
+\bra{i}\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\ket{f}
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
 \label{eqCh4_5}
 \end{eqnarray}
 Конечное состояние неизвестно. Оно может быть любым, и необходимо
 просуммировать \eqref{eqCh4_5} по всем конечным состояниям (сложить
 вероятности). Считаем систему конечных состояний полной, то есть  
-$\sum_{(f)} \left|f\right>\left<f\right| = \hat{I}$.
+$\sum_{(f)} \ket{f}\bra{f} = \hat{I}$.
 Отсюда имеем: 
 \begin{eqnarray}
 \sum_{(f)}
-\left<i\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\left|f\right>
-\left<f\right|\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\left|i\right>
+\bra{i}\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\ket{f}
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
 = 
-\left<i\right|\hat{p}_E^2\hat{E}^{(-)}\hat{E}^{(+)}\left|i\right> = 
+\bra{i}\hat{p}_E^2\hat{E}^{(-)}\hat{E}^{(+)}\ket{i} = 
 \nonumber \\
 =
-\left<\left\{n_k\right\}\right|\hat{E}^{(-)}\hat{E}^{(+)}\left|\left\{n_k\right\}\right>\left<b\right|\hat{p}_E^2\left|b\right>
+\left<\left\{n_k\right\}\right|\hat{E}^{(-)}\hat{E}^{(+)}\left|\left\{n_k\right\}\right>\bra{b}\hat{p}_E^2\ket{b}
 = 
 \alpha \left<\left\{n_k\right\}\right|\hat{E}^{(-)}\hat{E}^{(+)}\left|\left\{n_k\right\}\right>,
 \label{eqCh4_6}

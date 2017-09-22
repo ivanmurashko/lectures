@@ -26,7 +26,7 @@ t\right)$ - волновая функция в
 
 \subsection{Кет-вектор}
 $\left| \dots \right>$ общее обозначение кет-вектора;  $\left| a
-\right>$,  $\left| x \right>$, $\left| \psi \right>$ и т.д. означают
+\right>$,  $\ket{ x }$, $\left| \psi \right>$ и т.д. означают
 кет-векторы, описывающие некоторые частные состояния, символы которых
 записываются внутри скобок. 
 
@@ -35,7 +35,7 @@ $\left| \dots \right>$ общее обозначение кет-вектора; 
 бра-вектор. Бра-вектор обозначается: 
 \begin{equation}
 \left< \dots \right|, \quad 
-\left< a \right|, \quad  
+\bra{ a }, \quad  
 \left< \psi \right|.
 \end{equation}
 
@@ -43,22 +43,22 @@ $\left| \dots \right>$ общее обозначение кет-вектора; 
 английского слова  {\itshape bra-cket}  (скобка).
 
 Таким образом, бра-векторам
-$\left< a \right|$,  $\left< x \right|$, $\left< \psi \right|$
+$\bra{ a }$,  $\bra{ x }$, $\left< \psi \right|$
 соответствуют сопряженные им кет-векторы  
-$\left| a \right>$,  $\left| x \right>$, $\left| \psi \right>$
+$\ket{ a }$,  $\ket{ x }$, $\left| \psi \right>$
 и наоборот. Для векторов состояний справедливы те же основные
 соотношения, которые справедливы для волновых функций:  
 \begin{equation}
-\left| u \right> = \left| a \right>  + \left| b \right>, \quad 
-\left< u \right| = \left< a \right|  + \left< b \right|, \quad 
-\left| v \right> = l \left| a \right>, \quad  
-\left< v \right| = l \left< a \right|.
+\ket{ u } = \ket{ a }  + \ket{ b }, \quad 
+\bra{ u } = \bra{ a }  + \bra{ b }, \quad 
+\ket{ v } = l \ket{ a }, \quad  
+\bra{ v } = l \bra{ a }.
 \end{equation}
 Бра- и кет-векторы связаны между собой операцией эрмитового 
 сопряжения:
 \begin{equation}
-\left| u \right> = \left( \left< u \right| \right)^{\dag}, \quad 
-\left< u \right| = \left( \left| u \right> \right)^{\dag}.
+\ket{ u } = \left( \bra{ u } \right)^{\dag}, \quad 
+\bra{ u } = \left( \ket{ u } \right)^{\dag}.
 \end{equation}
 
 В известных случаях это сводится к следующим соотношениям:
@@ -82,7 +82,7 @@ a_n
 При помощи бра- и кет-векторов можно определить скалярное 
 произведение
 \begin{equation}
-\left< v \right|\left. u \right> = \left< u \right|\left. v \right>^{*}.
+\bra{ v }\ket{ u } = \bra{ u }\ket{ v }^{*}.
 \label{eqAddDirac_swap}
 \end{equation}
 
@@ -93,7 +93,7 @@ a_n
 \]
 в координатном представлении;
 \[
-\left< a \right|\left. b \right> = 
+\bra{ a }\ket{ b } = 
 \left( a_1^{*}, a_2^{*}, \cdots, a_n^{*}\right) 
 \left(
 \begin{array} {c} 
@@ -110,18 +110,18 @@ a_1^{*} b_1 +  a_2^{*} b_2 + \cdots + a_n^{*} b_n
 Из соотношения \eqref{eqAddDirac_swap} следует, что норма вектора
 вещественна. Дополнительно полагаем, что норма вектора положительна
 или равна нулю: 
-$\left< a \right|\left. a \right> \geq 0$.
+$\bra{ a }\ket{ a } \geq 0$.
 
 \subsection{Операторы}
 В квантовой механике используют линейные операторы. Операторы
 связывают один вектор состояния с другим: 
 \begin{equation}
-\left| q \right> = \hat{L}\left| p \right>
+\ket{ q } = \hat{L}\ket{ p }
 \label{eqAddDirac_operator_property1}
 \end{equation}
 Сопряженное равенство имеет вид
 \begin{equation}
-\left< q \right| = \left< p \right|  \hat{L}^{\dag}
+\bra{ q } = \bra{ p }  \hat{L}^{\dag}
 \label{eqAddDirac_operator_property2}
 \end{equation}
 где $\hat{L}^{\dag}$ -  оператор, сопряженный оператору $\hat{L}$.
@@ -130,17 +130,17 @@ $\left< a \right|\left. a \right> \geq 0$.
 операторов:
 \begin{eqnarray}
 \hat{L}^{++} = \hat{L}, \quad
-\left(l \hat{L} \left| a \right> \right)^{\dag} = 
-l^{*} \left< a \right| \hat{L}^{\dag}, 
+\left(l \hat{L} \ket{ a } \right)^{\dag} = 
+l^{*} \bra{ a } \hat{L}^{\dag}, 
 \nonumber \\
-\left(\left(\hat{L_1} + \hat{L_2} \right) \left| a \right> \right)^{\dag} = 
-\left< a \right| \left(\hat{L_1}^{\dag} + \hat{L_2}^{+} \right), 
+\left(\left(\hat{L_1} + \hat{L_2} \right) \ket{ a } \right)^{\dag} = 
+\bra{ a } \left(\hat{L_1}^{\dag} + \hat{L_2}^{+} \right), 
 \nonumber \\
-\left(\left(\hat{L_1} \hat{L_2} \right) \left| a \right> \right)^{\dag} = 
-\left< a \right| \left(\hat{L_2}^{\dag} \hat{L_1}^{+} \right),
+\left(\left(\hat{L_1} \hat{L_2} \right) \ket{ a } \right)^{\dag} = 
+\bra{ a } \left(\hat{L_2}^{\dag} \hat{L_1}^{+} \right),
 \nonumber \\
-\left(\left(\hat{L_1} \hat{L_2} \hat{L_3}\right) \left| a \right> \right)^{\dag} = 
-\left< a \right| \left(\hat{L_3}^{\dag} \hat{L_2}^{+} \hat{L_1}^{+} \right), 
+\left(\left(\hat{L_1} \hat{L_2} \hat{L_3}\right) \ket{ a } \right)^{\dag} = 
+\bra{ a } \left(\hat{L_3}^{\dag} \hat{L_2}^{+} \hat{L_1}^{+} \right), 
 \mbox{ и т.д.}
 \label{eqAddDirac_propert}
 \end{eqnarray}
@@ -148,28 +148,28 @@ l^{*} \left< a \right| \hat{L}^{\dag},
 Заметим, что алгебра операторов совпадает с алгеброй квадратных
 матриц. Матричные элементы операторов обозначаются следующим образом: 
 \begin{equation}
-\left<a\right|\hat{L}\left|b\right> = L_{ab}
+\bra{a}\hat{L}\ket{b} = L_{ab}
 \end{equation}
 
 Для матричных элементов справедливы равенства
 \begin{equation}
-\left<a\right|\hat{L}\left|b\right>^{*} = 
-\left<b\right|\hat{L}^{\dag}\left|a\right>, \quad
-\left<a\right|\hat{L_1}\hat{L_2}\left|b\right>^{*} = 
-\left<b\right|\hat{L_2}^{\dag}\hat{L_1}^{+}\left|a\right>
+\bra{a}\hat{L}\ket{b}^{*} = 
+\bra{b}\hat{L}^{\dag}\ket{a}, \quad
+\bra{a}\hat{L_1}\hat{L_2}\ket{b}^{*} = 
+\bra{b}\hat{L_2}^{\dag}\hat{L_1}^{+}\ket{a}
 \end{equation}
 
 
 \subsection{Собственные  значения  и  собственные  векторы  операторов} 
 Собственные значения и собственные векторы операторов определяются равенством
 \begin{equation}
-\hat{L} \left|l_n\right> = l_n \left|l_n\right>,
+\hat{L} \ket{l_n} = l_n \ket{l_n},
 \end{equation}
-где $l_n$ собственное значение; $\left|l_n\right>$ собственный вектор.
+где $l_n$ собственное значение; $\ket{l_n}$ собственный вектор.
 
 Для бра-векторов имеем аналогичные равенства:
 \begin{equation}
-\left<d_n\right| \hat{D}  = d_n \left<d_n\right|.
+\bra{d_n} \hat{D}  = d_n \bra{d_n}.
 \end{equation}
 
 Если операторы соответствуют наблюдаемым величинам, они должны быть самосопряженными:
@@ -181,48 +181,48 @@ l^{*} \left< a \right| \hat{L}^{\dag},
 Собственные значения самосопряженного (эрмитова) оператора
 вещественны. Действительно из 
 \[
-\hat{L} \left| l \right> = l \left| l \right>
+\hat{L} \ket{ l } = l \ket{ l }
 \]
 следует что 
 \[
-\left< l \right| \hat{L} \left| l \right> = l \left< l \right|
-\left. l \right>.
+\bra{ l } \hat{L} \ket{ l } = l \bra{ l }
+\ket{ l }.
 \]
 С другой стороны, вспоминая про \eqref{eqAddDirac_propert}:
-$\left< l \right| \hat{L}^{\dag} = l^{*} \left< l \right|$, из
+$\bra{ l } \hat{L}^{\dag} = l^{*} \bra{ l }$, из
 \eqref{eqAddDirac_ermit} имеем
 \[
-\left< l \right| \hat{L} \left| l \right> = l^{*} \left< l \right|
-\left. l \right>.
+\bra{ l } \hat{L} \ket{ l } = l^{*} \bra{ l }
+\ket{ l }.
 \] 
-Таким образом $l\left< l \right|
-\left. l \right> = l^{*}\left< l \right|
-\left. l \right>$, т. е. $l  = l^{*}$
+Таким образом $l\bra{ l }
+\ket{ l } = l^{*}\bra{ l }
+\ket{ l }$, т. е. $l  = l^{*}$
 
 Собственные векторы самосопряженного оператора ортогональны. 
 Действительно рассмотрим два собственных вектора 
-$\left| l_1 \right>$ и $\left| l_2 \right>$:
+$\ket{ l_1 }$ и $\ket{ l_2 }$:
 \[
-\hat{L} \left| l_1 \right> = l_1 \left| l_1 \right>, \quad
-\hat{L} \left| l_2 \right> = l_2 \left| l_2 \right>
+\hat{L} \ket{ l_1 } = l_1 \ket{ l_1 }, \quad
+\hat{L} \ket{ l_2 } = l_2 \ket{ l_2 }
 \]
 Из второго соотношения получаем
 \[
-\left< l_1 \right| \hat{L} \left| l_2 \right> = l_2 \left< l_1 \right| \left. l_2 \right>
+\bra{ l_1 } \hat{L} \ket{ l_2 } = l_2 \bra{ l_1 } \ket{ l_2 }
 \]
 С учетом вещественности собственных чисел и соотношения
-\eqref{eqAddDirac_ermit} для вектора $\left| l_1 \right>$ получим:
+\eqref{eqAddDirac_ermit} для вектора $\ket{ l_1 }$ получим:
 \[
-\left< l_1 \right| \hat{L} = l_1 \left< l_1 \right|.
+\bra{ l_1 } \hat{L} = l_1 \bra{ l_1 }.
 \]
 Откуда
 \[
-\left< l_1 \right| \hat{L} \left| l_2 \right> = l_1 \left< l_1 \right| \left. l_2 \right>.
+\bra{ l_1 } \hat{L} \ket{ l_2 } = l_1 \bra{ l_1 } \ket{ l_2 }.
 \] 
 Таким образом
 \[
-\left(l_1 - l_2\right) \left< l_1 \right| \left. l_2 \right> = 0, 
-\quad \mbox{т. е. } \left< l_1 \right| \left. l_2 \right> = 0,
+\left(l_1 - l_2\right) \bra{ l_1 } \ket{ l_2 } = 0, 
+\quad \mbox{т. е. } \bra{ l_1 } \ket{ l_2 } = 0,
 \mbox{ т. к. } l_1 \neq l_2.
 \] 
 
@@ -232,28 +232,28 @@ $\left| l_1 \right>$ и $\left| l_2 \right>$:
 самосопряженными операторами. Это обеспечивает действительность
 значений наблюдаемой физической величины. Имеем набор собственных
 состояний некоторого эрмитового  оператора  
-$\left| l_n \right>$,  $\hat{L} \left| l_n \right> = l_n \left| l_n
+$\ket{ l_n }$,  $\hat{L} \ket{ l_n } = l_n \left| l_n
 \right>$.  Если набор собственных состояний полный, согласно принципам
 квантовой механики любое состояние можно представить суперпозицией
-состояний $\left| l_n \right>$:
+состояний $\ket{ l_n }$:
 \begin{equation}  
-\left| \psi \right> = \sum_{(n)} c_n \left| l_n \right>.
+\left| \psi \right> = \sum_{(n)} c_n \ket{ l_n }.
 \end{equation}  
 
 Отсюда для коэффициентов разложения имеем:  
-$c_n = \left< l_n \right| \left. \psi \right>$, и, следовательно,
+$c_n = \bra{ l_n } \left. \psi \right>$, и, следовательно,
 справедливо равенство 
 \begin{equation}  
-\left| \psi \right> = \sum_{(n)} \left< l_n \right| \left. \psi
-\right> \left| l_n \right> = 
-\sum_{(n)} \left| l_n \right> \left< l_n \right| \left. \psi
+\left| \psi \right> = \sum_{(n)} \bra{ l_n } \left. \psi
+\right> \ket{ l_n } = 
+\sum_{(n)} \ket{ l_n } \bra{ l_n } \left. \psi
 \right>.
 \label{eqAddDirac_full}
 \end{equation}  
 
 Из равенства \ref{eqAddDirac_full} следует важное соотношение:
 \begin{equation}  
-\sum_{(n)} \left| l_n \right> \left< l_n \right| = \hat{I}.
+\sum_{(n)} \ket{ l_n } \bra{ l_n } = \hat{I}.
 \label{eqAddDiracI}
 \end{equation}  
 где $\hat{I}$ -  единичный оператор. Это равенство является условием
@@ -262,16 +262,16 @@ $c_n = \left< l_n \right| \left. \psi \right>$, и, следовательно,
 \subsection{Оператор проектирования}
 \label{AddDiracProjector}
 
-Рассмотрим оператор \(\hat{P}_n = \left| l_n \right> \left< l_n
+Рассмотрим оператор \(\hat{P}_n = \ket{ l_n } \left< l_n
 \right|\). 
 Результатом действия этого оператора на состояние 
 \(\left| \psi \right>\) будет
 \begin{equation}
-\hat{P}_n \left| \psi \right> = \sum_{(k)} \left| l_n \right> \left<
-l_n \right| c_k \left| l_k \right> = c_n \left| l_n \right>.
+\hat{P}_n \left| \psi \right> = \sum_{(k)} \ket{ l_n } \left<
+l_n \right| c_k \ket{ l_k } = c_n \ket{ l_n }.
 \label{eqDiracProektor}
 \end{equation}
-Оператор \(\hat{P}_n = \left| l_n \right> \left< l_n \right|\) называется
+Оператор \(\hat{P}_n = \ket{ l_n } \bra{ l_n }\) называется
 оператором проектирования.
 
 Можно написать следующие свойства этого оператора
@@ -287,16 +287,16 @@ l_n \right| c_k \left| l_k \right> = c_n \left| l_n \right>.
 Действие оператора проектирования имеет простую геометрическую
 интерпретацию  (см. \autoref{figAddProject}):
 \[
-\hat{P}_n\left|\psi\right> = \cos{\theta} \left|l_n\right>,
+\hat{P}_n\left|\psi\right> = \cos{\theta} \ket{l_n},
 \]
 где $\cos{\theta} = \left<\psi|l_n\right> = c_n$. 
 
 \subsection{След оператора}
 \label{AddDiracTrace}
-В ортонормированном базисе \(\left\{\left|l_n\right>\right\}\) 
+В ортонормированном базисе \(\left\{\ket{l_n}\right\}\) 
 величина 
 \begin{equation}  
-Sp \hat{L} = \sum_n \left<l_n\right| \hat{L} \left|l_n\right>
+Sp \hat{L} = \sum_n \bra{l_n} \hat{L} \ket{l_n}
 \label{eqAddDiracTr}
 \end{equation}  
 называется следом оператора \(\hat{L}\). При определенных условиях
@@ -305,7 +305,7 @@ Sp \hat{L} = \sum_n \left<l_n\right| \hat{L} \left|l_n\right>
 
 Если использовать матричное представление 
 \[
-L_{kn} = \left<l_k\right| \hat{L} \left|l_n\right>, 
+L_{kn} = \bra{l_k} \hat{L} \ket{l_n}, 
 \]
 то след оператора - сумма диагональных элементов матричного 
 представления
@@ -338,19 +338,19 @@ Sp\left(\hat{M}\hat{L}\right).
 Действительно, если принять, что $\left|\psi\right>$ раскладывается в
 ряд по собственным функциям оператора $\hat{L}$ следующим образом:
 \[
-\left|\psi\right> = \sum_n c_n \left|l_n\right>,
+\left|\psi\right> = \sum_n c_n \ket{l_n},
 \]
 то $\hat{L}\left|\psi\right>$ можно записать как
 \[
-\hat{L}\left|\psi\right> = \sum_n l_n c_n \left|l_n\right>,
+\hat{L}\left|\psi\right> = \sum_n l_n c_n \ket{l_n},
 \]
 где $l_n$ собственное число соответствующее собственному состоянию 
-$\left|l_n\right>$. 
+$\ket{l_n}$. 
 Если теперь подставить два последних выражения в \eqref{eqAddDiracMid}
 то получим:
 \[
 \left<\psi\right|\hat{L}\left|\psi\right> = \sum_{n,m} 
-l_n c_n c_m^{*} \left<l_m\right. \left|l_n\right>=
+l_n c_n c_m^{*} \bra{l_m} \ket{l_n}=
 \sum_n l_n c_n c_n^{*} = 
 \sum_n l_n \left|c_n\right|^2, 
 \]
@@ -359,12 +359,12 @@ l_n c_n c_m^{*} \left<l_m\right. \left|l_n\right>=
 представляет собой выражение для среднего значения оператора 
 $\hat{L}$   в состоянии $\left|\psi\right>$.
 \footnote{Для этого достаточно вспомнить, что $\left|c_n\right|^2$
-  задает вероятность получить систему в состоянии $\left|l_n\right>$,
+  задает вероятность получить систему в состоянии $\ket{l_n}$,
   то есть получить показание измерительного прибора в $l_n$}
 
-Если взять некоторый ортонормированный базис $\{\left| n \right>\}$,
+Если взять некоторый ортонормированный базис $\{\ket{ n }\}$,
 образующий полный набор, т. е. подчиняющийся условию
-\eqref{eqAddDiracI}: $\sum_n \left| n \right>\left< n \right| =
+\eqref{eqAddDiracI}: $\sum_n \ket{ n }\bra{ n } =
 \hat{I}$, то выражение \eqref{eqAddDiracMid}
 может быть переписано следующим образом:
 \begin{eqnarray}
@@ -373,10 +373,10 @@ $\hat{L}$   в состоянии $\left|\psi\right>$.
 \left<\psi\right|\hat{I}\hat{L}\left|\psi\right> = 
 \nonumber \\
 = 
-\sum_n \left<\psi\right|\left.n\right>\left<n\right|
+\sum_n \left<\psi\right|\ket{n}\bra{n}
 \hat{L}\left|\psi\right> = 
-\sum_n \left<n\right|
-\hat{L}\left|\psi\right>\left<\psi\right|\left.n\right> = 
+\sum_n \bra{n}
+\hat{L}\left|\psi\right>\left<\psi\right|\ket{n} = 
 Sp \left(\hat{L} \hat{\rho} \right),
 \nonumber
 \end{eqnarray}
@@ -396,25 +396,25 @@ $\left| \psi \right>$.
 Дважды используя условие полноты \eqref{eqAddDirac_full}, получим
 \begin{equation}
 \hat{A} = \hat{I} \hat{A} \hat{I} = \sum_{(l)}\sum_{(l')} 
-\left|l\right>\left<l\right| \hat{A} \left|l'\right>\left<l'\right| = 
+\ket{l}\bra{l} \hat{A} \ket{l'}\bra{l'} = 
 \sum_{(l)}\sum_{(l')} 
-\left|l\right>\left<l'\right| A_{ll'},
+\ket{l}\bra{l'} A_{ll'},
 \end{equation}  
-где $A_{ll'} = \left<l\right| \hat{A} \left|l'\right>$ - матричный
-элемент оператора $\hat{A}$  в представлении  $\left|l\right>$.
+где $A_{ll'} = \bra{l} \hat{A} \ket{l'}$ - матричный
+элемент оператора $\hat{A}$  в представлении  $\ket{l}$.
  
 Оператор, выраженный через свои же собственные векторы, может быть
 представляем разложением \footnote{При условии
- нормировки собственных векторов: $\left<l\right|\left.l\right> = 1$} 
+ нормировки собственных векторов: $\bra{l}\ket{l} = 1$} 
 \begin{equation}
 \hat{L} = \sum_{(l)} 
-l \left|l\right>\left<l\right|.
+l \ket{l}\bra{l}.
 \end{equation}  
 
 Обобщение этого равенства для операторной функции имеет вид
 \begin{equation}
 F\left(\hat{L}\right) = \sum_{(l)} 
-F\left(l\right) \left|l\right>\left<l\right|.
+F\left(l\right) \ket{l}\bra{l}.
 \label{eqAddDiracFL}
 \end{equation}  
 
@@ -424,11 +424,11 @@ F\left(l\right) \left|l\right>\left<l\right|.
 состояния соответствующей наблюдаемой величины. Например, для волновой
 функции в координатном представлении 
 \begin{equation}
-\phi\left(q\right) = \left<q\right|\left.\psi\right>.
+\phi\left(q\right) = \bra{q}\left.\psi\right>.
 \end{equation}  
-где $\left<q\right|$ - собственный вектор оператора координаты. 
+где $\bra{q}$ - собственный вектор оператора координаты. 
 В импульсном представлении получим
 \begin{equation}
-\phi\left(p\right) = \left<p\right|\left.\psi\right>.
+\phi\left(p\right) = \bra{p}\left.\psi\right>.
 \end{equation}  
-где $\left<p\right|$ - собственный вектор оператора импульса.
+где $\bra{p}$ - собственный вектор оператора импульса.

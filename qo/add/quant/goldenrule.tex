@@ -7,8 +7,8 @@
 \begin{theorem}[Золотое правило Ферми]
   \label{addQuantGoldenRuleFermi}
   Допустим, что квантовая система находится изначально в состоянии
-  $\left|i\right>$ и мы хотим оценить вероятность перехода в состояние 
-  $\left|f\right>$. Гамильтониан рассматриваемой системы состоит из
+  $\ket{i}$ и мы хотим оценить вероятность перехода в состояние 
+  $\ket{f}$. Гамильтониан рассматриваемой системы состоит из
   \index{Гамильтониан}
   двух частей: стационарного гамильтониана $\hat{H_0}$ и слабого
   возмущения $\hat{V}$:
@@ -35,17 +35,17 @@
 
 \begin{proof}
   Допустим, что существует состояния
-  $\left\{\left|n\right>\right\}$ образуют полный набор собственных
+  $\left\{\ket{n}\right\}$ образуют полный набор собственных
   векторов гамильтониана $\hat{H_0}$, т.е.
   \begin{equation}
-    \hat{H_0} \left| n \right> = E_n \left| n \right>,
+    \hat{H_0} \ket{ n } = E_n \ket{ n },
     \nonumber
   \end{equation}
-  при этом, рассматриваемое начальное состояние  $\left|i\right>$ и
-  конечное состояние $\left|f\right>$ принадлежат этой системе
+  при этом, рассматриваемое начальное состояние  $\ket{i}$ и
+  конечное состояние $\ket{f}$ принадлежат этой системе
   векторов, т. е.
   \begin{equation}
-    \left|i\right>, \left|f\right> \in \left\{\left|n\right>\right\}.
+    \ket{i}, \ket{f} \in \left\{\ket{n}\right\}.
     \nonumber
   \end{equation}
   В некоторый момент времени система оказывается в состоянии
@@ -56,18 +56,18 @@
     \label{eqAddQuantGoldenRuleFermiShred}
   \end{equation}
   Наша задача заключается в вычислении вероятности того что при
-  наблюдении система окажется в состоянии $\left|f\right>$, при том
+  наблюдении система окажется в состоянии $\ket{f}$, при том
   что начальное условие для \eqref{eqAddQuantGoldenRuleFermiShred}
   имеет следующий вид
   \begin{equation}
-    \left.\left|\psi\right>\right|_{t=0} = \left|i\right>.
+    \left.\left|\psi\right>\right|_{t=0} = \ket{i}.
     \label{eqAddQuantGoldenRuleFermiInitialCond}
   \end{equation}
 
-  В силу полноты системы $\left\{\left|n\right>\right\}$ состояние
+  В силу полноты системы $\left\{\ket{n}\right\}$ состояние
   $\left|\psi\right>$ может быть представлено в виде
   \begin{equation}
-    \left|\psi\right> = \sum_n a_n\left(t\right) \left|n\right>
+    \left|\psi\right> = \sum_n a_n\left(t\right) \ket{n}
     e^{\frac{-i E_n t}{\hbar}}
     \label{eqAddQuantGoldenRuleFermiExp}
   \end{equation}
@@ -75,23 +75,23 @@
   \eqref{eqAddQuantGoldenRuleFermiShred} получим
   \begin{eqnarray}
     i \hbar \sum_n \frac{ \partial a_n\left(t\right)}{\partial t }
-    \left|n\right> e^{\frac{-i E_n t}{\hbar}} +
-    \sum_n a_n\left(t\right) \left|n\right>
+    \ket{n} e^{\frac{-i E_n t}{\hbar}} +
+    \sum_n a_n\left(t\right) \ket{n}
     i \hbar \frac{\partial e^{\frac{-i E_n t}{\hbar}}}{ \partial t} =
     \\ \nonumber
-    = i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}} \left|n\right> \left(
+    = i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}} \ket{n} \left(
     \frac{ \partial a_n\left(t\right)}{\partial t } - \frac{i E_n}{\hbar} 
     \right) =
     \\ \nonumber
     =  i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
-    \frac{ \partial a_n\left(t\right)}{\partial t } \left|n\right>+
-    \sum_n E_n a_n\left(t\right) \left|n\right>
+    \frac{ \partial a_n\left(t\right)}{\partial t } \ket{n}+
+    \sum_n E_n a_n\left(t\right) \ket{n}
     e^{\frac{-i E_n t}{\hbar}} =
     \nonumber \\
     =
      i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
-     \frac{ \partial a_n\left(t\right)}{\partial t } \left|n\right>+
-      \sum_n E_n a_n\left(t\right) \left|n\right>
+     \frac{ \partial a_n\left(t\right)}{\partial t } \ket{n}+
+      \sum_n E_n a_n\left(t\right) \ket{n}
     e^{\frac{-i E_n t}{\hbar}}.
     \label{eqAddQuantGoldenRuleFermiExp2}
   \end{eqnarray}
@@ -99,18 +99,18 @@
   должно равняться
   \begin{equation}
     \hat{H} \left|\psi\right> =
-    \sum_n E_n a_n\left(t\right) \left|n\right>
+    \sum_n E_n a_n\left(t\right) \ket{n}
     e^{\frac{-i E_n t}{\hbar}} +
     \sum_n  a_n\left(t\right) 
-    e^{\frac{-i E_n t}{\hbar}} \hat{V} \left|n\right>,
+    e^{\frac{-i E_n t}{\hbar}} \hat{V} \ket{n},
     \nonumber
   \end{equation}
   т. е.
   \begin{eqnarray}
     i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
-    \frac{ \partial a_n\left(t\right)}{\partial t } \left|n\right> =
+    \frac{ \partial a_n\left(t\right)}{\partial t } \ket{n} =
      \sum_n  a_n\left(t\right) 
-    e^{\frac{-i E_n t}{\hbar}} \hat{V} \left|n\right>.
+    e^{\frac{-i E_n t}{\hbar}} \hat{V} \ket{n}.
     \label{eqAddQuantGoldenRuleFermiExp3}
   \end{eqnarray}
   Выражение \eqref{eqAddQuantGoldenRuleFermiExp3} будем решать
@@ -133,41 +133,41 @@
   \eqref{eqAddQuantGoldenRuleFermiExp3} получим
   \begin{eqnarray}
     i \hbar \sum_n  e^{\frac{-i E_n t}{\hbar}}
-    \frac{ \partial a_n^{(1)}\left(t\right)}{\partial t } \left|n\right> =
+    \frac{ \partial a_n^{(1)}\left(t\right)}{\partial t } \ket{n} =
      \sum_n  \delta_{ni} 
-     e^{\frac{-i E_n t}{\hbar}} \hat{V} \left|n\right> =
-     e^{\frac{-i E_i t}{\hbar}} \hat{V} \left|i\right>.
+     e^{\frac{-i E_n t}{\hbar}} \hat{V} \ket{n} =
+     e^{\frac{-i E_i t}{\hbar}} \hat{V} \ket{i}.
     \label{eqAddQuantGoldenRuleFermiExp4}
   \end{eqnarray}
   Следовательно из \eqref{eqAddQuantGoldenRuleFermiExp4} имеем
   \begin{equation}
     \frac{ \partial a_n^{(1)}\left(t\right)}{\partial t }  =
     - \frac{i}{\hbar} e^{\frac{-i \left(E_i - E_n\right) t}{\hbar}}
-    \left<n\right|\hat{V}\left|i\right>,
+    \bra{n}\hat{V}\ket{i},
     \nonumber
   \end{equation}
   обозначив $E_i - E_n = \hbar \omega_{in}$, где $\omega_{in}$ -
-  частота перехода между состояниями $\left|i\right>$ и
-  $\left|n\right>$, после интегрирования получим
+  частота перехода между состояниями $\ket{i}$ и
+  $\ket{n}$, после интегрирования получим
   \begin{equation}
   a_n^{(1)}\left(t\right)  =
     - \frac{i}{\hbar} \int_0^t e^{-i \omega_{in} t'}
-    \left<n\right|\hat{V}\left|i\right> dt',
+    \bra{n}\hat{V}\ket{i} dt',
     \nonumber
   \end{equation}
   т.е.
   \begin{eqnarray}
   a_n^{(1)}\left(t\right)  =
-  \frac{1}{\hbar \omega_{in}} \left<n\right|\hat{V}\left|i\right>
+  \frac{1}{\hbar \omega_{in}} \bra{n}\hat{V}\ket{i}
   \left(e^{-i \omega_{in} t} -  1\right) =
   \\ \nonumber =
-  \frac{1}{\hbar \omega_{in}} \left<n\right|\hat{V}\left|i\right>
+  \frac{1}{\hbar \omega_{in}} \bra{n}\hat{V}\ket{i}
   e^{\frac{-i \omega_{in} t}{2}}
   \left(e^{\frac{-i \omega_{in} t}{2}} -  e^{\frac{i \omega_{in}
       t}{2}}\right) =
   \\ \nonumber
   =
-  - \frac{2 i}{\hbar \omega_{in}} \left<n\right|\hat{V}\left|i\right>
+  - \frac{2 i}{\hbar \omega_{in}} \bra{n}\hat{V}\ket{i}
   e^{\frac{-i \omega_{in} t}{2}}
   \sin\left(\frac{ \omega_{in} t}{2}\right)
   \nonumber
@@ -175,7 +175,7 @@
   
   
   Нас интересует скорость $W_{i \rightarrow f}$ перехода в
-  состояние $\left|f\right>$, которая задается выражением
+  состояние $\ket{f}$, которая задается выражением
   \[
   W_{i \rightarrow f} = \frac{\left|a_f^{(1)}\left(t\right)\right|^2}{t}.
   \]
@@ -183,13 +183,13 @@
   \begin{eqnarray}
     W_{i \rightarrow f} =
     \frac{t}{\hbar^2}
-    \left|\left<f\right|\hat{V}\left|i\right>\right|^2
+    \left|\bra{f}\hat{V}\ket{i}\right|^2
     \frac{\sin^2\left(\frac{ \omega_{if} t}{2}\right)}
          {\left(\frac{ \omega_{if} t}{2}\right)^2}.
     \label{eqAddQuantGoldenRuleFermiExp5}
   \end{eqnarray}
 
-  В случае если финальное состояние $\left|f\right>$ представляет
+  В случае если финальное состояние $\ket{f}$ представляет
   собой некоторый непрерывный спектр вблизи энергии $E_f$, то
   выражение \eqref{eqAddQuantGoldenRuleFermiExp5} должно быть
   просуммировано для всех финальных состояний состояний у которых
@@ -206,32 +206,32 @@
   т.е. предполагая для рассматриваемого интервала энергий
   $\rho\left(E_n\right) \approx \rho\left(E_f\right)$,
   \[
-  \left|\left<n\right|\hat{V}\left|i\right>\right|^2 \approx
-  \left|\left<f\right|\hat{V}\left|i\right>\right|^2
+  \left|\bra{n}\hat{V}\ket{i}\right|^2 \approx
+  \left|\bra{f}\hat{V}\ket{i}\right|^2
   \]
   и заменяя суммирование интегрированием, получим
   \begin{eqnarray}
     W_{i \rightarrow f} \approx
     \int_{E_n \approx E_f} \rho\left(E_n\right) d E_n      \frac{t}{\hbar^2}
-    \left|\left<n\right|\hat{V}\left|i\right>\right|^2
+    \left|\bra{n}\hat{V}\ket{i}\right|^2
     \frac{\sin^2\left(\frac{ \omega_{in} t}{2}\right)}
          {\left(\frac{ \omega_{in} t}{2}\right)^2} =
          \\ \nonumber
          = \int_{\omega_{in} \approx \omega_{if}} \rho\left(E_n\right)
          d E_n      \frac{t}{\hbar^2}
-    \left|\left<n\right|\hat{V}\left|i\right>\right|^2
+    \left|\bra{n}\hat{V}\ket{i}\right|^2
     \frac{\sin^2\left(\frac{ \omega_{in} t}{2}\right)}
          {\left(\frac{ \omega_{in} t}{2}\right)^2} \approx
          \\ \nonumber
     \approx
     \frac{2}{\hbar}
-    \left|\left<f\right|\hat{V}\left|i\right>\right|^2 \rho
+    \left|\bra{f}\hat{V}\ket{i}\right|^2 \rho
     \int_{-\infty}^{\infty}
      d \left(\frac{ \omega t}{2}\right)
     \frac{\sin^2\left(\frac{ \omega t}{2}\right)}
          {\left(\frac{ \omega t}{2}\right)^2} =
     \frac{2 \pi}{\hbar} 
-    \left|\left<f\right|\hat{V}\left|i\right>\right|^2 \rho,
+    \left|\bra{f}\hat{V}\ket{i}\right|^2 \rho,
     \label{eqAddQuantGoldenRuleFermiExp6}
   \end{eqnarray}
   что совпадает с доказываемым выражением.

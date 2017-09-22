@@ -23,24 +23,24 @@ $\hat{V}$ - гамильтониан взаимодействия.
 В случае гамильтониана двухуровневого атома воспользуемся следующими
 соотношениями:
 \begin{eqnarray}
-\hat{\mathcal{H}}^{(A)}\left|a\right> = \hbar \omega_a \left|a\right>,
+\hat{\mathcal{H}}^{(A)}\ket{a} = \hbar \omega_a \ket{a},
 \nonumber \\
-\hat{\mathcal{H}}^{(A)}\left|b\right> = \hbar \omega_b \left|b\right>,
+\hat{\mathcal{H}}^{(A)}\ket{b} = \hbar \omega_b \ket{b},
 \nonumber \\
-\left|a\right>\left<a\right| + \left|b\right>\left<b\right| = \hat{I},
+\ket{a}\bra{a} + \ket{b}\bra{b} = \hat{I},
 \nonumber
 \end{eqnarray}
 откуда получим
 \begin{eqnarray}
 \hat{\mathcal{H}}^{(A)} = \hat{\mathcal{H}}^{(A)}\hat{I} = 
 \hat{\mathcal{H}}^{(A)}
-\left|a\right>\left<a\right| + \hat{\mathcal{H}}^{(A)}
-\left|b\right>\left<b\right| =
+\ket{a}\bra{a} + \hat{\mathcal{H}}^{(A)}
+\ket{b}\bra{b} =
 \nonumber \\
  = 
 \hbar\omega_a
-\left|a\right>\left<a\right| + \hbar\omega_b
-\left|b\right>\left<b\right| =
+\ket{a}\bra{a} + \hbar\omega_b
+\ket{b}\bra{b} =
 \nonumber \\
 = \hbar \omega_a \hat{\sigma}_a +
 \hbar \omega_b \hat{\sigma}_b,
@@ -48,9 +48,9 @@ $\hat{V}$ - гамильтониан взаимодействия.
 \end{eqnarray}
 где введены следующие обозначения
 \begin{equation}
-\hat{\sigma}_a = \left|a\right>\left<a\right|,
+\hat{\sigma}_a = \ket{a}\bra{a},
 \quad
-\hat{\sigma}_b = \left|b\right>\left<b\right|.
+\hat{\sigma}_b = \ket{b}\bra{b}.
 \nonumber
 \end{equation}
 Выражение \eqref{eqCh2HamiltonianAOperator} может быть переписано в
@@ -80,19 +80,19 @@ $\hat{V}$ - гамильтониан взаимодействия.
 \hat{I}\hat{\vec{r}}\hat{I}\right) = 
 \nonumber \\
 = - e \left(\vec{E}\left(t\right) 
-\left(\left|a\right>\left<a\right| +
-  \left|b\right>\left<b\right|\right)\hat{\vec{r}}
-\left(\left|a\right>\left<a\right| +
-  \left|b\right>\left<b\right|\right)\right) = 
+\left(\ket{a}\bra{a} +
+  \ket{b}\bra{b}\right)\hat{\vec{r}}
+\left(\ket{a}\bra{a} +
+  \ket{b}\bra{b}\right)\right) = 
 \nonumber \\
 = - \left(\vec{E}\left(t\right)
-  \left(\vec{P}_{ab}\left|a\right>\left<b\right| +
-    \vec{P}_{ba}\left|b\right>\left<a\right|\right)\right),
+  \left(\vec{P}_{ab}\ket{a}\bra{b} +
+    \vec{P}_{ba}\ket{b}\bra{a}\right)\right),
 \label{eqCh2HamiltonianVsemiclass2}
 \end{eqnarray}
 где 
 \[
-\vec{P}_{ab} = \vec{P}_{ba}^{*} = e \left<a\right|\hat{\vec{r}}\left|b\right>
+\vec{P}_{ab} = \vec{P}_{ba}^{*} = e \bra{a}\hat{\vec{r}}\ket{b}
 \]
 матричный элемент электрического дипольного момента. 
 Для простоты будем считать, что $\vec{P}_{ab} = \vec{P}_{ba} =
@@ -102,42 +102,42 @@ $\hat{V}$ - гамильтониан взаимодействия.
 \hat{V} 
 = - \left(\vec{E}\left(t\right)\vec{p}\right)
 \left(
-  \left|a\right>\left<b\right| +
-  \left|b\right>\left<a\right|\right) = 
+  \ket{a}\bra{b} +
+  \ket{b}\bra{a}\right) = 
 \nonumber \\
 = - \left(\vec{E}\left(t\right)\vec{p}\right) \left(\hat{\sigma}^{\dag} + \hat{\sigma}\right),
 \label{eqCh2HamiltonianVsemiclass3}
 \end{eqnarray}
-где  $\hat{\sigma}^{\dag} = \left|a\right>\left<b\right|$ и 
-$\hat{\sigma} = \left|b\right>\left<a\right|$ 
+где  $\hat{\sigma}^{\dag} = \ket{a}\bra{b}$ и 
+$\hat{\sigma} = \ket{b}\bra{a}$ 
 -  операторы перехода. 
 $\hat{\sigma}^{\dag}$ -  оператор перехода из нижнего состояния в верхнее (повышающий
 оператор):
 \[
-\hat{\sigma}^{\dag} \left|b\right> = 
-\left|a\right>\left<b\right|\left.b\right> = 
-\left|a\right>,
+\hat{\sigma}^{\dag} \ket{b} = 
+\ket{a}\bra{b}\ket{b} = 
+\ket{a},
 \]
 $\hat{\sigma}$
 - оператор перехода из верхнего состояния в нижнее
 (понижающий оператор):
 \[
 \hat{\sigma}
-\left|a\right> = 
-\left|b\right>\left<a\right|\left.a\right> = 
-\left|b\right>.
+\ket{a} = 
+\ket{b}\bra{a}\ket{a} = 
+\ket{b}.
 \]
 Кроме этого выполняются равенства
 \[
-\hat{\sigma}^{\dag} \left|a\right> = 
-\left|a\right>\left<b\right|\left.a\right> = 
+\hat{\sigma}^{\dag} \ket{a} = 
+\ket{a}\bra{b}\ket{a} = 
 0
 \]
 и
 \[
 \hat{\sigma}
-\left|b\right> = 
-\left|b\right>\left<a\right|\left.b\right> = 
+\ket{b} = 
+\ket{b}\bra{a}\ket{b} = 
 0.
 \]
 Для операторов $\hat{\sigma}$ и $\hat{\sigma}^{\dag}$ может быть записано
@@ -145,10 +145,10 @@ $\hat{\sigma}$
 \begin{eqnarray}
 \hat{\sigma}\hat{\sigma}^{\dag} + \hat{\sigma}^{+}\hat{\sigma} =
 \nonumber \\
-= \left|b\right>\left<a\right|\left.a\right>\left<b\right| + 
- \left|a\right>\left<b\right|\left.b\right>\left<a\right| = 
+= \ket{b}\bra{a}\ket{a}\bra{b} + 
+ \ket{a}\bra{b}\ket{b}\bra{a} = 
 \nonumber \\
-= \left|b\right>\left<b\right| + \left|a\right>\left<a\right| = \hat{I}, 
+= \ket{b}\bra{b} + \ket{a}\bra{a} = \hat{I}, 
 \label{eqCh2_task1}
 \end{eqnarray}
 где $\hat{I}$ - единичный оператор.
@@ -261,8 +261,8 @@ g \hbar \left(
 \end{equation}
 Это проще всего сделать, вычислив матричные элементы 
 $\left<n +
-1\right|\left<b\right|\hat{V}_I\left|a\right>\left|n\right>$ и
-$\left<n\right|\left<a\right|\hat{V}_I\left|b\right>\left|n +
+1\right|\bra{b}\hat{V}_I\ket{a}\ket{n}$ и
+$\bra{n}\bra{a}\hat{V}_I\ket{b}\left|n +
 1\right>$ для оператора взаимодействия $\hat{V}_I$, представимого в
 виде \eqref{eqCh2_task21} и \eqref{eqCh2_task22}, и убедиться, что они
 одинаковы в обоих случаях.

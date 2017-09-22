@@ -15,37 +15,37 @@
 по $x$ будет описываться оператором клонирования $\hat{D}$
 следующим образом 
 \begin{equation}
-  \hat{D} \left|D_I\right>\left|x\right> = \left|D_{F_x}\right>\left|x\right>\left|x\right>,
+  \hat{D} \ket{D_I}\ket{x} = \ket{D_{F_x}}\ket{x}\ket{x},
   \nonumber
 \end{equation}
-где $\left|D_I\right>$ волновая функция, описывающая начальное
-состояние прибора для клонирования, а  $\left|D_{F_x}\right>$ волновая
+где $\ket{D_I}$ волновая функция, описывающая начальное
+состояние прибора для клонирования, а  $\ket{D_{F_x}}$ волновая
 функция, описывающая состояние прибора после клонирования фотона  
 в вертикальной $x$-поляризации. Для фотона, поляризованного по $y$, имеем
 \begin{equation}
-  \hat{D} \left|D_I\right>\left|y\right> = \left|D_{F_y}\right>\left|y\right>\left|y\right>,
+  \hat{D} \ket{D_I}\ket{y} = \ket{D_{F_y}}\ket{y}\ket{y},
   \nonumber
 \end{equation}
-где $\left|D_{F_y}\right>$ волновая функция, описывающая состояние
+где $\ket{D_{F_y}}$ волновая функция, описывающая состояние
 прибора после клонирования этого фотона. 
 
 Если подействовать оператором клонирования $\hat{D}$ на фотон в
 произвольном состоянии \eqref{eqEntangSimpleState}, получим 
 \begin{equation}
-  \hat{D} \left|D_I\right>\left|\psi\right> = 
-  \hat{D} \left|D_I\right> \left(\alpha \left|x\right> +
-  \beta \left|y\right>\right) = 
-  \alpha \left|D_{F_x}\right>\left|x\right>\left|x\right> +
-  \beta \left|D_{F_y}\right>\left|y\right>\left|y\right>,
+  \hat{D} \ket{D_I}\left|\psi\right> = 
+  \hat{D} \ket{D_I} \left(\alpha \ket{x} +
+  \beta \ket{y}\right) = 
+  \alpha \ket{D_{F_x}}\ket{x}\ket{x} +
+  \beta \ket{D_{F_y}}\ket{y}\ket{y},
   \nonumber
 \end{equation}
 откуда никоим образом не получить ожидаемый результат
 \begin{equation}
-  \hat{D} \left|D_I\right>\left|\psi\right> = 
-  \left|D_{F_{xy}}\right>  \left(\alpha \left|x\right> +
-  \beta \left|y\right>\right)
-  \left(\alpha \left|x\right> +
-  \beta \left|y\right>\right).
+  \hat{D} \ket{D_I}\left|\psi\right> = 
+  \ket{D_{F_{xy}}}  \left(\alpha \ket{x} +
+  \beta \ket{y}\right)
+  \left(\alpha \ket{x} +
+  \beta \ket{y}\right).
   \nonumber
 \end{equation}
 
@@ -61,15 +61,15 @@
 состояние фотона 1, которое описывается волновой функцией
 \eqref{eqEntangSimpleState}. 
 \[
-\left|\psi\right>_1 = \alpha \left|x\right>_1 +
-\beta \left|y\right>_1, 
+\left|\psi\right>_1 = \alpha \ket{x}_1 +
+\beta \ket{y}_1, 
 \]
 \index{фотон!перепутанное состояние}Имеется также источник перепутанных фотонов $S$, который излучает пары
 фотонов 2 и 3 в состоянии, описываемом следующей волновой функцией 
 \begin{equation}
   \left|\psi\right>_{23} = \left|\psi^{-}\right>_{23} = \frac{1}{\sqrt{2}}\left(
-  \left|x\right>_2\left|y\right>_3 - 
-  \left|y\right>_2\left|x\right>_3
+  \ket{x}_2\ket{y}_3 - 
+  \ket{y}_2\ket{x}_3
   \right).
   \nonumber
 \end{equation}
@@ -108,32 +108,32 @@ $\left|\psi^{-}\right>_{12}$. Для искомого коэффициента �
   =
   \frac{1}{\sqrt{2}}
   \left(
-  \left<x\right|_1\left<y\right|_2 - 
-  \left<y\right|_1\left<x\right|_2
+  \bra{x}_1\bra{y}_2 - 
+  \bra{y}_1\bra{x}_2
   \right)
   \left(
-  \alpha \left|x\right>_1 +
-  \beta \left|y\right>_1
+  \alpha \ket{x}_1 +
+  \beta \ket{y}_1
   \right)
   \frac{1}{\sqrt{2}}
   \left(
-  \left|x\right>_2\left|y\right>_3 - 
-  \left|y\right>_2\left|x\right>_3
+  \ket{x}_2\ket{y}_3 - 
+  \ket{y}_2\ket{x}_3
   \right) = 
   \nonumber \\
   = \frac{1}{2}
   \left(
-  \alpha\left<y\right|_2 - 
-  \beta\left<x\right|_2
+  \alpha\bra{y}_2 - 
+  \beta\bra{x}_2
   \right)
   \left(
-  \left|x\right>_2\left|y\right>_3 - 
-  \left|y\right>_2\left|x\right>_3
+  \ket{x}_2\ket{y}_3 - 
+  \ket{y}_2\ket{x}_3
   \right) = 
   - \frac{1}{2}  
   \left(
-  \alpha \left|x\right>_3 +
-  \beta \left|y\right>_3
+  \alpha \ket{x}_3 +
+  \beta \ket{y}_3
   \right).
 \nonumber
 \end{eqnarray}
@@ -149,22 +149,22 @@ $D^{(1)}$ и $D^{(2)}$ срабатывают одновременно, фото
 %% \begin{eqnarray}
 %%   \left|\psi\right>_{123} = \left|\psi\right>_1 \left|\psi\right>_{23} = 
 %%   \nonumber \\
-%%   = \left|\psi^{-}\right>_{12} \frac{\alpha\left|x\right>_3 + \beta\left|y\right>_3}{2} + 
+%%   = \left|\psi^{-}\right>_{12} \frac{\alpha\ket{x}_3 + \beta\ket{y}_3}{2} + 
 %%   \nonumber \\
 %%   + 
-%%   \left|\psi^{\dag}\right>_{12} \frac{- \alpha\left|x\right>_3 + \beta\left|y\right>_3}{2} +
+%%   \left|\psi^{\dag}\right>_{12} \frac{- \alpha\ket{x}_3 + \beta\ket{y}_3}{2} +
 %%   \nonumber \\
 %%   + 
-%%   \left|\phi^{\dag}\right>_{12} \frac{- \beta\left|x\right>_3 + \alpha\left|y\right>_3}{2} +
+%%   \left|\phi^{\dag}\right>_{12} \frac{- \beta\ket{x}_3 + \alpha\ket{y}_3}{2} +
 %%   \nonumber \\
 %%   +
-%%   \left|\phi^{-}\right>_{12} \frac{\beta\left|x\right>_3 + \alpha\left|y\right>_3}{2}.
+%%   \left|\phi^{-}\right>_{12} \frac{\beta\ket{x}_3 + \alpha\ket{y}_3}{2}.
 %%   \nonumber
 %% \end{eqnarray}
 
 %% Таким образом всякий раз когда Алиса регистрирует пару фотонов 1 и 2 в белловском состоянии
 %% $\left|\psi^{-}\right>_{12}$ то фотон 3 на стороне Боба будет находится в состоянии
-%% $\alpha\left|x\right>_3 + \beta\left|y\right>_3$, то есть произойдет как бы телепортация фотона 1 к Бобу.
+%% $\alpha\ket{x}_3 + \beta\ket{y}_3$, то есть произойдет как бы телепортация фотона 1 к Бобу.
 
 %% Белловское состояние $\left|\psi^{-}\right>_{12}$, как это уже
 %% отмечалось выше, может быть зарегистрировано Алисой по одновременному срабатыванию 

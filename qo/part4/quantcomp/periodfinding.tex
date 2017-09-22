@@ -11,14 +11,14 @@
 Первым элементом стоит преобразование Адамара $n$ кубит, которое
 подготавливает исходное состояние в виде:
 \begin{equation}
-\left|in\right> = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \left|x\right>
-\otimes\left|0\right>.
+\ket{in} = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \ket{x}
+\otimes\ket{0}.
 \nonumber
 \end{equation}
 
 После элемента вычисляющего функцию $\hat{U}_f$ имеем для состояния
 \begin{equation}
-\hat{U}_f\left|in\right> = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \left|x\right>
+\hat{U}_f\ket{in} = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \ket{x}
 \otimes\left|f\left(x\right)\right>.
 \nonumber
 \end{equation} 
@@ -30,7 +30,7 @@
 значению. В результате на вход элемента, измеряющего преобразование
 Фурье подается состояние вида 
 \begin{equation}
-\left|in'\right> = \sum_{x'} \left|x'\right>,
+\ket{in'} = \sum_{x'} \ket{x'},
 \nonumber
 \end{equation} 
 где все ненулевые элементы имеют одинаковую амплитуду и следуют с
@@ -60,38 +60,38 @@ $f\left(x, a\right) = a^x \mod{N}$ при $a=2$, $N = 21$ см.
 
 Исходное состояние после  преобразования Адамара имеет вид:
 \begin{equation}
-\left|in\right> = \frac{1}{8}\sum_{x = 0}^{63}\left|x\right> \otimes \left|0\right>,
+\ket{in} = \frac{1}{8}\sum_{x = 0}^{63}\ket{x} \otimes \ket{0},
 \nonumber
 \end{equation}
-где $\left|x\right>$ представляет собой тензорное произведение 
+где $\ket{x}$ представляет собой тензорное произведение 
 \index{Тензорное произведение}
 6 кубит
 которые кодируют бинарное представление аргумента исследуемой
 функции. Например при $x=5_{10}=000101_2$ имеем
 \[
-\left|x\right> = \left|0\right>\otimes \left|0\right>\otimes
-\left|0\right>\otimes 
-\left|1\right>\otimes \left|0\right>\otimes \left|1\right>
+\ket{x} = \ket{0}\otimes \ket{0}\otimes
+\ket{0}\otimes 
+\ket{1}\otimes \ket{0}\otimes \ket{1}
 \]
 
 После вычисления функции мы имеем состояние вида (см. верхний график
 на \autoref{picPart4QuantCompShorQuantPart})
 \begin{eqnarray}
-\hat{U}_f\left|in\right> = \frac{1}{8}\sum_{x = 0}^{63}\left|x\right>
+\hat{U}_f\ket{in} = \frac{1}{8}\sum_{x = 0}^{63}\ket{x}
 \otimes \left|f\left(x\right)\right> = 
 \nonumber \\
 =
 \frac{1}{8}
 \left(
-\left|0\right>\otimes\left|2\right> + 
-\left|1\right>\otimes\left|4\right> + 
-\left|2\right>\otimes\left|8\right> + \dots +
+\ket{0}\otimes\ket{2} + 
+\ket{1}\otimes\ket{4} + 
+\ket{2}\otimes\ket{8} + \dots +
 \right.
 \nonumber \\
 \left.
 +
-\left|62\right>\otimes\left|8\right> +
-\left|63\right>\otimes\left|16\right>
+\ket{62}\otimes\ket{8} +
+\ket{63}\otimes\ket{16}
 \right).
 \label{eqPart4QuantCompShorPFExample1}
 \end{eqnarray}
@@ -101,12 +101,12 @@ $f\left(x, a\right) = a^x \mod{N}$ при $a=2$, $N = 21$ см.
 значение функции равно $1$ (см. средний график
 на \autoref{picPart4QuantCompShorQuantPart}):
 \begin{equation}
-\left|in'\right> = \frac{1}{\sqrt{10}}\left( 
-\left|5\right>\otimes\left|1\right> +
-\left|11\right>\otimes\left|1\right> +
-\left|17\right>\otimes\left|1\right> +
+\ket{in'} = \frac{1}{\sqrt{10}}\left( 
+\ket{5}\otimes\ket{1} +
+\ket{11}\otimes\ket{1} +
+\ket{17}\otimes\ket{1} +
 \dots +
-\left|60\right>\otimes\left|1\right>
+\ket{60}\otimes\ket{1}
 \right).
 \label{eqPart4QuantCompShorPFExample2}
 \end{equation} 

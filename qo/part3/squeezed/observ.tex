@@ -50,7 +50,7 @@ r^2\hat{a}_1^{\dag}\hat{a}_1.
 состоянии сжатого вакуума. Тогда входное состояние будет двухмодовым 
 \[
 \left|\psi\right> = 
-\left|\alpha_p\right> \left|r, 0\right>.
+\left|\alpha_p\right> \ket{r, 0}.
 \]
 Среднее значение оператора числа фотонов $\hat{n}_2 =
 \hat{a}_2^{\dag}\hat{a}_2$ в таком случае будет равно:
@@ -59,9 +59,9 @@ r^2\hat{a}_1^{\dag}\hat{a}_1.
 \left<\psi\right|\hat{a}_2^{\dag}\hat{a}_2\left|\psi\right> = 
 \nonumber \\
 =
-t^2\left<r, 0\right|\hat{a}_0^{\dag}\hat{a}_0\left|r, 0\right> + 
+t^2\bra{r, 0}\hat{a}_0^{\dag}\hat{a}_0\ket{r, 0} + 
 r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
-\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>,
+\bra{r, 0}\hat{X}\left(\varphi\right)\ket{r, 0},
 \label{eqPart3SqueezedAdd3}
 \end{eqnarray}
 где
@@ -93,7 +93,7 @@ $\varphi = \frac{\pi}{2}$ имеем
 $\left<\hat{a}_0^{\dag}\hat{a}_0\right>$ - среднее число фотонов в моде
 сигнала, $r^2\left|\alpha_p\right|^2$ - среднее число фотонов в моде
 гомодина и интерференционный член 
-$\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>$,
+$\bra{r, 0}\hat{X}\left(\varphi\right)\ket{r, 0}$,
 который выделяет ту или иную квадратурные составляющие. Положим, что
 интенсивность гомодина настолько велика, что 
 \[
@@ -105,7 +105,7 @@ r^2 \left|\alpha_p\right|^2 \gg
 \begin{equation}
 \left<\hat{n}_2\right> = 
 r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
-\left<r, 0\right|\hat{X}\left(\varphi\right)\left|r, 0\right>,
+\bra{r, 0}\hat{X}\left(\varphi\right)\ket{r, 0},
 \nonumber
 \end{equation}
 где первый член является известным числом и его можно
@@ -235,7 +235,7 @@ $D^{(3)}$, и сигналы, идущие с каждого фотоэлеме�
 $\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).  
 
 Найдем среднее значение оператора $\hat{n}_{23}$ в случае сигнала в
-сжатом вакуумном состоянии $\left|z, 0\right>$, где для простоты
+сжатом вакуумном состоянии $\ket{z, 0}$, где для простоты
 положим $z = r$ - вещественным ($r = \left|z\right|$). Также для
 простоты положим $\varphi = 0$. В этом случае 
 \[
@@ -249,35 +249,35 @@ $\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).
 \begin{eqnarray}
 \left<\hat{n}_{23}\right> = 
 2 \left|\alpha_H\right|\left<\hat{X}_1\right> = 
-\left|\alpha_H\right|\left<r, 0\right|\hat{a}_0 +
-\hat{a}_0^{\dag}\left|r, 0\right> =
+\left|\alpha_H\right|\bra{r, 0}\hat{a}_0 +
+\hat{a}_0^{\dag}\ket{r, 0} =
 \nonumber \\
 =
-\left|\alpha_H\right|\left<0\right|
+\left|\alpha_H\right|\bra{0}
 \hat{S}^{\dag}\left(r\right)
 \left(\hat{a}_0 +
 \hat{a}_0^{\dag}\right)
 \hat{S}\left(r\right)
-\left|0\right> =
+\ket{0} =
 \nonumber \\
 =
 \left|\alpha_H\right|
 \left(
-\left<0\right|
+\bra{0}
 \hat{a}_0 ch\,r -
 \hat{a}_0^{\dag} sh\,r
-\left|0\right> 
+\ket{0} 
 +
-\left<0\right|
+\bra{0}
 \hat{a}_0^{\dag} ch\,r -
 \hat{a}_0 sh\,r
-\left|0\right> 
+\ket{0} 
 \right)
 = 0,
 \nonumber
 \end{eqnarray}
-т. к. $\hat{a}_0\left|0\right> = 0$, 
-$\left<0\right|\hat{a}_0^{\dag} = 0$.
+т. к. $\hat{a}_0\ket{0} = 0$, 
+$\bra{0}\hat{a}_0^{\dag} = 0$.
 Таким образом, среднее значение $\left<\hat{n}_{23}\right> =
 0$. Однако средний квадрат не равен 0. Он выражает шумы, ограничивающие
 точность измерений.
@@ -300,43 +300,43 @@ $\left<0\right|\hat{a}_0^{\dag} = 0$.
 \eqref{eqPart3SqueezedAddAdd5} равен нулю, получаем:
 \begin{eqnarray}
 \left(\Delta X_{1,2}\right)^2 = 
-\left<0\right|\hat{S}^{\dag}\left(r, 0\right)
+\bra{0}\hat{S}^{\dag}\left(r, 0\right)
 \frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)^2
 \hat{S}\left(r, 0\right)
-\left|0\right> = 
+\ket{0} = 
 \nonumber \\
 =
-\left<0\right|\hat{S}^{\dag}\left(r, 0\right)
+\bra{0}\hat{S}^{\dag}\left(r, 0\right)
 \frac{1}{4}
 \left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)
 \hat{S}^{\dag}\left(r, 0\right)
 \hat{S}\left(r, 0\right)
 \left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)
 \hat{S}\left(r, 0\right)
-\left|0\right>.
+\ket{0}.
 \label{eqPart3SqueezedAddAdd6}
 \end{eqnarray}
 Чтобы найти 
 $\left(\Delta X_{1,2}\right)^2$, нужно вычислить средние:
 \begin{eqnarray}
 \left<\hat{a}_0\right> = 
-\left<0\right|
+\bra{0}
 \hat{S}^{\dag}\left(r, 0\right)
 \hat{a}_0
 \hat{S}\left(r, 0\right)
-\left|0\right> = 
-\left<0\right|
+\ket{0} = 
+\bra{0}
 \hat{a}_0 ch\,r - \hat{a}_0^{\dag} sh\,r
-\left|0\right> = 0,
+\ket{0} = 0,
 \nonumber \\
 \left<\hat{a}_0^{\dag}\right> = 
-\left<0\right|
+\bra{0}
 \hat{a}_0^{\dag} ch\,r - \hat{a}_0 sh\,r
-\left|0\right> = 0,
+\ket{0} = 0,
 \label{eqPart3SqueezedAddAdd7}
 \end{eqnarray}
-т. к. $\hat{a}_0\left|0\right> = 0$, 
-$\left<0\right|\hat{a}_0^{\dag} = 0$.
+т. к. $\hat{a}_0\ket{0} = 0$, 
+$\bra{0}\hat{a}_0^{\dag} = 0$.
 
 Таким же образом можно показать
 \begin{eqnarray}

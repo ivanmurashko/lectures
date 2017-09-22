@@ -57,25 +57,25 @@ t_2\right)$ процедуру, которую мы применяли при р
 t$, а второго во время $t_2 = t - \tau$ в интервале $\Delta t$ равна
 \begin{equation}
 w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) \Delta t= 
-\alpha \left| \left<f\right|
+\alpha \left| \bra{f}
 \hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
 t_2\right)
-\left|i\right>\right|^2 \Delta t,
+\ket{i}\right|^2 \Delta t,
 \nonumber
 \end{equation}
-где $\left|i\right>$ начальное состояние системы, $\left|f\right>$
+где $\ket{i}$ начальное состояние системы, $\ket{f}$
 конечное состояние системы, $\alpha$ - величина, зависящая от свойств
 фотодетекторов. Тогда скорость счета (число отсчетов в единицу
 времени) после суммирования по конечным состояниям определяется
 формулой
 \begin{equation}
 w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) = 
-\alpha \left<i\right|
+\alpha \bra{i}
 \hat{E}^{(-)}\left(\vec{r}_2, t_2\right)\hat{E}^{(-)}\left(\vec{r}_1,
 t_1\right)
 \hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
 t_2\right)
-\left|i\right>.
+\ket{i}.
 \nonumber
 \end{equation}
 Здесь нас интересует только полевая часть, атомная часть выражается
@@ -103,12 +103,12 @@ t_2\right)
 определенным числом фотонов. Для этого нужно рассмотреть матричный
 элемент  
 \[
-\left<n\right|\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}\left|n\right> = n
+\bra{n}\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}\ket{n} = n
 \left(n - 1\right).
 \]
 Это выражение будет стоять в числителе. В знаменателе будем иметь 
 \[
-\left(\left<n\right|\hat{a}^{\dag}\hat{a}\left|n\right>\right)^2 = 
+\left(\bra{n}\hat{a}^{\dag}\hat{a}\ket{n}\right)^2 = 
 n^2.
 \]
 
@@ -150,15 +150,15 @@ G^{(2)}_{12} = 1.
 свет, матрица плотности \index{Матрица плотности} которого равна 
 \[
 \hat{\rho} = \sum_{n}\frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n +
-    1}} \left|n\right>\left<n\right| = 
-\sum_n\rho_{nn}\left|n\right>\left<n\right|.
+    1}} \ket{n}\bra{n} = 
+\sum_n\rho_{nn}\ket{n}\bra{n}.
 \]
 Отсюда получим
 \begin{eqnarray}
 Sp \left\{\hat{\rho}\hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}\right\} = 
-\sum_{n}\sum_{m}\left<n\right|\left.m\right>\left<m\right|
+\sum_{n}\sum_{m}\bra{n}\ket{m}\bra{m}
 \hat{a}^{\dag}\hat{a}^{+}\hat{a}\hat{a}
-\left|m\right> \rho_{mm} = 
+\ket{m} \rho_{mm} = 
 \nonumber \\
 = \sum_{n}\rho_{nn}\left(n - 1\right)n = \bar{n^2} - \bar{n}.
 \label{eqCh4_add1_sp}
@@ -353,7 +353,7 @@ n_{k_1} n_{k_2} = \bar{n}_{k_1} \bar{n}_{k_2}.
 Последний случай был нами рассмотрен выше \eqref{eqCh4_28}, что дает
 \begin{equation}
 \sum_{n_{k}} P_{n_{k}}
-\left<n_k\right|\hat{a}_k^{\dag}\hat{a}_k^{+}\hat{a}_k\hat{a}_k\left|n_k\right>
+\bra{n_k}\hat{a}_k^{\dag}\hat{a}_k^{+}\hat{a}_k\hat{a}_k\ket{n_k}
 = 2 \left(\bar{n}_k\right)^2.
 \label{eqCh4_36}
 \end{equation}

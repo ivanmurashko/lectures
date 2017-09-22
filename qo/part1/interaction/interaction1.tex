@@ -18,38 +18,38 @@ i \hbar \frac{\partial}{\partial t} \left|\psi\left(r, t\right)\right>_I
 \label{eqCh2_Psi_inter}
 \end{equation}
 Решим это уравнение для начального состояния 
-$\left|\psi\left(r, 0\right)\right>_I = \left|b, n + 1\right>_I$ , т. е. 
+$\left|\psi\left(r, 0\right)\right>_I = \ket{b, n + 1}_I$ , т. е. 
 будем считать, что в начальный момент атом находится в нижнем
 состоянии, а поле содержит  $n + 1$  фотонов. Другой случай
 соответствует начальному состоянию системы  
-$\left|a, n\right>_I$,  т.е. атом находится в верхнем
+$\ket{a, n}_I$,  т.е. атом находится в верхнем
 состоянии, а поле моды содержит  $n$  фотонов. Через некоторое время в 
 результате взаимодействия атома и поля система будет находиться в
 суперпозиционном состоянии  
 \begin{equation}
 \left|\psi\left(r, t\right)\right>_I = 
-C_{a,n}\left(t\right)_I\left|a, n\right>_I +
-C_{b,n+1}\left(t\right)_I\left|b, n + 1\right>_I.
+C_{a,n}\left(t\right)_I\ket{a, n}_I +
+C_{b,n+1}\left(t\right)_I\ket{b, n + 1}_I.
 \label{eqCh2_OurPsi_inter}
 \end{equation}
 
 Воспользовавшись \eqref{eqCh2_Psi_inter} в левой части выражения
 \eqref{eqCh2_OurPsi_inter} получим 
 \begin{eqnarray}
-C_{a,n}\left(t\right)_I\left|a, n\right>_I +
-C_{b,n+1}\left(t\right)_I\left|b, n + 1\right>_I =
+C_{a,n}\left(t\right)_I\ket{a, n}_I +
+C_{b,n+1}\left(t\right)_I\ket{b, n + 1}_I =
 \nonumber \\
 = C_{a,n}\left(t\right)_I e^{i \frac{\hat{\mathcal{H}}_0
-    t}{\hbar}} \left|a, n\right> +
+    t}{\hbar}} \ket{a, n} +
 C_{b,n+1}\left(t\right)_I e^{i \frac{\hat{\mathcal{H}}_0
-    t}{\hbar}} \left|b, n + 1\right> = 
+    t}{\hbar}} \ket{b, n + 1} = 
 \nonumber \\
 =
 C_{a,n}\left(t\right)_I exp\left\{i \left(
  \omega_a +  \omega 
 \left( n + \frac{1}{2}\right) 
 \right) t
-\right\} \left|a, n\right> +
+\right\} \ket{a, n} +
 \nonumber \\
 +
 C_{b,n+1}\left(t\right)_I exp\left\{i 
@@ -57,11 +57,11 @@ C_{b,n+1}\left(t\right)_I exp\left\{i
 \omega_b +  \omega 
 \left( n + 1 + \frac{1}{2}\right) 
 \right)
-    t \right\} \left|b, n + 1\right>
+    t \right\} \ket{b, n + 1}
 \nonumber \\
 =
-C_{a,n}\left(t\right) \left|a, n\right> +
-C_{b,n+1}\left(t\right) \left|b, n + 1\right>,
+C_{a,n}\left(t\right) \ket{a, n} +
+C_{b,n+1}\left(t\right) \ket{b, n + 1},
 \nonumber
 \end{eqnarray}
 где через $C_{a,n}\left(t\right)$ и $C_{b,n+1}\left(t\right)$
@@ -88,8 +88,8 @@ C_{b,n+1}\left(t\right)_I exp\left\{i \left(
 следующий вид   
 \begin{eqnarray}
 i \left( 
-{\dot C}_{a,n}\left(t\right)\left|a, n\right> +
-{\dot C}_{b,n+1}\left(t\right)\left|b, n + 1\right>
+{\dot C}_{a,n}\left(t\right)\ket{a, n} +
+{\dot C}_{b,n+1}\left(t\right)\ket{b, n + 1}
 \right) =
 \nonumber \\
 = g \left(
@@ -97,17 +97,17 @@ i \left(
 \hat{a}^{\dag}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t}
 \right) 
 \left( 
-C_{a,n}\left|a, n\right> +
-C_{b,n+1}\left|b, n + 1\right>
+C_{a,n}\ket{a, n} +
+C_{b,n+1}\ket{b, n + 1}
 \right) = 
 \nonumber \\
 = g \sqrt{n + 1} \left(
-C_{b, n+1} e^{-i \left(\omega - \omega_{ab}\right)t} \left|a, n\right> + 
-C_{a, n} e^{i \left(\omega - \omega_{ab}\right)t} \left|b, n + 1\right>
+C_{b, n+1} e^{-i \left(\omega - \omega_{ab}\right)t} \ket{a, n} + 
+C_{a, n} e^{i \left(\omega - \omega_{ab}\right)t} \ket{b, n + 1}
 \right).
 \end{eqnarray}
 Помножим это уравнение слева соответственно на 
-$\left<a, n\right|$ и $\left<b, n + 1\right|$.  Учитывая свойства
+$\bra{a, n}$ и $\bra{b, n + 1}$.  Учитывая свойства
 операторов  $\hat{a}$, $\hat{a}^{\dag}$,  $\hat{\sigma}$,
 $\hat{\sigma}^{\dag}$ и ортогональность векторов состояния, получим  
 систему уравнений для амплитуд вероятностей 
@@ -305,12 +305,12 @@ $\left|C_{b,n+1}\right|^2$ получим см. \autoref{figPart1InteractionRabi
   Стоит отметить, что в случае $\delta \ne 0$ состояния, которые мы
   использовали в выражении \ref{eq:part1:rabi_solution} не
   удовлетворяют закону сохранения энергии. Действительно если система
-  изначально находилась в состоянии $\left|a\right>\left|n\right>$ с
+  изначально находилась в состоянии $\ket{a}\ket{n}$ с
   энергией $E_a + \hbar n \omega$, то через некоторое время она,
   с ненулевой вероятностью,
   может
   быть зарегистрирована в состоянии
-  $\left|b\right>\left|n+1\right>$ с энергией
+  $\ket{b}\ket{n+1}$ с энергией
   \[
   E_b + \hbar (n+1)
   \omega \ne E_a + \hbar n \omega.

@@ -54,10 +54,10 @@ i \left(1 + e^{i \varphi}\right)\hat{a}_1
 
 Формулы \eqref{eqPart2Interfero11} связывают входящие поля с
 выходящими. Положим, что входное поле нулевого входа находится в
-вакуумном состоянии $\left|0\right>$, а входное поле первого входа - в
+вакуумном состоянии $\ket{0}$, а входное поле первого входа - в
 когерентном состоянии $\left|\alpha\right>$. Таким образом входное
 поле находится в двухмодовом состоянии $\left|\psi\right> =
-\left|0\right>_0\left|\alpha\right>_1$. Далее можно найти
+\ket{0}_0\left|\alpha\right>_1$. Далее можно найти
 среднее число фотонов на выходах 4 и 5 в зависимости от
 $\varphi$. Результат получится неотличимый от классического.
 Действительно
@@ -93,7 +93,7 @@ $\varphi$. Результат получится неотличимый от к�
   \label{eqPart2InterferoA55}
 \end{eqnarray}
 Таким образом для состояния $\left|\psi\right> =
-\left|0\right>_0\left|\alpha\right>_1$ получим на фотодетекторе 5
+\ket{0}_0\left|\alpha\right>_1$ получим на фотодетекторе 5
 следующий сигнал
 \[
 \left<\psi\right|\hat{a}^{\dag}_5 \hat{a}_5\left|\psi\right> =
@@ -178,22 +178,22 @@ $\varphi$. Результат получится неотличимый от к�
 \begin{eqnarray}
 \left<\hat{R}\right> = 
 \left<\psi\right|\hat{R} \left|\psi\right> = 
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \left(
 \hat{a}_1^{\dag} \hat{a}_1 - 
 \hat{a}_0^{\dag} \hat{a}_0
 \right)
-\left|0\right>_0\left|\alpha\right>_1
+\ket{0}_0\left|\alpha\right>_1
 \cos\,\varphi
 -
 \nonumber \\
 -
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \left(
 \hat{a}_0^{\dag} \hat{a}_1 + 
 \hat{a}_1^{\dag} \hat{a}_0
 \right) 
-\left|0\right>_0\left|\alpha\right>_1
+\ket{0}_0\left|\alpha\right>_1
 \sin\,\varphi = 
 \nonumber \\
 = \left|\alpha\right|^2 \cos\,\varphi.
@@ -203,35 +203,35 @@ $\varphi$. Результат получится неотличимый от к�
 первой и нулевой моды действуют только на состояние своей
 моды. Поэтому имеем
 \[
-\hat{a}_0\left|0\right> = 0, \, 
-\left<0\right|\hat{a}_0^{\dag} = 0,
+\hat{a}_0\ket{0} = 0, \, 
+\bra{0}\hat{a}_0^{\dag} = 0,
 \]
 следовательно 
 \[
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \left(
 \hat{a}_0^{\dag} \hat{a}_1 + 
 \hat{a}_1^{\dag} \hat{a}_0
 \right) 
-\left|0\right>_0\left|\alpha\right>_1 = 0,
+\ket{0}_0\left|\alpha\right>_1 = 0,
 \]
 а
 \begin{eqnarray}
 \left<\psi\right|\hat{R} \left|\psi\right>= 
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \left(
 \hat{a}_1^{\dag} \hat{a}_1 - 
 \hat{a}_0^{\dag} \hat{a}_0
 \right)
-\left|0\right>_0\left|\alpha\right>_1
+\ket{0}_0\left|\alpha\right>_1
 =
 \nonumber \\
 =
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \left(
 \hat{a}_1^{\dag} \hat{a}_1
 \right)
-\left|0\right>_0\left|\alpha\right>_1
+\ket{0}_0\left|\alpha\right>_1
 = \left|\alpha\right|^2 = 
 \left<\hat{n}\right>
 \nonumber
@@ -295,19 +295,19 @@ $\varphi$. Результат получится неотличимый от к�
 \hat{a}_0^{\dag} \hat{a}_1 
 \hat{a}_0 \hat{a}_1^{\dag} 
 \left|\psi\right> = 
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \hat{a}_0^{\dag} \hat{a}_1 
 \hat{a}_0 \hat{a}_1^{\dag} 
-\left|0\right>_0\left|\alpha\right>_1 =
+\ket{0}_0\left|\alpha\right>_1 =
 \nonumber \\
 =
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \hat{a}_0^{\dag} \hat{a}_0 
 \hat{a}_1 \hat{a}_1^{\dag} 
-\left|0\right>_0\left|\alpha\right>_1 =
-\left<0\right|_0
+\ket{0}_0\left|\alpha\right>_1 =
+\bra{0}_0
 \hat{a}_0^{\dag} \hat{a}_0 
-\left|0\right>_0
+\ket{0}_0
 \left<\alpha\right|_1
 \hat{a}_1 \hat{a}_1^{\dag} 
 \left|\alpha\right>_1 =
@@ -320,29 +320,29 @@ $\varphi$. Результат получится неотличимый от к�
 \hat{a}_1^{\dag} \hat{a}_0
 \hat{a}_1 \hat{a}_0^{\dag}
 \left|\psi\right> = 
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \hat{a}_1^{\dag} \hat{a}_0
 \hat{a}_1 \hat{a}_0^{\dag}
-\left|0\right>_0\left|\alpha\right>_1 =
+\ket{0}_0\left|\alpha\right>_1 =
 \nonumber \\
 =
-\left<0\right|_0\left<\alpha\right|_1
+\bra{0}_0\left<\alpha\right|_1
 \hat{a}_1^{\dag} \hat{a}_1 
 \hat{a}_0 \hat{a}_0^{\dag}
-\left|0\right>_0\left|\alpha\right>_1 =
+\ket{0}_0\left|\alpha\right>_1 =
 \left<\alpha\right|_1
 \hat{a}_1^{\dag} \hat{a}_1 
 \left|\alpha\right>_1 
-\left<0\right|_0
+\bra{0}_0
 \hat{a}_0 \hat{a}_0^{\dag}
-\left|0\right>_0 =
+\ket{0}_0 =
 \nonumber \\
 =
 \left<\alpha\right|_1
 \hat{a}_1^{\dag} \hat{a}_1 
 \left|\alpha\right>_1 
-\left<1\right.
-\left|1\right>_0 =
+\bra{1}
+\ket{1}_0 =
 \left<\alpha\right|_1
 \hat{a}_1^{\dag} \hat{a}_1 
 \left|\alpha\right>_1 

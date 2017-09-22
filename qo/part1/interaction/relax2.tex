@@ -7,8 +7,8 @@ $\hat{a}_k$. Частоту $k$-ой моды обозначим через $\om
 
 Это электромагнитное поле взаимодествует с некоторым двухуровневым
 атомом. Атом может находится в двух состояниях 
-возбужденном $\left|a\right>$ и невозбужденном
-$\left|b\right>$. Операторы перехода по прежнему 
+возбужденном $\ket{a}$ и невозбужденном
+$\ket{b}$. Операторы перехода по прежнему 
 $\hat{\sigma}$ и $\hat{\sigma}^{\dag}$. Частоту перехода обозначим через
 \index{Гамильтониан}
 $\Omega$. Гамильтониан взаимодействия в этом случае имеет вид  
@@ -152,26 +152,26 @@ e^{ - \nu
 Используя свойства \eqref{eqCh2_8} - \eqref{eqCh2_task1} операторов 
 $\hat{\sigma}$ и $\hat{\sigma}^{\dag}$, получим   
 \begin{eqnarray}
-\dot{\rho}_{aa} = \left<a\right|\dot{\hat{\rho}}_{at}\left|a\right> =
+\dot{\rho}_{aa} = \bra{a}\dot{\hat{\rho}}_{at}\ket{a} =
 -\frac{1}{2}\gamma
-\left<a\right|\hat{\sigma}^{\dag}\hat{\sigma}\hat{\rho}_{at}\left|a\right>
+\bra{a}\hat{\sigma}^{\dag}\hat{\sigma}\hat{\rho}_{at}\ket{a}
 + 
 \nonumber \\
 + \frac{1}{2}\gamma
-\left<a\right|\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{\dag}\left|a\right>
+\bra{a}\hat{\sigma}\hat{\rho}_{at}\hat{\sigma}^{\dag}\ket{a}
 + \mbox{к.с.} = 
 \nonumber \\
 = 
 - \frac{1}{2}\gamma
-\left<a\right|\hat{\rho}_{at}\left|a\right> + \mbox{к.с.} = 
+\bra{a}\hat{\rho}_{at}\ket{a} + \mbox{к.с.} = 
 - \gamma \rho_{aa}.
 \label{eqCh2_101}
 \end{eqnarray}
 Здесь мы использовали соотношения
-\(\hat{\sigma}^{\dag}\left|a\right> = 0\),
-\(\hat{\sigma}^{\dag}\left|b\right> = \left|a\right>\),
-\(\hat{\sigma}\left|a\right> = \left|b\right>\),
-\(\hat{\sigma}\left|b\right> = 0\)
+\(\hat{\sigma}^{\dag}\ket{a} = 0\),
+\(\hat{\sigma}^{\dag}\ket{b} = \ket{a}\),
+\(\hat{\sigma}\ket{a} = \ket{b}\),
+\(\hat{\sigma}\ket{b} = 0\)
 и сопряженные им. Окончательный результат 
 \begin{equation}
 \dot{\hat{\rho}}_{aa} = - \gamma \rho_{aa}.

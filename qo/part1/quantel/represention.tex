@@ -8,8 +8,8 @@
 \[
 \hat{\rho} = \hat{I}\hat{\rho}\hat{I} = 
 \sum_{(n)}\sum_{(m)}
-\left|n\right>\left<n\right|\hat{\rho}\left|m\right>\left<m\right| = 
-\sum_{(n)}\sum_{(m)} \rho_{mn}\left|n\right>\left<m\right|
+\ket{n}\bra{n}\hat{\rho}\ket{m}\bra{m} = 
+\sum_{(n)}\sum_{(m)} \rho_{mn}\ket{n}\bra{m}
 \]
 Аналогично для когерентных состояний
 \begin{eqnarray}
@@ -29,7 +29,7 @@ R\left(\alpha^{*}, \beta\right) =
 e^{\frac{1}{2}\left|\alpha\right|^2 +\frac{1}{2}\left|\beta\right|^2}
 \]
 Если выразить $\left|\alpha\right>$ и $\left|\beta\right>$ через
-состояния $\left|n\right>$,  получим формулу 
+состояния $\ket{n}$,  получим формулу 
 \begin{equation}
 R\left(\alpha^{*}, \beta\right) = \sum_{(n)}\sum_{(m)}
 \frac{\left(\alpha^{*}\right)^n \left(\beta\right)^m}{\sqrt{n!m!}}\rho_{nm}
@@ -186,21 +186,21 @@ C^{\left(a\right)}_{nm}
 \begin{eqnarray}
 \left<\hat{O}\right> = Sp \left(\hat{\rho}\hat{O}\right) =
 \nonumber \\
-= \sum_{(n)}\left<n\right|
+= \sum_{(n)}\bra{n}
 \int d^2 \alpha P\left(\alpha, \alpha^{*}\right) 
 \left|\alpha\right>\left<\alpha\right|
-\hat{O}\left|n\right> =
+\hat{O}\ket{n} =
 \nonumber \\
 = \sum_{(n)} \int d^2 \alpha P\left(\alpha, \alpha^{*}\right)
-\left<\alpha\right|\hat{O}\left|n\right>
-\left<n\right|\left.\alpha\right> = 
+\left<\alpha\right|\hat{O}\ket{n}
+\bra{n}\left.\alpha\right> = 
 \nonumber \\
 =  
 \int d^2 \alpha P\left(\alpha, \alpha^{*}\right)
 \left<\alpha\right|\hat{O}\left|\alpha\right>,
 \label{eqCh1_middleO}
 \end{eqnarray}
-т. к. $\sum_{(n)}\left|n\right>\left<n\right| = \hat{I}$. 
+т. к. $\sum_{(n)}\ket{n}\bra{n} = \hat{I}$. 
 
 Выражение $\left<\alpha\right|\hat{O}\left|\alpha\right>$ легко
 вычисляется, если оператор $\hat{O}$ представлен в нормальном виде:
@@ -243,15 +243,15 @@ e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
 Найдем теперь матричные элементы оператора $\hat{\rho}$ в
 представлении чисел заполнения (числа фотонов)
 \begin{eqnarray}
-\left<n\right|
+\bra{n}
 \hat{\rho}
-\left|n\right> = 
+\ket{n} = 
 \frac{1}{\pi \bar{n}}
 \int d^2 \alpha 
 e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
-\left<n\right|\left.\alpha\right>
+\bra{n}\left.\alpha\right>
 \left<\alpha\right|
-\left.n\right> = 
+\ket{n} = 
 \nonumber \\
 = 
 \frac{1}{\pi \bar{n}}

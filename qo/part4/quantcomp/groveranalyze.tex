@@ -14,10 +14,10 @@
 $\left|\psi\right>_0$ имеет следующий вид
 \begin{equation}
 \left|\psi\right>_0 =
-\sum_x \alpha_x \left|x\right> =  
-\left|s\right> = 
-\frac{1}{\sqrt{N}}\sum_x \left|x\right> = 
-\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> +
+\sum_x \alpha_x \ket{x} =  
+\ket{s} = 
+\frac{1}{\sqrt{N}}\sum_x \ket{x} = 
+\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \ket{x} +
 \frac{1}{\sqrt{N}} \left|x^{\ast}\right>.
 \nonumber
 \end{equation}
@@ -28,7 +28,7 @@ $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$.
 фазы $U_{x^{\ast}}$ из \eqref{eqQuantCompGroverUxast} получим
 \begin{equation}
 \hat{U}_{x^{\ast}} \left|\psi\right>_0 =
-\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> - 
+\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \ket{x} - 
 \frac{1}{\sqrt{N}} \left|x^{\ast}\right>.
 \nonumber
 \end{equation}
@@ -39,13 +39,13 @@ $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$.
 \hat{U}_s \hat{U}_{x^{\ast}} \left|\psi\right>_0 = 
 \hat{U}_G \left|\psi\right>_0 \approx 
 \sum_{x\ne x^{\ast}} \left( 2 \frac{1}{\sqrt{N}} - \frac{1}{\sqrt{N}}
-\right) \left|x\right> + 
+\right) \ket{x} + 
 \nonumber \\
 + \left( 2 \frac{1}{\sqrt{N}} +
 \frac{1}{\sqrt{N}} \right) \left|x^{\ast}\right> = 
 \nonumber \\
 = 
-\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \left|x\right> + 
+\frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \ket{x} + 
 \frac{3}{\sqrt{N}} \left|x^{\ast}\right>.
 \label{eqQuantCompGroverAnalyzeRought}
 \end{eqnarray}
@@ -72,7 +72,7 @@ $\frac{\pi}{4}\sqrt{N}$. Таким образом алгоритм Гровер
 \label{algQuantCompGrover}
 \begin{algorithmic}
     \STATE $\left|\psi\right>_0 \Leftarrow \frac{1}{\sqrt{N}}\sum_x 
-    \left|x\right>$
+    \ket{x}$
     \STATE $t \Leftarrow 1$
     \REPEAT
     \STATE $\left|\psi\right>_t \Leftarrow \hat{U}_s\hat{U}_{x^{\ast}}

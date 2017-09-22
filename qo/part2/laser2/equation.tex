@@ -25,28 +25,28 @@ $\hat{b}_k^{\dag}$, $\hat{b}_k$. При этом справедливы след
 
 Атомная подсистема состоит из большого числа атомов. Атом $j$ может
 находится в следующих основных состояниях:
-$\left|a\right>^j$, $\left|b\right>^j$ и $\left|c\right>^j$. Поведение
+$\ket{a}^j$, $\ket{b}^j$ и $\ket{c}^j$. Поведение
 этого атома может быть описано с помощью операторов проектирования в
-состояния $\left|a\right>^j$ и $\left|b\right>^j$:
+состояния $\ket{a}^j$ и $\ket{b}^j$:
 \begin{equation}
-\hat{\sigma}_a^j = \left|a\right>^j\left<a\right|^j,\,
-\hat{\sigma}_b^j = \left|b\right>^j\left<b\right|^j,
+\hat{\sigma}_a^j = \ket{a}^j\bra{a}^j,\,
+\hat{\sigma}_b^j = \ket{b}^j\bra{b}^j,
 \nonumber
 \end{equation}
 а также операторов перехода
 \begin{eqnarray}
 \hat{\sigma}_{a \rightarrow b}^j = \hat{\sigma}_{ab}^j =
-\left|b\right>^j\left<a\right|^j,\,
+\ket{b}^j\bra{a}^j,\,
 \hat{\sigma}_{b \rightarrow a}^j = \hat{\sigma}_{ba}^j =
 \left(\hat{\sigma}_{ab}^j\right)^{\dag},
 \nonumber \\
 \hat{\sigma}_{a \rightarrow c}^j = \hat{\sigma}_{ac}^j =
-\left|c\right>^j\left<a\right|^j,\,
+\ket{c}^j\bra{a}^j,\,
 \hat{\sigma}_{c \rightarrow a}^j = \hat{\sigma}_{ca}^j =
 \left(\hat{\sigma}_{ac}^j\right)^{\dag},
 \nonumber \\
 \hat{\sigma}_{b \rightarrow c}^j = \hat{\sigma}_{bc}^j =
-\left|c\right>^j\left<b\right|^j,\,
+\ket{c}^j\bra{b}^j,\,
 \hat{\sigma}_{c \rightarrow b}^j = \hat{\sigma}_{cb}^j =
 \left(\hat{\sigma}_{bc}^j\right)^{\dag}.
 \nonumber 
@@ -304,13 +304,13 @@ $\hat{\sigma}_a^j$ имеем
 откуда с учетом коммутационных соотношений 
 \begin{eqnarray}
 \left[\hat{\sigma}^{i}_{ab},\hat{\sigma}_a^j\right] = 
-\left|b^i\right>\left<a^i\right|\left.a^j\right>\left<a^j\right| -
-\left|a^j\right>\left<a^j\right|\left.b^i\right>\left<a^i\right| = 
+\ket{b^i}\bra{a^i}\ket{a^j}\bra{a^j} -
+\ket{a^j}\bra{a^j}\ket{b^i}\bra{a^i} = 
 \delta_{ij}\hat{\sigma}^{j}_{ab},
 \nonumber \\
 \left[\left(\hat{\sigma}^{i}_{ab}\right)^{\dag},\hat{\sigma}_a^j\right] = 
-\left|a^i\right>\left<b^i\right|\left.a^j\right>\left<a^j\right| -
-\left|a^j\right>\left<a^j\right|\left.a^i\right>\left<b^i\right| = 
+\ket{a^i}\bra{b^i}\ket{a^j}\bra{a^j} -
+\ket{a^j}\bra{a^j}\ket{a^i}\bra{b^i} = 
 - \delta_{ij}\left(\hat{\sigma}^{j}_{ab}\right)^{\dag}
 \nonumber
 \end{eqnarray}
@@ -611,8 +611,8 @@ e^{i\left(\omega_k^{(A)} - \omega_{bc}\right)t} + \mbox{э. с.}
 Откуда с учетом 
 \begin{eqnarray}
 \left[\left(\hat{\sigma}^{i}_{ab}\right)^{\dag},\hat{\sigma}_{ab}^j\right] = 
-\left|a^i\right>\left<b^i\right|\left.b^j\right>\left<a^j\right| -
-\left|b^j\right>\left<a^j\right|\left.a^i\right>\left<b^i\right| = 
+\ket{a^i}\bra{b^i}\ket{b^j}\bra{a^j} -
+\ket{b^j}\bra{a^j}\ket{a^i}\bra{b^i} = 
 - \delta_{ij}\left(\hat{\sigma}^{j}_{a} - \hat{\sigma}^{j}_{b}\right)
 \nonumber
 \end{eqnarray}
@@ -934,7 +934,7 @@ r_a\int_{-\infty}^{\infty}\left(\dots\right)d t_j,
 возбужденном состоянии, имеем
 \begin{equation}
 \left<\hat{\sigma}^{j}_{a}\left(t_j\right)\right> = 
-\left<a\right|\hat{\sigma}^{j}_{a}\left|a\right> = 1.
+\bra{a}\hat{\sigma}^{j}_{a}\ket{a} = 1.
 \label{eqLaserHaizenbergMiddNAFirst_pre3}
 \end{equation}  
 Подставив \eqref{eqLaserHaizenbergMiddNAFirst_pre2} и

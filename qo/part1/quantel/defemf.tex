@@ -3,23 +3,23 @@
   энергией (с определенным числом фотонов)}
 Сначала рассмотрим одну моду электромагнитного поля (простой
 гармонический осциллятор). Вектор состояния с определенной энергией
-$\left|E_n\right>$ удовлетворяет следующему уравнению
+$\ket{E_n}$ удовлетворяет следующему уравнению
 \begin{equation}
-\hat{\mathcal{H}} \left|E_n\right> = E_n \left|E_n\right>
+\hat{\mathcal{H}} \ket{E_n} = E_n \ket{E_n}
 \end{equation}
 Здесь и далее будем пользоваться формализмом Дирака (см. 
 \autoref{AddDirac}). Используя соотношение \eqref{eqCh1_mainpropertyaa},
 получим 
 \begin{equation}
-\hat{\mathcal{H}} \hat{a}\left|E_n\right> = 
+\hat{\mathcal{H}} \hat{a}\ket{E_n} = 
 \left(\hat{a}\hat{\mathcal{H}} -
-\hbar\omega\hat{a}\right)\left|E_n\right> =
-\left(E_n - \hbar \omega\right)\hat{a}\left|E_n\right>
+\hbar\omega\hat{a}\right)\ket{E_n} =
+\left(E_n - \hbar \omega\right)\hat{a}\ket{E_n}
 \end{equation}
-т. е. $\hat{a}\left|E_n\right>$ также является вектором состояния с
+т. е. $\hat{a}\ket{E_n}$ также является вектором состояния с
 энергией $E_n - \hbar \omega$.  Отсюда следует, что
 \[
-\hat{a}\left|E_n\right> = \left|E_n - \hbar \omega \right>
+\hat{a}\ket{E_n} = \left|E_n - \hbar \omega \right>
 \] 
 Следовательно, оператор $\hat{a}$ понижает энергию состояния на $\hbar
 \omega$,  где $\omega$ - частота моды (осциллятора). Часто $\hat{a}$
@@ -40,8 +40,8 @@ $\left< \Phi \right| \hat{a}^{\dag}  = \left< \Phi' \right|$.  Поскольк�
 \(
 \left< \Phi' \right. \left| \Phi' \right> = 0.
 \)
-Это означает, что $\hat{a}\left|0\right> = 0$,  где
-$\left|\Phi\right> = \left|0\right>$ -  вектор состояния с наименьшей
+Это означает, что $\hat{a}\ket{0} = 0$,  где
+$\left|\Phi\right> = \ket{0}$ -  вектор состояния с наименьшей
 энергией. Наименьшая энергия  
 \begin{equation}
 E_0 = \frac{\hbar \omega}{2}
@@ -49,47 +49,47 @@ E_0 = \frac{\hbar \omega}{2}
 называется энергией нулевых колебаний. Для проверки этого утверждения
 можно написать
 \begin{eqnarray}
-\hat{\mathcal{H}} \left|0\right> = 
+\hat{\mathcal{H}} \ket{0} = 
 \hbar \omega \left(\hat{a}^{\dag} \hat{a} +
-\frac{1}{2}\right) \left|0\right> = 
+\frac{1}{2}\right) \ket{0} = 
 \nonumber \\
 = 
-\hbar \omega \hat{a}^{\dag} \hat{a} \left|0\right> +
-\frac{\hbar \omega}{2}\left|0\right> =
+\hbar \omega \hat{a}^{\dag} \hat{a} \ket{0} +
+\frac{\hbar \omega}{2}\ket{0} =
 \nonumber \\
-= \frac{\hbar \omega}{2} \left|0\right> = 
-E_0 \left|0\right>.
+= \frac{\hbar \omega}{2} \ket{0} = 
+E_0 \ket{0}.
 \label{eqProper0state}
 \end{eqnarray}
 
 
 С помощью \eqref{eqCh1_mainpropertyaa} можно получить
 \begin{eqnarray}
-\hat{\mathcal{H}} \hat{a}^{\dag}\left|0\right> = 
-\hat{\mathcal{H}} \left|1\right> =
+\hat{\mathcal{H}} \hat{a}^{\dag}\ket{0} = 
+\hat{\mathcal{H}} \ket{1} =
 \left(\hat{a}^{\dag} \hat{\mathcal{H}} + \hbar \omega \hat{a}^{+} \right)
-\left|0\right> = 
+\ket{0} = 
 \nonumber \\
 = \hbar \omega \left(1 + \frac{1}{2}\right)
-\hat{a}^{\dag} \left|0\right> = 
+\hat{a}^{\dag} \ket{0} = 
 \hbar \omega \left(1 + \frac{1}{2}\right)
-\left|1\right>
+\ket{1}
 \end{eqnarray}
-где через $\left|1\right> = \hat{a}^{\dag} \left|0\right>$ обозначено
+где через $\ket{1} = \hat{a}^{\dag} \ket{0}$ обозначено
 состояние с энергией $\hbar \omega \left(1 + \frac{1}{2}\right)$.
 
 По индукции имеем
 \begin{equation}
-\hat{\mathcal{H}} \left(\hat{a}^{\dag}\right)^n\left|0\right> = 
-\hat{\mathcal{H}} \left|n\right> 
+\hat{\mathcal{H}} \left(\hat{a}^{\dag}\right)^n\ket{0} = 
+\hat{\mathcal{H}} \ket{n} 
 = \hbar \omega \left(n + \frac{1}{2}\right)
-\left(\hat{a}^{\dag}\right)^n\left|0\right> = 
+\left(\hat{a}^{\dag}\right)^n\ket{0} = 
 \hbar \omega \left(n + \frac{1}{2}\right)
-\left|n\right>
+\ket{n}
 \label{eqCh1_aplusinduction}
 \end{equation}
 где
-$\left|n\right> = \left(\hat{a}^{\dag}\right)^n\left|0\right>$   
+$\ket{n} = \left(\hat{a}^{\dag}\right)^n\ket{0}$   
 без нормировки, которую проведем далее -  состояние с энергией  
 $\hbar \omega \left(n + \frac{1}{2}\right)$,  $n$  -  целое
 положительное число.
@@ -102,18 +102,18 @@ $\hbar \omega$.  Его можно рассматривать как опера�
 это следует из \eqref{eqCh1_task3_2}. 
   
 Соотношения 
-$\hat{a} \left|n\right> = \left|n - 1\right>$
+$\hat{a} \ket{n} = \ket{n - 1}$
 и
-$\hat{a}^{\dag} \left|n\right> = \left|n + 1\right>$
+$\hat{a}^{\dag} \ket{n} = \ket{n + 1}$
 определяют ненормированные векторы состояния. Определим нормирующий
 множитель. Предположим, что  
-$\hat{a} \left|n\right> = S_n \left|n - 1\right>$,  где 
-$\left|n\right>$ и $\left|n - 1\right>$ нормированы к  1,  а $S_n$
+$\hat{a} \ket{n} = S_n \ket{n - 1}$,  где 
+$\ket{n}$ и $\ket{n - 1}$ нормированы к  1,  а $S_n$
 является нормирующим множителем. Отсюда получим 
 \[
-S_n^2\left<n - 1\right.\left|n - 1\right> =
-\left<n\right|\hat{a}^{\dag}\hat{a}\left|n\right> = 
-n  \left<n\right.\left|n\right>
+S_n^2\bra{n - 1}\ket{n - 1} =
+\bra{n}\hat{a}^{\dag}\hat{a}\ket{n} = 
+n  \bra{n}\ket{n}
 \]
 т.к. оператор    
 $\hat{a}^{\dag}\hat{a} = \hat{n}$
@@ -121,43 +121,43 @@ $\hat{a}^{\dag}\hat{a} = \hat{n}$
 которого является число фотонов. Это видно из формулы
 \eqref{eqCh1_aplusinduction}. Действительно, из равенства
 \[
-\hat{\mathcal{H}} \left|n\right> =
+\hat{\mathcal{H}} \ket{n} =
 \hbar \omega \left(
 \hat{a}^{\dag}\hat{a} + \frac{1}{2}
 \right)
-\left|n\right> = 
+\ket{n} = 
 \hbar \omega \left(n + \frac{1}{2}\right)
-\left|n\right>,
+\ket{n},
 \]
 получаем:
 \[
-\hat{n}\left|n\right> = \hat{a}^{\dag}\hat{a} \left|n\right> = n
-\left|n\right>. 
+\hat{n}\ket{n} = \hat{a}^{\dag}\hat{a} \ket{n} = n
+\ket{n}. 
 \]
-Из условия нормировки следует: $\left<n\right.\left|n\right> = 1$   и
+Из условия нормировки следует: $\bra{n}\ket{n} = 1$   и
 $S_n^2 = n$,  откуда $S_n = \sqrt{n}$ и, следовательно, имеем: 
 \begin{equation}
-\hat{a}\left|n\right> = \sqrt{n}\left|n - 1\right>
+\hat{a}\ket{n} = \sqrt{n}\ket{n - 1}
 \end{equation}
 По аналогии, с помощью коммутационных соотношений
 \eqref{eqCh1_aacomutation}, а также \ref{eqAddDirac_operator_property1} и
   \ref{eqAddDirac_operator_property2} из \autoref{AddDirac},
   получаем 
 \begin{eqnarray}
-\hat{a}^{\dag}\left|n\right> = S_{n+1}\left|n + 1\right>,
+\hat{a}^{\dag}\ket{n} = S_{n+1}\ket{n + 1},
 \quad 
-\left<n\right|\hat{a} = S_{n + 1}\left<n + 1\right|,
+\bra{n}\hat{a} = S_{n + 1}\bra{n + 1},
 \nonumber \\
-\left<n\right|\hat{a}\hat{a}^{\dag}\left|n\right> = S_{n+1}^2
-\left<n + 1\right|\left.n + 1\right> = 
-\left<n\right|\hat{a}^{\dag}\hat{a} + 1\left|n\right> = 
-\left(n + 1\right)\left<n\right.\left|n\right>,
+\bra{n}\hat{a}\hat{a}^{\dag}\ket{n} = S_{n+1}^2
+\bra{n + 1}\ket{n + 1} = 
+\bra{n}\hat{a}^{\dag}\hat{a} + 1\ket{n} = 
+\left(n + 1\right)\bra{n}\ket{n},
 \nonumber \\
 S_{n+1}^2 = n + 1.
 \end{eqnarray}
 Следовательно, имеем равенство
 \begin{equation}
-\hat{a}^{\dag}\left|n\right> = \sqrt{n + 1}\left|n + 1\right>,
+\hat{a}^{\dag}\ket{n} = \sqrt{n + 1}\ket{n + 1},
 \end{equation}
 
 Собственные состояния оператора числа фотонов $\hat{n}$ являются ортонормированными. 
@@ -170,7 +170,7 @@ S_{n+1}^2 = n + 1.
 следует (см. \autoref{AddDirac}), что собственные функции этого оператора,
 соответствующие разным собственным числам, ортогональны, т. е.
 \begin{equation}
-\left<n\right|\left.n'\right> = 0, \mbox{ если } n \ne n'.
+\bra{n}\ket{n'} = 0, \mbox{ если } n \ne n'.
 \label{eqOrtoN}
 \end{equation}
 
@@ -179,31 +179,31 @@ S_{n+1}^2 = n + 1.
 \hat{\mathcal{H}} = \hbar \omega \left(\hat{a}^{\dag}\hat{a} +
 \frac{1}{2} \right),
 \quad
-\hat{a}\left|0\right> = 0,
+\hat{a}\ket{0} = 0,
 \quad
-\hat{a}^{\dag}\hat{a}\left|n\right> = \hat{n}\left|n\right>,
+\hat{a}^{\dag}\hat{a}\ket{n} = \hat{n}\ket{n},
 \nonumber \\
 \left[\hat{a}, \hat{a}^{\dag}\right] = \hat{a} \hat{a}^{+} - \hat{a}^{+}
 \hat{a} = 1,
 \quad
-\hat{a}\left|n\right> = \sqrt{n}\left|n - 1\right>
+\hat{a}\ket{n} = \sqrt{n}\ket{n - 1}
 \nonumber \\
-\hat{\mathcal{H}}\left|n\right> = \hbar \omega \left(\hat{a}^{\dag}\hat{a} +
-\frac{1}{2} \right)\left|n\right>,
+\hat{\mathcal{H}}\ket{n} = \hbar \omega \left(\hat{a}^{\dag}\hat{a} +
+\frac{1}{2} \right)\ket{n},
 \nonumber \\
-\hat{a}^{\dag}\left|n\right> = \sqrt{n + 1}\left|n + 1\right>,
+\hat{a}^{\dag}\ket{n} = \sqrt{n + 1}\ket{n + 1},
 \quad
-\left|n\right> = \frac{1}{\sqrt{n!}}\left(\hat{a}^{\dag}\right)^n\left|0\right>
+\ket{n} = \frac{1}{\sqrt{n!}}\left(\hat{a}^{\dag}\right)^n\ket{0}
 \end{eqnarray}
 и сопряженные равенства
 \begin{eqnarray}
-\left<0\right|\hat{a}^{\dag} = 0,
+\bra{0}\hat{a}^{\dag} = 0,
 \quad
-\left<n\right|\hat{a} = \sqrt{n + 1}\left<n + 1\right|
+\bra{n}\hat{a} = \sqrt{n + 1}\bra{n + 1}
 \nonumber \\
-\left<n\right|\hat{a}^{\dag} = \sqrt{n}\left<n - 1\right|,
+\bra{n}\hat{a}^{\dag} = \sqrt{n}\bra{n - 1},
 \quad
-\left<n\right| =  \frac{1}{\sqrt{n!}} \left<0\right|\left(\hat{a}^{\dag}\right)^n.
+\bra{n} =  \frac{1}{\sqrt{n!}} \bra{0}\left(\hat{a}^{\dag}\right)^n.
 \end{eqnarray}
 
 Для простейшей модели резонатора имеем
@@ -218,27 +218,27 @@ S_{n+1}^2 = n + 1.
 с определенным числом фотонов. Покажем, что среднее значение
 электрического поля в этом состоянии равно нулю: 
 \begin{eqnarray}
-\left<n\right|\hat{E}\left|n\right> = 
-E_1 \sin k_n z \left( \left<n\right|\hat{a}\left|n\right> +
-\left<n\right|\hat{a}^{\dag}\left|n\right>\right) =
+\bra{n}\hat{E}\ket{n} = 
+E_1 \sin k_n z \left( \bra{n}\hat{a}\ket{n} +
+\bra{n}\hat{a}^{\dag}\ket{n}\right) =
 \nonumber \\
-= E_1 \sin k_n z \left( \left<n\right|\left.n - 1\right> \sqrt{n} +
-\left<n\right|\left.n + 1\right> \sqrt{n + 1}
+= E_1 \sin k_n z \left( \bra{n}\ket{n - 1} \sqrt{n} +
+\bra{n}\ket{n + 1} \sqrt{n + 1}
 \right) = 0
 \label{eqCh1_E_middle}
 \end{eqnarray}
 что следует из ортогональности состояний \eqref{eqOrtoN}
-$\left<n\right|\left.n'\right> = 0$.
+$\bra{n}\ket{n'} = 0$.
 
 Среднее значение оператора квадрата электрического поля отлично от нуля:
 \begin{eqnarray}
-\left<n\right|\hat{E}^2\left|n\right> = 
-E_1^2 \sin^2 k_n z \left<n\right|
+\bra{n}\hat{E}^2\ket{n} = 
+E_1^2 \sin^2 k_n z \bra{n}
 \left(
 \hat{a}^{\dag} \hat{a}^{+} + \hat{a} \hat{a}^{+} + \hat{a}^{+} \hat{a} +
 \hat{a} \hat{a}
 \right)
-\left|n\right> =
+\ket{n} =
 \nonumber \\
 = 2 E_1^2 \sin^2 k_n z \left( n + \frac{1}{2}
 \right).
@@ -248,20 +248,20 @@ E_1^2 \sin^2 k_n z \left<n\right|
 Обычно рассматриваемые в квантовой оптике поля не находятся в
 стационарном состоянии с определенной энергией (с определенным числом
 фотонов). Однако произвольное состояние можно представить как
-суперпозицию состояний $\left|n\right>$ : 
+суперпозицию состояний $\ket{n}$ : 
 \begin{equation}
-\left|\psi\right> = \sum_{(n)} C_n \left|n\right>
+\left|\psi\right> = \sum_{(n)} C_n \ket{n}
 \end{equation}
 где $\left|C_n\right|^2$ - вероятность при измерении обнаружить в моде
 $n$ фотонов; $\sum_{(n)} \left|C_n\right|^2 = 1$. 
 В \autoref{AddDirac} показано, что
 \[
-C_n = \left< n \right.\left| \psi \right>, \quad
-\left| \psi \right> = \sum_{(n)} \left< n \right.\left| \psi \right>
-\left| n \right> =
-\sum_{(n)} \left| n \right>\left< n \right.\left| \psi \right>,
+C_n = \bra{ n }\left| \psi \right>, \quad
+\left| \psi \right> = \sum_{(n)} \bra{ n }\left| \psi \right>
+\ket{ n } =
+\sum_{(n)} \ket{ n }\bra{ n }\left| \psi \right>,
 \quad
-\sum_{(n)} \left| n \right>\left< n \right| = \hat{I},
+\sum_{(n)} \ket{ n }\bra{ n } = \hat{I},
 \]
 где $\hat{I}$ - единичный оператор.
 
@@ -283,19 +283,19 @@ C_n = \left< n \right.\left| \psi \right>, \quad
   \omega^2\hat{q}^2\right)
   \]
   и воспользоваться выражениями \eqref{eqCh1_qpdef}, то можно получить,
-  что $\left<n\right|\hat{q}\left|n\right> =
-  \left<n\right|\hat{p}\left|n\right> = 0$. Вместе с тем
+  что $\bra{n}\hat{q}\ket{n} =
+  \bra{n}\hat{p}\ket{n} = 0$. Вместе с тем
   \begin{eqnarray}
-    \left<n\right|\hat{q}^2\left|n\right> = \frac{\hbar}{2 \omega}
+    \bra{n}\hat{q}^2\ket{n} = \frac{\hbar}{2 \omega}
     \left[
-      \left<n\right|\hat{a}^2\left|n\right> +
-      \left<n\right|\left(\hat{a}^{\dag}\right)^2\left|n\right> +
+      \bra{n}\hat{a}^2\ket{n} +
+      \bra{n}\left(\hat{a}^{\dag}\right)^2\ket{n} +
       \right.
       \nonumber \\
       \left.
       +
-      \left<n\right|\hat{a}^{\dag}\hat{a}\left|n\right> +
-      \left<n\right|\hat{a}\hat{a}^{\dag}\left|n\right>
+      \bra{n}\hat{a}^{\dag}\hat{a}\ket{n} +
+      \bra{n}\hat{a}\hat{a}^{\dag}\ket{n}
       \right] =
     \nonumber \\
     = \frac{\hbar}{2 \omega}
@@ -304,15 +304,15 @@ C_n = \left< n \right.\left| \psi \right>, \quad
   \end{eqnarray}
   a также
   \begin{eqnarray}
-    \left<n\right|\hat{p}^2\left|n\right> = - \frac{\hbar \omega}{2}
+    \bra{n}\hat{p}^2\ket{n} = - \frac{\hbar \omega}{2}
     \left[
-      \left<n\right|\hat{a}^2\left|n\right> +
-      \left<n\right|\left(\hat{a}^{\dag}\right)^2\left|n\right> - \right.
+      \bra{n}\hat{a}^2\ket{n} +
+      \bra{n}\left(\hat{a}^{\dag}\right)^2\ket{n} - \right.
       \nonumber \\
       \left.
       -
-      \left<n\right|\hat{a}^{\dag}\hat{a}\left|n\right> -
-      \left<n\right|\hat{a}\hat{a}^{\dag}\left|n\right>
+      \bra{n}\hat{a}^{\dag}\hat{a}\ket{n} -
+      \bra{n}\hat{a}\hat{a}^{\dag}\ket{n}
       \right] =
     \nonumber \\
     = \frac{\hbar \omega}{2}
@@ -321,14 +321,14 @@ C_n = \left< n \right.\left| \psi \right>, \quad
   \end{eqnarray}
   Т. о.
   \[
-  \Delta p = \sqrt{\left<n\right|\hat{p}^2\left|n\right> -
-    \left<n\right|\hat{p}\left|n\right>^2} =
+  \Delta p = \sqrt{\bra{n}\hat{p}^2\ket{n} -
+    \bra{n}\hat{p}\ket{n}^2} =
   \sqrt{\frac{\hbar \omega}{2}\left(2n + 1\right)}
   \]
   и
   \[
-  \Delta q = \sqrt{\left<n\right|\hat{q}^2\left|n\right> -
-    \left<n\right|\hat{q}\left|n\right>^2} =
+  \Delta q = \sqrt{\bra{n}\hat{q}^2\ket{n} -
+    \bra{n}\hat{q}\ket{n}^2} =
   \sqrt{\frac{\hbar}{2\omega}\left(2n + 1\right)}
   \]
   или
@@ -355,13 +355,13 @@ C_n = \left< n \right.\left| \psi \right>, \quad
   \cite{Lamb1995}.\index{фотон} Вместе с тем математический аппарат связанный с
   понятием фотона как то, операторы рождения $\hat{a}^\dag$ и
   уничтожения $\hat{a}$, состояния электромагнитного поля с
-  определенной энергией $\{\left|n\right>\}$ (которые могут быть
+  определенной энергией $\{\ket{n}\}$ (которые могут быть
   использованы в качестве базисных состояний), представляется удобным
   для теоретического описания.
 
   Стоит так же отметить, что с точки зрения формального определения
   неклассического состояния \eqref{eqPart3_Nonclass_Nonclass7},
-  $\left|n\right>$ является неклассическим 
+  $\ket{n}$ является неклассическим 
   состоянием света поскольку из \eqref{eqCh4_26} следует $G^{(2)} <
   1$.
 

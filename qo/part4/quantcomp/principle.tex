@@ -20,7 +20,7 @@ $\left|\alpha_0\right|^2 + \left|\alpha_1\right|^2 = 1$ откуда с
 учетом $\alpha_{0,1} = r_{0,1}e^{i \theta_{0,1}}$ получим что $r_0^2 =
 1 - r_1^2$}:
 \[
-\left|\psi\right>_1 = \alpha_0 \left| 0 \right> + \alpha_1 \left| 1 \right>.
+\left|\psi\right>_1 = \alpha_0 \ket{ 0 } + \alpha_1 \ket{ 1 }.
 \]
 Для описания составной системы состоящей из $m$ кубитов необходимо
 $2^m$ комплексных чисел. Иначе можно сказать что квантовое состояние
@@ -29,16 +29,16 @@ $2^m$ комплексных чисел. Иначе можно сказать ч
 кубитов:
 \begin{eqnarray}
 \left|\psi\right>_3 = 
-\alpha_0 \left| 000 \right> + 
-\alpha_1 \left| 001 \right> + 
-\alpha_2 \left| 010 \right> + 
-\alpha_3 \left| 011 \right> + 
+\alpha_0 \ket{ 000 } + 
+\alpha_1 \ket{ 001 } + 
+\alpha_2 \ket{ 010 } + 
+\alpha_3 \ket{ 011 } + 
 \nonumber \\
 + 
-\alpha_4 \left| 100 \right> + 
-\alpha_5 \left| 101 \right> + 
-\alpha_6 \left| 110 \right> + 
-\alpha_7 \left| 111 \right>.
+\alpha_4 \ket{ 100 } + 
+\alpha_5 \ket{ 101 } + 
+\alpha_6 \ket{ 110 } + 
+\alpha_7 \ket{ 111 }.
 \label{eqQuantCompPrinciplePsi8}
 \end{eqnarray}
 Как видно любое классическое состояние системы из 3 бит представлено в
@@ -70,26 +70,26 @@ $2^m$ комплексных чисел. Иначе можно сказать ч
 вычисления.  
 
 На вход вместе с исходными данными $x$ описываемыми $n$ кубитами
-подаются $m$ кубитов в состоянии $\left|0\right>$, таким
+подаются $m$ кубитов в состоянии $\ket{0}$, таким
 образом чтобы общее число входов и выходов соответствовало друг
 другу. Следовательно связь между входом и выходом может быть описана в
 ввиде
 \footnote{Более правильно записывать в общем виде как 
 $
-\underbrace{\left|x\right>}_n
+\underbrace{\ket{x}}_n
 \underbrace{\left|f\left(x\right)\right>}_m
-\underbrace{\left|r\right>}_k = 
-\hat{U}_f \underbrace{\left|x\right>}_n
+\underbrace{\ket{r}}_k = 
+\hat{U}_f \underbrace{\ket{x}}_n
 \underbrace{\left|0 \dots 0\right>}_{m+k},
 $
-где $\left|r\right>$ остаток размером $k$ кубит который не
+где $\ket{r}$ остаток размером $k$ кубит который не
 используется в вычислениях и служит цели обеспечения унитарности
 оператора $\hat{U}_f$
 }
 \begin{equation}
-\underbrace{\left|x\right>}_n
+\underbrace{\ket{x}}_n
 \underbrace{\left|f\left(x\right)\right>}_m = 
-\hat{U}_f \underbrace{\left|x\right>}_n\underbrace{\left|0 \dots
+\hat{U}_f \underbrace{\ket{x}}_n\underbrace{\left|0 \dots
   0\right>}_m.
 \label{eqQuantCompQuantComp}
 \end{equation}

@@ -25,12 +25,12 @@ $\left(2\right)$, то он опять же с равной вероятност
 $r=t=\frac{1}{\sqrt{2}}$, т. е. действие светоделителя может быть
 выражено следующим оператором (Адамара\cite{bPhisQuantInfo}):
 \begin{eqnarray}
-\hat{H} \left|1\right> = \frac{1}{\sqrt{2}}
-\left(\left|1'\right> +
-\left|2'\right>\right),
+\hat{H} \ket{1} = \frac{1}{\sqrt{2}}
+\left(\ket{1'} +
+\ket{2'}\right),
 \nonumber \\
-\hat{H} \left|2\right> = \frac{1}{\sqrt{2}}\left(\left|1'\right> -
-\left|2'\right>\right).
+\hat{H} \ket{2} = \frac{1}{\sqrt{2}}\left(\ket{1'} -
+\ket{2'}\right).
 \label{eqEntangBellHadamar}
 \end{eqnarray}
 
@@ -38,18 +38,18 @@ $r=t=\frac{1}{\sqrt{2}}$, т. е. действие светоделителя м
 следовательно возможны только две волновые функции, описывающие
 пространственную часть нашего начального состояния:
 \begin{eqnarray}
-\left|S\right>_{12} = \frac{1}{\sqrt{2}}\left(
-\left|1\right>_1\left|2\right>_2 +
-\left|2\right>_1\left|1\right>_2\right),
+\ket{S}_{12} = \frac{1}{\sqrt{2}}\left(
+\ket{1}_1\ket{2}_2 +
+\ket{2}_1\ket{1}_2\right),
 \nonumber \\
-\left|A\right>_{12} = \frac{1}{\sqrt{2}}\left(
-\left|1\right>_1\left|2\right>_2 -
-\left|2\right>_1\left|1\right>_2\right).
+\ket{A}_{12} = \frac{1}{\sqrt{2}}\left(
+\ket{1}_1\ket{2}_2 -
+\ket{2}_1\ket{1}_2\right).
 \label{eqEntangBellSpaceInit}
 \end{eqnarray}
-Как видно из \eqref{eqEntangBellSpaceInit}, состояние $\left|S\right>_{12}$
+Как видно из \eqref{eqEntangBellSpaceInit}, состояние $\ket{S}_{12}$
 является симметричным, т. е. сохраняет свой вид при перестановке
-фотонов, а состояние $\left|A\right>_{12}$ - антисимметричным (меняет свой
+фотонов, а состояние $\ket{A}_{12}$ - антисимметричным (меняет свой
 знак при перестановке фотонов).
 
 \input ./part3/entang/figls.tex
@@ -58,128 +58,128 @@ $r=t=\frac{1}{\sqrt{2}}$, т. е. действие светоделителя м
 Рассмотрим, как преобразуются состояния \eqref{eqEntangBellSpaceInit}
 при прохождении через светоделитель. В силу того, что оператор
 $\hat{H}$ действует на каждый из фотонов независимо, для
-$\left|S\right>_{12}$ имеем 
+$\ket{S}_{12}$ имеем 
 \begin{equation}
-\hat{H}\left|S\right>_{12} = \left|S'\right>_{12} = 
+\hat{H}\ket{S}_{12} = \ket{S'}_{12} = 
 \frac{1}{\sqrt{2}}
 \left(
-\hat{H}\left|1\right>_1\hat{H}\left|2\right>_2 +
-\hat{H}\left|2\right>_1\hat{H}\left|1\right>_2
+\hat{H}\ket{1}_1\hat{H}\ket{2}_2 +
+\hat{H}\ket{2}_1\hat{H}\ket{1}_2
 \right),
 \nonumber 
 \end{equation}
 откуда с помощью \eqref{eqEntangBellHadamar} получаем
 \begin{eqnarray}
-\hat{H}\left|S\right>_{12} =
+\hat{H}\ket{S}_{12} =
 \frac{1}{\sqrt{2}}
 \left(
 \frac{1}{2}
-\left(\left|1'\right>_1 +
-\left|2'\right>_1\right)
-\left(\left|1'\right>_2 -
-\left|2'\right>_2\right) +
+\left(\ket{1'}_1 +
+\ket{2'}_1\right)
+\left(\ket{1'}_2 -
+\ket{2'}_2\right) +
 \right.
 \nonumber \\
 + \left.
 \frac{1}{2}
-\left(\left|1'\right>_1 -
-\left|2'\right>_1\right)
-\left(\left|1'\right>_2 +
-\left|2'\right>_2\right)
+\left(\ket{1'}_1 -
+\ket{2'}_1\right)
+\left(\ket{1'}_2 +
+\ket{2'}_2\right)
 \right) = 
 \nonumber \\
 =
 \frac{1}{2 \sqrt{2}}
 \left(
-\left|1'\right>_1 \left|1'\right>_2 +
-\left|2'\right>_1 \left|1'\right>_2 -
-\left|1'\right>_1 \left|2'\right>_2 -
-\left|2'\right>_1 \left|2'\right>_2 +
+\ket{1'}_1 \ket{1'}_2 +
+\ket{2'}_1 \ket{1'}_2 -
+\ket{1'}_1 \ket{2'}_2 -
+\ket{2'}_1 \ket{2'}_2 +
 \right. 
 \nonumber \\
 + \left.
-\left|1'\right>_1 \left|1'\right>_2 -
-\left|2'\right>_1 \left|1'\right>_2 +
-\left|1'\right>_1 \left|2'\right>_2 -
-\left|2'\right>_1 \left|2'\right>_2
+\ket{1'}_1 \ket{1'}_2 -
+\ket{2'}_1 \ket{1'}_2 +
+\ket{1'}_1 \ket{2'}_2 -
+\ket{2'}_1 \ket{2'}_2
 \right) =
 \nonumber \\
 =
 \frac{1}{2 \sqrt{2}}
 \left(
-\left|1'\right>_1 \left|1'\right>_2 
-- \left|2'\right>_1 \left|2'\right>_2 
-+ \left|1'\right>_1 \left|1'\right>_2 
-- \left|2'\right>_1 \left|2'\right>_2
+\ket{1'}_1 \ket{1'}_2 
+- \ket{2'}_1 \ket{2'}_2 
++ \ket{1'}_1 \ket{1'}_2 
+- \ket{2'}_1 \ket{2'}_2
 \right) = 
 \nonumber \\
 \frac{1}{\sqrt{2}}
 \left(
-\left|1'\right>_1 \left|1'\right>_2 
-- \left|2'\right>_1 \left|2'\right>_2 
+\ket{1'}_1 \ket{1'}_2 
+- \ket{2'}_1 \ket{2'}_2 
 \right).
 \nonumber
 \end{eqnarray}
-Таким образом для состояния $\left|S'\right>_{12}$ оба фотона оказываются
+Таким образом для состояния $\ket{S'}_{12}$ оба фотона оказываются
 либо в полуплоскости $\left(1\right)$, либо в полуплоскости
 $\left(2\right)$. 
 
 Для антисимметричного состояния имеем
 \begin{eqnarray}
-\hat{H}\left|A\right>_{12} = \left|A'\right>_{12} = 
+\hat{H}\ket{A}_{12} = \ket{A'}_{12} = 
 \frac{1}{\sqrt{2}}
 \left(
-\hat{H}\left|1\right>_1\hat{H}\left|2\right>_2 -
-\hat{H}\left|2\right>_1\hat{H}\left|1\right>_2
+\hat{H}\ket{1}_1\hat{H}\ket{2}_2 -
+\hat{H}\ket{2}_1\hat{H}\ket{1}_2
 \right) = 
 \nonumber \\
 =
 \frac{1}{\sqrt{2}}
 \left(
 \frac{1}{2}
-\left(\left|1'\right>_1 +
-\left|2'\right>_1\right)
-\left(\left|1'\right>_2 -
-\left|2'\right>_2\right) -
+\left(\ket{1'}_1 +
+\ket{2'}_1\right)
+\left(\ket{1'}_2 -
+\ket{2'}_2\right) -
 \right.
 \nonumber \\
 - \left.
 \frac{1}{2}
-\left(\left|1'\right>_1 -
-\left|2'\right>_1\right)
-\left(\left|1'\right>_2 +
-\left|2'\right>_2\right)
+\left(\ket{1'}_1 -
+\ket{2'}_1\right)
+\left(\ket{1'}_2 +
+\ket{2'}_2\right)
 \right) = 
 \nonumber \\
 =
 \frac{1}{2 \sqrt{2}}
 \left(
-\left|1'\right>_1 \left|1'\right>_2 +
-\left|2'\right>_1 \left|1'\right>_2 -
-\left|1'\right>_1 \left|2'\right>_2 -
-\left|2'\right>_1 \left|2'\right>_2 -
+\ket{1'}_1 \ket{1'}_2 +
+\ket{2'}_1 \ket{1'}_2 -
+\ket{1'}_1 \ket{2'}_2 -
+\ket{2'}_1 \ket{2'}_2 -
 \right. 
 \nonumber \\
 - \left.
-\left|1'\right>_1 \left|1'\right>_2 +
-\left|2'\right>_1 \left|1'\right>_2 -
-\left|1'\right>_1 \left|2'\right>_2 +
-\left|2'\right>_1 \left|2'\right>_2
+\ket{1'}_1 \ket{1'}_2 +
+\ket{2'}_1 \ket{1'}_2 -
+\ket{1'}_1 \ket{2'}_2 +
+\ket{2'}_1 \ket{2'}_2
 \right) =
 \nonumber \\
 =
 \frac{1}{2 \sqrt{2}}
 \left(
-\left|2'\right>_1 \left|1'\right>_2 
-- \left|1'\right>_1 \left|2'\right>_2 
-+ \left|2'\right>_1 \left|1'\right>_2 
-- \left|1'\right>_1 \left|2'\right>_2
+\ket{2'}_1 \ket{1'}_2 
+- \ket{1'}_1 \ket{2'}_2 
++ \ket{2'}_1 \ket{1'}_2 
+- \ket{1'}_1 \ket{2'}_2
 \right) = 
 \nonumber \\
 - \frac{1}{\sqrt{2}}
 \left(
-\left|1'\right>_1 \left|2'\right>_2 
-- \left|2'\right>_1 \left|1'\right>_2 
+\ket{1'}_1 \ket{2'}_2 
+- \ket{2'}_1 \ket{1'}_2 
 \right).
 \nonumber
 \end{eqnarray}
@@ -196,13 +196,13 @@ $\left(2\right)$.
 \eqref{eqEntangBellBase} и \eqref{eqEntangBellSpaceInit}возможны
 только следующие комбинации:
 \begin{eqnarray}
-\left|\psi^{\dag}\right>_{12}\left|S\right>_{12},
+\left|\psi^{\dag}\right>_{12}\ket{S}_{12},
 \nonumber \\ 
-\left|\psi^{-}\right>_{12}\left|A\right>_{12}, 
+\left|\psi^{-}\right>_{12}\ket{A}_{12}, 
 \nonumber \\ 
-\left|\phi^{\dag}\right>_{12}\left|S\right>_{12}, 
+\left|\phi^{\dag}\right>_{12}\ket{S}_{12}, 
 \nonumber \\ 
-\left|\phi^{-}\right>_{12}\left|S\right>_{12}.
+\left|\phi^{-}\right>_{12}\ket{S}_{12}.
 \nonumber
 \end{eqnarray}
 Следовательно в случае белловских состояний 

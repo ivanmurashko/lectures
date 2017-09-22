@@ -37,9 +37,9 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 На \autoref{figQuantCompGrover1} изображена схема для вычесления
 искомой функции. На выходе мы имеем сотояние вида
 \begin{equation}
-\left|out\right> = \frac{1}{\sqrt{N}}\left(
- \sum_{x \ne x^{\ast}} \left|x\right>\otimes\left|0\right>
-+ \left|x^{\ast}\right>\otimes\left|1\right>
+\ket{out} = \frac{1}{\sqrt{N}}\left(
+ \sum_{x \ne x^{\ast}} \ket{x}\otimes\ket{0}
++ \left|x^{\ast}\right>\otimes\ket{1}
 \right),
 \label{eqQuantCompGroverFake}
 \end{equation}
@@ -82,8 +82,8 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 Действие оператора $\hat{U}_{x^{\ast}}$ описывается следующим соотношением
 (см. \autoref{figQuantCompGroverInv}):
 \begin{equation}
-\hat{U}_{x^{\ast}}\left(\sum_x \alpha_x \left|x\right>\right) = 
-\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\left|x\right>.
+\hat{U}_{x^{\ast}}\left(\sum_x \alpha_x \ket{x}\right) = 
+\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\ket{x}.
 \label{eqQuantCompGroverUxast}
 \end{equation} 
 Оператор $\hat{U}_{x^{\ast}}$ может быть переписан в виде
@@ -94,15 +94,15 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 Действительно
 \begin{eqnarray}
 \left(\hat{I} - 2 \left|x^{\ast}\right>\left<x^{\ast}\right|\right)
-\left(\sum_x \alpha_x \left|x\right>\right) =
+\left(\sum_x \alpha_x \ket{x}\right) =
 \nonumber \\
-= \sum_x \alpha_x \left|x\right> - 2 \alpha_{x^{\ast}}
+= \sum_x \alpha_x \ket{x} - 2 \alpha_{x^{\ast}}
 \left|x^{\ast}\right> = 
-\sum_{x\ne x^{\ast}} \alpha_x \left|x\right> -  \alpha_{x^{\ast}}
+\sum_{x\ne x^{\ast}} \alpha_x \ket{x} -  \alpha_{x^{\ast}}
 \left|x^{\ast}\right> =
 \nonumber \\
 =
-\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\left|x\right>,
+\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\ket{x},
 \nonumber
 \end{eqnarray}
 что совпадает с \eqref{eqQuantCompGroverUxast}.
@@ -112,8 +112,8 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 Действие оператора $\hat{U}_s$ описывается следующим соотношением
 (см. \autoref{figQuantCompGroverInvMiddle}):
 \begin{equation}
-\hat{U}_s\left(\sum_x \alpha_x \left|x\right>\right) = 
-\sum_x \left(2 \mathcal{M} - \alpha_x \right)\left|x\right>,
+\hat{U}_s\left(\sum_x \alpha_x \ket{x}\right) = 
+\sum_x \left(2 \mathcal{M} - \alpha_x \right)\ket{x},
 \label{eqQuantCompGroverUs}
 \end{equation} 
 где $\mathcal{M} = \sum_x \frac{\alpha_x}{N}$.
@@ -121,24 +121,24 @@ $0$ и $1$. При этом значение $1$ справедливо толь
 Оператор $\hat{U}_s$ может быть переписан в следующем виде
 \begin{equation}
 \hat{U}_s = 
-2 \left|s\right>\left<s\right| - \hat{I},
+2 \ket{s}\bra{s} - \hat{I},
 \nonumber
 \end{equation}
-где $\left|s\right>=\frac{1}{\sqrt{N}}\sum_x \left|x\right>$ -
+где $\ket{s}=\frac{1}{\sqrt{N}}\sum_x \ket{x}$ -
 начальное состояние в алгоритме Гровера.
 Действительно
 \begin{eqnarray}
-\left(2 \left|s\right>\left<s\right| - \hat{I}\right)
-\left(\sum_x \alpha_x \left|x\right>\right) =
+\left(2 \ket{s}\bra{s} - \hat{I}\right)
+\left(\sum_x \alpha_x \ket{x}\right) =
 \nonumber \\
-=  2 \sum_x \alpha_x \left<s\right.\left|x\right> \left|s\right> 
-- \sum_x \alpha_x \left|x\right> = 
+=  2 \sum_x \alpha_x \bra{s}\ket{x} \ket{s} 
+- \sum_x \alpha_x \ket{x} = 
 \nonumber \\
 =
-\frac{2}{N} \sum_x \alpha_x \sum_x \left|x\right> -
-\sum_x \alpha_x \left|x\right> = 
+\frac{2}{N} \sum_x \alpha_x \sum_x \ket{x} -
+\sum_x \alpha_x \ket{x} = 
 \nonumber \\
-= \sum_x \left( 2 \mathcal{M} -\alpha_x \right) \left|x\right>,
+= \sum_x \left( 2 \mathcal{M} -\alpha_x \right) \ket{x},
 \nonumber
 \end{eqnarray}
 что совпадает с \eqref{eqQuantCompGroverUs}.

@@ -12,8 +12,8 @@
 $\left|\alpha\right|^2$, а фотодетектора $D_y$ -
 $\left|\beta\right|^2$, т. е. $P_x = \left|\alpha\right|^2$ и $P_y =
 \left|\beta\right|^2$ описывают вероятности обнаружить фотон в
-состоянии поляризованном по $x$ - $\left|x\right>$ или по $y$ -
-$\left|y\right>$. Возникает следующий вопрос - ``что кроется за этими
+состоянии поляризованном по $x$ - $\ket{x}$ или по $y$ -
+$\ket{y}$. Возникает следующий вопрос - ``что кроется за этими
 вероятностями?''. Возможны два варианта ответа. В первом из них
 предполагается, что на самом деле мы обладаем неполным знанием об источнике $S$,
 т. е. если бы мы знали об этом источнике все, то смогли бы
@@ -60,12 +60,12 @@ $\hat{S}_1$ и $\hat{S}_2$. Так как эти операторы не ком�
 фотонов необходимо использовать волновую функцию следующего вида:
 \begin{eqnarray}
 \left|\psi\right> = \sum_{i,j = x,y} 
-c_{ij}\left|i\right>_1\left|j\right>_2 = 
+c_{ij}\ket{i}_1\ket{j}_2 = 
 \nonumber \\
-= c_{xx} \left|x\right>_1\left|x\right>_2 +
-c_{xy} \left|x\right>_1\left|y\right>_2 +
-c_{yx} \left|y\right>_1\left|x\right>_2 +
-c_{yy} \left|y\right>_1\left|y\right>_2.
+= c_{xx} \ket{x}_1\ket{x}_2 +
+c_{xy} \ket{x}_1\ket{y}_2 +
+c_{yx} \ket{y}_1\ket{x}_2 +
+c_{yy} \ket{y}_1\ket{y}_2.
 \label{eqEntang2Common}
 \end{eqnarray}
 Если два и более коэффициентов $c_{ij}$ в \eqref{eqEntang2Common}
@@ -79,8 +79,8 @@ c_{yy} \left|y\right>_1\left|y\right>_2.
 В качестве примера мы будем исследовать следующую волновую функцию:
 \begin{equation}
   \left|\psi\right> = \frac{
-    \left| + \right>_1\left| - \right>_2 -
-    \left| - \right>_1\left| + \right>_2
+    \ket{ + }_1\ket{ - }_2 -
+    \ket{ - }_1\ket{ + }_2
   }{\sqrt{2}},
 \label{eqEntang2Test}
 \end{equation}
@@ -109,66 +109,66 @@ $\hat{S}_k^{(2)}$ для второго фотона. Схема каждого 
 результат измерения $+1$. При этом происходит редукция волновой функции
 \eqref{eqEntang2Test}. Редукция может быть описана оператором
 проецирования (см. \autoref{AddDiracProjector}) на состояние
-$\left|x\right>_1$:
+$\ket{x}_1$:
 \[
-\hat{P}_{\left|x\right>_1} = \left|x\right>_1\left<x\right|_1,
+\hat{P}_{\ket{x}_1} = \ket{x}_1\bra{x}_1,
 \]
 при этом волновая функция
 \eqref{eqEntang2Test} преобразуется следующим образом:
 \begin{eqnarray}
-  \hat{P}_{\left|x\right>_1}\left|\psi\right> =
-  \left|x\right>_1\left<x\right|_1 \left|\psi\right> =
+  \hat{P}_{\ket{x}_1}\left|\psi\right> =
+  \ket{x}_1\bra{x}_1 \left|\psi\right> =
   \nonumber \\
     =
-  \left|x\right>_1\left<x\right|_1
+  \ket{x}_1\bra{x}_1
   \frac{
-    \left( \left|x\right>_1 + i \left|y\right>_1 \right)\left| - \right>_2 -
-    \left( \left|x\right>_1 - i \left|y\right>_1 \right)\left| + \right>_2
+    \left( \ket{x}_1 + i \ket{y}_1 \right)\ket{ - }_2 -
+    \left( \ket{x}_1 - i \ket{y}_1 \right)\ket{ + }_2
   }{2} =
   \nonumber \\
   =
-  \left|x\right>_1
-  \frac{\left| - \right>_2 - \left| + \right>_2}{2} = -
-  \frac{1}{2\sqrt{2}}\left|x\right>_1 \left(2 i\right)
-  \left|y\right>_2 = -
-  \frac{i}{\sqrt{2}}\left|x\right>_1\left|y\right>_2.
+  \ket{x}_1
+  \frac{\ket{ - }_2 - \ket{ + }_2}{2} = -
+  \frac{1}{2\sqrt{2}}\ket{x}_1 \left(2 i\right)
+  \ket{y}_2 = -
+  \frac{i}{\sqrt{2}}\ket{x}_1\ket{y}_2.
 \nonumber
 \end{eqnarray}
 Следовательно после измерения $\hat{S}_1^{(1)}$ волновая функция всей
 системы будет записана так
 \[
-\left|\psi\right>_{red} = \left|x\right>_1\left|y\right>_2.
+\left|\psi\right>_{red} = \ket{x}_1\ket{y}_2.
 \]
-Это значит, что второй фотон будет в состоянии $\left|y\right>_2$,
+Это значит, что второй фотон будет в состоянии $\ket{y}_2$,
 т. е.  показание детектора $D^{(2)}$ будет равно $-1$.
 
 Аналогично, если показание первого детектора было равно $-1$, то
 волновая функция после измерения будет равна
 \begin{eqnarray}
-  P_{\left|y\right>_1}\left|\psi\right> =
-  \left|y\right>_1\left<y\right|_1 \left|\psi\right> =
+  P_{\ket{y}_1}\left|\psi\right> =
+  \ket{y}_1\bra{y}_1 \left|\psi\right> =
   \nonumber \\
   =
-  \left|y\right>_1\left<y\right|_1
+  \ket{y}_1\bra{y}_1
   \frac{
-    \left( \left|x\right>_1 + i \left|y\right>_1 \right)\left| - \right>_2 -
-    \left( \left|x\right>_1 - i \left|y\right>_1 \right)\left| + \right>_2
+    \left( \ket{x}_1 + i \ket{y}_1 \right)\ket{ - }_2 -
+    \left( \ket{x}_1 - i \ket{y}_1 \right)\ket{ + }_2
   }{2} =
   \nonumber \\
   =
-  \left|y\right>_1 i 
-  \frac{\left| - \right>_2 + \left| + \right>_2}{2} =
-  \frac{i}{2\sqrt{2}}\left|y\right>_1 \left(2\right)
-  \left|x\right>_2 =
-  \frac{i}{\sqrt{2}}\left|y\right>_1\left|x\right>_2,
+  \ket{y}_1 i 
+  \frac{\ket{ - }_2 + \ket{ + }_2}{2} =
+  \frac{i}{2\sqrt{2}}\ket{y}_1 \left(2\right)
+  \ket{x}_2 =
+  \frac{i}{\sqrt{2}}\ket{y}_1\ket{x}_2,
   \nonumber
 \end{eqnarray}
 т. е.
 \[
-\left|\psi\right>_{red} = \left|x\right>_2\left|y\right>_1,
+\left|\psi\right>_{red} = \ket{x}_2\ket{y}_1,
 \]
 состояние второго фотона будет описываться состоянием
-$\left|x\right>_2$ а показание детектора $D^{(2)}$ будет равно $+1$.
+$\ket{x}_2$ а показание детектора $D^{(2)}$ будет равно $+1$.
 Таким образом, при любом измерении $\hat{S}_1^{(1)}$ мы можем
 достоверно (с вероятностью, равной 1) предсказать результат измерения
 $\hat{S}_1^{(2)}$, при этом прямо не воздействуя на второй фотон, т. е.
@@ -178,10 +178,10 @@ $\hat{S}_1^{(2)}$, при этом прямо не воздействуя на �
 При этом параметры Стокса для второй частицы  $\hat{S}_1^{(2)}$ и
 $\hat{S}_2^{(2)}$ имеют 
 разные собственные вектора:
-$\left|x\right>_2, \left|y\right>_2$ (\ref{eq:part2:pol:stocks_s1_1},
+$\ket{x}_2, \ket{y}_2$ (\ref{eq:part2:pol:stocks_s1_1},
   \ref{eq:part2:pol:stocks_s1_2}) и
-$\frac{1}{\sqrt{2}}\left(\left|x\right>_2 \pm
-\left|y\right>_2\right)$ (\ref{eq:part2:pol:stocks_s2_1},
+$\frac{1}{\sqrt{2}}\left(\ket{x}_2 \pm
+\ket{y}_2\right)$ (\ref{eq:part2:pol:stocks_s2_1},
   \ref{eq:part2:pol:stocks_s2_2}) соответственно.
 Т. о. первый и второй параметры Стокса для второй частицы не могут
 быть измерены одновременно, действительно в противном случае
@@ -198,22 +198,22 @@ $\hat{S}_2^{(2)}$ (см также
 %%   \left<\hat{S}_3^{(2)}\right> =
 %%   \left<\psi\right|\hat{S}_3^{(2)}\left|\psi\right> =
 %%   \left<\psi\right|\hat{S}_3^{(2)}\frac{
-%%     \left| + \right>_1\left| - \right>_2 -
-%%     \left| - \right>_1\left| + \right>_2
+%%     \ket{ + }_1\ket{ - }_2 -
+%%     \ket{ - }_1\ket{ + }_2
 %%   }{\sqrt{2}} =
 %%   \nonumber \\
 %%   = \left<\psi\right|\frac{
-%%     \left| + \right>_1\left| - \right>_2 +
-%%     \left| - \right>_1\left| + \right>_2
+%%     \ket{ + }_1\ket{ - }_2 +
+%%     \ket{ - }_1\ket{ + }_2
 %%   }{\sqrt{2}} =
 %%   \nonumber \\
 %%   = \frac{1}{2} \left(
-%%   \left< + \right|_1\left< - \right|_2 -
-%%   \left< - \right|_1\left< + \right|_2
+%%   \bra{ + }_1\bra{ - }_2 -
+%%   \bra{ - }_1\bra{ + }_2
 %%   \right)
 %%   \left(
-%%   \left| + \right>_1\left| - \right>_2 -
-%%   \left| - \right>_1\left| + \right>_2
+%%   \ket{ + }_1\ket{ - }_2 -
+%%   \ket{ - }_1\ket{ + }_2
 %%   \right) = 1.
 %%   \label{eqEntangS3Mean}
 %% \end{eqnarray}
@@ -239,29 +239,29 @@ $\hat{S}_2^{(2)}$ (см также
 %% функция \eqref{eqEntang2Test}
 %% преобразовывалась бы следующим образом:
 %% \begin{eqnarray}
-%% \hat{P}_{\frac{\left|x\right>_1 +
-%%     \left|y\right>_1}{\sqrt{2}}}\left|\psi\right> = 
+%% \hat{P}_{\frac{\ket{x}_1 +
+%%     \ket{y}_1}{\sqrt{2}}}\left|\psi\right> = 
 %% \nonumber \\
 %% =
 %% \frac{1}{2}\left[
-%% \left(\left|x\right>_1 + \left|y\right>_1\right)
-%% \left(\left<x\right|_1 + \left<y\right|_1\right)
+%% \left(\ket{x}_1 + \ket{y}_1\right)
+%% \left(\bra{x}_1 + \bra{y}_1\right)
 %% \left(
-%% \left|x\right>_1\left|y\right>_2 -
-%% \left|y\right>_1\left|x\right>_2
+%% \ket{x}_1\ket{y}_2 -
+%% \ket{y}_1\ket{x}_2
 %% \right)
 %% \right] = 
 %% \nonumber \\
 %% = \frac{1}{2}\left[
-%% \left(\left|x\right>_1 + \left|y\right>_1\right)
+%% \left(\ket{x}_1 + \ket{y}_1\right)
 %% \left(
-%% \left|y\right>_2 -
-%% \left|x\right>_2
+%% \ket{y}_2 -
+%% \ket{x}_2
 %% \right)
 %% \right] =
 %% \nonumber \\
-%% = \frac{\left|x\right>_1 + \left|y\right>_1}{\sqrt{2}}
-%%  \frac{\left|y\right>_2 - \left|x\right>_2}{\sqrt{2}}.
+%% = \frac{\ket{x}_1 + \ket{y}_1}{\sqrt{2}}
+%%  \frac{\ket{y}_2 - \ket{x}_2}{\sqrt{2}}.
 %% \nonumber
 %% \end{eqnarray}
 %% Таким образом при измерении $\hat{S}_2^{(2)}$ мы получим $-1$ в
@@ -269,29 +269,29 @@ $\hat{S}_2^{(2)}$ (см также
 %% показаний детектора $D^{(1)}$ мы получим $-1$, то состояние системы
 %% преобразуется к 
 %% \begin{eqnarray}
-%% \hat{P}_{\frac{\left|x\right>_1 -
-%%     \left|y\right>_1}{\sqrt{2}}}\left|\psi\right> = 
+%% \hat{P}_{\frac{\ket{x}_1 -
+%%     \ket{y}_1}{\sqrt{2}}}\left|\psi\right> = 
 %% \nonumber \\
 %% =
 %% \frac{1}{2}\left[
-%% \left(\left|x\right>_1 - \left|y\right>_1\right)
-%% \left(\left<x\right|_1 - \left<y\right|_1\right)
+%% \left(\ket{x}_1 - \ket{y}_1\right)
+%% \left(\bra{x}_1 - \bra{y}_1\right)
 %% \left(
-%% \left|x\right>_1\left|y\right>_2 -
-%% \left|y\right>_1\left|x\right>_2
+%% \ket{x}_1\ket{y}_2 -
+%% \ket{y}_1\ket{x}_2
 %% \right)
 %% \right] = 
 %% \nonumber \\
 %% = \frac{1}{2}\left[
-%% \left(\left|x\right>_1 - \left|y\right>_1\right)
+%% \left(\ket{x}_1 - \ket{y}_1\right)
 %% \left(
-%% \left|y\right>_2 +
-%% \left|x\right>_2
+%% \ket{y}_2 +
+%% \ket{x}_2
 %% \right)
 %% \right] =
 %% \nonumber \\
-%% = \frac{\left|x\right>_1 - \left|y\right>_1}{\sqrt{2}}
-%%  \frac{\left|x\right>_2 + \left|y\right>_2}{\sqrt{2}}
+%% = \frac{\ket{x}_1 - \ket{y}_1}{\sqrt{2}}
+%%  \frac{\ket{x}_2 + \ket{y}_2}{\sqrt{2}}
 %% \nonumber
 %% \end{eqnarray}
 %% и для показаний детектора $D^{(2)}$ получим $+1$. Следовательно, при

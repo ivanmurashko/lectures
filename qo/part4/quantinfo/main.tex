@@ -228,16 +228,16 @@ H_{quant} = - Sp \left(\hat{\rho} \, log \, \hat{\rho}\right) =
 
 Начнем анализ выражения \eqref{eqEntropyQuant1} с рассмотрения случая чистых состояний.
 Если взять произвольное чистое состояние $\left|\psi\right>$,
-записанное в некотором базисе $\left\{\left|n\right>\right\}$:
+записанное в некотором базисе $\left\{\ket{n}\right\}$:
 \[
-\left|\psi\right> = \sum_n c_n \left|n\right>,
+\left|\psi\right> = \sum_n c_n \ket{n},
 \]
-то всегда можно найти такой базис $\left\{\left|m\right>\right\}$, в
+то всегда можно найти такой базис $\left\{\ket{m}\right\}$, в
 котором $\left|\psi\right>$ будет одним из базисных состояний, например первым: 
 %\footnote{FIX ME!!! добавь ссылку или раскрыть это утверждение}
 \[
-\left|\psi\right> = \sum_m c_m \left|m\right> = 
-\left.\left|m\right>\right|_{m = 1},
+\left|\psi\right> = \sum_m c_m \ket{m} = 
+\left.\ket{m}\right|_{m = 1},
 \]
 таким образом, в диагональной матрице плотности останется только один
 не нулевой член $\rho_{11} = 1$, и энтропия будет равна
@@ -353,15 +353,15 @@ H_{misc} = - \sum_n p_n \, log \, p_n = H_{class},
 рассмотренное нами ранее  (см. гл. \ref{chEntangl}).  
 
 Каждый из фотонов по отдельности имеет два ортогональных состояния 
-$\left|x\right>_{1,2}$ и $\left|y\right>_{1,2}$. Таким образом с
+$\ket{x}_{1,2}$ и $\ket{y}_{1,2}$. Таким образом с
 классических позиций с помощью этих двух фотонов можно закодировать
 четыре бита информации, для этого можно использовать следующие
 состояния:
-$\left|x\right>_1 \left|x\right>_2$,
-$\left|x\right>_1 \left|y\right>_2$,
-$\left|y\right>_1 \left|x\right>_2$,
+$\ket{x}_1 \ket{x}_2$,
+$\ket{x}_1 \ket{y}_2$,
+$\ket{y}_1 \ket{x}_2$,
 и 
-$\left|y\right>_1 \left|y\right>_2$.
+$\ket{y}_1 \ket{y}_2$.
 
 \input ./part4/quantinfo/figdensecode.tex
 
@@ -376,26 +376,26 @@ $\left|\Psi^{\dag}\right>_{12}$.  Первый фотон из этой пары
 \begin{eqnarray}
   \left|\psi^{\dag}\right>_{12} = 
   \frac{1}{\sqrt{2}}\left(
-  \left|x\right>_1\left|y\right>_2 + 
-  \left|y\right>_1\left|x\right>_2
+  \ket{x}_1\ket{y}_2 + 
+  \ket{y}_1\ket{x}_2
   \right),
   \nonumber \\
   \left|\psi^{-}\right>_{12} = 
   \frac{1}{\sqrt{2}}\left(
-  \left|x\right>_1\left|y\right>_2 - 
-  \left|y\right>_1\left|x\right>_2
+  \ket{x}_1\ket{y}_2 - 
+  \ket{y}_1\ket{x}_2
   \right),
   \nonumber \\
   \left|\phi^{\dag}\right>_{12} = 
   \frac{1}{\sqrt{2}}\left(
-  \left|x\right>_1\left|x\right>_2 + 
-  \left|y\right>_1\left|y\right>_2
+  \ket{x}_1\ket{x}_2 + 
+  \ket{y}_1\ket{y}_2
   \right),
   \nonumber \\
   \left|\phi^{-}\right>_{12} = 
   \frac{1}{\sqrt{2}}\left(
-  \left|x\right>_1\left|x\right>_2 - 
-  \left|y\right>_1\left|y\right>_2
+  \ket{x}_1\ket{x}_2 - 
+  \ket{y}_1\ket{y}_2
   \right).
   \label{eqQuantInfoBellBase}
 \end{eqnarray}
@@ -403,30 +403,30 @@ $\left|\Psi^{\dag}\right>_{12}$.  Первый фотон из этой пары
 В случае состояния $\left|\Psi^{\dag}\right>_{12}$ никаких
 дополнительных действий не требуется, т. к. оно является исходным: 
 \begin{equation}
-\left|y\right>_2 \rightarrow \left|y\right>_2, \, 
-\left|x\right>_2 \rightarrow \left|x\right>_2.
+\ket{y}_2 \rightarrow \ket{y}_2, \, 
+\ket{x}_2 \rightarrow \ket{x}_2.
 \label{eqQuantInfoDense1}
 \end{equation}
 Для получения состояния $\left|\psi^{-}\right>_{12}$ Боб должен
 произвести зависимый от поляризации фазовый сдвиг:
 \begin{equation}
-\left|y\right>_2 \rightarrow \left|y\right>_2, \, 
-\left|x\right>_2 \rightarrow e^{i \pi}\left|x\right>_2.
+\ket{y}_2 \rightarrow \ket{y}_2, \, 
+\ket{x}_2 \rightarrow e^{i \pi}\ket{x}_2.
 \label{eqQuantInfoDense2}
 \end{equation}
 В случае состояния $\left|\phi^{\dag}\right>_{12}$ Боб производит
 изменение поляризации на ортогональное
 \begin{equation}
-\left|y\right>_2 \rightarrow \left|x\right>_2, \, 
-\left|x\right>_2 \rightarrow \left|y\right>_2.
+\ket{y}_2 \rightarrow \ket{x}_2, \, 
+\ket{x}_2 \rightarrow \ket{y}_2.
 \label{eqQuantInfoDense3}
 \end{equation}
 И, наконец, для состояния $\left|\phi^{-}\right>_{12}$ Боб производит
 одновременно и смену поляризации и зависимый от поляризации фазовый
 сдвиг:
 \begin{equation}
-\left|y\right>_2 \rightarrow \left|x\right>_2, \, 
-\left|x\right>_2 \rightarrow e^{i \pi}\left|y\right>_2.
+\ket{y}_2 \rightarrow \ket{x}_2, \, 
+\ket{x}_2 \rightarrow e^{i \pi}\ket{y}_2.
 \label{eqQuantInfoDense4}
 \end{equation}
 

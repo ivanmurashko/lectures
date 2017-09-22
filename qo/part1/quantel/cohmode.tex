@@ -1,6 +1,6 @@
 %% -*- coding:utf-8 -*- 
 \section{Когерентные состояния}
-Состояния $\left|n\right>$  не стремятся при увеличении $n$  к
+Состояния $\ket{n}$  не стремятся при увеличении $n$  к
 классическому решению для осциллятора. Этим свойством обладают так
 называемые когерентные состояния. Они были введены Э.Шредингером, а
 затем развиты в наше время Р.Глаубером
@@ -8,13 +8,13 @@
 \cite{bKaluderSudershan1970} применительно к задачам квантовой
 оптики. Когерентное   состояние может быть определено различными
 путями. Воспользуемся определением в виде суперпозиции состояний
-$\left|n\right>$:
+$\ket{n}$:
 \begin{equation}
 \left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
-\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\left|n\right>,
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\ket{n},
 \quad
 \left<\alpha\right| = e^{-\frac{1}{2} \left|\alpha\right|^2}
-\sum_{(n)} \frac{\alpha^{*n}}{\sqrt{n!}}\left<n\right|,
+\sum_{(n)} \frac{\alpha^{*n}}{\sqrt{n!}}\bra{n},
 \label{eqCh1_coh_def}
 \end{equation}
 где $\alpha$ -  некоторый комплексный параметр, смысл которого
@@ -62,9 +62,9 @@ $\left|\alpha - \beta\right|$  достаточно велико.
 уничтожения с собственным числом $\alpha$: 
 \begin{equation}
 \hat{a}\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
-\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\sqrt{n}\left|n - 1\right> = 
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\sqrt{n}\ket{n - 1} = 
 e^{-\frac{1}{2} \left|\alpha\right|^2}
-\sum_{(m = n - 1)} \frac{\alpha \alpha^m}{\sqrt{m!}}\left|m\right> = 
+\sum_{(m = n - 1)} \frac{\alpha \alpha^m}{\sqrt{m!}}\ket{m} = 
 \alpha\left|\alpha\right>
 \end{equation}
 
@@ -76,7 +76,7 @@ e^{-\frac{1}{2} \left|\alpha\right|^2}
 
 Вероятность обнаружить (измерить) в когерентном состоянии $n$ фотонов
 \begin{equation}
-\left|\left<n\right|\left.\alpha\right>\right|^2 =
+\left|\bra{n}\left.\alpha\right>\right|^2 =
 e^{-\left|\alpha\right|^2}
 \frac{\left(\left|\alpha\right|^2\right)^n}{n!}
 \label{eqCh1_PuassonCoh}
@@ -85,24 +85,24 @@ e^{-\left|\alpha\right|^2}
 $\left<n\right> = \left|\alpha\right|^2$.  Используя известное нам
 соотношение 
 \begin{equation}
-\left|n\right> = \frac{1}{\sqrt{n!}}
-\left(\hat{a}^{\dag}\right)^n\left|0\right>
+\ket{n} = \frac{1}{\sqrt{n!}}
+\left(\hat{a}^{\dag}\right)^n\ket{0}
 \label{eqCh1_nstate}
 \end{equation}
 когерентное состояние можно представить в виде
 \begin{equation}
 \left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}\sum_{(n)}
-\frac{\left(\alpha \hat{a}^{\dag}\right)^n}{n!}\left|0\right> = 
+\frac{\left(\alpha \hat{a}^{\dag}\right)^n}{n!}\ket{0} = 
 e^{\alpha \hat{a}^{\dag} -
-  \frac{1}{2}\left|\alpha\right|^2}\left|0\right>
+  \frac{1}{2}\left|\alpha\right|^2}\ket{0}
 \label{eqCh1_astate}
 \end{equation}
 
 Перепишем \eqref{eqCh1_astate} в ином виде, для этого воспользуемся
 следующим соотношением
 \[
-e^{- \alpha^{*} \hat{a}} \left|0\right> = \left(1 - \alpha^{*} \hat{a} +
-\dots\right) \left|0\right> = \left|0\right>,
+e^{- \alpha^{*} \hat{a}} \ket{0} = \left(1 - \alpha^{*} \hat{a} +
+\dots\right) \ket{0} = \ket{0},
 \]
 в результате получим
 \begin{equation}
@@ -110,7 +110,7 @@ e^{- \alpha^{*} \hat{a}} \left|0\right> = \left(1 - \alpha^{*} \hat{a} +
 e^{\alpha \hat{a}^{\dag}} 
 e^{-\frac{1}{2}\left|\alpha\right|^2}
 e^{- \alpha^{*} \hat{a}} 
-\left|0\right>.
+\ket{0}.
 \label{eqCh1_astate_add}
 \end{equation}
 Далее воспользуемся операторным тождеством (формулой Бейкера-Хаусдорфа)
@@ -129,14 +129,14 @@ $\left[\hat{c},\left[\hat{c}, \hat{d}\right]\right] =
 e^{\alpha \hat{a}^{\dag}} 
 e^{-\frac{1}{2}\left|\alpha\right|^2}
 e^{- \alpha^{*} \hat{a}} 
-\left|0\right> =
+\ket{0} =
 e^{-\frac{1}{2}\left|\alpha\right|^2}
 e^{\alpha \hat{a}^{\dag}} 
 e^{- \alpha^{*} \hat{a}} 
-\left|0\right> = 
+\ket{0} = 
 \nonumber \\
 =
-e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}\left|0\right>.
+e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}\ket{0}.
 \label{eqCh1_astate4squeezed}
 \end{eqnarray}
 
@@ -247,7 +247,7 @@ V}} \left|\alpha_k\right|\cos \left(\omega_k t -
 
 \input ./part1/quantel/fig5.tex
 
-Используя разложение $\left|\alpha\right>$ по $\left|n\right>$ в
+Используя разложение $\left|\alpha\right>$ по $\ket{n}$ в
 полярных координатах, получим 
 \begin{eqnarray}
 \int d^2 \alpha \left|\alpha\right>\left<\alpha\right| =
@@ -256,20 +256,20 @@ V}} \left|\alpha_k\right|\cos \left(\omega_k t -
 \int_0^{\infty} d \left|\alpha\right|\int_0^{2
   \pi}\left|\alpha\right|\sum_{(n)}\sum_{(m)}e^{-i \left(n -
   m\right)\varphi}
-e^{-\left|\alpha\right|^2}\left|m\right>\left<n\right|
+e^{-\left|\alpha\right|^2}\ket{m}\bra{n}
 \frac{\left|\alpha\right|^m \left|\alpha\right|^n}{\sqrt{n! m!}} d\varphi
 = 
 \nonumber \\
 = \pi \sum_{(n)}\frac{1}{n!}\int_0^{\infty} 2
 \left|\alpha\right|\left|\alpha\right|^{2n} e^{-\left|\alpha\right|^2} 
-\left|n\right>\left<n\right|
+\ket{n}\bra{n}
 d\left|\alpha\right| = 
 \nonumber \\
 =
 \pi
-\sum_{(n)}\frac{\left|n\right>\left<n\right|}{n!} \int_0^{\infty}x^n
+\sum_{(n)}\frac{\ket{n}\bra{n}}{n!} \int_0^{\infty}x^n
 e^{-x}dx = 
-\pi \sum_{(n)}\left|n\right>\left<n\right| = \pi \hat{I},
+\pi \sum_{(n)}\ket{n}\bra{n} = \pi \hat{I},
 \end{eqnarray}
 где учтено, что
 \[

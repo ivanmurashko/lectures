@@ -155,27 +155,27 @@ $\left<\frac{d \hat{O}}{dt}\right> = 0$ и следовательно, $\Delta t
 \index{парадокс ЭПР}
 
 Допустим у нас имеется две наблюдаемых $\hat{A}, \hat{B}$, каждой из
-которых соответствует набор собственных функций $\left|a_i\right>,
-\left|b_i\right>$ и значений $\{a_i\}, \{b_i\}$, т. е.
+которых соответствует набор собственных функций $\ket{a_i},
+\ket{b_i}$ и значений $\{a_i\}, \{b_i\}$, т. е.
 \begin{eqnarray}
-  \hat{A}\left|a_i\right> = a_i \left|a_i\right>,
+  \hat{A}\ket{a_i} = a_i \ket{a_i},
   \nonumber \\
-  \hat{B}\left|b_i\right> = b_i \left|b_i\right>.
+  \hat{B}\ket{b_i} = b_i \ket{b_i}.
   \nonumber
 \end{eqnarray}
 Если в какой-то момент времени мы сможем измерить значения этих
 величин одновременно,то полученные значения можно описать числами $a$
 и $b$, при этом очевидно что $a \in \{a_i\}, b \in \{b_i\}$ и
 \begin{eqnarray}
-  \hat{A}\left|a\right> = a \left|a\right>,
+  \hat{A}\ket{a} = a \ket{a},
   \nonumber \\
-  \hat{B}\left|b\right> = b \left|b\right>.
+  \hat{B}\ket{b} = b \ket{b}.
   \nonumber
 \end{eqnarray}
 С учетом того, что измерение величин проводилось одновременно, в силу
 редукции волновой функции (см. \autoref{sec:add:reduction}) имеем
 \[
-\left|a\right> = \left|b\right>,
+\ket{a} = \ket{b},
 \]
 т. е. операторы $\hat{A}$ и $\hat{B}$ имеют общие собственные
 функции. При этом необязательно чтобы все собственные вектора этих
@@ -190,21 +190,21 @@ $\left<\frac{d \hat{O}}{dt}\right> = 0$ и следовательно, $\Delta t
 
 Действительно если
 \[
-\hat{A} \left|a\right> = a \left|a\right>, 
+\hat{A} \ket{a} = a \ket{a}, 
 \]
 то, с учетом $\hat{A}\hat{B} = \hat{B}\hat{A}$
 \[
-\hat{A}\hat{B}\left|a\right> = 
-\hat{B}\hat{A}\left|a\right> =
-a \hat{B}\left|a\right>.
+\hat{A}\hat{B}\ket{a} = 
+\hat{B}\hat{A}\ket{a} =
+a \hat{B}\ket{a}.
 \]
-Обозначив $\left|b\right> = \hat{B}\left|a\right>$ имеем
+Обозначив $\ket{b} = \hat{B}\ket{a}$ имеем
 \[
-\hat{A}\left|b\right> = 
-a \left|b\right>,
+\hat{A}\ket{b} = 
+a \ket{b},
 \]
 т. е.
-$\left|b\right> = \left|a\right>$ и данный вектор является собственным
+$\ket{b} = \ket{a}$ и данный вектор является собственным
 для обеих операторов $\hat{A}$ и  $\hat{B}$. Т. о. если операторы
 коммутируют то они обладают общим базисом (набором собственных
 векторов). Обратное тоже верно см. \cite{bHolevo2016}.

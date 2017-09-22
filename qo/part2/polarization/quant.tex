@@ -5,14 +5,14 @@
 использовать вектор Джонса, при этом волновая функция будет иметь вид:
 \begin{equation}
 \left|\psi\right> = 
-\alpha \left|x\right> + 
-\beta \left|y\right>,
+\alpha \ket{x} + 
+\beta \ket{y},
 \label{eqEntangSimpleState}
 \end{equation}
 где $\left|\alpha\right|^2 + \left|\beta\right|^2 = 1$, а
-$\left|x\right> = \left|1\right>_x\otimes\left|0\right>_y$ обозначает
+$\ket{x} = \ket{1}_x\otimes\ket{0}_y$ обозначает
 однофотонное состояние, поляризованное по $x$. Аналогично 
-$\left|y\right> = \left|0\right>_x\otimes\left|1\right>_y$ -
+$\ket{y} = \ket{0}_x\otimes\ket{1}_y$ -
 однофотонное состояние, поляризованное по $y$. 
 
 \index{параметры Стокса!квантовый случай}
@@ -77,17 +77,17 @@ $\hat{S}_1$ и $\hat{S}_2$, для которых мы найдем коммут
 
 Для получения собственных чисел и векторов операторов $\hat{S}_1$ и
 $\hat{S}_2$ удобно представить их в матричной форме. Для этого будем
-использовать базис, образованный векторами $\left|x\right>$ и
-$\left|y\right>$:
+использовать базис, образованный векторами $\ket{x}$ и
+$\ket{y}$:
 \begin{eqnarray}
-\left|x\right> = \left(
+\ket{x} = \left(
 \begin{array}{c}
 1 \\
 0
 \end{array}
 \right),
 \nonumber \\
-\left|y\right> = \left(
+\ket{y} = \left(
 \begin{array}{c}
 0 \\
 1
@@ -98,23 +98,23 @@ $\left|y\right>$:
 
 Для оператора $\hat{S}_1$ имеем:
 \begin{eqnarray}
-\hat{S}_1 \left|x\right> = \hat{a}_x^{\dag} \hat{a}_x
-\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{\dag}
-\hat{a}_y\left|1\right>_x\otimes\left|0\right>_y =
+\hat{S}_1 \ket{x} = \hat{a}_x^{\dag} \hat{a}_x
+\ket{1}_x\otimes\ket{0}_y - \hat{a}_y^{\dag}
+\hat{a}_y\ket{1}_x\otimes\ket{0}_y =
 \nonumber \\
 = 
 \hat{a}_x^{\dag} \hat{a}_x
-\left|1\right>_x\otimes\left|0\right>_y =
-\left|1\right>_x\otimes\left|0\right>_y = \left|x\right>,
+\ket{1}_x\otimes\ket{0}_y =
+\ket{1}_x\otimes\ket{0}_y = \ket{x},
 \nonumber \\
-\hat{S}_1 \left|y\right> = \hat{a}_x^{\dag} \hat{a}_x
-\left|0\right>_x\otimes\left|1\right>_y - \hat{a}_y^{\dag}
-\hat{a}_y\left|0\right>_x\otimes\left|1\right>_y =
+\hat{S}_1 \ket{y} = \hat{a}_x^{\dag} \hat{a}_x
+\ket{0}_x\otimes\ket{1}_y - \hat{a}_y^{\dag}
+\hat{a}_y\ket{0}_x\otimes\ket{1}_y =
 \nonumber \\
 =
 -\hat{a}_y^{\dag}
-\hat{a}_y\left|0\right>_x\otimes\left|1\right>_y
-=-\left|0\right>_x\otimes\left|1\right>_y = -\left|y\right>,
+\hat{a}_y\ket{0}_x\otimes\ket{1}_y
+=-\ket{0}_x\otimes\ket{1}_y = -\ket{y},
 \label{eqEntangS1MatrixPre}
 \end{eqnarray}
 откуда получаем следующее матричное представление
@@ -135,39 +135,39 @@ $\left|y\right>$:
 \]
 из которого можно найти два собственных значения $s_1 = 1$ и
 $s_2 = -1$. Как нетрудно проверить, собственным вектором для $s_1 = 1$
-будет $\left|s_1\right> = \left|x\right>$. Действительно, из \eqref{eqEntangS1MatrixPre}
+будет $\ket{s_1} = \ket{x}$. Действительно, из \eqref{eqEntangS1MatrixPre}
 имеем:
 \begin{equation}
-\hat{S}_1 \left|s_1\right> = \hat{S}_1 \left|x\right> = 1 \cdot \left|s_1\right>.
+\hat{S}_1 \ket{s_1} = \hat{S}_1 \ket{x} = 1 \cdot \ket{s_1}.
 \label{eq:part2:pol:stocks_s1_1}
 \end{equation}
 Для второго собственного числа - собственным вектором будет
-$\left|s_2\right> = \left|y\right>$:
+$\ket{s_2} = \ket{y}$:
 \begin{equation}
-\hat{S}_1 \left|s_2\right>  = - \left|y\right> = -1 \cdot \left|s_2\right>.
+\hat{S}_1 \ket{s_2}  = - \ket{y} = -1 \cdot \ket{s_2}.
 \label{eq:part2:pol:stocks_s1_2}
 \end{equation}
 
 
 Для оператора $\hat{S}_2$ имеем:
 \begin{eqnarray}
-\hat{S}_2 \left|x\right> = \hat{a}_x^{\dag} \hat{a}_y
-\left|1\right>_x\otimes\left|0\right>_y + \hat{a}_y^{\dag}
-\hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
+\hat{S}_2 \ket{x} = \hat{a}_x^{\dag} \hat{a}_y
+\ket{1}_x\otimes\ket{0}_y + \hat{a}_y^{\dag}
+\hat{a}_x\ket{1}_x\otimes\ket{0}_y =
 \nonumber \\
 = 
 \hat{a}_y^{\dag}
-\hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
-\left|0\right>_x\otimes\left|1\right>_y = \left|y\right>,
+\hat{a}_x\ket{1}_x\otimes\ket{0}_y =
+\ket{0}_x\otimes\ket{1}_y = \ket{y},
 \nonumber \\
-\hat{S}_2 \left|y\right> = \hat{a}_x^{\dag} \hat{a}_y
-\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{\dag}
-\hat{a}_x\left|0\right>_x\otimes\left|1\right>_y =
+\hat{S}_2 \ket{y} = \hat{a}_x^{\dag} \hat{a}_y
+\ket{0}_x\otimes\ket{1}_y + \hat{a}_y^{\dag}
+\hat{a}_x\ket{0}_x\otimes\ket{1}_y =
 \nonumber \\
 =
 \hat{a}_x^{\dag} \hat{a}_y
-\left|0\right>_x\otimes\left|1\right>_y
-=\left|1\right>_x\otimes\left|0\right>_y = \left|x\right>.
+\ket{0}_x\otimes\ket{1}_y
+=\ket{1}_x\otimes\ket{0}_y = \ket{x}.
 \label{eqEntangS2MatrixPre}
 \end{eqnarray}
 Из \eqref{eqEntangS2MatrixPre} имеем следующее матричное представление
@@ -187,37 +187,37 @@ $\left|s_2\right> = \left|y\right>$:
 1$ и $s_2 = -1$.
 Для первого числа собственным вектором будет
 \begin{equation}
-\left|s_1\right> = \frac{1}{\sqrt{2}}\left(\left|x\right> +
-\left|y\right>\right),
+\ket{s_1} = \frac{1}{\sqrt{2}}\left(\ket{x} +
+\ket{y}\right),
 \label{eq:part2:pol:stocks_s2_1}
 \end{equation}
 а для второго
 \begin{equation}
-\left|s_2\right> = \frac{1}{\sqrt{2}}\left(\left|x\right> - \left|y\right>\right).
+\ket{s_2} = \frac{1}{\sqrt{2}}\left(\ket{x} - \ket{y}\right).
 \label{eq:part2:pol:stocks_s2_2}
 \end{equation}
 
 Для оператора $\hat{S}_3$ имеем:
 \begin{eqnarray}
-  \hat{S}_3 \left|x\right> = \frac{1}{i}\left(\hat{a}_x^{\dag} \hat{a}_y
-\left|1\right>_x\otimes\left|0\right>_y - \hat{a}_y^{\dag}
-\hat{a}_x\left|1\right>_x\otimes\left|0\right>_y\right) =
+  \hat{S}_3 \ket{x} = \frac{1}{i}\left(\hat{a}_x^{\dag} \hat{a}_y
+\ket{1}_x\otimes\ket{0}_y - \hat{a}_y^{\dag}
+\hat{a}_x\ket{1}_x\otimes\ket{0}_y\right) =
 \nonumber \\
 = 
 -\frac{1}{i}\hat{a}_y^{\dag}
-\hat{a}_x\left|1\right>_x\otimes\left|0\right>_y =
--\frac{1}{i}\left|0\right>_x\otimes\left|1\right>_y =
--\frac{\left|y\right>}{i} = i \left|y\right>,
+\hat{a}_x\ket{1}_x\otimes\ket{0}_y =
+-\frac{1}{i}\ket{0}_x\otimes\ket{1}_y =
+-\frac{\ket{y}}{i} = i \ket{y},
 \nonumber \\
-\hat{S}_2 \left|y\right> = \frac{1}{i}\left(\hat{a}_x^{\dag} \hat{a}_y
-\left|0\right>_x\otimes\left|1\right>_y + \hat{a}_y^{\dag}
-\hat{a}_x\left|0\right>_x\otimes\left|1\right>_y\right) =
+\hat{S}_2 \ket{y} = \frac{1}{i}\left(\hat{a}_x^{\dag} \hat{a}_y
+\ket{0}_x\otimes\ket{1}_y + \hat{a}_y^{\dag}
+\hat{a}_x\ket{0}_x\otimes\ket{1}_y\right) =
 \nonumber \\
 =
 \frac{1}{i}\hat{a}_x^{\dag} \hat{a}_y
-\left|0\right>_x\otimes\left|1\right>_y
-=\frac{1}{i}\left|1\right>_x\otimes\left|0\right>_y =
--i \left|x\right>.
+\ket{0}_x\otimes\ket{1}_y
+=\frac{1}{i}\ket{1}_x\otimes\ket{0}_y =
+-i \ket{x}.
 \label{eqEntangS3MatrixPre}
 \end{eqnarray}
 Таким образом из \eqref{eqEntangS3MatrixPre} получаем следующее
@@ -248,14 +248,14 @@ $\left|s_2\right> = \left|y\right>$:
 состояниями оператора $\hat{S}_3$ являются состояния с левой и правой
 круговыми поляризациями:
 \begin{eqnarray}
-  \left| s_1 \right> = \left| - \right> = \frac{1}{\sqrt{2}}
+  \ket{ s_1 } = \ket{ - } = \frac{1}{\sqrt{2}}
   \left(
-  \left|x\right> - i \left|y\right>
+  \ket{x} - i \ket{y}
   \right),
   \nonumber \\
-  \left| s_2 \right> = \left| + \right> = \frac{1}{\sqrt{2}}
+  \ket{ s_2 } = \ket{ + } = \frac{1}{\sqrt{2}}
   \left(
-  \left|x\right> + i \left|y\right>
+  \ket{x} + i \ket{y}
   \right).
   \label{eqEntangS3Eigenvec}
 \end{eqnarray}
@@ -265,20 +265,20 @@ $\left|s_2\right> = \left|y\right>$:
 % \eqref{eqEntangSimpleState}:
 % \begin{eqnarray}
 % \hat{S}_0\left|\psi\right> = 
-% \alpha \left|x\right> + 
-% \beta \left|y\right>,
+% \alpha \ket{x} + 
+% \beta \ket{y},
 % \nonumber \\
 % \hat{S}_1\left|\psi\right> = 
-% \alpha \left|x\right> - 
-% \beta \left|y\right>,
+% \alpha \ket{x} - 
+% \beta \ket{y},
 % \nonumber \\
 % \hat{S}_2\left|\psi\right> = 
-% \beta \left|x\right> + 
-% \alpha \left|y\right>,
+% \beta \ket{x} + 
+% \alpha \ket{y},
 % \nonumber \\
 % \hat{S}_3\left|\psi\right> = 
-% -i \beta \left|x\right> + 
-% i \alpha \left|y\right>.
+% -i \beta \ket{x} + 
+% i \alpha \ket{y}.
 % \label{eqEntangStokesPsi}
 % \end{eqnarray}
 
