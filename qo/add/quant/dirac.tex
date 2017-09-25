@@ -327,30 +327,30 @@ Sp\left(\hat{M}\hat{L}\right).
 Среднее значение оператора $\hat{L}$   в состоянии $\left| \psi
 \right>$  дается равенством 
 \begin{equation}  
-\left< \hat{L} \right>_{\psi} = \left<\psi\right|\hat{L}\left|\psi\right>
+\left< \hat{L} \right>_{\psi} = \bra{\psi}\hat{L}\ket{\psi}
 \label{eqAddDiracMid}
 \end{equation}  
 при условии
 \[
-\left<\psi\right.\left|\psi\right> = 1.
+\bra{\psi}\ket{\psi} = 1.
 \]
 
-Действительно, если принять, что $\left|\psi\right>$ раскладывается в
+Действительно, если принять, что $\ket{\psi}$ раскладывается в
 ряд по собственным функциям оператора $\hat{L}$ следующим образом:
 \[
-\left|\psi\right> = \sum_n c_n \ket{l_n},
+\ket{\psi} = \sum_n c_n \ket{l_n},
 \]
 то $\hat{L}\left|\psi\right>$ можно записать как
 \[
-\hat{L}\left|\psi\right> = \sum_n l_n c_n \ket{l_n},
+\hat{L}\ket{\psi} = \sum_n l_n c_n \ket{l_n},
 \]
 где $l_n$ собственное число соответствующее собственному состоянию 
 $\ket{l_n}$. 
 Если теперь подставить два последних выражения в \eqref{eqAddDiracMid}
 то получим:
 \[
-\left<\psi\right|\hat{L}\left|\psi\right> = \sum_{n,m} 
-l_n c_n c_m^{*} \bra{l_m} \ket{l_n}=
+\bra{\psi}\hat{L}\ket{\psi} = \sum_{n,m} 
+l_n c_n c_m^{*} \bra{l_m}\ket{l_n}=
 \sum_n l_n c_n c_n^{*} = 
 \sum_n l_n \left|c_n\right|^2, 
 \]
@@ -369,20 +369,20 @@ $\hat{L}$   в состоянии $\left|\psi\right>$.
 может быть переписано следующим образом:
 \begin{eqnarray}
 \left< \hat{L} \right>_{\psi} = 
-\left<\psi\right|\hat{L}\left|\psi\right> = 
-\left<\psi\right|\hat{I}\hat{L}\left|\psi\right> = 
+\bra{\psi}\hat{L}\ket{\psi} = 
+\bra{\psi}\hat{I}\hat{L}\ket{\psi} = 
 \nonumber \\
 = 
-\sum_n \left<\psi\right|\ket{n}\bra{n}
-\hat{L}\left|\psi\right> = 
+\sum_n \bra{\psi}\ket{n}\bra{n}
+\hat{L}\ket{\psi} = 
 \sum_n \bra{n}
-\hat{L}\left|\psi\right>\left<\psi\right|\ket{n} = 
+\hat{L}\ket{\psi}\bra{\psi}\ket{n} = 
 Sp \left(\hat{L} \hat{\rho} \right),
 \nonumber
 \end{eqnarray}
 где 
 \(
-\hat{\rho} = \left|\psi\right>\left<\psi\right| = \hat{P}_{\psi}
+\hat{\rho} = \ket{\psi}\bra{\psi} = \hat{P}_{\psi}
 \) - оператор проектирования на состояние 
 $\left| \psi \right>$.
 С учетом \eqref{eqAddDiracTrProperty} можно записать
