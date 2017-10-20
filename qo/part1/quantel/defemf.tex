@@ -67,7 +67,7 @@ E_0 \ket{0}.
 \begin{eqnarray}
 \hat{\mathcal{H}} \hat{a}^{\dag}\ket{0} = 
 \hat{\mathcal{H}} \ket{1} =
-\left(\hat{a}^{\dag} \hat{\mathcal{H}} + \hbar \omega \hat{a}^{+} \right)
+\left(\hat{a}^{\dag} \hat{\mathcal{H}} + \hbar \omega \hat{a}^{\dag} \right)
 \ket{0} = 
 \nonumber \\
 = \hbar \omega \left(1 + \frac{1}{2}\right)
@@ -163,8 +163,8 @@ S_{n+1}^2 = n + 1.
 Собственные состояния оператора числа фотонов $\hat{n}$ являются ортонормированными. 
 Действительно из того факта что оператор $\hat{n}$ является эрмитовым:
 \[
-\hat{n}^{\dag} = \left(\hat{a}^{+}\hat{a}\right)^{+} = 
-\hat{a}^{\dag} \left(\hat{a}^{+}\right)^{+} = 
+\hat{n}^{\dag} = \left(\hat{a}^{\dag}\hat{a}\right)^{\dag} = 
+\hat{a}^{\dag} \left(\hat{a}^{\dag}\right)^{\dag} = 
 \hat{a}^{\dag}\hat{a} = \hat{n}
 \]
 следует (см. \autoref{AddDirac}), что собственные функции этого оператора,
@@ -183,7 +183,7 @@ S_{n+1}^2 = n + 1.
 \quad
 \hat{a}^{\dag}\hat{a}\ket{n} = \hat{n}\ket{n},
 \nonumber \\
-\left[\hat{a}, \hat{a}^{\dag}\right] = \hat{a} \hat{a}^{+} - \hat{a}^{+}
+\left[\hat{a}, \hat{a}^{\dag}\right] = \hat{a} \hat{a}^{\dag} - \hat{a}^{\dag}
 \hat{a} = 1,
 \quad
 \hat{a}\ket{n} = \sqrt{n}\ket{n - 1}
@@ -235,7 +235,7 @@ $\bra{n}\ket{n'} = 0$.
 \bra{n}\hat{E}^2\ket{n} = 
 E_1^2 \sin^2 k_n z \bra{n}
 \left(
-\hat{a}^{\dag} \hat{a}^{+} + \hat{a} \hat{a}^{+} + \hat{a}^{+} \hat{a} +
+\hat{a}^{\dag} \hat{a}^{\dag} + \hat{a} \hat{a}^{\dag} + \hat{a}^{\dag} \hat{a} +
 \hat{a} \hat{a}
 \right)
 \ket{n} =

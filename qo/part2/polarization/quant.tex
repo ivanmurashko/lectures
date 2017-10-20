@@ -21,13 +21,13 @@ $\ket{y} = \ket{0}_x\otimes\ket{1}_y$ -
 заменим операторы электрического поля $E_{x,y}$ на операторы
 уничтожения $\hat{a}_{x,y}$, в результате получим
 \begin{eqnarray}
-\hat{S}_0 = \hat{a}_x^{\dag} \hat{a}_x + \hat{a}_y^{+} \hat{a}_y,
+\hat{S}_0 = \hat{a}_x^{\dag} \hat{a}_x + \hat{a}_y^{\dag} \hat{a}_y,
 \nonumber \\
-\hat{S}_1 = \hat{a}_x^{\dag} \hat{a}_x - \hat{a}_y^{+} \hat{a}_y,
+\hat{S}_1 = \hat{a}_x^{\dag} \hat{a}_x - \hat{a}_y^{\dag} \hat{a}_y,
 \nonumber \\
-\hat{S}_2 = \hat{a}_x^{\dag} \hat{a}_y + \hat{a}_x \hat{a}_y^{+},
+\hat{S}_2 = \hat{a}_x^{\dag} \hat{a}_y + \hat{a}_x \hat{a}_y^{\dag},
 \nonumber \\
-\hat{S}_3 = \frac{\hat{a}_x^{\dag} \hat{a}_y - \hat{a}_x \hat{a}_y^{+}}{i}.
+\hat{S}_3 = \frac{\hat{a}_x^{\dag} \hat{a}_y - \hat{a}_x \hat{a}_y^{\dag}}{i}.
 \label{eqEntangStokesOper}
 \end{eqnarray}
 
@@ -41,35 +41,35 @@ $\hat{S}_1$ и $\hat{S}_2$, для которых мы найдем коммут
 \hat{S}_2\hat{S}_1 = 
 \nonumber \\
 =
-\hat{a}_x^{\dag}\hat{a}_x\hat{a}_x^{+}\hat{a}_y -
-\hat{a}_y^{\dag}\hat{a}_y\hat{a}_y\hat{a}_x^{+} + 
+\hat{a}_x^{\dag}\hat{a}_x\hat{a}_x^{\dag}\hat{a}_y -
+\hat{a}_y^{\dag}\hat{a}_y\hat{a}_y\hat{a}_x^{\dag} + 
 \nonumber \\
-+ \hat{a}_x^{\dag}\hat{a}_x\hat{a}_x\hat{a}_y^{+} -
-\hat{a}_y^{\dag}\hat{a}_y\hat{a}_y^{+}\hat{a}_x -
++ \hat{a}_x^{\dag}\hat{a}_x\hat{a}_x\hat{a}_y^{\dag} -
+\hat{a}_y^{\dag}\hat{a}_y\hat{a}_y^{\dag}\hat{a}_x -
 \nonumber \\
-- \hat{a}_x^{\dag}\hat{a}_x^{+}\hat{a}_x\hat{a}_y +
-\hat{a}_y\hat{a}_y^{\dag}\hat{a}_y\hat{a}_x^{+} -
+- \hat{a}_x^{\dag}\hat{a}_x^{\dag}\hat{a}_x\hat{a}_y +
+\hat{a}_y\hat{a}_y^{\dag}\hat{a}_y\hat{a}_x^{\dag} -
 \nonumber \\
-- \hat{a}_x\hat{a}_x^{\dag}\hat{a}_x\hat{a}_y^{+} +
-\hat{a}_y^{\dag}\hat{a}_y^{+}\hat{a}_y\hat{a}_x =
+- \hat{a}_x\hat{a}_x^{\dag}\hat{a}_x\hat{a}_y^{\dag} +
+\hat{a}_y^{\dag}\hat{a}_y^{\dag}\hat{a}_y\hat{a}_x =
 \nonumber \\
-= \hat{a}_x^{\dag}\left[\hat{a}_x\hat{a}_x^{+}\right]\hat{a}_y -
-\left[\hat{a}_x\hat{a}_x^{\dag}\right]\hat{a}_x\hat{a}_y^{+} +
+= \hat{a}_x^{\dag}\left[\hat{a}_x\hat{a}_x^{\dag}\right]\hat{a}_y -
+\left[\hat{a}_x\hat{a}_x^{\dag}\right]\hat{a}_x\hat{a}_y^{\dag} +
 \nonumber \\
-+\left[\hat{a}_y\hat{a}_y^{\dag}\right]\hat{a}_y\hat{a}_x^{+} -
-\hat{a}_y^{\dag}\left[\hat{a}_y\hat{a}_y^{+}\right]\hat{a}_x =
++\left[\hat{a}_y\hat{a}_y^{\dag}\right]\hat{a}_y\hat{a}_x^{\dag} -
+\hat{a}_y^{\dag}\left[\hat{a}_y\hat{a}_y^{\dag}\right]\hat{a}_x =
 \nonumber \\
-= \hat{a}_x^{\dag}\hat{a}_y + \hat{a}_y\hat{a}_x^{+} -
-\hat{a}_x\hat{a}_y^{\dag} - \hat{a}_y^{+}\hat{a}_x = 
+= \hat{a}_x^{\dag}\hat{a}_y + \hat{a}_y\hat{a}_x^{\dag} -
+\hat{a}_x\hat{a}_y^{\dag} - \hat{a}_y^{\dag}\hat{a}_x = 
 \nonumber \\
-= 2 \left(\hat{a}_x^{\dag}\hat{a}_y - \hat{a}_x\hat{a}_y^{+}\right) = 2 i
+= 2 \left(\hat{a}_x^{\dag}\hat{a}_y - \hat{a}_x\hat{a}_y^{\dag}\right) = 2 i
 \hat{S}_3 \ne 0.
 \label{eqEntangStokesOperS12Comm}
 \end{eqnarray}
 При выводе \eqref{eqEntangStokesOperS12Comm} мы воспользовались
 коммутационными соотношениями для операторов рождения и уничтожения:
 \begin{equation}
-\left[\hat{a}_x \hat{a}^{\dag}_x\right] = \left[\hat{a}_y \hat{a}^{+}_y\right] = 1,
+\left[\hat{a}_x \hat{a}^{\dag}_x\right] = \left[\hat{a}_y \hat{a}^{\dag}_y\right] = 1,
 \nonumber
 \end{equation}
 а также тем фактом, что операторы действующие на разные компоненты
