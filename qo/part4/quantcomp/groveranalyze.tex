@@ -47,22 +47,25 @@ $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$.
 \begin{equation}
 \hat{U}_{x^{\ast}} \left|\psi\right>_0 =
 \frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \ket{x} - 
-\frac{1}{\sqrt{N}} \left|x^{\ast}\right>.
+\frac{1}{\sqrt{N}} \left|x^{\ast}\right> = \sum_x \beta_x \ket{x},
 \nonumber
 \end{equation}
+где $\beta_{x^\ast} = - \frac{1}{\sqrt{N}}$ и $\beta_{x \ne x^\ast} =
+\frac{1}{\sqrt{N}}$. 
 
 После применения оператора обращения относительно среднего $\hat{U}_s$ 
 из \eqref{eqQuantCompGroverUs} получим
 \begin{eqnarray}
+\hat{U}_G \left|\psi\right>_0 = 
 \hat{U}_s \hat{U}_{x^{\ast}} \left|\psi\right>_0 = 
-\hat{U}_G \left|\psi\right>_0 \approx 
+\hat{U}_s \sum_x \beta_x \ket{x} = 
+\nonumber \\
+= \sum_x \left(2 M - \beta_x\right) \ket{x} \approx 
 \sum_{x\ne x^{\ast}} \left( 2 \frac{1}{\sqrt{N}} - \frac{1}{\sqrt{N}}
 \right) \ket{x} + 
 \nonumber \\
 + \left( 2 \frac{1}{\sqrt{N}} +
 \frac{1}{\sqrt{N}} \right) \left|x^{\ast}\right> = 
-\nonumber \\
-= 
 \frac{1}{\sqrt{N}}\sum_{x\ne x^{\ast}} \ket{x} + 
 \frac{3}{\sqrt{N}} \left|x^{\ast}\right>.
 \label{eqQuantCompGroverAnalyzeRought}
@@ -72,6 +75,7 @@ $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$.
 \mathcal{M} = \frac{\sum_x \alpha_x}{N} \approx
 \frac{N}{N \sqrt{N}} = \frac{1}{\sqrt{N}}.
 \]
+
 Таким образом после первой итерации алгоритма Гровера амплитуда
 $\alpha_{x^{\ast}}$ возросла на $\frac{2}{\sqrt{N}}$. Если
 апроксимировать этот результат на произвольную итерацию, то можно
