@@ -1,6 +1,24 @@
 %% -*- coding:utf-8 -*- 
 \subsection{Анализ алгоритма Гровера}
 
+Схематическая форма записи алгоритма Гровера приведена в алг.
+\ref{alg:quantcomp:grover}.  
+\begin{algorithm}
+\caption{Алгоритм Гровера}
+\label{alg:quantcomp:grover}
+\begin{algorithmic}
+    \STATE $\left|\psi\right>_0 \Leftarrow \frac{1}{\sqrt{N}}\sum_x 
+    \ket{x}$
+    \STATE $t \Leftarrow 1$
+    \REPEAT
+    \STATE $\left|\psi\right>_t \Leftarrow \hat{U}_s\hat{U}_{x^{\ast}}
+    \left|\psi\right>_{t-1}$
+    \STATE $t \Leftarrow t + 1$
+    \UNTIL{ ($t < \frac{\pi}{4}\sqrt{N}$)}
+    \RETURN результат измерения состояния $\left|\psi\right>_t$
+\end{algorithmic}
+\end{algorithm}
+
 Нас будет интересовать два вопроса: какова алгоритмическая сложность
 алгоритма Гровера и существуют ли алгоритмы которые могут выполнять
 задачу поиска в неструктурированном объеме данных более эффективно чем
@@ -65,23 +83,7 @@ $\alpha_{x^{\ast}}$ возросла на $\frac{2}{\sqrt{N}}$. Если
 \]
 
 Более точные расчеты \cite{nielsen2000quantum} дают для числа итераций
-$\frac{\pi}{4}\sqrt{N}$. Таким образом алгоритм Гровера может быть
-записан следующим образом  
-\begin{algorithm}
-\caption{Алгоритм Гровера}
-\label{algQuantCompGrover}
-\begin{algorithmic}
-    \STATE $\left|\psi\right>_0 \Leftarrow \frac{1}{\sqrt{N}}\sum_x 
-    \ket{x}$
-    \STATE $t \Leftarrow 1$
-    \REPEAT
-    \STATE $\left|\psi\right>_t \Leftarrow \hat{U}_s\hat{U}_{x^{\ast}}
-    \left|\psi\right>_{t-1}$
-    \STATE $t \Leftarrow t + 1$
-    \UNTIL{ ($t < \frac{\pi}{4}\sqrt{N}$)}
-    \RETURN результат измерения состояния $\left|\psi\right>_t$
-\end{algorithmic}
-\end{algorithm}
+$\frac{\pi}{4}\sqrt{N}$. 
 
 Можно задать вопрос об оптимальности алгоритма Гровера: существует ли
 квантовый алгоритм, который выполняет поиск в неструктурированном

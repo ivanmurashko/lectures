@@ -49,13 +49,55 @@
 \nonumber
 \end{eqnarray}
 
+В матричной форме это преобразование может быть записано в виде
+\begin{equation}
+\hat{H} = \frac{1}{\sqrt{2}}
+\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix},
+\label{eq:quantcomp:hadamar}
+\end{equation}
+где в качестве базиса выбраны вектора
+\[
+\ket{0} = \begin{pmatrix}
+1 \\ 0 
+\end{pmatrix}
+\]
+и
+\[
+\ket{1} = \begin{pmatrix}
+0 \\ 1 
+\end{pmatrix}.
+\]
+
 \input ./part4/quantcomp/fighadamar1.tex
+
+Из \eqref{eq:quantcomp:hadamar} можно получить следующее свойство
+оператора $\hat{H}$:
+\begin{equation}
+\hat{H} \hat{H} = \frac{1}{2}
+\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix} = 
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}.
+\label{eq:quantcomp:hadamar_prop}
+\end{equation}
 
 Это преобразование используется для получения суперпозиции состояний
 содержащие все возможные значения аргумента вычисляемой функции
 (см. \autoref{figQuantCompHadamar2}). 
 
 \input ./part4/quantcomp/fighadamar2.tex
+
 
 \subsubsection{CNOT}
 
