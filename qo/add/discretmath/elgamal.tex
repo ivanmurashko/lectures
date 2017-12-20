@@ -5,4 +5,69 @@
 подписи Эль-Гамаля. Цифровая подпись Эль-Гамаля лежит в основе
 стандартов цифровой подписи США (DSA) и России (ГОСТ Р 34.10-94).
 
-TBD
+Ниже мы рассмотрим алгоритм в режиме шифрования.
+
+\subsection{Генерация ключей}
+
+\begin{itemize}
+\item Генерируется простое число $p$.
+\item Выбирается целое число $g$
+\item Выбирается случайное целое число $x: 1 < x < p$.
+\item Вычисляется $y = g^x \mod p$
+\end{itemize}
+
+Открытым ключом  является тройка $p, g, y$. Закрытым ключом является
+число $x$.
+
+\begin{example}[Генерация ключей (Elgamal)]
+Выбираем $p = 21, g = 10, x = 3$. $y = 10^3 \mod 21 = 13$.
+\label{ex:add:dm:elgamal_gen}
+\end{example}
+
+\subsection{Шифрование}
+Шифруемое сообщение $M$ должно удовлетворять критерию $0 < M < p$.
+\begin{itemize}
+\item Выбирается сессионный ключ - случайное число $k: 1 < k < p - 1$.
+\item Вычисляется $a = g^k \mod p$
+\item Вычисляется $b = y^k M \mod p$
+\end{itemize}
+
+Пара чисел $(a, b)$ считается шифротекстом.
+\begin{example}[Шифрование (Elgamal)]
+Допустим мы хотим зашифровать $M=6$.
+Выбираем $k = 7$. $a = 10^7 \mod 21 = 10$, $b = 13^7 \cdot 6 \mod 21 =
+15$.
+\label{ex:add:dm:elgamal_crypt}
+\end{example}
+
+\subsection{Дешифрование}
+Зная закрытый ключ $x$ мы можем восстановить исходное сообщение с
+помощью
+\begin{equation}
+M = b\cdot \left(a^x\right)^{-1} \mod p,
+\label{eq:add:dm:elgamal_decrypt}
+\end{equation}
+действительно в силу того что
+\[
+\left(a^x\right)^{-1} = g^{-kx} \mod p
+\]
+имеем
+\[
+b\cdot \left(a^x\right)^{-1} = 
+y^k M g^{-kx} = g^{kx} M g^{-kx} = M \mod p.
+\]
+\begin{example}[Дешифрование (Elgamal)]
+Зашифрованное сообщение из прим. \ref{ex:add:dm:elgamal_crypt} 
+$C = (a=10, b=15)$. Используя \eqref{eq:add:dm:elgamal_decrypt} имеем
+\[
+M = 15 \cdot 13 \mod 21 = 6
+\]
+где было использовано
+\[
+\left(10^3\right)^{-1} \equiv 13 \mod 21,
+\]
+т.к. $13 \cdot 10^3 = 1 \mod 21$.
+Таким образом мы восстановили зашифрованное в
+прим. \ref{ex:add:dm:elgamal_crypt} сообщение $M=6$.
+\label{ex:add:dm:elgamal_crypt}
+\end{example}
