@@ -18,5 +18,42 @@ b = a^x \mod p,
 построить некоторую периодическую функцию, период которой даст нам
 возможность определить искомое число $x$.
 
+Выберем в качестве анализируемой функции
+\begin{equation}
+f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = a^{x \cdot x_1} a^{x_2} \mod p
+\label{eq:part4:quantcomp:discretlogfunc}
+\end{equation}
+Функция двух аргументов \eqref{eq:part4:quantcomp:discretlogfunc}
+будет периодической, при этом период может быть записан в виде пары
+чисел $(t_1, t_2)$ так что
+\begin{eqnarray}
+f\left(x_1 + t_1, x_2\right) = f\left(x_1, x_2\right),
+f\left(x_1, x_2 + t_2\right) = f\left(x_1, x_2\right),
+\end{eqnarray}
+т. о. 
+\[
+a^{x \cdot \left( x_1 + t_1 \right)} a^{x_2} = a^{x \cdot x_1} a^{x_2}
+\mod p,
+\]
+т.е. 
+\[
+a^{x t_1} = 1 \mod p.
+\]
+С другой стороны
+\[
+a^{x \cdot t_1} a^{x_2 + t_2} = a^{x \cdot x_1} a^{x_2}
+\mod p,
+\]
+т.е.
+\[
+a^{t_2} = 1 \mod p.
+\]
+Следовательно если обозначить $t_1 = t$, то период может быть
+переписан в виде
+\[
+(t_1, t_2) = (t, x t).
+\]
+
+
 TBD
 
