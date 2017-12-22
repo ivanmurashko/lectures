@@ -41,12 +41,30 @@ a^{x t_1 + t_2} = 1 \mod p.
 \]
 Следовательно по \myref{thm:add:algebra:cyclic_group}{теореме о числе
   порождающих элементов циклической группы}
-\[
+\begin{equation}
 x t_1 + t_2 = 0 \mod p.
-\]
+\label{eq:part4:quantcomp:discretlogeq}
+\end{equation}
 
 
 \input part4/quantcomp/figquantperiodfinding2.tex
 
+Следовательно используя схему, изображенную на
+\autoref{figQuantCompQuantPeriodFinding2} можно определить периоды
+$t1, t_2$ и в дальнейшем используя
+\eqref{eq:part4:quantcomp:discretlogeq} определить искомое $x$.
+
+
+Рассмотрим квантовый аналог решения задачи из прим.
+\ref{ex:dm:discretlog}:
+\begin{example}
+\emph{($ind_3{13} \mod{17}$)}
+В нашем примере $p = 17$, $b=13$ и $a=3$. Функция
+\eqref{eq:part4:quantcomp:discretlogfunc} имеет вид
+\[
+f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = 13^{x_1}3^{x_2}.
+\]
 TBD
+\label{ex:part4:quantcomp:discretlog:periodfinding}
+\end{example}
 
