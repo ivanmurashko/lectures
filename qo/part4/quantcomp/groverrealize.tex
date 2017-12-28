@@ -14,15 +14,16 @@
 осуществляет следующее преобразование:
 \begin{equation}
 \ket{x}\otimes\ket{b} \rightarrow 
-\ket{x}\otimes\left|b\otimes f\left(x\right)\right>.
+\ket{x}\otimes\left|b\oplus f\left(x\right)\right>,
 \nonumber
 \end{equation}
+где введено следующее обозначение: $a \oplus b = a + b \mod 2$.
 
 Для случая $\ket{b} = \ket{-} = 
 \frac{\ket{0} - \ket{1}}{\sqrt{2}}$ имеем
 \begin{eqnarray}
 \ket{x}\otimes\ket{-} \rightarrow 
-\ket{x}\otimes\left(\frac{\left|0\otimes 0\right> -
+\ket{x}\otimes\left(\frac{\left|0\oplus 0\right> -
   \left|1\otimes 0\right>}{\sqrt{2}}\right) = 
 \nonumber \\
 = \ket{x}\otimes\left(\frac{\ket{0} -
@@ -31,8 +32,8 @@
 , x \ne x^{\ast},
 \nonumber \\
 \ket{x}\otimes\ket{-} \rightarrow 
-\ket{x}\otimes\left(\frac{\left|0\otimes 1\right> -
-  \left|1\otimes 1\right>}{\sqrt{2}}\right) = 
+\ket{x}\otimes\left(\frac{\left|0\oplus 1\right> -
+  \left|1\oplus 1\right>}{\sqrt{2}}\right) = 
 \nonumber \\
 = \ket{x}\otimes\left(\frac{\ket{1} -
   \ket{0}}{\sqrt{2}}\right) =
