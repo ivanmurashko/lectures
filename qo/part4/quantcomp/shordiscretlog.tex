@@ -39,12 +39,72 @@ a^{x \cdot \left( x_1 + t_1 \right) + x_2 + t_2} = a^{x \cdot x_1 + x_2}
 \[
 a^{x t_1 + t_2} = 1 \mod p.
 \]
-Следовательно по \myref{addDiscretSmallFerma}{малой теореме Ферма} 
+Далее по \myref{addDiscretSmallFerma}{малой теореме Ферма} 
 \begin{equation}
 x t_1 + t_2 = 0 \mod (p-1).
 \label{eq:part4:quantcomp:discretlogeq}
 \end{equation}
 
+\input part4/quantcomp/figquantfourier2d.tex
+
+Для определения периодов функции двух аргументов можно воспользоваться
+двумерным преобразованием Фурье, которое может быть построено из
+блоков осуществляющих одномерное преобразование Фурье, как это
+изображено на \autoref{figQuantCompQuantFourier2d}. Действительно если
+на входе имеем (см. \eqref{eqPart4QuantCompShorQuantFourierSeries})
+\begin{eqnarray}
+\ket{x} = \ket{x}_1 \otimes \ket{x}_2,
+\nonumber \\
+\ket{x}_{1,2} = \sum_{k_{1,2} = 0}^{M-1} x_{k_{1,2}}^{(1,2)} \ket{k_{1,2}}.
+\nonumber
+\end{eqnarray}
+С учетом того что на выходе имеем
+\[
+\ket{\tilde{X}} = \ket{\tilde{X}_1} \otimes \ket{\tilde{X}_2},
+\]
+где
+\[
+\ket{\tilde{X}_{1,2}} = \sum_{j_{1,2} = 0}^{M-1} \tilde{X}_{j_{1,2}}^{(1,2)} \ket{j_{1,2}}
+\]
+и в соответствии с \eqref{eqPart4QuantCompShorQuantFourierEnd}
+\[
+\tilde{X}_{j_{1,2}}^{(1,2)} = \frac{1}{\sqrt{M}}\sum_{k_{1,2} = 0}^{M - 1}e^{-i \omega_{1,2} k_{1,2} j_{1,2}} x_{k_{1,2}}^{(1,2)}.
+\]
+получим
+\begin{eqnarray}
+\ket{\tilde{X}} = \ket{\tilde{X}_1} \otimes \ket{\tilde{X}_2} = 
+\nonumber \\
+= \sum_{j_1 = 0}^{M-1}\sum_{j_2 = 0}^{M-1}
+\tilde{X}_{j_{1}}^{(1)} \tilde{X}_{j_{2}}^{(2)} \ket{j_1} \otimes
+\ket{j_2} =
+\nonumber \\
+= \sum_{j_1 = 0}^{M-1}\sum_{j_2 = 0}^{M-1}
+\tilde{X}_{j_{1},j_{2}} \ket{j_1} \otimes
+\ket{j_2}, 
+\nonumber
+\end{eqnarray}
+где
+\begin{eqnarray}
+\tilde{X}_{j_{1},j_{2}} = \frac{1}{\left( \sqrt{M} \right)^2} 
+\sum_{k_{1} = 0}^{M - 1}\sum_{k_{2} = 0}^{M - 1}
+e^{-i \omega_1 k_{1} j_{1} - i \omega_2 k_{2} j_{2}}
+x_{k_1}^{(1)}x_{k_2}^{(2)} =
+\nonumber \\
+= \frac{1}{\left( \sqrt{M} \right)^2}
+\sum_{k_{1} = 0}^{M - 1}\sum_{k_{2} = 0}^{M - 1}
+e^{-i \omega_1 k_{1} j_{1} - i \omega_2 k_{2} j_{2}}
+x_{k_1, k_2}
+\nonumber
+\end{eqnarray}
+что является двумерным преобразованием Фурье от исходного двумерного
+сигнала
+\[
+\ket{x} = 
+\sum_{k_1 = 0}^{M-1}\sum_{k_2 = 0}^{M-1}
+x_{k_1,k_2} \ket{k_1} \otimes \ket{k_2} =
+\sum_{k_1 = 0}^{M-1}\sum_{k_2 = 0}^{M-1}
+x_{k_1}^{(1)}x_{k_2}^{(2)} \ket{k_1} \otimes \ket{k_2}.  
+\]
 
 \input part4/quantcomp/figquantperiodfinding2.tex
 
@@ -58,6 +118,11 @@ $t_1, t_2$ и в дальнейшем используя
 \ref{ex:dm:discretlog}:
 \begin{example}
 \emph{($ind_3{13} \mod{17}$)}
+% maxima
+% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
+% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
+%
+% scene:points(pts);
 В нашем примере $p = 17$, $b=13$ и $a=3$. Функция
 \eqref{eq:part4:quantcomp:discretlogfunc} имеет вид
 \[
