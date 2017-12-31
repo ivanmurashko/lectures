@@ -132,8 +132,6 @@ e^{-i \omega 2 m} \tilde{X}_2 \\
 Если последовательность $\left\{x_n\right\}$ имеет период $r$: $x_n =
 x_{n + r}$, а число отсчетов $M$ кратно $r$, то не нулевые члены
 преобразования Фурье следуют с периодом $\frac{M}{r}$.
-\end{lemma}
-
 \begin{proof}
 Действительно если $M \mod r = 0$ и $k r \mod M \ne 0$,
 то
@@ -193,12 +191,17 @@ e^{-i \omega k r } = e^{-i \frac{2 \pi }{M} k r } = 1,
 \eqref{eqAddFourierDiscretFourierPeriodCase1} и 
 \eqref{eqAddFourierDiscretFourierPeriodCase2} следует что
 ненулевые члены следуют с периодом $T = \frac{M}{r}$.
+\end{proof}
+\end{lemma}
 
+\begin{remark}
+\emph{(Периодичность максимумов)}
+\label{rem:dsp:fourier:periodprop}
 Стоит отметить, что выражение 
 \eqref{eqAddFourierDiscretFourierPeriodCase1} (в случае когда
 период не кратен числу отсчетов: $M \mod r \ne 0$) будет приближенно
 равно 0 для тех значений $k$ которые сильно отличаются от значений
 кратных $\frac{M}{r}$, т. е. локальные максимумы перобразования Фурье
 будут повторяться с периодом $\frac{M}{r}$.
-\end{proof}
+\end{remark}
 
