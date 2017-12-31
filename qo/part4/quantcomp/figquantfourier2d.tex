@@ -4,9 +4,11 @@
 \input ./part4/quantcomp/picquantfourier2d.tex
 
 \caption{Схема двумерного квантового преобразования Фурье. На входе
-  имеем сигнал $\ket{x} = \ket{x}_1 \otimes \ket{x}_2$. Сигнал на
-  выходе $\ket{\tilde{X}} = \ket{\tilde{X_1}} \otimes
-  \ket{\tilde{X_2}}$ является двумерным преобразование Фурье от
+  имеем сигнал $\ket{x} = \sum_{k_1,k_2=0}^{M-1} x\left(k_1,
+  k_2\right)\ket{k}_1 \otimes \ket{k}_2$. Сигнал на 
+  выходе $\ket{\tilde{X}} = \sum_{k_1,k_2=0}^{M-1} \tilde{X}\left(j_1,
+  j_2\right) \ket{j_1} \otimes \ket{j_2}$ является двумерным
+  преобразование Фурье от 
   исходного $\ket{x}$}
 \label{figQuantCompQuantFourier2d}
 \end{figure}

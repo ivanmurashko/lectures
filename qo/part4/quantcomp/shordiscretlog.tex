@@ -50,15 +50,16 @@ x t_1 + t_2 = 0 \mod (p-1).
 Для определения периодов функции двух аргументов можно воспользоваться
 двумерным преобразованием Фурье, которое может быть построено из
 блоков осуществляющих одномерное преобразование Фурье, как это
-изображено на \autoref{figQuantCompQuantFourier2d}. Действительно если
-на входе имеем (см. \eqref{eqPart4QuantCompShorQuantFourierSeries})
+изображено на \autoref{figQuantCompQuantFourier2d}. Для анализа этой
+схемы рассмотрим тривиальный случай когда
+на входе имеем (см. также \eqref{eqPart4QuantCompShorQuantFourierSeries})
 \begin{eqnarray}
 \ket{x} = \ket{x}_1 \otimes \ket{x}_2,
 \nonumber \\
 \ket{x}_{1,2} = \sum_{k_{1,2} = 0}^{M-1} x_{k_{1,2}}^{(1,2)} \ket{k_{1,2}}.
 \nonumber
 \end{eqnarray}
-С учетом того что на выходе имеем
+С учетом того, что на выходе получается
 \[
 \ket{\tilde{X}} = \ket{\tilde{X}_1} \otimes \ket{\tilde{X}_2},
 \]
@@ -87,16 +88,18 @@ x t_1 + t_2 = 0 \mod (p-1).
 \begin{eqnarray}
 \tilde{X}_{j_{1},j_{2}} = \frac{1}{\left( \sqrt{M} \right)^2} 
 \sum_{k_{1} = 0}^{M - 1}\sum_{k_{2} = 0}^{M - 1}
-e^{-i \omega_1 k_{1} j_{1} - i \omega_2 k_{2} j_{2}}
+e^{-i \omega \left( k_{1} j_{1} + k_{2} j_{2}\right)}
 x_{k_1}^{(1)}x_{k_2}^{(2)} =
 \nonumber \\
 = \frac{1}{\left( \sqrt{M} \right)^2}
 \sum_{k_{1} = 0}^{M - 1}\sum_{k_{2} = 0}^{M - 1}
-e^{-i \omega_1 k_{1} j_{1} - i \omega_2 k_{2} j_{2}}
+e^{-i \omega \left( k_{1} j_{1} + k_{2} j_{2}\right)}
 x_{k_1, k_2}
 \nonumber
 \end{eqnarray}
-что является двумерным преобразованием Фурье от исходного двумерного
+что, в соответствии с определением \ref{def:add:dsp:fourier2d},
+\index{двумерное преобразование Фурье}
+является двумерным преобразованием Фурье от исходного двумерного 
 сигнала
 \[
 \ket{x} = 

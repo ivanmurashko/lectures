@@ -1,13 +1,13 @@
 %%Created by jPicEdt 1.4.1_03: mixed JPIC-XML/LaTeX format
-%%Sun Dec 31 11:12:22 MSK 2017
+%%Sun Dec 31 14:00:37 MSK 2017
 %%Begin JPIC-XML
 %<?xml version="1.0" standalone="yes"?>
-%<jpic x-min="10" x-max="75" y-min="0" y-max="65" auto-bounding="true">
+%<jpic x-min="0" x-max="80" y-min="0" y-max="65" auto-bounding="true">
 %<multicurve fill-style= "none"
 %	 points= "(15,25);(15,25);(25,25);(25,25)"
 %	 />
 %<multicurve fill-style= "none"
-%	 points= "(15,5);(15,5);(25,5);(25,5)"
+%	 points= "(0,5);(0,5);(25,5);(25,5)"
 %	 />
 %<multicurve fill-style= "none"
 %	 points= "(40,25);(40,25);(50,25);(50,25)"
@@ -38,7 +38,7 @@
 %	 fill-style= "none"
 %	 text-frame= "noframe"
 %	 >
-%$\left|x_1\right&gt;$
+%$\left|\{k_1\}\right&gt;$
 %</text>
 %<text anchor-point= "(50,15)"
 %	 text-vert-align= "center-v"
@@ -46,7 +46,7 @@
 %	 fill-style= "none"
 %	 text-frame= "noframe"
 %	 >
-%$\left|\tilde{X_1}\right&gt;$
+%$\left|\{j_1\}\right&gt;$
 %</text>
 %<text anchor-point= "(30,25)"
 %	 text-vert-align= "center-v"
@@ -57,7 +57,7 @@
 %$\hat{F}^M$
 %</text>
 %<multicurve fill-style= "none"
-%	 points= "(15,60);(15,60);(25,60);(25,60)"
+%	 points= "(0,60);(0,60);(25,60);(25,60)"
 %	 />
 %<multicurve fill-style= "none"
 %	 points= "(15,40);(15,40);(25,40);(25,40)"
@@ -68,7 +68,7 @@
 %	 fill-style= "none"
 %	 text-frame= "noframe"
 %	 >
-%$\left|x_2\right&gt;$
+%$\left|\{k_2\}\right&gt;$
 %</text>
 %<multicurve fill-style= "none"
 %	 points= "(40,60);(40,60);(50,60);(50,60)"
@@ -99,7 +99,7 @@
 %	 fill-style= "none"
 %	 text-frame= "noframe"
 %	 >
-%$\left|\tilde{X_2}\right&gt;$
+%$\left|\{j_2\}\right&gt;$
 %</text>
 %<text anchor-point= "(30,60)"
 %	 text-vert-align= "center-v"
@@ -109,17 +109,33 @@
 %	 >
 %$\hat{F}^M$
 %</text>
+%<text anchor-point= "(5,35)"
+%	 text-vert-align= "center-v"
+%	 text-hor-align= "center-h"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 >
+%$\left|x\right&gt;$
+%</text>
+%<text anchor-point= "(80,35)"
+%	 text-vert-align= "center-v"
+%	 text-hor-align= "center-h"
+%	 fill-style= "none"
+%	 text-frame= "noframe"
+%	 >
+%$\left|\tilde{X}\right&gt;$
+%</text>
 %</jpic>
 %%End JPIC-XML
 %LaTeX-picture environment using emulated lines and arcs
 %You can rescale the whole picture (to 80% for instance) by using the command \def\JPicScale{0.8}
 \ifx\JPicScale\undefined\def\JPicScale{1}\fi
 \unitlength \JPicScale mm
-\begin{picture}(75,65)(0,0)
+\begin{picture}(80,65)(0,0)
 \linethickness{0.3mm}
 \put(15,25){\line(1,0){10}}
 \linethickness{0.3mm}
-\put(15,5){\line(1,0){10}}
+\put(0,5){\line(1,0){25}}
 \linethickness{0.3mm}
 \put(40,25){\line(1,0){10}}
 \linethickness{0.3mm}
@@ -165,17 +181,17 @@
 \put(25,0){\line(0,1){30}}
 \put(40,0){\line(0,1){30}}
 \put(25,0){\line(1,0){15}}
-\put(10,15){\makebox(0,0)[cc]{$\left|x_1\right>$}}
+\put(10,15){\makebox(0,0)[cc]{$\left|\{k_1\}\right>$}}
 
-\put(50,15){\makebox(0,0)[cc]{$\left|\tilde{X_1}\right>$}}
+\put(50,15){\makebox(0,0)[cc]{$\left|\{j_1\}\right>$}}
 
 \put(30,25){\makebox(0,0)[cc]{$\hat{F}^M$}}
 
 \linethickness{0.3mm}
-\put(15,60){\line(1,0){10}}
+\put(0,60){\line(1,0){25}}
 \linethickness{0.3mm}
 \put(15,40){\line(1,0){10}}
-\put(10,50){\makebox(0,0)[cc]{$\left|x_2\right>$}}
+\put(10,50){\makebox(0,0)[cc]{$\left|\{k_2\}\right>$}}
 
 \linethickness{0.3mm}
 \put(40,60){\line(1,0){10}}
@@ -222,8 +238,12 @@
 \put(25,35){\line(0,1){30}}
 \put(40,35){\line(0,1){30}}
 \put(25,35){\line(1,0){15}}
-\put(50,50){\makebox(0,0)[cc]{$\left|\tilde{X_2}\right>$}}
+\put(50,50){\makebox(0,0)[cc]{$\left|\{j_2\}\right>$}}
 
 \put(30,60){\makebox(0,0)[cc]{$\hat{F}^M$}}
+
+\put(5,35){\makebox(0,0)[cc]{$\left|x\right>$}}
+
+\put(80,35){\makebox(0,0)[cc]{$\left|\tilde{X}\right>$}}
 
 \end{picture}

@@ -1,0 +1,27 @@
+%% -*- coding:utf-8 -*-
+\section{Двумерное преобразование Фурье}
+\subsection{Определение}
+
+\begin{definition}[Двумерное преобразование Фурье]
+Допустим у нас имеется двумерный сигнал $x\left(k_1, k_2\right)$, где 
+$k_1,k_2 \in \{0, \dots, M - 1\}$. Двумерным преобразованием Фурье
+называется двумерная функция 
+\[
+\tilde{X}\left(j_1, j_2\right), j_1,j_2
+\in \{0, \dots, M - 1\}
+\]
+такая, что
+\[
+\tilde{X}\left(j_1, j_2\right) = 
+\frac{1}{M}\sum_{k_1 = 0}^{M-1}\sum_{k_2 = 0}^{M-1}
+x\left(k_1, k_2\right)e^{-i \omega\left(k_1 j_1 + k_2 j_2\right)},
+\]
+где
+\[
+\omega = \frac{2 \pi}{M}.
+\]
+\label{def:add:dsp:fourier2d}
+\index{двумерное преобразование Фурье!определение}
+\end{definition}
+
+TBD
