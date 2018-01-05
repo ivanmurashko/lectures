@@ -126,12 +126,22 @@ $t_1, t_2$ и в дальнейшем используя
 % x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
 %
 % scene:points(pts);
+\input ./part4/quantcomp/figdiscretlog0.tex
 В нашем примере $p = 17$, $b=13$ и $a=3$. Функция
 \eqref{eq:part4:quantcomp:discretlogfunc} имеет вид
 \[
 f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = 13^{x_1}3^{x_2}.
 \]
-TBD
+и изображена на \autoref{fig:part4:quantcomp:dl0}.
+
+\input ./part4/quantcomp/figdiscretlog1.tex
+
+Допустим, что в результате измерения функции $f$ мы получили значение
+$f = 3$. В результате для $x_1, x_2$ останутся только те значения,
+которые соответствуют наблюдаемому значению функции (см.
+\autoref{fig:part4:quantcomp:dl1}). 
+
+\input ./part4/quantcomp/figdiscretlog2.tex
 \label{ex:part4:quantcomp:discretlog:periodfinding}
 \end{example}
 
