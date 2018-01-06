@@ -152,6 +152,7 @@ e^{-i \omega x_0 j_2}\frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i
 x = \frac{j_1}{j_2}.
 \label{eq:part4:quantcomp:discretlog:periodfourier}
 \end{equation}
+
 \begin{example}
 \emph{($ind_3{14} \mod{17}$)}
 % maxima
@@ -176,6 +177,60 @@ x = \frac{j_1}{j_2}.
 
 \label{ex:part4:quantcomp:discretlog:periodfinding}
 \end{example}
+
+Стоит отметить, что полученный результат
+\eqref{eq:part4:quantcomp:discretlog:periodfourier} находится в прямом
+соответствии с леммой \ref{lemmaAddFourierDiscretFourierPeriod} для
+одномерного преобразования Фурье. При этом также имеет место и аналог
+комментария \ref{rem:dsp:fourier:periodprop}, который гласит, что в
+случае когда число отсчетов преобразования Фурье не кратно $q$: $M \ne
+0 \mod q$ мы можем все равно приближенно считать верным выражение
+\eqref{eq:part4:quantcomp:discretlog:periodfourier}
+\cite{Proos:2003:SDL:2011528.2011531}.  
+
+\begin{example}
+\emph{($ind_3{14} \mod{19}$)}
+% maxima
+% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
+% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
+%
+% scene:points(pts);
+
+В качестве примера рассмотрим задачу определения $x$ такого, что 
+\[
+3^x \equiv 14 \mod 19.
+\]
+
+Исследуемая функция имеет вид
+\[
+f(x_1, x_2) = 14^{x_1} 3^{x_2} \mod 19,
+\]
+Допустим, что $x_0 = 1$, т.е. зарегистрировано значение функции
+$f(x_1, x_2) = 3$.
+
+\input ./part4/quantcomp/figdiscretlog3.tex
+
+Число отсчетов преобразования Фурье возьмем $M=64$. Стоит отметить,
+что $18 \ne 0 \mod 64$.
+
+Фурье образ отсчетов функции 
+\[
+f'(x_1, x_2) = 
+\begin{cases}
+1, \mbox{ если } 14^{x_1} 3^{x_2} = 3 \mod 19 \\
+1, \mbox{ если } 14^{x_1} 3^{x_2} \ne 3 \mod 19 
+\end{cases}
+\]
+изображен на \autoref{fig:part4:quantcomp:dl2}. Самый нижний максимум
+имеет координаты $j_1 = 46, j_2 = 3.5$ откуда имеем для оценки 
+\[
+x \approx \frac{46}{3.5} \approx 13.14.
+\]
+Стоит отметить что решение искомого уравнения $x = 13$ соответствует
+найденному приближенному решению.
+\label{ex:part4:quantcomp:discretlog:periodfinding2}
+\end{example}
+
 
 
 \subsection{Двумерное квантовое преобразование Фурье}
@@ -247,8 +302,8 @@ x_{k_1,k_2} \ket{k_1} \otimes \ket{k_2}.
 \input part4/quantcomp/figquantperiodfinding2.tex
 
 Следовательно используя схему, изображенную на
-\autoref{figQuantCompQuantPeriodFinding2} можно определить периоды
-$t_1, t_2$ и в дальнейшем используя
-\eqref{eq:part4:quantcomp:discretlogeq} определить искомое $x$.
+\autoref{figQuantCompQuantPeriodFinding2} можно определить координаты
+максимумов двумерного преобразования Фурье $j_1, j_2$ и в дальнейшем используя
+\eqref{eq:part4:quantcomp:discretlog:periodfourier} определить искомое $x$.
 
 
