@@ -23,25 +23,34 @@ b = a^x \mod p,
 f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = a^{x \cdot x_1} a^{x_2} \mod p
 \label{eq:part4:quantcomp:discretlogfunc}
 \end{equation}
-Функция двух аргументов \eqref{eq:part4:quantcomp:discretlogfunc}
-будет периодической, при этом период может быть записан в виде пары
-чисел $(t_1, t_2)$ так что
-\begin{eqnarray}
-f\left(x_1 + t_1, x_2 + t_2\right) = f\left(x_1, x_2\right),
-\nonumber
-\end{eqnarray}
-т. о. 
+В по аналогии с решением задачи факторизации производится измерение
+этой функции. Допустим в результате измерения мы получили число $c \in
+\left(\mathbb{Z}/p\mathbb{Z}\right)^\times$. В силу того, что $a$
+является порождающим элементом (см. опред.
+\ref{def:add:algebra:cyclic_group}) мультипликативной группы   
+$\left(\mathbb{Z}/p\mathbb{Z}\right)^\times$ (см. опред.
+\ref{def:add:algebra:mult_group}) $\exists x_0: c = a^{x_0}$. Т. о. с
+учетом \myref{addDiscretSmallFerma}{малой теоремы Ферма} $a^{p-1}
+\equiv 1 \mod p$ и следовательно
 \[
-a^{x \cdot \left( x_1 + t_1 \right) + x_2 + t_2} = a^{x \cdot x_1 + x_2}
-\mod p,
-\]
-т.е. 
+x_0 \equiv x x_1 + x_2 \mod q,
+\] 
+где $q = p - 1$.
+Из этого выражения следует, что
 \[
-a^{x t_1 + t_2} = 1 \mod p.
+x_2 \equiv x_0 - x x_1 \mod q.
 \]
-Далее по \myref{addDiscretSmallFerma}{малой теореме Ферма} 
+Т. е. если функция является периодической по первому аргументу:
+\[
+f(x_1 + t_1, x_2) = f(x_1,x_2),
+\]
+то она будет периодической по второму аргументу
+\[
+f(x_1, x_2 + t_2) = f(x_1,x_2),
+\]
+при этом 
 \begin{equation}
-x t_1 + t_2 = 0 \mod (p-1).
+t_2 \equiv x t_1 \mod q.
 \label{eq:part4:quantcomp:discretlogeq}
 \end{equation}
 
