@@ -16,13 +16,42 @@ b = a^x \mod p,
 квантового преобразования Фурье для факторизации чисел (см.
 \autoref{sec:part4:algoshor:periodfind}), мы должны
 построить некоторую периодическую функцию, период которой даст нам
-возможность определить искомое число $x$.
-
-Выберем в качестве анализируемой функции
+возможность определить искомое число $x$. Выберем в качестве анализируемой функции
 \begin{equation}
 f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = a^{x \cdot x_1} a^{x_2} \mod p
 \label{eq:part4:quantcomp:discretlogfunc}
 \end{equation}
+
+В качестве примера мы будем рассматривать квантовый аналог решения задачи из прим.
+\ref{ex:dm:discretlog}:
+\begin{example}
+\emph{($ind_3{14} \mod{17}$)}
+% maxima
+% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
+% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
+%
+% scene:points(pts);
+\input ./part4/quantcomp/figdiscretlog0.tex
+В нашем примере $p = 17$, $b=14$ и $a=3$. Функция
+\eqref{eq:part4:quantcomp:discretlogfunc} имеет вид
+\[
+f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = 14^{x_1}3^{x_2}.
+\]
+и изображена на \autoref{fig:part4:quantcomp:dl0}.
+
+$b=14$, так же как и $a=3$ является генератором
+$\left(\mathbb{Z}/17\mathbb{Z}\right)^\times$. При этом $3 \equiv 14^9
+\mod 17$. При этом периодами изображенной функции, как это видно из
+\autoref{fig:part4:quantcomp:dl0}, будут следующие числа 
+\begin{eqnarray}
+t_1 \equiv 1 \mod 16,
+\nonumber \\
+t_2 \equiv 9 \mod 16
+\end{eqnarray} 
+\label{ex:part4:quantcomp:discretlog:periodfinding0}
+\end{example}
+
+
 В по аналогии с решением задачи факторизации производится измерение
 этой функции. Допустим в результате измерения мы получили число $c \in
 \left(\mathbb{Z}/p\mathbb{Z}\right)^\times$. В силу того, что $a$
@@ -53,6 +82,103 @@ f(x_1, x_2 + t_2) = f(x_1,x_2),
 t_2 \equiv x t_1 \mod q.
 \label{eq:part4:quantcomp:discretlogeq}
 \end{equation}
+
+\subsection{Двумерное преобразование Фурье и период функции $f(x_1,
+  x_2)$}
+Нашей исследуемой функцией будет являться следующая:
+\[
+f'\left(x_1, x_2\right) = 
+\begin{cases}
+1, x x_1 + x_2 = x_0 \\
+0, x x_1 + x_2 \ne x_0 \\
+\end{cases}
+\]
+\begin{example}
+\emph{($ind_3{14} \mod{17}$)}
+% maxima
+% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
+% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
+%
+% scene:points(pts);
+
+\input ./part4/quantcomp/figdiscretlog1.tex
+Продолжая пример \ref{ex:part4:quantcomp:discretlog:periodfinding0}
+допустим, что в результате измерения функции $f$ мы получили значение
+$f = 3$. В результате для $x_1, x_2$ останутся только те значения,
+которые соответствуют наблюдаемому значению функции (см.
+\autoref{fig:part4:quantcomp:dl1}), т.е. $x x_1 + x_2 = x_0 = 1$ 
+\label{ex:part4:quantcomp:discretlog:periodfinding1}
+\end{example}
+
+
+Прежде всего рассмотрим случай когда число отсчетов преобразования
+Фурье кратно $q$. В этом случае для Фурье образа $\tilde{f}$ имеем
+\begin{eqnarray}
+\tilde{f'}\left(j_1, j_2\right) = 
+\frac{1}{q}\sum_{x_1 = 0}^{q-1}
+\frac{1}{q}\sum_{x_2 = 0}^{q-1} 
+f'\left(x_1, x_2\right)e^{-i \omega\left(x_1 j_1 + x_2j_2\right)} =
+\nonumber \\
+= \frac{1}{q}\sum_{x_1 = 0, x_2 = x_0 - x x_1}^{q-1}
+e^{-i \omega\left(x_1 j_1 + x_2 j_2\right)} = 
+ \frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i \omega\left(x_1 j_1 + (x_0 - x
+   x_1) j_2\right)} = 
+\nonumber \\
+= e^{-i \omega x_0 j_2}\frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i
+  \omega x_1 \left(j_1 - x j_2\right)},
+\label{eq:part4:quantcomp:discretlog:ftq16}
+\end{eqnarray}
+где $\omega = \frac{2 \pi}{q}$. В выражении
+\eqref{eq:part4:quantcomp:discretlog:ftq16} $\tilde{f}(j_1, j_2) =
+e^{-i \omega x_0 j_2} \ne 0$, если $j_1 = x j_2$. 
+В противном случае по формуле геометрической прогрессии 
+\begin{eqnarray}
+\tilde{f'}\left(j_1 \ne x j_2, j_2\right) = 
+e^{-i \omega x_0 j_2}\frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i
+  \omega x_1 \left(j_1 - x j_2\right)} = 
+\nonumber \\
+=
+\frac{e^{-i \omega x_0 j_2}}{q} \frac{e^{-i
+  \omega q \left(j_1 - x j_2\right)} - 1}{e^{-i
+  \omega \left(j_1 - x j_2\right)} - 1} = 
+ \frac{e^{-i \omega x_0 j_2}}{q} 
+\frac{e^{-i \frac{2 \pi}{q} q \left(j_1 - x j_2\right)} - 1}{e^{-i
+  \omega \left(j_1 - x j_2\right)} - 1} = 0.
+\nonumber
+\end{eqnarray} 
+Т. о. для определения периода нам необходимо найти координаты $(j_1, j_2)$
+любого максимума преобразования Фурье и воспользоваться выражением 
+\begin{equation}
+x = \frac{j_1}{j_2}.
+\label{eq:part4:quantcomp:discretlog:periodfourier}
+\end{equation}
+\begin{example}
+\emph{($ind_3{14} \mod{17}$)}
+% maxima
+% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
+% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
+%
+% scene:points(pts);
+
+\input ./part4/quantcomp/figdiscretlog2.tex
+
+Фурье образ функции с \autoref{fig:part4:quantcomp:dl1} изображен на
+\autoref{fig:part4:quantcomp:dl2} из которого видно, что с наибольшей
+вероятностью будут регистрироваться отсчеты которые следуют с
+интервалом $T_{j_1} = 9$ по координате $j_1$ и с интервалом $T_{j_2} =
+1$ по координате $j_2$. С учетом того, что число отсчетов $M=16$ можно
+получить координаты максимума преобразования Фурье $j_1 = 9$
+и $j_2 = 1$. Решением уравнения $3^x \equiv 14 \mod 17$
+является, в соответствии с
+\eqref{eq:part4:quantcomp:discretlog:periodfourier}, $x = \frac{9}{1}
+= 9$, что соответствует результату прим. 
+\ref{ex:dm:discretlog}.
+
+\label{ex:part4:quantcomp:discretlog:periodfinding}
+\end{example}
+
+
+\subsection{Двумерное квантовое преобразование Фурье}
 
 \input part4/quantcomp/figquantfourier2d.tex
 
@@ -125,44 +251,4 @@ x_{k_1,k_2} \ket{k_1} \otimes \ket{k_2}.
 $t_1, t_2$ и в дальнейшем используя
 \eqref{eq:part4:quantcomp:discretlogeq} определить искомое $x$.
 
-
-Рассмотрим квантовый аналог решения задачи из прим.
-\ref{ex:dm:discretlog}:
-\begin{example}
-\emph{($ind_3{13} \mod{17}$)}
-% maxima
-% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
-% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
-%
-% scene:points(pts);
-\input ./part4/quantcomp/figdiscretlog0.tex
-В нашем примере $p = 17$, $b=13$ и $a=3$. Функция
-\eqref{eq:part4:quantcomp:discretlogfunc} имеет вид
-\[
-f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = 13^{x_1}3^{x_2}.
-\]
-и изображена на \autoref{fig:part4:quantcomp:dl0}.
-
-\input ./part4/quantcomp/figdiscretlog1.tex
-
-Допустим, что в результате измерения функции $f$ мы получили значение
-$f = 3$. В результате для $x_1, x_2$ останутся только те значения,
-которые соответствуют наблюдаемому значению функции (см.
-\autoref{fig:part4:quantcomp:dl1}). 
-
-\input ./part4/quantcomp/figdiscretlog2.tex
-
-Фурье образ функции с \autoref{fig:part4:quantcomp:dl1} изображен на
-\autoref{fig:part4:quantcomp:dl2} из которого видно, что с наибольшей
-вероятностью будут регистрироваться отсчеты которые следуют с
-интервалом $T_{j_1} = 8$ по координате $j_1$ и с интервалом $T_{j_2} =
-2$ по координате $j_2$. С учетом того, что число отсчетов $M=32$ можно
-получить период по оригинальной координате $t_1 =
-\frac{M}{T_{j_1}} = 4$ и период по координате  $t_2 =
-\frac{M}{T_{j_2}} = 16$. Решением уравнения $3^x \equiv 13 \mod 17$
-является $x = \frac{16}{4} = 4$, что соответствует результату прим.
-\ref{ex:dm:discretlog}.
-
-\label{ex:part4:quantcomp:discretlog:periodfinding}
-\end{example}
 
