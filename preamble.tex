@@ -110,8 +110,20 @@
                        }%
                        {\end{xdefinition}}
 
+\theoremstyle{property}
+\newtheorem{xproperty}{Свойство}[section]
+\providecommand*{\xtheoremautorefname}{Свойство}
+\NewDocumentEnvironment{property}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xproperty}}
+                         {\begin{xproperty}[#1]\index{#1!свойство}}
+                       }%
+                       {\end{xproperty}}
 
 \newtheorem{remark}{Комментарий}[section]
+
+
 
 %% \newenvironment{definition}[1][Определение]{\begin{trivlist}
 %% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
