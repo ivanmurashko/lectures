@@ -14,11 +14,11 @@ pdf: main.tex main.bib algorithmic.sty
 	bibtex main
 	pdflatex main.tex
 	cp main.pdf crypto.pdf
-	cd presentation && $(MAKE) pdf
+	#cd presentation && $(MAKE) pdf
 
 install: pdf
 	cp crypto.pdf ../pdfs
-	cd presentation && $(MAKE) install
+	#cd presentation && $(MAKE) install
 
 clean:
 	rm -rf main.aux main.bbl main.dvi main.pdf crypto.pdf crypto.dvi 
