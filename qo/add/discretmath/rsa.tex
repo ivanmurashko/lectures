@@ -69,9 +69,29 @@ m^{e\cdot d} \equiv m \equiv 0 \mod{q}
 \[
 m m^{h \left(p - 1\right)\left(q - 1\right)} 
 = m \left(m^{q - 1}\right)^{h \left(p - 1\right)} \equiv m \cdot 1^{h
-  \left(p - 1\right)} \equiv m \mod{q}
+  \left(p - 1\right)} \equiv m \mod{q}.
 \]
-откуда в силу \myref{thm:chineseremainder}{китайской теореме об остатках}
+Таким образом мы имеем следующие два типа соотношений:
+тривиальное равенство
+\begin{eqnarray}
+x_1 = m \equiv m \mod p,
+\nonumber \\
+x_1 = m \equiv m \mod q,
+\nonumber
+\end{eqnarray}
+и только, что полученные соотношения
+\begin{eqnarray}
+x_2 = m^{ed} \equiv m \mod p,
+\nonumber \\
+x_2 = m^{ed} \equiv m \mod q,
+\nonumber
+\end{eqnarray}
+откуда в силу \myref{thm:chineseremainder}{китайской теоремы об
+  остатках}
 \[
-m^{e\cdot d} \equiv m \mod{p \cdot q}
+x_1 \equiv x_2 \mod p \cdot q
+\]
+т.е.
+\[
+m^{e\cdot d} \equiv m \mod n
 \]
