@@ -1,4 +1,4 @@
-picelliptic.tex: gnuplot elliptic.plot
+picelliptic.pdf: gnuplot elliptic.plot
 
 all ps pdf install clean: 
 	$(MAKE) -C ../../ $@
