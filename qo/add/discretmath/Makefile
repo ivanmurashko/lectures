@@ -1,4 +1,6 @@
-picelliptic.pdf: gnuplot elliptic.plot
+pics: elliptic.plot ellipticsum.plot
+	gnuplot elliptic.plot
+	gnuplot ellipticsum.plot
 
 all ps pdf install clean: 
 	$(MAKE) -C ../../ $@
