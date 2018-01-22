@@ -9,6 +9,13 @@ unset ztics
 f(x,y) = x**3 - 7*x + 10 - y**2
 line1(x,y) = (x - 1)/(3 - 1) - (y - 2)/(4 - 2)
 line2(x,y) = x + 3
+set ylabel 'y' offset -2,0
+set xlabel 'x' offset 0,0
+set label 'p' at 0.8,4
+set label 'q' at 3,3
+set label 'r' at -3.8,-2
+set label '-r' at -4,2
+
 
 set terminal pdf
 set output './picellipticsum.pdf'
