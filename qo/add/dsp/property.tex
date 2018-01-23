@@ -42,7 +42,7 @@ x_{M - m - 1}
 \begin{eqnarray}
 \hat{F}\left\{x_{\left(n - m\right) \mod M}\right\} = 
 \nonumber \\
-=
+= \frac{1}{\sqrt{M}}
 \begin{pmatrix}
 1 & 1 & 1 & \cdots & 1 \\
 1 & e^{-i \omega} & e^{-2 i \omega} & \cdots & 
@@ -64,29 +64,29 @@ x_0 \\
 x_{M - m - 1}
 \end{pmatrix} = 
 \nonumber \\
-=
+= 
 \begin{pmatrix}
-x_{M - m} + x_{M - m + 1} + \cdots + x_0 + \cdots +
-x_{M - m - 1}\\
-x_{M - m} + 
-e^{-i \omega} x_{M - m + 1} + 
+\frac{x_{M - m}}{\sqrt{M}} + \frac{x_{M - m + 1}}{\sqrt{M}} + \cdots + 
+\frac{x_0}{\sqrt{M}} + \cdots + \frac{x_{M - m - 1}}{\sqrt{M}}\\
+\frac{x_{M - m}}{\sqrt{M}} + 
+\frac{e^{-i \omega} x_{M - m + 1}}{\sqrt{M}} + 
 \cdots + 
-e^{-i \omega m  } x_0 + 
+\frac{e^{-i \omega m  } x_0}{\sqrt{M}} + 
 \cdots +
-e^{-i \omega \left( M - 1 \right) } x_{M - m - 1}\\ 
-x_{M - m} + 
-e^{-2 i \omega} x_{M - m + 1} + 
+\frac{e^{-i \omega \left( M - 1 \right) } x_{M - m - 1}}{\sqrt{M}}\\ 
+\frac{x_{M - m}}{\sqrt{M}} + 
+\frac{e^{-2 i \omega} x_{M - m + 1}}{\sqrt{M}} + 
 \cdots + 
-e^{-2 i \omega m  } x_0 + 
+\frac{e^{-2 i \omega m  } x_0}{\sqrt{M}} + 
 \cdots +
-e^{-2 i \omega \left( M - 1 \right) } x_{M - m - 1}\\ 
+\frac{e^{-2 i \omega \left( M - 1 \right) } x_{M - m - 1}}{\sqrt{M}}\\ 
 \vdots \\
-x_{M - m} + 
-e^{-m i \omega} x_{M - m + 1} + 
+\frac{x_{M - m}}{\sqrt{M}} + 
+\frac{e^{-m i \omega} x_{M - m + 1}}{\sqrt{M}} + 
 \cdots + 
-e^{-m i \omega m  } x_0 + 
+\frac{e^{-m i \omega m  } x_0}{\sqrt{M}} + 
 \cdots +
-e^{-m i \omega \left( M - 1 \right) } x_{M - m - 1}\\ 
+\frac{e^{-m i \omega \left( M - 1 \right) } x_{M - m - 1}}{\sqrt{M}}\\ 
 \vdots 
 \end{pmatrix}.
 \label{eqlemmaAddFourierDiscretFourierShiftTimeMatrix}
@@ -102,6 +102,7 @@ e^{-i \omega k M} = 1, k \in \left\{0, 1, \dots \right\},
 \hat{F}\left\{x_{\left(n - m\right) \mod M}\right\} = 
 \nonumber \\
 =
+\frac{1}{\sqrt{M}}
 \begin{pmatrix}
 x_{M - m} + \cdots +
 x_{M - m - 1}\\
@@ -114,7 +115,7 @@ e^{-i \omega 2 m } e^{-i 2 \omega \left( M - m - 1\right) }\\
 \vdots 
 \end{pmatrix} = 
 \nonumber \\
-=
+= 
 \begin{pmatrix}
 \tilde{X}_0 \\
 e^{-i \omega m} \tilde{X}_1 \\
@@ -140,26 +141,31 @@ x_{n + r}$, а число отсчетов $M$ кратно $r$, то не ну�
 \]
 откуда
 \begin{eqnarray}
-\tilde{X}_k = \sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
+\tilde{X}_k = \frac{1}{\sqrt{M}}\sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
 \nonumber \\
-=
+= \frac{1}{\sqrt{M}} \left(
 \sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
-\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_{n+r} + 
-\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_{n+2r} + 
-\dots =
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_{n+r} +
+\right.
 \nonumber \\
-=
+\left. +
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_{n+2r} + 
+\dots  \right)=
+\nonumber \\
+= \frac{1}{\sqrt{M}} \left(
 \sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
 \sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_n + 
 \sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_n + 
-\dots =
+\dots \right) =
 \nonumber \\
-= \sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
+= \frac{1}{\sqrt{M}} \left( \sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
 \sum_{l = 0}^{\frac{M}{r}- 1} e^{-i \omega k l r } = 
 \sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
-\frac{1 - e^{-i \omega k \frac{M}{r} r }}{1 - e^{-i \omega k r }} = 
+\frac{1 - e^{-i \omega k \frac{M}{r} r }}{1 - e^{-i \omega k r }}
+\right) = 
 \nonumber \\
 =
+\frac{1}{\sqrt{M}}
 \frac{1 - e^{-i \omega k M }}{1 - e^{-i \omega k r}}
 \sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} = 0.
 \label{eqAddFourierDiscretFourierPeriodCase1}
@@ -170,21 +176,21 @@ e^{-i \omega k r } = e^{-i \frac{2 \pi }{M} k r } = 1,
 \]
 откуда
 \begin{eqnarray}
-\tilde{X}_k = \sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
+\tilde{X}_k = \frac{1}{\sqrt{M}} \sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
 \nonumber \\
-=
+= \frac{1}{\sqrt{M}} \left(
 \sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
 \sum_{n = 0}^{r - 1}e^{-i \omega k n } x_{n+r} + 
 \sum_{n = 0}^{r - 1}e^{-i \omega k n } x_{n+2r} + 
-\dots =
+\dots \right)=
 \nonumber \\
-=
+= \frac{1}{\sqrt{M}} \left(
 \sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
 \sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n + 
 \sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n + 
-\dots = 
+\dots \right) = 
 \nonumber \\ 
-= \frac{M}{r} \sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n \ne 0.
+= \frac{1}{\sqrt{M}} \frac{M}{r} \sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n \ne 0.
 \label{eqAddFourierDiscretFourierPeriodCase2}
 \end{eqnarray}
 Таким образом из выражений 

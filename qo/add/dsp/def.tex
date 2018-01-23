@@ -10,12 +10,18 @@
 Допустим имеется $M$ отсчетов $x_0, x_1, \dots, x_{M-1}$ тогда
 дискретное преобразование Фурье задается следующим соотношением
 \begin{equation}
-\tilde{X}_k = \sum^{M - 1}_{m = 0} x_m e^{-\frac{2 \pi i}{M} k\cdot m},
+\tilde{X}_k = \frac{1}{\sqrt{M}}\sum^{M - 1}_{m = 0} x_m e^{-\frac{2 \pi i}{M} k\cdot m},
 \label{eqAddFourierDiscretFourier}
 \end{equation}
 которое так же записывается в виде
 \begin{equation}
 \left\{x_m\right\} \longleftrightarrow \left\{\tilde{X}_k\right\}.
+\nonumber
+\end{equation}
+Обратное преобразование Фурье может быть получено с помощью
+аналогичного соотношения
+\begin{equation}
+x_k = \frac{1}{\sqrt{M}}\sum^{M - 1}_{m = 0} \tilde{X}_m e^{\frac{2 \pi i}{M} k\cdot m},
 \nonumber
 \end{equation}
 \end{definition}
@@ -63,6 +69,7 @@ x_{M-1}
 а матрица $\hat{F}$ имеет вид
 \begin{equation}
 \hat{F} = 
+\frac{1}{\sqrt{M}}
 \begin{pmatrix}
 1 & 1 & 1 & \cdots & 1 \\
 1 & e^{-i \omega} & e^{-2 i \omega} & \cdots & 
@@ -85,7 +92,7 @@ e^{- \left( M - 1 \right)\left( M - 1 \right) i \omega} \\
 Для матричного элемента матрицы
 \eqref{eqAddFourierDiscretFourierMatrixElem} можно записать
 \begin{equation}
-F_{n m} = e^{-i \omega n m},
+F_{n m} = \frac{1}{\sqrt{M}}e^{-i \omega n m},
 \label{eqAddFourierDiscretFourierMatrixElem2}
 \end{equation}
 где $n, m \in \{ 0, 1, \dots, M - 1\}$.
