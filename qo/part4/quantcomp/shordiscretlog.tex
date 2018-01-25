@@ -89,8 +89,8 @@ t_2 \equiv x t_1 \mod q.
 \[
 f'\left(x_1, x_2\right) = 
 \begin{cases}
-1, x x_1 + x_2 = x_0 \\
-0, x x_1 + x_2 \ne x_0 \\
+1, x x_1 + x_2 \equiv x_0 \mod q \\
+0, x x_1 + x_2 \not\equiv x_0 \mod q \\
 \end{cases}
 \]
 \begin{example}
@@ -104,30 +104,37 @@ f'\left(x_1, x_2\right) =
 \input ./part4/quantcomp/figdiscretlog1.tex
 Продолжая пример \ref{ex:part4:quantcomp:discretlog:periodfinding0}
 допустим, что в результате измерения функции $f$ мы получили значение
-$f = 3$. В результате для $x_1, x_2$ останутся только те значения,
+$f = 3$. Т. е. $f = a^{x_0} = 3^{x_0} \equiv 3 \mod 17$.  
+В результате для $x_1, x_2$ останутся только те значения, 
 которые соответствуют наблюдаемому значению функции (см.
-\autoref{fig:part4:quantcomp:dl1}), т.е. $x x_1 + x_2 = x_0 = 1$ 
+\autoref{fig:part4:quantcomp:dl1}), т.е. $x x_1 + x_2 = x_0 \equiv 1
+\mod 16$ 
 \label{ex:part4:quantcomp:discretlog:periodfinding1}
 \end{example}
 
 
 Прежде всего рассмотрим случай когда число отсчетов преобразования
-Фурье кратно $q$. В этом случае для Фурье образа $\tilde{f}$ имеем
+Фурье кратно $q$, т.е. $M = K \cdot q$, где $k \in \mathbb{N}$. В этом
+случае для Фурье образа $\tilde{f}$ имеем 
 \begin{eqnarray}
 \tilde{f'}\left(j_1, j_2\right) = 
-\frac{1}{q}\sum_{x_1 = 0}^{q-1}\sum_{x_2 = 0}^{q-1} 
+\frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{x_2 = 0}^{M-1} 
 f'\left(x_1, x_2\right)e^{-i \omega\left(x_1 j_1 + x_2j_2\right)} =
 \nonumber \\
-= \frac{1}{q}\sum_{x_1 = 0, x_2 = x_0 - x x_1}^{q-1}
+= \frac{1}{M}\sum_{x_1 = 0}^{M-1} \sum_{k=0, x_2 = x_0 - x x_1 + k q}^K
 e^{-i \omega\left(x_1 j_1 + x_2 j_2\right)} = 
- \frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i \omega\left(x_1 j_1 + (x_0 - x
-   x_1) j_2\right)} = 
 \nonumber \\
-= e^{-i \omega x_0 j_2}\frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i
-  \omega x_1 \left(j_1 - x j_2\right)},
+=
+ \frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{k=0, x_2 = x_0 - x x_1 + k q}^K
+e^{-i \omega\left(x_1 j_1 + (x_0 - x
+   x_1 + kq) j_2\right)} = 
+\nonumber \\
+= e^{-i \omega x_0 j_2}\frac{1}{M}\sum_{x_1 = 0}^{M-1}
+\sum_{k=0, x_2 = x_0 - x x_1 + k q}^K
+e^{-i  \omega x_1 \left(j_1 - x j_2\right) -i \omega j_2 k q},
 \label{eq:part4:quantcomp:discretlog:ftq16}
 \end{eqnarray}
-где $\omega = \frac{2 \pi}{q}$. В выражении
+где $\omega = \frac{2 \pi}{M}$. В выражении
 \eqref{eq:part4:quantcomp:discretlog:ftq16} $\tilde{f}(j_1, j_2) =
 e^{-i \omega x_0 j_2} \ne 0$, если $j_1 = x j_2$. 
 В противном случае по формуле геометрической прогрессии 
