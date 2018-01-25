@@ -149,25 +149,40 @@ j_1 \equiv x j_2 \mod M.
 В противном случае по формуле геометрической прогрессии 
 \begin{eqnarray}
 \tilde{f'}\left(j_1 \ne x j_2, j_2\right) = 
-e^{-i \omega x_0 j_2}\frac{1}{q}\sum_{x_1 = 0}^{q-1}e^{-i
+e^{-i \omega x_0 j_2}\frac{1}{M}\sum_k e^{-i \omega j_2 k q} 
+\sum_{x_1 = 0}^{M-1}e^{-i
   \omega x_1 \left(j_1 - x j_2\right)} = 
 \nonumber \\
 =
-\frac{e^{-i \omega x_0 j_2}}{q} \frac{e^{-i
+\frac{e^{-i \omega x_0 j_2}}{M} \sum_k e^{-i \omega j_2 k q} \frac{e^{-i
   \omega q \left(j_1 - x j_2\right)} - 1}{e^{-i
   \omega \left(j_1 - x j_2\right)} - 1} = 
- \frac{e^{-i \omega x_0 j_2}}{q} 
-\frac{e^{-i \frac{2 \pi}{q} q \left(j_1 - x j_2\right)} - 1}{e^{-i
+\nonumber \\
+=
+ \frac{e^{-i \omega x_0 j_2}}{M} 
+\sum_k e^{-i \omega j_2 k q}
+\frac{e^{-i \frac{2 \pi}{M} M \left(j_1 - x j_2\right)} - 1}{e^{-i
   \omega \left(j_1 - x j_2\right)} - 1} = 0.
 \nonumber
 \end{eqnarray} 
 Т. о. для определения периода нам необходимо найти координаты $(j_1, j_2)$
-любого максимума преобразования Фурье и воспользоваться выражением 
+некоторого максимума преобразования Фурье и воспользоваться выражением 
 \begin{equation}
 x \equiv j_1 j_2^{-1} \mod M,
 \label{eq:part4:quantcomp:discretlog:periodfourier}
 \end{equation}
 которое следует из \eqref{eq:part4:quantcomp:discretlog:j1xj2}.
+
+\begin{remark}[О делителях нуля $\mathbb{Z}/M\mathbb{Z}$]
+Если существует такое число $y$, что 
+\[
+j_2 y \equiv 0 \mod M,
+\]
+то $j_2$ называется делителем нуля. Стоит отметить, что для таких
+$j_2$ выражение
+\eqref{eq:part4:quantcomp:discretlog:periodfourier} не определено. В
+этом случае необходимо использовать другие координаты $(j_1, j_2)$. 
+\end{remark}
 
 \begin{example}
 \emph{($ind_3{14} \mod{17}$)}
