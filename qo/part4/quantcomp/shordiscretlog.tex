@@ -108,39 +108,57 @@ $f = 3$. Т. е. $f = a^{x_0} = 3^{x_0} \equiv 3 \mod 17$.
 В результате для $x_1, x_2$ останутся только те значения, 
 которые соответствуют наблюдаемому значению функции (см.
 \autoref{fig:part4:quantcomp:dl1}), т.е. $x x_1 + x_2 = x_0 \equiv 1
-\mod 16$ 
+\mod 16$. При этом при фиксированных значениях $x, x_1$ и числе
+отсчетов $M = q = 16$. 
 \label{ex:part4:quantcomp:discretlog:periodfinding1}
 \end{example}
 
 
-Прежде всего рассмотрим случай когда число отсчетов преобразования
-Фурье кратно $q$, т.е. $M = K \cdot q$, где $k \in \mathbb{N}$. В этом
-случае для Фурье образа $\tilde{f}$ имеем 
+Для Фурье образа $\tilde{f'}$ имеем 
+\begin{eqnarray}
+\tilde{f'}\left(j_1, j_2\right) = 
+\frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{x_2 = 0}^{M-1} 
+f'\left(x_1, x_2\right)e^{-i \omega\left(x_1 j_1 + x_2j_2\right)},
+\label{eq:part4:quantcomp:discretlog:ftq16_pre}
+\end{eqnarray}
+где $\omega = \frac{2 \pi}{M}$, $M$ - число отсчетов. 
+
+Прежде всего рассмотрим случай когда $M = q$. В этом случае имеется
+два варианта для $x_2$:  
+\begin{enumerate}
+\item $x_2 = x_0 - x x_1$, если $x_0 \ge x x_1$
+\item $x_2 = x_0 + q - x x_1$, если $x_0 < x x_1$
+\end{enumerate}
+Т. о.
+\begin{eqnarray}
+e^{-i \omega x_2j_2} = e^{-i \omega\left(x_0 - x x_1 + q\right) j_2} = 
+\nonumber \\
+= e^{-i \omega\left(x_0 - x x_1\right) j_2 - i \omega q j_2} = 
+e^{-i \omega\left(x_0 - x x_1\right) j_2},
+\nonumber
+\end{eqnarray}
+т. е. оба варианта совпадают и могут быть сведены к первому:
+$x_2 = x_0 - x x_1$.
+
+Т. о. продолжая \eqref{eq:part4:quantcomp:discretlog:ftq16_pre} получим
 \begin{eqnarray}
 \tilde{f'}\left(j_1, j_2\right) = 
 \frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{x_2 = 0}^{M-1} 
 f'\left(x_1, x_2\right)e^{-i \omega\left(x_1 j_1 + x_2j_2\right)} =
 \nonumber \\
-= \frac{1}{M}\sum_{x_1 = 0}^{M-1} 
-\sum_{k=0, x_2 = x_0 - x x_1 + k q, x_2 < M}
-e^{-i \omega\left(x_1 j_1 + x_2 j_2\right)} = 
-\nonumber \\
 =
- \frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{k}
+ \frac{1}{M}\sum_{x_1 = 0}^{M-1}
 e^{-i \omega\left(x_1 j_1 + (x_0 - x
-   x_1 + kq) j_2\right)} = 
+   x_1) j_2\right)} = 
 \nonumber \\
 = e^{-i \omega x_0 j_2}\frac{1}{M}\sum_{x_1 = 0}^{M-1}
-\sum_{k}
-e^{-i  \omega x_1 \left(j_1 - x j_2\right) -i \omega j_2 k q} =
-\nonumber \\
-= 
-\frac{1}{M} e^{-i \omega x_0 j_2} \sum_k e^{-i \omega j_2 k q}  
-\sum_{x_1 = 0}^{M-1} e^{-i  \omega x_1 \left(j_1 - x j_2\right)},
+e^{-i  \omega x_1 \left(j_1 - x j_2\right)} =
+\frac{1}{M} e^{-i \omega x_0 j_2} 
+\sum_{x_1 = 0}^{M-1} e^{-i  \omega x_1 \left(j_1 - x j_2\right)}.
 \label{eq:part4:quantcomp:discretlog:ftq16}
 \end{eqnarray}
-где $\omega = \frac{2 \pi}{M}$. В выражении
-\eqref{eq:part4:quantcomp:discretlog:ftq16} $\tilde{f}(j_1, j_2) =
+В выражении
+\eqref{eq:part4:quantcomp:discretlog:ftq16} $\tilde{f'}(j_1, j_2) =
 e^{-i \omega x_0 j_2} \ne 0$, если выполнено 
 \begin{equation}
 j_1 \equiv x j_2 \mod M.
@@ -149,18 +167,17 @@ j_1 \equiv x j_2 \mod M.
 В противном случае по формуле геометрической прогрессии 
 \begin{eqnarray}
 \tilde{f'}\left(j_1 \ne x j_2, j_2\right) = 
-e^{-i \omega x_0 j_2}\frac{1}{M}\sum_k e^{-i \omega j_2 k q} 
+e^{-i \omega x_0 j_2}\frac{1}{M}
 \sum_{x_1 = 0}^{M-1}e^{-i
   \omega x_1 \left(j_1 - x j_2\right)} = 
 \nonumber \\
 =
-\frac{e^{-i \omega x_0 j_2}}{M} \sum_k e^{-i \omega j_2 k q} \frac{e^{-i
+\frac{e^{-i \omega x_0 j_2}}{M} \frac{e^{-i
   \omega M \left(j_1 - x j_2\right)} - 1}{e^{-i
   \omega \left(j_1 - x j_2\right)} - 1} = 
 \nonumber \\
 =
  \frac{e^{-i \omega x_0 j_2}}{M} 
-\sum_k e^{-i \omega j_2 k q}
 \frac{e^{-i \frac{2 \pi}{M} M \left(j_1 - x j_2\right)} - 1}{e^{-i
   \omega \left(j_1 - x j_2\right)} - 1} = 0.
 \nonumber
@@ -178,7 +195,13 @@ x \equiv j_1 j_2^{-1} \mod M,
 \[
 j_2 y \equiv 0 \mod M,
 \]
-то $j_2$ называется делителем нуля. Стоит отметить, что для таких
+то $j_2$ называется делителем нуля. 
+При этом очевидно также, что 
+\[
+\mbox{НОД}\left(j_2, M\right) \ne 1,
+\]
+таким образом из \autoref{sec:add:discretmath:mod:equationsolve}
+следует что $j_2^{-1}$ не существует. Следовательно для таких
 $j_2$ выражение
 \eqref{eq:part4:quantcomp:discretlog:periodfourier} не определено. В
 этом случае необходимо использовать другие координаты $(j_1, j_2)$. 
@@ -212,6 +235,10 @@ $j_2^{-1} \equiv 11 \mod 16$, т. е. $x \equiv 11 \cdot 11 \equiv 121
 \equiv 9 \mod 16$, что опять же соответствует результату прим. 
 \ref{ex:dm:discretlog}.
 
+Стоит отметить, что точки лежащие на диагонали, например $j_1 = 6, j_2
+= 6$ не дадут корректного результата потому как $\mbox{НОД}\left(6,
+16\right) = 2 \ne 1$
+
 \label{ex:part4:quantcomp:discretlog:periodfinding}
 \end{example}
 
@@ -220,8 +247,9 @@ $j_2^{-1} \equiv 11 \mod 16$, т. е. $x \equiv 11 \cdot 11 \equiv 121
 соответствии с леммой \ref{lemmaAddFourierDiscretFourierPeriod} для
 одномерного преобразования Фурье. При этом также имеет место и аналог
 комментария \ref{rem:dsp:fourier:periodprop}, который гласит, что в
-случае когда число отсчетов преобразования Фурье не кратно $q$: $M \ne
-0 \mod q$ мы можем все равно приближенно считать верным выражение
+случае когда число отсчетов преобразования Фурье не равно $q$: $M \ne
+q$, но при этом $M \approx q$, мы можем все равно приближенно считать
+верным выражение 
 \eqref{eq:part4:quantcomp:discretlog:periodfourier}
 \cite{Proos:2003:SDL:2011528.2011531}.  
 
@@ -258,7 +286,52 @@ f'(x_1, x_2) =
 1, \mbox{ если } 14^{x_1} 3^{x_2} \ne 3 \mod 19 
 \end{cases}
 \]
-изображен на \autoref{fig:part4:quantcomp:dl2}. Самый нижний максимум
+изображен на \autoref{fig:part4:quantcomp:dl3}. Самый нижний максимум
+имеет координаты $j_1 = 46, j_2 = 3.5$ откуда имеем для оценки 
+\[
+x \approx \frac{46}{3.5} \approx 13.14.
+\]
+Стоит отметить что решение искомого уравнения $x = 13$ соответствует
+найденному приближенному решению.
+\label{ex:part4:quantcomp:discretlog:periodfinding2}
+\end{example}
+
+\begin{example}
+\emph{($ind_2{14} \mod{59}$)}
+
+%% -- 2 is generator of F_59
+%% -- Prelude> filter (\x -> x == 2 ) $ map (\x -> mod (2^x) 59) [1..59]
+%% -- [2,2]
+%% -- Prelude> mod (2^19) 59
+%% -- 14
+
+2 является генератором группы $\mathbb{F}_{59}$, т.е. можно
+рассмотреть задачу определения $x$ такого, что 
+\[
+2^x \equiv 14 \mod 59.
+\]
+
+Исследуемая функция имеет вид
+\[
+f(x_1, x_2) = 14^{x_1} 2^{x_2} \mod 59,
+\]
+Допустим, что $x_0 = 1$, т.е. зарегистрировано значение функции
+$f(x_1, x_2) = 3$.
+
+\input ./part4/quantcomp/figdiscretlog4.tex
+
+Число отсчетов преобразования Фурье возьмем $M=64$. Стоит отметить,
+что $58 \ne 0 \mod 64$.
+
+Фурье образ отсчетов функции 
+\[
+f'(x_1, x_2) = 
+\begin{cases}
+1, \mbox{ если } 14^{x_1} 2^{x_2} = 3 \mod 59 \\
+1, \mbox{ если } 14^{x_1} 2^{x_2} \ne 3 \mod 59 
+\end{cases}
+\]
+изображен на \autoref{fig:part4:quantcomp:dl4}. Самый нижний максимум
 имеет координаты $j_1 = 46, j_2 = 3.5$ откуда имеем для оценки 
 \[
 x \approx \frac{46}{3.5} \approx 13.14.
