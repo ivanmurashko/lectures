@@ -13,8 +13,8 @@ set ylabel 'y' offset -2,0
 set xlabel 'x' offset 0,0
 set label 'p' at 0.8,4
 set label 'q' at 3,3
-set label 'r' at -3.8,-2
-set label '-r' at -4,2
+set label "r'" at -3.8,-2
+set label 'r' at -4,2
 
 
 set terminal pdf
