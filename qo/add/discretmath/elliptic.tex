@@ -69,7 +69,32 @@ x_{r'}$, т.е. его можно также переписать в виде
 \[
 x_{r'} + x_p + x_q = m^2.
 \]
+Следовательно
+\begin{eqnarray}
+x_{r'} = m^2 - x_p - x_q,
+\nonumber \\
+y_{r'} = y_p + m \left(x_{r'} - x_p\right),
+\nonumber
+\end{eqnarray}
+Отразив эту точку относительно оси $X$ мы получим финальную точку $r$
+которую будем называть суммой исходных точек  (см.
+\autoref{fig:add:ellipticRsum}). Координаты этой точки $x_r, y_r$
+могут быть получены по следующим формулам
+\begin{eqnarray}
+x_{r} = m^2 - x_p - x_q,
+\nonumber \\
+y_{r} = - y_p + m \left(x_p - x_r\right).
+\label{eq:add:discretmath:elliptic:add}
+\end{eqnarray}
 
+\input ./add/discretmath/figellipticsumeq2.tex
+\input ./add/discretmath/figellipticsumeq.tex
+
+В случае $x_p = x_q$ возможны два варианта:
+\begin{enumerate}
+\item $y_p = y_q$ (см. \autoref{fig:add:ellipticRsumEq2})
+\item $y_p \ne y_q$ (см. \autoref{fig:add:ellipticRsumEq})
+\end{enumerate}
 
 
 
