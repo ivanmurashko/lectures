@@ -36,12 +36,24 @@ $a$ элементом и обозначаться $-a \mod n$.
 \subsection{Арифметические операции}
 
 \begin{lemma}[О сложении по модулю]
-Если $a_1 \ equiv a_2 \mod n, b_1 \equiv b_2 \mod n$, то 
+Если $a_1 \equiv a_2 \mod n, b_1 \equiv b_2 \mod n$, то 
 \[
 a_1 + b_1 \equiv a_2 + b_2 \mod n
 \]
 \begin{proof}
-TBD
+Можно записать $a_1 = k_1 n + r_a, a_2 = k_2 n + r_a, b_1 = l_1 n +
+r_b, b_2 = l_2 n + r_b$ откуда
+\[
+a_1 + b_1 = (k_1 + l_1) n + r_a + r_b \equiv r_a + r_b \mod n
+\] 
+и
+\[
+a_2 + b_2 = (k_2 + l_2) n + r_a + r_b \equiv r_a + r_b \mod n
+\] 
+откуда
+\[
+a_1 + b_1 \equiv a_2 + b_2 \equiv r_a + r_b \mod n
+\]
 \end{proof}
 \end{lemma}
 
@@ -51,7 +63,23 @@ TBD
 a_1 \cdot b_1 \equiv a_2 \cdot b_2 \mod n
 \]
 \begin{proof}
-TBD
+Если $a_1 \equiv a_2 \mod n, b_1 \equiv b_2 \mod n$, то 
+\[
+a_1 + b_1 \equiv a_2 + b_2 \mod n
+\]
+Можно записать $a_1 = k_1 n + r_a, a_2 = k_2 n + r_a, b_1 = l_1 n +
+r_b, b_2 = l_2 n + r_b$ откуда
+\[
+a_1 \cdot b_1 = k_1 l_1 n + l_1 n r_a + k_1 n r_b + r_a r_b \equiv r_a r_b \mod n
+\] 
+и
+\[
+a_2 \cdot b_2 = k_2 l_2 n + l_2 n r_a + k_2 n r_b + r_a r_b \equiv r_a r_b \mod n
+\] 
+откуда
+\[
+a_1 \cdot b_1 \equiv a_2 \cdot  b_2 \equiv r_a r_b \mod n
+\]
 \end{proof}
 \end{lemma}
 
