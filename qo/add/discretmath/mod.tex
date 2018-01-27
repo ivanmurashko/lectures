@@ -19,6 +19,42 @@ a \equiv b \mod{c}
 $30 \equiv 8 \mod{11}$, потому что, $30 = 2 \cdot 11 + 8$.
 \end{example}
 
+\begin{definition}[Отрицательный элемент]
+Если $a < n$, то $n - a$ будет называться отрицательным по отношению к
+$a$ элементом и обозначаться $-a \mod n$.
+\end{definition}
+
+\begin{example}
+\emph{Отрицательный элемент}
+\[
+-5 \equiv 6 \mod 11,
+\]
+поскольку $5 < 11, 6 = 11 - 5$.
+\end{example}
+
+
+\subsection{Арифметические операции}
+
+\begin{lemma}[О сложении по модулю]
+Если $a_1 \ equiv a_2 \mod n, b_1 \equiv b_2 \mod n$, то 
+\[
+a_1 + b_1 \equiv a_2 + b_2 \mod n
+\]
+\begin{proof}
+TBD
+\end{proof}
+\end{lemma}
+
+\begin{lemma}[Об умножении по модулю]
+Если $a_1 \ equiv a_2 \mod n, b_1 \equiv b_2 \mod n$, то 
+\[
+a_1 \cdot b_1 \equiv a_2 \cdot b_2 \mod n
+\]
+\begin{proof}
+TBD
+\end{proof}
+\end{lemma}
+
 \subsection{Решение уравнений}
 \label{sec:add:discretmath:mod:equationsolve}
 Очень часто в криптографии имеют дело с уравнениями вида
@@ -47,3 +83,11 @@ x \equiv a^{-1} \mod n.
 При этом, в соответствии с комментарием \ref{rem:besu}, $a^{-1}$, и
 решение уравнения \eqref{eq:add:sicret:modeq}, может быть найдено
 достаточно эффективно.
+
+\subsection{Поле $\mathbb{F}_p$}
+\label{sec:add:diskretmath:mod:fp}
+Как мы видели в модульной арифметике можно складывать, вычитать,
+умножать и даже, если сравнение ведется по модулю простого числа,
+делить. Таким образом остатки при делении образуют поле которое
+называется $\mathbb{F}_p$.
+TBD
