@@ -3,6 +3,7 @@ pics: elliptic.plot ellipticsum.plot
 	gnuplot ellipticsum.plot
 	gnuplot ellipticsumeq.plot
 	gnuplot ellipticsumeq2.plot
+	gnuplot ellipticfp.plot
 
 all ps pdf install clean: 
 	$(MAKE) -C ../../ $@

@@ -131,6 +131,19 @@ $E\left(\mathbb{R}\right)$ образует группу относительн�
 сложения \eqref{eq:add:discretmath:elliptic:add} может определено над
 произвольным полем, т.е. не только над $\mathbb{R}$. С точки зрения
 криптографии особый интерес представляет поле $\mathbb{F}_p$ (см.
-\autoref{sec:add:diskretmath:mod:fp}).
+\autoref{sec:add:diskretmath:mod:fp}). Можно определить множество
+элементов эллиптической кривой над полем $\mathbb{F}_p$ аналогично
+выражению \eqref{sec:add:diskretmath:mod:fp}:
+\begin{equation}
+E\left(\mathbb{F}_p\right) : \left\{
+y^2 \equiv x^3 +ax +b \mod p, a,b \in \mathbb{F}_p
+\right\} \cup \{0\}.
+\label{eq:add:discretmath:elliptic:fp}
+\end{equation}
 
+\input ./add/discretmath/figellipticfp.tex
+
+На \autoref{fig:add:ellipticFp} изображено такое множество для поля
+$\mathbb{F}_{19}$, т.е. $p = 19$. Уравнение кривой $y^2 \equiv x^3 -7
+x + 10 \mod 19$.
 TBD
