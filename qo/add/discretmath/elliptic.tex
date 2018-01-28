@@ -145,9 +145,13 @@ y^2 \equiv x^3 +ax +b \mod p, a,b \in \mathbb{F}_p
 
 На \autoref{fig:add:ellipticFp} изображено такое множество для поля
 $\mathbb{F}_{19}$, т.е. $p = 19$. Уравнение кривой $y^2 \equiv x^3 -7
-x + 10 \mod 19$.
+x + 10 \mod 19$. 
 
-Для точек на данной кривой задан следующий закон сложения $a + b = c$
+Для каждой точки $a$ с координатами $x_a, y_a$ определен обратный
+элемент $-a$ с координатами $x_{-a} = x_a, y_{-a} \equiv -y_a \mod p$.
+
+Для точек на данной кривой задан следующий закон сложения $a + b = c,
+b \ne -a$
 \begin{eqnarray}
 x_{c} \equiv m^2 - x_a - x_b \mod p,
 \nonumber \\
@@ -161,9 +165,9 @@ y_{c} \equiv - y_a + m \left(x_a - x_c\right) \mod p,
 m = \left(y_a - y_b\right)\left(x_a - x_b\right)^{-1} \mod p, \mbox{ если } x_a \ne x_b
 \nonumber \\
 m = \left(3x^2 + a\right)\left(2y\right)^{-1} \mod p, \mbox{ если }
-x_a = x_b
+x_a = x_b.
 \nonumber
 \end{eqnarray}
-
+Очевидно что если $b = -a$, то $a + b = a + (-a) = 0$.
 
 TBD
