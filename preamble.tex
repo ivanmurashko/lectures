@@ -78,6 +78,7 @@
 \newtheorem{corollary}[xtheorem]{Вывод}
 \theoremstyle{example}
 \newtheorem{xexample}{Пример}[section]
+
 \providecommand*{\xtheoremautorefname}{Аксиома}
 \NewDocumentEnvironment{example}{oo}
                        {\IfNoValueTF{#1}
@@ -90,7 +91,6 @@
 
 \theoremstyle{axiom}
 \newtheorem{xaxiom}{Аксиома}[section]
-\providecommand*{\xtheoremautorefname}{Аксиома}
 \NewDocumentEnvironment{axiom}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
@@ -101,7 +101,6 @@
 
 \theoremstyle{definition}
 \newtheorem{xdefinition}{Определение}[section]
-\providecommand*{\xtheoremautorefname}{Определение}
 \NewDocumentEnvironment{definition}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
@@ -112,7 +111,6 @@
 
 \theoremstyle{property}
 \newtheorem{xproperty}{Свойство}[section]
-\providecommand*{\xtheoremautorefname}{Свойство}
 \NewDocumentEnvironment{property}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
@@ -153,3 +151,6 @@
   {\expandafter\index{{\getnamereftext{#1}}}}
   (\autoref{#1})
 }%
+
+\providecommand*\xexampleautorefname{прим.}
+\providecommand*\exampleautorefname{прим.}
