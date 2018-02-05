@@ -234,8 +234,12 @@ n\right)$ операций сложения.
 
 
 \begin{example}[Скалярное произведение]
-Рассмотрим эллиптическую кривую $y^2 \equiv x^3 -7
-x + 10 \mod 19$, изображенную на \autoref{fig:add:ellipticFp}. Выберем
+Рассмотрим эллиптическую кривую 
+\[
+E\left(\mathbb{F}_{19}\right) = 
+\{(x,y): y^2 \equiv x^3 -7 x + 10 \mod 19 \} \cup \{0\},
+\] 
+изображенную на \autoref{fig:add:ellipticFp}. Выберем
 в качестве точки $p = (13, 8)$, тогда 
 \begin{eqnarray}
 0 \cdot p = 0, \nonumber \\
@@ -291,6 +295,47 @@ N g = p \left( h g \right) = 0.
 единичного элемента. Т. о. в силу $hg \ne 0$ остается только сама
 группа, которая является циклической с порядком $p$. 
 \end{remark}
+
+\input ./add/discretmath/figellipticfp97.tex
+
+%% *Elliptic> c = Curve (-7) 10 97
+%% *Elliptic> c
+%% y^2 = (x^3 + -7x + 10) mod 97
+%% *Elliptic> cord c
+%% 82
+%% *Elliptic> g = Point 1 2 c
+%% *Elliptic> pord g
+%% 82
+%% *Elliptic> g' = 2 .*. g
+%% *Elliptic> g'
+%% (96,93)
+%% *Elliptic> pord g'
+%% 41
+%% *Elliptic> 
+
+\begin{example}[Выбор базовой точки]
+\label{ex:add:elliptic:basepoint}
+Рассмотрим эллиптическую кривую 
+\[
+E = E\left(\mathbb{F}_{97}\right) = 
+\{(x,y): y^2 \equiv x^3 -7 x + 10 \mod 97 \} \cup \{0\},
+\] 
+изображенную на \autoref{fig:add:ellipticFp97}. Порядок этой кривой:
+\[
+N = \left|E\right| = 82.
+\]
+Число 82 имеет 2 делителя: 41 и 2. Т. о. существует циклическая
+подгруппа порядка 41, т.е. $h = 2$. 
+
+Возьмем точку $g = (1,2) \in E$ ее порядок:
+$\left|\left<g\right>\right| = 82$, т.е. эта точка не подходит. 
+Рассчитываем 
+\[
+g' = h g = 2 g = (96,93) \ne 0.
+\]
+При этом $\left|\left<g'\right>\right| = 41$, т.е. мы нашли требуемую
+базовую точку.
+\end{example}
 
 Если имеется две точки на кривой $a, b \in E\left(\mathbb{F}_p\right)$
 то имеет смысл вопрос о существовании такого $x \in \mathbb{N}$:
