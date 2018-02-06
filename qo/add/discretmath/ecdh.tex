@@ -19,6 +19,27 @@ $h$ - кофактор группы $\left<g\right>$, т.е. $\left|\right| = nh
 обмениваются этими ключами. Далее каждый из них вычисляет реальный
 ключ по правилу $K = d_a B = d_b A$. 
 
+%% *Elliptic> c = Curve (-7) 10 97
+%% *Elliptic> p = Point 96 93 c
+%% *Elliptic> pord p
+%% 41
+%% *Elliptic> cord c
+%% 82
+%% *Elliptic> da = 5
+%% *Elliptic> a = da .*. p
+%% *Elliptic> a
+%% (37,35)
+%% *Elliptic> b = 15
+%% *Elliptic> db = 15
+%% *Elliptic> b = db .*. p
+%% *Elliptic> b
+%% (15,51)
+%% *Elliptic> da .*. b
+%% (46,11)
+%% *Elliptic> db .*. a
+%% (46,11)
+%% *Elliptic> 
+
 \begin{example}[ECDH]
 \label{ex:add:discretmath:ecdh}
 Возьмем кривую и базовую точку из прим.
