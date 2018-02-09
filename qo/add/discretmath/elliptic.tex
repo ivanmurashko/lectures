@@ -110,7 +110,7 @@ y_{r} = - y_p + m \left(x_p - x_r\right).
 Таким образом мы можем определить эллиптическую кривую над полем
 вещественных чисел $\mathbb{R}$ как следующее множество точек
 \begin{equation}
-E\left(\mathbb{R}\right) : \left\{
+E\left(\mathbb{R}\right) = \left\{ (x,y) \in \mathbb{R} \times \mathbb{R}:
 y^2 = x^3 +ax +b, a,b \in \mathbb{R}
 \right\} \cup \{0\}.
 \label{eq:add:discretmath:elliptic:er}
@@ -150,8 +150,9 @@ E\left(\mathbb{R}\right)$ и, следовательно, будет наруш�
 элементов эллиптической кривой над полем $\mathbb{F}_p$ аналогично
 выражению \eqref{sec:add:diskretmath:mod:fp}:
 \begin{equation}
-E\left(\mathbb{F}_p\right) : \left\{
-y^2 \equiv x^3 +ax +b \mod p, a,b \in \mathbb{F}_p
+E\left(\mathbb{F}_p\right) = \left\{ (x,y) \in 
+\mathbb{F}_p \times \mathbb{F}_p: 
+y^2 \equiv x^3 +ax +b, a,b \in \mathbb{F}_p
 \right\} \cup \{0\}.
 \label{eq:add:discretmath:elliptic:fp}
 \end{equation}
@@ -237,7 +238,8 @@ n\right)$ операций сложения.
 Рассмотрим эллиптическую кривую 
 \[
 E\left(\mathbb{F}_{19}\right) = 
-\{(x,y): y^2 \equiv x^3 -7 x + 10 \mod 19 \} \cup \{0\},
+\{(x,y)\mathbb{F}_{19} \times \mathbb{F}_{19}: y^2 \equiv x^3 -7 x +
+10 \} \cup \{0\}, 
 \] 
 изображенную на \autoref{fig:add:ellipticFp}. Выберем
 в качестве точки $p = (13, 8)$, тогда 
@@ -318,7 +320,7 @@ N g = p \left( h g \right) = 0.
 Рассмотрим эллиптическую кривую 
 \[
 E = E\left(\mathbb{F}_{97}\right) = 
-\{(x,y): y^2 \equiv x^3 -7 x + 10 \mod 97 \} \cup \{0\},
+\{(x,y) \in \mathbb{F}_{97} \times \mathbb{F}_{97}: y^2 \equiv x^3 -7 x + 10 \} \cup \{0\},
 \] 
 изображенную на \autoref{fig:add:ellipticFp97}. Порядок этой кривой:
 \[
