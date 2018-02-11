@@ -12,8 +12,26 @@ n g = 0.
 \]
 Требуется решить следующую задачу: при заданном $q
 \in E\left(\mathbb{F}_p\right)$ найти такое $x$, что
-\[
+\begin{equation}
 x g = q \mod n
-\]
+\label{eq:part4:quantcomp:discretlogeliptic}
+\end{equation}
 
+Рассмотрим следующую вспомогательную функцию
+\[
+f(x_1, x_2) = x_1 q + x_2 g = \left(x x_1 + x_2\right) g,
+\]
+где $q,g \in E\left(\mathbb{F}_p\right)$ и взяты из условий нашей
+задачи \eqref{eq:part4:quantcomp:discretlogeliptic}. 
+
+По аналогии с \eqref{eq:part4:quantcomp:shordiscretlog:fprime} мы
+составляем следующую функцию для которой буде строить Фурье образ 
+\begin{equation}
+\label{eq:part4:quantcomp:shorelliptic:fprime}
+f'\left(x_1, x_2\right) = 
+\begin{cases}
+1, x x_1 + x_2 \equiv x_0 \mod n \\
+0, x x_1 + x_2 \not\equiv x_0 \mod n \\
+\end{cases}
+\end{equation}
 TBD
