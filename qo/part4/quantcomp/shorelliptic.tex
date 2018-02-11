@@ -18,14 +18,21 @@ x g = q \mod n
 \end{equation}
 
 Рассмотрим следующую вспомогательную функцию
-\[
+\begin{equation}
 f(x_1, x_2) = x_1 q + x_2 g = \left(x x_1 + x_2\right) g,
-\]
+\label{eq:part4:quantcomp:discretlogeliptic:f}
+\end{equation}
 где $q,g \in E\left(\mathbb{F}_p\right)$ и взяты из условий нашей
-задачи \eqref{eq:part4:quantcomp:discretlogeliptic}. 
+задачи \eqref{eq:part4:quantcomp:discretlogeliptic}. Данная функция
+аналогична \eqref{eq:part4:quantcomp:discretlogfunc}
+использованной в решении задачи дискретного логарифма. Далее
+производится измерение этой функции. Результатом этого измерения
+является некоторая точка $c \in E\left(\mathbb{F}_p\right)$. Вместе с
+тем из \eqref{eq:part4:quantcomp:discretlogeliptic:f} следует что 
+$c \in \left<g\right>$, т.е. $\exists x_0$ такая что $c = x_0 g$. 
 
-По аналогии с \eqref{eq:part4:quantcomp:shordiscretlog:fprime} мы
-составляем следующую функцию для которой буде строить Фурье образ 
+Т.о., по аналогии с \eqref{eq:part4:quantcomp:shordiscretlog:fprime}, мы
+составляем следующую функцию 
 \begin{equation}
 \label{eq:part4:quantcomp:shorelliptic:fprime}
 f'\left(x_1, x_2\right) = 
@@ -34,4 +41,38 @@ f'\left(x_1, x_2\right) =
 0, x x_1 + x_2 \not\equiv x_0 \mod n \\
 \end{cases}
 \end{equation}
+
+Координаты $(j_1,j_2)$ максимума Фурье образа $\tilde{f'}$ дают в
+соответствии с формулой
+\eqref{eq:part4:quantcomp:discretlog:periodfourier} некоторое значение
+искомого числа $x$. В нашем случае практически всегда $n \ne M$
+поэтому мы можем использовать тольк приближенную оценку
+\[
+x \approx \frac{j_1}{j_2}.
+\]
+
+\begin{example}[Дискретное логарифмирование на эллиптической кривой]
+Рассмотрим задачу из примера \ref{ex:add:discretmath:ecdh}
+Кривая и базовая точка (см. прим. \ref{ex:add:elliptic:basepoint})
+имеют вид
+\[
+(p,a,b,g,n,h) = (97, -7, 10, (96,93), 41, 2)
+\]
+Допустим, что нам известен публичный ключ Алисы
+\[
+A = (37, 35)
+\]
+и мы хотим найти такое $x \in \{0,1, \dots 40\}$ что
+$x g = A$, как это следует из примера \ref{ex:add:discretmath:ecdh}
+ответом является $x = d_a  = 5$.
+Нашей исследуемой функцией будет являться
+\[
+f\left(x_1,x_2\right) = x_1 A + x_2 g = x_1 (37,35) + x_2 (96,93)
+\]
+
+\input ./part4/quantcomp/figellipticdiscretlog1.tex
+
+\input ./part4/quantcomp/figellipticdiscretlog2.tex
+
 TBD
+\end{example}
