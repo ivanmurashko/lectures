@@ -3,34 +3,34 @@
 \label{sec:add:group}
 \begin{definition}
 \label{def:add:group}
-Группой $\mathcal{G}$ называется множество элементов $g \in
-\mathcal{G}$ для которой определена 
-некоторая бинарная операция (часто ее называют умножением, либо сложением):
+Группой $(\mathcal{G}, \circ)$ называется множество элементов $g \in
+\mathcal{G}$ для которого определена 
+некоторая бинарная операция $\circ$ (часто ее называют умножением, либо сложением):
 \begin{eqnarray}
 \forall g_1,g_2 \in \mathcal{G},
 \nonumber \\
-g_1 \cdot g_2 \in \mathcal{G}.
+g_1 \circ g_2 \in \mathcal{G}.
 \label{addGroupMulDef}
 \end{eqnarray}
-Данная операция \autoref{addGroupMulDef} обладает свойством
+Операция определенная посредством \eqref{addGroupMulDef} обладает свойством
 ассоциативности:
 \begin{equation}
-g_1 \cdot \left( g_2 \cdot g_3 \right ) = 
-\left( g_1 \cdot  g_2 \right ) \cdot g_3.
+g_1 \circ \left( g_2 \circ g_3 \right ) = 
+\left( g_1 \circ  g_2 \right ) \circ g_3.
 \nonumber
 \end{equation}
-Рассматриваемое множество должно содержать элемент $e$ обладающий
+Рассматриваемое множество должно содержать элемент $e_{\mathcal{G}}$ обладающий
 следующим свойством, справедливым для любого элемента множества $g$:
 \begin{equation}
-g \cdot e = e \cdot g = g.
+g \circ e_{\mathcal{G}} = e_{\mathcal{G}} \circ g = g.
 \nonumber
 \end{equation}
 Для каждого элемента группы $g$ должен существовать обратный
 элемент $g^{-1} \in \mathcal{G}$, обладающий следующим свойством
 \begin{equation}
-g \cdot g^{-1} = g^{-1} \cdot g = e
+g \circ g^{-1} = g^{-1} \circ g = e_{\mathcal{G}}
 \nonumber
-\end{equation}
+\end{equation} 
 \end{definition}
 
 \begin{definition}[Моноид]
@@ -42,8 +42,8 @@ g \cdot g^{-1} = g^{-1} \cdot g = e
 
 \begin{definition}[Абелева группа]
 \label{def:add:abeliangroup}
-Группа $(\mathcal{G}, \cdot)$ называется абелевой, или коммутирующей
-если $\forall a_1,a_2 \in \mathcal{A}$: $a_1 \cdot a_2 = a_2 \cdot a_1$.
+Группа $(\mathcal{A}, \circ)$ называется абелевой, или коммутирующей
+если $\forall a_1,a_2 \in \mathcal{A}$: $a_1 \circ a_2 = a_2 \circ a_1$.
 \end{definition}
 
 \begin{example}
@@ -66,12 +66,13 @@ g \cdot g^{-1} = g^{-1} \cdot g = e
 качестве операции умножения двух элементов $a,b \in
 \left(\mathbb{Z}/n\mathbb{Z}\right)^\times$ примем
 \[
-a \cdot b = ab \mod n.
+a \circ b = a \cdot b \mod n.
 \]
-Единичным элементом является $1$. Кроме того можно показать, что для
+Единичным элементом $e_{\left(\mathbb{Z}/n\mathbb{Z}\right)^\times}$
+является $1$. Кроме того можно показать, что для 
 каждого $a \in \left(\mathbb{Z}/n\mathbb{Z}\right)^\times$
 существует $a^{-1} \in \left(\mathbb{Z}/n\mathbb{Z}\right)^\times$
-такой что $a \cdot a^{-1} = 1$. Таким образом
+такой что $a \circ a^{-1} = 1$. Таким образом
 $\left(\mathbb{Z}/n\mathbb{Z}\right)^\times$ является группой.
 \label{def:add:algebra:mult_group}
 \end{definition}
