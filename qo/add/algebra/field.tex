@@ -1,34 +1,40 @@
 %% -*- coding:utf-8 -*-
 \section{Поля}
 \begin{definition}[Поле]
-  Рассмотрим некоторое множество $\mathbb{F}$ с определенной на ней
-  бинарной операцией $+$.
-  The ring $\left(R, \oplus, \odot\right)$ is called as a field if
-  $\left(R \setminus \{0\}, \odot\right)$ is an \autoref{def:abeliangroup}.
-
-  The inverse element to $a$ in
-  $\left(R \setminus\{0\}, \odot\right)$ is denoted as $a^{-1}$
+  Пусть задана Абелева группа (см. определение
+  \ref{def:add:abeliangroup}) \index{Абелева группа} 
+  $(\mathcal{F}, +)$. Единичный элемент этой группы $e_\mathcal{F}$ -
+  $0$. Пусть также $(\mathcal{F} \setminus \{0\}, \cdot)$ - некоторая
+  другая группа (не
+  обязательно Абелева) с единичным элементом $1$. Кроме того операции
+  $+,\cdot$ удовлетворяют свойству дистрибутивности, т.е. $\forall
+  a,b,c \in \mathcal{F}$:
+  \begin{eqnarray}
+  c \cdot \left(a + b\right) = c \cdot a + c \cdot b,
+  \nonumber \\
+  \left(a + b\right) \cdot c = a \cdot c + b \cdot c.
+  \nonumber
+  \end{eqnarray}
+  В этом случае $(\mathcal{F}, +, \cdot)$ называется полем.
   \label{def:field}
 \end{definition}
 
 \begin{example}[Поле $\mathbb{Q}$]
-  Note that $\mathbb{Z}$ is not a field because not for every integer
-  number an inverse exists. But if we consider a set of fractions
-  $\mathbb{Q} = \left\{a/b \mid a \in \mathbb{Z}, b \in
-  \mathbb{Z}\setminus\{0\}\right\}$ when it will be a field.
-
-  The
-  inverse element to $a/b$  in
-  $\left(\mathbb{Q}\setminus\{0\}, \cdot\right)$  will be $b/a$.
+  Заметим, что $\mathbb{Z}$ не является полем, поскольку не для любого
+  целого определен обратный элемент относительно операции умножения. 
+  Вместе с тем следующее множество будет полем: $\mathbb{Q} =
+  \left\{a/b \mid a \in \mathbb{Z}, b \in 
+  \mathbb{Z}\setminus\{0\}\right\}$. При этом обратный по отношению к
+  $a/b \in \left(\mathbb{Q}\setminus\{0\}, \cdot\right)$ будет $b/a$.
   \label{ex:field_q}
 \end{example}
 
 \begin{example}[Поле $\mathbb{R}$]
-TBD
+  Вещественные числа образуют поле.
   \label{ex:field_r}
 \end{example}
 
 \begin{example}[Поле $\mathbb{C}$]
-TBD
+  Комплексные числа образуют поле.
   \label{ex:field_c}
 \end{example}
