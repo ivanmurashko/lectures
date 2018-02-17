@@ -1,47 +1,8 @@
 %% -*- coding:utf-8 -*-
-\section{Кольца, поля}
-
-\begin{definition}[Кольцо]
-  Consider a set $R$ with 2 binary operations defined. The first one
-  $\oplus$ (addition) and elements of $R$ forms an
-  \ref{def:abeliangroup}
-  under this operation. The second one is $\odot$ (multiplication) and
-  the elements of $R$ forms a \autoref{def:monoid} under 
-  the operation. The two binary operations are connected each other
-  via the following distributive law
-  \begin{itemize}
-  \item Left distributivity:
-    $\forall a,b,c \in R$:
-    $a \odot \left(b \oplus c\right) =
-    a \odot b \oplus a \odot c$
-  \item Right distributivity:
-    $\forall a,b,c \in R$:
-    $\left( a \oplus b \right) \odot c =
-    a \odot c \oplus b \odot c$
-    
-  The identity element for $\left(R, \oplus\right)$ is denoted as $0$
-  (additive identity).
-  The identity element for $\left(R, \odot\right)$ is denoted as $1$
-  (multiplicative identity).
-
-  The inverse element to $a$ in $\left(R, \oplus\right)$ is denoted as $-a$
-  \end{itemize}
-
-  In this case $\left(R, \oplus, \odot\right)$ is called as ring.
-  \label{def:ring}
-\end{definition}
-
-The \autoref{def:ring} is a generalization of integer numbers conception.
-\begin{example}[Ring of integers $\mathbb{Z}$]
-  The set of integer numbers $\mathbb{Z}$ forms a \autoref{def:ring}
-  under $+$ and $\cdot$ operations i.e. addition $\oplus$ is
-  $+$ and multiplication $\odot$ is $\cdot$. Thus for integer
-  numbers we have the following \autoref{def:ring}:
-  $\left(\mathbb{Z}, +, \cdot\right)$
-  \label{ex:ring}
-\end{example}
-
+\section{Поля}
 \begin{definition}[Поле]
+  Рассмотрим некоторое множество $\mathbb{F}$ с определенной на ней
+  бинарной операцией $+$.
   The ring $\left(R, \oplus, \odot\right)$ is called as a field if
   $\left(R \setminus \{0\}, \odot\right)$ is an \autoref{def:abeliangroup}.
 
@@ -50,7 +11,7 @@ The \autoref{def:ring} is a generalization of integer numbers conception.
   \label{def:field}
 \end{definition}
 
-\begin{example}[Field $\mathbb{Q}$]
+\begin{example}[Поле $\mathbb{Q}$]
   Note that $\mathbb{Z}$ is not a field because not for every integer
   number an inverse exists. But if we consider a set of fractions
   $\mathbb{Q} = \left\{a/b \mid a \in \mathbb{Z}, b \in
