@@ -123,16 +123,43 @@ R_a n^2 \rho_{n - 1, n - 1}
 \frac{1}{e^{\frac{\hbar \omega}{k_B T}} - 1}.
 \end{equation}
 
+\begin{definition}[Добротность]
+\label{def:Qfactor}
+Добротностью колебательной системы $Q$ называют \cite{bKarlov2003} число колебаний
+совершаемое системой за характерное время их затухания $\tau$. Т.е. если
+изменение энергии системы $U$ (комплексная амплитуда) подчиняется уравнению
+\begin{equation}
+\label{eq:part1:q:remark}
+\frac{d U}{d t} = - \frac{1}{\tau} \left(U - U_0\right),
+\end{equation}
+то
+\[
+U = \left.Г\right|_{t=0} e^{-\frac{t}{\tau}} + U_0
+\]
+Т. о. 
+\[
+Q = \omega \tau
+\]
+следовательно уравнение \eqref{eq:part1:q:remark} может быть
+переписано в виде 
+\[
+\frac{d U}{d t} = - \frac{\omega}{Q} \left(U-U_0\right)
+\]
+\end{definition}
+
+
 Уравнение \eqref{eqCh2_57} описывает изменение числа фотонов (энергии)
 во времени в результате релаксации (взаимодействия с диссипативной
 системой). Классическое уравнение, описывающее этот процесс имеет вид
+(см. опред. \ref{def:Qfactor})
 \begin{equation}
 \frac{d}{d t}\left<n\right> = 
 - \frac{\omega}{Q}\left<n\right> + \frac{\omega}{Q} \left<n\right>_{\mbox{рав.}},
 \nonumber
 \end{equation}
 где $\left<n\right>_{\mbox{рав.}} = \bar{n}_T$ равновесное значение
-$\left<n\right>$ при температуре $T$, а $Q$ - добротность резонатора.
+$\left<n\right>$ при температуре $T$, а $Q$ - добротность резонатора
+(см. опред. \ref{def:Qfactor}).
 \rindex{Добротность}
 Следовательно можно положить 
 \begin{eqnarray}
