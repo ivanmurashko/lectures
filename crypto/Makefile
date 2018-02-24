@@ -6,12 +6,14 @@ algorithmic.sty: algorithms.ins algorithms.dtx
 ps: main.tex main.bib algorithmic.sty
 	latex main.tex
 	bibtex main
+	texindy -M texindy -L russian -C utf8 main.idx
 	latex main.tex
 	cp main.dvi crypto.dvi
 
 pdf: main.tex main.bib algorithmic.sty
 	pdflatex main.tex
 	bibtex main
+	texindy -M texindy -L russian -C utf8 main.idx
 	pdflatex main.tex
 	cp main.pdf crypto.pdf
 	#cd presentation && $(MAKE) pdf

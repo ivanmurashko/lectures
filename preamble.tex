@@ -14,8 +14,16 @@
 \usepackage{amssymb}
 \usepackage{algorithm}
 \usepackage{algorithmic}
-\usepackage{imakeidx}
+\usepackage[xindy]{imakeidx}
 \makeindex
+
+\makeatletter
+\newcommand{\rindex}[2][\imki@jobname]{%
+  \index[#1]{\detokenize{#2}}%
+}
+\makeatother
+
+
 %% \makeindex[
 %%   program=xindy,
 %%   options=-M texindy -L russian -C utf8,
@@ -67,7 +75,7 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
                          {\begin{xtheorem}}
-                         {\begin{xtheorem}[#1]\index{#1!определение теоремы}}
+                         {\begin{xtheorem}[#1]\rindex{#1!определение теоремы}}
                        }%
                        {\end{xtheorem}}
 
@@ -84,7 +92,7 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
                          {\begin{xexample}}
-                         {\begin{xexample}[#1]\index{#1!пример}}
+                         {\begin{xexample}[#1]\rindex{#1!пример}}
                        }%
                        {\end{xexample}}
 
@@ -95,7 +103,7 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
                          {\begin{xaxiom}}
-                         {\begin{xaxiom}[#1]\index{Аксиома!#1!определение}}
+                         {\begin{xaxiom}[#1]\rindex{Аксиома!#1!определение}}
                        }%
                        {\end{xaxiom}}
 
@@ -105,7 +113,7 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
                          {\begin{xdefinition}}
-                         {\begin{xdefinition}[#1]\index{#1!определение}}
+                         {\begin{xdefinition}[#1]\rindex{#1!определение}}
                        }%
                        {\end{xdefinition}}
 
@@ -115,7 +123,7 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
                          {\begin{xproperty}}
-                         {\begin{xproperty}[#1]\index{#1!свойство}}
+                         {\begin{xproperty}[#1]\rindex{#1!свойство}}
                        }%
                        {\end{xproperty}}
 
@@ -148,7 +156,7 @@
     }%
     {#2}
   }
-  {\expandafter\index{{\getnamereftext{#1}}}}
+  {\expandafter\rindex{{\getnamereftext{#1}}}}
   (\autoref{#1})
 }%
 
