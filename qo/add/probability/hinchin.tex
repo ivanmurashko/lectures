@@ -66,7 +66,25 @@ t_1\right) = r^{*}\left(t_1, t_2\right) = r^{*}\left(\tau\right).
 \end{equation}
 который можно трактовать как Фурье образ случайного процесса
 $x\left(t\right)$. Для стационарных случайных процессов очевидно, что
-интеграл \eqref{eqAddHinchinFourier1} не существует. Вместе с тем для
+интеграл \eqref{eqAddHinchinFourier1} в общем случае не существует.
+Действительно в случае существования этого интеграла было бы
+справедливо соотношение Парсеваля
+\begin{equation}
+\int_{-\infty}^\infty \left|\tilde{x}\left(\omega\right)\right|^2 d
+\omega = \int_{-\infty}^\infty \left|x\left(t\right)\right|^2 dt,
+\label{eq:add:hinchin:parseval}
+\end{equation}
+которое очевидным образом расходится в случае стационарного случайного
+процесса. При этом в силу \eqref{eq:add:hinchin:parseval} 
+$S\left(\omega\right) =\left|\tilde{x}\left(\omega\right)\right|^2$ представляет собой
+распределение энергии по оси частот для конкретной реализации
+процесса, а усредненное значение 
+$\left<S\left(\omega\right)\right>$ представляет некоторую
+характеристику случайного процесса, которое описывает распределение
+энергии по частотам.
+
+Не смотря на то что интеграл \eqref{eq:add:hinchin:parseval}
+расходится для
 рассматриваемых случайных процессов, как показали Хинчин и Винер,
 существует интеграл
 \begin{equation}
