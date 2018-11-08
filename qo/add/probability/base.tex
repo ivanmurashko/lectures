@@ -20,9 +20,40 @@
   $A \subset \Omega$ называется событием.
 \end{definition}
 
-\begin{definition}[Вероятность события $P$]
-  Каждому событию $A \subset \Omega$ ставится в соответствие некоторое
-  число $P\left(A\right) \in \mathbb{R}$ которое называется вероятностью.
+\begin{definition}[$\sigma$- алгебра]
+\label{def:sigma_algebra}
+Допустим, что $\Omega$ некоторое множество, тогда семейство
+$\mathcal{F}$ подмножеств множества $\Omega$ называется
+$\sigma$-алгеброй если выполнены следующие условия
+\begin{itemize}
+\item $\mathcal{F}$ содержит $\Omega$: $\Omega \in \mathcal{F}$
+\item если $\Upsilon  \in \mathcal{F}$ тогда $\Omega \setminus \Upsilon
+  \in \mathcal{F}$
+\item объединение или пересечение счетного подсемейства $\mathcal{F}$
+  принадлежит $\mathcal{F}$
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Мера]
+\label{def:measure} 
+Если $\mathcal{F}$ некоторая $\sigma$-алгебра тогда мерой $\mu$
+следующая функция 
+\[
+\mu: \mathcal{F} \to \left[0, \infty\right]
+\]
+называется мерой если 
+\begin{itemize}
+\item $\mu\left(\emptyset\right) = 0$
+\item $\forall A, B \in \mathcal{F}, A \cap B = \emptyset$ мы имеем
+$\mu\left(A \cup B\right) = \mu\left(A\right) +
+  \mu\left(B\right)$ 
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Вероятность $P$]
+  \label{def:probability}
+  Конечная мера заданная на $\mathcal{F}$ над множеством $\Omega$
+  называется вероятностью если $P\left(\Omega\right) = 1$.
 \end{definition}
 
 \begin{example}[Пространство событий]
