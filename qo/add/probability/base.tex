@@ -10,45 +10,20 @@
 дело. 
 
 \begin{definition}[Пространство событий]
-\label{def:events_set}
-  Множество $\Omega$ называется пространством событий если
+\label{def:events_set}  
+  $\mathcal{F}$ некоторая $\sigma$-алгебра заданная на некотором
+множестве $\Omega$ называется пространством событий. 
+\end{definition}
+
+\begin{remark}[Пространство событий]
+  В силу свойств $\sigma$-алгебра имеем следующие факты: если
   $\Omega \subset \Omega$, $\emptyset \subset \Omega$ и для любых
   $A,B \subset \Omega$ имеет место
   $A \cup B \subset \Omega$, $A \cap B \subset \Omega$ и
   $A \setminus B \subset \Omega$.  Элемент множества
   $\omega \in \Omega$ называется элементарным событием. Подмножество 
-  $A \subset \Omega$ называется событием.
-\end{definition}
-
-\begin{definition}[$\sigma$- алгебра]
-\label{def:sigma_algebra}
-Допустим, что $\Omega$ некоторое множество, тогда семейство
-$\mathcal{F}$ подмножеств множества $\Omega$ называется
-$\sigma$-алгеброй если выполнены следующие условия
-\begin{itemize}
-\item $\mathcal{F}$ содержит $\Omega$: $\Omega \in \mathcal{F}$
-\item если $\Upsilon  \in \mathcal{F}$ тогда $\Omega \setminus \Upsilon
-  \in \mathcal{F}$
-\item объединение или пересечение счетного подсемейства $\mathcal{F}$
-  принадлежит $\mathcal{F}$
-\end{itemize}
-\end{definition}
-
-\begin{definition}[Мера]
-\label{def:measure} 
-Если $\mathcal{F}$ некоторая $\sigma$-алгебра тогда
-следующая функция 
-\[
-\mu: \mathcal{F} \to \left[0, \infty\right]
-\]
-называется мерой если 
-\begin{itemize}
-\item $\mu\left(\emptyset\right) = 0$
-\item $\forall A, B \in \mathcal{F}, A \cap B = \emptyset$ мы имеем
-$\mu\left(A \cup B\right) = \mu\left(A\right) +
-  \mu\left(B\right)$ 
-\end{itemize}
-\end{definition}
+  $A \subset \Omega$ или же $A \in \mathcal{F}$ называется событием.
+\end{remark}
 
 \begin{definition}[Вероятность $P$]
   \label{def:probability}
