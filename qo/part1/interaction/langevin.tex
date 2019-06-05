@@ -170,14 +170,16 @@ $D\left(\omega\right)$ и $g^2\left(\omega\right)$ взяты при часто�
 
 Рассмотрим интеграл по частоте. Действуя так же как при рассмотрении
 спонтанного излучения методом Вайскопфа-Вигнера, получим
-\begin{equation}
+\begin{eqnarray}
 \int_0^{\infty}e^{- i\left(\omega' -
   \omega\right)\left(t - t'\right)} d \omega' = 
 \int_{-\omega}^{\infty} e^{-i \nu \left(t - t'\right)} d \nu \approx 
 \int_{-\infty}^{\infty} e^{-i \nu \left(t - t'\right)} d \nu = 
-2 \pi \delta\left(t - t'\right).
+\nonumber \\
+= \int_{-\infty}^{\infty} e^{i \nu \left(t' - t\right)} d \nu = 
+2 \pi \delta\left(t' - t\right).
 \nonumber
-\end{equation}
+\end{eqnarray}
 Следовательно можно написать
 \begin{eqnarray}
 \frac{d \hat{A}\left(t\right)}{d t} = 
