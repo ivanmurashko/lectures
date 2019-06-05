@@ -1,0 +1,48 @@
+%% -*- coding:utf-8 -*-
+\section{Преобразование Фурье}
+\label{sec:cont_fourier}
+В этом курсе мы будем использовать следующую форму записи для
+преобразования Фурье
+\footnote{
+Чаще всего используется следующее определение Фурье образа
+\[
+\tilde{x}\left(\omega\right) = \frac{1}{\sqrt{2 \pi}}
+\int_{-\infty}^{\infty}x\left(t\right)e^{-i \omega t}dt.
+\]
+Вместе с тем в соответствии с \cite{wiki:fourier_transform} существуют
+альтернативные определения отличающиеся знаком перед частотой и
+коэффициентом перед интегралом.}
+\begin{equation}
+\tilde{x}\left(\omega\right) = \frac{1}{2 \pi}
+\int_{-\infty}^{\infty}x\left(t\right)e^{i \omega t}dt,
+\label{eq:direct_fourier}
+\end{equation}
+при этом обратное преобразование Фурье выглядит следующим образом
+\begin{equation}
+x\left(t\right) =
+\int_{-\infty}^{\infty}\tilde{x}\left(\omega\right)e^{-i \omega t}dt, 
+\label{eq:reverse_fourier}
+\end{equation}
+
+Следующая таблица содержит важные формулы обращения
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Функция $x\left(t\right)$ &  Образ $\tilde{x}\left(\omega\right)$\\ \hline
+$1$  & $\delta\left(\omega\right)$ \\
+$\delta\left(t\right)$  & $\frac{1}{2 \pi}$  \\
+\hline
+\end{tabular}
+\caption{Преобразование Фурье}
+\label{tbl:fourier}
+\end{table}
+
+Из \autoref{tbl:fourier} следует важная формула (интегральное
+представление дельта-функции) \cite{wiki:deltafunction}
+\begin{equation}
+\delta\left(\omega\right) = \frac{1}{2 \pi} \int_{-\infty}^{\infty}
+e^{i \omega t} dt
+\label{eq:delta_from_integral}
+\end{equation}
+
