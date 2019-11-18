@@ -163,6 +163,12 @@ y^2 \equiv x^3 +ax +b,
 \end{equation}
 где $a,b \in \mathbb{F}_p$.
 
+\begin{definition}[Порядок эллиптической кривой]
+\label{def:elliptic_curve_order}
+Число точек эллиптической кривой $E$ называется ее порядком и
+обозначается как $\left|E\right|$
+\end{definition}
+
 \input ./add/discretmath/figellipticfp.tex
 
 На \autoref{fig:add:ellipticFp} изображено такое множество для поля
@@ -275,7 +281,8 @@ E\left(\mathbb{F}_{19}\right) =
 %https://math.stackexchange.com/questions/2323595/under-what-conditions-do-all-the-points-on-an-elliptic-curve-form-a-cyclic-group
 С другой стороны для формирования задачи дискретного логарифма нам
 требуется именно циклическая группа. Таким образом для заданной
-эллиптической кривой вначале вычисляют ее порядок, для этого
+эллиптической кривой вначале вычисляют ее порядок (см.
+опр. \ref{def:elliptic_curve_order}), для этого 
 существует эффективный алгоритм Шуфа \cite{ReneSchoof:1985}. После
 этого находится простой делитель найденного порядка и ищется точка
 которая является генератором подгруппы выбранного порядка. Для того
