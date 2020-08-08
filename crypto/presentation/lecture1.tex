@@ -2,9 +2,9 @@
 \documentclass[10pt,pdf,hyperref={unicode}]{beamer}
 \input ./preamble.tex
 \usetheme{Warsaw}
-\title[Криптография и квантовые вычисления]{Классическая
-  криптография\\Квантовые вычисления}
-\author{Мурашко И. В.}
+\title[Cryptography and quantum computations]{Classical
+  cryptography\\Quantum computations}
+\author{Ivan Murashko}
 %\institute{Санкт Петербургский Государственный Политехнический Университет}
 \date{}
 \begin{document}
@@ -14,67 +14,67 @@
 \end{frame}
 
 
-\section{Введение}
+\section{Introduction}
 
-\begin{frame}{Введение}
+\begin{frame}{Introduction}
 \begin{itemize}
-\item Квантовая механика
-\item Квантовые вычисления
-\item Методы симметричного шифрования и алгоритм Гровера
-\item Методы несимметричного шифрования (RSA, Diffie-Hellman, Elliptic
-curve) и алгоритм Шора.
+\item Quantum mechanics
+\item Quantum computations
+\item Symmetric cryptography. Grover search algorithm (GSA)
+\item Non-symmetric cryptography (RSA, Diffie-Hellman, Elliptic
+curve) and Shor's algrorithm.
 \end{itemize}
 \end{frame}
 
-\section{Квантовая механика}
-\begin{frame}{Двухуровневый атом}
+\section{Quantum mechanics}
+\begin{frame}{Two-level atom}
 \begin{figure}
 \centering
 
 \input ../add/quant/picmeasurex.tex
 
-\caption{Процесс измерения энергии двухуровневого атома находящегося в
-чистом состоянии $\left|\psi\right> = 
-\frac{1}{\sqrt{2}}\left|a\right> + \frac{1}{\sqrt{2}}\left|b\right>$.
-Прибором регистрируется значение энергии $E_a$ или $E_b$.
+\caption{Energy measurement for two-level atom. The atom is in pure
+  state:  $\left|\psi\right> = 
+  \frac{1}{\sqrt{2}}\left|a\right> + \frac{1}{\sqrt{2}}\left|b\right>$.
+  Device can get either $E_a$ or $E_b$.
 }
 \label{fig:add:mesure_ex}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Двухуровневый атом. Измерение $E_a$}
+\begin{frame}{Two-level atom. $E_a$ measurement}
 \begin{figure}
 \centering
 
 \input ../add/quant/picmeasurex_a.tex
 
-\caption{Процесс измерения энергии двухуровневого атома находящегося в
-чистом состоянии $\left|\psi\right> = 
-\frac{1}{\sqrt{2}}\left|a\right> + \frac{1}{\sqrt{2}}\left|b\right>$.
-Прибором регистрируется значение энергии $E_a$. При измерении
-происходит следующая редукция $\left|\psi\right> \to \left|a\right>$
+\caption{Energy measurement for two-level atom. The atom is in pure
+  state: $\left|\psi\right> = 
+  \frac{1}{\sqrt{2}}\left|a\right> + \frac{1}{\sqrt{2}}\left|b\right>$.
+  Device got $E_a$. The following wave function collapse occurs as a
+  result of the measurement $\left|\psi\right> \to \left|a\right>$
 }
 \label{fig:add:mesure_ex_a}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Двухуровневый атом. Измерение $E_b$}
+\begin{frame}{Two-level atom. $E_b$ measurement}
 \begin{figure}
 \centering
 
 \input ../add/quant/picmeasurex_b.tex
 
-\caption{Процесс измерения энергии двухуровневого атома находящегося в
-чистом состоянии $\left|\psi\right> = 
+\caption{Energy measurement for two-level atom. The atom is in pure
+  state: $\left|\psi\right> = 
 \frac{1}{\sqrt{2}}\left|a\right> + \frac{1}{\sqrt{2}}\left|b\right>$.
-Прибором регистрируется значение энергии $E_b$. При измерении
-происходит следующая редукция $\left|\psi\right> \to \left|b\right>$
+Device got $E_b$. The following wave function collapse occurs as a
+  result of the measurement $\left|\psi\right> \to \left|b\right>$
 }
 \label{fig:add:mesure_ex_b}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Кот Шредингера}
+\begin{frame}{Schrödinger's cat}
  \begin{figure} 
    \includegraphics[width=100mm,scale=0.5]{catshred.jpg}
   \end{figure}
