@@ -80,74 +80,83 @@ Device got $E_b$. The following wave function collapse occurs as a
   \end{figure}
 \end{frame}
 
-\begin{frame}{Эксперимент Белла. Классический случай}
+\begin{frame}{Bell experiment. Classical case}
 \[
 f = \frac{1}{2}\left(
 a b + a' b + a b' - a' b'
 \right), a,a',b,b' \in \{-1, +1\}.
 \]
-следовательно
+therefore
 \(
 f \in \{-1, +1\}
 \)
-и
+and
 \(
 \left|\left<f\right>\right| \le 1
 \)
 \end{frame}
 
-\begin{frame}{Эксперимент Белла. Квантовый случай}
+\begin{frame}{Bell experiment. Quantum case}
 \[
 \left|\left<f\right>\right| = \sqrt{2} > 1
 \]
 \end{frame}
 
 
-\begin{frame}{Отрицательные вероятности}
+\begin{frame}{Negative probabilities}
 \[
 \left<f\right> = \sum_{a,a',b,b'} p(a,a',b,b') f(a,a',b,b').
 \]
-следовательно для $\left|\left<f\right>\right| > 1$ необходимо
+therefore for $\left|\left<f\right>\right| > 1$ necessary to have
 \[
 \exists a,a',b,b': p(a,a',b,b') < 0
 \]
 \end{frame}
 
-\section{Квантовые вычисления}
-\begin{frame}{Классические вычисления}
+\section{Quantum computations}
+\begin{frame}{Classical bit vs quantum q-bit}
+  Classical bit is either $0$ or $1$.
+
+  Quantum q-bit is another case. It's a state
+  $\ket{q} = \alpha \ket{0} + \beta \ket{1}$. I.e. as Schrödinger's
+  cat it can be $0$ (die) and $1$ (alive) in one moment 
+\end{frame}
+
+\begin{frame}{Classical computation}
 \begin{figure}
 \centering
 
 \input ../part4/quantcomp/picclasscomp.tex
 
-\caption{Классические вычисления. На вход подается число $x$ состоящее
-  из $n$ бит, а на выходе имеем результат $y = f\left(x\right)$ описываемый $m$ битами}
+\caption{Classical computation. Input has a number $x$ that consists
+  of  $n$ bits. Output $y = f\left(x\right)$ is the result that
+  consists of $m$ bits}
 \label{figQuantCompClassComp}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Квантовые вычисления}
+\begin{frame}{Quantum computations}
 \begin{figure}
 \centering
 
 \scalebox{.8}{\input{../part4/quantcomp/picquantcomp.tex}}
 
-\caption{Квантовые обратимые вычисления. На вход подается число
-  $\left|x\right>$ состоящее из $n$ кубит и затравка из нулевых
-  состояний ($m$ кубит), а на выходе имеем результат $\left|y\right> =
-  \left|f\left(x\right)\right>$ описываемый $m$ кубитами и исходное
-  состояние $\left|x\right>$} 
+\caption{Quantum computations should be reversible. We have a number
+  $x$ as input. The number consists of $n$ q-bits. We also require to
+  have a seed of $0$ states ($m$ q-bits). Output also have two parts: the result $\left|y\right> =
+  \left|f\left(x\right)\right>$ is described by $m$ q-bits and initial
+  state $\left|x\right>$ ($n$ q-bits)} 
 \label{figQuantCompQuantComp}
 \end{figure}
 \end{frame}
 
 
-\begin{frame}{Квантовые вычисления}
-Классический случай
+\begin{frame}{Quantum computations}
+Classical case
 \[
 x \to f(x)
 \]
-Квантовый случай
+Quantum case
 \begin{eqnarray}
 \left|0\right>\left|0\right> + \left|1\right>\left|0\right> + \left|2\right>\left|0\right> +
 \dots + \left|x\right>\left|0\right> + \dots \to
@@ -160,91 +169,90 @@ x \to f(x)
 \end{frame}
 
 
-\section{Алгоритм Гровера}
-\begin{frame}{Задача о поиске иголки в стоге сена}
+\section{Grover search algorithm}
+\begin{frame}{Needle in a haystack task}
 \begin{figure}
 \centering
 
 \input ../part4/quantcomp/picsearch.tex
 
-\caption{Поиск в неструктурированном объеме данных (поиск "иголки в
-  стоге сена"). Классическая сложность $O(N)$}
+\caption{Search in unstructured data array (search "a needle in a
+  haystack"). Classical complexity is $O(N)$}
 \label{figQuantCompSearch}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Алгоритм Гровера. Схема}
+\begin{frame}{Grover search algorithm. Scheme}
 \begin{figure}
 \centering
 
 \scalebox{1.0}{\input{../part4/quantcomp/picgrover.tex}}
 
-\caption{Алгоритм Гровера. Сложность $ O(\sqrt{N})$}
+\caption{Grover search algorithm. Complexity is $ O(\sqrt{N})$}
 \label{figQuantCompGrover}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Алгоритм Гровера. Схема повторяющегося элемента}
+\begin{frame}{Grover search algorithm. Repeating element scheme}
 \begin{figure}
 \centering
 
 \scalebox{1.0}{\input{../part4/quantcomp/picgroverbase.tex}}
 
-\caption{Алгоритм Гровера. Повторяющийся элемент}
+\caption{Grover search algorithm. Grover iteration}
 \label{figQuantCompGrover}
 \end{figure}
 \end{frame}
 
 
-\begin{frame}{Алгоритм Гровера. Принцип работы}
+\begin{frame}{Grover search algorithm. Main principle}
 \begin{figure}
 \centering
 
 \scalebox{.9}{\input{../part4/quantcomp/picgroverinv.tex}}
 
-\caption{Алгоритм Гровера. Инверсия фазы}
+\caption{Grover search algorithm. Phase inversion aka conditional inversion}
 \label{figQuantCompGroverInv}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Алгоритм Гровера. Принцип работы}
+\begin{frame}{Grover search algorithm. Main principle}
 \begin{figure}
 \centering
 
 \scalebox{.8}{\input{../part4/quantcomp/picgroverinvmiddle.tex}}
 
-\caption{Алгоритм Гровера. Обращение относительно
-  среднего.}
+\caption{Grover search algorithm. Grover diffusion operator}
 \label{figQuantCompGroverInvMiddle}
 \end{figure}
 
 \end{frame}
 
 
-\begin{frame}{Влияние на рекомендации к использованию}
-$O(N) \rightarrow O(\sqrt{N})$
-ведет например к следующей рекомендации
-$AES_{128} \rightarrow AES_{256}$
+\begin{frame}{Impact on classical cryptography}
+  $O(N) \rightarrow O(\sqrt{N})$
+  leads to the following recommendation 
+  $AES_{128} \rightarrow AES_{256}$
 \end{frame}
 
 
-\section{Алгоритм Шора}
-\begin{frame}{Несимметричное шифрование}
+\section{Shor's algorithm}
+\begin{frame}{Public key cryptography}
 \begin{itemize}
-\item RSA и задача факторизации чисел
-\item Diffie-Hellman и дискретный логарифм
-\item Elliptic curve и дискретный логарифм
+\item RSA and factorisation problem 
+\item Diffie-Hellman and discrete logarithm
+\item Elliptic curve and discrete logarithm
 \end{itemize}
 \end{frame}
 
-\begin{frame}{RSA и задача о нахождении периода функций}
+\begin{frame}{RSA and period-finding problem}
 \[
 N = p \cdot q
 \]
 \[
 f\left(x, a\right) = a^x \mod N.
 \]
-Период функции $T = 2r$, т.е.
+The period of the function is $T = 2r$, i.e.
 \begin{eqnarray}
 a^{x+2r} \mod N = a^x \mod N,
 \nonumber \\
@@ -255,91 +263,89 @@ a^{2r} \equiv 1 \mod N,
 \end{eqnarray}
 \end{frame}
 
-\begin{frame}{Алгоритм Шора}
+\begin{frame}{Shor's algorithm}
 \begin{figure}
 \centering
 
 \scalebox{.8}{\input{../part4/quantcomp/picquantperiodfinding.tex}}
 
-\caption{ Определение периода функций с помощью квантового
-  преобразования Фурье}
+\caption{ Period finding problem and quantum Fourier's transform}
 \end{figure}
 \end{frame}
 
 
-\begin{frame}{Алгоритм Шора. Нахождение периода функции 
+\begin{frame}{Shor's algorithm. Period funding problem for 
   $f\left(x, a\right) = a^x \mod{N}$}
 \begin{figure}
 \centering
 
 \scalebox{.65}{\input{../part4/quantcomp/picshorquantfourier1.tex}}
 
-\caption{Алгоритм Шора. Нахождение периода функции 
-  $f\left(x, a\right) = a^x \mod{N}$ при $a=2$, $N = 21$.}
+\caption{Shor's algorithm. Period funding problem for 
+  $f\left(x, a\right) = a^x \mod{N}$, $a=2$, $N = 21$.}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Алгоритм Шора. Нахождение периода функции 
+\begin{frame}{Shor's algorithm. Period funding problem for
   $f\left(x, a\right) = a^x \mod{N}$}
 \begin{figure}
 \centering
 
 \scalebox{.65}{\input{../part4/quantcomp/picshorquantfourier2.tex}}
 
-\caption{Алгоритм Шора. Нахождение периода функции 
-  $f\left(x, a\right) = a^x \mod{N}$ при $a=2$,  
-  Значение функции 1 повторяется с периодом $r=6$.}
+\caption{Shor's algorithm. Period funding problem for
+  $f\left(x, a\right) = a^x \mod{N}$, $a=2$,  
+  Value $1$ is repeated with period of $r=6$.}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Алгоритм Шора. Нахождение периода функции 
+\begin{frame}{Shor's algorithm. Period funding problem for
   $f\left(x, a\right) = a^x \mod{N}$}
 \begin{figure}
 \centering
 
 \scalebox{.6}{\input{../part4/quantcomp/picshorquantfourier3.tex}}
 
-\caption{Алгоритм Шора. Нахождение периода функции 
-  $f\left(x, a\right) = a^x \mod{N}$ при $a=2$. 
-  Локальные максимумы преобразования Фурье 
-  идут с периодом $\frac{M}{r} \approx 10.67$ ($M = 64$ - число отсчетов
-  для преобразования Фурье)}
+\caption{Shor's algorithm. Period funding problem for
+  $f\left(x, a\right) = a^x \mod{N}$, $a=2$. 
+  Local maxima of Fourier transform are repeated with period
+  $\frac{M}{r} \approx 10.67$ ($M = 64$ is the number of samples for
+  Fourier transform)}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Рекомендованные значения для длины ключа}
+\begin{frame}{Public key cryptography. Recommendations for key length}
  \begin{figure} 
    \includegraphics[width=120mm,scale=0.5]{keylengthcom.png}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Влияние на рекомендации к использованию}
+\begin{frame}{Impact on public-key cryptography}
 \begin{itemize}
 \item RSA: 4096
 \item DH: 2048/256
 \item Elliptic curve: 512/256 (bitcoin) 
 \end{itemize}
 
-NSA не рекомендует использование алгоритмов на элиптических кривых для
-внутреннего использования.
+NSA doesn't recommend elliptic curve cryptography for internal usage.
 \end{frame}
 
-\section{Заключение}
-\begin{frame}{Что дальше?}
-\begin{itemize}
-\item Линейная алгебра (Матрицы)
-\item Дискретная математика (Операции с остатком)
-\end{itemize}
-\end{frame}
+%% \section{Заключение}
+%% \begin{frame}{Что дальше?}
+%% \begin{itemize}
+%% \item Линейная алгебра (Матрицы)
+%% \item Дискретная математика (Операции с остатком)
+%% \end{itemize}
+%% \end{frame}
 
-\begin{frame}{Что дальше?}
+\begin{frame}{Additional info}
 https://github.com/ivanmurashko/lectures/tree/master/pdfs
  \begin{figure} 
    \includegraphics[width=90mm,scale=0.5]{github.png}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Вопросы}
+\begin{frame}{Questions}
  \begin{figure} 
    \includegraphics[width=90mm,scale=0.5]{questions.png}
   \end{figure}
