@@ -295,7 +295,7 @@ a^{2r} \equiv 1 \mod N,
 
 \caption{Shor's algorithm. Period funding problem for
   $f\left(x, a\right) = a^x \mod{N}$, $a=2$,  
-  Value $1$ is repeated with period of $r=6$.}
+  Value $1$ is repeated with period of $T=6$.}
 \end{figure}
 \end{frame}
 
@@ -310,7 +310,7 @@ a^{2r} \equiv 1 \mod N,
   $f\left(x, a\right) = a^x \mod{N}$, $a=2$. 
   Local maxima of Fourier transform are repeated with period
   $\frac{M}{r} \approx 10.67$ ($M = 64$ is the number of samples for
-  Fourier transform). This gives us $r\approx 6$}
+  Fourier transform). This gives us $T\approx 6$}
 \end{figure}
 \end{frame}
 
@@ -318,9 +318,12 @@ a^{2r} \equiv 1 \mod N,
   $f\left(x, a\right) = a^x \mod{N}$}
   Local maxima of Fourier transform are repeated with period
   $\frac{M}{r} \approx 10.67$ ($M = 64$ is the number of samples for
-  Fourier transform). This gives us $r\approx 6$ and as result
-  $(a^r-1) = 63$ or/and $(a^r + 1) = 65$ has/have common divisors with
-  $N=21$.
+  Fourier transform). This gives us $T\approx 6$ and as therefore
+  $r=\frac{T}{2}=3$.
+
+  As result (in our case)
+  $(a^r-1) = 7$ and $(a^r + 1) = 9$ have common divisors with
+  $N=21$: $7$ and $3$.
 
   In our case $3$ is common divisor for $N=21$ and for $a^r-1 = 63$.
 \end{frame}
