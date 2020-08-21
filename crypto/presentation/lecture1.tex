@@ -141,6 +141,19 @@ therefore for $\left|\left<f\right>\right| > 1$ necessary to have
 \end{frame}
 
 \begin{frame}{Quantum logic}
+  Distributive law is failed for quantum logic:
+  \begin{itemize}
+  \item $P \land (Q_1 \lor Q_2)$ can be true
+  \item but both $P \land Q_1$ as well as $P \land Q_2$ are false
+  \end{itemize}
+  in other words
+  \[
+  P \land (Q_1 \lor Q_2) \ne (P \land Q_1) \lor (P \land Q_2)
+  \]
+  where $\land$ is ``logical and'', $\lor$ is ``logical or''
+\end{frame}
+
+\begin{frame}{Quantum logic}
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}[ele/.style={fill=black,circle,minimum
@@ -165,19 +178,6 @@ therefore for $\left|\left<f\right>\right| > 1$ necessary to have
     inequality. From other side the event $P \land Q = (P \land Q_1)
     \lor (P \land Q_2)$ is possible}   
 \end{figure}
-\end{frame}
-
-\begin{frame}{Quantum logic}
-  Distributive law is failed for quantum logic:
-  \begin{itemize}
-  \item $P \land (Q_1 \lor Q_2)$ can be true
-  \item but both $P \land Q_1$ as well as $P \land Q_2$ are false
-  \end{itemize}
-  in other words
-  \[
-  P \land (Q_1 \lor Q_2) \ne (P \land Q_1) \lor (P \land Q_2)
-  \]
-  where $\land$ is ``logical and'', $\lor$ is ``logical or''
 \end{frame}
 
 \section{Quantum computations}
