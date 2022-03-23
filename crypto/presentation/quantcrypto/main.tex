@@ -35,6 +35,13 @@
 
 \section{Classic cryptography}
 
+\begin{frame}{Cryptography}
+ \begin{figure} 
+   \includegraphics[width=90mm,scale=0.5]{alice-bob.png}
+  \end{figure}
+\end{frame}
+
+
 \begin{frame}{Lorenz cipher, WWII}
  \begin{figure} 
    \includegraphics[width=90mm,scale=0.5]{class_crypto.jpg}
@@ -101,7 +108,7 @@
   \]
 \end{frame}
 
-\begin{frame}{Key distribution. Diffie-Hellman}
+\begin{frame}{Key distribution. Diffie-Hellman (1)}
   Known data: $g$, $p$
   
   Alice choose random $a$ and calculates
@@ -121,11 +128,38 @@
   or
   \[
   K \equiv A^b \mod{p}
-  \]  
+  \]
+\end{frame}
+
+\begin{frame}{Key distribution. Diffie-Hellman (2)}
+  Alice and Bob exchange the $A$ and $B$ and calculate $K$ as
+  \[
+  K \equiv B^a \mod{p}
+  \]
+  or
+  \[
+  K \equiv A^b \mod{p}
+  \]
+  because
+  \[
+  K \equiv g^{ab} \mod{p}
+  \]
+\end{frame}
+
+\begin{frame}{Discrete logarithm complexity}
+  \includegraphics[width=90mm,scale=0.5]{p_np.jpg}
+\end{frame}
+
+\begin{frame}{Shor algorithm}
+  \includegraphics[width=90mm,scale=0.5]{shor.jpg}
 \end{frame}
 
 
 \section{Quantum cryptography}
+
+\begin{frame}{Quantum cryptography}
+  \includegraphics[width=90mm,scale=0.5]{quantum.jpg}
+\end{frame}
 
 \begin{frame}{Einstein–Podolsky–Rosen paradox}
  \begin{figure} 
