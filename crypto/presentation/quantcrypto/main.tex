@@ -55,7 +55,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Hack the caesar cipher}
+\begin{frame}{Hack the Caesar cipher}
  \begin{figure} 
    \includegraphics[width=90mm,scale=0.5]{english_letters}
   \end{figure}
@@ -98,6 +98,23 @@
   \]  
 \end{frame}
 
+\begin{frame}{Vernam cipher perfect security}
+  The perfect security if
+  \begin{itemize}
+  \item Key is random
+  \item Key length is equal to the message length
+  \item Key is used only once
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Key distribution}
+ \begin{figure} 
+   \includegraphics[width=90mm,scale=0.5]{keydistrib.png}
+  \end{figure}
+\end{frame}
+
+
 \begin{frame}{Key distribution. Discrete log}
   \[
   x = ind_g\left(a\right) \mod{p}
@@ -119,15 +136,6 @@
   Bob choose random $b$ and calculates
   \[
   B \equiv g^b \mod{p}
-  \]
-
-  Alice and Bob exchange the $A$ and $B$ and calculate $K$ as
-  \[
-  K \equiv B^a \mod{p}
-  \]
-  or
-  \[
-  K \equiv A^b \mod{p}
   \]
 \end{frame}
 
@@ -164,6 +172,12 @@
 \begin{frame}{Einstein–Podolsky–Rosen paradox}
  \begin{figure} 
    \includegraphics[width=90mm,scale=0.5]{epr.jpg}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Einstein–Podolsky–Rosen paradox}
+ \begin{figure} 
+   \includegraphics[width=90mm,scale=0.5]{goddice.jpg}
   \end{figure}
 \end{frame}
 
@@ -240,6 +254,17 @@ and
  \begin{figure} 
    \input ../../part4/crypto/picquantcrypto.tex
  \end{figure}
+\end{frame}
+
+\begin{frame}{Quantum cryptography. Key distribution}
+  \begin{itemize}
+    \item Measurement on Alice and Bob sides are random but
+      correlated
+    \item Alice and Bob can get exact same random $K$ using the
+      correlation
+      \item Alice and Bob can use Bell experiment to be sure that
+        communication channel is quantum i.e. no copy was made
+  \end{itemize}
 \end{frame}
 
 
