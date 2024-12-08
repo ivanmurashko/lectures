@@ -4,7 +4,7 @@ algorithmic.sty:
 	cd ../../ && \
 	$(MAKE) algorithmic.sty && \
 	cp algorithmic.sty ./presentation/quantcomp && \
-	cp algorithm.sty ./presentation /quantcomp
+	cp algorithm.sty ./presentation/quantcomp
 
 pdf: lecture1.tex algorithmic.sty
 	pdflatex lecture1.tex

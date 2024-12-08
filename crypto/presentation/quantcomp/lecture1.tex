@@ -92,11 +92,42 @@ Device got $E_b$. The following wave function collapse occurs as a
   \end{figure}
 \end{frame}
 
+\begin{frame}{Schrödinger's cat}
+ \begin{figure} 
+   \begin{itemize}
+   \item The cat is alive when the atom is in the state $\left|\psi\right> = \left|b\right>$ (non-excited state).
+   \item The cat is dead when the atom is in the state $\left|\psi\right> = \left|a\right>$ (excited state).
+   \end{itemize}
+ \end{figure}
+\end{frame}
+
+
+\begin{frame}{Schrödinger's cat}
+ \begin{figure} 
+   \begin{itemize}
+   \item The cat is alive when the atom is in the state $\left|\psi\right> = \left|b\right>$ (non-excited state).
+   \item The cat is dead when the atom is in the state $\left|\psi\right> = \left|a\right>$ (excited state).
+   \end{itemize}
+   What happens if the atom is in the following state:
+   \[
+   \left|\psi\right> = 
+  \frac{1}{\sqrt{2}}\left|a\right> + \frac{1}{\sqrt{2}}\left|b\right>
+   \]   
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Schrödinger's cat}
+ \begin{figure} 
+   \includegraphics[width=100mm,scale=0.5]{catshred.jpg}
+  \end{figure}
+\end{frame}
+
+
 \begin{frame}{Classical bit vs quantum q-bit}
   Classical bit is either $0$ or $1$.
 
   Quantum q-bit is another case. It's a state
-  $\ket{q} = \alpha \ket{0} + \beta \ket{1}$. I.e. as Schrödinger's
+  $\ket{q} = \alpha \ket{1} + \beta \ket{0}$. I.e. as Schrödinger's
   cat it can be $1$ (die) and $0$ (alive) simultaneously
 \end{frame}
 
@@ -141,6 +172,55 @@ therefore for $\left|\left<f\right>\right| > 1$ necessary to have
 \end{frame}
 
 \begin{frame}{Quantum logic}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[ele/.style={fill=black,circle,minimum
+          width=.8pt,inner sep=1pt}]
+      \node[ele,label=left:$0$] (a) at (0,0) {};
+      \node[ele,label=above:$\frac{\hbar}{3 \Delta p}$] (b) at (2,0) {};
+      \node[ele,label=right:$\frac{2 \hbar}{3 \Delta p}$] (c) at (4,0) {};
+      \draw[-,thick,shorten <=2pt,shorten >=2pt] (a) to node[above]
+           {$\Delta q_1$} (b);
+      \draw[-,thick,shorten <=2pt,shorten >=2pt] (b) to node[above]
+           {$\Delta q_2$} (c);  
+  \end{tikzpicture}
+  \caption{Heisenberg inequality}
+  \begin{eqnarray}
+    \Delta p \Delta q_1 =
+    \nonumber \\
+    = \Delta p \Delta q_2 = \frac{\hbar}{3} < \frac{\hbar}{2}
+    \nonumber
+  \end{eqnarray}
+  \begin{eqnarray}
+   P \land Q_1 = P \land Q_2 = \mbox{False}
+    \nonumber
+  \end{eqnarray}  
+\end{figure}
+\end{frame}
+
+\begin{frame}{Quantum logic}
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[ele/.style={fill=black,circle,minimum
+          width=.8pt,inner sep=1pt}]
+      \node[ele,label=left:$0$] (a) at (0,0) {};
+      \node[ele,label=right:$\frac{2 \hbar}{3 \Delta p}$] (c) at (4,0) {};
+      \draw[-,thick,shorten <=2pt,shorten >=2pt] (a) to node[above]
+           {$\Delta q$} (c);
+  \end{tikzpicture}
+  \caption{Heisenberg inequality}
+  \begin{eqnarray}
+    \Delta p \Delta q = \frac{2 \hbar}{3} > \frac{\hbar}{2}
+    \nonumber
+  \end{eqnarray}
+  \begin{eqnarray}
+   P \land Q = \mbox{True}
+    \nonumber
+  \end{eqnarray}  
+\end{figure}
+\end{frame}
+
+\begin{frame}{Quantum logic}
   Distributive law is failed for quantum logic:
   \begin{itemize}
   \item $P \land (Q_1 \lor Q_2)$ can be true
@@ -180,6 +260,15 @@ therefore for $\left|\left<f\right>\right| > 1$ necessary to have
 \end{figure}
 \end{frame}
 
+
+\begin{frame}{Curry-Howard Correspondence}
+  Different types of logic correspond to different computational models.
+  \begin{itemize}
+    \item Boolean logic: classical computations
+    \item Quantum logic: quantum computations
+  \end{itemize}
+\end{frame}
+
 \section{Quantum computations}
 
 \begin{frame}{Classical computation}
@@ -212,11 +301,11 @@ therefore for $\left|\left<f\right>\right| > 1$ necessary to have
 
 
 \begin{frame}{Quantum computations}
-Classical case
+Classical case:
 \[
 x \to f(x)
 \]
-Quantum case
+Quantum case:
 \begin{eqnarray}
 \left|0\right>\left|0\right> + \left|1\right>\left|0\right> + \left|2\right>\left|0\right> +
 \dots + \left|x\right>\left|0\right> + \dots \to
@@ -224,6 +313,28 @@ Quantum case
 \to 
 \left|0\right>\left|f(0)\right> + \left|1\right>\left|f(1)\right> + \left|2\right>\left|f(2)\right> +
 \dots + \left|x\right>\left|f(x)\right> + \dots
+\nonumber
+\end{eqnarray}
+\end{frame}
+
+
+\begin{frame}{Quantum computations (Logical XOR)}
+Classical case: $\{x_1, x_2\} \to f(x_1, x_2) = x_1 \oplus x_2$
+\begin{eqnarray}
+  f(0,0) = f(1,1) = 0,
+  \nonumber \\
+  f(1,0) = f(0,1) = 1
+  \nonumber
+\end{eqnarray}
+
+Quantum case:
+\begin{eqnarray}
+  \left|00\right>\left|0\right> + \left|01\right>\left|0\right> +
+  \left|10\right>\left|0\right> + \left|11\right>\left|0\right> \to
+  \nonumber \\
+  \to
+  \left|00\right>\left|0\right> + \left|01\right>\left|1\right> +
+  \left|10\right>\left|1\right> + \left|11\right>\left|0\right>
 \nonumber
 \end{eqnarray}
 \end{frame}
@@ -309,10 +420,22 @@ Quantum case
 \[
 N = p \cdot q
 \]
+\end{frame}
+
+\begin{frame}{RSA and period-finding problem}
+\[
+N = p \cdot q
+\]
 \[
 f\left(x, a\right) = a^x \mod N.
 \]
-The period of the function is $T = 2r$, i.e.
+\end{frame}
+
+\begin{frame}{RSA and period-finding problem}
+\[
+f\left(x, a\right) = a^x \mod N.
+\]
+Let us suppose that the period of the function is $T = 2r$, i.e.
 \begin{eqnarray}
 a^{x+2r} \mod N = a^x \mod N,
 \nonumber \\
@@ -321,6 +444,15 @@ a^{2r} \equiv 1 \mod N,
 (a^r + 1)(a^r - 1)  \equiv 0 \mod N
 \nonumber
 \end{eqnarray}
+$N$ is divisible by either $a^r + 1$ or $a^r - 1$
+\end{frame}
+
+\begin{frame}{RSA and period-finding problem}
+\[
+f\left(x, a\right) = a^x \mod N.
+\]
+If the period of the function is $T = 2r$, then
+$N$ is divisible by either $a^r + 1$ or $a^r - 1$
 \end{frame}
 
 \begin{frame}{Shor's algorithm}
@@ -380,10 +512,18 @@ a^{2r} \equiv 1 \mod N,
   $\frac{M}{r} \approx 10.67$ ($M = 64$ is the number of samples for
   Fourier transform). This gives us $T\approx 6$ and as therefore
   $r=\frac{T}{2}=3$.
+\end{frame}
 
-  As result (in our case)
-  $(a^r-1) = 7$ and $(a^r + 1) = 9$ have common divisors with
+
+\begin{frame}{Shor's algorithm. Period funding problem for
+    $f\left(x, a\right) = a^x \mod{N}$}
+  As result ($a = 2, r = 3$)
+  $(a^r-1) = (2^3 -1) = 8 - 1 = 7$ and $(a^r + 1) = 8 + 1=  9$ have common divisors with
   $N=21$: $7$ and $3$.
+\end{frame}
+
+\begin{frame}{Shor's algorithm. Complexity}
+  Complexity: $O\!\left((\log N)^{2}(\log \log N)\right)$
 \end{frame}
 
 
